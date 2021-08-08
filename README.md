@@ -30,7 +30,9 @@
 - Profila ikona (redzama tikai sev)
 
 # Ielādēšana
-**Chrome / Chromium / Brave / Edge >=79 / Vivaldi / Jebkurš cits Chromium-balstīts internetpārlūks**
+
+## Chrome / Chromium / Brave / Edge >=79 / Vivaldi / Jebkurš cits Chromium-balstīts internetpārlūks
+
 Visi šie internetpārlūki ir atkarīgi no Chrome Extension Store, un diemžēl tas maksā 25 EUR, lai tur ieliktu
 papildinājumu. Ļoti iespējams, es to kādu dienu nopirkšu, bet pagaidām ir jāizmanto šāds process:
 
@@ -46,12 +48,15 @@ papildinājumu. Ļoti iespējams, es to kādu dienu nopirkšu, bet pagaidām ir 
 
 4. Lejupielādēto failu ievelc iekšā šajā lapā.
 
-**Firefox**
+## Firefox
+
 Aizej uz šo saiti -> (neeksistē vēl)
 E-klases Modernajam Dizainam vajadzētu automātiski ielādēties.
 
-**Safari**
+## Safari
+
 Lol es nemaksāšu 100$ gadā
 
-**Edge <79 un Internet Explorer**
+## Edge <79 un Internet Explorer
+
 ![😂😂😂](https://github.com/d-avis/e-klases-modernais-dizains/raw/master/assets/laughing.png)
