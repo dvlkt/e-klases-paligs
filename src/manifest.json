@@ -1,0 +1,30 @@
+{
+	"manifest_version": 2,
+	"name": "E-klases Modernais Dizains",
+	"version": "1.0",
+
+	"description": "Labāks dizains un vairāk funkcijas",
+
+	"icons": {
+		"512": "res/icon-512.png",
+		"256": "res/icon-256.png",
+		"128": "res/icon-128.png",
+		"64": "res/icon-64.png",
+		"32": "res/icon-32.png",
+		"16": "res/icon-16.png"
+	},
+
+	"permissions": [
+		"activeTab",
+		"storage"
+	],
+
+	"content_scripts": [
+		{
+			"matches": ["*://*.e-klase.lv/*"],
+			"js": ["index.js"],
+			"css": ["style.css"],
+			"run_at": "document_end"
+		}
+	]
+}
