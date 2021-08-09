@@ -1,0 +1,17 @@
+{
+    "general": {
+        "link": "",
+        "bg": ""
+    },
+    "header": {
+        "bg": "",
+        "top_link_fg": "#ffffff",
+        "bottom_link_fg": "",
+        "bottom_link_underline": "",
+        "account_button_fg": "",
+        "account_button_bg": ""
+    },
+    "diary": {
+        
+    }
+}

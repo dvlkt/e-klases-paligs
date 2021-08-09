@@ -1,46 +1,14 @@
-// Rewrite the focus/unfocus handlers for the top links for a better popup animation
-for (let i of document.querySelectorAll(`.header-first-menu-item`)) {
-	let submenu = i.querySelector(`.header-first-submenu`);
+// The WebExtensions Storage API has actual autism, PTSD, down syndrom, depression,
+// speech impediment, AIDS, HIV, ADHD, schizophrenia, trisomy 13, cancer,
+// and probably at least 18 other different diseases but doctors haven't 100% confirmed that yet
+browser.storage.local.get(`theme`).then((savedTheme) => {
+	console.log(`savedTheme`, savedTheme)
+	if (Object.keys(savedTheme).length === 0) {
+		console.log(`yep`);
+		browser.storage.local.set({ theme: `dark` });
+	}
 
-	i.addEventListener(`onmouseenter`, () => {
-		submenu.style.display = "block";
-		submenu.style.opacity = "1";
-		submenu.style.transform = "scale(1) translateY(0)";
-	});
-	i.addEventListener(`onmouseout`, () => {
-		submenu.style.opacity = `0`;
-		submenu.style.transform = `scale(0.75) translateY(-30px)`;
-
-		setTimeout(() => submenu.style.display = `none`, 200);
-	});
-
-	/* i.setAttribute(`onclick`, `alert("lol")`);
-	i.setAttribute(`onmouseenter`, `() => {
-		let submenu = i.querySelector(".header-first-submenu");
-		submenu.style.display = "block";
-		submenu.style.opacity = "1";
-		submenu.style.transform = "scale(1) translateY(0)";
-	}`);
-	i.setAttribute(`onmouseleave`, `() => {
-		let submenu = i.querySelector(".header-first-submenu");
-		submenu.style.opacity = "0";
-		submenu.style.transform = "scale(0.75) translateY(-30px)";
-
-		setTimeout(() => submenu.style.display = "none", 200);
-	}`);
- */
-	/* console.log(i);
-	i.addEventListener(`onmouseenter`, );
-	i.addEventListener(`onmouseout`, () => {
-		submenu.style.opacity = `0`;
-		submenu.style.transform = `scale(0.75) translateY(-30px)`;
-
-		setTimeout(() => submenu.style.display = `none`, 200);
-	}); */
-}
-
-// Edit the bottom copyright text
-document.querySelector(`.copyright`).innerHTML = 
-`SIA “Izglītības sistēmas” 2004-${new Date().getFullYear()}
-<br />
-Aktivizēts <i>E-klases Modernais Dizains</i>`;
+	initAnimations();
+	applyExtensionBranding();
+	applyTheme();
+});

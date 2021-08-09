@@ -51,6 +51,7 @@ papildinājumu. Ļoti iespējams, es to kādu dienu nopirkšu, bet pagaidām ir 
 ## Firefox
 
 Aizej uz šo saiti -> (neeksistē vēl)
+
 E-klases Modernajam Dizainam vajadzētu automātiski ielādēties.
 
 ## Safari
