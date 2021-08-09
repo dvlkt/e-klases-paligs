@@ -6,10 +6,14 @@ section h2 {
 	color: #dfdfdf;
 }
 .dashboard-widget,
-.dashboard-widget-col.widget-banner .dashboard-widget {
-	border-radius: 1rem;
-		
+.dashboard-widget-col.widget-banner .dashboard-widget,
+.dashboard-information {
 	background: #303035;
+	color: #ffffff;
+
+	border: 0;
+
+	border-radius: 1rem;
 }
 .dashboard-widget-col.widget-notifications .widget-header,
 .dashboard-widget-col.widget-banner .widget-header {
@@ -42,7 +46,50 @@ section h2 {
 	cursor: auto;
 }
 .dashboard-widget-col.widget-notifications .widget-notifications-primary {
+	color: #ffffff;
+
 	border: 0;
+}
+.dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon {
+	transition: .2s filter;
+}
+.dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon:hover,
+.dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon:focus {
+	color: #ffffff;
+
+	filter: brightness(0.8);
+}
+.dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon2,
+.dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon:hover.icon2 {
+	background-image: url( data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzMiIGhlaWdodD0iMjIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEuMzMgMEMuNjA4IDAgMCAuNiAwIDEuMzE2VjIwLjA3YzAgLjcxNi42MDcgMS4zMTYgMS4zMyAxLjMxNmgzMC4zNGMuNzIzIDAgMS4zMy0uNiAxLjMzLTEuMzE2VjEuMzE2QzMzIC42IDMyLjM5MyAwIDMxLjY3IDBIMS4zM3ptMjkuNzY3IDEuODgydi45MjNMMTYuNSAxMy4yNyAxLjgyNCAyLjY1bC4wNjMtLjc2OGgyOS4yMXpNMTUuOTM2IDE1LjE5NWEuOTYuOTYgMCAwMDEuMTI5IDBsMTQuMDMyLTEwLjE1djE0LjQ1OEgxLjkwM1Y1LjA0NGwxNC4wMzMgMTAuMTUxeiIgZmlsbC1ydWxlPSJldmVub2RkIiBmaWxsPSIjZmZmZmZmIi8+PC9zdmc+);
+}
+.close-dashboard-adv-message {
+	margin-top: .25rem;
+    margin-right: .25rem;
+
+	opacity: 1;
+
+	transition: .2s filter;
+}
+.close-dashboard-adv-message:hover {
+	filter: brightness(0.8);
+}
+.close-dashboard-adv-message::after,
+.close-dashboard-adv-message::before {
+	background: #ffffff;
+}
+.dashboard-widget-col.widget-notifications .widget-notification {
+	background: none;
+	color: #ffffff;
+
+	border: 0;
+
+	transition: .2s filter;
+}
+.dashboard-widget-col.widget-notifications .widget-notification:hover {
+	background: none;
+	
+	filter: brightness(0.8);
 }
 #overlay, .loading-info {
 	background: #1a1a1d;
@@ -145,29 +192,6 @@ section h2 {
 .student-journal-lessons-table-holder .lessons-table tbody tr:last-child td:last-child {
 	border-bottom-right-radius: 1rem;
 }
-.student-journal-lessons-table-holder .lessons-table a {
-	color: #35beff;
-
-	position: relative;
-}
-.student-journal-lessons-table-holder .lessons-table a:hover {
-	text-decoration: none;
-}
-.student-journal-lessons-table-holder .lessons-table a::after {
-	content: "";
-
-	position: absolute;
-	bottom: -1px;
-	left: 0;
-
-	display: block;
-	width: 0;
-	height: 2px;
-
-	background: #35beff;
-
-	transition: .2s width;
-}
 .lessons-table td:last-of-type span.score {
 	border: 0;
 
@@ -232,15 +256,17 @@ section h2 {
 
 	color: #ffffff;
 }
+.ThirdPartyEvent--Deleted {
+	background: #46454e;
+
+	box-shadow: 0 4px 10px -3px #00000099;
+}
 .student-journal-lessons-table-holder h2 {
 	text-transform: uppercase;
 	font-weight: bold;
 
 	margin-top: 15px;
 	margin-bottom: 5px;
-}
-.student-journal-lessons-table-holder .lessons-table a:hover::after {
-	width: 100%;
 }
 .modal-body {
 	background: #28282d;
@@ -386,6 +412,8 @@ section h2 {
 	filter: brightness(1);
 }
 .header-second .student-selector {
+	background: none;
+
 	border-radius: 1rem;
 
 	border: 0;
@@ -414,6 +442,7 @@ section h2 {
 .student-selector .select2-container--default .select2-selection--single .select2-selection__arrow {
 	display: none;
 }
+.header-first .header-first-submenu,
 .header-second .header-second-submenu {
 	background: #46454e;
 
@@ -424,11 +453,33 @@ section h2 {
 .popover.bottom > .arrow::after {
 	border-bottom-color: #46454e;
 }
-.header-first-submenu-item, .header-second-submenu-item {
+.header-first-submenu-item,
+.header-second-submenu-item {
 	border-bottom: 0;
+
+	font-size: 0.8rem;
+
+	background: #46454e;
+	color: #ffffff;
+	
+	border-radius: 1rem;
+
+	transition: .2s filter;
+}
+.header-first-submenu-item:hover,
+.header-second-submenu-item:hover {
+	background: #46454e;
+
+	filter: brightness(0.8);
+}
+.header-first-menu-item.sm-icon-only a {
+	font-size: 0.8rem !important;	
 }
 .header-second .header-second-menu-item:nth-child(3) .header-second-submenu {
 	display: none !important;
+}
+.header-second .header-second-menu-item:nth-child(4) .header-second-submenu {
+	display: none !important; /* TOGGLEABLE */
 }
 .header-second .header-second-submenu {
 	top: 55px;
@@ -444,7 +495,7 @@ section h2 {
 
 	border-radius: .5rem;
 
-	transition: .2s filter;
+	transition: .2s filter, .2s box-shadow;
 }
 .big-anouncement .btn-secondary:hover,
 .btn-primary:hover {
@@ -456,6 +507,9 @@ section h2 {
 }
 
 /* ADS AND MONETIZATION */
+.container-fluid div div div {
+	box-shadow: 0 4px 10px -3px #00000099;
+}
 .container-fluid {
 	display: none;
 }
@@ -620,6 +674,11 @@ footer .copyright {
 	text-transform: uppercase;
 }
 
+/* TIME TABLE */
+.modal-technical .timetible-item .name {
+	border-right: 3px solid #303035;
+}
+
 /* CALENDAR */
 .students-journal-header .week-selector .calendar-holder {
 	background: #303035;
@@ -690,3 +749,261 @@ footer .copyright {
 
 	transition: .2s all;
 } */
+
+/* MAIL */
+.mailbox-tabs {
+	display: none;
+}
+.mailbox-data {
+	background: none;
+}
+.MailActions .ButtonDefault.MailActions__ToggleButton {
+	background: #303035;
+
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 0.8rem;
+
+	border-radius: .5rem;
+}
+.MailSearch .MailSearch__Input {
+	background: #303035;
+	color: #ffffff;
+
+	border: 0;
+}
+.MailSearch__ButtonWrapper .MailSearch__Button {
+	background: #303035 url( data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxwYXRoIGlkPSJhIiBkPSJNMCAwaDE2djE2SDB6Ii8+PC9kZWZzPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PG1hc2sgaWQ9ImIiIGZpbGw9IiNmZmYiPjx1c2UgeGxpbms6aHJlZj0iI2EiLz48L21hc2s+PHBhdGggZD0iTTEuMzg0IDUuMzg0YzAtMi4yMDYgMS44Mi00IDQuMDU2LTQgMi4yMzcgMCA0LjA1NiAxLjc5NCA0LjA1NiA0cy0xLjgyIDQtNC4wNTYgNGMtMi4yMzcgMC00LjA1Ni0xLjc5NC00LjA1Ni00bTE0LjM4NSA5LjI4NEw5LjcyNSA4LjY5NWE1LjMyMSA1LjMyMSAwIDAwMS4xNTUtMy4zMUMxMC44OCAyLjQxNCA4LjQ0IDAgNS40NCAwIDIuNDQgMCAwIDIuNDE1IDAgNS4zODRjMCAyLjk3IDIuNDQgNS4zODUgNS40NCA1LjM4NWE1LjQ0OCA1LjQ0OCAwIDAwMy4xNTUtMS4wMDJsNi4wOCA2LjAwOGEuNzc2Ljc3NiAwIDAwMS4xLS4wMDYuNzc4Ljc3OCAwIDAwLS4wMDYtMS4xMDEiIG1hc2s9InVybCgjYikiIGZpbGw9IiNmZmZmZmYiLz48L2c+PC9zdmc+) no-repeat 10%;
+	color: #ffffff;
+
+	transition: .2s filter, .2s box-shadow;
+}
+.MailSearch__ButtonWrapper .MailSearch__Button:hover {
+	background: #303035 url( data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxwYXRoIGlkPSJhIiBkPSJNMCAwaDE2djE2SDB6Ii8+PC9kZWZzPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PG1hc2sgaWQ9ImIiIGZpbGw9IiNmZmYiPjx1c2UgeGxpbms6aHJlZj0iI2EiLz48L21hc2s+PHBhdGggZD0iTTEuMzg0IDUuMzg0YzAtMi4yMDYgMS44Mi00IDQuMDU2LTQgMi4yMzcgMCA0LjA1NiAxLjc5NCA0LjA1NiA0cy0xLjgyIDQtNC4wNTYgNGMtMi4yMzcgMC00LjA1Ni0xLjc5NC00LjA1Ni00bTE0LjM4NSA5LjI4NEw5LjcyNSA4LjY5NWE1LjMyMSA1LjMyMSAwIDAwMS4xNTUtMy4zMUMxMC44OCAyLjQxNCA4LjQ0IDAgNS40NCAwIDIuNDQgMCAwIDIuNDE1IDAgNS4zODRjMCAyLjk3IDIuNDQgNS4zODUgNS40NCA1LjM4NWE1LjQ0OCA1LjQ0OCAwIDAwMy4xNTUtMS4wMDJsNi4wOCA2LjAwOGEuNzc2Ljc3NiAwIDAwMS4xLS4wMDYuNzc4Ljc3OCAwIDAwLS4wMDYtMS4xMDEiIG1hc2s9InVybCgjYikiIGZpbGw9IiNmZmZmZmYiLz48L2c+PC9zdmc+) no-repeat 10%;
+
+	filter: brightness(0.8);
+
+	box-shadow: 0 4px 10px -3px #00000099;
+}
+.MailMainAreaWrapper .FolderNavigation {
+	background: #303035;
+
+	border-radius: 1rem;
+
+	box-shadow: 0 4px 10px -3px #00000099;
+}
+.FolderNavigation .FolderNavigation__Nav {
+	box-shadow: none;
+}
+.FolderNavigation .FolderNavigation__ButtonNewMailWrapper {
+	background: none;
+}
+.FolderNavigation__ButtonNewMailWrapper .FolderNavigation__ButtonNewMail {
+	background: #35beff;
+	color: #ffffff;
+
+	border-radius: .5rem;
+
+	transition: .2s filter, .2s box-shadow;
+}
+.FolderNavigation__ButtonNewMailWrapper .FolderNavigation__ButtonNewMail:hover {
+	filter: brightness(0.8);
+
+	box-shadow: 0 4px 10px -3px #00000099;
+}
+.FolderNavigation .FolderNavigation__NavItem {
+	position: relative;
+
+	background: none;
+	color: #ffffffda;
+
+	padding-left: 56px;
+
+	border: 0;
+
+	transition: .2s filter;
+}
+.FolderNavigation .FolderNavigation__NavItem--active {
+	color: #ffffff;
+}
+.FolderNavigation .FolderNavigation__NavItem--active,
+.FolderNavigation .FolderNavigation__NavItem:hover {
+	background: none;
+
+	box-shadow: none;
+}
+.FolderNavigation .FolderNavigation__NavItem:hover {
+	filter: brightness(0.8);
+}
+.FolderNavigation .FolderNavigation__NavItem::after,
+.FolderNavigation .FolderNavigation__NavItem--active::after {
+	content: "";
+
+	position: absolute;
+	top: 0;
+	left: -.75rem;
+
+	display: block;
+	width: .75rem;
+	height: 100%;
+
+	background: #35beff;
+
+	padding: 0;
+
+	margin-right: 1rem;
+
+	border-radius: 0 .75rem .75rem 0;
+
+	transition: .2s left;
+}
+.FolderNavigation .FolderNavigation__NavItem--active::after,
+.FolderNavigation .FolderNavigation__NavItem:hover::after {
+	left: 0;
+}
+.FolderNavigation .FolderNavigation__NavItem::before {
+	color: #ffffff;
+
+	opacity: 1;
+}
+.FolderNavigation .FolderNavigation__NavItem:first-child {
+	border: 0;
+}
+.ButtonIcon--loading::before {
+	border: 2px solid #ffffff;
+	border-right-color: rgba(0,0,0,0);
+}
+.BottomInfo {
+	color: #ffffff80;
+}
+.Folder__MessageList .MessageItem {
+	background: #30303580;
+	color: #ffffff;
+
+	margin-left: .5rem;
+	margin-bottom: .5rem;
+
+	border: 0;
+
+	border-radius: .5rem;
+
+	transition: .2s filter, .2s box-shadow;
+}
+.Folder__MessageList .MessageItem:hover {
+	background: #30303580;
+
+	filter: brightness(0.8);
+
+	box-shadow: 0 4px 10px -3px #00000099;
+}
+.Folder__MessageList .MessageItem:first-child {
+	border: 0;
+}
+.MessageItem__LeftCol .MessageItem__Checkbox {
+	background: #46454e;
+}
+.MessageItem__LeftCol .MessageItem__Checkbox:checked {
+	background: #46454e;
+}
+.MessageItem__LeftCol .MessageItem__Checkbox:checked::after {
+	filter: saturate(0) brightness(10);
+}
+.ViewMessage .ViewMessage__MetaInfo {
+	border-top: 3px solid #303035;
+	border-bottom: 3px solid #303035;
+}
+.MessageItem__RightCol .MessageFollowUpStatus--none::before,
+.ViewMessage__MetaInfo .MessageFollowUpStatus--none::before {
+	color: #46454e;
+}
+.ViewMessage__MetaInfo .ViewMessage__MessageDate {
+	color: #ffffff80;
+}
+.AttachmentList__Item a:hover {
+	color: #35beff;
+}
+
+/* LINKS */
+.student-journal-lessons-table-holder .lessons-table a,
+footer .footer-nav-item a,
+.students-journal-header .students-journal-header-links a,
+.AttachmentList__Item a {
+	color: #35beff;
+
+	position: relative;
+}
+.student-journal-lessons-table-holder .lessons-table a:hover,
+footer .footer-nav-item a:hover,
+.students-journal-header .students-journal-header-links a:hover,
+.AttachmentList__Item a:hover {
+	text-decoration: none;
+}
+.student-journal-lessons-table-holder .lessons-table a::after,
+footer .footer-nav-item a::after,
+.students-journal-header .students-journal-header-links a::after,
+.AttachmentList__Item a::after {
+	content: "";
+
+	position: absolute;
+	bottom: 0;
+	left: 0;
+
+	display: block;
+	width: 0;
+	height: 1px;
+
+	background: #35beff;
+
+	transition: .2s width;
+}
+.student-journal-lessons-table-holder .lessons-table a:hover::after,
+footer .footer-nav-item a:hover:after,
+.students-journal-header .students-journal-header-links a:hover::after,
+.AttachmentList__Item a:hover::after {
+	width: 100%;
+}
+
+/* ANALYTICS */
+.pupilmarks-container .nav-tabs {
+	display: none; /* TOGGLEABLE */
+}
+.analytics-report-container {
+	background: none;
+}
+.analytics-pupilmarks-intro {
+	border-radius: 1rem;
+
+	box-shadow: 0 7px 14px -3px #00000099;
+}
+.analytics-pupilmarks-intro .analytics-ratings-table-intro-left,
+.analytics-pupilmarks-intro .analytics-ratings-table-intro-right {
+	background: #303035;
+
+	border: 0;
+
+	border-radius: 1rem 0 0 1rem;
+}
+.analytics-pupilmarks-intro .analytics-ratings-table-intro-right {
+	border-radius: 0 1rem 1rem 0;
+}
+.analytics-ratings-table-intro-right .section-switch {
+	display: none; /* TOGGLEABLE */
+}
+.print-table {
+	background: #303035;
+
+	border-radius: 1rem;
+
+	box-shadow: 0 7px 14px -3px #00000099;
+}
+.print-table td,
+.print-table th {
+	background: none !important;
+
+	border: 0;
+}
+.print-table th {
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+}
