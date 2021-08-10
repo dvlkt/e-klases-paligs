@@ -23,13 +23,21 @@
 		{
 			"matches": ["*://*.e-klase.lv/*"],
 			"js": [
-				"animations.js",
 				"extensionBranding.js",
 				"themeApplier.js",
 				"index.js"
 			],
 			"css": ["style.css"],
 			"run_at": "document_start"
+		},
+		{
+			"matches": ["*://*.e-klase.lv/*"],
+			"js": [
+				"profilePicture.js",
+				"patches.js",
+				"animations.js"
+			],
+			"run_at": "document_end"
 		}
 	],
 

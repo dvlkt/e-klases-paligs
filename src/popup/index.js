@@ -9,3 +9,10 @@ darkThemeBtn.onclick = () => {
 	lightThemeBtn.className = `theme theme-light`;
 	darkThemeBtn.className = `theme theme-dark theme-selected`;
 }
+
+document.getElementById(`profile-picture-btn`).onclick = () => {
+	browser.tabs.create({
+		active: true,
+		url: browser.runtime.getURL(`/popup/uploadProfilePicture.html`)
+	});
+}

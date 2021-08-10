@@ -369,3 +369,16 @@ textarea {
 
 	resize: vertical;
 }
+
+.upload {
+	display: none;
+}
+
+.center {
+	display: grid;
+	place-content: center;
+	place-items: center;
+
+	width: 100vw;
+	height: 100vh;
+}
