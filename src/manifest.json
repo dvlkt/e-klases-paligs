@@ -24,8 +24,7 @@
 			"matches": ["*://*.e-klase.lv/*"],
 			"js": [
 				"extensionBranding.js",
-				"themeApplier.js",
-				"index.js"
+				"themeApplier.js"
 			],
 			"css": ["style.css"],
 			"run_at": "document_start"
@@ -47,5 +46,11 @@
 		"default_icon": "res/icon-64.png",
 		"default_title": "E-klases Modernais Dizains",
 		"default_popup": "popup/index.html"
+	},
+
+	"browser_specific_settings": {
+		"gecko": {
+		  "id": "e-klases-modernais-dizains@gmail.com"
+		}
 	}
 }
