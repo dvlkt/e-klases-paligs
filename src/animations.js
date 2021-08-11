@@ -55,3 +55,13 @@ if (document.location.href.includes(`/Family/Diary`)) {
 		});
 	}
 }
+
+// Loading spinner open animation
+for (element of document.querySelectorAll(`.onclick-spinner`)) {
+	element.addEventListener(`click`, () => {
+		let loadingSpinner = document.querySelector(`#loading-info`);
+
+		loadingSpinner.style.transform = `scale(1)`;
+		loadingSpinner.style.opacity = `1`;
+	});
+}

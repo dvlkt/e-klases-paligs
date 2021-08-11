@@ -3,7 +3,7 @@ body {
 }
 body,
 section h2 {
-	color: #dfdfdf;
+	color: #ffffff;
 }
 .dashboard-widget,
 .dashboard-widget-col.widget-banner .dashboard-widget,
@@ -14,6 +14,8 @@ section h2 {
 	border: 0;
 
 	border-radius: 1rem;
+
+	cursor: auto;
 }
 .dashboard-widget-col.widget-notifications .widget-header,
 .dashboard-widget-col.widget-banner .widget-header {
@@ -24,6 +26,8 @@ section h2 {
 
 	padding: 16px;
 	padding-left: 0;
+
+	cursor: auto;
 }
 .dashboard-widget .widget-header h3,
 .dashboard-widget-col.widget-banner .widget-header {
@@ -33,6 +37,8 @@ section h2 {
 	text-transform: uppercase;
 
 	padding-left: 16px;
+
+	cursor: auto;
 }
 .dashboard-widget-col.widget-notifications .widget-content {
 	background: none;
@@ -93,19 +99,6 @@ section h2 {
 }
 #overlay, .loading-info {
 	background: #1a1a1d;
-}
-.loading-info {
-	color: #ffffff;
-
-	box-shadow: 0 7px 14px -3px #00000099;
-
-	border: 0;
-
-	font-weight: bold;
-}
-.loading-spinner {
-	border: 2px solid #ffffff;
-	border-right-color: #00000000;
 }
 .students-journal-header {
 	background: #1a1a1d;
@@ -268,6 +261,7 @@ section h2 {
 	margin-top: 15px;
 	margin-bottom: 5px;
 }
+
 .modal-body {
 	background: #28282d;
 
@@ -287,6 +281,8 @@ section h2 {
 }
 .mark-card-inner-graph {
 	background: #46454e;
+
+	margin-left: .5rem;
 
 	border: 0;
 }
@@ -352,6 +348,8 @@ section h2 {
 	filter: saturate(0) brightness(200);
 }
 .header-first-menu-item.current-user .current-user-image.student-other {
+	border-radius: 50%;
+
 	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2OSIgaGVpZ2h0PSI2OSIgdmlld0JveD0iLTQ0NSAyNDYgNjkgNjkiPjxwYXRoIGQ9Ik0tMzgwLjMgMjgwLjVjMC0xNi43LTEzLjYtMzAuNC0zMC40LTMwLjRzLTMwLjQgMTMuNi0zMC40IDMwLjRjMCA5LjEgNCAxNy4zIDEwLjQgMjIuOHYtLjFjMi43LTcuNSAxMC4zLTEuNiAxMy45LTguNS0yLjQtMi4yLTQuNC01LjQtNS42LTktLjEuMS0uNy0yLjgtMS4yLTUuMi0uMi0xLjUtLjItNy45LjEtOS43LjItMS4yLjQtMi4yLjctMy4xLjItLjkuNS0yIDEuMS0zLjQgMS4yLTIuOSA1LjEtNC44IDExLjUtNC44IDguNSAwIDEwLjkgMy41IDEyLjIgNS45LjkgMS43LjggMy42IDEuMSA1LjFsLjMgMS41Yy4yIDEuNS4yIDUuNi4xIDYuNi0uNiAzLjQtMS4yIDcuMS0xLjIgNy4xLTEuMiAzLjYtMy4yIDYuOS01LjcgOSAzLjUgNi42IDEwLjggMS4zIDEzLjYgNy44IDUuOS01LjUgOS41LTEzLjMgOS41LTIyeiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0tNDEwLjYgMjQ2LjFjLTE4LjkgMC0zNC40IDE1LjQtMzQuNCAzNC40IDAgMTEgNS4yIDIwLjggMTMuMyAyNy4xIDIuOCAyLjIgNS45IDMuOSA5LjMgNS4yIDMuNyAxLjMgNy43IDIuMSAxMS44IDIuMSA0LjEgMCA4LjEtLjcgMTEuOC0yLjEgMy44LTEuNCA3LjItMy40IDEwLjItNS45IDcuNS02LjMgMTIuMy0xNS44IDEyLjMtMjYuNCAwLTE5LTE1LjQtMzQuNC0zNC4zLTM0LjR6bTIwLjggNTYuNWMtMi44LTYuNS0xMC4xLTEuMi0xMy42LTcuOCAyLjUtMi4yIDQuNS01LjQgNS43LTkgMCAwIC43LTMuNiAxLjItNy4xLjEtMS4xLjEtNS4yLS4xLTYuNmwtLjMtMS41Yy0uMi0xLjUtLjItMy40LTEuMS01LjEtMS4zLTIuNC0zLjctNS45LTEyLjItNS45LTYuMyAwLTEwLjMgMS45LTExLjUgNC44LS42IDEuNC0uOSAyLjUtMS4xIDMuNC0uMy45LS41IDEuOS0uNyAzLjEtLjIgMS44LS4yIDguMi0uMSA5LjcuNCAyLjQgMS4xIDUuMyAxLjIgNS4yIDEuMiAzLjYgMy4yIDYuOCA1LjYgOS0zLjYgNi45LTExLjIgMS0xMy45IDguNXYuMWMtNi40LTUuNi0xMC40LTEzLjctMTAuNC0yMi44IDAtMTYuNyAxMy42LTMwLjQgMzAuNC0zMC40czMwLjQgMTMuNiAzMC40IDMwLjRjMCA4LjYtMy42IDE2LjQtOS41IDIyeiIgZmlsbD0iI2ZmZmZmZiIvPjwvc3ZnPg==");
 }
 .header-first-menu-item.item-langs {
@@ -681,6 +679,27 @@ footer .footer-container .go-top-col .go-top:hover::before {
 	display: none;
 }
 
+/* LOADING SPINNER */
+.loading-info {
+	color: #ffffff;
+
+	box-shadow: 0 7px 14px -3px #00000099;
+
+	border: 0;
+
+	font-weight: bold;
+
+	transform: scale(0.5);
+
+	opacity: 0;
+
+	transition: .2s transform, .2s opacity;
+}
+.loading-spinner {
+	border: 2px solid #ffffff;
+	border-right-color: #00000000;
+}
+
 /* LEGEND */
 .modal-technical .legend-dialog .legend-category {
 	border: 0;
@@ -696,6 +715,9 @@ footer .footer-container .go-top-col .go-top:hover::before {
 
 	font-weight: bold;
 	text-transform: uppercase;
+}
+.modal-close {
+	filter: brightness(10);
 }
 
 /* TIME TABLE */
@@ -720,9 +742,11 @@ footer .footer-container .go-top-col .go-top:hover::before {
 	border: 0;
 }
 .modal-header.student-profile {
-	background: #4cb159;
+	background: linear-gradient(120deg, #0088e3 0%, #034cad 100%);
 }
 .welcome-greeting .welcome-greeting-image.student-other {
+	border-radius: 50%;
+
 	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2OSIgaGVpZ2h0PSI2OSIgdmlld0JveD0iLTQ0NSAyNDYgNjkgNjkiPjxwYXRoIGQ9Ik0tMzgwLjMgMjgwLjVjMC0xNi43LTEzLjYtMzAuNC0zMC40LTMwLjRzLTMwLjQgMTMuNi0zMC40IDMwLjRjMCA5LjEgNCAxNy4zIDEwLjQgMjIuOHYtLjFjMi43LTcuNSAxMC4zLTEuNiAxMy45LTguNS0yLjQtMi4yLTQuNC01LjQtNS42LTktLjEuMS0uNy0yLjgtMS4yLTUuMi0uMi0xLjUtLjItNy45LjEtOS43LjItMS4yLjQtMi4yLjctMy4xLjItLjkuNS0yIDEuMS0zLjQgMS4yLTIuOSA1LjEtNC44IDExLjUtNC44IDguNSAwIDEwLjkgMy41IDEyLjIgNS45LjkgMS43LjggMy42IDEuMSA1LjFsLjMgMS41Yy4yIDEuNS4yIDUuNi4xIDYuNi0uNiAzLjQtMS4yIDcuMS0xLjIgNy4xLTEuMiAzLjYtMy4yIDYuOS01LjcgOSAzLjUgNi42IDEwLjggMS4zIDEzLjYgNy44IDUuOS01LjUgOS41LTEzLjMgOS41LTIyeiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0tNDEwLjYgMjQ2LjFjLTE4LjkgMC0zNC40IDE1LjQtMzQuNCAzNC40IDAgMTEgNS4yIDIwLjggMTMuMyAyNy4xIDIuOCAyLjIgNS45IDMuOSA5LjMgNS4yIDMuNyAxLjMgNy43IDIuMSAxMS44IDIuMSA0LjEgMCA4LjEtLjcgMTEuOC0yLjEgMy44LTEuNCA3LjItMy40IDEwLjItNS45IDcuNS02LjMgMTIuMy0xNS44IDEyLjMtMjYuNCAwLTE5LTE1LjQtMzQuNC0zNC4zLTM0LjR6bTIwLjggNTYuNWMtMi44LTYuNS0xMC4xLTEuMi0xMy42LTcuOCAyLjUtMi4yIDQuNS01LjQgNS43LTkgMCAwIC43LTMuNiAxLjItNy4xLjEtMS4xLjEtNS4yLS4xLTYuNmwtLjMtMS41Yy0uMi0xLjUtLjItMy40LTEuMS01LjEtMS4zLTIuNC0zLjctNS45LTEyLjItNS45LTYuMyAwLTEwLjMgMS45LTExLjUgNC44LS42IDEuNC0uOSAyLjUtMS4xIDMuNC0uMy45LS41IDEuOS0uNyAzLjEtLjIgMS44LS4yIDguMi0uMSA5LjcuNCAyLjQgMS4xIDUuMyAxLjIgNS4yIDEuMiAzLjYgMy4yIDYuOCA1LjYgOS0zLjYgNi45LTExLjIgMS0xMy45IDguNXYuMWMtNi40LTUuNi0xMC40LTEzLjctMTAuNC0yMi44IDAtMTYuNyAxMy42LTMwLjQgMzAuNC0zMC40czMwLjQgMTMuNiAzMC40IDMwLjRjMCA4LjYtMy42IDE2LjQtOS41IDIyeiIgZmlsbD0iI2ZmZmZmZiIvPjwvc3ZnPg==");
 }
 .modal-options-item {
@@ -739,6 +763,12 @@ footer .footer-container .go-top-col .go-top:hover::before {
 }
 .modal-options-item:hover {
 	filter: brightness(0.8);
+}
+.modal-options-item .modal-options-title span {
+	color: #ffffff;
+}
+.modal-options-item .modal-options-icon.school {
+	filter: brightness(10);
 }
 .modal-options-item .modal-options-choice {
 	color: #ffffff;
@@ -772,6 +802,35 @@ footer .footer-container .go-top-col .go-top:hover::before {
 .calendar-holder .datepicker .day {
 	background: #46454e;
 	color: #ffffff;
+
+	transition: .2s filter;
+}
+.calendar-holder .datepicker .day.new,
+.calendar-holder .datepicker .day.old {
+	color: #ffffff;
+
+	opacity: 0.7;
+}
+.datepicker table tr td.day.focused,
+.datepicker table tr td.day:hover {
+	background: #46454e;
+
+	filter: brightness(0.8);
+}
+.calendar-holder .datepicker .active-week td:nth-child(-n+5),
+.calendar-holder .datepicker tr:hover td:nth-child(-n+5) {
+	background: #46454e;
+}
+.calendar-holder .datepicker .current-week td:nth-child(-n+5):not(.today),
+.calendar-holder .datepicker .current-week:hover td:nth-child(-n+5):not(.today) {
+	background: linear-gradient(180deg, #46454e 34px, #35beff 0);
+}
+.calendar-holder .datepicker table tr td.day.today {
+	background: #35beff;
+}
+.datepicker table tr td.today:hover:hover { /* E-klase devs, how drunk were you when you wrote this CSS rule? */
+	color: #ffffff;
+	background: #35beff;
 }
 .datepicker tbody tr:nth-child(1) .day:nth-child(1) {
 	border-top-left-radius: .5rem;
@@ -785,28 +844,10 @@ footer .footer-container .go-top-col .go-top:hover::before {
 .datepicker tbody tr:last-child .day:last-child {
 	border-bottom-right-radius: .5rem;
 }
-.calendar-holder .datepicker .active-week td:nth-child(-n+5),
-.calendar-holder .datepicker tr:hover td:nth-child(-n+5),
-.datepicker table tr td.day.focused,
-.datepicker table tr td.day:hover {
-	background: #46454e;
-}
-.calendar-holder .datepicker .current-week td:nth-child(-n+5),
-.calendar-holder .datepicker .current-week td:nth-child(-n+5):hover {
-	background: linear-gradient(180deg, #46454e 34px, #009ae3 0);
-}
-.calendar-holder .datepicker .current-week table tr td.today:hover,
-.calendar-holder .datepicker .current-week table tr td.today:hover:hover {
-	background: #35beff !important;
-	color: #ffffff;
+.students-journal-header .week-selector .calendar-holder table {
+	width: 256px; /* This fixes a bug where the date picker is not exactly centered within the popup */
 
-	font-weight: bold;
-}
-.calendar-holder .datepicker td {
-	transition: .2s filter;
-}
-.calendar-holder .datepicker td:hover {
-	filter: brightness(0.8);
+	border-spacing: 2px;
 }
 
 /* POPUP ANIMATIONS */
@@ -1010,6 +1051,8 @@ footer .footer-container .go-top-col .go-top:hover::before {
 	text-transform: uppercase;
 	font-size: 0.9rem;
 
+	margin-left: .5rem;
+
 	border-radius: .5rem;
 
 	transition: .2s filter, .2s box-shadow;
@@ -1018,10 +1061,6 @@ footer .footer-container .go-top-col .go-top:hover::before {
 	box-shadow: 0 4px 10px -3px #00000099;
 
 	filter: brightness(0.8);
-}
-.FetchMore .FetchMore__MessageCount,
-.FetchMore:hover .FetchMore__MessageCount {
-	color: #ffffff80;
 }
 .Modal__Content .Modal__Header {
 	background: #303035 !important;
@@ -1035,17 +1074,125 @@ footer .footer-container .go-top-col .go-top:hover::before {
 	color: #ffffff;
 }
 .Modal__Content .Modal__Body {
-	background: #303035 !important;
+	background: #46454e !important;
 	color: #ffffff;
 
 	border-radius: 0 0 1rem 1rem;
 }
+.MailActions .MailActions__ActionList {
+	background: #46454e;
+	color: #ffffff;
+	
+	border-radius: 1rem;
+
+	box-shadow: 0 4px 10px -3px #00000099;
+}
+.MailActions__ActionList .MailActions__ActionOuter,
+.MailActions__ActionList .MailActions__ActionOuter:first-child,
+.MailActions__ActionList .MailActions__ActionOuter:last-child {
+	background: #46454e;
+	color: #ffffff;
+
+	border-radius: 1rem;
+
+	transition: .2s filter;
+}
+.MailActions__ActionList .MailActions__ActionOuter:hover {
+	background: #46454e;
+
+	filter: brightness(0.8);
+}
+.MailActions__ActionList .MailActions__ActionOuter:not(:last-child) {
+	border: 0;
+}
+.MailActions__ActionOuter .MailActions__ActionInner {
+	color: #ffffff;
+}
+.MailActions__ActionOuter .MailActions__ActionInner::before {
+	color: #ffffff;
+}
+.MessageContent .MessageContent__Row:first-child {
+	border: 0;
+}
+.MessageContent__Row .MessageContent__Subject {
+	background: #303035;
+	color: #ffffff;
+
+	font-size: 1rem;
+
+	padding: .5rem;
+
+	border: 0;
+
+	border-radius: .5rem;
+}
+.EklaseTextEditor__Editor {
+	background: #303035;
+	color: #ffffff;
+
+	border: 0;
+
+	border-radius: 1rem;
+
+	box-shadow: 0 4px 10px -3px #00000099;
+}
+.EklaseTextEditor__Menu {
+	background: #303035;
+
+	padding: .25rem;
+
+	border-radius: 1rem 1rem 0 0;
+}
+.EklaseTextEditor__Content {
+	background: #303035;
+
+	border-radius: 0 0 1rem 1rem;
+}
+.EklaseTextEditor__Button {
+	background: #303035;
+
+	border-radius: 1rem;
+
+	transition: .2s filter;
+}
+.EklaseTextEditor__Button:hover {
+	background: #303035;
+
+	filter: brightness(0.8);
+}
+.EklaseTextEditor__Button--link::before,
+.EklaseTextEditor__Button--unlink::before,
+.EklaseTextEditor__Button--bold::before,
+.EklaseTextEditor__Button--italic::before,
+.EklaseTextEditor__Button--strike::before,
+.EklaseTextEditor__Button--underline::before {
+	color: #ffffff;
+}
+.MessageHeader__ButtonSend {
+	background: #35beff;
+
+	transition: .2s filter, .2s box-shadow;
+}
+.MessageHeader__ButtonSend:hover {
+	box-shadow: 0 4px 10px -3px #00000099;
+
+	filter: brightness(0.8);
+}
+.MessageContent .MessageContent__ErrorMessage {
+	color: #eb4545;
+}
+.MessageContent__Row .MessageContent__ErrorMessage--subject {
+	margin-top: .7rem;
+}
+
 /* LINKS */
 .student-journal-lessons-table-holder .lessons-table a,
 footer .footer-nav-item a,
 .students-journal-header .students-journal-header-links a,
 .AttachmentList__Item a,
-.print.print-button {
+.print.print-button,
+.home-diary-link,
+.rating-wrap .see-rating-scale a {
 	color: #35beff;
 
 	position: relative;
@@ -1054,14 +1201,20 @@ footer .footer-nav-item a,
 footer .footer-nav-item a:hover,
 .students-journal-header .students-journal-header-links a:hover,
 .AttachmentList__Item a:hover,
-.print.print-button:hover {
+.print.print-button:hover, 
+.home-diary-link:hover,
+.rating-wrap .see-rating-scale a:hover {
+	color: #35beff;
+
 	text-decoration: none;
 }
 .student-journal-lessons-table-holder .lessons-table a::after,
 footer .footer-nav-item a::after,
 .students-journal-header .students-journal-header-links a::after,
 .AttachmentList__Item a::after,
-.print.print-button::after {
+.print.print-button::after,
+.home-diary-link::after,
+.rating-wrap .see-rating-scale a::after {
 	content: "";
 
 	position: absolute;
@@ -1080,7 +1233,9 @@ footer .footer-nav-item a::after,
 footer .footer-nav-item a:hover:after,
 .students-journal-header .students-journal-header-links a:hover::after,
 .AttachmentList__Item a:hover::after,
-.print.print-button:hover::after {
+.print.print-button:hover::after,
+.home-diary-link:hover::after,
+.rating-wrap .see-rating-scale a:hover::after {
 	width: 100%;
 }
 
@@ -1190,4 +1345,48 @@ footer .footer-nav-item a:hover:after,
 }
 .UserProfileSelector_SelectMarker {
 	background-color: transparent;
+}
+
+/* FAMILY PLAN */
+.sys-content .section.plan-info-head {
+	background: #303035;
+
+	border-radius: 1rem 1rem 0 0;
+}
+
+/* TEST REPORT */
+.rating-container .test-wrap,
+.rating-wrap {
+	background: none;
+}
+.rating-container .test-detailed-data,
+.rating-wrap .rating-table {
+	background: #303035;
+
+	border: 0;
+
+	border-radius: 1rem;
+
+	box-shadow: 0 7px 14px -3px #00000099;
+}
+.rating-wrap .item {
+	border: 0;
+}
+.rating-wrap .first .col:first-of-type,
+.rating-wrap .first .col,
+.rating-wrap .first .col:last-of-type {
+	background: none;
+
+	text-align: center;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+.rating-wrap .item .col {
+	border: 0;
+	border-bottom: 4px solid #00000020;
+	border-top: 4px solid #00000020;
+}
+.rating-wrap .item:first-child .col {
+	border: 0;
 }
