@@ -1,6 +1,10 @@
 const applyExtensionBranding = () => {
 	// Change favicon
-	document.querySelector(`link[rel~='icon']`).href = favicon;
+	if (document.querySelector(`link[rel~="icon"]`) === null) {
+		document.head.innerHTML += `<link rel="icon" href="${favicon}" />`;
+	} else {
+		document.querySelector(`link[rel~="icon"]`).href = favicon;
+	}
 
 	// Edit the bottom copyright text
 	if (document.querySelector(`.copyright`) !== null) {

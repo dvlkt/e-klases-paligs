@@ -97,9 +97,6 @@ section h2 {
 	
 	filter: brightness(0.8);
 }
-#overlay, .loading-info {
-	background: #1a1a1d;
-}
 .students-journal-header {
 	background: #1a1a1d;
 }
@@ -680,7 +677,19 @@ footer .footer-container .go-top-col .go-top:hover::before {
 }
 
 /* LOADING SPINNER */
+#overlay {
+	display: block !important;
+
+	background: #00000080;
+
+	opacity: 1;
+
+	transition: .2s opacity;
+}
 .loading-info {
+	display: block !important;
+
+	background: #1a1a1d;
 	color: #ffffff;
 
 	box-shadow: 0 7px 14px -3px #00000099;
@@ -689,9 +698,9 @@ footer .footer-container .go-top-col .go-top:hover::before {
 
 	font-weight: bold;
 
-	transform: scale(0.5);
+	transform: scale(1) !important;
 
-	opacity: 0;
+	opacity: 1;
 
 	transition: .2s transform, .2s opacity;
 }
@@ -800,7 +809,7 @@ footer .footer-container .go-top-col .go-top:hover::before {
 	font-weight: bold;
 }
 .calendar-holder .datepicker .day {
-	background: #46454e;
+	background: #46454e !important; /* Without the !important there is a weird blue background on click */
 	color: #ffffff;
 
 	transition: .2s filter;
@@ -823,14 +832,14 @@ footer .footer-container .go-top-col .go-top:hover::before {
 }
 .calendar-holder .datepicker .current-week td:nth-child(-n+5):not(.today),
 .calendar-holder .datepicker .current-week:hover td:nth-child(-n+5):not(.today) {
-	background: linear-gradient(180deg, #46454e 34px, #35beff 0);
+	background: linear-gradient(180deg, #46454e 34px, #35beff 0) !important;
 }
 .calendar-holder .datepicker table tr td.day.today {
-	background: #35beff;
+	background: #35beff !important;
 }
 .datepicker table tr td.today:hover:hover { /* E-klase devs, how drunk were you when you wrote this CSS rule? */
 	color: #ffffff;
-	background: #35beff;
+	background: #35beff !important;
 }
 .datepicker tbody tr:nth-child(1) .day:nth-child(1) {
 	border-top-left-radius: .5rem;
@@ -883,6 +892,13 @@ footer .footer-container .go-top-col .go-top:hover::before {
 	font-size: 0.8rem;
 
 	border-radius: .5rem;
+}
+.MailActions .ButtonDefault.MailActions__ToggleButton::after {
+	border: 0;
+}
+.MailActions .ButtonDefault.MailActions__ToggleButton::after,
+.MailActions .ButtonDefault.MailActions__ToggleButton::before {
+	color: #ffffff;
 }
 .MailSearch .MailSearch__Input {
 	background: #303035;
@@ -1085,7 +1101,13 @@ footer .footer-container .go-top-col .go-top:hover::before {
 	
 	border-radius: 1rem;
 
+	transform: translateY(-10px);
+
+	opacity: 0;
+
 	box-shadow: 0 4px 10px -3px #00000099;
+
+	transition: .2s transform, .2s opacity;
 }
 .MailActions__ActionList .MailActions__ActionOuter,
 .MailActions__ActionList .MailActions__ActionOuter:first-child,

@@ -14,3 +14,24 @@ if (document.location.href.includes(`/Family/Diary`)) {
 		}
 	}
 }
+
+// Replace the dumb "Notifikācijas" name with "Paziņojumi"
+if (document.querySelector(`.layout-navigation-notifications`) !== null) {
+	document.querySelector(`.layout-navigation-notifications`).innerText = `Paziņojumi`;
+}
+for (element of document.querySelectorAll(`.user-settings-tab`)) {
+	if (element.innerText === `Notifikācijas`) {
+		element.innerText = `Paziņojumi`;
+	}
+}
+
+// Show the loading spinner when clicking "Saziņa", "Pārskati" and account button
+for (element of document.querySelectorAll(`.item-messages a`)) {
+	element.className = `onclick-spinner`;
+}
+for (element of document.querySelectorAll(`.item-analytics a`)) {
+	element.className = `onclick-spinner`;
+}
+if (document.querySelector(`.student-switch-link`) !== null) {
+	document.querySelector(`.student-switch-link`).className += ` onclick-spinner`;
+}
