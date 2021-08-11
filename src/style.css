@@ -698,7 +698,7 @@ footer .footer-container .go-top-col .go-top:hover::before {
 .loading-info {
 	display: block !important;
 
-	background: var(--background-back-color);
+	background: var(--background-front-color);
 	color: var(--paragraph-color);
 
 	box-shadow: 0 7px 14px -3px var(--shadow-color);

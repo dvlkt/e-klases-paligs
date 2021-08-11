@@ -9,22 +9,20 @@
 </p>
 
 # Dizains
-![Sākumlapa](https://github.com/d-avis/e-klases-modernais-dizains/raw/master/assets/home.png)
 
-**Sākumlapa**
+![Sākumlapa](https://github.com/d-avis/e-klases-modernais-dizains/raw/master/assets/home.png)
 
 ![Dienasgrāmata](https://github.com/d-avis/e-klases-modernais-dizains/raw/master/assets/diary.png)
 
-**Dienasgrāmata**
-
 # Funkcijas
-(Visas funkcijas var ieslēgt/izslēgt un izmainīt iestatījumos)
+
+(Gandrīz visas funkcijas var ieslēgt/izslēgt un izmainīt iestatījumos)
 
 - Jauns, moderns dizains
 - Tumšais/gaišais režīms
 - Reklāmu noņemšana
 - Īss atzīmju pārskats katrai nedēļai (nav nepieciešams ģimenes komplekts)
-- Ģimenes komplekta reklāmu noņemšana (darbojas tikai tad, ja nav aktivizēts ģimenes komplekts)
+- Ģimenes komplekta reklāmu noņemšana (ieteicams izslēgt, ja ir aktivizēts ģimenes komplekts)
 - Atslēgvārdu izcelšana dienasgrāmatā
 - Paroles saglabāšana
 - Profila ikona (redzama tikai sev)
