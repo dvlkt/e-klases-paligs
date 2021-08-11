@@ -9,7 +9,7 @@ if (document.location.href.includes(`/Family/Diary`)) {
 		if (i.children[1].children[0].children[0].className.includes(`no-data`)) {
 			for (let o of i.querySelectorAll(`thead tr td`)) {
 				o.innerHTML = ``;
-				o.style.background = `#28282d`;
+				o.style.background = `var(--background-middle-dark-color)`;
 			}
 		}
 	}
