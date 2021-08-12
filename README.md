@@ -1,6 +1,6 @@
 <p align="center">
-	<a href="https://github.com/d-avis/e-klases-modernais-dizains">
-		<img src="https://github.com/d-avis/e-klases-modernais-dizains/raw/master/assets/banner.png" alt="E-klases Modernais Dizains">
+	<a href="https://github.com/d-avis/e-klase-2">
+		<img src="https://github.com/d-avis/e-klase-2/raw/master/assets/banner.png" alt="E-klase 2">
 	</a>
 </p>
 <p align="center">
@@ -10,9 +10,9 @@
 
 # Dizains
 
-![Sākumlapa](https://github.com/d-avis/e-klases-modernais-dizains/raw/master/assets/home.png)
+![Sākumlapa](https://github.com/d-avis/e-klase-2/raw/master/assets/home.png)
 
-![Dienasgrāmata](https://github.com/d-avis/e-klases-modernais-dizains/raw/master/assets/diary.png)
+![Dienasgrāmata](https://github.com/d-avis/e-klase-2/raw/master/assets/diary.png)
 
 # Funkcijas
 
@@ -58,4 +58,4 @@ Lol es nemaksāšu 100$ gadā
 
 ## Edge <79 un Internet Explorer
 
-![😂😂😂](https://github.com/d-avis/e-klases-modernais-dizains/raw/master/assets/laughing.png)
+![😂😂😂](https://github.com/d-avis/e-klase-2/raw/master/assets/laughing.png)

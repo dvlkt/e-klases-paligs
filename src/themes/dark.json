@@ -10,6 +10,8 @@
 
 	"theme-color": "#0088e3",
 	"theme-gradient": "linear-gradient(120deg, #0088e3 0%, #034cad 100%)",
+	"theme-accent-color": "#ffffff",
+	"theme-accent-icon-brightness": "1",
 
 	"divider-color": "#00000020",
 
@@ -18,5 +20,6 @@
 	"shadow-color": "#00000099",
     
 	"red-color": "#eb4545",
-	"red-shadow-color": "#641212a6"
+	"red-shadow-color": "#641212a6",
+	"red-accent-color": "#ffffff"
 }

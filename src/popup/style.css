@@ -10,19 +10,41 @@
 
 	font-family: 'inter';
 }
-
 body {
 	width: 300px;
 	height: 400px;
 
-	background: #1a1a1d;
+	background: var(--background-back-color);
 
 	overflow-x: hidden;
 
 	user-select: none;
+
+	/* transition: .2s background; */
 }
+body.light-theme {
+	--text-color: #000000;
+	--sub-text-color: #808080;
+	
+	--background-back-color: #ededf4;
+	--background-middle-color: #dcdce2;
+
+	--bottom-gradient: linear-gradient(0deg, #ededf4ff 0%, #ededf400 100%);
+}
+body.dark-theme {
+	--text-color: #ffffff;
+	--sub-text-color: #808080;
+	
+	--background-back-color: #1a1a1d;
+	--background-middle-color: #303035;
+
+	--bottom-gradient: linear-gradient(0deg, #1a1a1dff 0%, #1a1a1d00 100%);
+
+	--theme-color: #35beff;
+}
+
 h1, h2 {
-	color: #ffffff;
+	color: var(--text-color);
 
 	font-size: 0.9rem;
 	text-transform: uppercase;
@@ -30,16 +52,16 @@ h1, h2 {
 	pointer-events: none;
 }
 p {
-	color: #ffffff;
+	color: var(--text-color);
 }
 sub {
-	color: #ffffff80;
+	color: var(--sub-text-color);
 
 	font-size: .7rem;
 }
 
 a {
-	color: #35beff;
+	color: var(--theme-color);
 
 	text-decoration: none;
 
@@ -60,7 +82,7 @@ a::after {
 
 	border-radius: 2px;
 
-	background: #35beff;
+	background: var(--theme-color);
 
 	transition: .2s width;
 }
@@ -76,7 +98,7 @@ a:hover::after {
 	display: block;
 	width: 100%;
 
-	background: #303035;
+	background: var(--background-middle-color);
 
 	padding: 1rem 0 1rem 0;
 
@@ -86,7 +108,7 @@ a:hover::after {
 
 	box-shadow: 0 4px 10px -3px #00000099;
 	
-	z-index: 2;
+	z-index: 3;
 }
 
 .list {
@@ -107,7 +129,9 @@ a:hover::after {
 	width: 100%;
 	height: 3rem;
 
-	background: linear-gradient(0deg, #1a1a1dff 0%, #1a1a1d00 100%);
+	background-color: var(--bottom-gradient);
+
+	transition: .2s background-color;
 }
 
 .title:not(:first-child) {
@@ -117,7 +141,7 @@ a:hover::after {
 .title svg {
 	display: inline-block;
 
-	color: #ffffff;
+	color: var(--text-color);
 
 	vertical-align: middle;
 }
@@ -326,8 +350,8 @@ a:hover::after {
 }
 
 button {
-	background: #303035;
-	color: #ffffff;
+	background: var(--background-middle-color);
+	color: var(--text-color);
 
 	font-size: 1rem;
 
@@ -354,8 +378,8 @@ textarea {
 	width: 100%;
 	height: 5rem;
 
-	background: #303035;
-	color: #ffffff;
+	background: var(--background-middle-color);
+	color: var(--text-color);
 
 	font-size: 0.9rem;
 
