@@ -26,7 +26,10 @@
 				"extensionBranding.js",
 				"themeApplier.js"
 			],
-			"css": ["style.css"],
+			"css": [
+				"style.css",
+				"icons.css"
+			],
 			"run_at": "document_start"
 		},
 		{

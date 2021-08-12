@@ -109,6 +109,9 @@ section h2 {
 
 	box-shadow: 0 7px 14px -3px var(--shadow-color);
 }
+.lessons-table tr {
+	border: 0;
+}
 .student-journal-lessons-table-holder .lessons-table .head td, .student-journal-lessons-table-holder .lessons-table thead td {
 	background: var(--background-middle-color);
 
@@ -133,6 +136,8 @@ section h2 {
 }
 .no-data {
 	background: var(--background-middle-dark-color);
+
+	text-align: center;
 
 	border-radius: 1rem;
 }
@@ -1383,15 +1388,30 @@ a.l-MainFooter_Exit:hover::after,
 	display: none; /* TOGGLEABLE */
 }
 .print-table {
-	background: var(--background-middle-color);
+	background: none;
+
+	border: 0;
 
 	border-radius: 1rem;
 
 	box-shadow: 0 7px 14px -3px var(--shadow-color);
 }
+.print-table tr {
+	border: 0;
+	border-top: 4px solid var(--divider-color);
+	border-bottom: 4px solid var(--divider-color);
+}
+.print-table thead tr {
+	border-top: 0;
+}
+.print-table tbody tr:last-child {
+	border-bottom: 0;
+}
 .print-table td,
 .print-table th {
 	background: none !important;
+
+	padding: .5rem;
 
 	border: 0;
 }
@@ -1400,9 +1420,28 @@ a.l-MainFooter_Exit:hover::after,
 	text-transform: uppercase;
 	font-weight: bold;
 }
-.print-table td:nth-child(2n+1) {
+.print-table td:nth-child(2n),
+.print-table th:nth-child(2n) {
+	background: var(--background-middle-color) !important;
+}
+.print-table td:nth-child(2n+1),
+.print-table th:nth-child(2n+1) {
 	background: var(--background-middle-dark-color) !important;
 }
+.print-table th:first-child {
+	border-top-left-radius: 1rem;
+}
+.print-table th:last-child {
+	border-top-right-radius: 1rem;
+}
+.print-table tr:last-child td:first-child {
+	border-bottom-left-radius: 1rem;
+}
+.print-table tr:last-child td:last-child {
+	border-bottom-right-radius: 1rem;
+}
+
+/* SCROLL TO TOP */
 .scroll-to-top {
 	background-color: var(--theme-color);
 
