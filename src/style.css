@@ -1,3 +1,6 @@
+/* Note: the E-klase code is very bad. I hope I'm not being hypocritic. */
+
+/* GLOBAL */
 body {
 	background: var(--background-back-color);
 }
@@ -5,9 +8,15 @@ body,
 section h2 {
 	color: var(--title-color);
 }
+
+/* DASHBOARD */
 .dashboard-widget,
 .dashboard-widget-col.widget-banner .dashboard-widget,
+.dashboard-widget-col.widget-notifications .dashboard-widget,
 .dashboard-information {
+	height: auto;
+	min-height: 200px;
+
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
 
@@ -43,6 +52,8 @@ section h2 {
 .dashboard-widget-col.widget-notifications .widget-content {
 	background: none;
 
+	text-align: center;
+
 	height: 100%;
 }
 .dashboard-widget,
@@ -52,22 +63,59 @@ section h2 {
 	cursor: auto;
 }
 .dashboard-widget-col.widget-notifications .widget-notifications-primary {
+	display: inline-block;
+	width: 10rem;
+
+	background: var(--background-middle-dark-color);
 	color: var(--paragraph-color);
 
+	margin-bottom: .5rem;
+
 	border: 0;
+
+	border-radius: 1rem;
+
+	transition: .2s filter, .2s box-shadow;
 }
-.dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon {
-	transition: .2s filter;
+.dashboard-widget-col.widget-notifications .widget-notifications-primary:hover {
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
+
+	filter: brightness(0.8);
 }
 .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon:hover,
 .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon:focus {
 	color: var(--paragraph-color);
-
-	filter: brightness(0.8);
 }
 .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon2,
-.dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon:hover.icon2 {
-	background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzMiIGhlaWdodD0iMjIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEuMzMgMEMuNjA4IDAgMCAuNiAwIDEuMzE2VjIwLjA3YzAgLjcxNi42MDcgMS4zMTYgMS4zMyAxLjMxNmgzMC4zNGMuNzIzIDAgMS4zMy0uNiAxLjMzLTEuMzE2VjEuMzE2QzMzIC42IDMyLjM5MyAwIDMxLjY3IDBIMS4zM3ptMjkuNzY3IDEuODgydi45MjNMMTYuNSAxMy4yNyAxLjgyNCAyLjY1bC4wNjMtLjc2OGgyOS4yMXpNMTUuOTM2IDE1LjE5NWEuOTYuOTYgMCAwMDEuMTI5IDBsMTQuMDMyLTEwLjE1djE0LjQ1OEgxLjkwM1Y1LjA0NGwxNC4wMzMgMTAuMTUxeiIgZmlsbC1ydWxlPSJldmVub2RkIiBmaWxsPSIjZmZmZmZmIi8+PC9zdmc+");
+.dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon2:hover {
+	position: relative;
+	
+	background: none;
+
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon2::before {
+	content: "";
+
+	position: absolute;
+	top: 0;
+	left: 3.75rem;
+
+	display: block;
+	width: 2.5rem;
+	height: 2.5rem;
+
+	background-size: cover;
+
+	filter: invert() brightness(var(--icon-brightness));
+}
+.dashboard-widget-col.widget-notifications .widget-notification .items {
+	color: var(--low-priority-text-color);
+}
+.dashboard-widget-col.widget-banner .widget-content {
+	height: auto;
+	min-height: 200px;
 }
 .close-dashboard-adv-message {
 	margin-top: .25rem;
@@ -85,18 +133,26 @@ section h2 {
 	background: var(--paragraph-color);
 }
 .dashboard-widget-col.widget-notifications .widget-notification {
-	background: none;
+	background: var(--background-middle-dark-color);
 	color: var(--paragraph-color);
 
-	border: 0;
+	margin: .5rem;
 
-	transition: .2s filter;
+	border: 0;
+	
+	border-radius: 1rem;
+
+	transition: .2s box-shadow, .2s filter;
 }
 .dashboard-widget-col.widget-notifications .widget-notification:hover {
-	background: none;
-	
+	background: var(--background-middle-dark-color);
+
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
+
 	filter: brightness(0.8);
 }
+
+/* DIARY */
 .students-journal-header {
 	background: var(--background-back-color);
 }
