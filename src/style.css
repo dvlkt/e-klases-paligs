@@ -67,7 +67,7 @@ section h2 {
 }
 .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon2,
 .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon:hover.icon2 {
-	background-image: url( data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzMiIGhlaWdodD0iMjIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEuMzMgMEMuNjA4IDAgMCAuNiAwIDEuMzE2VjIwLjA3YzAgLjcxNi42MDcgMS4zMTYgMS4zMyAxLjMxNmgzMC4zNGMuNzIzIDAgMS4zMy0uNiAxLjMzLTEuMzE2VjEuMzE2QzMzIC42IDMyLjM5MyAwIDMxLjY3IDBIMS4zM3ptMjkuNzY3IDEuODgydi45MjNMMTYuNSAxMy4yNyAxLjgyNCAyLjY1bC4wNjMtLjc2OGgyOS4yMXpNMTUuOTM2IDE1LjE5NWEuOTYuOTYgMCAwMDEuMTI5IDBsMTQuMDMyLTEwLjE1djE0LjQ1OEgxLjkwM1Y1LjA0NGwxNC4wMzMgMTAuMTUxeiIgZmlsbC1ydWxlPSJldmVub2RkIiBmaWxsPSIjZmZmZmZmIi8+PC9zdmc+);
+	background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzMiIGhlaWdodD0iMjIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEuMzMgMEMuNjA4IDAgMCAuNiAwIDEuMzE2VjIwLjA3YzAgLjcxNi42MDcgMS4zMTYgMS4zMyAxLjMxNmgzMC4zNGMuNzIzIDAgMS4zMy0uNiAxLjMzLTEuMzE2VjEuMzE2QzMzIC42IDMyLjM5MyAwIDMxLjY3IDBIMS4zM3ptMjkuNzY3IDEuODgydi45MjNMMTYuNSAxMy4yNyAxLjgyNCAyLjY1bC4wNjMtLjc2OGgyOS4yMXpNMTUuOTM2IDE1LjE5NWEuOTYuOTYgMCAwMDEuMTI5IDBsMTQuMDMyLTEwLjE1djE0LjQ1OEgxLjkwM1Y1LjA0NGwxNC4wMzMgMTAuMTUxeiIgZmlsbC1ydWxlPSJldmVub2RkIiBmaWxsPSIjZmZmZmZmIi8+PC9zdmc+");
 }
 .close-dashboard-adv-message {
 	margin-top: .25rem;
@@ -352,15 +352,17 @@ section h2 {
 	letter-spacing: 0;
 	text-transform: capitalize;
 }
-.header-first-menu-item a::before {
-	filter: saturate(0) brightness(10) brightness(var(--icon-brightness));
-}
 .header-first-menu-item.current-user .current-user-image.student-other {
+	width: 1rem;
+	height: 1rem;
+
+	background-size: cover;
+
+	top: 13px;
+
 	border-radius: 50%;
 
-	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2OSIgaGVpZ2h0PSI2OSIgdmlld0JveD0iLTQ0NSAyNDYgNjkgNjkiPjxwYXRoIGQ9Ik0tMzgwLjMgMjgwLjVjMC0xNi43LTEzLjYtMzAuNC0zMC40LTMwLjRzLTMwLjQgMTMuNi0zMC40IDMwLjRjMCA5LjEgNCAxNy4zIDEwLjQgMjIuOHYtLjFjMi43LTcuNSAxMC4zLTEuNiAxMy45LTguNS0yLjQtMi4yLTQuNC01LjQtNS42LTktLjEuMS0uNy0yLjgtMS4yLTUuMi0uMi0xLjUtLjItNy45LjEtOS43LjItMS4yLjQtMi4yLjctMy4xLjItLjkuNS0yIDEuMS0zLjQgMS4yLTIuOSA1LjEtNC44IDExLjUtNC44IDguNSAwIDEwLjkgMy41IDEyLjIgNS45LjkgMS43LjggMy42IDEuMSA1LjFsLjMgMS41Yy4yIDEuNS4yIDUuNi4xIDYuNi0uNiAzLjQtMS4yIDcuMS0xLjIgNy4xLTEuMiAzLjYtMy4yIDYuOS01LjcgOSAzLjUgNi42IDEwLjggMS4zIDEzLjYgNy44IDUuOS01LjUgOS41LTEzLjMgOS41LTIyeiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0tNDEwLjYgMjQ2LjFjLTE4LjkgMC0zNC40IDE1LjQtMzQuNCAzNC40IDAgMTEgNS4yIDIwLjggMTMuMyAyNy4xIDIuOCAyLjIgNS45IDMuOSA5LjMgNS4yIDMuNyAxLjMgNy43IDIuMSAxMS44IDIuMSA0LjEgMCA4LjEtLjcgMTEuOC0yLjEgMy44LTEuNCA3LjItMy40IDEwLjItNS45IDcuNS02LjMgMTIuMy0xNS44IDEyLjMtMjYuNCAwLTE5LTE1LjQtMzQuNC0zNC4zLTM0LjR6bTIwLjggNTYuNWMtMi44LTYuNS0xMC4xLTEuMi0xMy42LTcuOCAyLjUtMi4yIDQuNS01LjQgNS43LTkgMCAwIC43LTMuNiAxLjItNy4xLjEtMS4xLjEtNS4yLS4xLTYuNmwtLjMtMS41Yy0uMi0xLjUtLjItMy40LTEuMS01LjEtMS4zLTIuNC0zLjctNS45LTEyLjItNS45LTYuMyAwLTEwLjMgMS45LTExLjUgNC44LS42IDEuNC0uOSAyLjUtMS4xIDMuNC0uMy45LS41IDEuOS0uNyAzLjEtLjIgMS44LS4yIDguMi0uMSA5LjcuNCAyLjQgMS4xIDUuMyAxLjIgNS4yIDEuMiAzLjYgMy4yIDYuOCA1LjYgOS0zLjYgNi45LTExLjIgMS0xMy45IDguNXYuMWMtNi40LTUuNi0xMC40LTEzLjctMTAuNC0yMi44IDAtMTYuNyAxMy42LTMwLjQgMzAuNC0zMC40czMwLjQgMTMuNiAzMC40IDMwLjRjMCA4LjYtMy42IDE2LjQtOS41IDIyeiIgZmlsbD0iI2ZmZmZmZiIvPjwvc3ZnPg==");
-
-	filter: brightness(var(--icon-brightness));
+	filter: invert() brightness(var(--icon-brightness));
 }
 .header-first-menu-item.item-langs {
 	display: none;
@@ -391,7 +393,19 @@ section h2 {
 
 	opacity: 0.8;
 }
-.header-second .header-second-inner li a::before {
+.header-first .header-first-menu-item.item-links a::before,
+.header-first .header-first-menu-item.item-family-package a::before,
+.header-first .header-first-menu-item.item-notifications a::before,
+.header-first .header-first-menu-item.item-logout a::before,
+.header-second .header-second-menu-item.item-home a::before,
+.header-second .header-second-menu-item.item-journal a::before,
+.header-second .header-second-menu-item.item-messages a::before,
+.header-second .header-second-menu-item.item-analytics a::before {
+	width: 1rem;
+	height: 1rem;
+
+	background-size: cover;
+
 	filter: invert() brightness(var(--icon-brightness));
 }
 .header-second .header-second-inner li a::after {
@@ -833,7 +847,7 @@ footer .footer-container .go-top-col .go-top:hover::before {
 
 	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2OSIgaGVpZ2h0PSI2OSIgdmlld0JveD0iLTQ0NSAyNDYgNjkgNjkiPjxwYXRoIGQ9Ik0tMzgwLjMgMjgwLjVjMC0xNi43LTEzLjYtMzAuNC0zMC40LTMwLjRzLTMwLjQgMTMuNi0zMC40IDMwLjRjMCA5LjEgNCAxNy4zIDEwLjQgMjIuOHYtLjFjMi43LTcuNSAxMC4zLTEuNiAxMy45LTguNS0yLjQtMi4yLTQuNC01LjQtNS42LTktLjEuMS0uNy0yLjgtMS4yLTUuMi0uMi0xLjUtLjItNy45LjEtOS43LjItMS4yLjQtMi4yLjctMy4xLjItLjkuNS0yIDEuMS0zLjQgMS4yLTIuOSA1LjEtNC44IDExLjUtNC44IDguNSAwIDEwLjkgMy41IDEyLjIgNS45LjkgMS43LjggMy42IDEuMSA1LjFsLjMgMS41Yy4yIDEuNS4yIDUuNi4xIDYuNi0uNiAzLjQtMS4yIDcuMS0xLjIgNy4xLTEuMiAzLjYtMy4yIDYuOS01LjcgOSAzLjUgNi42IDEwLjggMS4zIDEzLjYgNy44IDUuOS01LjUgOS41LTEzLjMgOS41LTIyeiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0tNDEwLjYgMjQ2LjFjLTE4LjkgMC0zNC40IDE1LjQtMzQuNCAzNC40IDAgMTEgNS4yIDIwLjggMTMuMyAyNy4xIDIuOCAyLjIgNS45IDMuOSA5LjMgNS4yIDMuNyAxLjMgNy43IDIuMSAxMS44IDIuMSA0LjEgMCA4LjEtLjcgMTEuOC0yLjEgMy44LTEuNCA3LjItMy40IDEwLjItNS45IDcuNS02LjMgMTIuMy0xNS44IDEyLjMtMjYuNCAwLTE5LTE1LjQtMzQuNC0zNC4zLTM0LjR6bTIwLjggNTYuNWMtMi44LTYuNS0xMC4xLTEuMi0xMy42LTcuOCAyLjUtMi4yIDQuNS01LjQgNS43LTkgMCAwIC43LTMuNiAxLjItNy4xLjEtMS4xLjEtNS4yLS4xLTYuNmwtLjMtMS41Yy0uMi0xLjUtLjItMy40LTEuMS01LjEtMS4zLTIuNC0zLjctNS45LTEyLjItNS45LTYuMyAwLTEwLjMgMS45LTExLjUgNC44LS42IDEuNC0uOSAyLjUtMS4xIDMuNC0uMy45LS41IDEuOS0uNyAzLjEtLjIgMS44LS4yIDguMi0uMSA5LjcuNCAyLjQgMS4xIDUuMyAxLjIgNS4yIDEuMiAzLjYgMy4yIDYuOCA1LjYgOS0zLjYgNi45LTExLjIgMS0xMy45IDguNXYuMWMtNi40LTUuNi0xMC40LTEzLjctMTAuNC0yMi44IDAtMTYuNyAxMy42LTMwLjQgMzAuNC0zMC40czMwLjQgMTMuNiAzMC40IDMwLjRjMCA4LjYtMy42IDE2LjQtOS41IDIyeiIgZmlsbD0iI2ZmZmZmZiIvPjwvc3ZnPg==");
 
-	filter: brightness(var(--icon-brightness));
+	filter: invert() brightness(var(--icon-brightness));
 }
 .modal-options-item {
 	background: var(--background-front-color);
@@ -1509,6 +1523,98 @@ a.l-MainFooter_Exit:hover::after,
 
 	border-radius: 1rem 1rem 0 0;
 }
+.sys-content .section.dark {
+	background: var(--background-front-color);
+
+	margin-bottom: 1rem;
+
+	border-radius: 0 0 1rem 1rem;
+}
+.sys-content .section-stores {
+	display: none; /* Why are the "Get on App Store and Google Play" thingies even there? Completely unrelated so removing them */
+}
+.announcement .warning .inner {
+	height: 2rem;
+
+	background: var(--red-color);
+	color: var(--red-accent-color);
+
+	padding: .5rem;
+
+	border-radius: .5rem;
+
+	box-shadow: 0 7px 14px -3px var(--red-shadow-color);
+}
+.btn-transparent,
+.btn-transparent:focus,
+.btn-transparent:hover {
+	background: var(--theme-color);
+	color: var(--theme-accent-color);
+
+	font-weight: bold;
+	text-transform: uppercase;
+
+	border: 0;
+
+	transition: .2s filter, .2s box-shadow;
+}
+.btn-transparent:focus,
+.btn-transparent:hover {
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
+
+	filter: brightness(0.8);
+}
+.btn-transparent::after {
+	border: 2px solid var(--theme-accent-color);
+	border-width: 0 2px 2px 0;
+}
+.carousel-inner .item:nth-child(1),
+.carousel-inner .item:nth-child(3) {
+	background: var(--theme-gradient) !important;
+	color: var(--theme-accent-color);
+}
+.carousel-inner .item:nth-child(2),
+.carousel-inner .item:nth-child(4) {
+	background: var(--background-front-color) !important;
+}
+.section.plan-pros {
+	background: var(--background-middle-color);
+}
+.section.plan-pros .row .col-md-4 {
+	display: none; /* The hats need to go */
+}
+.section.plan-pros .row .col-md-8 {
+	width: 100%;
+
+	padding-left: 25%;
+	padding-right: 25%;
+}
+.section.plan-pros .pros-list li:not(:last-child)::after {
+	border-bottom: 4px solid var(--divider-color);
+}
+.family-plan-carousel .carousel-control.left::before,
+.family-plan-carousel .carousel-control.right::before {
+	border: 6px solid var(--theme-accent-color);
+	border-width: 0 6px 6px 0;
+}
+.family-plan-carousel .carousel-control.left::before {
+	left: 1rem;
+}
+.family-plan-carousel .carousel-control.right::before {
+	right: 1rem;
+}
+.family-plan-carousel .carousel-indicators li {
+	background: var(--background-middle-color);
+
+	border: 0;
+
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
+
+	transition: .2s width, .2s height;
+}
+.family-plan-carousel .carousel-indicators .active {
+	background: var(--theme-color);
+}
 
 /* FAMILY PLAN COMPARISON */
 .l-MainFooter {
@@ -1770,6 +1876,20 @@ a.l-MainFooter_Exit:hover::after,
 
 	filter: brightness(var(--icon-brightness));
 }
+.other-devices .people .edit,
+.other-devices .people.current .edit {
+	width: 1.5rem;
+	height: 1.5rem;
+
+	filter: invert() brightness(var(--icon-brightness));
+}
+.history-wrap .container {
+	background-color: var(--background-middle-color);
+
+	border-radius: 0 0 1rem 1rem;
+
+	box-shadow: none;
+}
 
 /* TEST REPORT */
 .rating-container .test-wrap,
@@ -1847,4 +1967,86 @@ a.l-MainFooter_Exit:hover::after,
 	color: var(--paragraph-color);
 
 	border-radius: 1rem;
+}
+
+/* TECH SUPPORT */
+.tech-support-container .ts-head .container {
+	background: var(--theme-gradient);
+	color: var(--theme-accent-color);
+
+	border: 0;
+
+	border-radius: 1rem 1rem 0 0;
+}
+.tech-support-container .ts-content .container {
+	background: var(--background-middle-color);
+
+	border: 0;
+
+	border-radius: 0 0 1rem 1rem;
+}
+.tech-support-container .form-row .input,
+.tech-support-container .form-row .textarea {
+	background: var(--background-front-color) !important /* Why did they use this here???? */;
+	color: var(--paragraph-color);
+
+	border-radius: .5rem;
+
+	border: 0;
+}
+.form-row .input::placeholder {
+	color: var(--paragraph-color);
+}
+.tech-support-container input[type="submit"] {
+	background: var(--theme-color);
+	color: var(--theme-accent-color);
+
+	font-weight: bold;
+	text-transform: uppercase;
+
+	transition: .2s box-shadow, .2s filter;
+}
+.tech-support-container input[type="submit"]:hover {
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
+
+	filter: brightness(0.8);
+}
+
+/* 404 PAGE */
+.notice-holder .bubble {
+	background: var(--red-color);
+
+	padding-top: .25rem;
+
+	border: 0;
+
+	border-radius: 1rem;
+
+	box-shadow: 0 7px 14px -3px var(--red-shadow-color);
+}
+.notice-holder .bubble::after,
+.notice-holder .bubble::before {
+	display: none;
+}
+.notice-holder .bubble .b-error {
+	color: var(--red-accent-color);
+}
+.error-img {
+	display: none; /* WHAT IS THAT GIF??? It should be publicly laughed at */
+}
+.notice-holder .error-bottom .btn-default {
+	background: var(--theme-color);
+	color: var(--theme-accent-color);
+
+	border-radius: 1rem;
+
+	transition: .2s filter, .2s box-shadow;
+}
+.notice-holder .error-bottom .btn-default:hover {
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
+
+	filter: brightness(0.8);
+}
+.notice-holder .error-bottom .btn-default .progress {
+	display: none; /* The dumb button design also needs to go (and the designer needs to go as well) */
 }

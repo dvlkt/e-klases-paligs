@@ -1,6 +1,6 @@
 <h1 align="center">
 	<sub>
-		<img src="https://github.com/d-avis/e-klase-2/raw/master/assets/icon-bg.png" height="38" width="38">
+		<img src="https://github.com/d-avis/e-klase-2/raw/master/assets/icon-bg.png" height="60" width="60">
 	</sub>
 	E-klase 2
 </h1>
@@ -68,13 +68,13 @@
 ***
 
 <p align="center">
-	<img src="https://github.com/d-avis/e-klase-2/raw/master/assets/readme/1.png" alt="Skaists, moderns dizains" width="420" />
+	<img src="https://github.com/d-avis/e-klase-2/raw/master/assets/readme/1.png" alt="Skaists, moderns dizains" />
 </p>
 <p align="center">
-	<img src="https://github.com/d-avis/e-klase-2/raw/master/assets/readme/2.png" alt="Tumšais režīms" width="420" />
+	<img src="https://github.com/d-avis/e-klase-2/raw/master/assets/readme/2.png" alt="Tumšais režīms" />
 </p>
 <p align="center">
-	<img src="https://github.com/d-avis/e-klase-2/raw/master/assets/readme/3.png" alt="Reklāmu bloķēšana" width="420" />
+	<img src="https://github.com/d-avis/e-klase-2/raw/master/assets/readme/3.png" alt="Reklāmu bloķēšana" />
 </p>
 
 # 🧩 Citas funkcijas
@@ -88,6 +88,18 @@
 - Atslēgvārdu izcelšana dienasgrāmatā
 
 - Paroles saglabāšana
+
+- PWAs
+
+***
+
+# Izmantošana uz telefona
+
+E-klases mājaslapa uz telefona izskatās tāpat un ir tikpat izmantojama, cik aplikācija. E-klasi 2 var ielādēt arī uz mobilajiem internetpārlūkiem, tāpēc, izmantojot E-klasi internetpārlūkā, E-klasi 2 var izmantot arī uz telefona.
+
+Ja tu vēlies izmantot E-klasi 2 kā aplikāciju, vislabākā izvēle ir PWA (Progressive Web App). Izmantojot šo internetpārlūku funkciju, saites var "ieinstalēt" uz telefona, un tad tās darbosies gandrīz tā, it kā būtu pavisam parastas aplikācijas. E-klase 2 pievieno šo PWA funkcionalitāti E-klasei, tāpēc tu to vari izmantot.
+
+Ieinstalēt E-klasi kā PWA var caur internetpārlūku. Gan uz Chrome, gan uz Firefox Mobile var ielādēt PWA nospiežot uz trīs aplīšiem un tad spiežot uz "Add to Home screen" vai "Install".
 
 ***
 

@@ -6,12 +6,12 @@
 	"description": "Labāks dizains un vairāk funkcijas.",
 
 	"icons": {
-		"512": "res/icon-512.png",
-		"256": "res/icon-256.png",
-		"128": "res/icon-128.png",
-		"64": "res/icon-64.png",
-		"32": "res/icon-32.png",
-		"16": "res/icon-16.png"
+		"512": "res/light/icon-512.png",
+		"256": "res/light/icon-256.png",
+		"128": "res/light/icon-128.png",
+		"64": "res/light/icon-64.png",
+		"32": "res/light/icon-32.png",
+		"16": "res/light/icon-16.png"
 	},
 
 	"permissions": [
@@ -46,7 +46,7 @@
 	],
 
 	"browser_action": {
-		"default_icon": "res/icon-64.png",
+		"default_icon": "res/light/icon-64.png",
 		"default_title": "E-klase 2",
 		"default_popup": "popup/index.html"
 	},
