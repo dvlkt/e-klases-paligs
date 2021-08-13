@@ -98,9 +98,7 @@ a:hover::after {
 	display: block;
 	width: 100%;
 
-	background: var(--background-middle-color);
-
-	padding: 1rem 0 1rem 0;
+	background: linear-gradient(120deg, #f6f6f6 0%, #d1d1d1 100%);
 
 	border-radius: 0 0 .5rem .5rem;
 
@@ -109,6 +107,12 @@ a:hover::after {
 	box-shadow: 0 4px 10px -3px #00000099;
 	
 	z-index: 3;
+}
+.header img {
+	max-height: 3rem;
+
+	-webkit-user-drag: none;
+	user-select: none;
 }
 
 .list {

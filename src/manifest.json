@@ -1,6 +1,6 @@
 {
 	"manifest_version": 2,
-	"name": "E-klases Modernais Dizains",
+	"name": "E-klase 2",
 	"version": "1.0",
 
 	"description": "Labāks dizains un vairāk funkcijas.",
@@ -23,7 +23,6 @@
 		{
 			"matches": ["*://*.e-klase.lv/*"],
 			"js": [
-				"extensionBranding.js",
 				"themeApplier.js"
 			],
 			"css": [
@@ -35,6 +34,7 @@
 		{
 			"matches": ["*://*.e-klase.lv/*"],
 			"js": [
+				"extensionBranding.js",
 				"profilePicture.js",
 				"patches.js",
 				"animations.js",
@@ -47,7 +47,7 @@
 
 	"browser_action": {
 		"default_icon": "res/icon-64.png",
-		"default_title": "E-klases Modernais Dizains",
+		"default_title": "E-klase 2",
 		"default_popup": "popup/index.html"
 	},
 

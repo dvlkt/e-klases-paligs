@@ -1,61 +1,96 @@
+<h1 align="center">
+	<sub>
+		<img src="https://github.com/d-avis/e-klase-2/raw/master/assets/icon-bg.png" height="38" width="38">
+	</sub>
+	E-klase 2
+</h1>
 <p align="center">
-	<a href="https://github.com/d-avis/e-klase-2">
-		<img src="https://github.com/d-avis/e-klase-2/raw/master/assets/banner.png" alt="E-klase 2">
-	</a>
+	Moderns dizains un vairāk funkcijas E-klasei 👍
 </p>
 <p align="center">
-    <b>v0.1 (BETA)</b>
-    <b>License: GPLv3</b>
+	<b>v0.1 BETA</b>
 </p>
 
-# Dizains
+***
 
-![Sākumlapa](https://github.com/d-avis/e-klase-2/raw/master/assets/home.png)
+<h1 align="center">
+	🎉 Nolādēšana
+</h1>
+<p align="center">
+	<table align="center">
+		<tr>
+			<th>
+				<p align="center">
+					<img alt="Firefox" src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg" width="30">
+				</p>
+			</th>
+			<th>
+				<p align="center">
+					<img alt="Chrome" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Chrome_icon_%28September_2014%29.svg" width="30">
+				</p>
+			</th>
+			<th>
+				<p align="center">
+					<img alt="Safari" src="https://upload.wikimedia.org/wikipedia/en/7/71/Safari_14_icon.png" width="30">
+				</p>
+			</th>
+			<th>
+				<p align="center">
+					<img alt="Internet Explorer" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Internet_Explorer_10%2B11_logo.svg/1200px-Internet_Explorer_10%2B11_logo.svg.png" width="30">
+				</p>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				<p align="center">
+					Nav vēl pieejams
+				</p>
+			</td>
+			<td>
+				<p align="center">
+					Nav vēl pieejams
+				</p>
+			</td>
+			<td>
+				<p align="center">
+					Lol es nemaksāšu 100$ gadā noob
+				</p>
+			</td>
+			<td>
+				<p align="center">
+					<img alt="😂😂😂" src="https://raw.githubusercontent.com/d-avis/e-klase-2/master/assets/readme/laughing.png" width="120">
+				</p>
+			</td>
+		</tr>
+	</table>
+</p>
 
-![Dienasgrāmata](https://github.com/d-avis/e-klase-2/raw/master/assets/diary.png)
+***
 
-# Funkcijas
+<p align="center">
+	<img src="https://github.com/d-avis/e-klase-2/raw/master/assets/readme/1.png" alt="Skaists, moderns dizains" width="420" />
+</p>
+<p align="center">
+	<img src="https://github.com/d-avis/e-klase-2/raw/master/assets/readme/2.png" alt="Tumšais režīms" width="420" />
+</p>
+<p align="center">
+	<img src="https://github.com/d-avis/e-klase-2/raw/master/assets/readme/3.png" alt="Reklāmu bloķēšana" width="420" />
+</p>
 
-(Gandrīz visas funkcijas var ieslēgt/izslēgt un izmainīt iestatījumos)
+# 🧩 Citas funkcijas
 
-- Jauns, moderns dizains
-- Tumšais/gaišais režīms
-- Reklāmu noņemšana
-- Īss atzīmju pārskats katrai nedēļai (nav nepieciešams ģimenes komplekts)
 - Ģimenes komplekta reklāmu noņemšana (ieteicams izslēgt, ja ir aktivizēts ģimenes komplekts)
-- Atslēgvārdu izcelšana dienasgrāmatā
-- Paroles saglabāšana
+
 - Profila ikona (redzama tikai sev)
 
-# Ielādēšana
+# 📝 Plānotas funkcijas
 
-## Chrome / Chromium / Brave / Edge >=79 / Vivaldi / Jebkurš cits Chromium-balstīts internetpārlūks
+- Atslēgvārdu izcelšana dienasgrāmatā
 
-Visi šie internetpārlūki ir atkarīgi no Chrome Extension Store, un diemžēl tas maksā 25 EUR, lai tur ieliktu
-papildinājumu. Ļoti iespējams, es to kādu dienu nopirkšu, bet pagaidām ir jāizmanto šāds process:
+- Paroles saglabāšana
 
-1. Nolādē failu no šīs saites -> (neeksistē vēl)
+***
 
-2. Aizej uz sava internetpārlūka papildinājumu lapu. To var atrast šajās saitēs:
-    - Chrome / Chromium: [chrome://extensions](chrome://extensions)
-    - Brave: [brave://extensions](brave://extensions)
-    - Edge: [edge://extensions](edge://extensions)
-    - Vivaldi: [vivaldi://extensions](vivaldi://extensions)
+License: GPLv3. To var apskatīt [šeit](https://github.com/d-avis/e-klase-2/tree/master/LICENSE).
 
-3. Šajā lapā vajadzētu būt slēdzim "Developer mode". Ieslēdz to.
-
-4. Lejupielādēto failu ievelc iekšā šajā lapā.
-
-## Firefox
-
-Aizej uz šo saiti -> (neeksistē vēl)
-
-E-klases Modernajam Dizainam vajadzētu automātiski ielādēties.
-
-## Safari
-
-Lol es nemaksāšu 100$ gadā
-
-## Edge <79 un Internet Explorer
-
-![😂😂😂](https://github.com/d-avis/e-klase-2/raw/master/assets/laughing.png)
+© Dāvis Lektauers, 2021
