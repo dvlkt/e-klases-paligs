@@ -83,6 +83,8 @@
 
 - Profila ikona (redzama tikai sev)
 
+- Viegli pārskatāma savu atzīmju statistika arī bez ģimenes komplekta
+
 # 📝 Plānotas funkcijas
 
 - Atslēgvārdu izcelšana dienasgrāmatā
