@@ -240,7 +240,9 @@ section h2 {
 .student-journal-lessons-table-holder .lessons-table td:nth-child(odd) {
 	background: var(--background-middle-dark-color);
 }
-.student-journal-lessons-table-holder .lessons-table tbody .number--lessonNotInDay {
+.student-journal-lessons-table-holder .lessons-table tbody .number--lessonNotInDay,
+.actual-lessons .lesson-title .number--lessonNotInDay,
+.student-journal-lessons .lesson-title .number--lessonNotInDay {
 	display: none;
 }
 .student-journal-lessons-table-holder .lessons-table tbody tr:last-child td:nth-child(1) {
@@ -249,7 +251,9 @@ section h2 {
 .student-journal-lessons-table-holder .lessons-table tbody tr:last-child td:last-child {
 	border-bottom-right-radius: 1rem;
 }
-.lessons-table td:last-of-type span.score {
+.lessons-table td:last-of-type span.score,
+.actual-lessons span.score,
+.student-journal-lessons span.score {
 	border: 0;
 
 	background: var(--background-front-color);
@@ -332,6 +336,73 @@ section h2 {
 .students-journal-header .week-selector .week-selector-prev {
 	border-right-color: var(--theme-color);
 }
+.student-journal-lessons .actual-lessons-item {
+	background: var(--background-middle-dark-color);
+
+	border-radius: 1rem;
+
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+.actual-lessons .lesson-subitem .description,
+.student-journal-lessons .lesson-subitem .description {
+	color: var(--paragraph-color);
+
+	font-size: 0.8rem;
+}
+.actual-lessons .lesson-subitem .title,
+.student-journal-lessons .lesson-subitem .title {
+	color: var(--low-priority-text-color);
+
+	text-transform: uppercase;
+	font-size: 0.7rem;
+	font-weight: bold;
+}
+.actual-lessons .lesson-subitem,
+.student-journal-lessons .lesson-subitem {
+	border-bottom: 4px solid var(--divider-color);
+}
+.actual-lessons .lesson-title,
+.student-journal-lessons .lesson-title {
+	background: var(--background-middle-color);
+
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+.students-journal-header .week-selector .selected-period-mobile {
+	background: var(--background-middle-color);
+	
+	border-radius: 1rem;
+
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+
+	transition: .2s opacity;
+}
+.students-journal-header .week-selector .selected-period-mobile .cal-icon {
+	filter: invert() brightness(--icon-brightness);
+}
+.students-journal-header .week-selector.calendar-open .selected-period-mobile {
+	background: var(--background-middle-color);
+
+	border: 0;
+	
+	border-radius: 1rem;
+
+	opacity: 0.7;
+}
+.actual-lessons .lesson-title .title,
+.student-journal-lessons .lesson-title .title {
+	color: var(--title-color);
+}
+.actual-lessons .lesson-title .number,
+.student-journal-lessons .lesson-title .number,
+.actual-lessons .lesson-title .room,
+.student-journal-lessons .lesson-title .room {
+	color: var(--low-priority-text-color);
+}
+.actual-lessons .lesson-title .room,
+.student-journal-lessons .lesson-title .room {
+	font-style: normal;
+	font-weight: bold;
+}
 
 /* DIARY ANALYTICS */
 .diary-analytics {
@@ -374,6 +445,7 @@ section h2 {
 	text-transform: none;
 }
 
+/* MODALS */
 .modal-body {
 	background: var(--background-front-color);
 
@@ -658,12 +730,17 @@ header.minimal {
 .mobile-menu .mobile-menu-header {
 	background: var(--background-front-color);
 }
+.mobile-menu .mobile-menu-header {
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
 .mobile-second-menu li,
-.mobile-first-menu li {
+.mobile-first-menu li,
+.mobile-second-menu-item.open,
+.mobile-first-menu .mobile-first-menu-item.open:not(:first-of-type) {
 	border-top: 2px solid var(--divider-color);
 	border-bottom: 2px solid var(--divider-color);
 }
-.mobile-first-menu li:last-child {
+.mobile-first-menu-item:last-child {
 	border-bottom: 4px solid var(--divider-color);
 }
 .mobile-second-menu-item a,
@@ -673,9 +750,6 @@ header.minimal {
 	color: var(--paragraph-color);
 
 	border: 0;
-}
-.mobile-second-menu-item.item-journal a::before {
-	filter: brightness(10) brightness(var(--icon-brightness));
 }
 .current-student-profile-arrow {
 	display: none;
@@ -690,6 +764,27 @@ header.minimal {
 }
 .mobile-first-menu-item .mobile-first-menu-sub .mobile-first-menu-sub-item a {
 	color: var(--paragraph-color);
+}
+.mobile-second-menu-sub {
+	display: none !important;
+}
+.mobile-second-menu-item.open,
+.mobile-first-menu-item.open {
+	background: none;
+}
+.mobile-second-menu-item.has-sub-items::after {
+	display: none;
+}
+.mobile-second-menu-item a::before,
+.mobile-second-menu-item.active a::before,
+.mobile-first-menu-item a::before {
+	filter: invert() brightness(var(--icon-brightness));
+}
+
+/* OTHER MOBILE THINGS */
+.current-page h1 {
+	font-size: 1.5rem;
+	font-weight: bold;
 }
 
 /* BUTTONS */
@@ -1095,6 +1190,9 @@ footer .footer-container .go-top-col .go-top:hover::before {
 .mailbox-data {
 	background: none;
 }
+.MailMainAreaWrapper {
+	background: var(--background-back-color);
+}
 .MailActions .ButtonDefault.MailActions__ToggleButton {
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
@@ -1158,9 +1256,16 @@ footer .footer-container .go-top-col .go-top:hover::before {
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 }
 .FolderNavigation__ButtonNewMailWrapper .FolderNavigation__ButtonNewMail::before {
-	filter: brightness(10) brightness(var(--icon-brightness));
+	content: "";
 
-	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	width: 1rem;
+	height: 1rem;
+
+	background-size: cover;
+
+	margin-top: 0;
+
+	filter: invert() brightness(var(--icon-brightness));
 }
 .FolderNavigation .FolderNavigation__NavItem {
 	position: relative;
@@ -1219,6 +1324,16 @@ footer .footer-container .go-top-col .go-top:hover::before {
 }
 .FolderNavigation .FolderNavigation__NavItem:first-child {
 	border: 0;
+}
+.FolderNavigation .FolderNavigation__NavItem::before {
+	content: "";
+
+	width: 1.2rem;
+	height: 1.2rem;
+
+	margin-top: .8rem !important;
+
+	filter: invert() brightness(var(--icon-brightness));
 }
 .ButtonIcon--loading::before {
 	border: 2px solid var(--paragraph-color);
@@ -1425,6 +1540,14 @@ footer .footer-container .go-top-col .go-top:hover::before {
 }
 .MessageContent__Row .MessageContent__ErrorMessage--subject {
 	margin-top: .7rem;
+}
+.MessageContent__AddRecipients .MessageContent__AddRecipientButton {
+	width: 15px;
+	height: 15px;
+
+	margin: 2.5px;
+
+	filter: invert() brightness(var(--icon-brightness));
 }
 
 /* LINKS */
@@ -1660,6 +1783,10 @@ a.l-MainFooter_Exit:hover::after,
 	border-radius: .5rem;
 
 	box-shadow: 0 7px 14px -3px var(--red-shadow-color);
+}
+.plan-info-head .announcement {
+	color: var(--title-color);
+	background: none;
 }
 .btn-transparent,
 .btn-transparent:focus,
@@ -2042,6 +2169,44 @@ a.l-MainFooter_Exit:hover::after,
 }
 .rating-wrap .item:first-child .col {
 	border: 0;
+}
+
+/* SETTINGS POPUP */
+.people-overlay {
+	background: var(--background-front-color);
+
+	border-radius: 1rem;
+
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
+}
+.nav-tabs.profile li.active {
+	border: 0;
+}
+.nav-tabs.profile li a.user-settings-tab {
+	color: var(--paragraph-color);
+	background: none;
+}
+.people-overlay .overlay-header {
+	background: var(--theme-gradient);
+
+	border-radius: 1rem 1rem 0 0;
+}
+.people-overlay .overlay-header h3 {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+.people-overlay input[type="submit"] {
+	color: var(--theme-accent-color);
+	background: var(--theme-color);
+
+	border-radius: 1rem;
+
+	transition: .2s box-shadow, .2s background;
+}
+.people-overlay input[type="submit"]:hover {
+	filter: brightness(0.8);
+
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
 }
 
 /* LOGIN PAGE */

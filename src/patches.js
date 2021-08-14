@@ -26,11 +26,14 @@ for (element of document.querySelectorAll(`.user-settings-tab`)) {
 }
 
 // Show the loading spinner when clicking "Saziņa", "Pārskati" and account button
+// ...and also set the links so it works on mobile as well
 for (element of document.querySelectorAll(`.item-messages a`)) {
 	element.className = `onclick-spinner`;
+	element.href = `/SPA/Family#/mail`;
 }
 for (element of document.querySelectorAll(`.item-analytics a`)) {
 	element.className = `onclick-spinner`;
+	element.href = `/Family/ReportPupilMarks/Get`
 }
 if (document.querySelector(`.student-switch-link`) !== null) {
 	document.querySelector(`.student-switch-link`).className += ` onclick-spinner`;
