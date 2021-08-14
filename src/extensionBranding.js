@@ -11,8 +11,6 @@ browser.storage.sync.get(`theme`).then((res) => {
 	fetch(browser.runtime.getURL(iconUrl))
 		.then(response => response.blob())
 		.then(blob => {
-			let blobURL = URL.createObjectURL(blob);
-
 			var reader = new FileReader();
 			reader.readAsDataURL(blob); 
 			reader.onloadend = () => {
@@ -29,7 +27,25 @@ browser.storage.sync.get(`theme`).then((res) => {
 					document.querySelector(`link[rel~="icon"]`).href = base64data;
 				}
 			}
-	 	});
+		}
+	);
+
+	// Change all of the original logos to the new ones
+	// (this is basically the same code as above)
+	fetch(browser.runtime.getURL(`/res/title-${res.theme === `dark` ? `dark` : `light`}.png`))
+		.then(response => response.blob())
+		.then(blob => {
+			var reader = new FileReader();
+			reader.readAsDataURL(blob); 
+			reader.onloadend = () => {
+				var base64data = reader.result;
+
+				for (logo of document.querySelectorAll(`.logo`)) {
+					logo.style.backgroundImage = `url("${base64data}")`;
+				}
+			}
+		}
+	);
 });
 
 // Edit the bottom copyright text

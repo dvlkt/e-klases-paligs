@@ -136,6 +136,8 @@ section h2 {
 	background: var(--background-middle-dark-color);
 	color: var(--paragraph-color);
 
+	text-align: left;
+
 	margin: .5rem;
 
 	border: 0;
@@ -420,8 +422,17 @@ section h2 {
 	background: var(--background-middle-color);
 }
 .header-first .logo {
-	filter: saturate(0) brightness(10) brightness(var(--icon-brightness));
+	width: 80px;
+	height: 42px;
 
+	background-image: none;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	margin-top: -4px;
+
+	cursor: pointer;
+	
 	transition: .2s opacity;
 }
 .header-first .logo:hover {
@@ -627,6 +638,8 @@ section h2 {
 	top: 55px;
 }
 header.minimal .header-first {
+	height: 50px;
+
 	background: var(--background-middle-color);
 
 	border-radius: 0 0 1rem 1rem;
@@ -719,14 +732,6 @@ footer {
 }
 footer .copyright {
 	color: var(--low-priority-text-color);
-}
-footer .footer-container .go-top-col .go-top,
-.footer-nav li a {
-	transition: .2s opacity;
-}
-footer .footer-container .go-top-col .go-top:hover,
-.footer-nav li a:hover {
-	opacity: 0.8;
 }
 footer .footer-container .go-top-col .go-top::before {
 	background-color: var(--background-middle-color);
