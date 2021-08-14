@@ -39,7 +39,8 @@
 				"patches.js",
 				"animations.js",
 				"ads/familyPack.js",
-				"ads/regular.js"
+				"ads/regular.js",
+				"analytics/week.js"
 			],
 			"run_at": "document_end"
 		}

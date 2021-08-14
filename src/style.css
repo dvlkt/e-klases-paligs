@@ -252,24 +252,25 @@ section h2 {
 
 	background: var(--background-front-color);
 
+	font-size: 0.8rem;
+
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 
 	border-radius: 10px;
 
-	padding-left: 10px;
-	padding-right: 10px;
+	padding: .5rem;
 
 	font-weight: bold;
 
-	transition: .2s filter;
+	transition: .2s opacity;
+}
+.lessons-table td:last-of-type span.score:hover {
+	opacity: 0.7;
 }
 .lessons-table td:last-of-type span.score.warning {
 	background: var(--red-color);
 
 	box-shadow: 0 4px 10px -3px var(--red-shadow-color);
-}
-.lessons-table td:last-of-type span.score:hover {
-	filter: brightness(0.8);
 }
 .ThirdPartyEvent--Active {
 	background: var(--background-front-color);
@@ -287,7 +288,7 @@ section h2 {
 .ThirdPartyEvent--e-klase-video .ThirdPartyEvent__Logo::before,
 .ThirdPartyEvent__Text,
 .ThirdPartyEvent__Time {
-	color: #acacac;
+	color: var(--low-priority-text-color);
 
 	font-weight: bold;
 	text-transform: uppercase;
@@ -306,10 +307,10 @@ section h2 {
 	filter: brightness(0.8);
 }
 .Status__Text {
+	color: var(--paragraph-color);
+
 	font-weight: bold;
 	text-transform: uppercase;
-
-	color: var(--paragraph-color);
 }
 .ThirdPartyEvent--Deleted {
 	background: var(--background-front-color);
@@ -322,6 +323,53 @@ section h2 {
 
 	margin-top: 15px;
 	margin-bottom: 5px;
+}
+.students-journal-header .week-selector .week-selector-next {
+	border-left-color: var(--theme-color);
+}
+.students-journal-header .week-selector .week-selector-prev {
+	border-right-color: var(--theme-color);
+}
+
+/* DIARY ANALYTICS */
+.diary-analytics {
+	background: var(--background-middle-dark-color);
+	color: var(--paragraph-color);
+
+	padding: 1rem;
+
+	border-radius: 1rem;
+
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+.diary-analytics span.grade {
+	background: var(--background-front-color);
+	color: var(--paragraph-color);
+
+	font-weight: normal;
+	font-size: 0.8rem;
+
+	padding: .5rem;
+
+	border-radius: .5rem;
+
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+
+	cursor: pointer;
+
+	transition: .2s opacity;
+}
+.diary-analytics span.grade:not(.no-pointer):hover {
+	opacity: 0.8;
+}
+.diary-analytics span.grade.no-pointer {
+	cursor: default;
+}
+.diary-analytics span.low-priority {
+	color: var(--low-priority-text-color);
+
+	font-size: 0.8rem;
+	text-transform: none;
 }
 
 .modal-body {
@@ -517,15 +565,22 @@ section h2 {
 	background: var(--background-middle-color);
 }
 .student-selector-option {
+	position: relative;
+
 	color: var(--paragraph-color);
+
+	padding-right: 0;
 }
 .student-selector-option .name {
 	font-weight: bold;
 	text-transform: uppercase;
 	font-size: 13px;
 }
+.student-selector-option small {
+	font-weight: bold;
+}
 .student-selector .select2-container--default .select2-selection--single .select2-selection__arrow {
-	display: none;
+	display: none; /* The arrow is such a bad design decision because it makes it look like a dropdown */
 }
 .header-first .header-first-submenu,
 .header-second .header-second-submenu {
@@ -707,7 +762,7 @@ footer .footer-container .go-top-col .go-top:hover::before {
 	transition: .2s all;
 }
 .main-menu-item:hover {
-	color: #acacac;
+	color: var(--low-priority-text-color);
 }
 .toggle-search {
 	color: var(--paragraph-color);
@@ -753,7 +808,7 @@ footer .footer-container .go-top-col .go-top:hover::before {
 .article-item .article-metas {
 	bottom: auto;
 
-	color: #acacac;
+	color: var(--low-priority-text-color);
 
 	margin-left: -20px;
 }

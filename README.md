@@ -1,6 +1,6 @@
 <h1 align="center">
 	<sub>
-		<img src="https://github.com/d-avis/e-klase-2/raw/master/assets/icon-bg.png" height="60" width="60">
+		<img src="https://github.com/d-avis/e-klase-2/raw/master/assets/icon-bg.png" height="45" width="60">
 	</sub>
 	E-klase 2
 </h1>
@@ -21,17 +21,17 @@
 		<tr>
 			<th>
 				<p align="center">
-					<img alt="Firefox" src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg" width="30">
+					<img alt="Firefox" src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg" width="45">
 				</p>
 			</th>
 			<th>
 				<p align="center">
-					<img alt="Chrome" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Chrome_icon_%28September_2014%29.svg" width="30">
+					<img alt="Chrome" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Chrome_icon_%28September_2014%29.svg" width="45">
 				</p>
 			</th>
 			<th>
 				<p align="center">
-					<img alt="Safari" src="https://upload.wikimedia.org/wikipedia/en/7/71/Safari_14_icon.png" width="30">
+					<img alt="Safari" src="https://upload.wikimedia.org/wikipedia/en/7/71/Safari_14_icon.png" width="45">
 				</p>
 			</th>
 			<th>
@@ -93,7 +93,7 @@
 
 ***
 
-# Izmantošana uz telefona
+# 📱 Izmantošana uz telefona
 
 E-klases mājaslapa uz telefona izskatās tāpat un ir tikpat izmantojama, cik aplikācija. E-klasi 2 var ielādēt arī uz mobilajiem internetpārlūkiem, tāpēc, izmantojot E-klasi internetpārlūkā, E-klasi 2 var izmantot arī uz telefona.
 
