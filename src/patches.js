@@ -38,3 +38,11 @@ for (element of document.querySelectorAll(`.item-analytics a`)) {
 if (document.querySelector(`.student-switch-link`) !== null) {
 	document.querySelector(`.student-switch-link`).className += ` onclick-spinner`;
 }
+
+// In the home pages, when on a small screen move the login box to the top
+if (window.location.pathname === `/`) {
+	if (document.body.clientWidth <= 767) {
+		let loginElement = document.querySelector(`aside.hidden-xs`);
+		loginElement.parentNode.insertBefore(loginElement, loginElement.parentNode.firstChild);
+	}
+}
