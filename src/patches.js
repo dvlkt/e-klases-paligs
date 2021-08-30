@@ -46,3 +46,23 @@ if (window.location.pathname === `/`) {
 		loginElement.parentNode.insertBefore(loginElement, loginElement.parentNode.firstChild);
 	}
 }
+
+const tryAddingMailPatches = () => {
+	if (!window.location.href.includes(`/SPA/Family#/mail`)) {
+		return;
+	}
+	
+	if (document.querySelector(`.communication-container .container .mailbox-data .wrapper`).children[1].innerHTML.includes(`Loading`)) {
+		setTimeout(tryAddingMailActionDropdownAnimation, 20);
+	} else {
+
+		// Swap the title and the sender/recipient when viewing mail
+		if (document.querySelector(`.MailMainAreaWrapper .ViewMessage .ViewMessage__MetaInfo`) !== null) {
+			let personWrapper = document.querySelector(`.ViewMessage .ViewMessage__PersonWrapper`);
+			let metaInfo = document.querySelector(`.ViewMessage .ViewMessage__MetaInfo`);
+
+			metaInfo.parentNode.insertBefore(metaInfo, personWrapper);
+		}
+	}
+}
+tryAddingMailPatches();

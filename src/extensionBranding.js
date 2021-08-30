@@ -12,23 +12,23 @@ browser.storage.sync.get(`theme`).then((res) => {
 		.then(response => response.blob())
 		.then(blob => {
 			var reader = new FileReader();
-			reader.readAsDataURL(blob); 
+			reader.readAsDataURL(blob);
 			reader.onloadend = () => {
 				var base64data = reader.result;
-				
+
 				// Applies the actual icon
 				if (document.querySelector(`link[rel~="icon"]`) === null) {
 					let element = document.createElement(`link`);
 					element.rel = `icon`;
 					element.href = base64data;
-				
+
 					document.head.appendChild(element);
 				} else {
 					document.querySelector(`link[rel~="icon"]`).href = base64data;
 				}
 			}
 		}
-	);
+		);
 
 	// Change all of the original logos to the new ones
 	// (this is basically the same code as above)
@@ -36,7 +36,7 @@ browser.storage.sync.get(`theme`).then((res) => {
 		.then(response => response.blob())
 		.then(blob => {
 			var reader = new FileReader();
-			reader.readAsDataURL(blob); 
+			reader.readAsDataURL(blob);
 			reader.onloadend = () => {
 				var base64data = reader.result;
 
@@ -45,7 +45,7 @@ browser.storage.sync.get(`theme`).then((res) => {
 				}
 			}
 		}
-	);
+		);
 });
 
 // Edit the bottom copyright text
@@ -53,7 +53,7 @@ if (document.querySelector(`.copyright`) !== null) {
 	if (document.location.pathname === `/`) {
 		document.querySelector(`.copyright`).innerHTML = `&copy; SIA “Izglītības sistēmas” 2004-${new Date().getFullYear()}`;
 	} else {
-		document.querySelector(`.copyright`).innerHTML = 
+		document.querySelector(`.copyright`).innerHTML =
 			`&copy; SIA “Izglītības sistēmas” 2004-${new Date().getFullYear()}
 			<br />
 			Aktivizēta <i>E-klase 2</i>`;

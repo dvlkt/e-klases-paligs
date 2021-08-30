@@ -6,7 +6,7 @@ for (let i of document.querySelectorAll(`.header-first-menu-item`)) {
 		const onMouseEnter = () => {
 			if (submenu.style.display !== `block`) {
 				submenu.style.display = `block`;
-		
+
 				setTimeout(() => {
 					submenu.style.opacity = `1`;
 					submenu.style.transform = `translateY(0px)`;
@@ -19,7 +19,7 @@ for (let i of document.querySelectorAll(`.header-first-menu-item`)) {
 
 				submenu.style.opacity = `0`;
 				submenu.style.transform = `translateY(-10px)`;
-		
+
 				setTimeout(() => {
 					submenu.style.display = `none`;
 				}, 200);
@@ -69,7 +69,7 @@ for (element of document.querySelectorAll(`.onclick-spinner`)) {
 			// Have to do it this way instead of using loadingSpinner.style.whatever because dumbass
 			// E-klase devs added !important everywhere instead of fixing their bad code
 			loadingSpinner.setAttribute(`style`, `display: block !important; opacity: 1; transform: scale(1) !important;`);
-			
+
 			background.setAttribute(`style`, `display: block !important; opacity: 1;`);
 		}, 50);
 	});
