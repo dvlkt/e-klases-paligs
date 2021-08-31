@@ -1,4 +1,3 @@
-
 /* Note: the E-klase code is very bad. I hope I'm not being hypocritic. */
 
 /* GLOBAL */
@@ -968,9 +967,16 @@ footer .footer-container .go-top-col .go-top::before {
 	background: var(--background-front-color);
 	color: var(--paragraph-color);
 
+	font-family: 'Inter', sans-serif;
+	font-size: 16px;
+
 	border-radius: 21px;
 
 	border: 0;
+}
+.login-form .dummy-placeholder {
+	color: var(--low-priority-text-color);
+	font-family: 'Inter', sans-serif;
 }
 .login-form .btn-default {
 	background: var(--theme-color);
@@ -2372,8 +2378,8 @@ a.l-MainFooter_Exit:hover::after,
 }
 .print-table tr {
 	border: 0;
-	border-top: 4px solid var(--divider-color);
-	border-bottom: 4px solid var(--divider-color);
+	border-top: 4px solid #00000020;
+	border-bottom: 4px solid #00000020;
 }
 .print-table thead tr {
 	border-top: 0;
@@ -2393,6 +2399,10 @@ a.l-MainFooter_Exit:hover::after,
 	text-align: center;
 	text-transform: uppercase;
 	font-weight: bold;
+}
+.print-block h3,
+.print-block strong, .print-table th {
+	font-family: 'Inter', sans-serif;
 }
 .print-table td:nth-child(2n),
 .print-table th:nth-child(2n) {
@@ -2870,6 +2880,27 @@ a.l-MainFooter_Exit:hover::after,
 
 	box-shadow: 0 7px 14px -3px var(--shadow-color);
 }
+.rating-container .test-detailed-data span,
+.rating-container .test-detailed-data label,
+.rating-container .test-promo h1,
+.rating-wrap .task-rating,
+.rating-container .test-promo h2,
+.rating-wrap .item .col:first-of-type,
+.item .col:first-of-type .no,
+.rating-wrap .item .col .data,
+.rating-wrap .item .col:last-of-type,
+.rating-wrap .final .col:last-of-type::after,
+.rating-wrap .tfooter .col:first-of-type span,
+.rating-wrap .item .col:last-of-type .data {
+	font-family: 'Inter', sans-serif;
+}
+.rating-container .test-promo h1 {
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+.rating-container .test-promo h1 p {
+	font-size: 2rem;
+}
 .rating-wrap .item {
 	border: 0;
 }
@@ -2882,14 +2913,72 @@ a.l-MainFooter_Exit:hover::after,
 	font-weight: bold;
 	text-transform: uppercase;
 	font-size: 12px;
+	font-family: 'Inter', sans-serif;
 }
-.rating-wrap .item .col {
+.item .col:first-of-type .no,
+.rating-wrap .final .col:last-of-type::after,
+.rating-wrap .item .col:last-of-type .data,
+.rating-wrap .total .col:first-of-type {
+	font-weight: bold;
+}
+.rating-wrap .item {
 	border: 0;
-	border-bottom: 4px solid var(--divider-color);
-	border-top: 4px solid var(--divider-color);
+	border-bottom: 4px solid #00000020;
+	border-top: 4px solid #00000020;
+}
+.rating-wrap .item:first-child,
+.rating-wrap .item:last-child {
+	border: 0;
 }
 .rating-wrap .item:first-child .col {
 	border: 0;
+}
+.rating-wrap .item .col:last-of-type {
+	background: none;
+	border: 0;
+}
+.rating-wrap .item .col:nth-of-type(2n) {
+	background: var(--background-middle-dark-color);
+}
+.rating-wrap .item:first-child .col:nth-of-type(2n) {
+	border-bottom: 4px solid #00000020;
+}
+.rating-wrap .total .col:first-of-type::before,
+.rating-wrap .total .col:first-of-type::after,
+.rating-wrap .total .col:last-of-type::before,
+.rating-wrap .fulfillment .col:last-of-type::after,
+.rating-wrap .fulfillment .col:last-of-type::after,
+.rating-wrap .final .col:last-of-type::after {
+	display: none;
+}
+.rating-wrap .rating-table::after {
+	display: none;
+}
+
+/* BACK TO JOURNAL */
+.back-to-journal {
+	color: var(--paragraph-color);
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	transition: .2s opacity;
+	background: none;
+	vertical-align: middle;
+	padding: 0;
+}
+.back-to-journal:hover {
+	color: var(--paragraph-color);
+	opacity: 0.7;
+}
+.back-to-journal::before {
+	content: "";
+	background-size: cover;
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	filter: invert() brightness(var(--icon-brightness));
+	vertical-align: middle;
+	margin-right: .5rem;
 }
 
 /* SETTINGS POPUP */

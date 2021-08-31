@@ -39,7 +39,7 @@ if (document.querySelector(`.student-switch-link`) !== null) {
 	document.querySelector(`.student-switch-link`).className += ` onclick-spinner`;
 }
 
-// In the home pages, when on a small screen move the login box to the top
+// In the home pages on mobile, move the login box to the top
 if (window.location.pathname === `/`) {
 	if (document.body.clientWidth <= 767) {
 		let loginElement = document.querySelector(`aside.hidden-xs`);
@@ -47,7 +47,7 @@ if (window.location.pathname === `/`) {
 	}
 }
 
-const tryAddingMailPatches = () => {
+/* const tryAddingMailPatches = () => {
 	if (!window.location.href.includes(`/SPA/Family#/mail`)) {
 		return;
 	}
@@ -65,4 +65,4 @@ const tryAddingMailPatches = () => {
 		}
 	}
 }
-tryAddingMailPatches();
+tryAddingMailPatches(); */

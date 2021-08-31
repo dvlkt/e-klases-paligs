@@ -26,8 +26,8 @@
 				"themeApplier.js"
 			],
 			"css": [
-				"style.css",
-				"icons.css"
+				"stylesheets/style.css",
+				"stylesheets/icons.css"
 			],
 			"run_at": "document_start"
 		},
