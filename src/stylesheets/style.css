@@ -2251,7 +2251,7 @@ h2.section-title {
 .MessageContent .MessageContent__Row--subject {
 	border-bottom: none;
 }
-@rule only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
 	.Folder__MailboxHeader .MailSearch {
 		width: 100%;
 	}
