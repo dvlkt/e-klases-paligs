@@ -409,11 +409,20 @@ section h2 {
 	margin-top: 15px;
 	margin-bottom: 5px;
 }
-.students-journal-header .week-selector .week-selector-next {
-	border-left-color: var(--theme-color);
-}
+.students-journal-header .week-selector .week-selector-next,
 .students-journal-header .week-selector .week-selector-prev {
-	border-right-color: var(--theme-color);
+	border-left: 0;
+	border-right: 0;
+	width: 20px;
+	height: 20px;
+	background: var(--theme-color);
+	mask-size: cover;
+	mask-position: center;
+	transition: .2s opacity;
+}
+.students-journal-header .week-selector .week-selector-next:hover,
+.students-journal-header .week-selector .week-selector-prev:hover {
+	opacity: 0.7;
 }
 .student-journal-lessons .actual-lessons-item {
 	background: var(--background-middle-dark-color);
@@ -449,6 +458,15 @@ section h2 {
 .students-journal-header .week-selector .selected-period {
 	font-family: 'Inter', sans-serif;
 	font-weight: bold;
+	user-select: none;
+	transition: .2s opacity;
+}
+.students-journal-header .week-selector .selected-period:hover {
+	opacity: 0.7;
+}
+.students-journal-header .week-selector .selected-period::after {
+	background: var(--theme-color);
+	mask-size: cover;
 }
 .students-journal-header .week-selector .selected-period-mobile {
 	background: var(--background-middle-color);
