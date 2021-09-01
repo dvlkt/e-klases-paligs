@@ -122,6 +122,21 @@ section h2 {
 
 	font-family: 'Inter', sans-serif;
 }
+.dashboard-widget-col.widget-notifications .widget-content .widget-count,
+.dashboard-widget-col.widget-notifications .widget-notification .widget-count {
+	background: var(--theme-color);
+	color: var(--theme-accent-color);
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	border: 0;
+}
+.dashboard-widget-col.widget-notifications .widget-content .widget-count {
+	width: 20px;
+	height: 20px;
+}
+.dashboard-widget-col.widget-notifications .widget-notifications-primary.student .notification-icon .widget-count {
+	top: 20px;
+}
 .dashboard-widget-col.widget-banner .widget-content {
 	height: auto;
 	min-height: 200px;
@@ -691,6 +706,14 @@ section h2 {
 	bottom: 0;
 
 	filter: brightness(1);
+}
+.header-second .header-second-menu-item.item-messages .notifications-count {
+	background: var(--theme-color);
+	color: var(--theme-accent-color);
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	border: 0;
+	top: 5px;
 }
 .header-second .student-selector {
 	background: none;
