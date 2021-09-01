@@ -2474,6 +2474,57 @@ a.l-MainFooter_Exit:hover::after,
 .print-table tr:last-child td:last-child {
 	border-bottom-right-radius: 1rem;
 }
+#centerContainer .options.no-print label {
+	color: var(--paragraph-color);
+}
+#centerContainer table,
+#centerContainer tr,
+#centerContainer td,
+#centerContainer th {
+	border: 0;
+}
+#centerContainer tr {
+	border-bottom: solid 4px #00000020;
+	border-top: solid 4px #00000020;
+}
+#centerContainer thead tr {
+	border-top: 0;
+}
+#centerContainer tr:last-child {
+	border-bottom: 0;
+}
+#centerContainer tr td.first-column {
+	padding-left: .5rem;
+}
+#centerContainer thead tr td {
+	background: none;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-style: regular;
+}
+#centerContainer .first-column .number {
+	font-weight: bold;
+	color: var(--low-priority-text-color);
+}
+#centerContainer .room {
+	color: var(--low-priority-text-color);
+}
+.btn-print {
+	border-radius: 1rem;
+	background: var(--theme-color);
+	font-weight: bold;
+	text-transform: uppercase;
+	transition: .2s box-shadow, .2s filter;
+}
+.btn-print:hover {
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
+	filter: brightness(0.8);
+}
+#centerContainer .bottom small {
+	color: var(--low-priority-text-color);
+	font-size: 11px;
+}
 
 /* SCROLL TO TOP */
 .scroll-to-top {
