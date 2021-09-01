@@ -1538,6 +1538,7 @@ h2.section-title {
 .modal-technical h1 {
 	font-family: 'Inter', sans-serif;
 	font-weight: bold;
+	font-size: 2rem;
 }
 .modal-technical .legend-dialog .legend-category {
 	border: 0;
@@ -1563,6 +1564,14 @@ h2.section-title {
 	font-family: 'Inter', sans-serif;
 
 	border-right: 3px solid var(--divider-color);
+}
+.modal-dialog.timetable-dialog.empty .modal-body {
+	background: var(--background-front-color);
+	padding-top: 4rem;
+}
+.modal-dialog.timetable-dialog.empty .modal-body p {
+	font-family: 'Inter', sans-serif;
+	font-size: 14px;
 }
 
 /* USER LOGIN */
