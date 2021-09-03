@@ -131,8 +131,8 @@ section h2 {
 	border: 0;
 }
 .dashboard-widget-col.widget-notifications .widget-content .widget-count {
-	width: 20px;
-	height: 20px;
+	width: 30px;
+	height: 30px;
 }
 .dashboard-widget-col.widget-notifications .widget-notifications-primary.student .notification-icon .widget-count {
 	top: 20px;
@@ -409,6 +409,9 @@ section h2 {
 	margin-top: 15px;
 	margin-bottom: 5px;
 }
+.student-journal-lessons-table-holder h2 span.hide-in-print {
+	color: var(--low-priority-text-color);
+}
 .students-journal-header .week-selector .week-selector-next,
 .students-journal-header .week-selector .week-selector-prev {
 	border-left: 0;
@@ -488,6 +491,10 @@ section h2 {
 	border-radius: 1rem;
 
 	opacity: 0.7;
+}
+.students-journal-header .students-journal-header-links a.print::before {
+	background: var(--theme-color);
+	mask-size: cover;
 }
 .actual-lessons .lesson-title .title,
 .student-journal-lessons .lesson-title .title {
@@ -1438,6 +1445,13 @@ h2.section-title {
 	background: none;
 	color: var(--paragraph-color);
 }
+.questions-wrapper .categories-wrapper .faq-topic-item a img {
+	display: none;
+}
+.questions-wrapper .categories-wrapper .faq-topic-item a::before {
+	background-size: cover;
+	filter: invert() brightness(var(--icon-brightness));
+}
 .questions-wrapper .categories-wrapper .faq-topic-item {
 	transition: .2s opacity;
 }
@@ -1460,6 +1474,12 @@ h2.section-title {
 }
 .questions-wrapper.detailed .aq-wrapper .title-wrapper {
 	border-bottom: 4px solid var(--divider-color);
+}
+.questions-wrapper.detailed .aq-wrapper .title-wrapper .title-icon::before {
+	filter: invert() brightness(var(--icon-brightness));
+}
+.questions-wrapper.detailed .aq-wrapper .title-wrapper .title-inner p {
+	font-weight: bold;
 }
 .questions-wrapper.detailed .aq-wrapper .faq-items .faq-item {
 	background: none;
@@ -1499,6 +1519,18 @@ h2.section-title {
 	color: var(--paragraph-color);
 
 	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+}
+
+.questions-wrapper.detailed .aq-wrapper .faq-items .faq-item .toggle-item {
+	background: none;
+	color: var(--theme-color);
+	border-top: 0;
+	margin-bottom: 1rem;
+	transition: .2s opacity;
+}
+.questions-wrapper.detailed .aq-wrapper .faq-items .faq-item .toggle-item:hover {
+	opacity: 0.7;
 }
 
 /* LOADING SPINNER */
@@ -1689,6 +1721,19 @@ h2.section-title {
 .calendar-holder .datepicker .datepicker-switch {
 	font-family: 'Inter', sans-serif;
 	font-weight: bold;
+}
+.calendar-holder .datepicker .next::before,
+.calendar-holder .datepicker .prev::before {
+	border: 0;
+	background: var(--theme-color);
+	width: 20px;
+	height: 20px;
+	mask-size: cover;
+	transition: .2s opacity;
+}
+.calendar-holder .datepicker .next:hover::before,
+.calendar-holder .datepicker .prev:hover::before {
+	opacity: 0.7;
 }
 .calendar-holder .datepicker .dow {
 	color: var(--paragraph-color);
