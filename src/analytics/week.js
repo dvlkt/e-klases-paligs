@@ -43,7 +43,9 @@ if (document.location.href.includes(`/Family/Diary`)) {
 	}
 	let avgGradeTextElement = document.createElement(`h2`);
 	avgGradeTextElement.innerHTML = `Vidējā atzīme: <span class="grade no-pointer">${Math.round(gradeSum / grades.length * 100) / 100}</span>`;
-	containerElement.appendChild(avgGradeTextElement);
+	if (grades.length > 0) {
+		containerElement.appendChild(avgGradeTextElement);
+	}
 
 	// Calculate average grades for all subjects
 	let subjectGrades = {};
@@ -72,7 +74,9 @@ if (document.location.href.includes(`/Family/Diary`)) {
 	}
 	let bestSubjectTextElement = document.createElement(`h2`);
 	bestSubjectTextElement.innerHTML = `${bestSubjects.length === 1 ? `Labākais priekšmets` : `Labākie priekšmeti`}: ${bestSubjects.join(`<span class="low-priority"> & </span>`)} <span class="low-priority">(vidējā atzīme: <span class="grade no-pointer">${bestSubjectAvgGrade}</span> )</span>`;
-	containerElement.appendChild(bestSubjectTextElement);
+	if (bestSubjects.length > 0) {
+		containerElement.appendChild(bestSubjectTextElement);
+	}
 
 	// Find the best grade(s)
 	let bestGrade = 0;
@@ -87,7 +91,9 @@ if (document.location.href.includes(`/Family/Diary`)) {
 	}
 	let bestGradeTextElement = document.createElement(`h2`);
 	bestGradeTextElement.innerHTML = `Labākā atzīme: <span class="grade">${bestGrade}</span> <span class="low-priority">(saņemta ${bestGradeSubjects.length === 1 ? `priekšmetā` : `priekšmetos`} ${bestGradeSubjects.join(` & `)})</span>`;
-	containerElement.appendChild(bestGradeTextElement);
+	if (bestGradeSubjects.length > 0) {
+		containerElement.appendChild(bestGradeTextElement);
+	}
 
 	// Find the worst subject(s)
 	let worstSubjects = [];
@@ -102,7 +108,9 @@ if (document.location.href.includes(`/Family/Diary`)) {
 	}
 	let worstSubjectTextElement = document.createElement(`h2`);
 	worstSubjectTextElement.innerHTML = `${worstSubjects.length === 1 ? `Sliktākais priekšmets` : `Sliktākie priekšmeti`}: ${worstSubjects.join(`<span class="low-priority"> & </span>`)} <span class="low-priority">(vidējā atzīme: <span class="grade no-pointer">${worstSubjectAvgGrade}</span> )</span>`;
-	containerElement.appendChild(worstSubjectTextElement);
+	if (worstSubjects.length > 0) {
+		containerElement.appendChild(worstSubjectTextElement);
+	}
 
 	// Find the worst grade(s)
 	let worstGrade = 10;
@@ -117,14 +125,18 @@ if (document.location.href.includes(`/Family/Diary`)) {
 	}
 	let worstGradeTextElement = document.createElement(`h2`);
 	worstGradeTextElement.innerHTML = `Sliktākā atzīme: <span class="grade">${worstGrade}</span> <span class="low-priority">(saņemta ${worstGradeSubjects.length === 1 ? `priekšmetā` : `priekšmetos`} ${worstGradeSubjects.join(` & `)})</span>`;
-	containerElement.appendChild(worstGradeTextElement);
+	if (worstGradeSubjects.length > 0) {
+		containerElement.appendChild(worstGradeTextElement);
+	}
 
 	// Show the analytics
-	let parent = document.querySelector(`.student-journal-lessons-table-holder`);
+	if (containerElement.children.length !== 0) {
+		let parent = document.querySelector(`.student-journal-lessons-table-holder`);
 
-	let titleElement = document.createElement(`h2`);
-	titleElement.innerText = `Statistika par šo nedēļu`;
+		let titleElement = document.createElement(`h2`);
+		titleElement.innerText = `Statistika par šo nedēļu`;
 
-	parent.appendChild(titleElement);
-	parent.appendChild(containerElement);
+		parent.appendChild(titleElement);
+		parent.appendChild(containerElement);
+	}
 }
