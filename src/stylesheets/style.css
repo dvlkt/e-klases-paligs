@@ -1863,6 +1863,7 @@ h2.section-title {
 }
 .mailbox-data {
 	background: none;
+	margin-bottom: .5rem;
 }
 .MailMainAreaWrapper {
 	background: var(--background-back-color);
@@ -2078,13 +2079,19 @@ h2.section-title {
 .MessageItem__LeftCol .MessageItem__Checkbox:checked {
 	background: var(--background-front-color);
 }
+.MessageItem__LeftCol .MessageItem__Checkbox::after,
 .MessageItem__LeftCol .MessageItem__Checkbox:checked::after {
+	content: "";
 	background-size: cover;
-
 	filter: invert() brightness(var(--icon-brightness));
+	opacity: 0;
+	transition: .2s opacity;
+}
+.MessageItem__LeftCol .MessageItem__Checkbox:checked::after {
+	opacity: 1;
 }
 .ViewMessage .ViewMessage__MetaInfo {
-	border-top: 4px solid var(--divider-color);
+	border-top: 0;
 	border-bottom: 4px solid var(--divider-color);
 }
 .MessageItem__RightCol .MessageFollowUpStatus--none::before,
@@ -2118,8 +2125,39 @@ h2.section-title {
 
 	font-family: 'Inter', sans-serif;
 }
-.AttachmentList__Item a:hover {
-	color: var(--theme-color);
+.AttachmentList__ItemContainer {
+	background: var(--background-middle-color);
+	border-radius: .5rem;
+	padding: .5rem;
+	text-align: center;
+	transition: .2s filter;
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	vertical-align: top;
+}
+.AttachmentList__ItemContainer:hover {
+	filter: brightness(0.7);
+}
+.AttachmentList__ItemContainer img {
+	width: 180px;
+	height: 100px;
+	object-fit: cover;
+	border-radius: .5rem;
+	display: block;
+	margin: auto;
+	margin-bottom: .5rem;
+}
+.AttachmentList__Item a,
+.AttachmentList__Item a:hover,
+.AttachmentList__Item a:visited {
+	color: var(--paragraph-color);
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: 'Inter', sans-serif;
+	text-decoration: none;
+}
+.AttachmentList__Item::before {
+	display: none;
 }
 .ButtonIcon.MailSearch__ResetInputButton::after {
 	content: "";
@@ -2162,7 +2200,7 @@ h2.section-title {
 	color: var(--paragraph-color);
 }
 .Modal__Content .Modal__Body {
-	background: var(--background-front-color) !important;
+	background: var(--background-middle-color) !important;
 	color: var(--paragraph-color);
 
 	border-radius: 0 0 1rem 1rem;
@@ -2257,6 +2295,10 @@ h2.section-title {
 
 	border-radius: 0 0 1rem 1rem;
 }
+.ProseMirror {
+	font-family: 'Inter', sans-serif;
+	font-size: 15px;
+}
 .EklaseTextEditor__Button {
 	background: var(--background-middle-color);
 
@@ -2277,15 +2319,61 @@ h2.section-title {
 .EklaseTextEditor__Button--underline::before {
 	color: var(--paragraph-color);
 }
-.MessageHeader__ButtonSend {
+@media only screen and (max-width: 767px) {
+	.Message .MessageHeader {
+		border-radius: 0 0 1rem 1rem;
+		background: var(--background-middle-color);
+		border-bottom: 0;
+		box-shadow: 0 4px 10px -3px var(--shadow-color);
+	}
+}
+.Message .MessageHeader__Heading {
+	color: var(--title-color);
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	font-size: 25px;
+}
+.Message .MessageHeader__ButtonBack,
+.Message .MessageHeader__ButtonSend,
+.Message .MessageHeader__ButtonSend--mobile,
+.Message .MessageHeader__Heading {
+	vertical-align: middle;
+}
+.Message .MessageHeader__ButtonBack::before,
+.Message .MessageHeader__ButtonSend--mobile::before {
+	content: "";
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	filter: invert() brightness(var(--icon-brightness));
+}
+.Message .MessageHeader__ButtonBack {
+	transition: .2s opacity;
+}
+.Message .MessageHeader__ButtonBack:hover {
+	opacity: 0.7;
+}
+.Message .MessageHeader__ButtonSend--mobile::before {
+	margin-right: 0;
+}
+.Message .MessageHeader__ButtonSend,
+.MessageHeader__ButtonSend:active {
 	background: var(--theme-color);
-
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	padding-right: 1rem;
 	transition: .2s filter, .2s box-shadow;
 }
-.MessageHeader__ButtonSend:hover {
+.Message .MessageHeader__ButtonSend:hover {
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 
 	filter: brightness(0.8);
+}
+.Message .MessageHeader__ButtonSend::before,
+.Message .MessageHeader__ButtonSend--mobile::before {
+	content: "";
+	margin: 0 .25rem 0 .5rem;
+	filter: invert() brightness(var(--theme-accent-icon-brightness));
 }
 .MessageContent .MessageContent__ErrorMessage {
 	color: var(--red-color);
@@ -2296,23 +2384,22 @@ h2.section-title {
 .MessageContent__AddRecipients .MessageContent__AddRecipientButton {
 	width: 15px;
 	height: 15px;
-
 	margin: 2.5px;
-
+	margin-left: 10px;
 	filter: invert() brightness(var(--icon-brightness));
 }
 .MessageActions {
-	height: 1.25rem;
-
+	height: 1rem;
 	margin-top: 1rem;
-	margin-bottom: .5rem;
+	margin-bottom: 0;
 }
-.MessageActions  .TopToolbar__ButtonContainer {
+.MessageActions .TopToolbar__ButtonContainer {
 	display: inline-block;
-	height: 1.25rem;
+	height: 1rem;
+	margin-right: .5rem;
 }
 .MessageActions .TopToolbar__Button {
-	height: 1.25rem;
+	height: 1rem;
 	
 	transition: .2s opacity;
 }
@@ -2323,8 +2410,8 @@ h2.section-title {
 	content: "";
 
 	display: block;
-	width: 1.25rem;
-	height: 1.25rem;
+	width: 1rem;
+	height: 1rem;
 	
 	filter: invert() brightness(var(--icon-brightness));
 }
@@ -2333,14 +2420,34 @@ h2.section-title {
 .ViewMessage__PersonWrapper *,
 .ViewMessage__MessageTitle {
 	font-family: 'Inter', sans-serif;
+	font-size: 15px;
+	line-height: 18px;
 }
 .ViewMessage__MetaInfo .ViewMessage__MessageTitle {
 	font-weight: bold;
-	font-size: 25px;
+	font-size: 30px;
+	line-height: 33px;
 }
 .ViewMessage__PersonWrapper .ViewMessage__From,
 .ViewMessage__PersonWrapper .ViewMessage__To {
-	font-size: 15px;
+	font-size: 13px;
+	color: var(--low-priority-text-color);
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.ViewMessage__PersonWrapper .ViewMessage__From span,
+.ViewMessage__PersonWrapper .ViewMessage__To span {
+	color: var(--paragraph-color);
+	text-transform: none;
+	font-weight: normal;
+}
+.Recipients .RecipientsPreview__Name::before {
+	content: "";
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	filter: invert() brightness(var(--icon-brightness));
+	margin-right: 0;
 }
 .AttachmentList__Item,
 .AttachmentList__Link:active,
@@ -2397,12 +2504,72 @@ h2.section-title {
 	}
 }
 
+/* RECIPIENTS MODAL */
+.RecipientsModal__GroupContainer {
+	border-radius: 0 0 1rem 1rem;
+}
+.RecipientsModal__Title {
+	font-size: 25px;
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	color: var(--title-color);
+}
+.RecipientsModal__GroupContainer .RecipientGroup {
+	border: 0;
+	border-radius: .5rem;
+	background: var(--background-front-color);
+	transition: .2s box-shadow, .2s filter;
+	font-size: 14px;
+	font-family: 'Inter', sans-serif;
+	color: var(--paragraph-color);
+}
+.RecipientsModal__GroupContainer .RecipientGroup:hover {
+	filter: brightness(0.8);
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+.RecipientsModal__GroupContainer .RecipientGroup__Button {
+	background-color: transparent;
+	background-size: cover;
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+	filter: invert() brightness(var(--icon-brightness));
+}
+#RecipientsModal .RecipientHeader {
+	background: var(--background-middle-color);
+}
+.RecipientHeader {
+	transition: .2s opacity;
+}
+.RecipientHeader:hover {
+	opacity: 0.7;
+}
+.RecipientHeader .RecipientHeader__ButtonBack::before {
+	content: "";
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	margin-right: 5px;
+	filter: invert() brightness(var(--icon-brightness));
+}
+.RecipientHeader .RecipientHeader__GroupName {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: 'Inter', sans-serif;
+	color: var(--paragraph-color);
+}
+.RecipientList .Recipient {
+	border-bottom: 4px solid #00000020;
+	font-family: 'Inter', sans-serif;
+	color: var(--paragraph-color);
+	font-size: 15px;
+}
+
 /* LINKS */
 .student-journal-lessons-table-holder .lessons-table a,
 footer .footer-container .col-nav .footer-nav li a,
 footer .footer-nav-item a,
 .students-journal-header .students-journal-header-links a,
-.AttachmentList__Item a,
 .print.print-button,
 .home-diary-link,
 .rating-wrap .see-rating-scale a,
@@ -2422,7 +2589,6 @@ a.l-MainFooter_Exit,
 footer .footer-container .col-nav .footer-nav li a:hover,
 footer .footer-nav-item a:hover,
 .students-journal-header .students-journal-header-links a:hover,
-.AttachmentList__Item a:hover,
 .print.print-button:hover, 
 .home-diary-link:hover,
 .rating-wrap .see-rating-scale a:hover,
@@ -2440,7 +2606,6 @@ a.l-MainFooter_Exit:hover,
 footer .footer-container .col-nav .footer-nav li a::after,
 footer .footer-nav-item a::after,
 .students-journal-header .students-journal-header-links a::after,
-.AttachmentList__Item a::after,
 .print.print-button::after,
 .home-diary-link::after,
 .rating-wrap .see-rating-scale a::after,
@@ -2468,7 +2633,6 @@ a.l-MainFooter_Exit::after,
 footer .footer-container .col-nav .footer-nav li a:hover::after,
 footer .footer-nav-item a:hover::after,
 .students-journal-header .students-journal-header-links a:hover::after,
-.AttachmentList__Item a:hover::after,
 .print.print-button:hover::after,
 .home-diary-link:hover::after,
 .rating-wrap .see-rating-scale a:hover::after,

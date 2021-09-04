@@ -47,22 +47,61 @@ if (window.location.pathname === `/`) {
 	}
 }
 
-/* const tryAddingMailPatches = () => {
-	if (!window.location.href.includes(`/SPA/Family#/mail`)) {
-		return;
-	}
-	
-	if (document.querySelector(`.communication-container .container .mailbox-data .wrapper`).children[1].innerHTML.includes(`Loading`)) {
-		setTimeout(tryAddingMailActionDropdownAnimation, 20);
+const tryAddingMailViewPatches = () => {
+	if (document.querySelector(`.MailMainAreaWrapper .ViewMessage .ViewMessage__MessageBody`) === null) {
+		setTimeout(tryAddingMailViewPatches, 20);
 	} else {
+		// Reorder the mail view elements
+		let view = document.querySelector(`.ViewMessage`);
+		let personWrapper = document.querySelector(`.ViewMessage .ViewMessage__PersonWrapper`);
+		let metaInfo = document.querySelector(`.ViewMessage .ViewMessage__MetaInfo`);
+		let attachments = document.querySelector(`.ViewMessage .ViewMessage__Attachments`);
+		
+		view.appendChild(attachments);
+		metaInfo.appendChild(personWrapper);
 
-		// Swap the title and the sender/recipient when viewing mail
-		if (document.querySelector(`.MailMainAreaWrapper .ViewMessage .ViewMessage__MetaInfo`) !== null) {
-			let personWrapper = document.querySelector(`.ViewMessage .ViewMessage__PersonWrapper`);
-			let metaInfo = document.querySelector(`.ViewMessage .ViewMessage__MetaInfo`);
+		// Add image previews
+		for (let attachmentElement of document.querySelectorAll(`.AttachmentList__ItemContainer`)) {
+			let fileType = attachmentElement.children[0].id.split(`.`).pop();
 
-			metaInfo.parentNode.insertBefore(metaInfo, personWrapper);
+			if (fileType === `png` || fileType === `jpg` || fileType === `jpeg` || fileType === `bmp` || fileType === `gif`) {
+				let url = attachmentElement.querySelector(`.AttachmentList__Link`).href;
+
+				let imgElement = document.createElement(`img`);
+				imgElement.src = url;
+				attachmentElement.insertBefore(imgElement, attachmentElement.children[0]);
+			}
 		}
 	}
 }
-tryAddingMailPatches(); */
+
+const tryAddingMailViewPatchesOnMailList = () => {
+	if (document.querySelector(`.MailMainAreaWrapper .Folder__Loading`) !== null) {
+		setTimeout(tryAddingMailViewPatchesOnMailList, 20);
+	} else {
+		for (let element of document.querySelectorAll(`.Folder__MessageList .MessageItem`)) {
+			element.addEventListener(`click`, () => {
+				tryAddingMailViewPatches();
+			});
+		}
+	}
+}
+
+tryAddingMailViewPatches();
+tryAddingMailViewPatchesOnMailList();
+for (let element of document.querySelectorAll(`.FolderNavigation__NavItem`)) {
+	element.addEventListener(`click`, () => {
+		tryAddingMailViewPatchesOnMailList();
+	});
+}
+/* 
+for (let categoryElement of document.querySelectorAll(`.FolderNavigation__NavItem`)) {
+	categoryElement.addEventListener(`click`, () => {
+		for (let element of document.querySelectorAll(`.Folder__MessageList .MessageItem`)) {
+			element.addEventListener(`click`, () => {
+				tryAddingMailViewPatches();
+			});
+		}
+	});
+}
+<button data-v-5955e096="" class="ButtonIcon ButtonIcon--loading Folder__Loading Folder__Loading--initial"></button> */
