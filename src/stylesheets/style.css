@@ -274,9 +274,7 @@ section h2 {
 }
 .no-data {
 	background: var(--background-middle-dark-color);
-
 	text-align: center;
-
 	border-radius: 1rem;
 }
 .no-data .inform {
@@ -571,7 +569,7 @@ section h2 {
 
 /* MODALS */
 .modal-body {
-	background: var(--background-front-color);
+	background: var(--background-middle-color);
 
 	border-radius: 1rem;
 
@@ -1607,16 +1605,14 @@ h2.section-title {
 }
 .modal-technical .legend-dialog .legend-category {
 	border: 0;
-
 	border-radius: 1rem;
-
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
-
-	background: var(--background-middle-color);
+	background: var(--background-front-color);
+	font-family: 'Inter', sans-serif;
 }
 .modal-technical .legend-dialog .legend-category .legend-category-title {
 	background: none;
-
+	font-family: 'Inter', sans-serif;
 	font-weight: bold;
 	text-transform: uppercase;
 }
@@ -1627,11 +1623,10 @@ h2.section-title {
 /* TIME TABLE */
 .modal-technical .timetible-item .name { /* Did you mean... timetable..? */
 	font-family: 'Inter', sans-serif;
-
-	border-right: 3px solid var(--divider-color);
+	border-right: 3px solid #00000020;
 }
 .modal-dialog.timetable-dialog.empty .modal-body {
-	background: var(--background-front-color);
+	background: var(--background-middle-color);
 	padding-top: 4rem;
 }
 .modal-dialog.timetable-dialog.empty .modal-body p {
@@ -2670,6 +2665,9 @@ a.l-MainFooter_Exit:hover::after,
 }
 .analytics-ratings-table-intro-right .section-switch {
 	display: none; /* TOGGLEABLE */
+}
+.report-container .no-data {
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
 }
 .print-table {
 	background: none;
