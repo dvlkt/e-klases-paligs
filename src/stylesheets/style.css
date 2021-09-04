@@ -987,12 +987,10 @@ footer .footer-container .col-copy {
 }
 footer .footer-container .go-top-col .go-top {
 	background-color: var(--background-middle-color);
-
+	color: var(--paragraph-color);
 	padding: .5rem;
 	padding-left: 4rem;
-
 	border-radius: .5rem;
-
 	transition: .2s filter, .2s box-shadow;
 }
 footer .footer-container .go-top-col .go-top:hover {
@@ -1809,6 +1807,7 @@ h2.section-title {
 .calendar-holder .datepicker .active-week td:nth-child(-n+5),
 .calendar-holder .datepicker tr:hover td:nth-child(-n+5) {
 	background: var(--background-front-color);
+	color: var(--paragraph-color);
 }
 .calendar-holder .datepicker .current-week td:nth-child(-n+5):not(.today),
 .calendar-holder .datepicker .current-week:hover td:nth-child(-n+5):not(.today) {
@@ -1816,6 +1815,7 @@ h2.section-title {
 }
 .calendar-holder .datepicker table tr td.day.today {
 	background: var(--theme-color) !important;
+	color: var(--theme-accent-color);
 }
 .datepicker table tr td.today:hover:hover { /* E-klase devs, how drunk were you when you wrote this CSS rule? */
 	color: var(--paragraph-color);
@@ -1941,7 +1941,7 @@ h2.section-title {
 }
 .FolderNavigation__ButtonNewMailWrapper .FolderNavigation__ButtonNewMail {
 	background: var(--theme-color);
-	color: var(--paragraph-color);
+	color: var(--theme-accent-color);
 
 	font-family: 'Inter', sans-serif;
 	font-weight: bold;
@@ -1965,7 +1965,7 @@ h2.section-title {
 
 	margin-top: 0;
 
-	filter: invert() brightness(var(--icon-brightness));
+	filter: invert() brightness(var(--theme-accent-icon-brightness));
 }
 .FolderNavigation .FolderNavigation__NavItem {
 	position: relative;
