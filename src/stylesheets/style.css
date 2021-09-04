@@ -21,14 +21,11 @@ section h2 {
 .dashboard-information {
 	height: auto;
 	min-height: 200px;
-
+	max-height: none;
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
-
 	border: 0;
-
 	border-radius: 1rem;
-
 	cursor: auto;
 }
 .dashboard-widget-col.widget-notifications .widget-header,
@@ -55,6 +52,9 @@ section h2 {
 	padding-left: 16px;
 
 	cursor: auto;
+}
+.dashboard-widget .widget-header::after {
+	display: none;
 }
 .dashboard-widget-col.widget-notifications .widget-content {
 	background: none;
@@ -230,6 +230,10 @@ section h2 {
 /* DIARY */
 .students-journal-header {
 	background: var(--background-back-color);
+}
+.xs-diary-lesson-times,
+.xs-diary-lesson-times:hover {
+	color: var(--theme-color);
 }
 .lessons-table {
 	background: var(--background-middle-dark-color);
@@ -429,10 +433,14 @@ section h2 {
 }
 .student-journal-lessons .actual-lessons-item {
 	background: var(--background-middle-dark-color);
-
 	border-radius: 1rem;
-
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	transition: .2s max-height;
+	max-height: 54px;
+}
+.actual-lessons .actual-lessons-item.open,
+.student-journal-lessons .actual-lessons-item.open {
+	max-height: 500px; /* Set the max height to be something really really high so that it'll never be reached and there is a transition animation */
 }
 .actual-lessons .lesson-subitem .description,
 .student-journal-lessons .lesson-subitem .description {
@@ -443,20 +451,28 @@ section h2 {
 .actual-lessons .lesson-subitem .title,
 .student-journal-lessons .lesson-subitem .title {
 	color: var(--low-priority-text-color);
-
+	font-family: 'Inter', sans-serif;
 	text-transform: uppercase;
 	font-size: 0.7rem;
 	font-weight: bold;
 }
+.actual-lessons .actual-lessons-item.has-content .lesson-title::after,
+.student-journal-lessons .actual-lessons-item.has-content .lesson-title::after {
+	border-color: var(--paragraph-color) rgba(0,0,0,0) rgba(0,0,0,0);
+}
 .actual-lessons .lesson-subitem,
 .student-journal-lessons .lesson-subitem {
-	border-bottom: 4px solid var(--divider-color);
+	border: 0;
 }
 .actual-lessons .lesson-title,
 .student-journal-lessons .lesson-title {
-	background: var(--background-middle-color);
-
-	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	background: none;
+	box-shadow: none;
+}
+.actual-lessons .lesson-title .title,
+.student-journal-lessons .lesson-title .title {
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
 }
 .students-journal-header .week-selector .selected-period {
 	font-family: 'Inter', sans-serif;
@@ -832,11 +848,14 @@ header.minimal .header-first {
 	background: var(--background-middle-color);
 
 	border-radius: 0 0 1rem 1rem;
-
-	box-shadow: 0 4px 10px -3px var(--shadow-color);
 }
 header.minimal {
 	margin-bottom: 1rem;
+}
+@media only screen and (max-width: 767px) {
+	.header-second {
+		z-index: 1001;
+	}
 }
 
 /* MOBILE SIDEBAR */
@@ -845,17 +864,18 @@ header.minimal {
 }
 .mobile-menu,
 .mobile-menu .mobile-menu-header {
-	background: var(--background-front-color);
+	background: var(--background-middle-color);
+	margin-top: calc(58px - 1rem);
+	padding-top: 1rem;
 }
 .mobile-menu .mobile-menu-header {
-	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	display: none;
 }
 .mobile-second-menu li,
 .mobile-first-menu li,
 .mobile-second-menu-item.open,
 .mobile-first-menu .mobile-first-menu-item.open:not(:first-of-type) {
-	border-top: 2px solid var(--divider-color);
-	border-bottom: 2px solid var(--divider-color);
+	border: 0;
 }
 .mobile-first-menu-item:last-child {
 	border-bottom: 4px solid var(--divider-color);
@@ -863,9 +883,9 @@ header.minimal {
 .mobile-second-menu-item a,
 .mobile-second-menu-item.active a,
 .mobile-first-menu-item a {
-	background: var(--background-front-color);
+	background: var(--background-middle-color);
 	color: var(--paragraph-color);
-
+	font-family: 'Inter', sans-serif;
 	border: 0;
 }
 .current-student-profile-arrow {
@@ -897,10 +917,25 @@ header.minimal {
 .mobile-first-menu-item a::before {
 	filter: invert() brightness(var(--icon-brightness));
 }
+.header-second .current-user {
+	display: none;
+}
+.mobile-second-menu-item.item-home a::before,
+.mobile-second-menu-item.item-journal a::before,
+.mobile-second-menu-item.item-messages a::before,
+.mobile-second-menu-item.item-analytics a::before {
+	width: 16px;
+	height: 16px;
+}
+.mobile-menu-underlay {
+	background: #00000000;
+	transition: .2s background;
+}
 
 /* OTHER MOBILE THINGS */
 .current-page h1 {
 	font-size: 1.5rem;
+	font-family: 'Inter', sans-serif;
 	font-weight: bold;
 }
 
@@ -1605,6 +1640,14 @@ h2.section-title {
 	font-family: 'Inter', sans-serif;
 	font-size: 14px;
 }
+.timetable-dialog .modal-content {
+	transform: scale(0.1);
+	opacity: 0;
+	transition: .2s transform, .2s opacity;
+}
+.modal-dialog .modal-content {
+	background: none !important;
+}
 
 /* USER LOGIN */
 .modal-content.modal-login {
@@ -1723,7 +1766,9 @@ h2.section-title {
 	font-weight: bold;
 }
 .calendar-holder .datepicker .next::before,
-.calendar-holder .datepicker .prev::before {
+.calendar-holder .datepicker .prev::before,
+.student-journal-lessons h2 a.mobile-lessons-prev,
+.student-journal-lessons h2 a.mobile-lessons-next {
 	border: 0;
 	background: var(--theme-color);
 	width: 20px;
