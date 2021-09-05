@@ -1864,22 +1864,20 @@ html .MailMainAreaWrapper {
 html .MailActions .ButtonDefault.MailActions__ToggleButton {
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
-
 	font-family: 'Inter', sans-serif;
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 0.8rem;
-
 	padding-top: 0;
-
+	padding-left: .5rem;
 	border-radius: .5rem;
 }
 html .MailActions .ButtonDefault.MailActions__ToggleButton::after {
 	border: 0;
-}
-html .MailActions .ButtonDefault.MailActions__ToggleButton::after,
-html .MailActions .ButtonDefault.MailActions__ToggleButton::before {
 	color: var(--paragraph-color);
+}
+html .MailActions .ButtonDefault.MailActions__ToggleButton::before {
+	display: none;
 }
 html .MailSearch .MailSearch__Input {
 	background: var(--background-middle-color);
@@ -2087,9 +2085,40 @@ html .ViewMessage .ViewMessage__MetaInfo {
 	border-top: 0;
 	border-bottom: 4px solid var(--divider-color);
 }
-html .MessageItem__RightCol .MessageFollowUpStatus--none::before,
 html .ViewMessage__MetaInfo .MessageFollowUpStatus--none::before {
 	color: var(--background-front-color);
+}
+html .MessageItem__RightCol .MessageFollowUpStatus,
+html .ViewMessage__MetaInfo .MessageFollowUpStatus {
+	width: 20px;
+	height: 20px;
+}
+html .MessageItem__RightCol .MessageFollowUpStatus--none::before,
+html .MessageItem__RightCol .MessageFollowUpStatus--marked::before,
+html .MessageItem__RightCol .MessageFollowUpStatus--compleated::before, /* You mean completed??? */
+html .ViewMessage__MetaInfo .MessageFollowUpStatus--none::before,
+html .ViewMessage__MetaInfo .MessageFollowUpStatus--marked::before,
+html .ViewMessage__MetaInfo .MessageFollowUpStatus--compleated::before {
+	content: "";
+	width: 20px;
+	height: 20px;
+	display: block;
+	bottom: 0;
+	right: 0;
+	mask-size: cover;
+	-webkit-mask-size: cover;
+}
+html .MessageItem__RightCol .MessageFollowUpStatus--none::before,
+html .ViewMessage__MetaInfo .MessageFollowUpStatus--none::before {
+	background: var(--low-priority-text-color);
+}
+html .MessageItem__RightCol .MessageFollowUpStatus--marked::before,
+html .ViewMessage__MetaInfo .MessageFollowUpStatus--marked::before {
+	background: #e9b610;
+}
+html .MessageItem__RightCol .MessageFollowUpStatus--compleated::before,
+html .ViewMessage__MetaInfo .MessageFollowUpStatus--compleated::before {
+	background: #1ec039;
 }
 html .MessageItem .MessageItem__AuthorInfo,
 html .MessageItem .MessageItem__MessageTitle,
@@ -2181,6 +2210,9 @@ html .FetchMore .FetchMore__Text:hover {
 
 	filter: brightness(0.8);
 }
+html .FetchMore .FetchMore__MessageCount {
+	display: none;
+}
 html .Modal__Content .Modal__Header {
 	background: var(--background-middle-color) !important;
 	color: var(--paragraph-color);
@@ -2259,8 +2291,7 @@ html .MessageContent__Row .MessageContent__Subject {
 
 	font-size: 1rem;
 
-	padding: 1rem;
-	padding-left: .5rem;
+	padding: .5rem;
 
 	border: 0;
 
@@ -2311,6 +2342,11 @@ html .EklaseTextEditor__Button--italic::before,
 html .EklaseTextEditor__Button--strike::before,
 html .EklaseTextEditor__Button--underline::before {
 	color: var(--paragraph-color);
+	transition: .2s opacity;
+}
+html .EklaseTextEditor__Button--active::before {
+	color: var(--paragraph-color) !important;
+	opacity: 0.7;
 }
 @media only screen and (max-width: 767px) {
 	html .Message .MessageHeader {
@@ -2359,7 +2395,6 @@ html .MessageHeader__ButtonSend:active {
 }
 html .Message .MessageHeader__ButtonSend:hover {
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
-
 	filter: brightness(0.8);
 }
 html .Message .MessageHeader__ButtonSend::before,
@@ -2370,9 +2405,19 @@ html .Message .MessageHeader__ButtonSend--mobile::before {
 }
 html .MessageContent .MessageContent__ErrorMessage {
 	color: var(--red-color);
+	font-family: 'Inter', sans-serif;
+	font-size: 13px;
+}
+html .MessageContent .MessageContent__ErrorMessage--recipients {
+	vertical-align: top;
 }
 html .MessageContent__Row .MessageContent__ErrorMessage--subject {
 	margin-top: .7rem;
+	margin-left: .5rem;
+}
+html .MessageContent .MessageContent__ErrorMessage--body {
+	padding-top: 3.25rem;
+	padding-left: .5rem;
 }
 html .MessageContent__AddRecipients .MessageContent__AddRecipientButton {
 	width: 15px;
@@ -2380,6 +2425,43 @@ html .MessageContent__AddRecipients .MessageContent__AddRecipientButton {
 	margin: 2.5px;
 	margin-left: 10px;
 	filter: invert() brightness(var(--icon-brightness));
+	transition: .2s opacity;
+}
+html .MessageContent__AddRecipients .MessageContent__AddRecipientButton:hover {
+	opacity: 0.7;
+}
+html .MessageContent .MessageContent__DesktopAttachments {
+	cursor: pointer;
+	margin-top: .5rem;
+}
+html .FileInput__AddButton {
+	background: var(--theme-color);
+	border-radius: .5rem;
+	color: var(--theme-accent-color);
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	padding: .25rem;
+	padding-right: .75rem;
+	cursor: pointer;
+	transition: .2s filter, .2s box-shadow;
+}
+html .FileInput__AddButton::after {
+	display: none;
+}
+html .FileInput__AddButton:hover {
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	filter: brightness(0.8);
+}
+html .FileInput__AddButtonText,
+html .FileInput__AddButtonText:hover {
+	color: var(--theme-accent-color);
+	cursor: pointer;
+	font-size: 13px;
+}
+html .FileInput__AddButton .FileInput__FileUpload {
+	cursor: pointer;
+	height: calc(13px + 1rem);
+	width: 180px;
 }
 html .MessageActions {
 	height: 1rem;
@@ -2551,11 +2633,38 @@ html .RecipientHeader .RecipientHeader__GroupName {
 	font-family: 'Inter', sans-serif;
 	color: var(--paragraph-color);
 }
+html .RecipientsModal__StudyYear,
+html .RecipientsModal__StudyYear--selected {
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	color: var(--paragraph-color);
+	border-bottom: 0;
+	transition: .2s opacity;
+	font-size: 13px;
+}
+html .RecipientsModal__StudyYear--selected {
+	color: var(--theme-color);
+}
+html .RecipientsModal__StudyYear:hover {
+	opacity: 0.7;
+}
+html .Modal__Body .RecipientSearch,
+html .Modal__Body .RecipientSearch:focus {
+	border-radius: .5rem;
+	border: 0;
+	background: var(--background-front-color);
+	color: var(--paragraph-color);
+	font-family: 'Inter', sans-serif;
+}
 html .RecipientList .Recipient {
 	border-bottom: 4px solid #00000020;
 	font-family: 'Inter', sans-serif;
 	color: var(--paragraph-color);
 	font-size: 15px;
+	transition: .2s opacity;
+}
+html .RecipientList .Recipient:hover {
+	opacity: 0.7;
 }
 
 /* LINKS */

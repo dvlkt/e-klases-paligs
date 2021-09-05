@@ -9,11 +9,9 @@ upload.onchange = () => {
 		const fileReader = new FileReader();
 		fileReader.readAsDataURL(upload.files[0]);
 		fileReader.onload = (event) => {
-			chrome.storage.local.set({ profilePicture: event.target.result }).then((msg) => {
+			chrome.storage.local.set({ profilePicture: event.target.result }, (msg) => {
 				window.close();
-            }).catch((msg) => {
-				console.log(msg);
-			});
+            });
 		};
 	}
 }

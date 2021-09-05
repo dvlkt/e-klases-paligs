@@ -26,7 +26,14 @@ darkThemeBtn.onclick = () => {
 	document.body.className = `dark-theme`;
 }
 
+let profilePictureElement = document.getElementById(`profile-picture`);
+chrome.storage.local.get(`profilePicture`, (res) => {
+	if (res.profilePicture === null) {
 
+	} else {
+		profilePictureElement.src = res.profilePicture;
+	}
+});
 document.getElementById(`profile-picture-btn`).onclick = () => {
 	chrome.tabs.create({
 		active: true,

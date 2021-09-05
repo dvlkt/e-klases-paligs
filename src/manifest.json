@@ -36,6 +36,7 @@
 		{
 			"matches": ["*://*.e-klase.lv/*"],
 			"js": [
+				"utils.js",
 				"extensionBranding.js",
 				"profilePicture.js",
 				"patches.js",

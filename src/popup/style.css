@@ -9,6 +9,7 @@
 	box-sizing: border-box;
 
 	font-family: 'inter';
+	font-size: 15px;
 }
 body {
 	width: 300px;
@@ -358,6 +359,7 @@ button {
 	color: var(--text-color);
 
 	font-size: 1rem;
+	font-weight: bold;
 
 	padding: .5rem;
 
@@ -396,6 +398,25 @@ textarea {
 	border-radius: .5rem;
 
 	resize: vertical;
+}
+
+.profile-picture {
+	display: block;
+	width: 5rem;
+	height: 5rem;
+	margin: auto;
+	margin-bottom: .5rem;
+	border-radius: 50%;
+}
+.profile-picture-btn {
+	display: block;
+	margin: auto;
+}
+.profile-picture-sub {
+	width: 100%;
+	text-align: center;
+	display: block;
+	margin-top: .5rem;
 }
 
 .upload {

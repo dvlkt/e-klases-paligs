@@ -117,6 +117,9 @@ const tryAddingMailActionDropdownAnimation = () => {
 	}
 }
 tryAddingMailActionDropdownAnimation();
+window.addEventListener(`locationchange`, () => {
+	tryAddingMailActionDropdownAnimation();
+});
 
 // Add animations for modals
 for (element of document.querySelectorAll(`.open-lesson-times`)) {

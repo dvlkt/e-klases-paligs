@@ -47,7 +47,11 @@ if (window.location.pathname === `/`) {
 	}
 }
 
-const tryAddingMailViewPatches = () => {
+window.addEventListener(`locationchange`, () => {
+	if (!location.href.includes(`SPA/Family#/mail/message/view/`)) {
+		return;
+	}
+
 	if (document.querySelector(`.MailMainAreaWrapper .ViewMessage .ViewMessage__MessageBody`) === null) {
 		setTimeout(tryAddingMailViewPatches, 20);
 	} else {
@@ -73,35 +77,4 @@ const tryAddingMailViewPatches = () => {
 			}
 		}
 	}
-}
-
-const tryAddingMailViewPatchesOnMailList = () => {
-	if (document.querySelector(`.MailMainAreaWrapper .Folder__Loading`) !== null) {
-		setTimeout(tryAddingMailViewPatchesOnMailList, 20);
-	} else {
-		for (let element of document.querySelectorAll(`.Folder__MessageList .MessageItem`)) {
-			element.addEventListener(`click`, () => {
-				tryAddingMailViewPatches();
-			});
-		}
-	}
-}
-
-tryAddingMailViewPatches();
-tryAddingMailViewPatchesOnMailList();
-for (let element of document.querySelectorAll(`.FolderNavigation__NavItem`)) {
-	element.addEventListener(`click`, () => {
-		tryAddingMailViewPatchesOnMailList();
-	});
-}
-/* 
-for (let categoryElement of document.querySelectorAll(`.FolderNavigation__NavItem`)) {
-	categoryElement.addEventListener(`click`, () => {
-		for (let element of document.querySelectorAll(`.Folder__MessageList .MessageItem`)) {
-			element.addEventListener(`click`, () => {
-				tryAddingMailViewPatches();
-			});
-		}
-	});
-}
-<button data-v-5955e096="" class="ButtonIcon ButtonIcon--loading Folder__Loading Folder__Loading--initial"></button> */
+});
