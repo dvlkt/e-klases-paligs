@@ -329,6 +329,9 @@ html .student-journal-lessons-table-holder .lessons-table tbody tr:last-child td
 html .student-journal-lessons-table-holder .lessons-table tbody tr:last-child td:last-child {
 	border-bottom-right-radius: 1rem;
 }
+html .student-journal-lessons-table-holder .lessons-table a.file {
+	display: inline;
+}
 html .lessons-table td:last-of-type span.score,
 html .actual-lessons span.score,
 html .student-journal-lessons span.score {
@@ -2702,10 +2705,13 @@ html .dashboard-news .dashboard-news-item .article-content a,
 html .Recipients .Recipients__LoadLink,
 html .ViewMessage__MessageBody a {
 	color: var(--theme-color);
-
 	position: relative;
-
 	text-decoration: none;
+	background-image: linear-gradient(currentColor, currentColor);
+	background-position: 0% 100%;
+	background-repeat: no-repeat;
+	background-size: 0% 1px;
+	transition: background-size .3s;
 }
 html .student-journal-lessons-table-holder .lessons-table a:hover,
 html footer .footer-container .col-nav .footer-nav li a:hover,
@@ -2723,54 +2729,8 @@ html .dashboard-news .dashboard-news-item .article-content a:hover,
 html .Recipients .Recipients__LoadLink:hover,
 html .ViewMessage__MessageBody a:hover {
 	color: var(--theme-color);
-
 	text-decoration: none;
-}
-html .student-journal-lessons-table-holder .lessons-table a::after,
-html footer .footer-container .col-nav .footer-nav li a::after,
-html footer .footer-nav-item a::after,
-html .students-journal-header .students-journal-header-links a::after,
-html .print.print-button::after,
-html .home-diary-link::after,
-html .rating-wrap .see-rating-scale a::after,
-html a.l-MainFooter_Exit::after,
-html .announcement a.prolong::after,
-html .login-links .special-link .title::after,
-html .login-links a::after,
-html .article-content .article-body a::after,
-html .dashboard-news .dashboard-news-item .article-content a::after,
-html .Recipients .Recipients__LoadLink::after,
-html .ViewMessage__MessageBody a::after {
-	content: "";
-
-	position: absolute;
-	bottom: 0;
-	left: 0;
-
-	display: block;
-	width: 0;
-	height: 1px;
-
-	background: var(--theme-color);
-
-	transition: .2s width;
-}
-html .student-journal-lessons-table-holder .lessons-table a:hover::after,
-html footer .footer-container .col-nav .footer-nav li a:hover::after,
-html footer .footer-nav-item a:hover::after,
-html .students-journal-header .students-journal-header-links a:hover::after,
-html .print.print-button:hover::after,
-html .home-diary-link:hover::after,
-html .rating-wrap .see-rating-scale a:hover::after,
-html a.l-MainFooter_Exit:hover::after,
-html .announcement a.prolong:hover::after,
-html .login-links .special-link .title:hover::after,
-html .login-links a:hover::after,
-html .article-content .article-body a:hover::after,
-html .dashboard-news .dashboard-news-item .article-content a:hover::after,
-html .Recipients .Recipients__LoadLink:hover::after,
-html .ViewMessage__MessageBody a:hover::after {
-	width: 100%;
+	background-size: 100% 1px;
 }
 
 /* ANALYTICS */
