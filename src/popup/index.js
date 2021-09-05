@@ -43,8 +43,9 @@ darkThemeBtn.onclick = () => {
 
 let profilePictureElement = document.getElementById(`profile-picture`);
 chrome.storage.local.get(`profilePicture`, (res) => {
-	if (res.profilePicture === null) {
-
+	if (res.profilePicture === undefined) {
+		// The default profile picture
+		profilePictureElement.src = `data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2IDU2QzE2IDU2IDIwLjg4NDEgNDYuNSAzMi41IDQ2LjVDNDQuMTE1OSA0Ni41IDQ4IDU2IDQ4IDU2IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjUiLz4KPGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iMjguNSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSI1Ii8+CjxjaXJjbGUgY3g9IjMyIiBjeT0iMjYiIHI9IjEwLjUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iNSIvPgo8L3N2Zz4K`;
 	} else {
 		profilePictureElement.src = res.profilePicture;
 	}

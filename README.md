@@ -1,8 +1,8 @@
 <h1 align="center">
 	<sub>
-		<img src="https://github.com/d-avis/e-klase-2/raw/master/assets/icon-bg.png" height="45" width="60">
+		<img src="https://github.com/d-avis/e-klases-paligs/raw/master/assets/icon-bg.png" height="45" width="45">
 	</sub>
-	E-klase 2
+	E-klases Palīgs
 </h1>
 <p align="center">
 	Moderns dizains un vairāk funkcijas E-klasei 👍
@@ -14,19 +14,19 @@
 ***
 
 <h1 align="center">
-	🎉 Nolādēšana
+	🎉 Ieinstalēšana
 </h1>
 <p align="center">
 	<table align="center">
 		<tr>
 			<th>
 				<p align="center">
-					<img alt="Firefox" src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg" width="45">
+					<img alt="Chrome" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Chrome_icon_%28September_2014%29.svg" width="45">
 				</p>
 			</th>
 			<th>
 				<p align="center">
-					<img alt="Chrome" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Chrome_icon_%28September_2014%29.svg" width="45">
+					<img alt="Firefox" src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg" width="45">
 				</p>
 			</th>
 			<th>
@@ -43,12 +43,12 @@
 		<tr>
 			<td>
 				<p align="center">
-					Nav vēl pieejams
+					Pieejams drīzumā!
 				</p>
 			</td>
 			<td>
 				<p align="center">
-					Nav vēl pieejams
+					Pieejams drīzumā!
 				</p>
 			</td>
 			<td>
@@ -58,7 +58,7 @@
 			</td>
 			<td>
 				<p align="center">
-					<img alt="😂😂😂" src="https://raw.githubusercontent.com/d-avis/e-klase-2/master/assets/readme/laughing.png" width="120">
+					<img alt="😂😂😂" src="https://raw.githubusercontent.com/d-avis/e-klases-paligs/master/assets/readme/laughing.png" width="120">
 				</p>
 			</td>
 		</tr>
@@ -68,13 +68,13 @@
 ***
 
 <p align="center">
-	<img src="https://github.com/d-avis/e-klase-2/raw/master/assets/readme/1.png" alt="Skaists, moderns dizains" />
+	<img src="https://github.com/d-avis/e-klases-paligs/raw/master/assets/readme/1.png" alt="Skaists, moderns dizains" />
 </p>
 <p align="center">
-	<img src="https://github.com/d-avis/e-klase-2/raw/master/assets/readme/2.png" alt="Tumšais režīms" />
+	<img src="https://github.com/d-avis/e-klases-paligs/raw/master/assets/readme/2.png" alt="Tumšais režīms" />
 </p>
 <p align="center">
-	<img src="https://github.com/d-avis/e-klase-2/raw/master/assets/readme/3.png" alt="Reklāmu bloķēšana" />
+	<img src="https://github.com/d-avis/e-klases-paligs/raw/master/assets/readme/3.png" alt="Reklāmu bloķēšana" />
 </p>
 
 # 🧩 Citas funkcijas
@@ -97,14 +97,12 @@
 
 # 📱 Izmantošana uz telefona
 
-E-klases mājaslapa uz telefona izskatās tāpat un ir tikpat izmantojama, cik aplikācija. E-klasi 2 var ielādēt arī uz mobilajiem internetpārlūkiem, tāpēc, izmantojot E-klasi internetpārlūkā, E-klasi 2 var izmantot arī uz telefona.
+Google Chrome un gandrīz visi uz tā balstītie internetpārlūki uz telefona neatbalsta paplašinājumus, līdz ar to E-klases Palīgs nav tajos lietojams. Vienīgais veids, kā E-klases Palīgu var izmantot uz telefona, ir caur Firefox Browser.
 
-Ja tu vēlies izmantot E-klasi 2 kā aplikāciju, vislabākā izvēle ir PWA (Progressive Web App). Izmantojot šo internetpārlūku funkciju, saites var "ieinstalēt" uz telefona, un tad tās darbosies gandrīz tā, it kā būtu pavisam parastas aplikācijas. E-klase 2 pievieno šo PWA funkcionalitāti E-klasei, tāpēc tu to vari izmantot.
-
-Ieinstalēt E-klasi kā PWA var caur internetpārlūku. Gan uz Chrome, gan uz Firefox Mobile var ielādēt PWA nospiežot uz trīs aplīšiem un tad spiežot uz "Add to Home screen" vai "Install".
+Uz Firefox Browser E-klases Palīgs strādā tikpat labi, cik pati E-klases aplikācija, ja ne labāk.
 
 ***
 
-License: GPLv3. To var apskatīt [šeit](https://github.com/d-avis/e-klase-2/tree/master/LICENSE).
+License: GPLv3. To var apskatīt [šeit](https://github.com/d-avis/e-klases-paligs/tree/master/LICENSE).
 
 © Dāvis Lektauers, 2021

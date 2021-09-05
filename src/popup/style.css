@@ -272,7 +272,7 @@ a:hover::after {
 	background: #303035;
 }
 .theme-dark .theme-header-detail {
-	background: #35beff;
+	background: #0088e3;
 }
 .theme-dark .theme-header-account {
 	background: #46454e;
@@ -289,7 +289,7 @@ a:hover::after {
 	background: #e0e0e0;
 }
 .theme-light .theme-header-detail {
-	background: #35beff;
+	background: #0088e3;
 }
 .theme-light .theme-header-account {
 	background: #b4b4b4;
@@ -432,6 +432,7 @@ textarea {
 	margin: auto;
 	margin-bottom: .5rem;
 	border-radius: 50%;
+	background: #ffffff;
 }
 .profile-picture-btn {
 	display: block;

@@ -1,6 +1,6 @@
 {
 	"manifest_version": 2,
-	"name": "E-klase 2",
+	"name": "E-klases Palīgs",
 	"version": "1.0",
 
 	"description": "Labāks dizains un vairāk funkcijas.",
@@ -51,13 +51,13 @@
 
 	"browser_action": {
 		"default_icon": "res/light/icon-64.png",
-		"default_title": "E-klase 2",
+		"default_title": "E-klases Palīgs",
 		"default_popup": "popup/index.html"
 	},
 
 	"browser_specific_settings": {
 		"gecko": {
-		  "id": "e-klases-modernais-dizains@gmail.com"
+		  "id": "dlektauers@gmail.com"
 		}
 	}
 }

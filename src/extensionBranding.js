@@ -60,6 +60,6 @@ if (document.querySelector(`.copyright`) !== null) {
 		document.querySelector(`.copyright`).innerHTML =
 			`&copy; SIA “Izglītības sistēmas” 2004-${new Date().getFullYear()}
 			<br />
-			Aktivizēta <i>E-klase 2</i>`;
+			Aktivizēts <i>E-klases Palīgs</i>`;
 	}
 }
