@@ -23,6 +23,8 @@
 		{
 			"matches": ["*://*.e-klase.lv/*"],
 			"js": [
+				"themes/dark.js",
+				"themes/light.js",
 				"themeApplier.js"
 			],
 			"css": [

@@ -5,7 +5,7 @@ if (document.location.href.includes(`/Family/Diary`)) {
 	// Get the grades
 	let grades = [];
 	for (let diaryRow of document.querySelectorAll(`.lessons-table tbody tr`)) {
-		let subject = diaryRow.querySelector(`.first-column span.title`).innerHTML
+		let subject = diaryRow.querySelector(`.first-column span.title`).innerHTML;
 		subject = subject.split(`<`)[0]; // Removes the room tag
 		subject = subject.replaceAll(`\n`, ``);
 		subject = subject.trim();

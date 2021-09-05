@@ -1,4 +1,4 @@
-{
+const lightTheme = {
     "background-back-color": "#ededf4",
 	"background-middle-color": "#dcdce2",
 	"background-middle-dark-color": "#cbcbd3",
@@ -22,4 +22,4 @@
 	"red-color": "#eb4545",
 	"red-shadow-color": "#641212a6",
 	"red-accent-color": "#ffffff"
-}
+};

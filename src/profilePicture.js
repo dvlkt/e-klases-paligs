@@ -1,4 +1,4 @@
-browser.storage.local.get(`profilePicture`).then((res) => {
+chrome.storage.local.get(`profilePicture`, (res) => {
     if (Object.keys(res).length !== 0) {
         if (document.querySelector(`.current-user-image.student-other`) !== null) {
             document.querySelector(`.current-user-image.student-other`).style.filter = `none`;
