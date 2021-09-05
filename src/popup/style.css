@@ -31,6 +31,8 @@ body.light-theme {
 	--background-middle-color: #dcdce2;
 
 	--bottom-gradient: linear-gradient(0deg, #ededf4ff 0%, #ededf400 100%);
+
+	--theme-color: #0088e3;
 }
 body.dark-theme {
 	--text-color: #ffffff;
@@ -41,7 +43,7 @@ body.dark-theme {
 
 	--bottom-gradient: linear-gradient(0deg, #1a1a1dff 0%, #1a1a1d00 100%);
 
-	--theme-color: #35beff;
+	--theme-color: #0088e3;
 }
 
 h1, h2 {
@@ -107,13 +109,29 @@ a:hover::after {
 
 	box-shadow: 0 4px 10px -3px #00000099;
 	
-	z-index: 3;
+	z-index: 4;
 }
 .header img {
 	max-height: 3rem;
 
 	-webkit-user-drag: none;
 	user-select: none;
+}
+
+.notice {
+	position: fixed;
+	top: -2rem;
+	left: .5rem;
+	display: block;
+	width: calc(100% - 1rem);
+	border-radius: .5rem;
+	background: #eb4545;
+	color: #ffffff;
+	z-index: 3;
+	text-align: center;
+	box-shadow: 0 4px 10px -3px #641212a6;
+	cursor: pointer;
+	transition: .2s top;
 }
 
 .list {
@@ -137,6 +155,13 @@ a:hover::after {
 	background-color: var(--bottom-gradient);
 
 	transition: .2s background-color;
+}
+
+.whats-new {
+	width: calc(100% - 1rem);
+}
+.whats-new svg {
+	vertical-align: top;
 }
 
 .title:not(:first-child) {

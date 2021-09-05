@@ -2516,13 +2516,15 @@ html .ViewMessage__PersonWrapper .ViewMessage__To span {
 	text-transform: none;
 	font-weight: normal;
 }
-html .Recipients .RecipientsPreview__Name::before {
+html .Recipients .RecipientsPreview__Name::before,
+html .MessageItem .MessageItem--status-sent-read__RecipientsPreview::before,
+html .MessageItem .MessageItem--status-sent-unread__RecipientsPreview::before {
 	content: "";
 	display: inline-block;
 	width: 13px;
 	height: 13px;
 	filter: invert() brightness(var(--icon-brightness));
-	margin-right: 0;
+	margin-right: 2px;
 }
 html .AttachmentList__Item,
 html .AttachmentList__Link:active,
@@ -2666,6 +2668,22 @@ html .RecipientList .Recipient {
 html .RecipientList .Recipient:hover {
 	opacity: 0.7;
 }
+html .RecipientsModal__List .RecipientsModal__Item {
+	background: #00000000;
+	padding-left: 1rem;
+	font-size: 15px;
+}
+html .RecipientsModal__List .RecipientsModal__Item:not(:last-child) {
+	border-bottom: 4px solid #00000020;
+}
+html .RecipientsModal__List .RecipientsModal__Item::before {
+	content: "";
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	margin-right: .5rem;
+	filter: invert() brightness(var(--icon-brightness));
+}
 
 /* LINKS */
 html .student-journal-lessons-table-holder .lessons-table a,
@@ -2680,7 +2698,9 @@ html .announcement a.prolong,
 html .login-links .special-link .title,
 html .login-links a,
 html .article-content .article-body a,
-html .dashboard-news .dashboard-news-item .article-content a {
+html .dashboard-news .dashboard-news-item .article-content a,
+html .Recipients .Recipients__LoadLink,
+html .ViewMessage__MessageBody a {
 	color: var(--theme-color);
 
 	position: relative;
@@ -2699,7 +2719,9 @@ html .announcement a.prolong:hover,
 html .login-links .special-link .title:hover,
 html .login-links a:hover,
 html .article-content .article-body a:hover,
-html .dashboard-news .dashboard-news-item .article-content a:hover {
+html .dashboard-news .dashboard-news-item .article-content a:hover,
+html .Recipients .Recipients__LoadLink:hover,
+html .ViewMessage__MessageBody a:hover {
 	color: var(--theme-color);
 
 	text-decoration: none;
@@ -2716,7 +2738,9 @@ html .announcement a.prolong::after,
 html .login-links .special-link .title::after,
 html .login-links a::after,
 html .article-content .article-body a::after,
-html .dashboard-news .dashboard-news-item .article-content a::after {
+html .dashboard-news .dashboard-news-item .article-content a::after,
+html .Recipients .Recipients__LoadLink::after,
+html .ViewMessage__MessageBody a::after {
 	content: "";
 
 	position: absolute;
@@ -2743,7 +2767,9 @@ html .announcement a.prolong:hover::after,
 html .login-links .special-link .title:hover::after,
 html .login-links a:hover::after,
 html .article-content .article-body a:hover::after,
-html .dashboard-news .dashboard-news-item .article-content a:hover::after {
+html .dashboard-news .dashboard-news-item .article-content a:hover::after,
+html .Recipients .Recipients__LoadLink:hover::after,
+html .ViewMessage__MessageBody a:hover::after {
 	width: 100%;
 }
 
@@ -2762,10 +2788,9 @@ html .analytics-pupilmarks-intro {
 html .analytics-pupilmarks-intro .analytics-ratings-table-intro-left,
 html .analytics-pupilmarks-intro .analytics-ratings-table-intro-right {
 	background: var(--background-middle-color);
-
 	border: 0;
-
 	border-radius: 1rem 0 0 1rem;
+	font-family: 'Inter', sans-serif;
 }
 html .analytics-pupilmarks-intro .analytics-ratings-table-intro-right {
 	border-radius: 0 1rem 1rem 0;

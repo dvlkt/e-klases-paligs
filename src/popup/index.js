@@ -1,12 +1,23 @@
+let changeNotice = document.getElementById(`notice`);
+changeNotice.onclick = () => {
+	changeNotice.style.top = `0`;
+}
+
+let whatsNewButton = document.getElementById(`whats-new`);
+whatsNewButton.onclick = () => {
+	chrome.tabs.create({
+		active: true,
+		url: chrome.runtime.getURL(`/popup/changelog.html`)
+	});
+}
+
 let lightThemeBtn = document.getElementById(`theme-light-btn`);
 let darkThemeBtn = document.getElementById(`theme-dark-btn`);
 
 chrome.storage.sync.get(`theme`, (res) => {
 	if (res.theme === `dark`) {
-		document.body.className = `dark-theme`;
 		darkThemeBtn.className += ` theme-selected`;
 	} else {
-		document.body.className = `light-theme`;
 		lightThemeBtn.className += ` theme-selected`;
 	}
 });
@@ -17,6 +28,8 @@ lightThemeBtn.onclick = () => {
 
 	chrome.storage.sync.set({ theme: `light` });
 	document.body.className = `light-theme`;
+
+	changeNotice.style.top = `4rem`;
 }
 darkThemeBtn.onclick = () => {
 	lightThemeBtn.className = `theme theme-light`;
@@ -24,6 +37,8 @@ darkThemeBtn.onclick = () => {
 	
 	chrome.storage.sync.set({ theme: `dark` });
 	document.body.className = `dark-theme`;
+
+	changeNotice.style.top = `4rem`;
 }
 
 let profilePictureElement = document.getElementById(`profile-picture`);
