@@ -254,7 +254,7 @@ html .student-journal-lessons-table-holder .lessons-table thead td {
 	border: 0;
 }
 html .student-journal-lessons-table-holder .lessons-table thead td {
-	color: var(--paragraph-color);
+	color: var(--low-priority-text-color);
 	background: var(--background-middle-color);
 
 	font-weight: bold;
@@ -406,14 +406,15 @@ html .ThirdPartyEvent--Deleted {
 }
 html .student-journal-lessons-table-holder h2 {
 	font-family: 'Inter', sans-serif;
-	text-transform: uppercase;
+	text-transform: capitalize;
 	font-weight: bold;
-
-	margin-top: 15px;
+	font-size: 18px;
+	margin-top: 20px;
 	margin-bottom: 5px;
 }
 html .student-journal-lessons-table-holder h2 span.hide-in-print {
 	color: var(--low-priority-text-color);
+	text-transform: none;
 }
 html .students-journal-header .week-selector .week-selector-next,
 html .students-journal-header .week-selector .week-selector-prev {
@@ -459,7 +460,7 @@ html .student-journal-lessons .lesson-subitem .title {
 }
 html .actual-lessons .actual-lessons-item.has-content .lesson-title::after,
 html .student-journal-lessons .actual-lessons-item.has-content .lesson-title::after {
-	border-color: var(--paragraph-color) rgba(0,0,0,0) rgba(0,0,0,0);
+	border-color: var(--low-priority-text-color) #00000000 #00000000;
 }
 html .actual-lessons .lesson-subitem,
 html .student-journal-lessons .lesson-subitem {
@@ -478,6 +479,7 @@ html .student-journal-lessons .lesson-title .title {
 html .students-journal-header .week-selector .selected-period {
 	font-family: 'Inter', sans-serif;
 	font-weight: bold;
+	font-size: 15px;
 	user-select: none;
 	transition: .2s opacity;
 }
@@ -503,12 +505,17 @@ html .students-journal-header .week-selector .selected-period-mobile .cal-icon {
 }
 html .students-journal-header .week-selector.calendar-open .selected-period-mobile {
 	background: var(--background-middle-color);
-
 	border: 0;
-	
 	border-radius: 1rem;
-
 	opacity: 0.7;
+}
+html .students-journal-header .week-selector .selected-period-mobile .cal-icon {
+	background: var(--theme-color);
+	mask-size: cover;
+	-webkit-mask-size: cover;
+	margin: 10px;
+	width: 30px;
+	height: 30px;
 }
 html .students-journal-header .students-journal-header-links a.print::before {
 	background: var(--theme-color);
@@ -1747,12 +1754,17 @@ html .modal-header .modal-logout::before {
 /* CALENDAR */
 html .students-journal-header .week-selector .calendar-holder {
 	background: var(--background-middle-color);
-
 	border: 0;
-
 	border-radius: 1rem;
-
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	z-index: 500;
+}
+@media only screen and (max-width: 768px) {
+	html .students-journal-header .week-selector .calendar-holder {
+		position: absolute;
+		top: 4rem;
+		left: .5rem;
+	}
 }
 html .calendar-holder .datepicker .datepicker-switch {
 	font-family: 'Inter', sans-serif;
@@ -1774,9 +1786,11 @@ html .calendar-holder .datepicker .next:hover::before,
 html .calendar-holder .datepicker .prev:hover::before {
 	opacity: 0.7;
 }
+html .journal-nav .mobile-date {
+	font-weight: bold;
+}
 html .calendar-holder .datepicker .dow {
 	color: var(--paragraph-color);
-
 	font-family: 'Inter', sans-serif;
 	font-weight: bold;
 }

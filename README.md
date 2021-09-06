@@ -8,7 +8,7 @@
 	Moderns dizains un vairāk funkcijas E-klasei 👍
 </p>
 <p align="center">
-	<b>v0.1 BETA</b>
+	<b>v0.2 BETA</b>
 </p>
 
 ***
