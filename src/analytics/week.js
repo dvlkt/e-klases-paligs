@@ -135,6 +135,7 @@ if (document.location.href.includes(`/Family/Diary`)) {
 
 		let titleElement = document.createElement(`h2`);
 		titleElement.innerText = `Statistika par šo nedēļu`;
+		titleElement.style.textTransform = `none`;
 
 		parent.appendChild(titleElement);
 		parent.appendChild(containerElement);

@@ -457,3 +457,7 @@ textarea {
 	width: 100vw;
 	height: 100vh;
 }
+
+li {
+	color: var(--text-color);
+}

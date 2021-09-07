@@ -434,7 +434,7 @@ html .students-journal-header .week-selector .week-selector-prev:hover {
 	opacity: 0.7;
 }
 html .student-journal-lessons .actual-lessons-item {
-	background: var(--background-middle-dark-color);
+	background: var(--background-middle-color);
 	border-radius: 1rem;
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 	transition: .2s max-height;
@@ -596,6 +596,10 @@ html .modal-mark-card .mark-card-inner-title {
 }
 html .modal-mark-card .mark-card-inner-title span {
 	text-transform: uppercase;
+}
+mark-card-inner-title,
+html .mark-card-inner-content p {
+	font-family: 'Inter', sans-serif;
 }
 html .mark-card-inner-graph {
 	background: var(--background-front-color);
@@ -1047,6 +1051,11 @@ html .login-form-header h4 {
 	margin: 0;
 
 	padding: 0;
+}
+@media only screen and (max-width: 768px) {
+	html .login-form h4 .content {
+		font-family: 'Inter', sans-serif;
+	}
 }
 html .login-form h4 .content::after {
 	display: none;
