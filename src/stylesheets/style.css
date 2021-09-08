@@ -1857,6 +1857,24 @@ html .students-journal-header .week-selector .calendar-holder table {
 
 	border-spacing: 2px;
 }
+html .datepicker table tr td span {
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	background: var(--background-middle-color);
+	border-radius: 50%;
+	transition: .2s filter;
+}
+html .datepicker table tr td span:hover {
+	background: var(--background-middle-color);
+	filter: brightness(0.8);
+}
+html .calendar-holder .datepicker .datepicker-months table tr:hover td,
+html .calendar-holder .datepicker .datepicker-years table tr:hover td,
+html .calendar-holder .datepicker .datepicker-decades table tr:hover td,
+html .calendar-holder .datepicker .datepicker-centuries table tr:hover td {
+	background: var(--background-middle-color);
+}
 
 /* POPUP ANIMATIONS */
 html .students-journal-header .week-selector.calendar-open .calendar-holder {
