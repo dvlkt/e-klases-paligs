@@ -307,10 +307,12 @@ html .student-journal-lessons-table-holder .lessons-table tbody .room {
 html .student-journal-lessons-table-holder .lessons-table td {
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
-
 	border: 0;
 	border-bottom: 4px solid #00000020;
 	border-top: 4px solid #00000020;
+}
+.lessons-table td .subject-text-draft::before {
+	color: var(--low-priority-text-color);
 }
 html .student-journal-lessons-table-holder .lessons-table tr:last-child td {
 	border: 0;
@@ -577,6 +579,12 @@ html .diary-analytics span.low-priority {
 
 	font-size: 0.8rem;
 	text-transform: none;
+}
+html .diary-analytics h2 {
+	text-transform: none;
+}
+html .diary-analytics h2:first-child {
+	margin-top: 0;
 }
 
 /* MODALS */
@@ -2786,6 +2794,9 @@ html .analytics-pupilmarks-intro {
 
 	box-shadow: 0 7px 14px -3px var(--shadow-color);
 }
+html .analytics-pupilmarks-intro .btn-primary {
+	margin-left: 1rem;
+}
 html .analytics-pupilmarks-intro .analytics-ratings-table-intro-left,
 html .analytics-pupilmarks-intro .analytics-ratings-table-intro-right {
 	background: var(--background-middle-color);
@@ -2793,11 +2804,19 @@ html .analytics-pupilmarks-intro .analytics-ratings-table-intro-right {
 	border-radius: 1rem 0 0 1rem;
 	font-family: 'Inter', sans-serif;
 }
+html .analytics-pupilmarks-intro .analytics-ratings-table-intro-left {
+	width: 45% !important;
+}
 html .analytics-pupilmarks-intro .analytics-ratings-table-intro-right {
 	border-radius: 0 1rem 1rem 0;
 }
 html .analytics-ratings-table-intro-right .section-switch {
 	display: none; /* TOGGLEABLE */
+}
+html a.print.print-button::before {
+	background: var(--theme-color);
+	mask-size: cover;
+	-webkit-mask-size: cover;
 }
 html .report-container .no-data {
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
@@ -2842,10 +2861,15 @@ html .print-block strong, .print-table th {
 html .print-table td:nth-child(2n),
 html .print-table th:nth-child(2n) {
 	background: var(--background-middle-color) !important;
+	color: var(--paragraph-color);
 }
 html .print-table td:nth-child(2n+1),
 html .print-table th:nth-child(2n+1) {
 	background: var(--background-middle-dark-color) !important;
+	color: var(--paragraph-color);
+}
+html .print-table th span {
+	color: var(--low-priority-text-color);
 }
 html .print-table th:first-child {
 	border-top-left-radius: 1rem;
