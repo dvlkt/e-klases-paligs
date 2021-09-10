@@ -453,9 +453,11 @@ textarea {
 	display: grid;
 	place-content: center;
 	place-items: center;
-
 	width: 100vw;
 	height: 100vh;
+}
+.center * {
+	max-width: 35vw;
 }
 
 li {
