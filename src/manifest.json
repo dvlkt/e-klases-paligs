@@ -36,12 +36,14 @@
 			"matches": ["*://*.e-klase.lv/*"],
 			"js": [
 				"utils.js",
-				"extensionBranding.js",
 				"profilePicture.js",
 				"patches.js",
 				"animations.js",
 				"ads/familyPack.js",
-				"analytics/week.js"
+				"analytics/week.js",
+				"branding/logos.js",
+				"branding/favicons.js",
+				"branding/main.js"
 			],
 			"run_at": "document_end"
 		}
