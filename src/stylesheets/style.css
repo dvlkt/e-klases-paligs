@@ -640,17 +640,14 @@ html .header-first {
 	background: var(--background-middle-color);
 }
 html .header-first .logo {
-	width: 80px;
+	width: 110px;
 	height: 42px;
-
 	background-image: none;
 	background-size: cover;
 	background-repeat: no-repeat;
-
-	margin-top: -4px;
-
+	margin-top: -5px;
+	margin-left: -10px;
 	cursor: pointer;
-	
 	transition: .2s opacity;
 }
 html .header-first .logo:hover {
@@ -1285,10 +1282,16 @@ html .article-item .article-metas .comments span {
 
 	font-weight: bold;
 }
-@media (max-width: 1042px) {
+@media only screen and (max-width: 1042px) {
 	html .additional-article-item .image,
 	html .article-item .image {
 		border-radius: 1rem 1rem 0 0;
+	}
+}
+@media only screen and (min-width: 768px) {
+	html .additional-article-item .article-metas .tags-container,
+	html .article-item .article-metas .tags-container {
+		margin-bottom: 1px;
 	}
 }
 
@@ -3493,7 +3496,7 @@ html .back-to-journal::before {
 
 /* SETTINGS POPUP */
 html .people-overlay {
-	background: var(--background-front-color);
+	background: var(--background-middle-color);
 
 	border-radius: 1rem;
 
@@ -3512,21 +3515,45 @@ html .people-overlay .overlay-header {
 	border-radius: 1rem 1rem 0 0;
 }
 html .people-overlay .overlay-header h3 {
-	font-size: 1.5rem;
+	font-family: 'Inter', sans-serif;
+	font-size: 30px;
 	font-weight: bold;
+}
+html .people-overlay .overlay-header .pupil,
+.people-overlay .overlay-header .educational-institution {
+	font-family: 'Inter', sans-serif;
+	font-size: 15px;
 }
 html .people-overlay input[type="submit"] {
 	color: var(--theme-accent-color);
 	background: var(--theme-color);
-
 	border-radius: 1rem;
-
-	transition: .2s box-shadow, .2s background;
+	transition: .2s box-shadow, .2s filter;
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 html .people-overlay input[type="submit"]:hover {
 	filter: brightness(0.8);
-
 	box-shadow: 0 7px 14px -3px var(--shadow-color);
+}
+html .settings-modal-body .nav-tabs.profile {
+	border-bottom: 0;
+}
+html .settings-modal-body .form-row .input,
+html .settings-modal-body .form-row .textarea {
+	background: var(--background-front-color);
+	border: 0;
+	border-radius: .5rem;
+}
+html .settings-modal-body .form-row .separate {
+	background: #00000020;
+	height: 4px;
+}
+html .settings-modal-body .form-row.information-row {
+	background: var(--background-front-color);
+	color: var(--paragraph-color);
+	border-radius: .5rem;
 }
 
 /* LOGIN PAGE */
