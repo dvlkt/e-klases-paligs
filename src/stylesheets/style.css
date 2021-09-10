@@ -2538,11 +2538,9 @@ html .MessageActions .TopToolbar__Button:hover {
 }
 html .MessageActions .TopToolbar__Button::before {
 	content: "";
-
 	display: block;
 	width: 1rem;
 	height: 1rem;
-	
 	filter: invert() brightness(var(--icon-brightness));
 }
 html .ViewMessage__MessageBody,
@@ -2586,28 +2584,74 @@ html .AttachmentList__Link:active,
 html .AttachmentList__Link:hover,
 html .AttachmentList__Link:visited {
 	color: var(--theme-color);
-
 	font-family: 'Inter', sans-serif;
 }
 html .MailMainAreaWrapper .MobileBottomToolbar {
-	background: var(--background-front-color);
-
+	background: var(--background-middle-color);
 	border-top: 0;
-
 	border-radius: 1rem 1rem 0 0;
-
-	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	box-shadow: 0 0 10px -3px var(--shadow-color);
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+html .MobileBottomToolbar .MobileBottomToolbar__Button--reply::before,
+html .MobileBottomToolbar .MobileBottomToolbar__Button--forward::before,
+html .MobileBottomToolbar .MobileBottomToolbar__Button--delete::before,
+html .MobileBottomToolbar .MobileBottomToolbar__Button--new-mail::before,
+html .MobileBottomToolbar .MobileBottomToolbar__Button--permanentDelete::before,
+html .MobileBottomToolbar .MobileBottomToolbar__Button--actions::before,
+html .MobileBottomToolbar .MobileBottomToolbar__Button--newmail::before {
+	content: "";
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin: auto;
+	filter: invert() brightness(var(--icon-brightness));
+}
+@media only screen and (max-width: 767px) {
+	html .MailMainAreaWrapper .ViewMessage__MessageBody {
+		padding-bottom: 0px;
+		margin-bottom: 20px;
+	}
 }
 html .Folder__MailboxHeader .Folder__MobileHeading {
 	background: var(--background-middle-color);
-
 	font-family: 'Inter', sans-serif;
 	font-weight: bold;
-
+	font-size: 20px;
+	text-transform: uppercase;
 	margin-left: .5rem;
 	margin-right: .5rem;
-
+	margin-bottom: .5rem;
 	border-radius: .5rem;
+}
+html .Folder__MailboxHeader .Folder__MobileHeading::after {
+	display: none;
+}
+html .MobileNavModal .MobileNavModal__Body {
+	background: var(--background-middle-color);
+	border-radius: .5rem;
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+html .MobileNavModal__Body .MobileNavModal__Item,
+html .MobileNavModal__Body .MobileNavModal__Item:hover {
+	background: none;
+	border-bottom: 0;
+	color: var(--paragraph-color);
+	font-family: 'Inter', sans-serif;
+	font-size: 20px;
+}
+html .MobileNavModal__Body .MobileNavModal__Item--active,
+html .MobileNavModal__Body .MobileNavModal__Item--active:hover {
+	background: var(--background-front-color);
+}
+html .MobileNavModal .MobileNavModal__Item::before {
+	background-size: cover;
+	padding: 0px;
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+	filter: invert() brightness(var(--icon-brightness));
 }
 html .MailMainAreaWrapper .ViewMessage,
 html .MailMainAreaWrapper .ViewMessage__MessageBody,
@@ -2620,11 +2664,8 @@ html .MessageContent__Row .MessageContent__Subject {
 }
 html .MobileTextareaWrapper .MobileTextarea {
 	background: var(--background-middle-color);
-
 	font-family: 'Inter', sans-serif;
-
 	border: 0;
-
 	border-radius: .5rem;
 }
 html .MessageContent .MessageContent__Row--subject {
