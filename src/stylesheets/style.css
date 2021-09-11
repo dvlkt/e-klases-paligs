@@ -311,7 +311,8 @@ html .student-journal-lessons-table-holder .lessons-table td {
 	border-bottom: 4px solid #00000020;
 	border-top: 4px solid #00000020;
 }
-.lessons-table td .subject-text-draft::before {
+html .lessons-table td .subject-text-draft::before,
+html .student-journal-lessons .lesson-subitem .description .subject-text-draft::before {
 	color: var(--low-priority-text-color);
 }
 html .student-journal-lessons-table-holder .lessons-table tr:last-child td {
@@ -1766,7 +1767,8 @@ html .modal-header .modal-logout::before {
 }
 
 /* CALENDAR */
-html .students-journal-header .week-selector .calendar-holder {
+html .students-journal-header .week-selector .calendar-holder,
+html .datepicker-dropdown {
 	background: var(--background-middle-color);
 	border: 0;
 	border-radius: 1rem;
@@ -1787,7 +1789,9 @@ html .calendar-holder .datepicker .datepicker-switch {
 html .calendar-holder .datepicker .next::before,
 html .calendar-holder .datepicker .prev::before,
 html .student-journal-lessons h2 a.mobile-lessons-prev,
-html .student-journal-lessons h2 a.mobile-lessons-next {
+html .student-journal-lessons h2 a.mobile-lessons-next,
+html .datepicker-dropdown .next::before,
+html .datepicker-dropdown .prev::before {
 	border: 0;
 	background: var(--theme-color);
 	width: 20px;
@@ -1797,27 +1801,32 @@ html .student-journal-lessons h2 a.mobile-lessons-next {
 	transition: .2s opacity;
 }
 html .calendar-holder .datepicker .next:hover::before,
-html .calendar-holder .datepicker .prev:hover::before {
+html .calendar-holder .datepicker .prev:hover::before,
+html .datepicker-dropdown .next:hover::before,
+html .datepicker-dropdown .prev:hover::before {
 	opacity: 0.7;
 }
 html .journal-nav .mobile-date {
 	font-weight: bold;
 }
-html .calendar-holder .datepicker .dow {
-	color: var(--paragraph-color);
+html .calendar-holder .datepicker .dow,
+html .datepicker .dow {
+	color: var(--low-priority-text-color);
 	font-family: 'Inter', sans-serif;
 	font-weight: bold;
 }
-html .calendar-holder .datepicker .day {
+html .calendar-holder .datepicker .day,
+html .datepicker-dropdown .day {
 	background: var(--background-front-color) !important; /* Without the !important there is a weird blue background on click */
 	color: var(--paragraph-color);
-
 	font-family: 'Inter', sans-serif;
-
 	transition: .2s filter;
+	border: 0;
 }
 html .calendar-holder .datepicker .day.new,
-html .calendar-holder .datepicker .day.old {
+html .calendar-holder .datepicker .day.old,
+html .datepicker-dropdown .day.new,
+html .datepicker-dropdown .day.old {
 	color: var(--paragraph-color);
 
 	opacity: 0.7;
@@ -3263,18 +3272,13 @@ html .nav-tabs li.action-history a,
 html .nav-tabs li.message-history a {
 	background: var(--background-middle-dark-color);
 	color: var(--title-color);
-
 	margin-right: .5rem;
-
 	padding: 1rem .5rem;
-
 	border: 0;
-
 	border-radius: 1rem 1rem 0 0;
-
 	cursor: pointer;
-	
 	transition: .2s filter;
+	font-family: 'Inter', sans-serif;
 }
 html .nav-tabs li,
 html .nav-tabs li.active,
@@ -3303,10 +3307,8 @@ html .nav-tabs li a:hover {
 html .settings-container .announcement .container {
 	background: var(--background-middle-color);
 	color: var(--title-color);
-
 	border-radius: 1rem 1rem 0 0;
-
-	z-index: 2;
+	font-family: 'Inter', sans-serif;
 }
 html .settings-container .pupils-wrap .container {
 	background: var(--background-middle-color);
@@ -3340,6 +3342,11 @@ html .pupils-wrap .item .pupil-block .pupil-block-header span {
 	font-weight: bold;
 
 	padding-left: 0;
+}
+html .pupils-wrap .item .pupil-block-body h3 {
+	color: var(--title-color);
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
 }
 html .other-devices .heading {
 	border-top: 0;
@@ -3411,6 +3418,61 @@ html .history-wrap .container {
 	border-radius: 0 0 1rem 1rem;
 
 	box-shadow: none;
+}
+
+/* SETTINGS TABLE */
+html .history-entries-table-holder .entries-table {
+	border-radius: 1rem;
+	background: var(--background-middle-dark-color);
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
+}
+html .history-entries-table-holder .entries-table td {
+	color: var(--paragraph-color);
+	background: var(--background-middle-dark-color);
+	border: 0;
+	font-family: 'Inter', sans-serif;
+}
+html .history-entries-table-holder .entries-table thead td {
+	color: var(--low-priority-text-color);
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+}
+html .history-entries-table-holder .entries-table td:nth-child(2n) {
+	background: var(--background-middle-color);
+}
+html .history-entries-table-holder .entries-table tbody tr {
+	border-top: 4px solid #00000020;
+}
+html .history-entries-table-holder .entries-table thead td:first-child {
+	border-top-left-radius: 1rem;
+}
+html .history-entries-table-holder .entries-table thead td:last-child {
+	border-top-right-radius: 1rem;
+}
+html .history-entries-table-holder .entries-table tbody td:first-child {
+	border-bottom-left-radius: 1rem;
+}
+html .history-entries-table-holder .entries-table tbody td:last-child {
+	border-bottom-right-radius: 1rem;
+}
+html .announcement.history-head .history-head-title {
+	font-family: 'Inter', sans-serif;
+	margin-top: 9px;
+}
+html .announcement.history-head .date-holder .form-row {
+	color: var(--low-priority-text-color);
+	text-transform: uppercase;
+	font-weight: bold;
+}
+html .announcement.history-head .date-holder .input-block input {
+	border: 0;
+	color: var(--paragraph-color);
+	background: var(--background-front-color);
+	border-radius: .5rem;
+}
+html .announcement .btn {
+	margin-top: 10px;
 }
 
 /* TEST REPORT */
