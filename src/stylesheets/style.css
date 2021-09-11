@@ -981,12 +981,6 @@ html .btn-primary:hover {
 }
 
 /* ADS AND MONETIZATION */
-html .container-fluid div div div {
-	box-shadow: 0 4px 10px -3px var(--shadow-color);
-}
-html .container-fluid {
-	display: none;
-}
 html .dashboard .announcement {
 	display: none;
 }
