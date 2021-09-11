@@ -246,14 +246,16 @@ html .lessons-table tr {
 	border: 0;
 }
 html .student-journal-lessons-table-holder .lessons-table .head td,
-html .student-journal-lessons-table-holder .lessons-table thead td {
+html .student-journal-lessons-table-holder .lessons-table thead td,
+html .diary-container .lessons-table thead td {
 	background: var(--background-middle-color);
 
 	font-family: 'Inter', sans-serif;
 
 	border: 0;
 }
-html .student-journal-lessons-table-holder .lessons-table thead td {
+html .student-journal-lessons-table-holder .lessons-table thead td,
+html .diary-container .lessons-table thead td {
 	color: var(--low-priority-text-color);
 	background: var(--background-middle-color);
 
@@ -264,10 +266,12 @@ html .student-journal-lessons-table-holder .lessons-table thead td {
 
 	border: 0;
 }
-html .student-journal-lessons-table-holder .lessons-table thead td.first-column {
+html .student-journal-lessons-table-holder .lessons-table thead td.first-column,
+html .diary-container .lessons-table thead td.first-column {
 	border-top-left-radius: 1rem;
 }
-html .student-journal-lessons-table-holder .lessons-table thead td.score {
+html .student-journal-lessons-table-holder .lessons-table thead td.score,
+html .diary-container .lessons-table thead td.score {
 	border-top-right-radius: 1rem;
 }
 html .no-data {
@@ -283,28 +287,33 @@ html .no-data .inform span {
 
 	font-family: 'Inter', sans-serif;
 }
-html .student-journal-lessons-table-holder .lessons-table tbody .first-column {
+html .student-journal-lessons-table-holder .lessons-table tbody .first-column,
+html .diary-container .lessons-table tbody .first-column {
 	background: var(--background-middle-color);
 
 	border: 0;
 	border-bottom: 4px solid #00000020;
 	border-top: 4px solid #00000020;
 }
-html .student-journal-lessons-table-holder .lessons-table tbody .title {
+html .student-journal-lessons-table-holder .lessons-table tbody .title,
+html .diary-container .lessons-table tbody .title {
 	color: var(--paragraph-color);
 
 	font-weight: bold;
 	font-size: 13px;
 }
-html .student-journal-lessons-table-holder .lessons-table tbody .number {
+html .student-journal-lessons-table-holder .lessons-table tbody .number,
+html .diary-container .lessons-table tbody .number {
 	color: var(--low-priority-text-color);
 
 	font-weight: bold;
 }
-html .student-journal-lessons-table-holder .lessons-table tbody .room {
+html .student-journal-lessons-table-holder .lessons-table tbody .room,
+html .diary-container .lessons-table tbody .room {
 	color: var(--low-priority-text-color);;
 }
-html .student-journal-lessons-table-holder .lessons-table td {
+html .student-journal-lessons-table-holder .lessons-table td,
+html .diary-container .lessons-table td {
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
 	border: 0;
@@ -315,10 +324,12 @@ html .lessons-table td .subject-text-draft::before,
 html .student-journal-lessons .lesson-subitem .description .subject-text-draft::before {
 	color: var(--low-priority-text-color);
 }
-html .student-journal-lessons-table-holder .lessons-table tr:last-child td {
+html .student-journal-lessons-table-holder .lessons-table tr:last-child td,
+html .diary-container .lessons-table tr:last-child td {
 	border: 0;
 }
-html .student-journal-lessons-table-holder .lessons-table td:nth-child(odd) {
+html .student-journal-lessons-table-holder .lessons-table td:nth-child(odd),
+html .diary-container .lessons-table td:nth-child(odd) {
 	background: var(--background-middle-dark-color);
 }
 html .student-journal-lessons-table-holder .lessons-table tbody .number--lessonNotInDay,
@@ -326,18 +337,22 @@ html .actual-lessons .lesson-title .number--lessonNotInDay,
 html .student-journal-lessons .lesson-title .number--lessonNotInDay {
 	display: none;
 }
-html .student-journal-lessons-table-holder .lessons-table tbody tr:last-child td:nth-child(1) {
+html .student-journal-lessons-table-holder .lessons-table tbody tr:last-child td:nth-child(1),
+html .diary-container .lessons-table tbody tr:last-child td:nth-child(1) {
 	border-bottom-left-radius: 1rem;
 }
-html .student-journal-lessons-table-holder .lessons-table tbody tr:last-child td:last-child {
+html .student-journal-lessons-table-holder .lessons-table tbody tr:last-child td:last-child,
+html .diary-container .lessons-table tbody tr:last-child td:last-child {
 	border-bottom-right-radius: 1rem;
 }
-html .student-journal-lessons-table-holder .lessons-table a.file {
+html .student-journal-lessons-table-holder .lessons-table a.file,
+html .diary-container .lessons-table a.file {
 	display: inline;
 }
 html .lessons-table td:last-of-type span.score,
 html .actual-lessons span.score,
-html .student-journal-lessons span.score {
+html .student-journal-lessons span.score,
+html .diary-container .lessons-table span.score {
 	border: 0;
 	background: var(--background-front-color);
 	font-size: 0.8rem;
@@ -515,6 +530,10 @@ html .students-journal-header .students-journal-header-links a.print::before {
 	mask-size: cover;
 	-webkit-mask-size: cover;
 }
+html .actual-lessons h2 {
+	font-weight: bold;
+	font-size: 30px;
+}
 html .actual-lessons .lesson-title .title,
 html .student-journal-lessons .lesson-title .title {
 	color: var(--title-color);
@@ -581,10 +600,10 @@ html .modal-body {
 }
 html .modal-mark-card .mark-card-inner-title {
 	border-radius: 1rem 1rem 0 0;
-
 	background: var(--background-front-color);
-
 	border: 0;
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
 }
 html .modal-mark-card .mark-card-inner-title span {
 	text-transform: uppercase;
@@ -600,8 +619,23 @@ html .mark-card-inner-graph {
 
 	border: 0;
 }
+html .mark-card-inner-graph .mark-card-inner-graph-descr {
+	border-right: 4px solid #00000020;
+}
+html .mark-card-inner-graph .mark-card-inner-graph-descr p {
+	font-family: 'Inter', sans-serif;
+}
 html .mark-card-inner-graph-image {
 	padding: 0;
+}
+html .mark-card-inner-graph .mark-card-inner-graph-image .tiny-graph {
+	border-bottom: 4px solid #00000020;
+}
+html .mark-card-inner-graph-image path[fill="#ACACAC"] {
+	fill: var(--background-middle-color);
+}
+html .mark-card-inner-graph .mark-card-inner-graph-image path[fill="#009AE3"] {
+	fill: var(--theme-color);
 }
 html .modal-mark-card .mark-card-inner {
 	background: var(--background-front-color);
@@ -817,15 +851,12 @@ html .popover.bottom > .arrow::after {
 html .header-first-submenu-item,
 html .header-second-submenu-item {
 	border-bottom: 0;
-
 	font-size: 0.8rem;
-
 	background: var(--background-front-color);
 	color: var(--paragraph-color);
-	
 	border-radius: 1rem;
-
 	transition: .2s filter;
+	font-family: 'Inter', sans-serif;
 }
 html .header-first-submenu-item:hover,
 html .header-second-submenu-item:hover {
@@ -839,9 +870,9 @@ html .header-first-menu-item.sm-icon-only a {
 html .header-second .header-second-menu-item:nth-child(3) .header-second-submenu {
 	display: none !important;
 }
-html .header-second .header-second-menu-item:nth-child(4) .header-second-submenu {
-	display: none !important; /* TOGGLEABLE */
-}
+/* html .header-second .header-second-menu-item:nth-child(4) .header-second-submenu {
+	display: none !important; /* TOGGLEABLE
+} */
 html .header-second .header-second-submenu {
 	top: 55px;
 }
@@ -1765,16 +1796,21 @@ html .datepicker-dropdown {
 		left: .5rem;
 	}
 }
-html .calendar-holder .datepicker .datepicker-switch {
+html .calendar-holder .datepicker .datepicker-switch,
+html section h2 .actual-lessons-date.active {
 	font-family: 'Inter', sans-serif;
 	font-weight: bold;
+	color: var(--paragraph-color);
+	min-width: 0 !important;
 }
 html .calendar-holder .datepicker .next::before,
 html .calendar-holder .datepicker .prev::before,
 html .student-journal-lessons h2 a.mobile-lessons-prev,
 html .student-journal-lessons h2 a.mobile-lessons-next,
 html .datepicker-dropdown .next::before,
-html .datepicker-dropdown .prev::before {
+html .datepicker-dropdown .prev::before,
+html section h2 .switch-date-next,
+html section h2 .switch-date-prev {
 	border: 0;
 	background: var(--theme-color);
 	width: 20px;
@@ -1786,7 +1822,9 @@ html .datepicker-dropdown .prev::before {
 html .calendar-holder .datepicker .next:hover::before,
 html .calendar-holder .datepicker .prev:hover::before,
 html .datepicker-dropdown .next:hover::before,
-html .datepicker-dropdown .prev:hover::before {
+html .datepicker-dropdown .prev:hover::before,
+html section h2 .switch-date-next:hover,
+html section h2 .switch-date-prev:hover {
 	opacity: 0.7;
 }
 html .journal-nav .mobile-date {
@@ -2783,7 +2821,8 @@ html .login-links a,
 html .article-content .article-body a,
 html .dashboard-news .dashboard-news-item .article-content a,
 html .Recipients .Recipients__LoadLink,
-html .ViewMessage__MessageBody a {
+html .ViewMessage__MessageBody a,
+html .diary-container .lessons-table a {
 	color: var(--theme-color);
 	position: relative;
 	text-decoration: none;
@@ -2807,7 +2846,8 @@ html .login-links a:hover,
 html .article-content .article-body a:hover,
 html .dashboard-news .dashboard-news-item .article-content a:hover,
 html .Recipients .Recipients__LoadLink:hover,
-html .ViewMessage__MessageBody a:hover {
+html .ViewMessage__MessageBody a:hover,
+html .diary-container .lessons-table a:hover {
 	color: var(--theme-color);
 	text-decoration: none;
 	background-size: 100% 1px;
