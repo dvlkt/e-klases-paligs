@@ -16,9 +16,17 @@ if (document.location.href.includes(`/Family/Diary`)) {
 			for (let i = 0; i < grade.innerText.length; i++) {
 				if (!isNaN(parseInt(grade.innerText[i]))) {
 					gradeValue += grade.innerText[i];
+				} else if (grade.innerText[i] === `|`) {
+					// Handle edited grades
+					gradeValue = ``;
 				} else {
 					break;
 				}
+			}
+
+			// If the grade is NV, make it equal to 0
+			if (grade.innerText.toLowerCase() === `nv`) {
+				gradeValue = `0`;
 			}
 
 			// If the grade was written out in %, it should be divided by 10
@@ -30,7 +38,8 @@ if (document.location.href.includes(`/Family/Diary`)) {
 				grades.push({
 					subject,
 					value: parseInt(gradeValue),
-					originalValue: gradeValue
+					originalValue: gradeValue,
+					element: grade
 				});
 			}
 		}
@@ -81,16 +90,19 @@ if (document.location.href.includes(`/Family/Diary`)) {
 	// Find the best grade(s)
 	let bestGrade = 0;
 	let bestGradeSubjects = [];
+	let bestGradeElement = null;
 	for (let i = 0; i < grades.length; i++) {
 		if (grades[i].value > bestGrade) {
 			bestGrade = grades[i].value;
 			bestGradeSubjects = [grades[i].subject];
+			bestGradeElement = grades[i].element;
 		} else if (grades[i].value === bestGrade) {
 			bestGradeSubjects.push(grades[i].subject);
+			bestGradeElement = null;
 		}
 	}
 	let bestGradeTextElement = document.createElement(`h2`);
-	bestGradeTextElement.innerHTML = `Labākā atzīme: <span class="grade">${bestGrade}</span> <span class="low-priority">(saņemta ${bestGradeSubjects.length === 1 ? `priekšmetā` : `priekšmetos`} ${bestGradeSubjects.join(` & `)})</span>`;
+	bestGradeTextElement.innerHTML = `Labākā atzīme: <span id="statistics-best-grade" class="grade">${bestGrade}</span> <span class="low-priority">(saņemta ${bestGradeSubjects.length === 1 ? `priekšmetā` : `priekšmetos`} ${bestGradeSubjects.join(` & `)})</span>`;
 	if (bestGradeSubjects.length > 0) {
 		containerElement.appendChild(bestGradeTextElement);
 	}
@@ -115,16 +127,19 @@ if (document.location.href.includes(`/Family/Diary`)) {
 	// Find the worst grade(s)
 	let worstGrade = 10;
 	let worstGradeSubjects = [];
+	let worstGradeElement = null;
 	for (let i = 0; i < grades.length; i++) {
 		if (grades[i].value < worstGrade) {
 			worstGrade = grades[i].value;
 			worstGradeSubjects = [grades[i].subject];
+			worstGradeElement = grades[i].element;
 		} else if (grades[i].value === worstGrade) {
 			worstGradeSubjects.push(grades[i].subject);
+			worstGradeElement = null;
 		}
 	}
 	let worstGradeTextElement = document.createElement(`h2`);
-	worstGradeTextElement.innerHTML = `Sliktākā atzīme: <span class="grade">${worstGrade}</span> <span class="low-priority">(saņemta ${worstGradeSubjects.length === 1 ? `priekšmetā` : `priekšmetos`} ${worstGradeSubjects.join(` & `)})</span>`;
+	worstGradeTextElement.innerHTML = `Sliktākā atzīme: <span id="statistics-worst-grade" class="grade">${worstGrade}</span> <span class="low-priority">(saņemta ${worstGradeSubjects.length === 1 ? `priekšmetā` : `priekšmetos`} ${worstGradeSubjects.join(` & `)})</span>`;
 	if (worstGradeSubjects.length > 0) {
 		containerElement.appendChild(worstGradeTextElement);
 	}
@@ -139,5 +154,24 @@ if (document.location.href.includes(`/Family/Diary`)) {
 
 		parent.appendChild(titleElement);
 		parent.appendChild(containerElement);
+
+		// On best grade click, open more information about  it
+		let analyticsBestGradeElement = document.querySelector(`#statistics-best-grade`);
+		if (bestGradeSubjects.length === 1) {
+			analyticsBestGradeElement.onclick = () => {
+				bestGradeElement.click();
+			}
+		} else {
+			analyticsBestGradeElement.classList += ` no-pointer`;
+		}
+		// On worst grade click, open more information about it
+		let analyticsWorstGradeElement = document.querySelector(`#statistics-worst-grade`);
+		if (worstGradeSubjects.length === 1) {
+			analyticsWorstGradeElement.onclick = () => {
+				worstGradeElement.click();
+			}
+		} else {
+			analyticsWorstGradeElement.classList += ` no-pointer`;
+		}
 	}
 }

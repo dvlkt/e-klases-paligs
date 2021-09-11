@@ -339,19 +339,12 @@ html .lessons-table td:last-of-type span.score,
 html .actual-lessons span.score,
 html .student-journal-lessons span.score {
 	border: 0;
-
 	background: var(--background-front-color);
-
 	font-size: 0.8rem;
-
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
-
 	border-radius: 10px;
-
 	padding: .5rem;
-
 	font-weight: bold;
-
 	transition: .2s opacity;
 }
 html .lessons-table td:last-of-type span.score:hover {
@@ -359,14 +352,11 @@ html .lessons-table td:last-of-type span.score:hover {
 }
 html .lessons-table td:last-of-type span.score.warning {
 	background: var(--red-color);
-
 	box-shadow: 0 4px 10px -3px var(--red-shadow-color);
 }
 html .ThirdPartyEvent--Active {
 	background: var(--background-front-color);
-
 	border-radius: 1rem;
-
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 }
 html .ThirdPartyEvent__Content {
@@ -545,39 +535,32 @@ html .student-journal-lessons .lesson-title .room {
 html .diary-analytics {
 	background: var(--background-middle-dark-color);
 	color: var(--paragraph-color);
-
 	padding: 1rem;
-
 	border-radius: 1rem;
-
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+html .diary-analytics h2 {
+	font-size: 15px;
 }
 html .diary-analytics span.grade {
 	background: var(--background-front-color);
 	color: var(--paragraph-color);
-
-	font-weight: normal;
+	font-weight: bold;
 	font-size: 0.8rem;
-
 	padding: .5rem;
-
 	border-radius: .5rem;
-
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
-
 	cursor: pointer;
-
 	transition: .2s opacity;
 }
 html .diary-analytics span.grade:not(.no-pointer):hover {
-	opacity: 0.8;
+	opacity: 0.7;
 }
 html .diary-analytics span.grade.no-pointer {
 	cursor: default;
 }
 html .diary-analytics span.low-priority {
 	color: var(--low-priority-text-color);
-
 	font-size: 0.8rem;
 	text-transform: none;
 }
