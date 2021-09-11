@@ -47,7 +47,7 @@ if (window.location.pathname === `/`) {
 	}
 }
 
-window.addEventListener(`locationchange`, () => {
+const tryAddingMailViewPatches = () => {
 	if (!location.href.includes(`SPA/Family#/mail/message/view/`)) {
 		return;
 	}
@@ -60,7 +60,7 @@ window.addEventListener(`locationchange`, () => {
 		let personWrapper = document.querySelector(`.ViewMessage .ViewMessage__PersonWrapper`);
 		let metaInfo = document.querySelector(`.ViewMessage .ViewMessage__MetaInfo`);
 		let attachments = document.querySelector(`.ViewMessage .ViewMessage__Attachments`);
-		
+
 		view.appendChild(attachments);
 		metaInfo.appendChild(personWrapper);
 
@@ -81,4 +81,8 @@ window.addEventListener(`locationchange`, () => {
 			});
 		}
 	}
+}
+window.addEventListener(`locationchange`, () => {
+	tryAddingMailViewPatches();
 });
+tryAddingMailViewPatches();
