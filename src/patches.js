@@ -33,7 +33,7 @@ for (element of document.querySelectorAll(`.item-messages a`)) {
 }
 for (element of document.querySelectorAll(`.item-analytics a`)) {
 	element.className = `onclick-spinner`;
-	element.href = `/Family/ReportPupilMarks/Get`
+	//element.href = `/Family/ReportPupilMarks/Get`
 }
 if (document.querySelector(`.student-switch-link`) !== null) {
 	document.querySelector(`.student-switch-link`).className += ` onclick-spinner`;

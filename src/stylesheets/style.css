@@ -224,6 +224,98 @@ html .dashboard-news .dashboard-news-item .tag.blue {
 	color: var(--theme-accent-color);
 	background: var(--theme-color);
 }
+html .dashboard-widget-col.widget-recent .scores,
+html .dashboard-widget-col.widget-recent .messages,
+html .dashboard-widget-col.widget-recent .scores:hover,
+html .dashboard-widget-col.widget-recent .messages:hover {
+	background: var(--background-middle-dark-color);
+	border-radius: 1rem 1rem 0 0;
+	transition: .2s filter;
+}
+html .dashboard-widget-col.widget-recent .scores:hover,
+html .dashboard-widget-col.widget-recent .messages:hover {
+	filter: brightness(0.8);
+}
+html .dashboard-widget-col.widget-recent .active,
+html .dashboard-widget-col.widget-recent .active:hover {
+	background: var(--background-middle-color);
+}
+html .dashboard-widget-col.widget-recent .widgets-switcher-item h3 {
+	font-family: 'Inter', sans-serif;
+	color: var(--title-color);
+	font-size: 15px;
+	text-align: center;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding-left: 0;
+}
+html .dashboard-widget-col.widget-recent .recent-scores .widget-content {
+	background: var(--background-middle-color);
+}
+html .dashboard-widget-col.widget-recent .recent-scores-item .recent-scores-item-col {
+	border-bottom: 4px solid #00000020;
+}
+html .dashboard-widget-col.widget-recent .recent-scores-item,
+html .dashboard-widget-col.widget-recent .recent-scores-item:hover {
+	background: var(--background-middle-color);
+	transition: .2s filter;
+}
+html .dashboard-widget-col.widget-recent .recent-scores-item:hover {
+	filter: brightness(0.8);
+}
+html .dashboard-widget-col.widget-recent .recent-scores-item .recent-scores-item-col h4,
+html .dashboard-widget-col.widget-recent .recent-scores-item .recent-scores-item-col:nth-child(2) {
+	color: var(--paragraph-color);
+	font-family: 'Inter', sans-serif;
+}
+html .dashboard-widget-col.widget-recent .recent-scores-item .recent-scores-item-col h4 {
+	font-weight: bold;
+}
+html .dashboard-widget-col.widget-recent .recent-scores-item .recent-scores-item-col span.score {
+	border-radius: .5rem;
+	border: 0;
+	background: var(--background-front-color);
+	color: var(--paragraph-color);
+	font-weight: bold;
+	font-family: 'Inter', sans-serif;
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
+}
+html .dashboard-widget-col.widget-recent .recent-messages .widget-content {
+	background: var(--background-middle-color);
+}
+html .dashboard-widget-col.widget-recent .no-scores {
+	color: var(--low-priority-text-color);
+}
+html .dashboard-widget-col.widget-recent .no-scores h4 {
+	color: var(--title-color);
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+}
+html .dashboard-widget-col.widget-recent .no-scores .no-messages-img {
+	display: none;
+}
+html .dashboard-widget-col.widget-recent .recent-scores .widget-header,
+html .dashboard-widget-col.widget-recent .recent-messages .widget-header {
+	background: var(--background-middle-color);
+}
+html .dashboard-widget-col.widget-recent .recent-scores .widget-header h3,
+html .dashboard-widget-col.widget-recent .recent-messages .widget-header h3 {
+	padding-left: 0;
+}
+@media only screen and (min-width: 768px) {
+	html .dashboard-widget-col.widget-recent .dashboard-widget.recent-scores .widget-header,
+	html .dashboard-widget-col.widget-recent .dashboard-widget.recent-messages .widget-header {
+		display: none;
+	}
+	html .dashboard-widget-col.widget-recent .recent-scores .widget-content,
+	html .dashboard-widget-col.widget-recent .recent-messages .widget-content {
+		padding-top: 0;
+		margin-top: 60px;
+	}
+}
+html .dashboard-widget-col.widget-recent .widget-content-collapse {
+	display: none;
+}
 
 /* DIARY */
 html .students-journal-header {
