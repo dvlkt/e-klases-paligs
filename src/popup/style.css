@@ -456,10 +456,32 @@ textarea {
 	width: 100vw;
 	height: 100vh;
 }
-.center * {
-	max-width: 35vw;
-}
 
 li {
 	color: var(--text-color);
+}
+
+.news-wrapper {
+	width: 100vw;
+	min-height: 100vh;
+}
+.news {
+	width: 50vw;
+	margin: auto;
+}
+.news h1 {
+	text-align: center;
+	font-size: 2rem;
+}
+.news h3 {
+	font-size: 2rem;
+	font-weight: bold;
+	color: var(--text-color);
+	margin-top: 1rem;
+}
+.news img {
+	max-width: 50%;
+	margin-left: 25%;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }

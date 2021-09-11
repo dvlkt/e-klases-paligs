@@ -8,7 +8,7 @@
 	Moderns dizains un vairāk funkcijas E-klasei 👍
 </p>
 <p align="center">
-	<b>v0.2 BETA</b>
+	<b>v0.3 BETA</b>
 </p>
 
 ***
@@ -21,34 +21,38 @@
 		<tr>
 			<th>
 				<p align="center">
-					<img alt="Chrome" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Chrome_icon_%28September_2014%29.svg" width="45">
+					<img alt="Chrome" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Chrome_icon_%28September_2014%29.svg" width="45" />
 				</p>
 			</th>
 			<th>
 				<p align="center">
-					<img alt="Firefox" src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg" width="45">
+					<img alt="Firefox" src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg" width="45" />
 				</p>
 			</th>
 			<th>
 				<p align="center">
-					<img alt="Safari" src="https://upload.wikimedia.org/wikipedia/en/7/71/Safari_14_icon.png" width="45">
+					<img alt="Safari" src="https://upload.wikimedia.org/wikipedia/en/7/71/Safari_14_icon.png" width="45" />
 				</p>
 			</th>
 			<th>
 				<p align="center">
-					<img alt="Internet Explorer" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Internet_Explorer_10%2B11_logo.svg/1200px-Internet_Explorer_10%2B11_logo.svg.png" width="30">
+					<img alt="Internet Explorer" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Internet_Explorer_10%2B11_logo.svg/1200px-Internet_Explorer_10%2B11_logo.svg.png" width="45" />
 				</p>
 			</th>
 		</tr>
 		<tr>
 			<td>
 				<p align="center">
-					Pieejams drīzumā!
+					<a href="https://chrome.google.com/webstore/detail/e-klases-pal%C4%ABgs/bpajpfnilndpahikmljlbnlmabajgndo?hl=lv">
+						<img alt="Chrome" src="https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/	mPGKYBIR2uCP0ApchDXE.png" width="172" />
+					</a>
 				</p>
 			</td>
 			<td>
 				<p align="center">
-					Pieejams drīzumā!
+					<a href="https://chrome.google.com/webstore/detail/e-klases-pal%C4%ABgs/bpajpfnilndpahikmljlbnlmabajgndo?hl=lv">
+						<img alt="Firefox" src="https://ffp4g1ylyit3jdyti1hqcvtb-wpengine.netdna-ssl.com/addons/files/2015/11/get-the-addon.png" width="172" />
+					</a>
 				</p>
 			</td>
 			<td>
