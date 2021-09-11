@@ -75,6 +75,10 @@ window.addEventListener(`locationchange`, () => {
 				imgElement.src = url;
 				attachmentElement.insertBefore(imgElement, attachmentElement.children[0]);
 			}
+
+			attachmentElement.addEventListener(`click`, () => {
+				attachmentElement.querySelector(`.AttachmentList__Link`).click();
+			});
 		}
 	}
 });

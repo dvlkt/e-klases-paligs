@@ -2196,6 +2196,7 @@ html .AttachmentList__ItemContainer {
 	transition: .2s filter;
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 	vertical-align: top;
+	cursor: pointer;
 }
 html .AttachmentList__ItemContainer:hover {
 	filter: brightness(0.7);
