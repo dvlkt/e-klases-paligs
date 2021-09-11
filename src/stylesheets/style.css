@@ -2945,10 +2945,227 @@ html .diary-container .lessons-table a:hover {
 	background-size: 100% 1px;
 }
 
-/* ANALYTICS */
-html .pupilmarks-container .nav-tabs {
-	display: none; /* TOGGLEABLE */
+/* FILTER */
+html .filter-wrap .container {
+	background: var(--background-middle-color);
+	box-shadow: none;
+	border-radius: 1rem 1rem 0 0;
 }
+html .filter-wrap .filter-block label {
+	font-size: 13px;
+	font-weight: bold;
+	font-family: 'Inter', sans-serif;
+	text-transform: uppercase;
+	color: var(--low-priority-text-color);
+}
+html .select2-container--default .select2-selection--single,
+html .select2-container--default .select2-selection--single .select2-selection__rendered {
+	border-radius: .5rem;
+	background: var(--background-front-color);
+	color: var(--paragraph-color);
+	border: 0;
+	font-size: 15px;
+	height: 28px;
+}
+html .form-group.subject-choice .select2-container--default .select2-selection--single {
+	border: 0 !important;
+	margin-top: 2px;
+}
+html .filter-wrap .journal-type a {
+	font-family: 'Inter', sans-serif;
+	color: var(--paragraph-color);
+	border: 0;
+	background: var(--background-front-color);
+	transition: .2s filter;	
+}
+html .filter-wrap .journal-type a:hover {
+	color: var(--paragraph-color);
+	filter: brightness(0.8);
+}
+html .filter-wrap .journal-type a.active {
+	background: var(--theme-color);
+	border: 0;
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+html .filter-wrap .journal-type a:first-of-type {
+	border-radius: .5rem 0 0 .5rem;
+}
+html .filter-wrap .journal-type a:last-of-type {
+	border-radius: 0 .5rem .5rem 0;
+	border-right: 0;
+}
+
+/* RATINGS */
+html .analytics-ratings-container {
+	border-radius: 1rem;
+	background: var(--background-middle-color);
+}
+html .analytics-ratings-container .analytics-ratings-intro {
+	border-bottom: 4px solid #00000020;
+}
+html .analytics-ratings-table-intro .analytics-ratings-table-intro-left,
+html .analytics-ratings-table-intro .analytics-ratings-table-intro-right {
+	background: none;
+	border: 0;
+}
+html .analytics-ratings-container .report-wrapper,
+html .analytics-ratings-container .report-wrapper.report-averages {
+	border: 0;
+	border-bottom: 0 !important;
+}
+html .ratings-orderby-options .title,
+html .analytics-ratings-container h3.group-title {
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	font-size: 30px !important;
+}
+html .analytics-ratings-table-intro .analytics-ratings-table-intro-left,
+html .analytics-ratings-table-intro-left span,
+html .analytics-ratings-table-intro-right table.stats {
+	font-family: 'Inter', sans-serif;
+}
+html .analytics-ratings-table-intro-right table.stats {
+	float: right;
+}
+html .analytics-ratings-table-intro-right table.stats td {
+	font-size: 15px;
+}
+html .analytics-ratings-table-intro-right table.stats td:first-child::after {
+	content: ":";
+}
+html .analytics-ratings-table-intro-right table.stats td:last-child {
+	font-weight: bold;
+}
+html .switch-block-with-order-text {
+	display: inline-block;
+}
+html .analyitcs-ratings-chart-horzontal path[fill="#fff"] {
+	display: none !important;
+}
+html .analyitcs-ratings-chart-horzontal path[stroke="#dfdfdf"],
+html .analyitcs-ratings-chart-horzontal path[stroke="#8e8e8e"] {
+	stroke: var(--low-priority-text-color);
+}
+html .analyitcs-ratings-chart-horzontal text[fill="#232323"] {
+	fill: var(--low-priority-text-color);
+	font: 13px 'Inter', sans-serif;
+}
+html .analyitcs-ratings-chart-horzontal text[fill="#C48C8F"] {
+	fill: var(--red-accent-color);
+	font: 11px 'Inter', sans-serif !important;
+}
+html .analyitcs-ratings-chart-horzontal path[fill="#FFFFFF"][fill-opacity="0.85"] {
+	fill: var(--red-color);
+	fill-opacity: 1;
+}
+html .analyitcs-ratings-chart-horzontal path[stroke="#C48C8F"] {
+	stroke: var(--red-color);
+}
+html .analytics-ratings-container .charts-legend .legend-title {
+	display: none;
+}
+html .analytics-ratings-container .charts-legend .legend-item,
+html .graph-info.secondary {
+	font-size: 15px;
+	padding-left: 20px !important;
+	display: block;
+	float: none;
+	margin-bottom: 2px;
+}
+html .analytics-ratings-container .charts-legend .legend-item .legend-icon,
+html .report-wrapper .mark-ratings-blue-legend {
+	width: 14px;
+	border-radius: 50%;
+}
+html .mark-ratings-blue-legend {
+    background: var(--theme-color);
+}
+html .analytics-ratings-container .report-wrapper {
+	border-bottom: solid 4px #00000020 !important;
+}
+html .analytics-ratings-container .charts-legend .legend-item .class-average::before {
+	background: var(--red-color);
+	width: 14px;
+	left: 0;
+}
+html .ratings-orderby-options .orderby-text {
+	font-family: 'Inter', sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: var(--low-priority-text-color);
+	text-transform: uppercase;
+}
+html section .section-switch {
+	border: 0;
+	background: none;
+}
+html section .section-switch .section-switch-option {
+	font-family: 'Inter', sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: var(--paragraph-color);
+	background: var(--background-front-color);
+	transition: .2s filter, .2s box-shadow;
+}
+html section .section-switch .section-switch-option:hover {
+	filter: brightness(0.8);
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+html section .section-switch .section-switch-option.active {
+	background: var(--theme-color);
+}
+html section .section-switch .section-switch-option:first-child {
+	border-radius: .5rem 0 0 .5rem;
+}
+html section .section-switch .section-switch-option:last-child {
+	border-radius: 0 .5rem .5rem 0;
+}
+html .report-averages label {
+	display: none;
+}
+html .analytics-ratings-container .charts-legend {
+	padding-top: 0;
+}
+html .analytics-report-table-tools .btn {
+	float: none;
+	margin: auto;
+	width: 25%;
+}
+html .scroll-to-top.home-work {
+	margin-bottom: 0;
+}
+
+/* JOURNALS */
+html .info-pane-wrap .container,
+html .marks-pane-wrap .container,
+html .data-marks-detailed-wrap .container,
+html .data-pane-wrap .container,
+html .behavioral-wrap .container,
+html .lessons-topics-wrap .container,
+html .analytic .no-data .container {
+	background: var(--background-middle-color);
+}
+html .info-pane-wrap .avg-class,
+html .info-pane-wrap .avg-pupil,
+html .info-pane-wrap .teacher {
+	color: var(--paragraph-color);
+	font-family: 'Inter', sans-serif;
+}
+html .info-pane-wrap .avg-class,
+html .info-pane-wrap .avg-pupil {
+	border: 0;
+}
+html .analytic .no-data {
+	background: none;
+}
+
+/* DELAYS */
+html .delays .container {
+	background: var(--background-middle-color);
+	border-radius: 0 0 1rem 1rem;
+}
+
+/* ANALYTICS */
 html .analytics-report-container {
 	background: none;
 }
@@ -3385,7 +3602,11 @@ html .nav-tabs li a,
 html .nav-tabs li.active a,
 html .nav-tabs li.profile-settings a,
 html .nav-tabs li.action-history a,
-html .nav-tabs li.message-history a {
+html .nav-tabs li.message-history a,
+html .nav-tabs li.ratings a,
+html .nav-tabs li.journal a,
+html .nav-tabs li.delays a,
+html .nav-tabs li.transcript-of-records a {
 	background: var(--background-middle-dark-color);
 	color: var(--title-color);
 	margin-right: .5rem;
