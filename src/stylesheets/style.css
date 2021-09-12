@@ -3521,12 +3521,8 @@ html .delays-legend .legend-item .legend-icon {
 
 /* ANALYTICS */
 html .analytics-report-container {
-	background: none;
-}
-html .analytics-pupilmarks-intro {
-	border-radius: 1rem;
-
-	box-shadow: 0 7px 14px -3px var(--shadow-color);
+	background: var(--background-middle-color);
+	border-radius: 1rem;	
 }
 html .analytics-pupilmarks-intro .btn-primary {
 	margin-left: 1rem;
@@ -3544,9 +3540,9 @@ html .analytics-pupilmarks-intro .analytics-ratings-table-intro-left {
 html .analytics-pupilmarks-intro .analytics-ratings-table-intro-right {
 	border-radius: 0 1rem 1rem 0;
 }
-html .analytics-ratings-table-intro-right .section-switch {
-	display: none; /* TOGGLEABLE */
-}
+/* html .analytics-ratings-table-intro-right .section-switch {
+	display: none; /* TOGGLEABLE
+} */
 html a.print.print-button::before {
 	background: var(--theme-color);
 	mask-size: cover;
@@ -3617,6 +3613,86 @@ html .print-table tr:last-child td:first-child {
 html .print-table tr:last-child td:last-child {
 	border-bottom-right-radius: 1rem;
 }
+html .analytics-report-table-holder {
+	border-top: 0;
+}
+html .analytics-report-table-holder .analytics-report-table-first-column {
+	border-radius: 1rem 0 0 1rem;
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
+}
+html .analytics-report-table-holder .analytics-report-table-first-column .table-header td {
+	border: 0;
+	border-top-left-radius: 1rem;
+	font-size: 13px;
+	font-family: 'Inter', sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: var(--low-priority-text-color);
+	background: var(--background-middle-dark-color);
+	padding: 0;
+	text-align: center;
+}
+html .analytics-report-table-holder .analytics-report-table-first-column .subsection-header td,
+html .analytics-report-table-holder .analytics-report-table-first-column td {
+	background: var(--background-middle-dark-color);
+	border: 0;
+	font-size: 13px;
+	color: var(--low-priority-text-color);
+	padding-left: 5px !important;
+}
+html .analytics-report-table-holder .analytics-report-table-first-column .subsection-header td {
+	color: var(--paragraph-color);
+}
+html .subsection-header {
+	border-top: 4px solid #00000020 !important;
+}
+html .analytics-report-table-holder .analytics-report-table-first-column tbody tr:last-child td {
+	border-bottom-left-radius: 1rem;
+}
+html .analytics-report-table {
+	margin-bottom: 20px;
+	border: 0;
+	border-radius: 0 1rem 1rem 0;
+	box-shadow: 0 -7px 14px -3px var(--shadow-color); /* Why the poop is it flipped over??? */
+}
+html .analytics-report-table table {
+	border: 0;
+}
+html .analytics-report-table table .subsection-header {
+	background: var(--background-middle-color);
+	height: 23px !important;
+}
+html .analytics-report-table table td {
+	border: 0;
+	color: var(--paragraph-color);
+}
+html .analytics-info-more,
+html .analytics-info-more strong,
+html .analytics-info-more .title {
+	border: 0;
+	padding: 0;
+	font-family: 'Inter', sans-serif;
+	font-size: 15px;
+}
+html .analytics-report-table table thead tr {
+	background: var(--background-middle-color);
+}
+html .analytics-report-table table thead td {
+	font-family: 'Inter', sans-serif;
+	color: var(--low-priority-text-color);
+	font-size: 13px;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding-top: 1px;
+}
+html .analytics-report-table table tbody .score {
+	font-family: 'Inter', sans-serif;
+	color: var(--paragraph-color);
+	font-size: 13px;
+	font-weight: bold;
+}
+
+/* PRINT TABLE */
 html #centerContainer .options.no-print label {
 	color: var(--paragraph-color);
 }
