@@ -763,8 +763,15 @@ html .header-first .logo {
 html .header-first .logo:hover {
 	opacity: 0.7;
 }
+@media only screen and (max-width: 991px) {
+	html .header-first .logo {
+		margin-top: -1px;
+		margin-left: -50px;
+	}
+}
 html .header-first-menu-item {
 	cursor: pointer;
+	border-left: 0;
 }
 html .header-first-menu-item a,
 html .header-first-menu-item.current-user .current-user-title {
@@ -1743,6 +1750,10 @@ html .modal-technical .legend-dialog .legend-category .legend-category-title {
 	font-family: 'Inter', sans-serif;
 	font-weight: bold;
 	text-transform: uppercase;
+}
+html .modal-technical .legend-dialog .legend-category .legend-attribute {
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
 }
 html .modal-close {
 	filter: brightness(10) brightness(var(--icon-brightness));
