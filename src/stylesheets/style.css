@@ -3475,7 +3475,7 @@ html .delay-info .delays-detailed-table table td:nth-child(even) {
 html .delay-info .delays-detailed-table thead td:last-child {
 	border-top-right-radius: 1rem;
 }
-html .delay-info .delays-detailed-table thead tr:last-child td:last-child {
+html .delay-info .delays-detailed-table tbody tr:last-child td:last-child {
 	border-bottom-right-radius: 1rem;
 }
 html .delays-documents {
@@ -3540,9 +3540,6 @@ html .analytics-pupilmarks-intro .analytics-ratings-table-intro-left {
 html .analytics-pupilmarks-intro .analytics-ratings-table-intro-right {
 	border-radius: 0 1rem 1rem 0;
 }
-/* html .analytics-ratings-table-intro-right .section-switch {
-	display: none; /* TOGGLEABLE
-} */
 html a.print.print-button::before {
 	background: var(--theme-color);
 	mask-size: cover;
@@ -3690,6 +3687,60 @@ html .analytics-report-table table tbody .score {
 	color: var(--paragraph-color);
 	font-size: 13px;
 	font-weight: bold;
+}
+html .analytics-form-holder .form-group .control-label { 
+	font-family: 'Inter', sans-serif;
+	color: var(--low-priority-text-color);
+	font-size: 13px;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding-bottom: 0;
+	padding-top: 5px;
+}
+html .analytics-ratings-table-intro .checkbox {
+	display: none;
+}
+
+/* CHECKMARKS & RADIO BUTTONS */
+html .analytics-form-page .analytics-form-holder .checkbox label,
+html .analytics-form-page .analytics-form-holder .radio label {
+	font-family: 'Inter', sans-serif;
+	color: var(--paragraph-color);
+	font-size: 13px;
+	line-height: 13px;
+	padding-left: 20px;
+}
+html label.css-label,
+html input[type="checkbox"].css-checkbox:checked ~ label.css-label {
+	background: none;
+}
+html label.css-label::before {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	background: var(--background-front-color);
+	left: 0;
+	top: 0;
+	border-radius: 5px;
+}
+html label.css-label::after {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	left: 0;
+	top: 0;
+	border-radius: 5px;
+	transition: .1s opacity;
+	opacity: 0;
+	filter: invert() brightness(var(--icon-brightness));
+}
+html input[type="checkbox"].css-checkbox:checked ~ label.css-label::after {
+	opacity: 1;
+	cursor: pointer;
 }
 
 /* PRINT TABLE */

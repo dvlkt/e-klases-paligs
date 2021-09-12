@@ -173,7 +173,8 @@ html .MailSearch__ResetInputButton::after {
 /* Check */
 html .MessageItem__LeftCol .MessageItem__Checkbox::after,
 html .MessageItem__LeftCol .MessageItem__Checkbox:checked::after,
-html .MailActions__ActionInner--markAsRead::before {
+html .MailActions__ActionInner--markAsRead::before,
+html label.css-label::after {
 	background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUgMzNMMjQgNDkuNUw1OS41IDE1IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K");
 }
 html .MessageItem__RightCol .MessageFollowUpStatus--compleated::before,
