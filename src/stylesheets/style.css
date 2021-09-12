@@ -3158,11 +3158,213 @@ html .info-pane-wrap .avg-pupil {
 html .analytic .no-data {
 	background: none;
 }
+html .behavioral-wrap,
+html .lessons-topics-wrap {
+	margin-top: 0;
+}
+html .lessons-topics-wrap .container,
+html .analytic .no-data .container {
+	border-radius: 0 0 1rem 1rem;
+}
+html .lesson-topics-table,
+html .behavioral-table {
+	border-radius: 1rem;
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+html .lesson-topics-table tr.thead td.first-column,
+html .behavioral-table tr.thead td.first-column {
+	border-top-left-radius: 1rem;
+}
+html .lesson-topics-table tr.thead td.fourth-column,
+html .behavioral-table tr.thead td.fourth-column {
+	border-top-right-radius: 1rem;
+}
+html .lesson-topics-table tbody tr:nth-last-child(2) td:first-child,
+html .behavioral-table tbody tr:nth-last-child(2) td:first-child {
+	border-bottom-left-radius: 1rem;
+}
+html .lesson-topics-table tbody tr:nth-last-child(2) td:last-child,
+html .behavioral-table tbody tr:nth-last-child(2) td:last-child {
+	border-bottom-right-radius: 1rem;
+}
+html .lesson-topics-table tr.thead td,
+html .behavioral-table tr.thead td {
+	background: var(--background-middle-color);
+	color: var(--low-priority-text-color);
+	font-family: 'Inter', sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 0;
+	border: 0;
+}
+html .lesson-topics-table td,
+html .behavioral-table td,
+html .lesson-topics-table tr:hover td,
+html .behavioral-table tr:hover td {
+	border: 0 !important;
+	background: var(--background-middle-color);
+}
+html .lesson-topics-table td:nth-child(odd),
+html .behavioral-table td:nth-child(odd),
+html .lesson-topics-table tr:hover td:nth-child(odd),
+html .behavioral-table tr:hover td:nth-child(odd),
+html .lesson-topics-table tr.thead td:nth-child(odd),
+html .behavioral-table tr.thead td:nth-child(odd) {
+	background: var(--background-middle-dark-color);
+}
+html .lesson-topics-table .marker,
+html .behavioral-table .marker {
+	display: none; /* Idk what's the point of that thing, hopefully it doesn't have an actual functional purpose */
+}
+html .lesson-topics-table tr:not(:nth-last-child(2)),
+html .behavioral-table tr:not(:nth-last-child(2)) {
+	border-bottom: 4px solid #00000020 !important;
+}
 
 /* DELAYS */
-html .delays .container {
+html .delays-container .delays .container {
 	background: var(--background-middle-color);
 	border-radius: 0 0 1rem 1rem;
+	padding-bottom: 25px;
+}
+html .delays-overview-table-holder {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+html .delays-overview-table {
+	margin-bottom: 0;
+	font-family: 'Inter', sans-serif;
+	font-size: 20px;
+}
+html .delays-overview-table strong {
+	font-family: 'Inter', sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+}
+html .delay-info {
+	background: var(--background-middle-color);
+	border: 0;
+	box-shadow: none;
+}
+html .delay-info::before,
+html .delay-info::after {
+	display: none;
+}
+html .delay-info .delay-info-body {
+	padding: 0;
+}
+html .delay-info .delay-info-body h5 {
+	font-size: 30px;
+	line-height: 35px;
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	margin-top: 10px;
+	padding-top: 10px;
+	border-top: 4px solid #00000020;
+}
+html .delays-detailed-table,
+html .delay-info .delays-detailed-table-holder {
+	width: -moz-fit-content;
+	width: fit-content;
+}
+html .delay-info .delays-detailed-table-holder {
+	margin-top: 0;
+	border-radius: 1rem;
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+html .delay-info .delays-detailed-table-holder .delays-detailed-table-first-column {
+	box-shadow: none;
+	bottom: 0 !important;
+}
+html .delay-info .delays-detailed-table-holder .delays-detailed-table-first-column td {
+	background: var(--background-middle-dark-color);
+	border: 0;
+	color: var(--paragraph-color);
+	font-size: 13px;
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	border-bottom: 4px solid #00000020;
+}
+html .delay-info .delays-detailed-table-holder .delays-detailed-table-first-column tbody tr:last-child td {
+	border-bottom: 0;
+	border-bottom-left-radius: 1rem;
+}
+html .delay-info .delays-detailed-table-holder .delays-detailed-table-first-column thead td {
+	color: var(--low-priority-text-color);
+	text-transform: uppercase;
+	border-top-left-radius: 1rem;
+	padding-top: 10px;
+}
+html .delay-info thead td,
+html .delay-info .delays-detailed-table table td {
+	border: 0;
+	background: var(--background-middle-color);
+}
+html .delay-info .delays-detailed-table table tr {
+	border-bottom: 4px solid #00000020;
+}
+html .delay-info .delays-detailed-table table tbody tr:last-child {
+	border-bottom: 0;
+}
+html .delay-info thead td {
+	font-size: 13px;
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	color: var(--low-priority-text-color);
+	text-transform: uppercase;
+}
+html .delay-info tbody td {
+	color: var(--paragraph-color);
+}
+html .delay-info .delays-detailed-table table td:nth-child(even) {
+	background: var(--background-middle-dark-color);
+}
+html .delay-info .delays-detailed-table thead td:last-child {
+	border-top-right-radius: 1rem;
+}
+html .delay-info .delays-detailed-table thead tr:last-child td:last-child {
+	border-bottom-right-radius: 1rem;
+}
+html .delays-documents {
+	border: 0;
+	border-radius: 1rem;
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+html .delay-info .delays-documents thead tr {
+	box-shadow: none;
+}
+html .delay-info .delays-documents tr td {
+	background: var(--background-middle-color);
+	border-bottom: 4px solid #00000020;
+}
+html .delay-info .delays-documents tbody tr:last-child td {
+	border-bottom: 0;
+}
+html .delay-info .delays-documents td:nth-child(odd) {
+	background: var(--background-middle-dark-color);
+}
+html .delay-info .delays-documents thead td:first-child {
+	border-top-left-radius: 1rem;
+}
+html .delay-info .delays-documents thead td:last-child {
+	border-top-right-radius: 1rem;
+}
+html .delay-info .delays-documents tbody tr:last-child td:first-child {
+	border-bottom-left-radius: 1rem;
+}
+html .delay-info .delays-documents tbody tr:last-child td:last-child {
+	border-bottom-right-radius: 1rem;
+}
+html .delays-legend {
+	margin-bottom: 0;
+}
+html .delays-legend .legend-item .legend-icon {
+	border-radius: .5rem;
+	background: var(--background-front-color);
+	border: 0;
+	font-size: 13px;
+	font-weight: bold;
 }
 
 /* ANALYTICS */
