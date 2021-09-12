@@ -55,15 +55,10 @@ try {
 }
 
 // Edit the bottom copyright text
-let familyPlanActivated = false;
 if (document.querySelector(`.copyright`) !== null) {
 	if (document.location.pathname === `/`) {
 		document.querySelector(`.copyright`).innerHTML = `&copy; SIA “Izglītības sistēmas” 2004-${new Date().getFullYear()}`;
 	} else {
-		if (document.querySelector(`.copyright`).innerHTML.toLowerCase().includes(`ģimenes`)) {
-			familyPlanActivated = true;
-		}
-
 		document.querySelector(`.copyright`).innerHTML =
 			`&copy; SIA “Izglītības sistēmas” 2004-${new Date().getFullYear()}
 			<br />

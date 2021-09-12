@@ -36,10 +36,10 @@
 			"matches": ["*://*.e-klase.lv/*"],
 			"js": [
 				"utils.js",
+				"ads/familyPack.js",
 				"profilePicture.js",
 				"patches.js",
 				"animations.js",
-				"ads/familyPack.js",
 				"analytics/week.js",
 				"branding/logos.js",
 				"branding/favicons.js",
