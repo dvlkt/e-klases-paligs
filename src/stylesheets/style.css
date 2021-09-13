@@ -186,7 +186,9 @@ html .dashboard-news .dashboard-news-item h3 {
 html .dashboard-news .dashboard-news-item .article-content {
 	color: var(--paragraph-color);
 }
-html .dashboard-news .dashboard-news-item .article-content a.file::before {
+html .dashboard-news .dashboard-news-item .article-content a.file::before,
+html .actual-lessons .lesson-subitem .description a.file::before,
+html .student-journal-lessons .lesson-subitem .description a.file::before {
 	background: var(--theme-color);
 	width: 13px;
 	height: 13px;
@@ -319,8 +321,15 @@ html .dashboard-widget-col.widget-recent .recent-messages .widget-header h3 {
 		margin-top: 60px;
 	}
 }
-html .dashboard-widget-col.widget-recent .widget-content-collapse {
-	display: none;
+html .dashboard-widget-col.widget-recent .widget-content-collapse,
+html .dashboard-widget-col.widget-recent .widget-close {
+	display: none !important;
+}
+html .dashboard-widget-col.widget-recent .widget-show-all {
+	border-bottom: 0;
+}
+html .home-open-lesson-times {
+	display: none; /* This link caused a few issues because the diary doesn't initially load anyways, so to avoid the trouble let's just remove it */
 }
 html .dashboard .announcement {
 	display: none;
@@ -550,7 +559,8 @@ html .students-journal-header .week-selector .week-selector-next:hover,
 html .students-journal-header .week-selector .week-selector-prev:hover {
 	opacity: 0.7;
 }
-html .student-journal-lessons .actual-lessons-item {
+html .student-journal-lessons .actual-lessons-item,
+html .actual-lessons .actual-lessons-item {
 	background: var(--background-middle-color);
 	border-radius: 1rem;
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
@@ -2817,6 +2827,14 @@ html .MessageContent .MessageContent__Row--subject {
 	}
 }
 
+html .SentConfirmationModal {
+	background: var(--background-front-color);
+	border-radius: 1rem !important;
+	border: 0;
+	color: var(--paragraph-color);
+	font-weight: bold;
+}
+
 /* RECIPIENTS MODAL */
 html .RecipientsModal__GroupContainer {
 	border-radius: 0 0 1rem 1rem;
@@ -2938,7 +2956,9 @@ html .dashboard-news .dashboard-news-item .article-content a,
 html .Recipients .Recipients__LoadLink,
 html .ViewMessage__MessageBody a,
 html .diary-container .lessons-table a,
-html .home-open-lesson-times {
+html .home-open-lesson-times,
+html .actual-lessons .lesson-subitem .description a.file,
+html .student-journal-lessons .lesson-subitem .description a.file {
 	color: var(--theme-color);
 	position: relative;
 	text-decoration: none;
@@ -2964,7 +2984,9 @@ html .dashboard-news .dashboard-news-item .article-content a:hover,
 html .Recipients .Recipients__LoadLink:hover,
 html .ViewMessage__MessageBody a:hover,
 html .diary-container .lessons-table a:hover,
-html .home-open-lesson-times:hover {
+html .home-open-lesson-times:hover,
+html .actual-lessons .lesson-subitem .description a.file:hover,
+html .student-journal-lessons .lesson-subitem .description a.file:hover {
 	color: var(--theme-color);
 	text-decoration: none;
 	background-size: 100% 1px;
@@ -3910,12 +3932,14 @@ html .analytics-ratings-table-intro .checkbox {
 
 /* CHECKMARKS & RADIO BUTTONS */
 html .analytics-form-page .analytics-form-holder .checkbox label,
-html .analytics-form-page .analytics-form-holder .radio label {
+html .analytics-form-page .analytics-form-holder .radio label,
+html .modal-content .form-row {
 	font-family: 'Inter', sans-serif;
 	color: var(--paragraph-color);
 	font-size: 13px;
 	line-height: 13px;
 	padding-left: 20px;
+	position: relative;
 }
 html label.css-label,
 html input[type="checkbox"].css-checkbox:checked ~ label.css-label {
