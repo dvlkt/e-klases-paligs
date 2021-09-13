@@ -68,51 +68,41 @@ html .dashboard-widget-col.widget-banner .dashboard-widget {
 	cursor: auto;
 }
 html .dashboard-widget-col.widget-notifications .widget-notifications-primary {
-	display: inline-block;
-	width: 10rem;
-
-	background: var(--background-middle-dark-color);
-	color: var(--paragraph-color);
-
-	margin-bottom: .5rem;
-
-	border: 0;
-
-	border-radius: 1rem;
-
-	transition: .2s filter, .2s box-shadow;
-}
-html .dashboard-widget-col.widget-notifications .widget-notifications-primary:hover {
-	box-shadow: 0 7px 14px -3px var(--shadow-color);
-
-	filter: brightness(0.8);
+	border-bottom: 0;
 }
 html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon:hover,
 html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon:focus {
 	color: var(--paragraph-color);
 }
 html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon2,
-html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon2:hover {
+html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon2:hover,
+html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon4,
+html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon4:hover {
 	position: relative;
-	
-	background: none;
-
 	text-transform: uppercase;
 	font-weight: bold;
+	background: none;
+	background-color: var(--background-middle-dark-color);
+	border-radius: .5rem;
+	border: 0;
+	margin: 5px;
+	transition: .2s filter, .2s box-shadow;
 }
-html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon2::before {
+html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon2:hover,
+html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon4:hover {
+	filter: brightness(0.8);
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
+}
+html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon2::before,
+html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon4::before {
 	content: "";
-
 	position: absolute;
 	top: 0;
-	left: 3.75rem;
-
+	left: 0;
 	display: block;
-	width: 2.5rem;
+	width: 100%;
 	height: 2.5rem;
-
-	background-size: cover;
-
+	background-size: contain;
 	filter: invert() brightness(var(--icon-brightness));
 }
 html .dashboard-widget-col.widget-notifications .widget-notification .items {
@@ -992,9 +982,6 @@ html .header-second-submenu-item:hover {
 }
 html .header-first-menu-item.sm-icon-only a {
 	font-size: 0.8rem !important;	
-}
-html .header-second .header-second-menu-item:nth-child(3) .header-second-submenu {
-	display: none !important;
 }
 html .header-second .header-second-submenu {
 	top: 55px;
@@ -2059,7 +2046,7 @@ html .mailbox-data {
 	background: none;
 	margin-bottom: .5rem;
 }
-html .MailMainAreaWrapper {
+html .communication .MailMainAreaWrapper {
 	background: var(--background-back-color);
 }
 html .MailActions .ButtonDefault.MailActions__ToggleButton {
@@ -2125,8 +2112,10 @@ html .MailMainAreaWrapper .FolderNavigation {
 
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 }
-html .FolderNavigation .FolderNavigation__Nav {
+html .FolderNavigation nav {
 	box-shadow: none;
+	background: none;
+	overflow: hidden;
 }
 html .FolderNavigation .FolderNavigation__ButtonNewMailWrapper {
 	background: none;
@@ -2159,34 +2148,29 @@ html .FolderNavigation__ButtonNewMailWrapper .FolderNavigation__ButtonNewMail::b
 
 	filter: invert() brightness(var(--theme-accent-icon-brightness));
 }
-html .FolderNavigation .FolderNavigation__NavItem {
+html .FolderNavigation .NavItem {
 	position: relative;
-
 	background: none;
 	color: var(--paragraph-color);
-	
 	font-family: 'Inter', sans-serif;
-
 	padding-left: 56px;
-
 	border: 0;
-
+	box-shadow: none;
 	transition: .2s filter;
 }
-html .FolderNavigation .FolderNavigation__NavItem--active {
+html .FolderNavigation .NavItem.router-link-active {
 	color: var(--paragraph-color);
 }
-html .FolderNavigation .FolderNavigation__NavItem--active,
-html .FolderNavigation .FolderNavigation__NavItem:hover {
+html .FolderNavigation .NavItem.router-link-active,
+html .FolderNavigation .NavItem:hover {
 	background: none;
-
 	box-shadow: none;
 }
-html .FolderNavigation .FolderNavigation__NavItem:hover {
+html .FolderNavigation .NavItem:hover {
 	filter: brightness(0.8);
 }
-html .FolderNavigation .FolderNavigation__NavItem::after,
-html .FolderNavigation .FolderNavigation__NavItem--active::after {
+html .FolderNavigation .NavItem::after,
+html .FolderNavigation .NavItem.router-link-active::after {
 	content: "";
 
 	position: absolute;
@@ -2207,19 +2191,19 @@ html .FolderNavigation .FolderNavigation__NavItem--active::after {
 
 	transition: .2s left;
 }
-html .FolderNavigation .FolderNavigation__NavItem--active::after,
-html .FolderNavigation .FolderNavigation__NavItem:hover::after {
+html .FolderNavigation .NavItem.router-link-active:after,
+html .FolderNavigation .NavItem:hover::after {
 	left: 0;
 }
-html .FolderNavigation .FolderNavigation__NavItem::before {
+html .FolderNavigation .NavItem::before {
 	color: var(--paragraph-color);
 
 	opacity: 1;
 }
-html .FolderNavigation .FolderNavigation__NavItem:first-child {
+html .FolderNavigation .NavItem:first-child {
 	border: 0;
 }
-html .FolderNavigation .FolderNavigation__NavItem::before {
+html .FolderNavigation .NavItem::before {
 	content: "";
 
 	width: 1.2rem;
@@ -3094,12 +3078,19 @@ html .analyitcs-ratings-chart-horzontal text[fill="#C48C8F"] {
 	fill: var(--red-accent-color);
 	font: 11px 'Inter', sans-serif !important;
 }
+html .analyitcs-ratings-chart-horzontal text[fill="#000"] {
+	fill: var(--paragraph-color);
+	font: 11px 'Inter', sans-serif !important;
+}
 html .analyitcs-ratings-chart-horzontal path[fill="#FFFFFF"][fill-opacity="0.85"] {
 	fill: var(--red-color);
 	fill-opacity: 1;
 }
 html .analyitcs-ratings-chart-horzontal path[stroke="#C48C8F"] {
 	stroke: var(--red-color);
+}
+html .analyitcs-ratings-chart-horzontal path[fill="#BDBDBD"] {
+	fill: var(--background-front-color);
 }
 html .analytics-ratings-container .charts-legend .legend-title {
 	display: none;
@@ -3238,7 +3229,11 @@ html .analytics-rating-tables table tbody tr:last-child td:first-child {
 }
 html .analytics-rating-tables table tbody tr:last-child td:last-child {
 	border-bottom-right-radius: 1rem;
+}
+html .analytics-rating-tables td.higher,
+html .analytics-rating-tables td.lower {
 	color: var(--paragraph-color);
+	font-family: 'Inter', sans-serif;
 	font-size: 13px;
 }
 
