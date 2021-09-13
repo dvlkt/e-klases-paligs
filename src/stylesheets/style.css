@@ -1865,13 +1865,14 @@ html .modal-options-item .modal-options-button:hover {
 }
 html .modal-header .modal-logout {
 	width: 2rem;
-
 	background: none;
 	color: var(--theme-accent-color);
-
 	text-align: center;
-
 	padding-top: 0;
+	transition: .2s opacity;
+}
+html .modal-header .modal-logout:hover {
+	opacity: 0.7;
 }
 html .modal-header .modal-logout::before {
 	content: "";
@@ -3018,6 +3019,20 @@ html .filter-wrap .journal-type a:last-of-type {
 	border-radius: 0 .5rem .5rem 0;
 	border-right: 0;
 }
+@media only screen and (max-width: 767px) {
+	html .filter-wrap {
+		background: var(--background-middle-color);
+		box-shadow: 0 4px 10px -3px var(--shadow-color);
+		border-radius: 0 0 .5rem .5rem;
+	}
+	html .filter-wrap .filter-button {
+		background-color: var(--background-middle-color);
+		box-shadow: none;
+	}
+	html .filter-wrap .filter-button::before {
+		display: none;
+	}
+}
 
 /* RATINGS */
 html .analytics-ratings-container {
@@ -3062,13 +3077,15 @@ html .analytics-ratings-table-intro-right table.stats td:last-child {
 }
 html .switch-block-with-order-text {
 	display: inline-block;
+	text-align: center !important;
 }
 html .analyitcs-ratings-chart-horzontal path[fill="#fff"] {
 	display: none !important;
 }
 html .analyitcs-ratings-chart-horzontal path[stroke="#dfdfdf"],
 html .analyitcs-ratings-chart-horzontal path[stroke="#8e8e8e"] {
-	stroke: var(--low-priority-text-color);
+	stroke: #00000030;
+	stroke-width: 4px;
 }
 html .analyitcs-ratings-chart-horzontal text[fill="#232323"] {
 	fill: var(--low-priority-text-color);
@@ -3091,6 +3108,13 @@ html .analyitcs-ratings-chart-horzontal path[stroke="#C48C8F"] {
 }
 html .analyitcs-ratings-chart-horzontal path[fill="#BDBDBD"] {
 	fill: var(--background-front-color);
+}
+html .analyitcs-ratings-chart-horzontal path[fill="#009AE3"] {
+	fill: var(--theme-color);
+}
+html .analyitcs-ratings-chart-horzontal g g g:first-child path[stroke="#dfdfdf"],
+html .analyitcs-ratings-chart-horzontal g g g:nth-child(3) g g path[stroke="#8e8e8e"] {
+	display: none; /* Removes the unnecessary vertical lines */
 }
 html .analytics-ratings-container .charts-legend .legend-title {
 	display: none;
@@ -3236,6 +3260,32 @@ html .analytics-rating-tables td.lower {
 	font-family: 'Inter', sans-serif;
 	font-size: 13px;
 }
+html .analytics-ratings-container .report-wrapper.report-by-subject h3.group-title,
+html .analytics-ratings-container .report-wrapper.report-averages h3.group-title {
+	background: var(--background-middle-color);
+	padding: 0;
+}
+html .analytics-ratings-container h3.group-title::after {
+	display: none; /* Dear E-klase devs, not everything on mobile has to be collapsible... (I know this doesn't make it not collapsible btw) */
+}
+@media only screen and (max-width: 767px) {
+	html .analytics-ratings {
+		background: var(--background-back-color);
+	}
+	html .analytics-ratings-table-intro .analytics-ratings-table-intro-left.analytics-ratings-table-intro-left,
+	html .analytics-ratings-table-intro .analytics-ratings-table-intro-right.analytics-ratings-table-intro-left,
+	html .analytics-ratings-table-intro .analytics-ratings-table-intro-middle.analytics-ratings-table-intro-left {
+		border-bottom: 4px solid #00000020;
+	}
+	html .switch-block-with-order-text {
+		width: 100%;
+	}
+	html .ratings-orderby-options .title,
+	html .analytics-ratings-container h3.group-title,
+	html .analytics-ratings-container .report-wrapper.report-averages h3.group-title {
+		font-size: 20px !important;
+	}
+}
 
 /* JOURNALS */
 html .info-pane-wrap .container,
@@ -3246,6 +3296,9 @@ html .behavioral-wrap .container,
 html .lessons-topics-wrap .container,
 html .analytic .no-data .container {
 	background: var(--background-middle-color);
+}
+html .info-pane-wrap {
+	background: none;
 }
 html .info-pane-wrap .avg-class,
 html .info-pane-wrap .avg-pupil,
@@ -3408,6 +3461,51 @@ html .cell-item.active .marks-header {
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 	filter: brightness(0.8);
 }
+html .analytic .actual-lessons,
+html .analytic .student-journal-lessons {
+	background: none;
+}
+html .actual-lessons .lesson-title .explanation-line,
+html .student-journal-lessons .lesson-title .explanation-line {
+	display: none;
+}
+html .actual-lessons .lesson-title .date,
+html .student-journal-lessons .lesson-title .date {
+	font-family: 'Inter', sans-serif;
+	color: var(--low-priority-text-color);
+	text-transform: uppercase;
+	font-weight: bold;
+}
+html .actual-lessons .lesson-title .top-mark,
+html .student-journal-lessons .lesson-title .top-mark {
+	color: var(--low-priority-text-color);
+}
+html .data-pane-wrap {
+	background: none;
+}
+html .info-pane-wrap .subject {
+	color: var(--paragraph-color);
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+}
+@media only screen and (max-width: 767px) {
+	html .info-pane-wrap .container,
+	html .data-pane-wrap .container {
+		border-radius: 1rem;
+		box-shadow: 0 4px 10px -3px var(--shadow-color);
+		padding-bottom: 10px;
+		padding-top: 10px;
+	}
+	html .explanation-wrap {
+		border-bottom: 0;
+	}
+	html .lessons-topics-wrap .container,
+	html .analytic .no-data .container {
+		border-radius: 1rem;
+		box-shadow: 0 4px 10px -3px var(--shadow-color);
+	}
+}
 
 /* DELAYS */
 html .delays-container .delays .container {
@@ -3552,6 +3650,80 @@ html .delays-legend .legend-item .legend-icon {
 	border: 0;
 	font-size: 13px;
 	font-weight: bold;
+}
+html .delay-mobile-details {
+	background: var(--background-back-color);
+}
+html .delay-mobile-details h3 {
+	font-size: 20px;
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	color: var(--title-color);
+}
+html .delay-mobile-details .split {
+	border-top: 4px solid var(--divider-color);
+}
+html .delays-legend .legend-title {
+	font-size: 13px;
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	color: var(--low-priority-text-color);
+	text-transform: uppercase;
+	margin-bottom: 5px;
+}
+html .delay-mobile-details .delay-subject,
+html .delay-mobile-details .delay-document {
+	border: 0;
+	background: var(--background-middle-color);
+	border-radius: 1rem;
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+html .delay-mobile-details .delay-subject thead td,
+html .delay-mobile-details .delay-document thead td {
+	background: none;
+	font-family: 'Inter', sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: var(--paragraph-color);
+}
+html .delay-mobile-details .delay-subject thead td:nth-child(2) {
+	text-transform: uppercase;
+	color: var(--low-priority-text-color);
+}
+html .delay-mobile-details .delay-subject tbody td,
+html .delay-mobile-details .delay-document tbody td:first-child {
+	font-family: 'Inter', sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: var(--low-priority-text-color);
+}
+html .delay-mobile-details .delay-subject tbody td:nth-child(2) {
+	text-transform: none;
+	color: var(--paragraph-color);
+	font-size: 13px;
+	font-family: 'Inter', sans-serif;
+	font-weight: normal;
+}
+html .delay-mobile-details .delay-document tbody span {
+	color: var(--paragraph-color);
+	font-family: 'Inter', sans-serif;
+	font-weight: normal;
+}
+html .delay-mobile-details .delay-document tr {
+	border-bottom: 0;
+}
+html .delay-mobile-details td:first-child,
+html .delay-mobile-details td:nth-child(2) span {
+	font-size: 13px;
+	font-family: 'Inter', sans-serif;
+	font-weight: normal;
+	color: var(--paragraph-color);
+}
+@media only screen and (max-width: 767px) {
+	html .delays-container .delays {
+		display: none;
+	}
 }
 
 /* ANALYTICS */
