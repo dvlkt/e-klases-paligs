@@ -247,6 +247,12 @@ html .dashboard-widget-col.widget-recent .active,
 html .dashboard-widget-col.widget-recent .active:hover {
 	background: var(--background-middle-color);
 }
+html .dashboard-widget-col.widget-recent .widgets-switcher-item .widget-count {
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	color: var(--theme-accent-color);
+	background: var(--theme-color);
+}
 html .dashboard-widget-col.widget-recent .widgets-switcher-item h3 {
 	font-family: 'Inter', sans-serif;
 	color: var(--title-color);
@@ -286,6 +292,9 @@ html .dashboard-widget-col.widget-recent .recent-scores-item .recent-scores-item
 	font-weight: bold;
 	font-family: 'Inter', sans-serif;
 	box-shadow: 0 7px 14px -3px var(--shadow-color);
+}
+html .dashboard-widget-col.widget-recent .recent-scores-item.new .recent-scores-item-col:first-child::before {
+	background: var(--theme-color);
 }
 html .dashboard-widget-col.widget-recent .recent-messages .widget-content {
 	background: var(--background-middle-color);
@@ -662,7 +671,7 @@ html .student-journal-lessons .lesson-title .room {
 
 /* DIARY ANALYTICS */
 html .diary-analytics {
-	background: var(--background-middle-dark-color);
+	background: var(--background-middle-color);
 	color: var(--paragraph-color);
 	padding: 1rem;
 	border-radius: 1rem;

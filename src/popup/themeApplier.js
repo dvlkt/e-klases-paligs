@@ -1,16 +1,16 @@
 chrome.storage.sync.get(`theme`, (res) => {
 	if (res.theme === `dark`) {
 		document.body.className = `dark-theme`;
-		if (darkThemeBtn !== undefined) darkThemeBtn.className += ` theme-selected`;
 
-		console.log(document.querySelector(`.news`))
 		if (document.querySelector(`.news`) !== null) {
 			for (element of document.querySelectorAll(`img`)) {
-				console.log(element.src)
+				element.src = element.src.replaceAll(`light`, `dark`);
 			}
 		}
+
+		darkThemeBtn.className += ` theme-selected`;
 	} else {
 		document.body.className = `light-theme`;
-		if (lightThemeBtn !== undefined) lightThemeBtn.className += ` theme-selected`;
+		lightThemeBtn.className += ` theme-selected`;
 	}
 });
