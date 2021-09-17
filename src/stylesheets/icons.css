@@ -25,7 +25,9 @@ html .MessageItem .MessageItem--status-sent-unread__RecipientsPreview::before {
 /* Graph */
 html .header-second .header-second-menu-item.item-analytics a::before,
 html .mobile-second-menu-item.item-analytics.active a::before,
-html .mobile-second-menu-item.item-analytics a::before {
+html .mobile-second-menu-item.item-analytics a::before,
+html .dashboard-widget-col.widget-recent .recent-scores-item-has-test::before,
+html .mark-card-inner-graph .mark-card-inner-graph-image .btn-test-report::before {
 	background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTYwIDU4SDQiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik00NSA1N0w0NSAyNkw1NSAyNkw1NSA1NyIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTI3IDU3TDI3IDExTDM2IDExTDM2IDU3IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8cGF0aCBkPSJNOCA1N0w4IDQwTDE4IDQwTDE4IDU3IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K");
 }
 /* External */

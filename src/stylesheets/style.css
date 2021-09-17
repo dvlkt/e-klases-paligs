@@ -268,6 +268,10 @@ html .dashboard-widget-col.widget-recent .recent-scores-item:hover {
 html .dashboard-widget-col.widget-recent .recent-scores-item:hover {
 	filter: brightness(0.8);
 }
+html .dashboard-widget-col.widget-recent .recent-scores-item-has-test::before {
+	filter: invert() brightness(var(--icon-brightness));
+	background-size: cover;
+}
 html .dashboard-widget-col.widget-recent .recent-scores-item .recent-scores-item-col h4,
 html .dashboard-widget-col.widget-recent .recent-scores-item .recent-scores-item-col:nth-child(2) {
 	color: var(--paragraph-color);
@@ -309,6 +313,11 @@ html .dashboard-widget-col.widget-recent .recent-messages .widget-header {
 html .dashboard-widget-col.widget-recent .recent-scores .widget-header h3,
 html .dashboard-widget-col.widget-recent .recent-messages .widget-header h3 {
 	padding-left: 0;
+}
+html .dashboard-widget-col.widget-recent .recent-scores-item .recent-scores-item-col .score.warning {
+	background: var(--red-color);
+	color: var(--red-accent-color);
+	box-shadow: 0 7px 14px -3px var(--red-shadow-color);
 }
 @media only screen and (min-width: 768px) {
 	html .dashboard-widget-col.widget-recent .dashboard-widget.recent-scores .widget-header,
@@ -755,6 +764,15 @@ html .mark-card-inner-graph-image path[fill="#ACACAC"] {
 }
 html .mark-card-inner-graph .mark-card-inner-graph-image path[fill="#009AE3"] {
 	fill: var(--theme-color);
+}
+html .mark-card-inner-graph .mark-card-inner-graph-image .btn-test-report {
+	margin-left: 5px;
+	margin-right: 5px;
+	font-family: 'Inter', sans-serif;
+	width: calc(100% - 10px);
+}
+html .mark-card-inner-graph .mark-card-inner-graph-image .btn-test-report::before {
+	filter: invert() brightness(var(--icon-brightness));
 }
 html .modal-mark-card .mark-card-inner {
 	background: var(--background-front-color);
@@ -3422,6 +3440,19 @@ html .detailed-item .additional-data label {
 html .lesson.test .pupil-place {
 	border-left: 0;
 }
+html .detailed-header .average-score span,
+html .detailed-header .pupil-place span {
+	font-size: 13px;
+	text-transform: uppercase;
+	color: var(--low-priority-text-color);
+	font-family: 'Inter', sans-serif;
+}
+html .detailed-item .right span {
+	color: var(--paragraph-color);
+	font-weight: bold;
+	font-family: 'Inter', sans-serif;
+	font-size: 13px;
+}
 html .detailed-item .edited .additional-data.edited,
 html .detailed-item .rate-information {
 	border-left: 4px solid #00000020;
@@ -3892,6 +3923,14 @@ html .analytics-report-table table td {
 	border: 0;
 	color: var(--paragraph-color);
 }
+html .analytics-report-table table tbody .has-negatives::before {
+	border: 0;
+	background: var(--red-color);
+	left: 3px;
+	top: 3px;
+	width: 9px;
+	height: 9px !important;
+}
 html .analytics-info-more,
 html .analytics-info-more strong,
 html .analytics-info-more .title {
@@ -3928,6 +3967,11 @@ html .analytics-form-holder .form-group .control-label {
 }
 html .analytics-ratings-table-intro .checkbox {
 	display: none;
+}
+html .analytics-report-table table tbody .negative {
+	background: var(--red-color);
+	color: var(--red-accent-color);
+	border-radius: .5rem;
 }
 
 /* CHECKMARKS & RADIO BUTTONS */
@@ -4613,6 +4657,16 @@ html .rating-wrap .final .col:last-of-type::after {
 html .rating-wrap .rating-table::after {
 	display: none;
 }
+html .chart-wrap {
+	background: var(--background-back-color);
+}
+html .chart-wrap h3 {
+	color: var(--title-color);
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+}
+
 
 /* BACK TO JOURNAL */
 .html back-to-journal {
