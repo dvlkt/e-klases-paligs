@@ -1,0 +1,541 @@
+html .login-form {
+	background: var(--background-middle-color);
+	color: var(--paragraph-color);
+
+	border-radius: 1rem;
+
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+
+	padding: 0;
+}
+html .login-form-header {
+	background: var(--theme-gradient);
+
+	text-align: center;
+
+	padding: .5rem;
+	
+	border-radius: 1rem 1rem 0 0;
+}
+html .login-form-header h4 {
+	height: auto;
+
+	background: none;
+	color: var(--theme-accent-color);
+
+	font-weight: bold;
+
+	margin: 0;
+
+	padding: 0;
+}
+@media only screen and (max-width: 768px) {
+	html .login-form h4 .content {
+		font-family: 'Inter', sans-serif;
+	}
+}
+html .login-form h4 .content::after {
+	display: none;
+}
+html .form-content {
+	padding: 1rem;
+}
+html .form-content .form-control {
+	background: var(--background-front-color);
+	color: var(--paragraph-color);
+
+	font-family: 'Inter', sans-serif;
+	font-size: 16px;
+
+	border-radius: 21px;
+
+	border: 0;
+}
+html .login-form .dummy-placeholder {
+	color: var(--low-priority-text-color);
+	font-family: 'Inter', sans-serif;
+}
+html .login-form .btn-default {
+	background: var(--theme-color);
+	color: var(--theme-accent-color);
+
+	font-weight: bold;
+	text-transform: uppercase;
+
+	border-radius: 21px;
+
+	transition: .2s all;
+}
+html .login-form .btn-default:hover {
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+
+	filter: brightness(0.8);
+}
+html .login-form .btn-default .progress {
+	display: none;
+}
+html .login-links a,
+html .login-links a:hover,
+html .login-links .special-link .title,
+html .login-links .special-link .title:hover {
+	color: var(--theme-color);
+
+	display: inline-block;
+}
+html .login-links .special-link .content-container {
+	display: none; /* Hide the login help things by default */
+}
+html .top-login-holder {
+	display: none !important; /* The mobile login header popup thing is very bad and it sucks and nobody should ever have to use it soo... byeeeee */
+}
+@media (max-width: 767px) {
+	html aside.hidden-xs {
+		display: block !important; /* ...and let's bring back the desktop login form, of course, optimized for mobile! */
+		width: 100%;
+	}
+	html .main-header .logo-holder .logo {
+		margin: 9px auto 0 auto;
+	}
+}
+
+html .main-header {
+	background: var(--background-middle-color);
+	color: var(--paragraph-color);
+}
+html .main-header .hamburger {
+	display: none !important;
+	/* Literally no one reads the articles and needs them (and especially on mobile - completely unneccessary)
+	and the hamburger icon messes everything up so it has to go */
+}
+html .header-info .date {
+	font-weight: bold;
+}
+html .main-header .logo-holder .logo {
+	height: 50px;
+
+	margin: 13px 0 0 0;
+}
+html .socials li.fb {
+	filter: brightness(var(--icon-brightness));
+
+	transition: .2s opacity;
+}
+html .socials li.fb:hover {
+	opacity: 0.7;
+}
+html .secondary-header {
+	background: var(--background-middle-color);
+
+	border-top: 4px solid #00000020;
+
+	border-radius: 0 0 1rem 1rem;
+
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+html .main-menu-item,
+html .main-menu-item:hover {
+	color: var(--paragraph-color);
+
+	transition: .2s opacity;
+}
+html .main-menu-item:hover {
+	opacity: 0.7;
+}
+html .main-menu-item.active,
+html .main-menu-item:hover.active {
+	color: var(--theme-color);
+}
+html .main-menu-item.active::after {
+	bottom: 8px;
+
+	width: 100%;
+	height: 4px;
+
+	background: var(--theme-color);
+
+	border-radius: 2px;
+}
+html .toggle-search,
+html .toggle-search-inner {
+	color: var(--paragraph-color);
+
+	transition: .2s opacity;
+}
+html .toggle-search:hover,
+html .toggle-search-inner:hover {
+	opacity: 0.7;
+}
+html .toggle-search .open-search::after,
+html .toggle-search-inner .open-search::after {
+	filter: invert() brightness(var(--icon-brightness));
+}
+html .secondary-menu .main-menu-item a {
+	color: var(--paragraph-color);
+}
+html .secondary-menu .main-menu-item.active::after {
+	border-radius: 2px 2px 0 0;
+}
+html .secondary-menu {
+	background: var(--background-middle-dark-color);
+	
+	margin-bottom: 1rem;
+
+	padding: .5rem 0 0 1rem;
+
+	border-radius: .5rem;
+}
+html .secondary-menu::after {
+	border-bottom: 0;
+}
+html .secondary-menu .main-menu-item.active a {
+	color: var(--theme-color);
+}
+html .secondary-menu a:hover {
+	opacity: 1;
+}
+html h2.section-title {
+	border-bottom: 4px solid var(--divider-color);
+}
+@media (max-width: 767px) {
+	html .main-header {
+		border-radius: 0 0 1rem 1rem;
+
+		box-shadow: 0 4px 10px -3px var(--shadow-color);
+	}
+	html .secondary-header {
+		display: none;
+	}
+}
+
+html .additional-article-item,
+html .article-item {
+	background: var(--background-middle-color);
+
+	border-radius: 1rem;
+
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+html .primary-article .additional-article-item .image,
+html .primary-article .article-item .image {
+	border-radius: 1rem 1rem 0 0;
+}
+html .additional-article-item .image, .article-item .image {
+	border-radius: 1rem 0 0 1rem;
+}
+html .primary-article .additional-article-item h3,
+html .primary-article .article-item h3,
+html .additional-article-item h3,
+html .article-item h3 {
+	color: var(--title-color);
+}
+html .additional-article-item h3,
+html .article-item h3 {
+	padding: 0 .5rem 0 .5rem;
+}
+html .additional-article-item .article-metas,
+html .article-item .article-metas {
+	bottom: .5rem;
+
+	color: var(--low-priority-text-color);
+
+	padding-left: .5rem;
+}
+html .primary-article .additional-article-item .date,
+html .primary-article .article-item .date {
+	padding: 0 .5rem 0 .5rem;
+}
+html .additional-article-item .article-metas .likes,
+html .article-item .article-metas .likes,
+html .additional-article-item .article-metas .comments,
+html .article-item .article-metas .comments,
+html .additional-article-item .article-metas .comments span,
+html .article-item .article-metas .comments span {
+	color: var(--theme-color);
+
+	font-weight: bold;
+}
+@media only screen and (max-width: 1042px) {
+	html .additional-article-item .image,
+	html .article-item .image {
+		border-radius: 1rem 1rem 0 0;
+	}
+}
+@media only screen and (min-width: 768px) {
+	html .additional-article-item .article-metas .tags-container,
+	html .article-item .article-metas .tags-container {
+		margin-bottom: 1px;
+	}
+}
+
+html .splitter {
+	border-top: 4px solid var(--divider-color);
+}
+html .splitter a,
+html .btn.load-more {
+	display: block;
+	width: 200px;
+	height: 40px;
+
+	background: var(--background-middle-color);
+	color: var(--paragraph-color);
+
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	text-align: center;
+
+	padding: .5rem;
+	padding-top: 10px;
+	
+	border: 0;
+
+	border-radius: 1rem;
+
+	float: right;
+
+	transition: .2s box-shadow, .2s filter;
+}
+html .splitter a:hover,
+html .btn.load-more:hover {
+	color: var(--paragraph-color);
+
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+
+	filter: brightness(0.8);
+}
+html .btn.load-more .progress {
+	display: none;
+}
+html .btn.load-more .content {
+	color: var(--paragraph-color);
+}
+html .splitter .arrow-lift-up {
+	display: none;
+}
+
+html .article-header .header-content {
+	width: 100%;
+}
+html .article-header .header-content h1 {
+	color: var(--title-color);
+
+	font-family: 'Inter', sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+}
+html .article-header .header-content .date {
+	width: 100%;
+	
+	color: var(--low-priority-text-color);
+}
+html .reactions .reactions-item.comments {
+	color: var(--theme-color);
+}
+html .article-header .header-image .image-wrapper,
+html .article-header .header-image .image-wrapper img {
+	border-radius: 1rem;
+}
+html .article-header .header-image .image-credit {
+	color: var(--low-priority-text-color);
+
+	font-size: 12px;
+}
+html .article-content .article-intro,
+html .article-content .article-body p,
+html .article-content .article-body {
+	color: var(--paragraph-color);
+	font-family: 'Inter', sans-serif;
+}
+html .article-header,
+html .comments-top {
+	display: block;
+	border-bottom: 4px solid var(--divider-color);
+}
+html .additional-articles-items {
+	border-top: 4px solid var(--divider-color);
+}
+
+html .search-holder .container {
+	border-top: 0;
+}
+html .search-holder .search-field-wrap,
+html .search-holder-inner .search-field-wrap {
+	background: var(--background-front-color);
+	border: 0;
+	border-radius: 1rem;
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+html .search-holder .search-field,
+html .search-holder-inner .search-field {
+	background: var(--background-front-color);
+	color: var(--title-color);
+}
+html .search-holder .search-field-wrap::after,
+html .search-holder-inner .search-field-wrap::after {
+	background: var(--background-front-color);
+
+	border: 0;
+}
+html .search-holder .btn-search-big,
+html .search-holder-inner .btn-search-big {
+	background-color: transparent;
+
+	margin-top: 1rem;
+
+	filter: invert() brightness(var(--icon-brightness));
+
+	transition: .2s opacity;
+}
+html .search-holder .btn-search-big:hover,
+html .search-holder-inner .btn-search-big:hover {
+	opacity: 0.7;
+}
+html .toggle-search .close-search::after,
+html .toggle-search-inner .close-search::after {
+	width: 16px;
+	height: 16px;
+
+	margin-top: 4px;
+	margin-right: 4px;
+
+	filter: invert() brightness(var(--icon-brightness));
+}
+html .toggle-search .close-search,
+html .toggle-search-inner .close-search {
+	color: var(--paragraph-color);
+}
+
+/* RULES */
+html .modal-dialog {
+	border-radius: 1rem;
+}
+html .toc-modal .modal-content {
+	background: var(--background-front-color);
+	color: var(--paragraph-color);
+
+	border-radius: 1rem;
+}
+html .toc-modal .modal-body {
+	box-shadow: none;
+}
+html .toc-modal .modal-header {
+	background: none;
+
+	box-shadow: none;
+}
+html .toc-modal .nav-tabs li,
+html .toc-modal .nav-tabs li.active,
+html .toc-modal .nav-tabs li a,
+html .toc-modal .nav-tabs li.active a {
+	color: var(--theme-color);
+	
+	padding: 0;
+}
+html .toc-modal .nav-tabs li.active a:focus,
+html .toc-modal .nav-tabs li.active a:hover {
+	background: none;
+	
+	padding: 0;
+}
+
+/* USER LOGIN */
+html .modal-content.modal-login {
+	background: none;
+
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+
+	border-radius: 1rem;
+}
+html .modal-content.modal-login .modal-body {
+	background: var(--background-middle-color);
+
+	border-radius: 0 0 1rem 1rem;
+}
+html .modal-header {
+	border: 0;
+}
+html .modal-header h4 {
+	color: var(--theme-accent-color);
+
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+}
+html .modal-header.student-profile {
+	background: var(--theme-gradient);
+}
+html .welcome-greeting .welcome-greeting-image.student-other {
+	border-radius: 50%;
+
+	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2OSIgaGVpZ2h0PSI2OSIgdmlld0JveD0iLTQ0NSAyNDYgNjkgNjkiPjxwYXRoIGQ9Ik0tMzgwLjMgMjgwLjVjMC0xNi43LTEzLjYtMzAuNC0zMC40LTMwLjRzLTMwLjQgMTMuNi0zMC40IDMwLjRjMCA5LjEgNCAxNy4zIDEwLjQgMjIuOHYtLjFjMi43LTcuNSAxMC4zLTEuNiAxMy45LTguNS0yLjQtMi4yLTQuNC01LjQtNS42LTktLjEuMS0uNy0yLjgtMS4yLTUuMi0uMi0xLjUtLjItNy45LjEtOS43LjItMS4yLjQtMi4yLjctMy4xLjItLjkuNS0yIDEuMS0zLjQgMS4yLTIuOSA1LjEtNC44IDExLjUtNC44IDguNSAwIDEwLjkgMy41IDEyLjIgNS45LjkgMS43LjggMy42IDEuMSA1LjFsLjMgMS41Yy4yIDEuNS4yIDUuNi4xIDYuNi0uNiAzLjQtMS4yIDcuMS0xLjIgNy4xLTEuMiAzLjYtMy4yIDYuOS01LjcgOSAzLjUgNi42IDEwLjggMS4zIDEzLjYgNy44IDUuOS01LjUgOS41LTEzLjMgOS41LTIyeiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0tNDEwLjYgMjQ2LjFjLTE4LjkgMC0zNC40IDE1LjQtMzQuNCAzNC40IDAgMTEgNS4yIDIwLjggMTMuMyAyNy4xIDIuOCAyLjIgNS45IDMuOSA5LjMgNS4yIDMuNyAxLjMgNy43IDIuMSAxMS44IDIuMSA0LjEgMCA4LjEtLjcgMTEuOC0yLjEgMy44LTEuNCA3LjItMy40IDEwLjItNS45IDcuNS02LjMgMTIuMy0xNS44IDEyLjMtMjYuNCAwLTE5LTE1LjQtMzQuNC0zNC4zLTM0LjR6bTIwLjggNTYuNWMtMi44LTYuNS0xMC4xLTEuMi0xMy42LTcuOCAyLjUtMi4yIDQuNS01LjQgNS43LTkgMCAwIC43LTMuNiAxLjItNy4xLjEtMS4xLjEtNS4yLS4xLTYuNmwtLjMtMS41Yy0uMi0xLjUtLjItMy40LTEuMS01LjEtMS4zLTIuNC0zLjctNS45LTEyLjItNS45LTYuMyAwLTEwLjMgMS45LTExLjUgNC44LS42IDEuNC0uOSAyLjUtMS4xIDMuNC0uMy45LS41IDEuOS0uNyAzLjEtLjIgMS44LS4yIDguMi0uMSA5LjcuNCAyLjQgMS4xIDUuMyAxLjIgNS4yIDEuMiAzLjYgMy4yIDYuOCA1LjYgOS0zLjYgNi45LTExLjIgMS0xMy45IDguNXYuMWMtNi40LTUuNi0xMC40LTEzLjctMTAuNC0yMi44IDAtMTYuNyAxMy42LTMwLjQgMzAuNC0zMC40czMwLjQgMTMuNiAzMC40IDMwLjRjMCA4LjYtMy42IDE2LjQtOS41IDIyeiIgZmlsbD0iI2ZmZmZmZiIvPjwvc3ZnPg==");
+
+	filter: invert() brightness(var(--icon-brightness));
+}
+html .welcome-greeting h3,
+html .welcome-greeting strong,
+html .modal-options-item .modal-options-title span {
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+}
+html .modal-options-item {
+	background: var(--background-front-color);
+	color: var(--paragraph-color);
+
+	border: 0;
+
+	border-radius: 1rem;
+
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+
+	transition: .2s filter;
+}
+html .modal-options-item:hover {
+	filter: brightness(0.8);
+}
+html .modal-options-item .modal-options-title span {
+	color: var(--paragraph-color);
+}
+html .modal-options-item .modal-options-icon.school {
+	filter: invert() brightness(var(--icon-brightness));
+}
+html .modal-options-item .modal-options-choice {
+	color: var(--paragraph-color);
+
+	border-top: 0;
+}
+html .modal-options-item .modal-options-title spanr {
+	color: var(--paragraph-color);
+	
+	text-transform: uppercase;
+	font-weight: bold;
+}
+html .modal-options-item .modal-options-button,
+html .modal-options-item .modal-options-button:hover {
+	background-color: transparent;
+
+	filter: brightness(var(--icon-brightness));
+}
+html .modal-header .modal-logout {
+	width: 2rem;
+	background: none;
+	color: var(--theme-accent-color);
+	text-align: center;
+	padding-top: 0;
+	transition: .2s opacity;
+}
+html .modal-header .modal-logout:hover {
+	opacity: 0.7;
+}
+html .modal-header .modal-logout::before {
+	content: "";
+
+	top: 0;
+
+	display: block;
+	width: 1.5rem;
+	height: 1.5rem;
+
+	margin-left: .25rem;
+
+	background-size: cover;
+
+	filter: invert() brightness(var(--theme-accent-icon-brightness));
+}

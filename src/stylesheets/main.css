@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+html body {
+	background: var(--background-back-color);
+	font-family: 'Inter', sans-serif;
+}
+html body,
+html body section h2 {
+	color: var(--title-color);
+	font-family: 'Inter', sans-serif;
+}
+html ::selection {
+	background: var(--theme-color);
+	color: var(--theme-accent-color);
+}

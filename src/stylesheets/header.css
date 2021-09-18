@@ -1,0 +1,238 @@
+html .header-first {
+	background: var(--background-middle-color);
+}
+html .header-first .logo {
+	width: 110px;
+	height: 42px;
+	background-image: none;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-top: -5px;
+	margin-left: -10px;
+	cursor: pointer;
+	transition: .2s opacity;
+}
+html .header-first .logo:hover {
+	opacity: 0.7;
+}
+@media only screen and (max-width: 991px) {
+	html .header-first .logo {
+		margin-top: -1px;
+		margin-left: -50px;
+	}
+}
+html .header-first-menu-item {
+	cursor: pointer;
+	border-left: 0;
+}
+html .header-first-menu-item a,
+html .header-first-menu-item.current-user .current-user-title {
+	color: var(--paragraph-color);
+
+	font-family: 'Inter', sans-serif;
+	font-size: 0.8rem;
+
+	cursor: pointer !important;
+
+	transition: .2s opacity;
+}
+html .header-first-menu-item.item-links:hover > a,
+html .header-first-menu-item:hover > a {
+	color: var(--paragraph-color);
+	
+	cursor: pointer !important;
+
+	opacity: 0.7;
+}
+html .header-first-menu-item a:hover {
+	color: var(--paragraph-color);
+}
+html .header-first-menu-item.current-user .current-user-title {
+	letter-spacing: 0;
+	text-transform: capitalize;
+}
+html .header-first-menu-item.current-user .current-user-image.student-other {
+	width: 1rem;
+	height: 1rem;
+
+	background-size: cover;
+
+	top: 13px;
+
+	border-radius: 50%;
+
+	filter: invert() brightness(var(--icon-brightness));
+}
+html .header-first-menu-item.item-langs {
+	display: none;
+}
+html .header-second .header-second-inner {
+	background: var(--background-middle-color);
+	color: var(--paragraph-color);
+
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+
+	border-radius: 0 0 1rem 1rem;
+}
+html .header-second .header-second-inner li a {
+	position: relative;
+
+	color: var(--paragraph-color);
+
+	padding-bottom: 11px;
+	
+	border: 0;
+
+	overflow: hidden;
+
+	transition: .2s opacity;
+}
+html .header-second .header-second-menu-item > a:hover {
+	color: var(--paragraph-color);
+
+	opacity: 0.8;
+}
+html .header-first .header-first-menu-item.item-links a::before,
+html .header-first .header-first-menu-item.item-family-package a::before,
+html .header-first .header-first-menu-item.item-notifications a::before,
+html .header-first .header-first-menu-item.item-logout a::before,
+html .header-second .header-second-menu-item.item-home a::before,
+html .header-second .header-second-menu-item.item-journal a::before,
+html .header-second .header-second-menu-item.item-messages a::before,
+html .header-second .header-second-menu-item.item-analytics a::before {
+	width: 1rem;
+	height: 1rem;
+
+	background-size: cover;
+
+	filter: invert() brightness(var(--icon-brightness));
+}
+html .header-second .header-second-inner li a::after {
+	content: "";
+
+	position: absolute;
+	bottom: -8px;
+	left: 0;
+
+	display: block;
+	width: 100%;
+	height: 8px;
+
+	background: var(--theme-color);
+
+	border-radius: 8px 8px 0 0;
+
+	transition: .2s bottom;
+}
+html .header-second .header-second-menu-item.active > a,
+html .header-second .header-second-menu-item > a:hover {
+	padding-bottom: 11px;
+	
+	border: 0;
+}
+html .header-second .header-second-menu-item.active > a::after,
+html .header-second .header-second-menu-item > a:hover::after {
+	bottom: 0;
+
+	filter: brightness(1);
+}
+html .header-second .header-second-menu-item.item-messages .notifications-count {
+	background: var(--theme-color);
+	color: var(--theme-accent-color);
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	border: 0;
+	top: 5px;
+}
+html .header-second .student-selector {
+	background: none;
+
+	border-radius: 1rem;
+
+	border: 0;
+
+	transition: .2s box-shadow;
+}
+html .header-second .student-selector:hover {
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+html .student-selector .select2-container--default .select2-selection--single .select2-selection__rendered {
+	background: var(--background-front-color);
+
+	transition: .2s filter;
+}
+html .student-selector:hover .select2-container--default .select2-selection--single .select2-selection__rendered {
+	filter: brightness(0.8);
+}
+html .student-selector .select2-container--default .select2-selection--single {
+	background: var(--background-middle-color);
+}
+html .student-selector-option {
+	position: relative;
+
+	color: var(--paragraph-color);
+
+	padding-right: 0;
+}
+html .student-selector-option .name {
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 13px;
+}
+html .student-selector-option small {
+	font-family: 'Inter', sans-serif;
+}
+html .student-selector .select2-container--default .select2-selection--single .select2-selection__arrow {
+	display: none; /* The arrow is such a bad design decision because it makes it look like a dropdown */
+}
+html .header-first .header-first-submenu,
+html .header-second .header-second-submenu {
+	background: var(--background-front-color);
+
+	border: 0;
+
+	border-radius: 1rem;
+
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+html .popover.bottom > .arrow::after {
+	border-bottom-color: var(--background-front-color);
+}
+html .header-first-submenu-item,
+html .header-second-submenu-item {
+	border-bottom: 0;
+	font-size: 0.8rem;
+	background: var(--background-front-color);
+	color: var(--paragraph-color);
+	border-radius: 1rem;
+	transition: .2s filter;
+	font-family: 'Inter', sans-serif;
+}
+html .header-first-submenu-item:hover,
+html .header-second-submenu-item:hover {
+	background: var(--background-front-color);
+
+	filter: brightness(0.8);
+}
+html .header-first-menu-item.sm-icon-only a {
+	font-size: 0.8rem !important;	
+}
+html .header-second .header-second-submenu {
+	top: 55px;
+}
+html header.minimal .header-first {
+	height: 50px;
+
+	background: var(--background-middle-color);
+
+	border-radius: 0 0 1rem 1rem;
+}
+html header.minimal {
+	margin-bottom: 1rem;
+}
+@media only screen and (max-width: 767px) {
+	html .header-second {
+		z-index: 1001;
+	}
+}

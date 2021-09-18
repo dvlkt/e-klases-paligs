@@ -1,0 +1,388 @@
+/* BUTTONS */
+html .big-anouncement .btn-secondary,
+html .btn-primary {
+	background: var(--theme-color);
+	color: var(--theme-accent-color);
+
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+
+	border-radius: .5rem;
+
+	transition: .2s filter, .2s box-shadow;
+}
+html .big-anouncement .btn-secondary:hover,
+html .btn-primary:hover {
+	background: var(--theme-color);
+
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	
+	filter: brightness(0.8);
+}
+
+/* CHECKMARKS & RADIO BUTTONS */
+html .analytics-form-page .analytics-form-holder .checkbox label,
+html .analytics-form-page .analytics-form-holder .radio label,
+html .modal-content .form-row {
+	font-family: 'Inter', sans-serif;
+	color: var(--paragraph-color);
+	font-size: 13px;
+	line-height: 13px;
+	padding-left: 20px;
+	position: relative;
+}
+html label.css-label,
+html input[type="checkbox"].css-checkbox:checked ~ label.css-label {
+	background: none;
+}
+html label.css-label::before {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	background: var(--background-front-color);
+	left: 0;
+	top: 0;
+	border-radius: 5px;
+}
+html label.css-label::after {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	left: 0;
+	top: 0;
+	border-radius: 5px;
+	transition: .1s opacity;
+	opacity: 0;
+	filter: invert() brightness(var(--icon-brightness));
+}
+html input[type="checkbox"].css-checkbox:checked ~ label.css-label::after {
+	opacity: 1;
+	cursor: pointer;
+}
+
+/* LOADING SPINNER */
+html #overlay {
+	display: block !important;
+
+	background: #00000080;
+
+	opacity: 1;
+
+	transition: .2s opacity;
+}
+html .loading-info {
+	display: block !important;
+
+	background: var(--background-front-color);
+	color: var(--paragraph-color);
+
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
+
+	border: 0;
+
+	font-weight: bold;
+
+	transform: scale(1) !important;
+
+	opacity: 1;
+
+	transition: .2s transform, .2s opacity;
+}
+html .loading-spinner {
+	border: 2px solid var(--paragraph-color);
+	border-right-color: #00000000;
+}
+
+/* CALENDAR */
+html .students-journal-header .week-selector .calendar-holder,
+html .datepicker-dropdown {
+	background: var(--background-middle-color);
+	border: 0;
+	border-radius: 1rem;
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	z-index: 500;
+}
+@media only screen and (max-width: 768px) {
+	html .students-journal-header .week-selector .calendar-holder {
+		position: absolute;
+		top: 4rem;
+		left: .5rem;
+	}
+}
+html .calendar-holder .datepicker .datepicker-switch,
+html section h2 .actual-lessons-date.active {
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	color: var(--paragraph-color);
+	min-width: 0 !important;
+}
+html .calendar-holder .datepicker .next::before,
+html .calendar-holder .datepicker .prev::before,
+html .student-journal-lessons h2 a.mobile-lessons-prev,
+html .student-journal-lessons h2 a.mobile-lessons-next,
+html .datepicker-dropdown .next::before,
+html .datepicker-dropdown .prev::before,
+html section h2 .switch-date-next,
+html section h2 .switch-date-prev {
+	border: 0;
+	background: var(--theme-color);
+	width: 20px;
+	height: 20px;
+	mask-size: cover;
+	-webkit-mask-size: cover;
+	transition: .2s opacity;
+}
+html .calendar-holder .datepicker .next:hover::before,
+html .calendar-holder .datepicker .prev:hover::before,
+html .datepicker-dropdown .next:hover::before,
+html .datepicker-dropdown .prev:hover::before,
+html section h2 .switch-date-next:hover,
+html section h2 .switch-date-prev:hover {
+	opacity: 0.7;
+}
+html .journal-nav .mobile-date {
+	font-weight: bold;
+}
+html .calendar-holder .datepicker .dow,
+html .datepicker .dow {
+	color: var(--low-priority-text-color);
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+}
+html .calendar-holder .datepicker .day,
+html .datepicker-dropdown .day {
+	background: var(--background-front-color) !important; /* Without the !important there is a weird blue background on click */
+	color: var(--paragraph-color);
+	font-family: 'Inter', sans-serif;
+	transition: .2s filter;
+	border: 0;
+}
+html .calendar-holder .datepicker .day.new,
+html .calendar-holder .datepicker .day.old,
+html .datepicker-dropdown .day.new,
+html .datepicker-dropdown .day.old {
+	color: var(--paragraph-color);
+
+	opacity: 0.7;
+}
+html .datepicker table tr td.day.focused,
+html .datepicker table tr td.day:hover {
+	background: var(--background-front-color);
+
+	filter: brightness(0.8);
+}
+html .calendar-holder .datepicker .active-week td:nth-child(-n+5),
+html .calendar-holder .datepicker tr:hover td:nth-child(-n+5) {
+	background: var(--background-front-color);
+	color: var(--paragraph-color);
+}
+html .calendar-holder .datepicker .current-week td:nth-child(-n+5):not(.today),
+html .calendar-holder .datepicker .current-week:hover td:nth-child(-n+5):not(.today) {
+	background: linear-gradient(180deg, var(--background-front-color) 34px, var(--theme-color) 0) !important;
+}
+html .calendar-holder .datepicker table tr td.day.today {
+	background: var(--theme-color) !important;
+	color: var(--theme-accent-color);
+}
+html .datepicker table tr td.today:hover:hover { /* E-klase devs, how drunk were you when you wrote this CSS rule? */
+	color: var(--paragraph-color);
+	background: var(--theme-color) !important;
+}
+html .datepicker tbody tr:nth-child(1) .day:nth-child(1) {
+	border-top-left-radius: .5rem;
+}
+html .datepicker tbody tr:nth-child(1) .day:last-child {
+	border-top-right-radius: .5rem;
+}
+html .datepicker tbody tr:last-child .day:nth-child(1) {
+	border-bottom-left-radius: .5rem;
+}
+html .datepicker tbody tr:last-child .day:last-child {
+	border-bottom-right-radius: .5rem;
+}
+html .students-journal-header .week-selector .calendar-holder table {
+	width: 256px; /* This fixes a bug where the date picker is not exactly centered within the popup */
+
+	border-spacing: 2px;
+}
+html .datepicker table tr td span {
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	background: var(--background-middle-color);
+	border-radius: 50%;
+	transition: .2s filter;
+}
+html .datepicker table tr td span:hover {
+	background: var(--background-middle-color);
+	filter: brightness(0.8);
+}
+html .calendar-holder .datepicker .datepicker-months table tr:hover td,
+html .calendar-holder .datepicker .datepicker-years table tr:hover td,
+html .calendar-holder .datepicker .datepicker-decades table tr:hover td,
+html .calendar-holder .datepicker .datepicker-centuries table tr:hover td {
+	background: var(--background-middle-color);
+}
+html .students-journal-header .week-selector.calendar-open .calendar-holder {
+	display: block;
+
+	opacity: 1;
+
+	transform: scale(1) translateY(0);
+}
+html .popover {
+	display: none;
+
+	opacity: 0;
+
+	transform: translateY(-10px);
+
+	transition: .2s opacity, .2s transform;
+}
+
+/* SCROLL TO TOP */
+html .scroll-to-top {
+	background-color: var(--theme-color);
+
+	border-radius: .5rem;
+
+	transition: .2s filter, .2s box-shadow;
+}
+html .scroll-to-top:hover {
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
+
+	filter: brightness(0.8);
+}
+
+/* NAVIGATION TABS */
+html .nav-tabs {
+	padding-left: 1rem;
+}
+html .nav-tabs li {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+html .nav-tabs li a,
+html .nav-tabs li.active a,
+html .nav-tabs li.profile-settings a,
+html .nav-tabs li.action-history a,
+html .nav-tabs li.message-history a,
+html .nav-tabs li.ratings a,
+html .nav-tabs li.journal a,
+html .nav-tabs li.delays a,
+html .nav-tabs li.transcript-of-records a {
+	background: var(--background-middle-dark-color);
+	color: var(--title-color);
+	margin-right: .5rem;
+	padding: 1rem .5rem;
+	border: 0;
+	border-radius: 1rem 1rem 0 0;
+	cursor: pointer;
+	transition: .2s filter;
+	font-family: 'Inter', sans-serif;
+}
+html .nav-tabs li,
+html .nav-tabs li.active,
+html .nav-tabs li {
+	top: -1px;
+}
+html .nav-tabs li.active a,
+html .nav-tabs li.active a:focus,
+html .nav-tabs li.active a:hover {
+	background: var(--background-middle-color);
+	color: var(--title-color);
+
+	padding: 1rem .5rem;
+
+	cursor: pointer;
+}
+html .nav-tabs li a:focus,
+html .nav-tabs li a:hover {
+	filter: brightness(0.8);
+}
+html .nav-tabs li a:hover {
+	border: 0;
+}
+
+/* BACK TO JOURNAL */
+.html back-to-journal {
+	color: var(--paragraph-color);
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	transition: .2s opacity;
+	background: none;
+	vertical-align: middle;
+	padding: 0;
+}
+html .back-to-journal:hover {
+	color: var(--paragraph-color);
+	opacity: 0.7;
+}
+html .back-to-journal::before {
+	content: "";
+	background-size: cover;
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	filter: invert() brightness(var(--icon-brightness));
+	vertical-align: middle;
+	margin-right: .5rem;
+}
+
+/* DROPDOWN */
+/* WHY DID THEY SPECIFICALLY STYLE IT TO TECH-SUPPORT-CONTAINER????
+I REFUSE to believe this code was written by someone older than 6 */
+html .tech-support-container .select2-container--default .select2-selection--single,
+html .tech-support-container .select2-container--default .select2-selection--single .select2-selection__rendered	{
+	background: var(--background-front-color);
+	color: var(--paragraph-color);
+
+	border: 0 !important; /* E-klaseeeeeee whyyyyyyy !importantttttttt */
+
+	border-radius: .5rem !important;
+
+	transition: .2s box-shadow, .2s filter;
+}
+html .tech-support-container .select2-container--default .select2-selection--single:hover {
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
+
+	filter: brightness(0.8);
+}
+html .select2-dropdown {
+	background: var(--background-front-color); /* Wow I'm so proud of yall you didn't use !important this time good job! */
+	color: var(--paragraph-color);
+
+	border: 0;
+
+	border-radius: .5rem !important;
+
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
+}
+html .select2-container--default .select2-results__option,
+html .select2-container--default .select2-results__option[aria-selected="true"] {
+	background: var(--background-front-color);
+
+	border-radius: .5rem;
+
+	transition: .2s filter;
+}
+html .select2-container--default .select2-results__option:hover {
+	filter: brightness(0.8);
+}
+html .select2-container--default .select2-results__option--highlighted[aria-selected] {
+	background: var(--background-front-color);
+	color: var(--paragraph-color);
+
+	border-radius: .5rem;
+}
+html .select2-container--default .select2-selection--single .select2-selection__arrow b {
+	border-color: var(--paragraph-color) #00000000 #00000000;
+}
+html .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+	border-color: #00000000 #00000000 var(--paragraph-color);
+}

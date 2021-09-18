@@ -1,0 +1,784 @@
+html .mailbox-tabs {
+	display: none;
+}
+html .mailbox-data {
+	background: none;
+	margin-bottom: .5rem;
+}
+html .communication .MailMainAreaWrapper {
+	background: var(--background-back-color);
+}
+html .MailActions .ButtonDefault.MailActions__ToggleButton {
+	background: var(--background-middle-color);
+	color: var(--paragraph-color);
+	font-family: 'Inter', sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 0.8rem;
+	padding-top: 0;
+	padding-left: .5rem;
+	border-radius: .5rem;
+}
+html .MailActions .ButtonDefault.MailActions__ToggleButton::after {
+	border: 0;
+	color: var(--paragraph-color);
+}
+html .MailActions .ButtonDefault.MailActions__ToggleButton::before {
+	display: none;
+}
+html .MailSearch .MailSearch__Input {
+	background: var(--background-middle-color);
+	color: var(--paragraph-color);
+
+	font-family: 'Inter', sans-serif;
+
+	border: 0;
+}
+html .MailSearch__ButtonWrapper .MailSearch__Button {
+	background: var(--background-middle-color);
+	color: var(--paragraph-color);
+
+	font-family: 'Inter', sans-serif;
+
+	padding-left: 5px;
+
+	transition: .2s filter, .2s box-shadow;
+}
+html .MailSearch__ButtonWrapper .MailSearch__Button:hover {
+	background: var(--background-middle-color);
+
+	filter: brightness(0.8);
+
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+html .MailSearch__ButtonWrapper .MailSearch__Button::before {
+	content: "";
+
+	display: inline-block;
+	width: 1.25rem;
+	height: 1.25rem;
+
+	margin-right: .25rem;
+
+	vertical-align: middle;
+
+	filter: invert() brightness(var(--icon-brightness));
+}
+html .MailMainAreaWrapper .FolderNavigation {
+	background: var(--background-middle-color);
+
+	border-radius: 1rem;
+
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+html .FolderNavigation nav {
+	box-shadow: none;
+	background: none;
+	overflow: hidden;
+}
+html .FolderNavigation .FolderNavigation__ButtonNewMailWrapper {
+	background: none;
+}
+html .FolderNavigation__ButtonNewMailWrapper .FolderNavigation__ButtonNewMail {
+	background: var(--theme-color);
+	color: var(--theme-accent-color);
+
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+
+	border-radius: .5rem;
+
+	transition: .2s filter, .2s box-shadow;
+}
+html .FolderNavigation__ButtonNewMailWrapper .FolderNavigation__ButtonNewMail:hover {
+	filter: brightness(0.8);
+
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+html .FolderNavigation__ButtonNewMailWrapper .FolderNavigation__ButtonNewMail::before {
+	content: "";
+
+	width: 1rem;
+	height: 1rem;
+
+	background-size: cover;
+
+	margin-top: 0;
+
+	filter: invert() brightness(var(--theme-accent-icon-brightness));
+}
+html .FolderNavigation .NavItem {
+	position: relative;
+	background: none;
+	color: var(--paragraph-color);
+	font-family: 'Inter', sans-serif;
+	padding-left: 56px;
+	border: 0;
+	box-shadow: none;
+	transition: .2s filter;
+}
+html .FolderNavigation .NavItem.router-link-active {
+	color: var(--paragraph-color);
+}
+html .FolderNavigation .NavItem.router-link-active,
+html .FolderNavigation .NavItem:hover {
+	background: none;
+	box-shadow: none;
+}
+html .FolderNavigation .NavItem:hover {
+	filter: brightness(0.8);
+}
+html .FolderNavigation .NavItem::after,
+html .FolderNavigation .NavItem.router-link-active::after {
+	content: "";
+
+	position: absolute;
+	top: 0;
+	left: -.75rem;
+
+	display: block;
+	width: .75rem;
+	height: 100%;
+
+	background: var(--theme-color);
+
+	padding: 0;
+
+	margin-right: 1rem;
+
+	border-radius: 0 .75rem .75rem 0;
+
+	transition: .2s left;
+}
+html .FolderNavigation .NavItem.router-link-active:after,
+html .FolderNavigation .NavItem:hover::after {
+	left: 0;
+}
+html .FolderNavigation .NavItem::before {
+	color: var(--paragraph-color);
+
+	opacity: 1;
+}
+html .FolderNavigation .NavItem:first-child {
+	border: 0;
+}
+html .FolderNavigation .NavItem::before {
+	content: "";
+
+	width: 1.2rem;
+	height: 1.2rem;
+
+	margin-top: .8rem !important;
+
+	filter: invert() brightness(var(--icon-brightness));
+}
+html .ButtonIcon--loading::before {
+	border: 2px solid var(--paragraph-color);
+	border-right-color: #00000000;
+}
+html .BottomInfo {
+	color: var(--low-priority-text-color);
+}
+html .Folder__NoMessages {
+	font-family: 'Inter', sans-serif;
+}
+html .Folder__MessageList .MessageItem {
+	background: var(--background-middle-color);
+	color: var(--paragraph-color);
+
+	margin-left: .5rem;
+	margin-bottom: .5rem;
+
+	border: 0;
+
+	border-radius: .5rem;
+
+	transition: .2s filter, .2s box-shadow;
+}
+html .Folder__MessageList .MessageItem:hover {
+	background: var(--background-middle-color);
+
+	filter: brightness(0.8);
+
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+html .Folder__MessageList .MessageItem:first-child {
+	border: 0;
+}
+html .MessageItem__MidCol .MessageItem__MessageBody {
+	color: var(--low-priority-text-color);
+}
+html .MessageItem__LeftCol .MessageItem__Checkbox {
+	background: var(--background-front-color);
+}
+html .MessageItem__LeftCol .MessageItem__Checkbox:checked {
+	background: var(--background-front-color);
+}
+html .MessageItem__LeftCol .MessageItem__Checkbox::after,
+html .MessageItem__LeftCol .MessageItem__Checkbox:checked::after {
+	content: "";
+	background-size: cover;
+	filter: invert() brightness(var(--icon-brightness));
+	opacity: 0;
+	transition: .2s opacity;
+}
+html .MessageItem__LeftCol .MessageItem__Checkbox:checked::after {
+	opacity: 1;
+}
+html .MessageItem .MessageItem--hasAttachments__Date::before {
+	content: "";
+	filter: invert() brightness(var(--icon-brightness));
+	width: 13px;
+	height: 13px;
+	display: inline-block;
+	background-size: cover;
+}
+html .ViewMessage .ViewMessage__MetaInfo {
+	border-top: 0;
+	border-bottom: 4px solid var(--divider-color);
+}
+html .ViewMessage__MetaInfo .MessageFollowUpStatus--none::before {
+	color: var(--background-front-color);
+}
+html .MessageItem__RightCol .MessageFollowUpStatus,
+html .ViewMessage__MetaInfo .MessageFollowUpStatus {
+	width: 20px;
+	height: 20px;
+}
+html .MessageItem__RightCol .MessageFollowUpStatus--none::before,
+html .MessageItem__RightCol .MessageFollowUpStatus--marked::before,
+html .MessageItem__RightCol .MessageFollowUpStatus--compleated::before, /* You mean completed??? */
+html .ViewMessage__MetaInfo .MessageFollowUpStatus--none::before,
+html .ViewMessage__MetaInfo .MessageFollowUpStatus--marked::before,
+html .ViewMessage__MetaInfo .MessageFollowUpStatus--compleated::before {
+	content: "";
+	width: 20px;
+	height: 20px;
+	display: block;
+	bottom: 0;
+	right: 0;
+	mask-size: cover;
+	-webkit-mask-size: cover;
+}
+html .MessageItem__RightCol .MessageFollowUpStatus--none::before,
+html .ViewMessage__MetaInfo .MessageFollowUpStatus--none::before {
+	background: var(--low-priority-text-color);
+}
+html .MessageItem__RightCol .MessageFollowUpStatus--marked::before,
+html .ViewMessage__MetaInfo .MessageFollowUpStatus--marked::before {
+	background: #e9b610;
+}
+html .MessageItem__RightCol .MessageFollowUpStatus--compleated::before,
+html .ViewMessage__MetaInfo .MessageFollowUpStatus--compleated::before {
+	background: #1ec039;
+}
+html .MessageItem .MessageItem__AuthorInfo,
+html .MessageItem .MessageItem__MessageTitle,
+html .MessageItem .MessageItem__MessageBody,
+html .MessageItem .MessageItem__Date {
+	font-family: 'Inter', sans-serif;
+}
+html .MessageItem .MessageItem__Date {
+	color: var(--low-priority-text-color);
+}
+html .MessageItem .MessageItem__AuthorInfo {
+	font-size: 14px;
+
+	margin-right: 16px;
+}
+html .MessageItem .MessageItem__MessageTitle {
+	font-size: 14px;
+}
+html .MessageItem .MessageItem__MessageTitle::before {
+	color: var(--low-priority-text-color);
+
+	margin-left: -14px;
+}
+html .ViewMessage__MetaInfo .ViewMessage__MessageDate {
+	color: var(--low-priority-text-color);
+
+	font-family: 'Inter', sans-serif;
+}
+html .AttachmentList__ItemContainer {
+	background: var(--background-middle-color);
+	border-radius: .5rem;
+	padding: .5rem;
+	text-align: center;
+	transition: .2s filter;
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	vertical-align: top;
+	cursor: pointer;
+}
+html .AttachmentList__ItemContainer:hover {
+	filter: brightness(0.7);
+}
+html .AttachmentList__ItemContainer img {
+	width: 180px;
+	height: 100px;
+	object-fit: cover;
+	border-radius: .5rem;
+	display: block;
+	margin: auto;
+	margin-bottom: .5rem;
+}
+html .AttachmentList__Item a,
+html .AttachmentList__Item a:hover,
+html .AttachmentList__Item a:visited {
+	color: var(--paragraph-color);
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: 'Inter', sans-serif;
+	text-decoration: none;
+}
+html .AttachmentList__Item::before {
+	display: none;
+}
+html .ButtonIcon.MailSearch__ResetInputButton::after {
+	content: "";
+
+	display: block;
+	width: .75rem;
+	height: .75rem;
+
+	filter: invert() brightness(var(--icon-brightness));
+}
+html .FetchMore .FetchMore__Text {
+	background: var(--background-middle-color);
+	color: var(--paragraph-color);
+	
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 0.9rem;
+
+	margin-left: .5rem;
+
+	border-radius: .5rem;
+
+	transition: .2s filter, .2s box-shadow;
+}
+html .FetchMore .FetchMore__Text:hover {
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+
+	filter: brightness(0.8);
+}
+html .FetchMore .FetchMore__MessageCount {
+	display: none;
+}
+html .Modal__Content .Modal__Header {
+	background: var(--background-middle-color) !important;
+	color: var(--paragraph-color);
+
+	border: 0;
+
+	border-radius: 1rem 1rem 0 0;
+}
+html .Modal__Header .Modal__Title {
+	color: var(--paragraph-color);
+}
+html .Modal__Content .Modal__Body {
+	background: var(--background-middle-color) !important;
+	color: var(--paragraph-color);
+
+	border-radius: 0 0 1rem 1rem;
+}
+html .MailActions .MailActions__ActionList {
+	background: var(--background-front-color);
+	color: var(--paragraph-color);
+	
+	border-radius: 1rem;
+
+	transform: translateY(-10px);
+
+	opacity: 0;
+
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+
+	transition: .2s transform, .2s opacity;
+}
+html .MailActions__ActionList .MailActions__ActionOuter,
+html .MailActions__ActionList .MailActions__ActionOuter:first-child,
+html .MailActions__ActionList .MailActions__ActionOuter:last-child {
+	background: var(--background-front-color);
+	color: var(--paragraph-color);
+
+	border-radius: 1rem;
+
+	transition: .2s filter;
+}
+html .MailActions__ActionList .MailActions__ActionOuter:hover {
+	background: var(--background-front-color);
+
+	filter: brightness(0.8);
+}
+html .MailActions__ActionList .MailActions__ActionOuter:not(:last-child) {
+	border: 0;
+}
+html .MailActions__ActionOuter .MailActions__ActionInner {
+	color: var(--paragraph-color);
+
+	font-family: 'Inter', sans-serif;
+}
+html .MailActions__ActionOuter .MailActions__ActionInner::before {
+	content: "";
+
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+
+	background-size: contain;
+
+	margin-right: 10px !important; /* Lmao why did you even need the margin-right: 19px !important statement there */
+
+	vertical-align: middle;
+
+	filter: invert() brightness(var(--icon-brightness));
+}
+html .MessageContent .MessageContent__Row:first-child {
+	border: 0;
+}
+html .MessageContent__Row .MessageContent__Subject {
+	background: var(--background-middle-color);
+	color: var(--paragraph-color);
+
+	font-size: 1rem;
+
+	padding: .5rem;
+
+	border: 0;
+
+	border-radius: .5rem;
+}
+html .EklaseTextEditor__Editor {
+	background: var(--background-middle-color);
+	color: var(--paragraph-color);
+
+	border: 0;
+
+	border-radius: 1rem;
+
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+html .EklaseTextEditor__Menu {
+	background: var(--background-middle-color);
+
+	padding: .25rem;
+
+	border-radius: 1rem 1rem 0 0;
+}
+html .EklaseTextEditor__Content {
+	background: var(--background-middle-color);
+
+	border-radius: 0 0 1rem 1rem;
+}
+html .ProseMirror {
+	font-family: 'Inter', sans-serif;
+	font-size: 15px;
+}
+html .EklaseTextEditor__Button {
+	background: var(--background-middle-color);
+
+	border-radius: 1rem;
+
+	transition: .2s filter;
+}
+html .EklaseTextEditor__Button:hover {
+	background: var(--background-middle-color);
+
+	filter: brightness(0.8);
+}
+html .EklaseTextEditor__Button--link::before,
+html .EklaseTextEditor__Button--unlink::before,
+html .EklaseTextEditor__Button--bold::before,
+html .EklaseTextEditor__Button--italic::before,
+html .EklaseTextEditor__Button--strike::before,
+html .EklaseTextEditor__Button--underline::before {
+	color: var(--paragraph-color);
+	transition: .2s opacity;
+}
+html .EklaseTextEditor__Button--active::before {
+	color: var(--paragraph-color) !important;
+	opacity: 0.7;
+}
+@media only screen and (max-width: 767px) {
+	html .Message .MessageHeader {
+		border-radius: 0 0 1rem 1rem;
+		background: var(--background-middle-color);
+		border-bottom: 0;
+		box-shadow: 0 4px 10px -3px var(--shadow-color);
+	}
+}
+html .Message .MessageHeader__Heading {
+	color: var(--title-color);
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	font-size: 25px;
+}
+html .Message .MessageHeader__ButtonBack,
+html .Message .MessageHeader__ButtonSend,
+html .Message .MessageHeader__ButtonSend--mobile,
+html .Message .MessageHeader__Heading {
+	vertical-align: middle;
+}
+html .Message .MessageHeader__ButtonBack::before,
+html .Message .MessageHeader__ButtonSend--mobile::before {
+	content: "";
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	filter: invert() brightness(var(--icon-brightness));
+}
+html .Message .MessageHeader__ButtonBack {
+	transition: .2s opacity;
+}
+html .Message .MessageHeader__ButtonBack:hover {
+	opacity: 0.7;
+}
+html .Message .MessageHeader__ButtonSend--mobile::before {
+	margin-right: 0;
+}
+html .Message .MessageHeader__ButtonSend,
+html .MessageHeader__ButtonSend:active {
+	background: var(--theme-color);
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	padding-right: 1rem;
+	transition: .2s filter, .2s box-shadow;
+}
+html .Message .MessageHeader__ButtonSend:hover {
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	filter: brightness(0.8);
+}
+html .Message .MessageHeader__ButtonSend::before,
+html .Message .MessageHeader__ButtonSend--mobile::before {
+	content: "";
+	margin: 0 .25rem 0 .5rem;
+	filter: invert() brightness(var(--theme-accent-icon-brightness));
+}
+html .MessageContent .MessageContent__ErrorMessage {
+	color: var(--red-color);
+	font-family: 'Inter', sans-serif;
+	font-size: 13px;
+}
+html .MessageContent .MessageContent__ErrorMessage--recipients {
+	vertical-align: top;
+}
+html .MessageContent__Row .MessageContent__ErrorMessage--subject {
+	margin-top: .7rem;
+	margin-left: .5rem;
+}
+html .MessageContent .MessageContent__ErrorMessage--body {
+	padding-top: 3.25rem;
+	padding-left: .5rem;
+}
+html .MessageContent__AddRecipients .MessageContent__AddRecipientButton {
+	width: 15px;
+	height: 15px;
+	margin: 2.5px;
+	margin-left: 10px;
+	filter: invert() brightness(var(--icon-brightness));
+	transition: .2s opacity;
+}
+html .MessageContent__AddRecipients .MessageContent__AddRecipientButton:hover {
+	opacity: 0.7;
+}
+html .MessageContent .MessageContent__DesktopAttachments {
+	cursor: pointer;
+	margin-top: .5rem;
+}
+html .FileInput__AddButton {
+	background: var(--theme-color);
+	border-radius: .5rem;
+	color: var(--theme-accent-color);
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	padding: .25rem;
+	padding-right: .75rem;
+	cursor: pointer;
+	transition: .2s filter, .2s box-shadow;
+}
+html .FileInput__AddButton::after {
+	display: none;
+}
+html .FileInput__AddButton:hover {
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	filter: brightness(0.8);
+}
+html .FileInput__AddButtonText,
+html .FileInput__AddButtonText:hover {
+	color: var(--theme-accent-color);
+	cursor: pointer;
+	font-size: 13px;
+}
+html .FileInput__AddButton .FileInput__FileUpload {
+	cursor: pointer;
+	height: calc(13px + 1rem);
+	width: 180px;
+}
+html .MessageActions {
+	height: 1rem;
+	margin-top: 1rem;
+	margin-bottom: 0;
+}
+html .MessageActions .TopToolbar__ButtonContainer {
+	display: inline-block;
+	height: 1rem;
+	margin-right: .5rem;
+}
+html .MessageActions .TopToolbar__Button {
+	height: 1rem;
+	
+	transition: .2s opacity;
+}
+html .MessageActions .TopToolbar__Button:hover {
+	opacity: 0.7;
+}
+html .MessageActions .TopToolbar__Button::before {
+	content: "";
+	display: block;
+	width: 1rem;
+	height: 1rem;
+	filter: invert() brightness(var(--icon-brightness));
+}
+html .ViewMessage__MessageBody,
+html .ViewMessage__MessageBody *,
+html .ViewMessage__PersonWrapper *,
+html .ViewMessage__MessageTitle {
+	font-family: 'Inter', sans-serif;
+	font-size: 15px;
+	line-height: 18px;
+}
+html .ViewMessage__MetaInfo .ViewMessage__MessageTitle {
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 33px;
+}
+html .ViewMessage__PersonWrapper .ViewMessage__From,
+html .ViewMessage__PersonWrapper .ViewMessage__To {
+	font-size: 13px;
+	color: var(--low-priority-text-color);
+	text-transform: uppercase;
+	font-weight: bold;
+}
+html .ViewMessage__PersonWrapper .ViewMessage__From span,
+html .ViewMessage__PersonWrapper .ViewMessage__To span {
+	color: var(--paragraph-color);
+	text-transform: none;
+	font-weight: normal;
+}
+html .Recipients .RecipientsPreview__Name::before,
+html .MessageItem .MessageItem--status-sent-read__RecipientsPreview::before,
+html .MessageItem .MessageItem--status-sent-unread__RecipientsPreview::before {
+	content: "";
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	filter: invert() brightness(var(--icon-brightness));
+	margin-right: 2px;
+}
+html .AttachmentList__Item,
+html .AttachmentList__Link:active,
+html .AttachmentList__Link:hover,
+html .AttachmentList__Link:visited {
+	color: var(--theme-color);
+	font-family: 'Inter', sans-serif;
+}
+html .MailMainAreaWrapper .MobileBottomToolbar {
+	background: var(--background-middle-color);
+	border-top: 0;
+	border-radius: 1rem 1rem 0 0;
+	box-shadow: 0 0 10px -3px var(--shadow-color);
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+html .MobileBottomToolbar .MobileBottomToolbar__Button--reply::before,
+html .MobileBottomToolbar .MobileBottomToolbar__Button--forward::before,
+html .MobileBottomToolbar .MobileBottomToolbar__Button--delete::before,
+html .MobileBottomToolbar .MobileBottomToolbar__Button--new-mail::before,
+html .MobileBottomToolbar .MobileBottomToolbar__Button--permanentDelete::before,
+html .MobileBottomToolbar .MobileBottomToolbar__Button--actions::before,
+html .MobileBottomToolbar .MobileBottomToolbar__Button--newmail::before {
+	content: "";
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin: auto;
+	filter: invert() brightness(var(--icon-brightness));
+}
+@media only screen and (max-width: 767px) {
+	html .MailMainAreaWrapper .ViewMessage__MessageBody {
+		padding-bottom: 0px;
+		margin-bottom: 20px;
+	}
+}
+html .Folder__MailboxHeader .Folder__MobileHeading {
+	background: var(--background-middle-color);
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+	text-transform: uppercase;
+	margin-left: .5rem;
+	margin-right: .5rem;
+	margin-bottom: .5rem;
+	border-radius: .5rem;
+}
+html .Folder__MailboxHeader .Folder__MobileHeading::after {
+	display: none;
+}
+html .MobileNavModal .MobileNavModal__Body {
+	background: var(--background-middle-color);
+	border-radius: .5rem;
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+html .MobileNavModal__Body .MobileNavModal__Item,
+html .MobileNavModal__Body .MobileNavModal__Item:hover {
+	background: none;
+	border-bottom: 0;
+	color: var(--paragraph-color);
+	font-family: 'Inter', sans-serif;
+	font-size: 20px;
+}
+html .MobileNavModal__Body .MobileNavModal__Item--active,
+html .MobileNavModal__Body .MobileNavModal__Item--active:hover {
+	background: var(--background-front-color);
+}
+html .MobileNavModal .MobileNavModal__Item::before {
+	background-size: cover;
+	padding: 0px;
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+	filter: invert() brightness(var(--icon-brightness));
+}
+html .MailMainAreaWrapper .ViewMessage,
+html .MailMainAreaWrapper .ViewMessage__MessageBody,
+html .MailMainAreaWrapper .MessageContent {
+	background: var(--background-back-color);
+}
+html .MessageContent__Row .MessageContent__Label,
+html .MessageContent__Row .MessageContent__Subject {
+	font-family: 'Inter', sans-serif;
+}
+html .MobileTextareaWrapper .MobileTextarea {
+	background: var(--background-middle-color);
+	font-family: 'Inter', sans-serif;
+	border: 0;
+	border-radius: .5rem;
+}
+html .MessageContent .MessageContent__Row--subject {
+	border-bottom: none;
+}
+@media only screen and (max-width: 767px) {
+	html .Folder__MailboxHeader .MailSearch {
+		width: 100%;
+	}
+}
+
+html .SentConfirmationModal {
+	background: var(--background-front-color);
+	border-radius: 1rem !important;
+	border: 0;
+	color: var(--paragraph-color);
+	font-weight: bold;
+}

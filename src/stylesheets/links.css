@@ -1,0 +1,51 @@
+html .student-journal-lessons-table-holder .lessons-table a,
+html footer .footer-container .col-nav .footer-nav li a,
+html footer .footer-nav-item a,
+html .students-journal-header .students-journal-header-links a,
+html .print.print-button,
+html .home-diary-link,
+html .rating-wrap .see-rating-scale a,
+html a.l-MainFooter_Exit,
+html .announcement a.prolong,
+html .login-links .special-link .title,
+html .login-links a,
+html .article-content .article-body a,
+html .dashboard-news .dashboard-news-item .article-content a,
+html .Recipients .Recipients__LoadLink,
+html .ViewMessage__MessageBody a,
+html .diary-container .lessons-table a,
+html .home-open-lesson-times,
+html .actual-lessons .lesson-subitem .description a.file,
+html .student-journal-lessons .lesson-subitem .description a.file {
+	color: var(--theme-color);
+	position: relative;
+	text-decoration: none;
+	background-image: linear-gradient(currentColor, currentColor);
+	background-position: 0% 100%;
+	background-repeat: no-repeat;
+	background-size: 0% 1px;
+	transition: background-size .3s;
+}
+html .student-journal-lessons-table-holder .lessons-table a:hover,
+html footer .footer-container .col-nav .footer-nav li a:hover,
+html footer .footer-nav-item a:hover,
+html .students-journal-header .students-journal-header-links a:hover,
+html .print.print-button:hover, 
+html .home-diary-link:hover,
+html .rating-wrap .see-rating-scale a:hover,
+html a.l-MainFooter_Exit:hover,
+html .announcement a.prolong:hover,
+html .login-links .special-link .title:hover,
+html .login-links a:hover,
+html .article-content .article-body a:hover,
+html .dashboard-news .dashboard-news-item .article-content a:hover,
+html .Recipients .Recipients__LoadLink:hover,
+html .ViewMessage__MessageBody a:hover,
+html .diary-container .lessons-table a:hover,
+html .home-open-lesson-times:hover,
+html .actual-lessons .lesson-subitem .description a.file:hover,
+html .student-journal-lessons .lesson-subitem .description a.file:hover {
+	color: var(--theme-color);
+	text-decoration: none;
+	background-size: 100% 1px;
+}

@@ -1,0 +1,32 @@
+html footer {
+	background: var(--background-middle-color);
+
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+html footer .copyright {
+	color: var(--low-priority-text-color);
+}
+html footer .footer-container .col-copy {
+	display: inline-block;
+	width: auto;
+}
+html footer .footer-container .go-top-col .go-top {
+	background-color: var(--background-middle-color);
+	color: var(--paragraph-color);
+	padding: .5rem;
+	padding-left: 4rem;
+	border-radius: .5rem;
+	transition: .2s filter, .2s box-shadow;
+}
+html footer .footer-container .go-top-col .go-top:hover {
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	
+	filter: brightness(0.8);
+}
+html footer .footer-container .go-top-col .go-top::before {
+	top: -3px;
+
+	background-color: transparent;
+
+	filter: invert() brightness(var(--icon-brightness));
+}

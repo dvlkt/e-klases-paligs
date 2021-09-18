@@ -1,0 +1,963 @@
+/* FILTER */
+html .filter-wrap .container {
+	background: var(--background-middle-color);
+	box-shadow: none;
+	border-radius: 1rem 1rem 0 0;
+}
+html .filter-wrap .filter-block label {
+	font-size: 13px;
+	font-weight: bold;
+	font-family: 'Inter', sans-serif;
+	text-transform: uppercase;
+	color: var(--low-priority-text-color);
+}
+html .select2-container--default .select2-selection--single,
+html .select2-container--default .select2-selection--single .select2-selection__rendered {
+	border-radius: .5rem;
+	background: var(--background-front-color);
+	color: var(--paragraph-color);
+	border: 0;
+	font-size: 15px;
+	height: 28px;
+}
+html .form-group.subject-choice .select2-container--default .select2-selection--single {
+	border: 0 !important;
+	margin-top: 2px;
+}
+html .filter-wrap .journal-type a {
+	font-family: 'Inter', sans-serif;
+	color: var(--paragraph-color);
+	border: 0;
+	background: var(--background-front-color);
+	transition: .2s filter;	
+}
+html .filter-wrap .journal-type a:hover {
+	color: var(--paragraph-color);
+	filter: brightness(0.8);
+}
+html .filter-wrap .journal-type a.active {
+	background: var(--theme-color);
+	border: 0;
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+html .filter-wrap .journal-type a:first-of-type {
+	border-radius: .5rem 0 0 .5rem;
+}
+html .filter-wrap .journal-type a:last-of-type {
+	border-radius: 0 .5rem .5rem 0;
+	border-right: 0;
+}
+@media only screen and (max-width: 767px) {
+	html .filter-wrap {
+		background: var(--background-middle-color);
+		box-shadow: 0 4px 10px -3px var(--shadow-color);
+		border-radius: 0 0 .5rem .5rem;
+	}
+	html .filter-wrap .filter-button {
+		background-color: var(--background-middle-color);
+		box-shadow: none;
+	}
+	html .filter-wrap .filter-button::before {
+		display: none;
+	}
+}
+
+/* RATINGS */
+html .analytics-ratings-container {
+	border-radius: 1rem;
+	background: var(--background-middle-color);
+}
+html .analytics-ratings-container .analytics-ratings-intro {
+	border-bottom: 4px solid #00000020;
+}
+html .analytics-ratings-table-intro .analytics-ratings-table-intro-left,
+html .analytics-ratings-table-intro .analytics-ratings-table-intro-right {
+	background: none;
+	border: 0;
+}
+html .analytics-ratings-container .report-wrapper,
+html .analytics-ratings-container .report-wrapper.report-averages {
+	border: 0;
+	border-bottom: 0 !important;
+}
+html .ratings-orderby-options .title,
+html .analytics-ratings-container h3.group-title {
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	font-size: 30px !important;
+}
+html .analytics-ratings-table-intro .analytics-ratings-table-intro-left,
+html .analytics-ratings-table-intro-left span,
+html .analytics-ratings-table-intro-right table.stats {
+	font-family: 'Inter', sans-serif;
+}
+html .analytics-ratings-table-intro-right table.stats {
+	float: right;
+}
+html .analytics-ratings-table-intro-right table.stats td {
+	font-size: 15px;
+}
+html .analytics-ratings-table-intro-right table.stats td:first-child::after {
+	content: ":";
+}
+html .analytics-ratings-table-intro-right table.stats td:last-child {
+	font-weight: bold;
+}
+html .switch-block-with-order-text {
+	display: inline-block;
+	text-align: center !important;
+}
+html .analyitcs-ratings-chart-horzontal path[fill="#fff"] {
+	display: none !important;
+}
+html .analyitcs-ratings-chart-horzontal path[stroke="#dfdfdf"],
+html .analyitcs-ratings-chart-horzontal path[stroke="#8e8e8e"] {
+	stroke: #00000030;
+	stroke-width: 4px;
+}
+html .analyitcs-ratings-chart-horzontal text[fill="#232323"] {
+	fill: var(--low-priority-text-color);
+	font: 13px 'Inter', sans-serif;
+}
+html .analyitcs-ratings-chart-horzontal text[fill="#C48C8F"] {
+	fill: var(--red-accent-color);
+	font: 11px 'Inter', sans-serif !important;
+}
+html .analyitcs-ratings-chart-horzontal text[fill="#000"] {
+	fill: var(--paragraph-color);
+	font: 11px 'Inter', sans-serif !important;
+}
+html .analyitcs-ratings-chart-horzontal path[fill="#FFFFFF"][fill-opacity="0.85"] {
+	fill: var(--red-color);
+	fill-opacity: 1;
+}
+html .analyitcs-ratings-chart-horzontal path[stroke="#C48C8F"] {
+	stroke: var(--red-color);
+}
+html .analyitcs-ratings-chart-horzontal path[fill="#BDBDBD"] {
+	fill: var(--background-front-color);
+}
+html .analyitcs-ratings-chart-horzontal path[fill="#009AE3"] {
+	fill: var(--theme-color);
+}
+html .analyitcs-ratings-chart-horzontal g g g:first-child path[stroke="#dfdfdf"],
+html .analyitcs-ratings-chart-horzontal g g g:nth-child(3) g g path[stroke="#8e8e8e"] {
+	display: none; /* Removes the unnecessary vertical lines */
+}
+html .analytics-ratings-container .charts-legend .legend-title {
+	display: none;
+}
+html .analytics-ratings-container .charts-legend .legend-item,
+html .graph-info.secondary {
+	font-size: 15px;
+	padding-left: 20px !important;
+	display: block;
+	float: none;
+	margin-bottom: 2px;
+}
+html .analytics-ratings-container .charts-legend .legend-item .legend-icon,
+html .report-wrapper .mark-ratings-blue-legend {
+	width: 14px;
+	border-radius: 50%;
+}
+html .mark-ratings-blue-legend {
+    background: var(--theme-color);
+}
+html .analytics-ratings-container .report-wrapper {
+	border-bottom: solid 4px #00000020 !important;
+}
+html .analytics-ratings-container .charts-legend .legend-item .class-average::before {
+	background: var(--red-color);
+	width: 14px;
+	left: 0;
+}
+html .ratings-orderby-options .orderby-text {
+	font-family: 'Inter', sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: var(--low-priority-text-color);
+	text-transform: uppercase;
+}
+html section .section-switch {
+	border: 0;
+	background: none;
+}
+html section .section-switch .section-switch-option {
+	font-family: 'Inter', sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: var(--paragraph-color);
+	background: var(--background-front-color);
+	transition: .2s filter, .2s box-shadow;
+}
+html section .section-switch .section-switch-option:hover {
+	filter: brightness(0.8);
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+html section .section-switch .section-switch-option.active {
+	background: var(--theme-color);
+}
+html section .section-switch .section-switch-option:first-child {
+	border-radius: .5rem 0 0 .5rem;
+}
+html section .section-switch .section-switch-option:last-child {
+	border-radius: 0 .5rem .5rem 0;
+}
+html .report-averages label {
+	display: none;
+}
+html .analytics-ratings-container .charts-legend {
+	padding-top: 0;
+}
+html .analytics-report-table-tools .btn {
+	float: none;
+	margin: auto;
+	width: 25%;
+}
+html .scroll-to-top.home-work {
+	margin-bottom: 0;
+}
+html .panel-group .panel-default .panel-heading {
+	border: 0 !important;
+	border-radius: 1rem;
+	background: var(--background-front-color);
+	color: var(--paragraph-color);
+}
+html .panel-group .panel-title {
+	font-family: 'Inter', sans-serif;
+	color: var(--paragraph-color);
+	font-weight: bold;
+}
+html .panel-group .panel-arrow {
+	border-color: var(--paragraph-color) #00000000 #00000000;
+}
+html .panel-group .panel-default {
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	border-radius: 1rem;
+	background: var(--background-front-color);
+	border: 0 !important;
+}
+html .panel-default .panel-heading + .panel-collapse .panel-body {
+	border-top: 0;
+}
+html .analytics-rating-tables table {
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	border-radius: 1rem;
+}
+html .analytics-rating-tables table thead {
+	box-shadow: none;
+}
+html .analytics-rating-tables table thead td {
+	font-family: 'Inter', sans-serif;
+	background: var(--background-middle-color);
+	color: var(--low-priority-text-color);
+	border: 0;
+	font-size: 13px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+html .analytics-rating-tables td {
+	border: 0;
+	color: var(--paragraph-color);
+	background: var(--background-middle-color);
+	font-family: 'Inter', sans-serif;
+	font-size: 13px;
+	border-bottom: 4px solid #00000020;
+}
+html .analytics-rating-tables tbody tr:last-child td {
+	border-bottom: 0;
+}
+html .analytics-rating-tables td:nth-child(odd) {
+	background: var(--background-middle-dark-color);
+}
+html .analytics-rating-tables table thead td:first-child {
+	border-top-left-radius: 1rem;
+}
+html .analytics-rating-tables table thead td:last-child {
+	border-top-right-radius: 1rem;
+}
+html .analytics-rating-tables table tbody tr:last-child td:first-child {
+	border-bottom-left-radius: 1rem;
+}
+html .analytics-rating-tables table tbody tr:last-child td:last-child {
+	border-bottom-right-radius: 1rem;
+}
+html .analytics-rating-tables td.higher,
+html .analytics-rating-tables td.lower {
+	color: var(--paragraph-color);
+	font-family: 'Inter', sans-serif;
+	font-size: 13px;
+}
+html .analytics-ratings-container .report-wrapper.report-by-subject h3.group-title,
+html .analytics-ratings-container .report-wrapper.report-averages h3.group-title {
+	background: var(--background-middle-color);
+	padding: 0;
+}
+html .analytics-ratings-container h3.group-title::after {
+	display: none; /* Dear E-klase devs, not everything on mobile has to be collapsible... (I know this doesn't make it not collapsible btw) */
+}
+@media only screen and (max-width: 767px) {
+	html .analytics-ratings {
+		background: var(--background-back-color);
+	}
+	html .analytics-ratings-table-intro .analytics-ratings-table-intro-left.analytics-ratings-table-intro-left,
+	html .analytics-ratings-table-intro .analytics-ratings-table-intro-right.analytics-ratings-table-intro-left,
+	html .analytics-ratings-table-intro .analytics-ratings-table-intro-middle.analytics-ratings-table-intro-left {
+		border-bottom: 4px solid #00000020;
+	}
+	html .switch-block-with-order-text {
+		width: 100%;
+	}
+	html .ratings-orderby-options .title,
+	html .analytics-ratings-container h3.group-title,
+	html .analytics-ratings-container .report-wrapper.report-averages h3.group-title {
+		font-size: 20px !important;
+	}
+}
+
+/* JOURNALS */
+html .info-pane-wrap .container,
+html .marks-pane-wrap .container,
+html .data-marks-detailed-wrap .container,
+html .data-pane-wrap .container,
+html .behavioral-wrap .container,
+html .lessons-topics-wrap .container,
+html .analytic .no-data .container {
+	background: var(--background-middle-color);
+}
+html .info-pane-wrap {
+	background: none;
+}
+html .info-pane-wrap .avg-class,
+html .info-pane-wrap .avg-pupil,
+html .info-pane-wrap .teacher {
+	color: var(--paragraph-color);
+	font-family: 'Inter', sans-serif;
+}
+html .info-pane-wrap .avg-class,
+html .info-pane-wrap .avg-pupil {
+	border: 0;
+}
+html .analytic .no-data {
+	background: none;
+}
+html .behavioral-wrap,
+html .lessons-topics-wrap {
+	margin-top: 0;
+}
+html .lessons-topics-wrap .container,
+html .analytic .no-data .container {
+	border-radius: 0 0 1rem 1rem;
+}
+html .lesson-topics-table,
+html .behavioral-table {
+	border-radius: 1rem;
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+html .lesson-topics-table tr.thead td.first-column,
+html .behavioral-table tr.thead td.first-column {
+	border-top-left-radius: 1rem;
+}
+html .lesson-topics-table tr.thead td.fourth-column,
+html .behavioral-table tr.thead td.fourth-column {
+	border-top-right-radius: 1rem;
+}
+html .lesson-topics-table tbody tr:nth-last-child(2) td:first-child,
+html .behavioral-table tbody tr:nth-last-child(2) td:first-child {
+	border-bottom-left-radius: 1rem;
+}
+html .lesson-topics-table tbody tr:nth-last-child(2) td:last-child,
+html .behavioral-table tbody tr:nth-last-child(2) td:last-child {
+	border-bottom-right-radius: 1rem;
+}
+html .lesson-topics-table tr.thead td,
+html .behavioral-table tr.thead td {
+	background: var(--background-middle-color);
+	color: var(--low-priority-text-color);
+	font-family: 'Inter', sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 0;
+	border: 0;
+}
+html .lesson-topics-table td,
+html .behavioral-table td,
+html .lesson-topics-table tr:hover td,
+html .behavioral-table tr:hover td {
+	border: 0 !important;
+	background: var(--background-middle-color);
+}
+html .lesson-topics-table td:nth-child(odd),
+html .behavioral-table td:nth-child(odd),
+html .lesson-topics-table tr:hover td:nth-child(odd),
+html .behavioral-table tr:hover td:nth-child(odd),
+html .lesson-topics-table tr.thead td:nth-child(odd),
+html .behavioral-table tr.thead td:nth-child(odd) {
+	background: var(--background-middle-dark-color);
+}
+html .lesson-topics-table .marker,
+html .behavioral-table .marker {
+	display: none; /* Idk what's the point of that thing, hopefully it doesn't have an actual functional purpose */
+}
+html .lesson-topics-table tr:not(:nth-last-child(2)),
+html .behavioral-table tr:not(:nth-last-child(2)) {
+	border-bottom: 4px solid #00000020 !important;
+}
+html .data-marks-detailed-wrap .container .marks-detailed {
+	box-shadow: none;
+}
+html .detailed-item {
+	border: 0;
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	border-radius: 1rem;
+}
+html .lesson .detailed-header {
+	background: var(--background-middle-dark-color);
+	border-radius: 1rem 1rem 0 0;
+}
+html .lesson.test .detailed-header .static,
+html .detailed-header .item-type,
+html .detailed-item .additional-data label {
+	font-size: 13px;
+	text-transform: uppercase;
+	color: var(--low-priority-text-color);
+	font-weight: bold;
+	font-family: 'Inter', sans-serif;
+}
+html .lesson.test .pupil-place {
+	border-left: 0;
+}
+html .detailed-header .average-score span,
+html .detailed-header .pupil-place span {
+	font-size: 13px;
+	text-transform: uppercase;
+	color: var(--low-priority-text-color);
+	font-family: 'Inter', sans-serif;
+}
+html .detailed-item .right span {
+	color: var(--paragraph-color);
+	font-weight: bold;
+	font-family: 'Inter', sans-serif;
+	font-size: 13px;
+}
+html .detailed-item .edited .additional-data.edited,
+html .detailed-item .rate-information {
+	border-left: 4px solid #00000020;
+}
+html .detailed-item .tiny-graph {
+	border-bottom: 4px solid #00000020;
+}
+html .explanation-wrap .explanation {
+	color: var(--paragraph-color);
+	font-size: 13px;
+	font-family: 'Inter', sans-serif;
+}
+html .explanation-wrap .explanation .icon {
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+}
+html .cell {
+	margin-bottom: 10px;
+	margin-right: 5px;
+	background: none;
+}
+html .marks-body.note {
+	display: none;
+}
+html .cell-item,
+html .cell-item:hover,
+html .cell-item:first-of-type,
+html .cell-item:first-of-type:hover,
+html .cell-item.active,
+html .cell-item.active:hover {
+	top: 0;
+	border: 0;
+	box-shadow: none;
+}
+html .cell-item.active {
+	border: 0;
+	outline: none;
+}
+html .cell-item .marks-header,
+html .cell-item.active .marks-header,
+html .cell-item.active:hover .marks-header,
+html .cell-item:hover .marks-header {
+	height: 60px;
+	background: none;
+	border: 0;
+	padding-top: 0;
+	border-radius: .5rem;
+	transition: .2s filter, .2s box-shadow;
+}
+html .cell-item .marks-header .inner {
+	border-radius: .5rem;
+	background: var(--background-front-color) !important;
+	color: var(--paragraph-color);
+	height: 60px;
+}
+html .cell-item .marks-header:hover,
+html .cell-item.active .marks-header {
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	filter: brightness(0.8);
+}
+html .analytic .actual-lessons,
+html .analytic .student-journal-lessons {
+	background: none;
+}
+html .actual-lessons .lesson-title .explanation-line,
+html .student-journal-lessons .lesson-title .explanation-line {
+	display: none;
+}
+html .actual-lessons .lesson-title .date,
+html .student-journal-lessons .lesson-title .date {
+	font-family: 'Inter', sans-serif;
+	color: var(--low-priority-text-color);
+	text-transform: uppercase;
+	font-weight: bold;
+}
+html .actual-lessons .lesson-title .top-mark,
+html .student-journal-lessons .lesson-title .top-mark {
+	color: var(--low-priority-text-color);
+}
+html .data-pane-wrap {
+	background: none;
+}
+html .info-pane-wrap .subject {
+	color: var(--paragraph-color);
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+}
+@media only screen and (max-width: 767px) {
+	html .info-pane-wrap .container,
+	html .data-pane-wrap .container {
+		border-radius: 1rem;
+		box-shadow: 0 4px 10px -3px var(--shadow-color);
+		padding-bottom: 10px;
+		padding-top: 10px;
+	}
+	html .explanation-wrap {
+		border-bottom: 0;
+	}
+	html .lessons-topics-wrap .container,
+	html .analytic .no-data .container {
+		border-radius: 1rem;
+		box-shadow: 0 4px 10px -3px var(--shadow-color);
+	}
+}
+
+/* DELAYS */
+html .delays-container .delays .container {
+	background: var(--background-middle-color);
+	border-radius: 0 0 1rem 1rem;
+	padding-bottom: 25px;
+}
+html .delays-overview-table-holder {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+html .delays-overview-table {
+	margin-bottom: 0;
+	font-family: 'Inter', sans-serif;
+	font-size: 20px;
+}
+html .delays-overview-table strong {
+	font-family: 'Inter', sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+}
+html .delay-info {
+	background: var(--background-middle-color);
+	border: 0;
+	box-shadow: none;
+}
+html .delay-info::before,
+html .delay-info::after {
+	display: none;
+}
+html .delay-info .delay-info-body {
+	padding: 0;
+}
+html .delay-info .delay-info-body h5 {
+	font-size: 30px;
+	line-height: 35px;
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	margin-top: 10px;
+	padding-top: 10px;
+	border-top: 4px solid #00000020;
+}
+html .delays-detailed-table,
+html .delay-info .delays-detailed-table-holder {
+	width: -moz-fit-content;
+	width: fit-content;
+}
+html .delay-info .delays-detailed-table-holder {
+	margin-top: 0;
+	border-radius: 1rem;
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+html .delay-info .delays-detailed-table-holder .delays-detailed-table-first-column {
+	box-shadow: none;
+	bottom: 0 !important;
+}
+html .delay-info .delays-detailed-table-holder .delays-detailed-table-first-column td {
+	background: var(--background-middle-dark-color);
+	border: 0;
+	color: var(--paragraph-color);
+	font-size: 13px;
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	border-bottom: 4px solid #00000020;
+}
+html .delay-info .delays-detailed-table-holder .delays-detailed-table-first-column tbody tr:last-child td {
+	border-bottom: 0;
+	border-bottom-left-radius: 1rem;
+}
+html .delay-info .delays-detailed-table-holder .delays-detailed-table-first-column thead td {
+	color: var(--low-priority-text-color);
+	text-transform: uppercase;
+	border-top-left-radius: 1rem;
+	padding-top: 10px;
+}
+html .delay-info thead td,
+html .delay-info .delays-detailed-table table td {
+	border: 0;
+	background: var(--background-middle-color);
+}
+html .delay-info .delays-detailed-table table tr {
+	border-bottom: 4px solid #00000020;
+}
+html .delay-info .delays-detailed-table table tbody tr:last-child {
+	border-bottom: 0;
+}
+html .delay-info thead td {
+	font-size: 13px;
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	color: var(--low-priority-text-color);
+	text-transform: uppercase;
+}
+html .delay-info tbody td {
+	color: var(--paragraph-color);
+}
+html .delay-info .delays-detailed-table table td:nth-child(even) {
+	background: var(--background-middle-dark-color);
+}
+html .delay-info .delays-detailed-table thead td:last-child {
+	border-top-right-radius: 1rem;
+}
+html .delay-info .delays-detailed-table tbody tr:last-child td:last-child {
+	border-bottom-right-radius: 1rem;
+}
+html .delays-documents {
+	border: 0;
+	border-radius: 1rem;
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+html .delay-info .delays-documents thead tr {
+	box-shadow: none;
+}
+html .delay-info .delays-documents tr td {
+	background: var(--background-middle-color);
+	border-bottom: 4px solid #00000020;
+}
+html .delay-info .delays-documents tbody tr:last-child td {
+	border-bottom: 0;
+}
+html .delay-info .delays-documents td:nth-child(odd) {
+	background: var(--background-middle-dark-color);
+}
+html .delay-info .delays-documents thead td:first-child {
+	border-top-left-radius: 1rem;
+}
+html .delay-info .delays-documents thead td:last-child {
+	border-top-right-radius: 1rem;
+}
+html .delay-info .delays-documents tbody tr:last-child td:first-child {
+	border-bottom-left-radius: 1rem;
+}
+html .delay-info .delays-documents tbody tr:last-child td:last-child {
+	border-bottom-right-radius: 1rem;
+}
+html .delays-legend {
+	margin-bottom: 0;
+}
+html .delays-legend .legend-item .legend-icon {
+	border-radius: .5rem;
+	background: var(--background-front-color);
+	border: 0;
+	font-size: 13px;
+	font-weight: bold;
+}
+html .delay-mobile-details {
+	background: var(--background-back-color);
+}
+html .delay-mobile-details h3 {
+	font-size: 20px;
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	color: var(--title-color);
+}
+html .delay-mobile-details .split {
+	border-top: 4px solid var(--divider-color);
+}
+html .delays-legend .legend-title {
+	font-size: 13px;
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	color: var(--low-priority-text-color);
+	text-transform: uppercase;
+	margin-bottom: 5px;
+}
+html .delay-mobile-details .delay-subject,
+html .delay-mobile-details .delay-document {
+	border: 0;
+	background: var(--background-middle-color);
+	border-radius: 1rem;
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+html .delay-mobile-details .delay-subject thead td,
+html .delay-mobile-details .delay-document thead td {
+	background: none;
+	font-family: 'Inter', sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: var(--paragraph-color);
+}
+html .delay-mobile-details .delay-subject thead td:nth-child(2) {
+	text-transform: uppercase;
+	color: var(--low-priority-text-color);
+}
+html .delay-mobile-details .delay-subject tbody td,
+html .delay-mobile-details .delay-document tbody td:first-child {
+	font-family: 'Inter', sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: var(--low-priority-text-color);
+}
+html .delay-mobile-details .delay-subject tbody td:nth-child(2) {
+	text-transform: none;
+	color: var(--paragraph-color);
+	font-size: 13px;
+	font-family: 'Inter', sans-serif;
+	font-weight: normal;
+}
+html .delay-mobile-details .delay-document tbody span {
+	color: var(--paragraph-color);
+	font-family: 'Inter', sans-serif;
+	font-weight: normal;
+}
+html .delay-mobile-details .delay-document tr {
+	border-bottom: 0;
+}
+html .delay-mobile-details td:first-child,
+html .delay-mobile-details td:nth-child(2) span {
+	font-size: 13px;
+	font-family: 'Inter', sans-serif;
+	font-weight: normal;
+	color: var(--paragraph-color);
+}
+@media only screen and (max-width: 767px) {
+	html .delays-container .delays {
+		display: none;
+	}
+}
+
+/* ANALYTICS */
+html .analytics-report-container {
+	background: var(--background-middle-color);
+	border-radius: 1rem;	
+}
+html .analytics-pupilmarks-intro .btn-primary {
+	margin-left: 1rem;
+}
+html .analytics-pupilmarks-intro .analytics-ratings-table-intro-left,
+html .analytics-pupilmarks-intro .analytics-ratings-table-intro-right {
+	background: var(--background-middle-color);
+	border: 0;
+	border-radius: 1rem 0 0 1rem;
+	font-family: 'Inter', sans-serif;
+}
+html .analytics-pupilmarks-intro .analytics-ratings-table-intro-left {
+	width: 45% !important;
+}
+html .analytics-pupilmarks-intro .analytics-ratings-table-intro-right {
+	border-radius: 0 1rem 1rem 0;
+}
+html a.print.print-button::before {
+	background: var(--theme-color);
+	mask-size: cover;
+	-webkit-mask-size: cover;
+}
+html .report-container .no-data {
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+html .print-table {
+	background: none;
+
+	border: 0;
+
+	border-radius: 1rem;
+
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
+}
+html .print-table tr {
+	border: 0;
+	border-top: 4px solid #00000020;
+	border-bottom: 4px solid #00000020;
+}
+html .print-table thead tr {
+	border-top: 0;
+}
+html .print-table tbody tr:last-child {
+	border-bottom: 0;
+}
+html .print-table td,
+html .print-table th {
+	background: none !important;
+
+	padding: .5rem;
+
+	border: 0;
+}
+html .print-table th {
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+html .print-block h3,
+html .print-block strong, .print-table th {
+	font-family: 'Inter', sans-serif;
+}
+html .print-table td:nth-child(2n),
+html .print-table th:nth-child(2n) {
+	background: var(--background-middle-color) !important;
+	color: var(--paragraph-color);
+}
+html .print-table td:nth-child(2n+1),
+html .print-table th:nth-child(2n+1) {
+	background: var(--background-middle-dark-color) !important;
+	color: var(--paragraph-color);
+}
+html .print-table th span {
+	color: var(--low-priority-text-color);
+}
+html .print-table th:first-child {
+	border-top-left-radius: 1rem;
+}
+html .print-table th:last-child {
+	border-top-right-radius: 1rem;
+}
+html .print-table tr:last-child td:first-child {
+	border-bottom-left-radius: 1rem;
+}
+html .print-table tr:last-child td:last-child {
+	border-bottom-right-radius: 1rem;
+}
+html .analytics-report-table-holder {
+	border-top: 0;
+}
+html .analytics-report-table-holder .analytics-report-table-first-column {
+	border-radius: 1rem 0 0 1rem;
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
+}
+html .analytics-report-table-holder .analytics-report-table-first-column .table-header td {
+	border: 0;
+	border-top-left-radius: 1rem;
+	font-size: 13px;
+	font-family: 'Inter', sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: var(--low-priority-text-color);
+	background: var(--background-middle-dark-color);
+	padding: 0;
+	text-align: center;
+}
+html .analytics-report-table-holder .analytics-report-table-first-column .subsection-header td,
+html .analytics-report-table-holder .analytics-report-table-first-column td {
+	background: var(--background-middle-dark-color);
+	border: 0;
+	font-size: 13px;
+	color: var(--low-priority-text-color);
+	padding-left: 5px !important;
+}
+html .analytics-report-table-holder .analytics-report-table-first-column .subsection-header td {
+	color: var(--paragraph-color);
+}
+html .subsection-header {
+	border-top: 4px solid #00000020 !important;
+}
+html .analytics-report-table-holder .analytics-report-table-first-column tbody tr:last-child td {
+	border-bottom-left-radius: 1rem;
+}
+html .analytics-report-table {
+	margin-bottom: 20px;
+	border: 0;
+	border-radius: 0 1rem 1rem 0;
+	box-shadow: 0 -7px 14px -3px var(--shadow-color); /* Why the poop is it flipped over??? */
+}
+html .analytics-report-table table {
+	border: 0;
+}
+html .analytics-report-table table .subsection-header {
+	background: var(--background-middle-color);
+	height: 23px !important;
+}
+html .analytics-report-table table td {
+	border: 0;
+	color: var(--paragraph-color);
+}
+html .analytics-report-table table tbody .has-negatives::before {
+	border: 0;
+	background: var(--red-color);
+	left: 3px;
+	top: 3px;
+	width: 9px;
+	height: 9px !important;
+}
+html .analytics-info-more,
+html .analytics-info-more strong,
+html .analytics-info-more .title {
+	border: 0;
+	padding: 0;
+	font-family: 'Inter', sans-serif;
+	font-size: 15px;
+}
+html .analytics-report-table table thead tr {
+	background: var(--background-middle-color);
+}
+html .analytics-report-table table thead td {
+	font-family: 'Inter', sans-serif;
+	color: var(--low-priority-text-color);
+	font-size: 13px;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding-top: 1px;
+}
+html .analytics-report-table table tbody .score {
+	font-family: 'Inter', sans-serif;
+	color: var(--paragraph-color);
+	font-size: 13px;
+	font-weight: bold;
+}
+html .analytics-form-holder .form-group .control-label { 
+	font-family: 'Inter', sans-serif;
+	color: var(--low-priority-text-color);
+	font-size: 13px;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding-bottom: 0;
+	padding-top: 5px;
+}
+html .analytics-ratings-table-intro .checkbox {
+	display: none;
+}
+html .analytics-report-table table tbody .negative {
+	background: var(--red-color);
+	color: var(--red-accent-color);
+	border-radius: .5rem;
+}

@@ -1,0 +1,265 @@
+/* OAUTH */
+html .MainContainer {
+	background: var(--background-middle-color);
+	
+	border-radius: 1rem;
+
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
+}
+html .MainContainer .MainHeader {
+	background: var(--theme-gradient);
+
+	border-radius: 1rem 1rem 0 0;
+}
+html .SubHeader {
+	border: 0;
+}
+html .UserProfileSelector_Button {
+	background: none;
+
+	border: 0;
+	
+	border-radius: 1rem;
+
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
+
+	transition: .2s filter;
+}
+html .UserProfileSelector_Button:hover {
+	filter: brightness(0.8);
+}
+html .UserProfileSelector_Header {
+	background-color: var(--background-front-color);
+	color: var(--paragraph-color);
+
+	border: 0;
+
+	border-radius: 1rem 1rem 0 0;
+}
+html .UserProfileSelector_Description {
+	background: var(--background-front-color);
+	color: var(--paragraph-color);
+
+	border-radius: 0 0 1rem 1rem;
+}
+html .UserProfileSelector_SelectMarker {
+	background-color: transparent;
+}
+
+/* LOGIN PAGE */
+html .li-LoginWrapper .li-LoginInputContainer {
+	background: var(--background-middle-color);
+
+	border-radius: 1rem;
+
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
+}
+html .li-LoginWrapper .li-LoginInputContainer::after {
+	display: none;
+}
+html .li-ValidationError {
+	background: var(--red-color);
+	color: var(--paragraph-color);
+	
+	box-shadow: 0 7px 14px -3px var(--red-shadow-color);
+}
+html .li-ButtonDefault {
+	background: var(--theme-gradient);
+	color: var(--paragraph-color);
+
+	border: 0;
+
+	border-radius: 1rem;
+
+	cursor: pointer;
+
+	transition: .2s opacity, .2 box-shadow;
+}
+html .li-ButtonDefault:hover {
+	opacity: 0.8;
+
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
+}
+html .li-TextboxDefault {
+	background-color: var(--background-front-color);
+	color: var(--paragraph-color);
+
+	border-radius: 1rem;
+}
+
+/* TECH SUPPORT */
+html .tech-support-container .ts-head .container {
+	background: var(--theme-gradient);
+	color: var(--theme-accent-color);
+
+	border: 0;
+
+	border-radius: 1rem 1rem 0 0;
+}
+html .tech-support-container .ts-content .container {
+	background: var(--background-middle-color);
+
+	border: 0;
+
+	border-radius: 0 0 1rem 1rem;
+}
+html .tech-support-container .form-row .input,
+html .tech-support-container .form-row .textarea {
+	background: var(--background-front-color) !important /* Why did they use this here???? */;
+	color: var(--paragraph-color);
+
+	font-family: 'Inter', sans-serif;
+
+	border-radius: .5rem;
+
+	border: 0;
+}
+html .form-row .input::placeholder {
+	color: var(--paragraph-color);
+}
+html .tech-support-container input[type="submit"] {
+	background: var(--theme-color);
+	color: var(--theme-accent-color);
+
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+
+	border-radius: .5rem;
+
+	transition: .2s box-shadow, .2s filter;
+}
+html .tech-support-container input[type="submit"]:hover {
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
+
+	filter: brightness(0.8);
+}
+html .tech-support-container .ts-head h1,
+html .tech-support-container .ts-head h3,
+html .tech-support-container .message-meta .message-meta-item-attr,
+html .form-row label {
+	font-family: 'Inter', sans-serif;
+}
+html .tech-support-container .ts-head h1 {
+	font-weight: bold;
+	font-size: 25px;
+}
+html .form-row label {
+	padding-top: 12px;
+	padding-bottom: 3px !important;
+}
+html .tech-support-close,
+html .tech-support-close:hover {
+	filter: invert() brightness(var(--theme-accent-icon-brightness));
+
+	transition: .2s opacity;
+}
+html .tech-support-close:hover {
+	opacity: 0.7;
+}
+
+/* 404 PAGE */
+html .notice-holder .bubble {
+	background: var(--red-color);
+
+	padding-top: .25rem;
+
+	border: 0;
+
+	border-radius: 1rem;
+
+	box-shadow: 0 7px 14px -3px var(--red-shadow-color);
+}
+html .notice-holder .bubble::after,
+html .notice-holder .bubble::before {
+	display: none;
+}
+html .notice-holder .bubble .b-error {
+	color: var(--red-accent-color);
+}
+html .error-img {
+	display: none; /* WHAT IS THAT GIF??? It should be publicly laughed at */
+}
+html .notice-holder .error-bottom .btn-default {
+	background: var(--theme-color);
+	color: var(--theme-accent-color);
+
+	border-radius: 1rem;
+
+	transition: .2s filter, .2s box-shadow;
+}
+html .notice-holder .error-bottom .btn-default:hover {
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
+
+	filter: brightness(0.8);
+}
+html .notice-holder .error-bottom .btn-default .progress {
+	display: none; /* The dumb button design also needs to go (and the designer needs to go as well) */
+}
+
+/* TOUR */
+html .tour {
+	background: var(--background-front-color);
+
+	border-radius: 1rem;
+
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
+
+	opacity: 1;
+
+	transform: none;
+}
+html .popover-content {
+	font-family: 'Inter', sans-serif;
+}
+html .btn-tour-secondary,
+html .btn-tour-secondary:hover {
+	background: var(--background-middle-color);
+	color: var(--paragraph-color);
+
+	font-family: 'Inter', sans-serif;
+
+	transition: .2s filter, .2s box-shadow;
+}
+html .btn-tour-secondary:hover {
+	background: var(--background-middle-color);
+	color: var(--paragraph-color);
+
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
+
+	filter: brightness(0.8);
+}
+html .tour .btn-tour-primary,
+html .tour .btn-tour-primary:active,
+html .tour .btn-tour-primary:visited,
+html .tour .btn-tour-primary:focus {
+	background: var(--theme-color);
+	color: var(--theme-accent-color);
+
+	border-radius: .5rem;
+
+	transition: .2s filter, .2s box-shadow;
+}
+html .tour .btn-tour-primary:hover {
+	background: var(--theme-color);
+
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
+
+	filter: brightness(0.8);
+}
+html .popover[class*="tour-"] .popover-navigation [data-role="end"].disabled,
+html .popover[class*="tour-"] .popover-navigation [data-role="next"].disabled,
+html .popover[class*="tour-"] .popover-navigation [data-role="prev"].disabled {
+	background: var(--background-middle-color);
+	color: var(--paragraph-color);
+
+	opacity: 0.5;
+}
+html .tour strong,
+html span.text-larger {
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+}
+html .popover[class*="tour-"].left .arrow::after {
+	border-left-color: var(--background-front-color);
+}

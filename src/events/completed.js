@@ -1,0 +1,1 @@
+alert("didzītis mazais")

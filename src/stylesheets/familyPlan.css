@@ -1,0 +1,212 @@
+/* FAMILY PLAN */
+html .sys-content .section.plan-info-head {
+	background: var(--background-middle-color);
+
+	border-radius: 1rem 1rem 0 0;
+}
+html .sys-content .section.dark {
+	background: var(--background-front-color);
+
+	margin-bottom: 1rem;
+
+	border-radius: 0 0 1rem 1rem;
+}
+html .sys-content .section-stores {
+	display: none; /* Why are the "Get on App Store and Google Play" thingies even there? Completely unrelated so removing them */
+}
+html .announcement .warning .inner {
+	height: 2rem;
+
+	background: var(--red-color);
+	color: var(--red-accent-color);
+
+	padding: .5rem;
+
+	border-radius: .5rem;
+
+	box-shadow: 0 7px 14px -3px var(--red-shadow-color);
+}
+html .plan-info-head .announcement {
+	color: var(--title-color);
+	background: none;
+}
+html .btn-transparent,
+html .btn-transparent:focus,
+html .btn-transparent:hover {
+	background: var(--theme-color);
+	color: var(--theme-accent-color);
+
+	font-weight: bold;
+	text-transform: uppercase;
+
+	border: 0;
+
+	transition: .2s filter, .2s box-shadow;
+}
+html .btn-transparent:focus,
+html .btn-transparent:hover {
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
+
+	filter: brightness(0.8);
+}
+html .btn-transparent::after {
+	border: 2px solid var(--theme-accent-color);
+	border-width: 0 2px 2px 0;
+}
+html .carousel-inner .item:nth-child(1),
+html .carousel-inner .item:nth-child(3) {
+	background: var(--theme-gradient) !important;
+	color: var(--theme-accent-color);
+}
+html .carousel-inner .item:nth-child(2),
+html .carousel-inner .item:nth-child(4) {
+	background: var(--background-front-color) !important;
+}
+html .section.plan-pros {
+	background: var(--background-middle-color);
+}
+html .section.plan-pros .row .col-md-4 {
+	display: none; /* The hats need to go */
+}
+html .section.plan-pros .row .col-md-8 {
+	width: 100%;
+
+	padding-left: 25%;
+	padding-right: 25%;
+}
+html .section.plan-pros .pros-list li:not(:last-child)::after {
+	border-bottom: 4px solid var(--divider-color);
+}
+html .family-plan-carousel .carousel-control.left::before,
+html .family-plan-carousel .carousel-control.right::before {
+	border: 6px solid var(--theme-accent-color);
+	border-width: 0 6px 6px 0;
+}
+html .family-plan-carousel .carousel-control.left::before {
+	left: 1rem;
+}
+html .family-plan-carousel .carousel-control.right::before {
+	right: 1rem;
+}
+html .family-plan-carousel .carousel-indicators li {
+	background: var(--background-middle-color);
+
+	border: 0;
+
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
+
+	transition: .2s width, .2s height;
+}
+html .family-plan-carousel .carousel-indicators .active {
+	background: var(--theme-color);
+}
+
+/* FAMILY PLAN COMPARISON */
+html .l-MainFooter {
+	padding: 1rem;
+}
+html .l-MainHeader_Title {
+	background: var(--theme-gradient);
+	color: var(--theme-accent-color);
+
+	border-radius: 1rem;
+}
+html .l-MainHeader_Logo {
+	filter: brightness(var(--theme-accent-icon-brightness));
+}
+html .po-PaymentOptions_Item div.sw-GridBox {
+	background: var(--background-middle-color);
+	color: var(--paragraph-color);
+
+	border: 0;
+
+	border-radius: 1rem;
+
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
+}
+html .po-BestDeal {
+	display: none; /* The "Izdevīgi" thing is dumb so let's just remove it */
+}
+html .sw-Price_Value {
+	color: var(--title-color);
+}
+html .sw-Price_Value::before {
+	filter: brightness(10) brightness(var(--icon-brightness));
+}
+html .sw-Price::after {
+	border-top: 4px solid var(--divider-color);
+}
+html .sw-InfoMessage-secondary {
+	color: var(--low-priority-text-color);
+}
+html .po-PaymentOptions .row {
+	margin-left: calc(12.5% + 22.5px); /* Centers the plans */
+}
+html .sw-BoxButton {
+	background: var(--theme-color);
+	color: var(--theme-accent-color);
+
+	width: calc(100% - 2rem);
+
+	margin-left: 1rem;
+
+	border: 0;
+
+	border-radius: 1rem;
+
+	transition: .2s filter, .2s box-shadow;
+}
+html .sw-BoxButton:hover {
+	filter: brightness(0.8);
+
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
+}
+html .sw-BoxButton:hover,
+html .sw-BoxButton:focus {
+	color: var(--theme-accent-color);
+}
+html .sw-BoxButton::after {
+	border: solid 2px var(--theme-accent-color);
+	border-width: 0 2px 2px 0;
+}
+html .sw-BoxButton_Row:last-child {
+	border-top: solid 1px var(--theme-accent-color);
+}
+html .sw-GridBox {
+	background: var(--background-middle-color);
+	color: var(--paragraph-color);
+
+	padding-bottom: 1rem;
+
+	border: 0;
+
+	border-radius: 1rem;
+
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
+}
+html .sw-GridBox_Title,
+html .sw-GridBox_SectionImageTitle,
+html .sw-GridBox_SectionTitle {
+	background: var(--theme-gradient);
+	color: var(--theme-accent-color);
+
+	font-weight: bold;
+	text-transform: uppercase;
+
+	border: 0;
+
+	border-radius: 1rem 1rem 0 0;
+}
+html .st-PhoneNumber {
+	background: none;
+	color: var(--paragraph-color);
+}
+html .sw-BoxButton_Row-secondary {
+	color: var(--theme-accent-color);
+}
+html .sw-BoxButton_Row-secondary::before {
+	content: "(";
+}
+html .sw-BoxButton_Row-secondary::after {
+	content: ")";
+}

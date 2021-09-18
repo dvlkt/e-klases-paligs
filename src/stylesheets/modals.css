@@ -1,0 +1,224 @@
+/* MARK CARD */
+html .modal-body {
+	background: var(--background-middle-color);
+
+	border-radius: 1rem;
+
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+html .modal-mark-card .mark-card-inner-title {
+	border-radius: 1rem 1rem 0 0;
+	background: var(--background-front-color);
+	border: 0;
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+}
+html .modal-mark-card .mark-card-inner-title span {
+	text-transform: uppercase;
+}
+mark-card-inner-title,
+html .mark-card-inner-content p {
+	font-family: 'Inter', sans-serif;
+}
+html .mark-card-inner-graph {
+	background: var(--background-front-color);
+
+	margin-left: .5rem;
+
+	border: 0;
+}
+html .mark-card-inner-graph .mark-card-inner-graph-descr {
+	border-right: 4px solid #00000020;
+}
+html .mark-card-inner-graph .mark-card-inner-graph-descr p {
+	font-family: 'Inter', sans-serif;
+}
+html .mark-card-inner-graph-image {
+	padding: 0;
+}
+html .mark-card-inner-graph .mark-card-inner-graph-image .tiny-graph {
+	border-bottom: 4px solid #00000020;
+}
+html .mark-card-inner-graph-image path[fill="#ACACAC"] {
+	fill: var(--background-middle-color);
+}
+html .mark-card-inner-graph .mark-card-inner-graph-image path[fill="#009AE3"] {
+	fill: var(--theme-color);
+}
+html .mark-card-inner-graph .mark-card-inner-graph-image .btn-test-report {
+	margin-left: 5px;
+	margin-right: 5px;
+	font-family: 'Inter', sans-serif;
+	width: calc(100% - 10px);
+}
+html .mark-card-inner-graph .mark-card-inner-graph-image .btn-test-report::before {
+	filter: invert() brightness(var(--icon-brightness));
+}
+html .modal-mark-card .mark-card-inner {
+	background: var(--background-front-color);
+	color: var(--paragraph-color);
+
+	border-radius: 1rem;
+
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+
+	border: 0;
+}
+html .modal-mark-card .date {
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+/* LEGEND */
+html .modal-technical h1 {
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	font-size: 2rem;
+}
+html .modal-technical .legend-dialog .legend-category {
+	border: 0;
+	border-radius: 1rem;
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	background: var(--background-front-color);
+	font-family: 'Inter', sans-serif;
+}
+html .modal-technical .legend-dialog .legend-category .legend-category-title {
+	background: none;
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+html .modal-technical .legend-dialog .legend-category .legend-attribute {
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+}
+html .modal-close {
+	filter: brightness(10) brightness(var(--icon-brightness));
+}
+
+/* TIME TABLE */
+html .modal-technical .timetible-item .name { /* Did you mean... timetable..? */
+	font-family: 'Inter', sans-serif;
+	border-right: 3px solid #00000020;
+}
+html .modal-dialog.timetable-dialog.empty .modal-body {
+	background: var(--background-middle-color);
+	padding-top: 4rem;
+}
+html .modal-dialog.timetable-dialog.empty .modal-body p {
+	font-family: 'Inter', sans-serif;
+	font-size: 14px;
+}
+html .timetable-dialog .modal-content {
+	transform: scale(0.1);
+	opacity: 0;
+	transition: .2s transform, .2s opacity;
+}
+html .modal-dialog .modal-content {
+	background: none !important;
+}
+
+/* RECIPIENTS MODAL */
+html .RecipientsModal__GroupContainer {
+	border-radius: 0 0 1rem 1rem;
+}
+html .RecipientsModal__Title {
+	font-size: 25px;
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	color: var(--title-color);
+}
+html .RecipientsModal__GroupContainer .RecipientGroup {
+	border: 0;
+	border-radius: .5rem;
+	background: var(--background-front-color);
+	transition: .2s box-shadow, .2s filter;
+	font-size: 14px;
+	font-family: 'Inter', sans-serif;
+	color: var(--paragraph-color);
+}
+html .RecipientsModal__GroupContainer .RecipientGroup:hover {
+	filter: brightness(0.8);
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+html .RecipientsModal__GroupContainer .RecipientGroup__Button {
+	background-color: transparent;
+	background-size: cover;
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+	filter: invert() brightness(var(--icon-brightness));
+}
+html #RecipientsModal .RecipientHeader {
+	background: var(--background-middle-color);
+}
+html .RecipientHeader {
+	transition: .2s opacity;
+}
+html .RecipientHeader:hover {
+	opacity: 0.7;
+}
+html .RecipientHeader .RecipientHeader__ButtonBack::before {
+	content: "";
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	margin-right: 5px;
+	filter: invert() brightness(var(--icon-brightness));
+}
+html .RecipientHeader .RecipientHeader__GroupName {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: 'Inter', sans-serif;
+	color: var(--paragraph-color);
+}
+html .RecipientsModal__StudyYear,
+html .RecipientsModal__StudyYear--selected {
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	color: var(--paragraph-color);
+	border-bottom: 0;
+	transition: .2s opacity;
+	font-size: 13px;
+}
+html .RecipientsModal__StudyYear--selected {
+	color: var(--theme-color);
+}
+html .RecipientsModal__StudyYear:hover {
+	opacity: 0.7;
+}
+html .Modal__Body .RecipientSearch,
+html .Modal__Body .RecipientSearch:focus {
+	border-radius: .5rem;
+	border: 0;
+	background: var(--background-front-color);
+	color: var(--paragraph-color);
+	font-family: 'Inter', sans-serif;
+}
+html .RecipientList .Recipient {
+	border-bottom: 4px solid #00000020;
+	font-family: 'Inter', sans-serif;
+	color: var(--paragraph-color);
+	font-size: 15px;
+	transition: .2s opacity;
+}
+html .RecipientList .Recipient:hover {
+	opacity: 0.7;
+}
+html .RecipientsModal__List .RecipientsModal__Item {
+	background: #00000000;
+	padding-left: 1rem;
+	font-size: 15px;
+}
+html .RecipientsModal__List .RecipientsModal__Item:not(:last-child) {
+	border-bottom: 4px solid #00000020;
+}
+html .RecipientsModal__List .RecipientsModal__Item::before {
+	content: "";
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	margin-right: .5rem;
+	filter: invert() brightness(var(--icon-brightness));
+}

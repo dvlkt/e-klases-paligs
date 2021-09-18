@@ -1,0 +1,524 @@
+html .students-journal-header {
+	background: var(--background-back-color);
+}
+html .xs-diary-lesson-times,
+html .xs-diary-lesson-times:hover {
+	color: var(--theme-color);
+}
+html .lessons-table {
+	background: var(--background-middle-dark-color);
+
+	border: 0;
+
+	border-radius: 1rem;
+
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
+}
+html .lessons-table tr {
+	border: 0;
+}
+html .student-journal-lessons-table-holder .lessons-table .head td,
+html .student-journal-lessons-table-holder .lessons-table thead td,
+html .diary-container .lessons-table thead td {
+	background: var(--background-middle-color);
+
+	font-family: 'Inter', sans-serif;
+
+	border: 0;
+}
+html .student-journal-lessons-table-holder .lessons-table thead td,
+html .diary-container .lessons-table thead td {
+	color: var(--low-priority-text-color);
+	background: var(--background-middle-color);
+
+	font-weight: bold;
+	text-transform: uppercase;
+
+	text-align: center;
+
+	border: 0;
+}
+html .student-journal-lessons-table-holder .lessons-table thead td.first-column,
+html .diary-container .lessons-table thead td.first-column {
+	border-top-left-radius: 1rem;
+}
+html .student-journal-lessons-table-holder .lessons-table thead td.score,
+html .diary-container .lessons-table thead td.score {
+	border-top-right-radius: 1rem;
+}
+html .no-data {
+	background: var(--background-middle-dark-color);
+	text-align: center;
+	border-radius: 1rem;
+}
+html .no-data .inform {
+	background: none;
+}
+html .no-data .inform span {
+	color: var(--paragraph-color);
+
+	font-family: 'Inter', sans-serif;
+}
+html .student-journal-lessons-table-holder .lessons-table tbody .first-column,
+html .diary-container .lessons-table tbody .first-column {
+	background: var(--background-middle-color);
+
+	border: 0;
+	border-bottom: 4px solid #00000020;
+	border-top: 4px solid #00000020;
+}
+html .student-journal-lessons-table-holder .lessons-table tbody .title,
+html .diary-container .lessons-table tbody .title {
+	color: var(--paragraph-color);
+
+	font-weight: bold;
+	font-size: 13px;
+}
+html .student-journal-lessons-table-holder .lessons-table tbody .number,
+html .diary-container .lessons-table tbody .number {
+	color: var(--low-priority-text-color);
+
+	font-weight: bold;
+}
+html .student-journal-lessons-table-holder .lessons-table tbody .room,
+html .diary-container .lessons-table tbody .room {
+	color: var(--low-priority-text-color);;
+}
+html .student-journal-lessons-table-holder .lessons-table td,
+html .diary-container .lessons-table td {
+	background: var(--background-middle-color);
+	color: var(--paragraph-color);
+	border: 0;
+	border-bottom: 4px solid #00000020;
+	border-top: 4px solid #00000020;
+}
+html .lessons-table td .subject-text-draft::before,
+html .student-journal-lessons .lesson-subitem .description .subject-text-draft::before {
+	color: var(--low-priority-text-color);
+}
+html .student-journal-lessons-table-holder .lessons-table tr:last-child td,
+html .diary-container .lessons-table tr:last-child td {
+	border: 0;
+}
+html .student-journal-lessons-table-holder .lessons-table td:nth-child(odd),
+html .diary-container .lessons-table td:nth-child(odd) {
+	background: var(--background-middle-dark-color);
+}
+html .student-journal-lessons-table-holder .lessons-table tbody .number--lessonNotInDay,
+html .actual-lessons .lesson-title .number--lessonNotInDay,
+html .student-journal-lessons .lesson-title .number--lessonNotInDay {
+	display: none;
+}
+html .student-journal-lessons-table-holder .lessons-table tbody tr:last-child td:nth-child(1),
+html .diary-container .lessons-table tbody tr:last-child td:nth-child(1) {
+	border-bottom-left-radius: 1rem;
+}
+html .student-journal-lessons-table-holder .lessons-table tbody tr:last-child td:last-child,
+html .diary-container .lessons-table tbody tr:last-child td:last-child {
+	border-bottom-right-radius: 1rem;
+}
+html .student-journal-lessons-table-holder .lessons-table a.file,
+html .diary-container .lessons-table a.file {
+	display: inline;
+}
+html .student-journal-lessons-table-holder .lessons-table a.file::before,
+html .diary-container .lessons-table tbody a.file::before {
+	background: var(--theme-color);
+	mask-size: cover;
+	-webkit-mask-size: cover;
+	width: 13px;
+	height: 13px;
+}
+html .lessons-table td:last-of-type span.score,
+html .actual-lessons span.score,
+html .student-journal-lessons span.score,
+html .diary-container .lessons-table span.score {
+	border: 0;
+	background: var(--background-front-color);
+	font-size: 0.8rem;
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	border-radius: 10px;
+	padding: .5rem;
+	font-weight: bold;
+	transition: .2s opacity;
+}
+html .lessons-table td:last-of-type span.score:hover {
+	opacity: 0.7;
+}
+html .lessons-table td:last-of-type span.score.warning {
+	background: var(--red-color);
+	box-shadow: 0 4px 10px -3px var(--red-shadow-color);
+}
+html .ThirdPartyEvent--Active {
+	background: var(--background-front-color);
+	border-radius: 1rem;
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+html .ThirdPartyEvent__Content {
+	border: 0;
+}
+html .ThirdPartyEvent__Info {
+	border: 0;
+}
+html .ThirdPartyEvent--e-klase-video .ThirdPartyEvent__Logo::before,
+html .ThirdPartyEvent__Text,
+html .ThirdPartyEvent__Time {
+	color: var(--low-priority-text-color);
+
+	font-weight: bold;
+	text-transform: uppercase;
+}
+html .ThirdPartyEvent--Active .ThirdPartyEvent__Status {
+	background: var(--theme-color);
+
+	transition: .2s filter;
+}
+html .ThirdPartyEvent--Active .ThirdPartyEvent__Status::after {
+	display: none !important;
+}
+html .ThirdPartyEvent__Status:hover {
+	background: var(--theme-color) !important;
+
+	filter: brightness(0.8);
+}
+html .Status__Text {
+	color: var(--paragraph-color);
+
+	font-weight: bold;
+	text-transform: uppercase;
+}
+html .ThirdPartyEvent--Deleted {
+	background: var(--background-front-color);
+
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+html .student-journal-lessons-table-holder h2 {
+	font-family: 'Inter', sans-serif;
+	text-transform: capitalize;
+	font-weight: bold;
+	font-size: 18px;
+	margin-top: 20px;
+	margin-bottom: 5px;
+}
+html .student-journal-lessons-table-holder h2 span.hide-in-print {
+	color: var(--low-priority-text-color);
+	text-transform: none;
+}
+html .students-journal-header .week-selector .week-selector-next,
+html .students-journal-header .week-selector .week-selector-prev {
+	border-left: 0;
+	border-right: 0;
+	width: 20px;
+	height: 20px;
+	background: var(--theme-color);
+	mask-size: cover;
+	mask-position: center;
+	-webkit-mask-size: cover;
+	-webkit-mask-position: center;
+	transition: .2s opacity;
+}
+html .students-journal-header .week-selector .week-selector-next:hover,
+html .students-journal-header .week-selector .week-selector-prev:hover {
+	opacity: 0.7;
+}
+html .student-journal-lessons .actual-lessons-item,
+html .actual-lessons .actual-lessons-item {
+	background: var(--background-middle-color);
+	border-radius: 1rem;
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	transition: .2s max-height;
+	max-height: 54px;
+}
+html .actual-lessons .actual-lessons-item.open,
+html .student-journal-lessons .actual-lessons-item.open {
+	max-height: 500px; /* Set the max height to be something really really high so that it'll never be reached and there is a transition animation */
+}
+html .actual-lessons .lesson-subitem .description,
+html .student-journal-lessons .lesson-subitem .description {
+	color: var(--paragraph-color);
+
+	font-size: 0.8rem;
+}
+html .actual-lessons .lesson-subitem .title,
+html .student-journal-lessons .lesson-subitem .title {
+	color: var(--low-priority-text-color);
+	font-family: 'Inter', sans-serif;
+	text-transform: uppercase;
+	font-size: 0.7rem;
+	font-weight: bold;
+}
+html .actual-lessons .actual-lessons-item.has-content .lesson-title::after,
+html .student-journal-lessons .actual-lessons-item.has-content .lesson-title::after {
+	border-color: var(--low-priority-text-color) #00000000 #00000000;
+}
+html .actual-lessons .lesson-subitem,
+html .student-journal-lessons .lesson-subitem {
+	border: 0;
+}
+html .actual-lessons .lesson-title,
+html .student-journal-lessons .lesson-title {
+	background: none;
+	box-shadow: none;
+}
+html .actual-lessons .lesson-title .title,
+html .student-journal-lessons .lesson-title .title {
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+}
+html .students-journal-header .week-selector .selected-period {
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	font-size: 15px;
+	user-select: none;
+	transition: .2s opacity;
+}
+html .students-journal-header .week-selector .selected-period:hover {
+	opacity: 0.7;
+}
+html .students-journal-header .week-selector .selected-period::after {
+	background: var(--theme-color);
+	mask-size: cover;
+	-webkit-mask-size: cover;
+}
+html .students-journal-header .week-selector .selected-period-mobile {
+	background: var(--background-middle-color);
+	
+	border-radius: 1rem;
+
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+
+	transition: .2s opacity;
+}
+html .students-journal-header .week-selector .selected-period-mobile .cal-icon {
+	filter: invert() brightness(--icon-brightness);
+}
+html .students-journal-header .week-selector.calendar-open .selected-period-mobile {
+	background: var(--background-middle-color);
+	border: 0;
+	border-radius: 1rem;
+	opacity: 0.7;
+}
+html .students-journal-header .week-selector .selected-period-mobile .cal-icon {
+	background: var(--theme-color);
+	mask-size: cover;
+	-webkit-mask-size: cover;
+	margin: 10px;
+	width: 30px;
+	height: 30px;
+}
+html .students-journal-header .students-journal-header-links a.print::before {
+	background: var(--theme-color);
+	mask-size: cover;
+	-webkit-mask-size: cover;
+}
+html .actual-lessons h2 {
+	font-weight: bold;
+	font-size: 30px;
+}
+html .actual-lessons .lesson-title .title,
+html .student-journal-lessons .lesson-title .title {
+	color: var(--title-color);
+}
+html .actual-lessons .lesson-title .number,
+html .student-journal-lessons .lesson-title .number,
+html .actual-lessons .lesson-title .room,
+html .student-journal-lessons .lesson-title .room {
+	color: var(--low-priority-text-color);
+}
+html .actual-lessons .lesson-title .room,
+html .student-journal-lessons .lesson-title .room {
+	font-style: normal;
+	font-weight: bold;
+}
+
+/* DIARY ANALYTICS */
+html .diary-analytics {
+	background: var(--background-middle-color);
+	color: var(--paragraph-color);
+	padding: 1rem;
+	border-radius: 1rem;
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+html .diary-analytics h2 {
+	font-size: 15px;
+}
+html .diary-analytics span.grade {
+	background: var(--background-front-color);
+	color: var(--paragraph-color);
+	font-weight: bold;
+	font-size: 0.8rem;
+	padding: .5rem;
+	border-radius: .5rem;
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	cursor: pointer;
+	transition: .2s opacity;
+}
+html .diary-analytics span.grade:not(.no-pointer):hover {
+	opacity: 0.7;
+}
+html .diary-analytics span.grade.no-pointer {
+	cursor: default;
+}
+html .diary-analytics span.low-priority {
+	color: var(--low-priority-text-color);
+	font-size: 0.8rem;
+	text-transform: none;
+}
+html .diary-analytics h2 {
+	text-transform: none;
+}
+html .diary-analytics h2:first-child {
+	margin-top: 0;
+}
+
+/* PRINT TABLE */
+html #centerContainer .options.no-print label {
+	color: var(--paragraph-color);
+}
+html #centerContainer table,
+html #centerContainer tr,
+html #centerContainer td,
+html #centerContainer th {
+	border: 0;
+}
+html #centerContainer tr {
+	border-bottom: solid 4px #00000020;
+	border-top: solid 4px #00000020;
+}
+html #centerContainer thead tr {
+	border-top: 0;
+}
+html #centerContainer tr:last-child {
+	border-bottom: 0;
+}
+html #centerContainer tr td.first-column {
+	padding-left: .5rem;
+}
+html #centerContainer thead tr td {
+	background: none;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-style: regular;
+}
+html #centerContainer .first-column .number {
+	font-weight: bold;
+	color: var(--low-priority-text-color);
+}
+html #centerContainer .room {
+	color: var(--low-priority-text-color);
+}
+html .btn-print {
+	border-radius: 1rem;
+	background: var(--theme-color);
+	font-weight: bold;
+	text-transform: uppercase;
+	transition: .2s box-shadow, .2s filter;
+}
+html .btn-print:hover {
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
+	filter: brightness(0.8);
+}
+html #centerContainer .bottom small {
+	color: var(--low-priority-text-color);
+	font-size: 11px;
+}
+
+/* TEST REPORT */
+html .rating-container .test-wrap,
+html .rating-wrap {
+	background: none;
+}
+html .rating-container .test-detailed-data,
+html .rating-wrap .rating-table {
+	background: var(--background-middle-color);
+
+	border: 0;
+
+	border-radius: 1rem;
+
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
+}
+html .rating-container .test-detailed-data span,
+html .rating-container .test-detailed-data label,
+html .rating-container .test-promo h1,
+html .rating-wrap .task-rating,
+html .rating-container .test-promo h2,
+html .rating-wrap .item .col:first-of-type,
+html .item .col:first-of-type .no,
+html .rating-wrap .item .col .data,
+html .rating-wrap .item .col:last-of-type,
+html .rating-wrap .final .col:last-of-type::after,
+html .rating-wrap .tfooter .col:first-of-type span,
+html .rating-wrap .item .col:last-of-type .data {
+	font-family: 'Inter', sans-serif;
+}
+html .rating-container .test-promo h1 {
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+html .rating-container .test-promo h1 p {
+	font-size: 2rem;
+}
+html .rating-wrap .item {
+	border: 0;
+}
+html .rating-wrap .first .col:first-of-type,
+html .rating-wrap .first .col,
+html .rating-wrap .first .col:last-of-type {
+	background: none;
+
+	text-align: center;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-family: 'Inter', sans-serif;
+}
+html .item .col:first-of-type .no,
+html .rating-wrap .final .col:last-of-type::after,
+html .rating-wrap .item .col:last-of-type .data,
+html .rating-wrap .total .col:first-of-type {
+	font-weight: bold;
+}
+html .rating-wrap .item {
+	border: 0;
+	border-bottom: 4px solid #00000020;
+	border-top: 4px solid #00000020;
+}
+html .rating-wrap .item:first-child,
+html .rating-wrap .item:last-child {
+	border: 0;
+}
+html .rating-wrap .item:first-child .col {
+	border: 0;
+}
+html .rating-wrap .item .col:last-of-type {
+	background: none;
+	border: 0;
+}
+html .rating-wrap .item .col:nth-of-type(2n) {
+	background: var(--background-middle-dark-color);
+}
+html .rating-wrap .item:first-child .col:nth-of-type(2n) {
+	border-bottom: 4px solid #00000020;
+}
+html .rating-wrap .total .col:first-of-type::before,
+html .rating-wrap .total .col:first-of-type::after,
+html .rating-wrap .total .col:last-of-type::before,
+html .rating-wrap .fulfillment .col:last-of-type::after,
+html .rating-wrap .fulfillment .col:last-of-type::after,
+html .rating-wrap .final .col:last-of-type::after {
+	display: none;
+}
+html .rating-wrap .rating-table::after {
+	display: none;
+}
+html .chart-wrap {
+	background: var(--background-back-color);
+}
+html .chart-wrap h3 {
+	color: var(--title-color);
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+}

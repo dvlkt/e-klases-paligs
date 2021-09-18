@@ -18,46 +18,14 @@
 		"storage"
 	],
 
-	"content_scripts": [
-		{
-			"matches": ["*://*.e-klase.lv/*"],
-			"js": [
-				"themes/dark.js",
-				"themes/light.js",
-				"themeApplier.js"
-			],
-			"css": [
-				"stylesheets/style.css",
-				"stylesheets/icons.css"
-			],
-			"run_at": "document_start"
-		},
-		{
-			"matches": ["*://*.e-klase.lv/*"],
-			"js": [
-				"utils.js",
-				"ads/familyPack.js",
-				"profilePicture.js",
-				"patches.js",
-				"animations.js",
-				"analytics/week.js",
-				"branding/logos.js",
-				"branding/favicons.js",
-				"branding/main.js"
-			],
-			"run_at": "document_end"
-		}
-	],
-
 	"browser_action": {
 		"default_icon": "res/light/icon-64.png",
 		"default_title": "E-klases Palīgs",
 		"default_popup": "popup/index.html"
 	},
 
-	"browser_specific_settings": {
-		"gecko": {
-		  "id": "dlektauers@gmail.com"
-		}
-	}
+	"web_accessible_resources": [
+		"res/title-dark.png",
+		"res/title-light.png"
+	]
 }
