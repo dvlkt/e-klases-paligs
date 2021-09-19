@@ -52,7 +52,7 @@ html .mark-card-inner-graph .mark-card-inner-graph-image .btn-test-report {
 	width: calc(100% - 10px);
 }
 html .mark-card-inner-graph .mark-card-inner-graph-image .btn-test-report::before {
-	filter: invert() brightness(var(--icon-brightness));
+	filter: invert() brightness(var(--theme-accent-icon-brightness));
 }
 html .modal-mark-card .mark-card-inner {
 	background: var(--background-front-color);

@@ -22,6 +22,8 @@
 
 /src/themes/ - The default theme JSON files
 
+/src/animations/ - All of the animated components
+
 /src/tweaks/branding.js - Adds the branding like favicons & logos
 
 /src/tweaks/pfp.js - Adds the profile picture

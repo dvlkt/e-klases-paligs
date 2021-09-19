@@ -22,6 +22,16 @@ chrome.storage.sync.get(`theme`, (res) => {
 	}
 });
 
+const sendThemeUpdateMessage = () => {
+	chrome.tabs.query({ url: "*://*.e-klase.lv/*" }, (tabs) => {
+		for (let tab of tabs) {
+			chrome.tabs.sendMessage(
+				tab.id,
+				`loadTheme`
+			);
+		}
+	});
+}
 lightThemeBtn.onclick = () => {
 	lightThemeBtn.className = `theme theme-light theme-selected`;
 	darkThemeBtn.className = `theme theme-dark`;
@@ -30,6 +40,8 @@ lightThemeBtn.onclick = () => {
 	document.body.className = `light-theme`;
 
 	changeNotice.style.top = `4rem`;
+
+	sendThemeUpdateMessage();
 }
 darkThemeBtn.onclick = () => {
 	lightThemeBtn.className = `theme theme-light`;
@@ -39,6 +51,8 @@ darkThemeBtn.onclick = () => {
 	document.body.className = `dark-theme`;
 
 	changeNotice.style.top = `4rem`;
+
+	sendThemeUpdateMessage();
 }
 
 let profilePictureElement = document.getElementById(`profile-picture`);

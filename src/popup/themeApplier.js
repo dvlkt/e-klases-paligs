@@ -8,9 +8,9 @@ chrome.storage.sync.get(`theme`, (res) => {
 			}
 		}
 
-		darkThemeBtn.className += ` theme-selected`;
+		//darkThemeBtn.className += ` theme-selected`;
 	} else {
 		document.body.className = `light-theme`;
-		lightThemeBtn.className += ` theme-selected`;
+		//lightThemeBtn.className += ` theme-selected`;
 	}
 });

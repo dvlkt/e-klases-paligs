@@ -2,30 +2,83 @@
 	"manifest_version": 2,
 	"name": "E-klases Palīgs [BETA]",
 	"version": "0.4",
-
 	"description": "Labāks dizains un vairāk funkcijas.",
-
 	"icons": {
-		"512": "res/light/icon-512.png",
-		"256": "res/light/icon-256.png",
-		"128": "res/light/icon-128.png",
-		"64": "res/light/icon-64.png",
+		"16": "res/light/icon-16.png",
 		"32": "res/light/icon-32.png",
-		"16": "res/light/icon-16.png"
+		"64": "res/light/icon-64.png",
+		"128": "res/light/icon-128.png",
+		"256": "res/light/icon-256.png",
+		"512": "res/light/icon-512.png"
 	},
-
 	"permissions": [
-		"storage"
+		"storage",
+		"tabs"
 	],
-
 	"browser_action": {
 		"default_icon": "res/light/icon-64.png",
 		"default_title": "E-klases Palīgs",
 		"default_popup": "popup/index.html"
 	},
-
 	"web_accessible_resources": [
+		"res/title-light.png",
 		"res/title-dark.png",
-		"res/title-light.png"
-	]
+		"res/light/icon-256.png",
+		"res/dark/icon-256.png",
+		"themes/light.json",
+		"themes/dark.json"
+	],
+	"content_scripts": [
+		{
+			"matches": [
+				"*://*.e-klase.lv/*"
+			],
+			"js": [
+				"analytics/diary.js",
+				"analytics/main.js",
+				"animations/calendar.js",
+				"animations/headerDropdowns.js",
+				"animations/loadingSpinner.js",
+				"animations/mailActions.js",
+				"animations/modals.js",
+				"events/pageLoaded.js",
+				"events/pageLoading.js",
+				"events/urlChanged.js",
+				"stylesheets/themeLoader.js",
+				"tweaks/branding.js",
+				"tweaks/diary.js",
+				"tweaks/familyPack.js",
+				"tweaks/header.js",
+				"tweaks/home.js",
+				"tweaks/mail.js",
+				"tweaks/profilePicture.js",
+				"events/pageStarted.js"
+			],
+			"css": [
+				"stylesheets/analytics.css",
+				"stylesheets/components.css",
+				"stylesheets/dashboard.css",
+				"stylesheets/diary.css",
+				"stylesheets/familyPlan.css",
+				"stylesheets/faq.css",
+				"stylesheets/footer.css",
+				"stylesheets/header.css",
+				"stylesheets/home.css",
+				"stylesheets/icons.css",
+				"stylesheets/links.css",
+				"stylesheets/mail.css",
+				"stylesheets/main.css",
+				"stylesheets/miscellaneous.css",
+				"stylesheets/mobile.css",
+				"stylesheets/modals.css",
+				"stylesheets/settings.css"
+			],
+			"run_at": "document_start"
+		}
+	],
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "dlektauers@gmail.com"
+		}
+	}
 }
