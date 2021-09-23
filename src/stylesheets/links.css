@@ -16,7 +16,8 @@ html .ViewMessage__MessageBody a,
 html .diary-container .lessons-table a,
 html .home-open-lesson-times,
 html .actual-lessons .lesson-subitem .description a.file,
-html .student-journal-lessons .lesson-subitem .description a.file {
+html .student-journal-lessons .lesson-subitem .description a.file,
+html .li-HelpAction_Link {
 	color: var(--theme-color);
 	position: relative;
 	text-decoration: none;
@@ -44,8 +45,26 @@ html .ViewMessage__MessageBody a:hover,
 html .diary-container .lessons-table a:hover,
 html .home-open-lesson-times:hover,
 html .actual-lessons .lesson-subitem .description a.file:hover,
-html .student-journal-lessons .lesson-subitem .description a.file:hover {
+html .student-journal-lessons .lesson-subitem .description a.file:hover,
+html .li-HelpAction_Link:hover {
 	color: var(--theme-color);
 	text-decoration: none;
 	background-size: 100% 1px;
+}
+
+html .primary-article .additional-article-item h3,
+html .primary-article .article-item h3,
+html .additional-article-item h3,
+html .article-item h3 {
+	background-image: linear-gradient(var(--theme-color), var(--theme-color));
+	background-position: 0% 85%;
+	background-repeat: no-repeat;
+	background-size: 0% 7px;
+	transition: background-size .5s;
+}
+html .primary-article .additional-article-item h3:hover,
+html .primary-article .article-item h3:hover,
+html .additional-article-item h3:hover,
+html .article-item h3:hover {
+	background-size: 100% 7px;
 }

@@ -1,32 +1,23 @@
 html .login-form {
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
-
-	border-radius: 1rem;
-
+	border-radius: 22px;
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
-
 	padding: 0;
 }
 html .login-form-header {
 	background: var(--theme-gradient);
-
 	text-align: center;
-
 	padding: .5rem;
-	
-	border-radius: 1rem 1rem 0 0;
+	border-radius: 22px 22px 0 0;
 }
 html .login-form-header h4 {
 	height: auto;
-
 	background: none;
 	color: var(--theme-accent-color);
-
+	font-size: 22px;
 	font-weight: bold;
-
 	margin: 0;
-
 	padding: 0;
 }
 @media only screen and (max-width: 768px) {
@@ -43,12 +34,11 @@ html .form-content {
 html .form-content .form-control {
 	background: var(--background-front-color);
 	color: var(--paragraph-color);
-
 	font-family: 'Inter', sans-serif;
-	font-size: 16px;
-
-	border-radius: 21px;
-
+	font-size: 15px;
+	border-radius: 22px;
+	padding: 2px;
+	padding-left: 8px;
 	border: 0;
 }
 html .login-form .dummy-placeholder {
@@ -58,13 +48,15 @@ html .login-form .dummy-placeholder {
 html .login-form .btn-default {
 	background: var(--theme-color);
 	color: var(--theme-accent-color);
-
 	font-weight: bold;
-	text-transform: uppercase;
-
-	border-radius: 21px;
-
+	font-family: 'Inter', sans-serif;
+	font-size: 15px;
+	border-radius: 22px;
+	padding: 2px;
 	transition: .2s all;
+}
+html .login-form .checkbox {
+	margin-bottom: 10px;
 }
 html .login-form .btn-default:hover {
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
@@ -90,7 +82,7 @@ html .top-login-holder {
 }
 @media (max-width: 767px) {
 	html aside.hidden-xs {
-		display: block !important; /* ...and let's bring back the desktop login form, of course, optimized for mobile! */
+		display: block !important; /* ...and let's bring back the desktop login form, of course, adjusted for mobile */
 		width: 100%;
 	}
 	html .main-header .logo-holder .logo {
@@ -106,6 +98,17 @@ html .main-header .hamburger {
 	display: none !important;
 	/* Literally no one reads the articles and needs them (and especially on mobile - completely unneccessary)
 	and the hamburger icon messes everything up so it has to go */
+}
+html .primary-sticked header {
+	padding-top: 0;
+}
+html .main-header,
+html .primary-sticked .main-header,
+html .primary-stickied .main-header {
+	position: static;
+	width: 100%;
+	margin-bottom: 80px;
+	border-bottom: 4px solid #00000020;
 }
 html .header-info .date {
 	font-weight: bold;
@@ -125,12 +128,24 @@ html .socials li.fb:hover {
 }
 html .secondary-header {
 	background: var(--background-middle-color);
-
-	border-top: 4px solid #00000020;
-
-	border-radius: 0 0 1rem 1rem;
-
+	border-radius: 0 0 22px 22px;
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+html .secondary-header,
+html .secondary-header.sticked {
+	position: fixed;
+	top: 60px;
+	left: 0;
+	width: 100%;
+	z-index: 400;
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+html .secondary-header.slideInDown,
+html .secondary-header.slideUpDown,
+html .secondary-header.animated,
+html .secondary-header.stickied,
+html .secondary-header {
+	animation: none;
 }
 html .main-menu-item,
 html .main-menu-item:hover {
@@ -207,42 +222,35 @@ html h2.section-title {
 	}
 }
 
-html .additional-article-item,
-html .article-item {
-	background: var(--background-middle-color);
-
-	border-radius: 1rem;
-
-	box-shadow: 0 4px 10px -3px var(--shadow-color);
-}
 html .primary-article .additional-article-item .image,
-html .primary-article .article-item .image {
-	border-radius: 1rem 1rem 0 0;
-}
+html .primary-article .article-item .image,
 html .additional-article-item .image, .article-item .image {
-	border-radius: 1rem 0 0 1rem;
+	border-radius: 22px;
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
 }
 html .primary-article .additional-article-item h3,
 html .primary-article .article-item h3,
 html .additional-article-item h3,
 html .article-item h3 {
 	color: var(--title-color);
+	font-size: 24px;
+	display: inline;
 }
 html .additional-article-item h3,
 html .article-item h3 {
-	padding: 0 .5rem 0 .5rem;
+	font-size: 18px;
 }
 html .additional-article-item .article-metas,
 html .article-item .article-metas {
-	bottom: .5rem;
-
 	color: var(--low-priority-text-color);
-
-	padding-left: .5rem;
+	margin-top: 5px;
+	position: static;
+	left: 0;
+	width: 100%;
 }
 html .primary-article .additional-article-item .date,
 html .primary-article .article-item .date {
-	padding: 0 .5rem 0 .5rem;
+	font-size: 11px;
 }
 html .additional-article-item .article-metas .likes,
 html .article-item .article-metas .likes,
@@ -251,8 +259,21 @@ html .article-item .article-metas .comments,
 html .additional-article-item .article-metas .comments span,
 html .article-item .article-metas .comments span {
 	color: var(--theme-color);
-
+	font-size: 11px;
 	font-weight: bold;
+}
+html .additional-article-item .article-metas .tags li,
+html .article-item .article-metas .tags li {
+	background: var(--theme-color);
+	color: var(--theme-accent-color);
+	padding: 2px 4px 2px 4px;
+	border-radius: 15px;
+	font-size: 11px;
+	transition: .2s opacity;
+}
+html .additional-article-item .article-metas .tags li:hover,
+html .article-item .article-metas .tags li:hover {
+	opacity: 0.7;
 }
 @media only screen and (max-width: 1042px) {
 	html .additional-article-item .image,
@@ -274,33 +295,25 @@ html .splitter a,
 html .btn.load-more {
 	display: block;
 	width: 200px;
-	height: 40px;
-
+	height: 19px;
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
-
 	font-family: 'Inter', sans-serif;
 	font-weight: bold;
+	font-size: 15px;
 	text-align: center;
-
-	padding: .5rem;
-	padding-top: 10px;
-	
+	padding: 4px;
 	border: 0;
-
-	border-radius: 1rem;
-
+	border-radius: 23px;
 	float: right;
-
 	transition: .2s box-shadow, .2s filter;
 }
 html .splitter a:hover,
 html .btn.load-more:hover {
 	color: var(--paragraph-color);
-
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
-
 	filter: brightness(0.8);
+	opacity: 1;
 }
 html .btn.load-more .progress {
 	display: none;
@@ -359,21 +372,25 @@ html .search-holder .container {
 }
 html .search-holder .search-field-wrap,
 html .search-holder-inner .search-field-wrap {
-	background: var(--background-front-color);
+	background: var(--background-middle-color);
 	border: 0;
-	border-radius: 1rem;
+	border-radius: 22px;
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 }
 html .search-holder .search-field,
 html .search-holder-inner .search-field {
-	background: var(--background-front-color);
+	background: var(--background-middle-color);
 	color: var(--title-color);
+	font-size: 22px;
 }
 html .search-holder .search-field-wrap::after,
 html .search-holder-inner .search-field-wrap::after {
-	background: var(--background-front-color);
-
+	background: var(--background-middle-color);
 	border: 0;
+}
+html .search-holder .search-field:focus::placeholder,
+html .search-holder-inner .search-field:focus::placeholder {
+	color: var(--low-priority-text-color);
 }
 html .search-holder .btn-search-big,
 html .search-holder-inner .btn-search-big {

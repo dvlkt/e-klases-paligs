@@ -109,6 +109,8 @@ html .dashboard-widget-col.widget-notifications .widget-content .widget-count {
 }
 html .dashboard-widget-col.widget-notifications .widget-notifications-primary.student .notification-icon .widget-count {
 	top: 20px;
+	font-size: 15px;
+	padding-top: 4px;
 }
 html .dashboard-widget-col.widget-banner .widget-content {
 	height: auto;

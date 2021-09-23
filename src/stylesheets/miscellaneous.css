@@ -57,34 +57,46 @@ html .li-LoginWrapper .li-LoginInputContainer {
 html .li-LoginWrapper .li-LoginInputContainer::after {
 	display: none;
 }
+html .li-LoginInputContainer_Layer {
+	padding-top: 0px;
+}
+html .li-LoginInputContainer_Layer img {
+	width: 250px !important;
+}
 html .li-ValidationError {
 	background: var(--red-color);
-	color: var(--paragraph-color);
+	color: var(--red-accent-color);
 	
 	box-shadow: 0 7px 14px -3px var(--red-shadow-color);
 }
 html .li-ButtonDefault {
-	background: var(--theme-gradient);
-	color: var(--paragraph-color);
-
+	background: var(--theme-color);
+	color: var(--theme-accent-color);
 	border: 0;
-
 	border-radius: 1rem;
-
 	cursor: pointer;
-
-	transition: .2s opacity, .2 box-shadow;
+	transition: .2s filter, .2s box-shadow;
 }
 html .li-ButtonDefault:hover {
-	opacity: 0.8;
-
+	filter: brightness(0.8);
 	box-shadow: 0 7px 14px -3px var(--shadow-color);
 }
+html .li-ButtonDefault::after {
+	display: none;
+}
 html .li-TextboxDefault {
-	background-color: var(--background-front-color);
+	background: var(--background-front-color);
 	color: var(--paragraph-color);
-
+	padding-left: 10px;
 	border-radius: 1rem;
+}
+html .li-HelpItem {
+	border-radius: 1rem;
+	box-shadow: 0 7px 14px -3px var(--shadow-color);
+	background: var(--background-middle-color);
+}
+html .li-HelpItem_Head {
+	background: none;
 }
 
 /* TECH SUPPORT */

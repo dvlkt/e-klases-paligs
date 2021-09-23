@@ -1,7 +1,5 @@
 html footer {
-	background: var(--background-middle-color);
-
-	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	background: var(--background-back-color);
 }
 html footer .copyright {
 	color: var(--low-priority-text-color);
@@ -13,20 +11,20 @@ html footer .footer-container .col-copy {
 html footer .footer-container .go-top-col .go-top {
 	background-color: var(--background-middle-color);
 	color: var(--paragraph-color);
-	padding: .5rem;
+	font-size: 15px;
+	padding: 10px;
 	padding-left: 4rem;
-	border-radius: .5rem;
+	border-radius: 10px;
 	transition: .2s filter, .2s box-shadow;
 }
 html footer .footer-container .go-top-col .go-top:hover {
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
-	
 	filter: brightness(0.8);
 }
 html footer .footer-container .go-top-col .go-top::before {
-	top: -3px;
-
+	top: 0;
+	left: 3px;
 	background-color: transparent;
-
 	filter: invert() brightness(var(--icon-brightness));
+	height: 100%;
 }

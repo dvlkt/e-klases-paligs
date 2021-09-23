@@ -35,7 +35,6 @@
 			],
 			"js": [
 				"analytics/diary.js",
-				"analytics/main.js",
 				"animations/calendar.js",
 				"animations/headerDropdowns.js",
 				"animations/loadingSpinner.js",

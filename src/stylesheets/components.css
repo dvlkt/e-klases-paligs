@@ -21,15 +21,18 @@ html .btn-primary:hover {
 }
 
 /* CHECKMARKS & RADIO BUTTONS */
+html .print-checkbox {
+	position: relative;
+}
 html .analytics-form-page .analytics-form-holder .checkbox label,
 html .analytics-form-page .analytics-form-holder .radio label,
-html .modal-content .form-row {
+html .modal-content .form-row,
+html .checkbox label {
 	font-family: 'Inter', sans-serif;
 	color: var(--paragraph-color);
-	font-size: 13px;
+	font-size: 15px;
 	line-height: 13px;
 	padding-left: 20px;
-	position: relative;
 }
 html label.css-label,
 html input[type="checkbox"].css-checkbox:checked ~ label.css-label {
@@ -43,7 +46,7 @@ html label.css-label::before {
 	height: 15px;
 	background: var(--background-front-color);
 	left: 0;
-	top: 0;
+	top: 2px;
 	border-radius: 5px;
 }
 html label.css-label::after {
@@ -62,6 +65,9 @@ html label.css-label::after {
 html input[type="checkbox"].css-checkbox:checked ~ label.css-label::after {
 	opacity: 1;
 	cursor: pointer;
+}
+html input[type="checkbox"].css-checkbox {
+	display: none;
 }
 
 /* LOADING SPINNER */

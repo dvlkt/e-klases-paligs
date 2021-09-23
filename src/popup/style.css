@@ -103,7 +103,7 @@ a:hover::after {
 
 	background: linear-gradient(120deg, #f6f6f6 0%, #d1d1d1 100%);
 
-	border-radius: 0 0 .5rem .5rem;
+	border-radius: 0 0 15px 15px;
 
 	text-align: center;
 
@@ -121,10 +121,10 @@ a:hover::after {
 .notice {
 	position: fixed;
 	top: -2rem;
-	left: .5rem;
+	left: 15px;
 	display: block;
 	width: calc(100% - 1rem);
-	border-radius: .5rem;
+	border-radius: 15px;
 	background: #eb4545;
 	color: #ffffff;
 	z-index: 3;
@@ -191,10 +191,10 @@ a:hover::after {
 
 	box-shadow: 0 4px 10px -3px #00000099;
 
-	margin-top: .5rem;
-	margin-right: .5rem;
+	margin-top: 15px;
+	margin-right: 15px;
 
-	border-radius: .5rem;
+	border-radius: 15px;
 
 	cursor: pointer;
 
@@ -217,7 +217,7 @@ a:hover::after {
 	width: 100%;
 	height: 20px;
 
-	border-radius: .5rem .5rem 5px 5px;
+	border-radius: 15px 15px 5px 5px;
 }
 .theme-header-detail {
 	position: absolute;
@@ -311,7 +311,7 @@ a:hover::after {
 
 	border: 5px solid #80808000;
 
-	border-radius: .5rem;
+	border-radius: 15px;
 
 	transition: .2s border;
 }
@@ -386,11 +386,11 @@ button {
 	font-size: 1rem;
 	font-weight: bold;
 
-	padding: .5rem;
+	padding: 15px;
 
 	border: 0;
 
-	border-radius: .5rem;
+	border-radius: 15px;
 
 	cursor: pointer;
 
@@ -416,11 +416,11 @@ textarea {
 
 	margin-top: .25rem;
 
-	padding: .5rem;
+	padding: 15px;
 
 	border: 0;
 
-	border-radius: .5rem;
+	border-radius: 15px;
 
 	resize: vertical;
 }
@@ -430,7 +430,7 @@ textarea {
 	width: 5rem;
 	height: 5rem;
 	margin: auto;
-	margin-bottom: .5rem;
+	margin-bottom: 15px;
 	border-radius: 50%;
 	background: #ffffff;
 }
@@ -442,7 +442,7 @@ textarea {
 	width: 100%;
 	text-align: center;
 	display: block;
-	margin-top: .5rem;
+	margin-top: 15px;
 }
 
 .upload {
