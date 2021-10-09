@@ -1,8 +1,16 @@
 html footer {
 	background: var(--background-back-color);
 }
+html footer a {
+	cursor: pointer;
+	user-select: none;
+	-webkit-user-drag: none;
+}
 html footer .copyright {
 	color: var(--low-priority-text-color);
+	cursor: default;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html footer .footer-container .col-copy {
 	display: inline-block;
@@ -16,6 +24,9 @@ html footer .footer-container .go-top-col .go-top {
 	padding-left: 4rem;
 	border-radius: 10px;
 	transition: .2s filter, .2s box-shadow;
+	cursor: pointer;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html footer .footer-container .go-top-col .go-top:hover {
 	box-shadow: 0 4px 10px -3px var(--shadow-color);

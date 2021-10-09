@@ -163,7 +163,9 @@ html .toggle-search .open-search::after,
 html .toggle-search-inner .open-search::after,
 html .search-holder .btn-search-big,
 html .search-holder-inner .btn-search-big,
-html .MailSearch__ButtonWrapper .MailSearch__Button::before {
+html .MailSearch__ButtonWrapper .MailSearch__Button::before,
+html .toggle-search .in-results::after,
+html .toggle-search-inner .in-results::after {
 	background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTU2IDU2TDM4IDM4IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8Y2lyY2xlIGN4PSIyNiIgY3k9IjI3IiByPSIxNS41IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjUiLz4KPC9zdmc+Cg==");
 }
 /* X */

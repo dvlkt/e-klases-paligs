@@ -23,6 +23,8 @@ html .btn-primary:hover {
 /* CHECKMARKS & RADIO BUTTONS */
 html .print-checkbox {
 	position: relative;
+	cursor: pointer;
+	user-select: none;
 }
 html .analytics-form-page .analytics-form-holder .checkbox label,
 html .analytics-form-page .analytics-form-holder .radio label,
@@ -33,6 +35,7 @@ html .checkbox label {
 	font-size: 15px;
 	line-height: 13px;
 	padding-left: 20px;
+	cursor: pointer;
 }
 html label.css-label,
 html input[type="checkbox"].css-checkbox:checked ~ label.css-label {
@@ -61,6 +64,7 @@ html label.css-label::after {
 	transition: .1s opacity;
 	opacity: 0;
 	filter: invert() brightness(var(--icon-brightness));
+	cursor: pointer;
 }
 html input[type="checkbox"].css-checkbox:checked ~ label.css-label::after {
 	opacity: 1;

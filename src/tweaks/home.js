@@ -19,16 +19,6 @@ window.addEventListener(`pageLoading`, () => {
 		`;
 
 		loginElementForm.insertBefore(checkboxElement, loginButton);
-		/*
-		<div class="checkbox text-xs-center">
-							<div class="print-checkbox">
-								<input id="highlightNegatives2" type="checkbox" class="css-checkbox highlight-negatives">
-								<label class="css-label" for="highlightNegatives2">
-									Izcelt negatīvās atzīmes
-								</label>
-							</div>
-						</div>
-		*/
 
 
 		/*

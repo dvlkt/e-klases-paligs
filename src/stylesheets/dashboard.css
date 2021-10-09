@@ -14,27 +14,22 @@ html .dashboard-information {
 html .dashboard-widget-col.widget-notifications .widget-header,
 html .dashboard-widget-col.widget-banner .widget-header {
 	background: none;
-
 	min-height: 20px;
 	line-height: 20px;
-
 	padding: 16px;
 	padding-left: 0;
-
 	cursor: auto;
 }
 html .dashboard-widget .widget-header h3,
 html .dashboard-widget-col.widget-banner .widget-header {
 	color: var(--title-color);
-
 	font-family: 'Inter', sans-serif;
 	font-weight: bold;
-	
 	font-size: 1.5rem;
-
 	padding-left: 16px;
-
-	cursor: auto;
+	cursor: default;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .dashboard-widget .widget-header::after {
 	display: none;
@@ -323,6 +318,9 @@ html .dashboard-widget-col.widget-recent .widget-close {
 }
 html .dashboard-widget-col.widget-recent .widget-show-all {
 	border-bottom: 0;
+}
+html .dashboard-widget-col .dashboard-widget {
+	background: none;
 }
 html .home-open-lesson-times {
 	display: none; /* This link caused a few issues because the diary doesn't initially load anyways, so to avoid the trouble let's just remove it */
