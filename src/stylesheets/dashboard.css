@@ -8,7 +8,7 @@ html .dashboard-information {
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
 	border: 0;
-	border-radius: 1rem;
+	border-radius: 22px;
 	cursor: auto;
 }
 html .dashboard-widget-col.widget-notifications .widget-header,
@@ -43,8 +43,7 @@ html .dashboard-widget-col.widget-notifications .widget-content {
 }
 html .dashboard-widget,
 html .dashboard-widget-col.widget-banner .dashboard-widget {
-	box-shadow: 0 7px 14px -3px var(--shadow-color);
-	
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 	cursor: auto;
 }
 html .dashboard-widget-col.widget-notifications .widget-notifications-primary {
@@ -59,19 +58,19 @@ html .dashboard-widget-col.widget-notifications .widget-notifications-primary .n
 html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon4,
 html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon4:hover {
 	position: relative;
-	text-transform: uppercase;
-	font-weight: bold;
 	background: none;
 	background-color: var(--background-middle-dark-color);
-	border-radius: .5rem;
+	border-radius: 22px;
 	border: 0;
 	margin: 5px;
 	transition: .2s filter, .2s box-shadow;
+	font-size: 15px;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon2:hover,
 html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon4:hover {
 	filter: brightness(0.8);
-	box-shadow: 0 7px 14px -3px var(--shadow-color);
 }
 html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon2::before,
 html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon4::before {
@@ -81,14 +80,19 @@ html .dashboard-widget-col.widget-notifications .widget-notifications-primary .n
 	left: 0;
 	display: block;
 	width: 100%;
-	height: 2.5rem;
-	background-size: contain;
-	filter: invert() brightness(var(--icon-brightness));
+	height: 50px;
+	mask-position: center;
+	-webkit-mask-position: center;
+	mask-size: contain;
+	-webkit-mask-size: contain;
+	mask-repeat: no-repeat;
+	-webkit-mask-repeat: no-repeat;
+	background: var(--paragraph-color);
 }
 html .dashboard-widget-col.widget-notifications .widget-notification .items {
 	color: var(--low-priority-text-color);
-
 	font-family: 'Inter', sans-serif;
+	font-size: 15px;
 }
 html .dashboard-widget-col.widget-notifications .widget-content .widget-count,
 html .dashboard-widget-col.widget-notifications .widget-notification .widget-count {
@@ -101,6 +105,8 @@ html .dashboard-widget-col.widget-notifications .widget-notification .widget-cou
 html .dashboard-widget-col.widget-notifications .widget-content .widget-count {
 	width: 30px;
 	height: 30px;
+	left: auto;
+	right: 20px;
 }
 html .dashboard-widget-col.widget-notifications .widget-notifications-primary.student .notification-icon .widget-count {
 	top: 20px;
@@ -114,9 +120,7 @@ html .dashboard-widget-col.widget-banner .widget-content {
 html .close-dashboard-adv-message {
 	margin-top: .25rem;
     margin-right: .25rem;
-
 	opacity: 1;
-
 	transition: .2s filter;
 }
 html .close-dashboard-adv-message:hover {
@@ -129,23 +133,19 @@ html .close-dashboard-adv-message::before {
 html .dashboard-widget-col.widget-notifications .widget-notification {
 	background: var(--background-middle-dark-color);
 	color: var(--paragraph-color);
-
 	font-family: 'Inter', sans-serif;
+	font-size: 15px;
 	text-align: left;
-
 	margin: .5rem;
-
 	border: 0;
-	
-	border-radius: 1rem;
-
+	border-radius: 22px;
 	transition: .2s box-shadow, .2s filter;
+	padding-left: 15px;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .dashboard-widget-col.widget-notifications .widget-notification:hover {
 	background: var(--background-middle-dark-color);
-
-	box-shadow: 0 7px 14px -3px var(--shadow-color);
-
 	filter: brightness(0.8);
 }
 html .dashboard-widget-col.widget-notifications .widget-close {

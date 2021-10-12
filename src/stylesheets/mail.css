@@ -17,7 +17,7 @@ html .MailActions .ButtonDefault.MailActions__ToggleButton {
 	font-size: 0.8rem;
 	padding-top: 0;
 	padding-left: 15px;
-	border-radius: 15px;
+	border-radius: 22px;
 }
 html .MailActions .ButtonDefault.MailActions__ToggleButton::after {
 	border: 0;
@@ -46,28 +46,22 @@ html .MailSearch__ButtonWrapper .MailSearch__Button {
 }
 html .MailSearch__ButtonWrapper .MailSearch__Button:hover {
 	background: var(--background-middle-color);
-
 	filter: brightness(0.8);
-
-	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 }
 html .MailSearch__ButtonWrapper .MailSearch__Button::before {
 	content: "";
-
 	display: inline-block;
 	width: 1.25rem;
 	height: 1.25rem;
-
 	margin-right: .25rem;
-
 	vertical-align: middle;
-
 	filter: invert() brightness(var(--icon-brightness));
 }
 html .MailMainAreaWrapper .FolderNavigation {
 	background: var(--background-middle-color);
-	border-radius: 25px;
-	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	border-radius: 22px;
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 }
 html .FolderNavigation nav {
 	box-shadow: none;
@@ -175,22 +169,16 @@ html .Folder__NoMessages {
 html .Folder__MessageList .MessageItem {
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
-
 	margin-left: 15px;
-	margin-bottom: 15px;
-
+	margin-bottom: 10px;
 	border: 0;
-
-	border-radius: 15px;
-
+	border-radius: 22px;
 	transition: .2s filter, .2s box-shadow;
 }
 html .Folder__MessageList .MessageItem:hover {
 	background: var(--background-middle-color);
-
-	filter: brightness(0.8);
-
-	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	filter: brightness(0.9);
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 }
 html .Folder__MessageList .MessageItem:first-child {
 	border: 0;
