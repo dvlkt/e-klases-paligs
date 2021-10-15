@@ -155,11 +155,55 @@ html .header-account-popup {
 	opacity: 0;
 	display: none;
 	width: 300px;
-	height: 400px;
+	height: 270px;
 	border-radius: 10px;
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 	background: var(--background-middle-color);
+	overflow: hidden;
 	transition: .2s top, .2s opacity;
+}
+html .header-account-popup-section {
+	position: absolute;
+	top: 0;
+	left: 300px;
+	width: 100%;
+	transition: .3s left;
+}
+html .header-account-popup-section.main {
+	left: 0;
+}
+html .header-account-popup-button {
+	margin: 10px;
+	display: block;
+	width: calc(100% - 20px);
+	height: 55px;
+	background: var(--background-middle-dark-color);
+	border-radius: 10px;
+	transition: .2s filter;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .header-account-popup-button:hover {
+	cursor: pointer;
+	filter: brightness(0.9);
+}
+html .header-account-popup-button p {
+	color: var(--paragraph-color);
+	font-size: 15px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: inline-block;
+	vertical-align: top;
+}
+html .header-account-popup-button::before {
+	content: "";
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	margin: 10px;
+	background: var(--paragraph-color);
+	mask-size: cover;
+	-webkit-mask-size: cover;
 }
 
 /* MOBILE */

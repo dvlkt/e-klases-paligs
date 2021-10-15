@@ -13,6 +13,15 @@
 
 ***
 
+**19. oktobris** - v0.4 BETA
+**1. novembris** - v0.5 BETA
+**15. novembris** - v0.6 BETA
+**29. novembris** - v0.7 BETA
+**6. decembris** - v1.0-pre1
+**13. decembris** - v1.0-pre2
+**20. decembris** - v1.0-pre3
+**3. janvāris** - v1.0
+
 <h1 align="center">
 	🎉 Ieinstalēšana
 </h1>

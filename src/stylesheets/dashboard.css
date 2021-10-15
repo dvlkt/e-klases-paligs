@@ -80,7 +80,7 @@ html .dashboard-widget-col.widget-notifications .widget-notifications-primary .n
 }
 html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon2:hover,
 html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon4:hover {
-	filter: brightness(0.8);
+	filter: brightness(0.9);
 }
 html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon2::before,
 html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon4::before {
@@ -137,7 +137,7 @@ html .close-dashboard-adv-message {
 	transition: .2s filter;
 }
 html .close-dashboard-adv-message:hover {
-	filter: brightness(0.8);
+	filter: brightness(0.9);
 }
 html .close-dashboard-adv-message::after,
 html .close-dashboard-adv-message::before {
@@ -159,7 +159,7 @@ html .dashboard-widget-col.widget-notifications .widget-notification {
 }
 html .dashboard-widget-col.widget-notifications .widget-notification:hover {
 	background: var(--background-middle-dark-color);
-	filter: brightness(0.8);
+	filter: brightness(0.9);
 }
 html .dashboard-widget-col.widget-notifications .widget-close {
 	display: none !important; /* There is literally no point for this thing */
@@ -251,7 +251,7 @@ html .dashboard-widget-col.widget-recent .messages:hover {
 }
 html .dashboard-widget-col.widget-recent .scores:hover,
 html .dashboard-widget-col.widget-recent .messages:hover {
-	filter: brightness(0.8);
+	filter: brightness(0.9);
 }
 html .dashboard-widget-col.widget-recent .active,
 html .dashboard-widget-col.widget-recent .active:hover {
@@ -284,7 +284,7 @@ html .dashboard-widget-col.widget-recent .recent-scores-item:hover {
 	transition: .2s filter;
 }
 html .dashboard-widget-col.widget-recent .recent-scores-item:hover {
-	filter: brightness(0.8);
+	filter: brightness(0.9);
 }
 html .dashboard-widget-col.widget-recent .recent-scores-item-has-test::before {
 	filter: invert() brightness(var(--icon-brightness));

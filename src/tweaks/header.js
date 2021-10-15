@@ -76,10 +76,91 @@ window.addEventListener(`pageLoading`, () => {
 		accountPopupElement.className = `header-account-popup`;
 
 		accountPopupElement.innerHTML = `
-
-			`;
+			<div class="header-account-popup-section main">
+				<div class="header-account-popup-button settings">
+					<p>Iestatījumi</p>
+				</div>
+				<div class="header-account-popup-button help">
+					<p>Palīdzība</p>
+				</div>
+				<div class="header-account-popup-button family-plan">
+					<p>Ģimenes komplekts</p>
+				</div>
+				<div class="header-account-popup-button exit">
+					<p>Iziet</p>
+				</div>
+			</div>
+			<div class="header-account-popup-section settings">
+				<div class="header-account-popup-button back">
+					<p>Atpakaļ</p>
+				</div>
+				<div class="header-account-popup-button settings family-settings">
+					<p>Ģimenes uzstādījumi</p>
+				</div>
+				<div class="header-account-popup-button settings action-history">
+					<p>Darbību vēsture</p>
+				</div>
+				<div class="header-account-popup-button settings notification-history">
+					<p>Ziņojumu vēsture</p>
+				</div>
+			</div>
+			<div class="header-account-popup-section help">
+				<div class="header-account-popup-button back">
+					<p>Atpakaļ</p>
+				</div>
+				<div class="header-account-popup-button help faq">
+					<p>Biežāk uzdotie jautājumi</p>
+				</div>
+				<div class="header-account-popup-button help tech-support">
+					<p>Tehniskais atbalsts</p>
+				</div>
+				<div class="header-account-popup-button help show-tour">
+					<p>Tūre</p>
+				</div>
+			</div>`;
 
 		document.querySelector(`.header-second .header-second-inner`).appendChild(accountPopupElement);
+
+		// Add the event listeners
+		document.querySelector(`.header-account-popup-button.settings`).addEventListener(`click`, () => {
+			document.querySelector(`.header-account-popup-section.main`).style.left = `-300px`;
+			document.querySelector(`.header-account-popup-section.settings`).style.left = `0`;
+		});
+		document.querySelector(`.header-account-popup-button.help`).addEventListener(`click`, () => {
+			document.querySelector(`.header-account-popup-section.main`).style.left = `-300px`;
+			document.querySelector(`.header-account-popup-section.help`).style.left = `0`;
+		});
+		document.querySelector(`.header-account-popup-button.family-plan`).addEventListener(`click`, () => {
+			window.location.href = `https://my.e-klase.lv/Family/FamilyPlanInformation`;
+		});
+		document.querySelector(`.header-account-popup-button.exit`).addEventListener(`click`, () => {
+			window.location.href = `https://my.e-klase.lv/LogOut`;
+		});
+		for (let element of document.querySelectorAll(`.header-account-popup-button.back`)) {
+			element.addEventListener(`click`, () => {
+				document.querySelector(`.header-account-popup-section.main`).style.left = `0`;
+				document.querySelector(`.header-account-popup-section.settings`).style.left = `300px`;
+				document.querySelector(`.header-account-popup-section.help`).style.left = `300px`;
+			});
+		}
+		document.querySelector(`.header-account-popup-button.family-settings`).addEventListener(`click`, () => {
+			window.location.href = `https://my.e-klase.lv/Family/Settings/Profiles`;
+		});
+		document.querySelector(`.header-account-popup-button.action-history`).addEventListener(`click`, () => {
+			window.location.href = `https://my.e-klase.lv/Family/ActionLog`;
+		});
+		document.querySelector(`.header-account-popup-button.notification-history`).addEventListener(`click`, () => {
+			window.location.href = `https://my.e-klase.lv/Family/MessageLog`;
+		});
+		document.querySelector(`.header-account-popup-button.faq`).addEventListener(`click`, () => {
+			window.location.href = `https://my.e-klase.lv/Family/FAQ/Student`;
+		});
+		document.querySelector(`.header-account-popup-button.tech-support`).addEventListener(`click`, () => {
+			window.location.href = `https://my.e-klase.lv/Family/TechnicalSupport`;
+		});
+		document.querySelector(`.header-account-popup-button.show-tour`).addEventListener(`click`, () => {
+			alert(`Tūre vēl nav pieejama uz E-klases Palīga!`);
+		});
 	}
 
 	// Add the account popup button
@@ -111,8 +192,33 @@ window.addEventListener(`pageLoading`, () => {
 					accountPopupElement.style.opacity = `1`;
 				}, 50);
 			}
-		})
+		});
 	}
+
+	// Make the popup disappear when clicking outside of it
+	document.body.addEventListener(`click`, (event) => {
+		if (isAccountPopupOpen) {
+
+			if (event.target !== document.querySelector(`.header-account-btn`) &&
+				event.target !== document.querySelector(`.header-account-popup`) &&
+				event.target.parentElement !== document.querySelector(`.header-account-popup`) &&
+				event.target.parentElement.parentElement !== document.querySelector(`.header-account-popup`) &&
+				event.target.parentElement.parentElement.parentElement !== document.querySelector(`.header-account-popup`)) {
+				
+				let accountPopupButtonElement = document.querySelector(`.header-account-btn`);
+				let accountPopupElement = document.querySelector(`.header-account-popup`);
+
+				isAccountPopupOpen = false;
+				accountPopupButtonElement.className = `header-account-btn`;
+
+				accountPopupElement.style.top = `94px`;
+				accountPopupElement.style.opacity = `0`;
+				setTimeout(() => {
+					accountPopupElement.style.display = `none`;
+				}, 200);
+			}
+		}
+	});
 
 	// Remove the titles for the links
 	for (element of document.querySelectorAll(`.header-second-menu .header-second-menu-item a`)) {
