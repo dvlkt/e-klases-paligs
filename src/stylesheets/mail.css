@@ -435,6 +435,11 @@ html .MailActions__ActionOuter .MailActions__ActionInner::before {
 
 	filter: invert() brightness(var(--icon-brightness));
 }
+html .MailActions__ActionList .MailActions__DisabledMessage {
+	font-style: normal;
+	color: var(--low-priority-text-color);
+	font-size: 11px;
+}
 
 /* New mail */
 html .MessageContent .MessageContent__Row:first-child,
@@ -704,6 +709,10 @@ html .AttachmentList__Link:hover,
 html .AttachmentList__Link:visited {
 	color: var(--theme-color);
 	font-family: 'Inter', sans-serif;
+}
+html .AttachmentList__Item--border {
+	border: 0;
+	padding: 0;
 }
 html .MailMainAreaWrapper .MobileBottomToolbar {
 	background: var(--background-middle-color);

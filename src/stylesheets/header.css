@@ -124,6 +124,8 @@ html .header-logo {
 	top: 0;
 	left: 10px;
 	max-height: 64px;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .header-account-btn {
 	position: fixed;

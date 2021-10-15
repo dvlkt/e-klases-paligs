@@ -109,8 +109,11 @@ html .dashboard-widget-col.widget-notifications .widget-notification .widget-cou
 	background: var(--theme-color);
 	color: var(--theme-accent-color);
 	font-family: 'Inter', sans-serif;
-	font-weight: bold;
+	font-weight: 500;
+	font-size: 15px;
+	padding-top: 2px;
 	border: 0;
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 }
 html .dashboard-widget-col.widget-notifications .widget-content .widget-count {
 	width: 30px;
@@ -195,24 +198,7 @@ html .student-journal-lessons .lesson-subitem .description a.file::before {
 	mask-size: cover;
 	-webkit-mask-size: cover;
 }
-html .dashboard-news .dashboard-news-item .article-meta .date {
-	color: var(--low-priority-text-color);
-	font-family: 'Inter', sans-serif;
-	font-size: 11px;
-}
 html .dashboard-news .dashboard-news-item .article-meta {
-	user-select: none;
-	-webkit-user-drag: none;
-}
-html .dashboard-news .dashboard-news-item {
-	border-bottom: 4px solid var(--divider-color);
-	margin-bottom: 15px;
-}
-html .dashboard-news .dashboard-news-item .article-content img {
-	border-radius: 10px;
-	box-shadow: 2px 4px 7px -3px var(--shadow-color);
-	margin-left: 0 !important;
-	margin-top: 0 !important;
 	user-select: none;
 	-webkit-user-drag: none;
 }
@@ -225,6 +211,35 @@ html .dashboard-news .dashboard-news-item .tag.blue {
 	color: var(--low-priority-text-color);
 	background: none;
 	padding-left: 0;
+	padding-right: 0;
+}
+html .dashboard-news .dashboard-news-item .tag::after {
+	content: "";
+	background: var(--low-priority-text-color);
+	display: inline-block;
+	width: 4px;
+	height: 4px;
+	margin-left: 5px;
+	margin-bottom: 2px;
+	border-radius: 2px;
+}
+html .dashboard-news .dashboard-news-item .article-meta .date {
+	color: var(--low-priority-text-color);
+	font-family: 'Inter', sans-serif;
+	font-size: 11px;
+	margin-left: 0;
+}
+html .dashboard-news .dashboard-news-item {
+	border-bottom: 4px solid var(--divider-color);
+	margin-bottom: 15px;
+}
+html .dashboard-news .dashboard-news-item .article-content img {
+	border-radius: 10px;
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	margin-left: 0 !important;
+	margin-top: 0 !important;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .dashboard-widget-col.widget-recent .scores,
 html .dashboard-widget-col.widget-recent .messages,
