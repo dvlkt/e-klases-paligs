@@ -1,5 +1,7 @@
 html footer {
 	background: var(--background-back-color);
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html footer a {
 	cursor: pointer;

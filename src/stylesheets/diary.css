@@ -7,12 +7,9 @@ html .xs-diary-lesson-times:hover {
 }
 html .lessons-table {
 	background: var(--background-middle-dark-color);
-
 	border: 0;
-
-	border-radius: 1rem;
-
-	box-shadow: 0 7px 14px -3px var(--shadow-color);
+	border-radius: 10px;
+	box-shadow: 0	 3px 5px -3px var(--shadow-color);
 }
 html .lessons-table tr {
 	border: 0;
@@ -21,48 +18,43 @@ html .student-journal-lessons-table-holder .lessons-table .head td,
 html .student-journal-lessons-table-holder .lessons-table thead td,
 html .diary-container .lessons-table thead td {
 	background: var(--background-middle-color);
-
 	font-family: 'Inter', sans-serif;
-
 	border: 0;
 }
 html .student-journal-lessons-table-holder .lessons-table thead td,
 html .diary-container .lessons-table thead td {
 	color: var(--low-priority-text-color);
 	background: var(--background-middle-color);
-
-	font-weight: bold;
-	text-transform: uppercase;
-
+	font-weight: 500;
+	font-size: 15px;
 	text-align: center;
-
 	border: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 html .student-journal-lessons-table-holder .lessons-table thead td.first-column,
 html .diary-container .lessons-table thead td.first-column {
-	border-top-left-radius: 1rem;
+	border-top-left-radius: 10px;
 }
 html .student-journal-lessons-table-holder .lessons-table thead td.score,
 html .diary-container .lessons-table thead td.score {
-	border-top-right-radius: 1rem;
+	border-top-right-radius: 10px;
 }
 html .no-data {
 	background: var(--background-middle-dark-color);
 	text-align: center;
-	border-radius: 1rem;
+	border-radius: 10px;
 }
 html .no-data .inform {
 	background: none;
 }
 html .no-data .inform span {
 	color: var(--paragraph-color);
-
 	font-family: 'Inter', sans-serif;
 }
 html .student-journal-lessons-table-holder .lessons-table tbody .first-column,
 html .diary-container .lessons-table tbody .first-column {
 	background: var(--background-middle-color);
-
 	border: 0;
 	border-bottom: 4px solid #00000020;
 	border-top: 4px solid #00000020;
@@ -70,24 +62,27 @@ html .diary-container .lessons-table tbody .first-column {
 html .student-journal-lessons-table-holder .lessons-table tbody .title,
 html .diary-container .lessons-table tbody .title {
 	color: var(--paragraph-color);
-
-	font-weight: bold;
-	font-size: 13px;
+	font-weight: 500;
+	font-size: 15px;
 }
 html .student-journal-lessons-table-holder .lessons-table tbody .number,
 html .diary-container .lessons-table tbody .number {
 	color: var(--low-priority-text-color);
-
 	font-weight: bold;
+	font-size: 15px;
 }
 html .student-journal-lessons-table-holder .lessons-table tbody .room,
 html .diary-container .lessons-table tbody .room {
-	color: var(--low-priority-text-color);;
+	color: var(--low-priority-text-color);
+	font-weight: 500;
+	font-size: 15px;
 }
 html .student-journal-lessons-table-holder .lessons-table td,
 html .diary-container .lessons-table td {
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
+	font-size: 15px;
+	line-height: 18px;
 	border: 0;
 	border-bottom: 4px solid #00000020;
 	border-top: 4px solid #00000020;
@@ -114,11 +109,11 @@ html .lessons-table tbody td .number--lessonNotInDay {
 }
 html .student-journal-lessons-table-holder .lessons-table tbody tr:last-child td:nth-child(1),
 html .diary-container .lessons-table tbody tr:last-child td:nth-child(1) {
-	border-bottom-left-radius: 1rem;
+	border-bottom-left-radius: 10px;
 }
 html .student-journal-lessons-table-holder .lessons-table tbody tr:last-child td:last-child,
 html .diary-container .lessons-table tbody tr:last-child td:last-child {
-	border-bottom-right-radius: 1rem;
+	border-bottom-right-radius: 10px;
 }
 html .student-journal-lessons-table-holder .lessons-table a.file,
 html .diary-container .lessons-table a.file {
@@ -129,8 +124,9 @@ html .diary-container .lessons-table tbody a.file::before {
 	background: var(--theme-color);
 	mask-size: cover;
 	-webkit-mask-size: cover;
-	width: 13px;
-	height: 13px;
+	width: 15px;
+	height: 15px;
+	margin-right: 5px;
 }
 html .lessons-table td:last-of-type span.score,
 html .actual-lessons span.score,
@@ -138,20 +134,24 @@ html .student-journal-lessons span.score,
 html .diary-container .lessons-table span.score {
 	border: 0;
 	background: var(--background-front-color);
-	font-size: 0.8rem;
-	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	font-size: 15px;
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	border-radius: 10px;
-	padding: .5rem;
+	padding: 10px;
 	font-weight: bold;
 	transition: .2s opacity;
 }
 html .lessons-table td:last-of-type span.score:hover {
 	opacity: 0.7;
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 }
 html .lessons-table td:last-of-type span.score.warning {
 	color: var(--red-accent-color);
 	background: var(--red-color);
-	box-shadow: 0 4px 10px -3px var(--red-shadow-color);
+	box-shadow: 2px 3px 5px -3px var(--red-shadow-color);
+}
+html .lessons-table td:last-of-type span.score.warning:hover {
+	box-shadow: 2px 4px 7px -3px var(--red-shadow-color);
 }
 html .ThirdPartyEvent--Active {
 	background: var(--background-front-color);
@@ -196,6 +196,17 @@ html .ThirdPartyEvent--Deleted {
 
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 }
+html .student-journal-lessons-table-holder .lessons-table .info .first-column {
+	color: var(--paragraph-color);
+	font-size: 15px;
+	font-family: 'Inter', sans-serif;
+}
+html .student-journal-lessons-table-holder .lessons-table .info td:last-child {
+	color: var(--paragraph-color);
+	font-size: 15px;
+	background: var(--background-middle-color);
+	padding-left: 5px !important;
+}
 html .student-journal-lessons-table-holder h2 {
 	font-family: 'Inter', sans-serif;
 	text-transform: capitalize;
@@ -214,7 +225,7 @@ html .students-journal-header .week-selector .week-selector-prev {
 	border-right: 0;
 	width: 20px;
 	height: 20px;
-	background: var(--theme-color);
+	background: var(--paragraph-color);
 	mask-size: cover;
 	mask-position: center;
 	-webkit-mask-size: cover;
@@ -271,26 +282,26 @@ html .student-journal-lessons .lesson-title .title {
 }
 html .students-journal-header .week-selector .selected-period {
 	font-family: 'Inter', sans-serif;
-	font-weight: bold;
-	font-size: 15px;
+	font-weight: 500;
+	font-size: 18px;
 	user-select: none;
+	color: var(--paragraph-color);
 	transition: .2s opacity;
 }
 html .students-journal-header .week-selector .selected-period:hover {
 	opacity: 0.7;
 }
 html .students-journal-header .week-selector .selected-period::after {
-	background: var(--theme-color);
+	background: var(--paragraph-color);
+	width: 20px;
+	height: 20px;
 	mask-size: cover;
 	-webkit-mask-size: cover;
 }
 html .students-journal-header .week-selector .selected-period-mobile {
 	background: var(--background-middle-color);
-	
-	border-radius: 1rem;
-
+	border-radius: 10px;
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
-
 	transition: .2s opacity;
 }
 html .students-journal-header .week-selector .selected-period-mobile .cal-icon {
@@ -333,6 +344,11 @@ html .actual-lessons .lesson-title .room,
 html .student-journal-lessons .lesson-title .room {
 	font-style: normal;
 	font-weight: bold;
+}
+@media only screen and (min-width: 768px) {
+	html .students-journal-header .week-selector {
+		width: 210px;
+	}
 }
 
 /* DIARY ANALYTICS */

@@ -1,5 +1,9 @@
 const tryAddingMailViewPatches = () => {
 	if (!location.href.includes(`SPA/Family#/mail/message/view/`)) {
+		if (document.querySelector(`.MailSearch__Input`) !== null) {
+			document.querySelector(`.MailSearch__Input`).setAttribute(`placeholder`, `Meklēt...`);
+		}
+
 		return;
 	}
 

@@ -8,7 +8,7 @@ html .dashboard-information {
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
 	border: 0;
-	border-radius: 22px;
+	border-radius: 10px;
 	cursor: auto;
 }
 html .dashboard-widget-col.widget-notifications .widget-header,
@@ -18,6 +18,7 @@ html .dashboard-widget-col.widget-banner .widget-header {
 	line-height: 20px;
 	padding: 16px;
 	padding-left: 0;
+	padding-bottom: 5px;
 	cursor: auto;
 }
 html .dashboard-widget .widget-header h3,
@@ -60,13 +61,22 @@ html .dashboard-widget-col.widget-notifications .widget-notifications-primary .n
 	position: relative;
 	background: none;
 	background-color: var(--background-middle-dark-color);
-	border-radius: 22px;
+	border-radius: 10px;
 	border: 0;
-	margin: 5px;
+	margin: 10px;
+	margin-bottom: 0;
 	transition: .2s filter, .2s box-shadow;
 	font-size: 15px;
 	user-select: none;
 	-webkit-user-drag: none;
+}
+html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon2,
+html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon2:hover {
+	margin-right: 5px;
+}
+html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon4,
+html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon4:hover {
+	margin-left: 5px;
 }
 html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon2:hover,
 html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon4:hover {
@@ -136,9 +146,9 @@ html .dashboard-widget-col.widget-notifications .widget-notification {
 	font-family: 'Inter', sans-serif;
 	font-size: 15px;
 	text-align: left;
-	margin: .5rem;
+	margin: 10px;
 	border: 0;
-	border-radius: 22px;
+	border-radius: 10px;
 	transition: .2s box-shadow, .2s filter;
 	padding-left: 15px;
 	user-select: none;
@@ -156,54 +166,65 @@ html .dashboard-news {
 }
 html .dashboard-news h2 {
 	font-weight: bold;
-	font-size: 2rem;
+	font-size: 32px;
 	color: var(--title-color);
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .dashboard-news .dashboard-news-item h3 {
 	color: var(--title-color);
 	font-family: 'Inter', sans-serif;
 	font-weight: bold;
-	font-size: 1.25rem;
+	font-size: 24px;
 }
 html .dashboard-news .dashboard-news-item .article-content {
 	color: var(--paragraph-color);
+	font-size: 15px;
+}
+html .dashboard-news .dashboard-news-item .article-content a.file {
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .dashboard-news .dashboard-news-item .article-content a.file::before,
 html .actual-lessons .lesson-subitem .description a.file::before,
 html .student-journal-lessons .lesson-subitem .description a.file::before {
 	background: var(--theme-color);
-	width: 13px;
-	height: 13px;
+	width: 15px;
+	height: 15px;
+	margin-right: 5px;
 	mask-size: cover;
 	-webkit-mask-size: cover;
 }
 html .dashboard-news .dashboard-news-item .article-meta .date {
 	color: var(--low-priority-text-color);
+	font-family: 'Inter', sans-serif;
+	font-size: 11px;
+}
+html .dashboard-news .dashboard-news-item .article-meta {
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .dashboard-news .dashboard-news-item {
 	border-bottom: 4px solid var(--divider-color);
+	margin-bottom: 15px;
 }
 html .dashboard-news .dashboard-news-item .article-content img {
-	border-radius: .5rem;
+	border-radius: 10px;
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	margin-left: 0 !important;
+	margin-top: 0 !important;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .dashboard-news .dashboard-news-item .tag.green,
 html .dashboard-news .dashboard-news-item .tag.gold,
 html .dashboard-news .dashboard-news-item .tag.blue {
-	border-radius: .5rem;
 	font-family: 'Inter', sans-serif;
-	font-weight: bold;
-}
-html .dashboard-news .dashboard-news-item .tag.green {
-	color: #ffffff;
-	background: #1ec039;
-}
-html .dashboard-news .dashboard-news-item .tag.gold {
-	color: #ffffff;
-	background: #e9b610;
-}
-html .dashboard-news .dashboard-news-item .tag.blue {
-	color: var(--theme-accent-color);
-	background: var(--theme-color);
+	font-size: 11px;
+	font-weight: 500;
+	color: var(--low-priority-text-color);
+	background: none;
+	padding-left: 0;
 }
 html .dashboard-widget-col.widget-recent .scores,
 html .dashboard-widget-col.widget-recent .messages,
@@ -327,4 +348,10 @@ html .home-open-lesson-times {
 }
 html .dashboard .announcement {
 	display: none;
+}
+html .no-diary-expl .homepage-h2 {
+	font-size: 24px;
+	font-weight: 500;
+	user-select: none;
+	-webkit-user-drag: none;
 }

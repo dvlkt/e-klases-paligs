@@ -10,70 +10,54 @@
 		<div class="header">
 			<img src="../res/title-light.png" alt="E-klases Palīgs">
 		</div>
-		
-		<div class="notice" id="notice">
-			Tev ir jāpārlādē E-klases lapa, lai redzētu izmaiņas!
-		</div>
 
 		<div class="list">
-			<button id="whats-new" class="whats-new">
+			<button id="whats-new-btn" class="top-button">
 				Kas jauns E-klases Palīgam
 				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
 					<path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+				</svg>
+			</button>
+			<button id="found-bug-btn" class="top-button">
+				Atradi kādu kļūdu?
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+					<path fill-rule="evenodd"
+						d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
 				</svg>
 			</button>
 
 			<div class="title">
 				<h2>Dizains</h2>
 			</div>
-			<div id="theme-light-btn" class="theme theme-light">
-				<div class="theme-header"></div>
-				<div class="theme-header-detail"></div>
-				<div class="theme-header-account"></div>
-				<div class="theme-table-title"></div>
-				<div class="theme-table"></div>
-			</div>
-			<div id="theme-dark-btn" class="theme theme-dark">
-				<div class="theme-header"></div>
-				<div class="theme-header-detail"></div>
-				<div class="theme-header-account"></div>
-				<div class="theme-table-title"></div>
-				<div class="theme-table"></div>
+
+			<div id="theme-picker">
+				<div id="theme-preview-light-btn" class="theme-preview theme-preview-light">
+					<div class="theme-preview-header"></div>
+					<div class="theme-preview-header-detail"></div>
+					<div class="theme-preview-header-account"></div>
+					<div class="theme-preview-table-title"></div>
+					<div class="theme-preview-table"></div>
+				</div>
+				<div id="theme-preview-dark-btn" class="theme-preview theme-preview-dark">
+					<div class="theme-preview-header"></div>
+					<div class="theme-preview-header-detail"></div>
+					<div class="theme-preview-header-account"></div>
+					<div class="theme-preview-table-title"></div>
+					<div class="theme-preview-table"></div>
+				</div>
 			</div>
 
-			<!-- <div class="title">
-				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
-					<path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
-				</svg>
-				<h2>Funkcijas</h2>
+			<br />
+			<p>Tēmas krāsa:</p>
+			<div class="color-picker" id="theme-color-picker">
+				<div class="color-picker-option color-picker-option-red"></div>
+				<div class="color-picker-option color-picker-option-orange"></div>
+				<div class="color-picker-option color-picker-option-yellow"></div>
+				<div class="color-picker-option color-picker-option-green"></div>
+				<div class="color-picker-option color-picker-option-lblue"></div>
+				<div class="color-picker-option color-picker-option-blue"></div>
+				<div class="color-picker-option color-picker-option-violet"></div>
 			</div>
-			<div class="control">
-				<p>Atzīmju pārskats:</p>
-
-				<div class="switch switch-on"></div>
-			</div>
-			<div class="control">
-				<p>Atslēgvārdi izcelšanai (katru atslēgvārdu liec jaunā rindiņā):</p>
-			</div>
-			<textarea placeholder="Ieraksti atslēgvārdus šeit..."></textarea>
-			<sub>Šie atslēgvārdi tiks izcelti dienasgrāmatā un E-klases pastā.</sub>
-
-			<div class="title">
-				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-octagon-fill" viewBox="0 0 16 16">
-					<path d="M11.46.146A.5.5 0 0 0 11.107 0H4.893a.5.5 0 0 0-.353.146L.146 4.54A.5.5 0 0 0 0 4.893v6.214a.5.5 0 0 0 .146.353l4.394 4.394a.5.5 0 0 0 .353.146h6.214a.5.5 0 0 0 .353-.146l4.394-4.394a.5.5 0 0 0 .146-.353V4.893a.5.5 0 0 0-.146-.353L11.46.146zm-6.106 4.5L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/>
-				</svg>
-				<h2>Reklāmu bloķēšana</h2>
-			</div>
-			<div class="control">
-				<p>Parasto:</p>
-
-				<div class="switch switch-on"></div>
-			</div>
-			<div class="control">
-				<p>Ģimenes komplekta:</p>
-
-				<div class="switch switch-off"></div>
-			</div> -->
 
 			<div class="title">
 				<h2>Profila attēls</h2>

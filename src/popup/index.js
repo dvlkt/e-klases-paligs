@@ -1,9 +1,4 @@
-let changeNotice = document.getElementById(`notice`);
-changeNotice.onclick = () => {
-	changeNotice.style.top = `0`;
-}
-
-let whatsNewButton = document.getElementById(`whats-new`);
+let whatsNewButton = document.getElementById(`whats-new-btn`);
 whatsNewButton.onclick = () => {
 	chrome.tabs.create({
 		active: true,
@@ -11,14 +6,19 @@ whatsNewButton.onclick = () => {
 	});
 }
 
-let lightThemeBtn = document.getElementById(`theme-light-btn`);
-let darkThemeBtn = document.getElementById(`theme-dark-btn`);
+let foundBugButton = document.getElementById(`found-bug-btn`);
+foundBugButton.onclick = () => {
+	alert(`Lol pats vainīgs`);
+}
+
+let lightThemeBtn = document.getElementById(`theme-preview-light-btn`);
+let darkThemeBtn = document.getElementById(`theme-preview-dark-btn`);
 
 chrome.storage.sync.get(`theme`, (res) => {
 	if (res.theme === `dark`) {
-		darkThemeBtn.className += ` theme-selected`;
+		darkThemeBtn.className += ` theme-preview-selected`;
 	} else {
-		lightThemeBtn.className += ` theme-selected`;
+		lightThemeBtn.className += ` theme-preview-selected`;
 	}
 });
 
@@ -33,8 +33,8 @@ const sendThemeUpdateMessage = () => {
 	});
 }
 lightThemeBtn.onclick = () => {
-	lightThemeBtn.className = `theme theme-light theme-selected`;
-	darkThemeBtn.className = `theme theme-dark`;
+	lightThemeBtn.className = `theme-preview theme-preview-light theme-preview-selected`;
+	darkThemeBtn.className = `theme-preview theme-preview-dark`;
 
 	chrome.storage.sync.set({ theme: `light` });
 	document.body.className = `light-theme`;
@@ -44,8 +44,8 @@ lightThemeBtn.onclick = () => {
 	sendThemeUpdateMessage();
 }
 darkThemeBtn.onclick = () => {
-	lightThemeBtn.className = `theme theme-light`;
-	darkThemeBtn.className = `theme theme-dark theme-selected`;
+	lightThemeBtn.className = `theme-preview theme-preview-light`;
+	darkThemeBtn.className = `theme-preview theme-preview-dark theme-preview-selected`;
 	
 	chrome.storage.sync.set({ theme: `dark` });
 	document.body.className = `dark-theme`;
@@ -53,6 +53,12 @@ darkThemeBtn.onclick = () => {
 	changeNotice.style.top = `4rem`;
 
 	sendThemeUpdateMessage();
+}
+
+for (let element of document.querySelectorAll(`#theme-color-picker .color-picker-option`)) {
+	element.addEventListener(() => {
+
+	});
 }
 
 let profilePictureElement = document.getElementById(`profile-picture`);

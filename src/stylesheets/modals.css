@@ -120,27 +120,40 @@ html .modal-dialog .modal-content {
 }
 
 /* RECIPIENTS MODAL */
+html .Modal__Content .Modal__Header {
+	background: var(--background-middle-color) !important;
+	color: var(--paragraph-color);
+	border: 0;
+	border-radius: 10px 10px 0 0;
+}
+html .Modal__Header .Modal__Title {
+	color: var(--paragraph-color);
+}
+html .Modal__Content .Modal__Body {
+	background: var(--background-middle-color) !important;
+	color: var(--paragraph-color);
+	border-radius: 0 0 10px 10px;
+}
 html .RecipientsModal__GroupContainer {
-	border-radius: 0 0 1rem 1rem;
+	border-radius: 0 0 10px 10px;
 }
 html .RecipientsModal__Title {
-	font-size: 25px;
+	font-size: 24px;
 	font-family: 'Inter', sans-serif;
 	font-weight: bold;
 	color: var(--title-color);
 }
 html .RecipientsModal__GroupContainer .RecipientGroup {
 	border: 0;
-	border-radius: .5rem;
-	background: var(--background-front-color);
-	transition: .2s box-shadow, .2s filter;
-	font-size: 14px;
+	border-radius: 10px;
+	background: var(--background-middle-dark-color);
+	transition: .2s filter;
+	font-size: 15px;
 	font-family: 'Inter', sans-serif;
 	color: var(--paragraph-color);
 }
 html .RecipientsModal__GroupContainer .RecipientGroup:hover {
-	filter: brightness(0.8);
-	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	filter: brightness(0.9);
 }
 html .RecipientsModal__GroupContainer .RecipientGroup__Button {
 	background-color: transparent;
@@ -168,19 +181,19 @@ html .RecipientHeader .RecipientHeader__ButtonBack::before {
 	filter: invert() brightness(var(--icon-brightness));
 }
 html .RecipientHeader .RecipientHeader__GroupName {
-	text-transform: uppercase;
-	font-weight: bold;
+	font-weight: 500;
+	font-size: 15px;
 	font-family: 'Inter', sans-serif;
 	color: var(--paragraph-color);
 }
 html .RecipientsModal__StudyYear,
 html .RecipientsModal__StudyYear--selected {
 	font-family: 'Inter', sans-serif;
-	font-weight: bold;
+	font-weight: 500;
 	color: var(--paragraph-color);
 	border-bottom: 0;
 	transition: .2s opacity;
-	font-size: 13px;
+	font-size: 15px;
 }
 html .RecipientsModal__StudyYear--selected {
 	color: var(--theme-color);
@@ -190,11 +203,15 @@ html .RecipientsModal__StudyYear:hover {
 }
 html .Modal__Body .RecipientSearch,
 html .Modal__Body .RecipientSearch:focus {
-	border-radius: .5rem;
+	border-radius: 10px;
+	font-size: 15px;
+	padding: 10px;
+	height: 35px;
 	border: 0;
 	background: var(--background-front-color);
 	color: var(--paragraph-color);
 	font-family: 'Inter', sans-serif;
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 }
 html .RecipientList .Recipient {
 	border-bottom: 4px solid #00000020;
@@ -221,4 +238,21 @@ html .RecipientsModal__List .RecipientsModal__Item::before {
 	display: inline-block;
 	margin-right: .5rem;
 	filter: invert() brightness(var(--icon-brightness));
+}
+html .RecipientsModal__AddedRecipientsCount {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	background: var(--theme-color);
+	color: var(--theme-accent-color);
+	font-family: 'Inter', sans-serif;
+	font-weight: 500;
+	font-size: 15px;
+	border: 0;
+	padding: 5px;
+	margin-left: 5px;
+	vertical-align: top;
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	user-select: none;
+	-webkit-user-drag: none;
 }
