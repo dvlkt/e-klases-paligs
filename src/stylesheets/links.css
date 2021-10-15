@@ -1,3 +1,4 @@
+/* Regular underline */
 html .student-journal-lessons-table-holder .lessons-table a,
 html footer .footer-container .col-nav .footer-nav li a,
 html footer .footer-nav-item a,
@@ -52,6 +53,15 @@ html .li-HelpAction_Link:hover {
 	background-size: 100% 1px;
 }
 
+/* Bold underline */
+html .home-diary-link {
+	background-size: 0% 2px;
+}
+html .home-diary-link:hover {
+	background-size: 100% 2px;
+}
+
+/* Background underline */
 html .primary-article .additional-article-item h3,
 html .primary-article .article-item h3,
 html .additional-article-item h3,
