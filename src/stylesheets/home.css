@@ -1,15 +1,15 @@
 html .login-form {
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
-	border-radius: 22px;
-	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	border-radius: 10px;
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	padding: 0;
 }
 html .login-form-header {
 	background: var(--theme-gradient);
 	text-align: center;
-	padding: .5rem;
-	border-radius: 22px 22px 0 0;
+	padding: 5px;
+	border-radius: 10px 10px 0 0;
 	cursor: default;
 	user-select: none;
 }
@@ -17,7 +17,7 @@ html .login-form-header h4 {
 	height: auto;
 	background: none;
 	color: var(--theme-accent-color);
-	font-size: 22px;
+	font-size: 24px;
 	font-weight: bold;
 	margin: 0;
 	padding: 0;
@@ -31,15 +31,15 @@ html .login-form h4 .content::after {
 	display: none;
 }
 html .form-content {
-	padding: 1rem;
+	padding: 10px;
 }
 html .form-content .form-control {
 	background: var(--background-front-color);
 	color: var(--paragraph-color);
 	font-family: 'Inter', sans-serif;
 	font-size: 15px;
-	border-radius: 22px;
-	padding: 2px;
+	border-radius: 10px;
+	padding: 5px;
 	padding-left: 8px;
 	border: 0;
 }
@@ -50,23 +50,23 @@ html .login-form .dummy-placeholder {
 html .login-form .btn-default {
 	background: var(--theme-color);
 	color: var(--theme-accent-color);
-	font-weight: bold;
+	font-weight: 500;
 	font-family: 'Inter', sans-serif;
 	font-size: 15px;
-	border-radius: 22px;
-	padding: 2px;
-	transition: .2s all;
-}
-html .login-form .checkbox {
-	margin-bottom: 10px;
+	border-radius: 10px;
+	padding: 5px;
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	transition: .2s box-shadow, .2s filter;
 }
 html .login-form .btn-default:hover {
-	box-shadow: 0 4px 10px -3px var(--shadow-color);
-
-	filter: brightness(0.8);
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
 }
 html .login-form .btn-default .progress {
 	display: none;
+}
+html .login-form .checkbox {
+	margin-bottom: 10px;
 }
 html .login-links a,
 html .login-links a:hover,
@@ -109,13 +109,13 @@ html .primary-sticked .main-header,
 html .primary-stickied .main-header {
 	position: static;
 	width: 100%;
-	margin-bottom: 80px;
 	border-bottom: 4px solid #00000020;
 }
 html .header-info {
 	font-size: 15px;
 	cursor: default;
 	user-select: none;
+	-webkit-user-drag: none;
 }
 html .header-info .date {
 	font-weight: bold;
@@ -139,17 +139,14 @@ html .socials li.fb:hover {
 }
 html .secondary-header {
 	background: var(--background-middle-color);
-	border-radius: 0 0 22px 22px;
-	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 }
 html .secondary-header,
 html .secondary-header.sticked {
-	position: fixed;
-	top: 60px;
-	left: 0;
+	position: sticky;
 	width: 100%;
 	z-index: 400;
-	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 }
 html .secondary-header.slideInDown,
 html .secondary-header.slideUpDown,
@@ -236,8 +233,8 @@ html h2.section-title {
 @media (max-width: 767px) {
 	html .main-header {
 		border-radius: 0 0 1rem 1rem;
-
-		box-shadow: 0 4px 10px -3px var(--shadow-color);
+		box-shadow: 2px 4px 7px -3px var(--shadow-color);
+		border-bottom: 0;
 	}
 	html .secondary-header {
 		display: none;
@@ -247,8 +244,8 @@ html h2.section-title {
 html .primary-article .additional-article-item .image,
 html .primary-article .article-item .image,
 html .additional-article-item .image, .article-item .image {
-	border-radius: 22px;
-	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	border-radius: 10px;
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
 html .primary-article .additional-article-item h3,
 html .primary-article .article-item h3,
@@ -331,15 +328,16 @@ html .btn.load-more {
 	text-align: center;
 	padding: 8px;
 	border: 0;
-	border-radius: 23px;
+	border-radius: 10px;
 	margin: auto;
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s box-shadow, .2s filter;
 }
 html .splitter a:hover,
 html .btn.load-more:hover {
 	color: var(--paragraph-color);
-	box-shadow: 0 4px 10px -3px var(--shadow-color);
-	filter: brightness(0.8);
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
 	opacity: 1;
 }
 html .btn.load-more .progress {
