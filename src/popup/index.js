@@ -32,6 +32,7 @@ const sendThemeUpdateMessage = () => {
 		}
 	});
 }
+
 lightThemeBtn.onclick = () => {
 	lightThemeBtn.className = `theme-preview theme-preview-light theme-preview-selected`;
 	darkThemeBtn.className = `theme-preview theme-preview-dark`;
@@ -51,9 +52,12 @@ darkThemeBtn.onclick = () => {
 	sendThemeUpdateMessage();
 }
 
-for (let element of document.querySelectorAll(`#theme-color-picker .color-picker-option`)) {
-	element.addEventListener(() => {
 
+for (let element of document.querySelectorAll(`#theme-color-picker .color-picker-option`)) {
+	element.addEventListener(`click`, () => {
+		chrome.storage.sync.set({ themeColor: element.className.split(`-`)[5] });
+
+		sendThemeUpdateMessage();
 	});
 }
 
