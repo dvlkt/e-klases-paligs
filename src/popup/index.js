@@ -39,8 +39,6 @@ lightThemeBtn.onclick = () => {
 	chrome.storage.sync.set({ theme: `light` });
 	document.body.className = `light-theme`;
 
-	changeNotice.style.top = `4rem`;
-
 	sendThemeUpdateMessage();
 }
 darkThemeBtn.onclick = () => {
@@ -49,8 +47,6 @@ darkThemeBtn.onclick = () => {
 	
 	chrome.storage.sync.set({ theme: `dark` });
 	document.body.className = `dark-theme`;
-
-	changeNotice.style.top = `4rem`;
 
 	sendThemeUpdateMessage();
 }

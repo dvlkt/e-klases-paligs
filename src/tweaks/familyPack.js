@@ -10,11 +10,6 @@ window.addEventListener(`pageLoading`, () => {
 			document.querySelector(`.header-second-menu-item.item-analytics a`).href = `/Family/ReportPupilMarks/Get`;
 		}
 
-		// Remove the menu for the "Pārskati" link in the header
-		if (document.querySelector(`.header-second-menu-item.item-analytics .header-second-submenu`) !== null) {
-			document.querySelector(`.header-second-menu-item.item-analytics`).removeChild(document.querySelector(`.header-second-menu-item.item-analytics .header-second-submenu`));
-		}
-
 		if (window.location.href.includes(`ReportPupilMarks`)) {
 			// Remove the tabs in analytics
 			document.querySelector(`.analytic ul.nav-tabs`).style.display = `none`;

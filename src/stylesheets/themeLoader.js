@@ -25,5 +25,6 @@ loadTheme();
 chrome.runtime.onMessage.addListener((request) => {
 	if (request === `loadTheme`) {
 		loadTheme();
+		applyLogos(); // Accessed from branding.js
 	}
 });

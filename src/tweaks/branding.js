@@ -8,11 +8,14 @@ const applyLogos = () => {
 				reader.onloadend = () => {
 					var base64data = reader.result;
 
-					for (logo of document.querySelectorAll(`.logo`)) {
+					for (let logo of document.querySelectorAll(`.logo`)) {
 						logo.style.backgroundImage = `url("${base64data}")`;
 					}
-					for (logo of document.querySelectorAll(`img[src="/Presentation/_IDACC/Login/Views/css/img/logo.png"]`)) {
+					for (let logo of document.querySelectorAll(`img[src="/Presentation/_IDACC/Login/Views/css/img/logo.png"]`)) {
 						logo.src = base64data;
+					}
+					if (document.querySelector(`.header-logo`) !== null) {
+						document.querySelector(`.header-logo`).src = base64data;
 					}
 				}
 			}
