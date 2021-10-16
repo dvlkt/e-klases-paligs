@@ -1,4 +1,4 @@
-/* HEADER */
+/* Header */
 html .header-second .header-second-inner {
 	position: fixed;
 	background: var(--background-middle-color);
@@ -53,7 +53,9 @@ html .header-second-menu .header-second-menu-item.item-home a::before,
 html .header-second-menu .header-second-menu-item.item-journal a::before,
 html .header-second-menu .header-second-menu-item.item-messages a::before,
 html .header-second-menu .header-second-menu-item.item-video a::before,
-html .header-second-menu .header-second-menu-item.item-analytics a::before{
+html .header-second-menu .header-second-menu-item.item-analytics a::before {
+	content: "";
+	display: block;
 	width: 30px;
 	height: 30px;
 	background: var(--paragraph-color);
@@ -89,7 +91,7 @@ html .header-second .header-second-submenu {
 	}
 }
 
-/* TOOLTIPS */
+/* Tooltips */
 html .header-menu-item-tooltip {
 	position: absolute;
 	display: none;
@@ -118,7 +120,7 @@ html .header-menu-item-tooltip-content p {
 	transform: translateY(-20px);
 }
 
-/* LOGO & ACCOUNT */
+/* Logo & account */
 html .header-logo {
 	position: fixed;
 	top: 0;
@@ -147,7 +149,7 @@ html .header-account-btn.active {
 	background: var(--theme-color);
 }
 
-/* ACCOUNT POPUP */
+/* Account popup */
 html .header-account-popup { 
 	position: fixed;
 	right: 10px;
@@ -206,7 +208,15 @@ html .header-account-popup-button::before {
 	-webkit-mask-size: cover;
 }
 
-/* MOBILE */
+/* Hide unused elements */
+html .header-first {
+	display: none;
+}
+html .student-selector {
+	display: none;
+}
+
+/* Mobile */
 html header.minimal .header-first {
 	height: 50px;
 
@@ -223,5 +233,42 @@ html .toggle-mobile-menu {
 @media only screen and (max-width: 767px) {
 	html .header-second {
 		z-index: 1001;
+	}
+	html .header-second .row .col-sm-7 {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		height: 64px;
+		background: var(--background-middle-color);
+		box-shadow: 0 4px 10px -3px var(--shadow-color);
+		z-index: 1001;
+	}
+	html .header-second-menu.hidden-xs {
+		display: block !important;
+		width: 300px;
+		height: 64px;
+	}
+	html .header-second-menu .header-second-menu-item {
+		display: inline-block;
+		width: 40px;
+		height: 64px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	html .header-second-menu .header-second-menu-item > a {
+		display: block;
+		width: 40px;
+		height: 64px;
+	}
+	html .header-second-menu .header-second-menu-item.item-home a::before,
+	html .header-second-menu .header-second-menu-item.item-journal a::before,
+	html .header-second-menu .header-second-menu-item.item-messages a::before,
+	html .header-second-menu .header-second-menu-item.item-video a::before,
+	html .header-second-menu .header-second-menu-item.item-analytics a::before {
+		width: 36px;
+		height: 36px;
+		margin-left: 2px;
+		margin-right: 2px;
+		margin-top: 10px;
 	}
 }

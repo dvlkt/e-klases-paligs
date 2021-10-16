@@ -139,7 +139,7 @@ html .datepicker-dropdown .prev::before,
 html section h2 .switch-date-next,
 html section h2 .switch-date-prev {
 	border: 0;
-	background: var(--theme-color);
+	background: var(--paragraph-color);
 	width: 20px;
 	height: 20px;
 	mask-size: cover;
@@ -156,6 +156,7 @@ html section h2 .switch-date-prev:hover {
 }
 html .journal-nav .mobile-date {
 	font-weight: bold;
+	font-size: 18px;
 }
 html .calendar-holder .datepicker .dow,
 html .datepicker .dow {

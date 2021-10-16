@@ -249,7 +249,7 @@ window.addEventListener(`pageLoading`, () => {
 	}
 });
 
-window.addEventListener(`urlChanged`, () => {
+const showActivePageLinks = () => {
 	// Show header links as active when in some pages
 	if (document.location.href.includes(`/SPA/Family#/mail`)) {
 		document.querySelector(`.header-second-menu-item.item-messages`).className += ` active`;
@@ -261,4 +261,10 @@ window.addEventListener(`urlChanged`, () => {
 	} else {
 		document.querySelector(`.header-second-menu-item.item-video`).className = `header-second-menu-item item-video`;
 	}
+}
+window.addEventListener(`urlChanged`, () => {
+	showActivePageLinks();
+});
+window.addEventListener(`pageLoaded`, () => {
+	showActivePageLinks();
 });

@@ -239,8 +239,8 @@ html .students-journal-header .week-selector .week-selector-prev:hover {
 html .student-journal-lessons .actual-lessons-item,
 html .actual-lessons .actual-lessons-item {
 	background: var(--background-middle-color);
-	border-radius: 1rem;
-	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	border-radius: 10px;
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s max-height;
 	max-height: 54px;
 }
@@ -251,20 +251,27 @@ html .student-journal-lessons .actual-lessons-item.open {
 html .actual-lessons .lesson-subitem .description,
 html .student-journal-lessons .lesson-subitem .description {
 	color: var(--paragraph-color);
-
-	font-size: 0.8rem;
+	font-size: 15px;
+	line-height: 20px;
 }
 html .actual-lessons .lesson-subitem .title,
 html .student-journal-lessons .lesson-subitem .title {
 	color: var(--low-priority-text-color);
 	font-family: 'Inter', sans-serif;
-	text-transform: uppercase;
-	font-size: 0.7rem;
-	font-weight: bold;
+	font-size: 15px;
+	font-weight: 500;
+	margin-bottom: 2px;
 }
 html .actual-lessons .actual-lessons-item.has-content .lesson-title::after,
 html .student-journal-lessons .actual-lessons-item.has-content .lesson-title::after {
-	border-color: var(--low-priority-text-color) #00000000 #00000000;
+	background: var(--low-priority-text-color);
+	border: 0;
+	display: block;
+	width: 15px;
+	height: 15px;
+	top: 20px;
+	mask-size: cover;
+	-webkit-mask-size: cover;
 }
 html .actual-lessons .lesson-subitem,
 html .student-journal-lessons .lesson-subitem {
@@ -301,16 +308,13 @@ html .students-journal-header .week-selector .selected-period::after {
 html .students-journal-header .week-selector .selected-period-mobile {
 	background: var(--background-middle-color);
 	border-radius: 10px;
-	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s opacity;
-}
-html .students-journal-header .week-selector .selected-period-mobile .cal-icon {
-	filter: invert() brightness(--icon-brightness);
 }
 html .students-journal-header .week-selector.calendar-open .selected-period-mobile {
 	background: var(--background-middle-color);
 	border: 0;
-	border-radius: 1rem;
+	border-radius: 10px;
 	opacity: 0.7;
 }
 html .students-journal-header .week-selector .selected-period-mobile .cal-icon {
@@ -328,22 +332,26 @@ html .students-journal-header .students-journal-header-links a.print::before {
 }
 html .actual-lessons h2 {
 	font-weight: bold;
-	font-size: 30px;
+	font-size: 32px;
 }
 html .actual-lessons .lesson-title .title,
 html .student-journal-lessons .lesson-title .title {
 	color: var(--title-color);
+	font-weight: 500;
+	font-size: 15px;
 }
 html .actual-lessons .lesson-title .number,
 html .student-journal-lessons .lesson-title .number,
 html .actual-lessons .lesson-title .room,
 html .student-journal-lessons .lesson-title .room {
 	color: var(--low-priority-text-color);
+	font-size: 15px;
 }
 html .actual-lessons .lesson-title .room,
 html .student-journal-lessons .lesson-title .room {
-	font-style: normal;
-	font-weight: bold;
+	font-style: italic;
+	font-weight: normal;
+	font-size: 15px;
 }
 @media only screen and (min-width: 768px) {
 	html .students-journal-header .week-selector {
@@ -356,7 +364,7 @@ html .diary-analytics {
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
 	padding: 1rem;
-	border-radius: 1rem;
+	border-radius: 10px;
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 }
 html .diary-analytics h2 {
@@ -429,7 +437,7 @@ html #centerContainer .room {
 	color: var(--low-priority-text-color);
 }
 html .btn-print {
-	border-radius: 1rem;
+	border-radius: 10px;
 	background: var(--theme-color);
 	font-weight: bold;
 	text-transform: uppercase;
@@ -452,11 +460,8 @@ html .rating-wrap {
 html .rating-container .test-detailed-data,
 html .rating-wrap .rating-table {
 	background: var(--background-middle-color);
-
 	border: 0;
-
-	border-radius: 1rem;
-
+	border-radius: 10px;
 	box-shadow: 0 7px 14px -3px var(--shadow-color);
 }
 html .rating-container .test-detailed-data span,
