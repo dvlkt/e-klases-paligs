@@ -52,6 +52,7 @@
 				"tweaks/home.js",
 				"tweaks/mail.js",
 				"tweaks/profilePicture.js",
+				"tweaks/screenshotMode.js",
 				"events/pageStarted.js"
 			],
 			"css": [
