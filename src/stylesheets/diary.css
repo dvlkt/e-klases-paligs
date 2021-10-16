@@ -325,8 +325,30 @@ html .students-journal-header .week-selector .selected-period-mobile .cal-icon {
 	width: 30px;
 	height: 30px;
 }
+html .students-journal-header .students-journal-header-links {
+	padding-right: 0;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .students-journal-header .students-journal-header-links a {
+	background: var(--background-middle-color);
+	color: var(--paragraph-color);
+	font-size: 15px;
+	padding: 10px;
+	border-radius: 10px;
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	transition: .2s filter, .2s box-shadow;
+}
+html .students-journal-header .students-journal-header-links a:hover {
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
+	text-decoration: none;
+}
+html .students-journal-header .students-journal-header-links a.print {
+	margin-left: 10px;
+}
 html .students-journal-header .students-journal-header-links a.print::before {
-	background: var(--theme-color);
+	background: var(--paragraph-color);
 	mask-size: cover;
 	-webkit-mask-size: cover;
 }
@@ -492,7 +514,6 @@ html .rating-wrap .first .col:first-of-type,
 html .rating-wrap .first .col,
 html .rating-wrap .first .col:last-of-type {
 	background: none;
-
 	text-align: center;
 	font-weight: bold;
 	text-transform: uppercase;
