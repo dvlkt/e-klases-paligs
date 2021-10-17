@@ -1,30 +1,34 @@
 /* FAMILY PLAN */
 html .sys-content .section.plan-info-head {
 	background: var(--background-middle-color);
-
-	border-radius: 1rem 1rem 0 0;
+	border-radius: 10px 10px 0 0;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .sys-content .section.dark {
 	background: var(--background-front-color);
-
 	margin-bottom: 1rem;
-
 	border-radius: 0 0 1rem 1rem;
 }
 html .sys-content .section-stores {
 	display: none; /* Why are the "Get on App Store and Google Play" thingies even there? Completely unrelated so removing them */
 }
+html .sys-content h1 {
+	font-size: 32px;
+}
+html .sys-content p {
+	font-size: 15px;
+}
 html .announcement .warning .inner {
-	height: 2rem;
-
+	height: 35px;
 	background: var(--red-color);
 	color: var(--red-accent-color);
-
-	padding: .5rem;
-
-	border-radius: .5rem;
-
-	box-shadow: 0 7px 14px -3px var(--red-shadow-color);
+	font-size: 15px;
+	font-family: "Inter", sans-serif;
+	font-weight: 500;
+	padding: 10px;
+	border-radius: 10px;
+	box-shadow: 2px 3px 5px -3px var(--red-shadow-color);
 }
 html .plan-info-head .announcement {
 	color: var(--title-color);
@@ -35,27 +39,40 @@ html .btn-transparent:focus,
 html .btn-transparent:hover {
 	background: var(--theme-color);
 	color: var(--theme-accent-color);
-
-	font-weight: bold;
-	text-transform: uppercase;
-
+	font-weight: 500;
+	font-family: "Inter", sans-serif;
 	border: 0;
-
+	border-radius: 10px;
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s filter, .2s box-shadow;
 }
 html .btn-transparent:focus,
 html .btn-transparent:hover {
-	box-shadow: 0 7px 14px -3px var(--shadow-color);
-
-	filter: brightness(0.8);
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
 }
 html .btn-transparent::after {
 	border: 2px solid var(--theme-accent-color);
 	border-width: 0 2px 2px 0;
 }
+html .family-plan-carousel .row div {
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .family-plan-carousel h2 {
+	color: var(--title-color);
+	font-size: 24px;
+}
+html .family-plan-carousel .significant p {
+	font-size: 15px;
+}
 html .carousel-inner .item:nth-child(1),
 html .carousel-inner .item:nth-child(3) {
 	background: var(--theme-gradient) !important;
+	color: var(--theme-accent-color);
+}
+html .carousel-inner .item:nth-child(1) h2,
+html .carousel-inner .item:nth-child(3) h2 {
 	color: var(--theme-accent-color);
 }
 html .carousel-inner .item:nth-child(2),
@@ -70,9 +87,31 @@ html .section.plan-pros .row .col-md-4 {
 }
 html .section.plan-pros .row .col-md-8 {
 	width: 100%;
-
 	padding-left: 25%;
 	padding-right: 25%;
+}
+html .section.plan-pros .pros-list li {
+	background: none;
+	padding-left: 0;
+}
+html .section.plan-pros .pros-list li p {
+	display: inline-block;
+	color: var(--paragraph-color);
+	font-size: 15px;
+	width: calc(100% - 65px);
+	margin-left: 10px;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .section.plan-pros .pros-list li::before {
+	content: "";
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background: var(--paragraph-color);
+	vertical-align: top;
+	mask-size: cover;
+	-webkit-mask-size: cover;
 }
 html .section.plan-pros .pros-list li:not(:last-child)::after {
 	border-bottom: 4px solid var(--divider-color);
@@ -88,13 +127,14 @@ html .family-plan-carousel .carousel-control.left::before {
 html .family-plan-carousel .carousel-control.right::before {
 	right: 1rem;
 }
+html .family-plan-carousel .carousel-indicators {
+	user-select: none;
+	-webkit-user-drag: none;
+}
 html .family-plan-carousel .carousel-indicators li {
 	background: var(--background-middle-color);
-
 	border: 0;
-
-	box-shadow: 0 7px 14px -3px var(--shadow-color);
-
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s width, .2s height;
 }
 html .family-plan-carousel .carousel-indicators .active {

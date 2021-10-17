@@ -56,7 +56,6 @@ darkThemeBtn.onclick = () => {
 for (let element of document.querySelectorAll(`#theme-color-picker .color-picker-option`)) {
 	element.addEventListener(`click`, () => {
 		chrome.storage.sync.set({ themeColor: element.className.split(`-`)[5] });
-
 		sendThemeUpdateMessage();
 	});
 }
