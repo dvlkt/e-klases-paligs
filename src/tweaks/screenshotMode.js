@@ -41,6 +41,18 @@ const applyScreenshotMode = () => {
 			}
 		}
 
+	} else if (window.location.href.includes(`/SPA/Family#/mail`)) {
+		setTimeout(() => {
+			for (let authorsNameElement of document.querySelectorAll(`.MessageItem__AuthorInfo`)) {
+				authorsNameElement.innerText = generateRandomText(authorsNameElement.innerText.split(` `).length);
+			}
+			for (let titleElement of document.querySelectorAll(`.MessageItem__MessageTitle`)) {
+				titleElement.innerText = generateRandomText(titleElement.innerText.split(` `).length);
+			}
+			for (let contentElement of document.querySelectorAll(`.MessageItem__MessageBody`)) {
+				contentElement.innerText = generateRandomText(contentElement.innerText.split(` `).length);
+			}
+		}, 2000); // Set the timeout because I'm too lazy to make some random magical event listener that fires when the SPA has loaded
 	}
 }
 
