@@ -6,10 +6,10 @@ whatsNewButton.onclick = () => {
 	});
 }
 
-let foundBugButton = document.getElementById(`found-bug-btn`);
+/* let foundBugButton = document.getElementById(`found-bug-btn`);
 foundBugButton.onclick = () => {
 	alert(`Lol pats vainīgs`);
-}
+} */
 
 let lightThemeBtn = document.getElementById(`theme-preview-light-btn`);
 let darkThemeBtn = document.getElementById(`theme-preview-dark-btn`);
@@ -64,7 +64,7 @@ let profilePictureElement = document.getElementById(`profile-picture`);
 chrome.storage.local.get(`profilePicture`, (res) => {
 	if (res.profilePicture === undefined) {
 		// The default profile picture
-		profilePictureElement.src = `data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2IDU2QzE2IDU2IDIwLjg4NDEgNDYuNSAzMi41IDQ2LjVDNDQuMTE1OSA0Ni41IDQ4IDU2IDQ4IDU2IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjUiLz4KPGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iMjguNSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSI1Ii8+CjxjaXJjbGUgY3g9IjMyIiBjeT0iMjYiIHI9IjEwLjUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iNSIvPgo8L3N2Zz4K`;
+		profilePictureElement.src = `data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgdmlld0JveD0iMCAwIDEyOCAxMjgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxjaXJjbGUgY3g9IjY0IiBjeT0iNjQiIHI9IjYxIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjUiLz4KPGNpcmNsZSBjeD0iNjQiIGN5PSI0NCIgcj0iMjQiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iNSIvPgo8cGF0aCBkPSJNMjEgMTA3LjVDMjEgMTA3LjUgMzUuNSA4Mi41IDY0LjI1IDgyLjVDOTMgODIuNSAxMDcuNSAxMDcuNSAxMDcuNSAxMDcuNSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSI1Ii8+Cjwvc3ZnPgo=`;
 	} else {
 		profilePictureElement.src = res.profilePicture;
 	}
