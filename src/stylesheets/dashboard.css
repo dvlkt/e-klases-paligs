@@ -151,7 +151,7 @@ html .dashboard-widget-col.widget-notifications .widget-notification {
 	text-align: left;
 	margin: 10px;
 	border: 0;
-	border-radius: 10px;
+	border-radius: var(--corner-roundness);
 	transition: .2s box-shadow, .2s filter;
 	padding-left: 15px;
 	user-select: none;

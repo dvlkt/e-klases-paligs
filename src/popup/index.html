@@ -26,18 +26,17 @@
 				</svg>
 			</button> -->
 
-			<div class="title">
-				<h2>Dizains</h2>
-			</div>
+			<h2>Dizains</h2>
 
+			<p>Krāsu motīvs:</p>
 			<div id="theme-picker">
-				<div id="theme-preview-light-btn" class="theme-preview theme-preview-light">
+				<div class="theme-preview" data-theme-name="light">
 					<div class="theme-preview-header"></div>
 					<div class="theme-preview-header-detail"></div>
 					<div class="theme-preview-table-title"></div>
 					<div class="theme-preview-table"></div>
 				</div>
-				<div id="theme-preview-dark-btn" class="theme-preview theme-preview-dark">
+				<div class="theme-preview" data-theme-name="dark">
 					<div class="theme-preview-header"></div>
 					<div class="theme-preview-header-detail"></div>
 					<div class="theme-preview-table-title"></div>
@@ -48,37 +47,31 @@
 			<br />
 
 			<p>Tēmas krāsa:</p>
-			<div class="color-picker" id="theme-color-picker">
-				<div class="color-picker-option color-picker-option-red"></div>
-				<div class="color-picker-option color-picker-option-orange"></div>
-				<div class="color-picker-option color-picker-option-yellow"></div>
-				<div class="color-picker-option color-picker-option-green"></div>
-				<div class="color-picker-option color-picker-option-lblue"></div>
-				<div class="color-picker-option color-picker-option-blue"></div>
-				<div class="color-picker-option color-picker-option-violet"></div>
+			<div class="color-picker">
+				<div class="color-picker-option" data-theme-color="#ee3333"></div>
+				<div class="color-picker-option" data-theme-color="#fa5e21"></div>
+				<div class="color-picker-option" data-theme-color="#f8b525"></div>
+				<div class="color-picker-option" data-theme-color="#139e4a"></div>
+				<div class="color-picker-option" data-theme-color="#0088e3"></div>
+				<div class="color-picker-option" data-theme-color="#1c1fd1"></div>
+				<div class="color-picker-option" data-theme-color="#8c29dd"></div>
 			</div>
 
 			<br />
 
-			<p>Stūru apaļums</p>
+			<p>Stūru apaļums:</p>
 			<div class="slider" id="corner-roundness-slider">
 				<div class="slider-grabber" id="corner-roundness-slider-grabber"></div>
 			</div>
+			<sub id="corner-roundness-slider-value">10px</sub>
 
-			<div class="title">
-				<h2>Profila attēls</h2>
-			</div>
+			<h2>Profila attēls</h2>
 
-			<img
-				class="profile-picture"
-				id="profile-picture" />
-			<button
-				class="profile-picture-btn"
-				id="profile-picture-btn">
-
+			<img class="profile-picture" />
+			<button class="profile-picture-btn">
 				Augšupielādēt jaunu
 			</button>
-			<sub class="profile-picture-sub">Profila bildi varēsi redzēt tikai tu.</sub>
+			<sub class="profile-picture-sub">Profila bildi varēsi redzēt tikai Tu.</sub>
 
 			<div class="footer">
 				<p>© Dāvis Lektauers, 2021</p>
@@ -86,9 +79,6 @@
 			</div>
 		</div>
 
-		<div class="list-gradient"></div>
-
 		<script type="module" src="js/index.js"></script>
-		<script type="module" src="themeApplier.js"></script>
 	</body>
 </html>
