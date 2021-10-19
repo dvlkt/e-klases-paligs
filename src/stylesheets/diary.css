@@ -36,11 +36,11 @@ html .diary-container .lessons-table thead td {
 }
 html .student-journal-lessons-table-holder .lessons-table thead td.first-column,
 html .diary-container .lessons-table thead td.first-column {
-	border-top-left-radius: 10px;
+	border-top-left-radius: var(--corner-roundness);
 }
 html .student-journal-lessons-table-holder .lessons-table thead td.score,
 html .diary-container .lessons-table thead td.score {
-	border-top-right-radius: 10px;
+	border-top-right-radius: var(--corner-roundness);
 }
 html .no-data {
 	background: var(--background-middle-dark-color);
@@ -116,11 +116,11 @@ html .lessons-table tbody td .number--lessonNotInDay {
 }
 html .student-journal-lessons-table-holder .lessons-table tbody tr:last-child td:nth-child(1),
 html .diary-container .lessons-table tbody tr:last-child td:nth-child(1) {
-	border-bottom-left-radius: 10px;
+	border-bottom-left-radius: var(--corner-roundness);
 }
 html .student-journal-lessons-table-holder .lessons-table tbody tr:last-child td:last-child,
 html .diary-container .lessons-table tbody tr:last-child td:last-child {
-	border-bottom-right-radius: 10px;
+	border-bottom-right-radius: var(--corner-roundness);
 }
 html .student-journal-lessons-table-holder .lessons-table a.file,
 html .diary-container .lessons-table a.file {

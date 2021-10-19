@@ -1,6 +1,6 @@
 html .modal-body {
 	background: var(--background-middle-color);
-	border-radius: 10px;
+	border-radius: var(--corner-roundness);
 	box-shadow: 2px 7px 14px -3px var(--shadow-color);
 }
 html .modal-backdrop {
@@ -19,7 +19,7 @@ html .modal-background {
 
 /* MARK CARD */
 html .modal-mark-card .mark-card-inner-title {
-	border-radius: 1rem 1rem 0 0;
+	border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
 	background: var(--background-front-color);
 	border: 0;
 	font-family: 'Inter', sans-serif;
@@ -69,11 +69,8 @@ html .mark-card-inner-graph .mark-card-inner-graph-image .btn-test-report::befor
 html .modal-mark-card .mark-card-inner {
 	background: var(--background-front-color);
 	color: var(--paragraph-color);
-
-	border-radius: 1rem;
-
+	border-radius: var(--corner-roundness);
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
-
 	border: 0;
 }
 html .modal-mark-card .date {
@@ -93,7 +90,7 @@ html .modal-technical h1 {
 }
 html .modal-technical .legend-dialog .legend-category {
 	border: 0;
-	border-radius: 10px;
+	border-radius: var(--corner-roundness);
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 	background: var(--background-front-color);
 	font-family: 'Inter', sans-serif;
@@ -153,7 +150,7 @@ html .Modal__Content .Modal__Header {
 	background: var(--background-middle-color) !important;
 	color: var(--paragraph-color);
 	border: 0;
-	border-radius: 10px 10px 0 0;
+	border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
 }
 html .Modal__Header .Modal__Title {
 	color: var(--paragraph-color);
@@ -161,24 +158,24 @@ html .Modal__Header .Modal__Title {
 html .Modal__Content .Modal__Body {
 	background: var(--background-middle-color) !important;
 	color: var(--paragraph-color);
-	border-radius: 0 0 10px 10px;
+	border-radius: 0 0 var(--corner-roundness) var(--corner-roundness);
 }
 html .RecipientsModal__GroupContainer {
-	border-radius: 0 0 10px 10px;
+	border-radius: 0 0 var(--corner-roundness) var(--corner-roundness);
 }
 html .RecipientsModal__Title {
 	font-size: 24px;
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-weight: bold;
 	color: var(--title-color);
 }
 html .RecipientsModal__GroupContainer .RecipientGroup {
 	border: 0;
-	border-radius: 10px;
+	border-radius: var(--corner-roundness);
 	background: var(--background-middle-dark-color);
 	transition: .2s filter;
 	font-size: 15px;
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	color: var(--paragraph-color);
 }
 html .RecipientsModal__GroupContainer .RecipientGroup:hover {
@@ -232,7 +229,7 @@ html .RecipientsModal__StudyYear:hover {
 }
 html .Modal__Body .RecipientSearch,
 html .Modal__Body .RecipientSearch:focus {
-	border-radius: 10px;
+	border-radius: var(--corner-roundness);
 	font-size: 15px;
 	padding: 10px;
 	height: 35px;
