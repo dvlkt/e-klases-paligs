@@ -8,8 +8,8 @@ html .xs-diary-lesson-times:hover {
 html .lessons-table {
 	background: var(--background-middle-dark-color);
 	border: 0;
-	border-radius: 10px;
-	box-shadow: 0	 3px 5px -3px var(--shadow-color);
+	border-radius: var(--corner-roundness);
+	box-shadow: 0 3px 5px -3px var(--shadow-color);
 }
 html .lessons-table tr {
 	border: 0;
@@ -45,7 +45,7 @@ html .diary-container .lessons-table thead td.score {
 html .no-data {
 	background: var(--background-middle-dark-color);
 	text-align: center;
-	border-radius: 10px;
+	border-radius: var(--corner-roundness);
 }
 html .no-data .inform {
 	background: none;
@@ -145,7 +145,7 @@ html .diary-container .lessons-table span.score {
 	background: var(--background-front-color);
 	font-size: 15px;
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
-	border-radius: 10px;
+	border-radius: var(--corner-roundness);
 	padding: 10px;
 	font-weight: bold;
 	transition: .2s opacity;
@@ -254,7 +254,7 @@ html .students-journal-header .week-selector .week-selector-prev:hover {
 html .student-journal-lessons .actual-lessons-item,
 html .actual-lessons .actual-lessons-item {
 	background: var(--background-middle-color);
-	border-radius: 10px;
+	border-radius: var(--corner-roundness);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s max-height;
 	max-height: 54px;
@@ -322,14 +322,14 @@ html .students-journal-header .week-selector .selected-period::after {
 }
 html .students-journal-header .week-selector .selected-period-mobile {
 	background: var(--background-middle-color);
-	border-radius: 10px;
+	border-radius: var(--corner-roundness);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s opacity;
 }
 html .students-journal-header .week-selector.calendar-open .selected-period-mobile {
 	background: var(--background-middle-color);
 	border: 0;
-	border-radius: 10px;
+	border-radius: var(--corner-roundness);
 	opacity: 0.7;
 }
 html .students-journal-header .week-selector .selected-period-mobile .cal-icon {
@@ -350,7 +350,7 @@ html .students-journal-header .students-journal-header-links a {
 	color: var(--paragraph-color);
 	font-size: 15px;
 	padding: 10px;
-	border-radius: 10px;
+	border-radius: var(--corner-roundness);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s filter, .2s box-shadow;
 }
@@ -401,7 +401,7 @@ html .diary-analytics {
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
 	padding: 1rem;
-	border-radius: 10px;
+	border-radius: var(--corner-roundness);
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 }
 html .diary-analytics h2 {
@@ -474,7 +474,7 @@ html #centerContainer .room {
 	color: var(--low-priority-text-color);
 }
 html .btn-print {
-	border-radius: 10px;
+	border-radius: var(--corner-roundness);
 	background: var(--theme-color);
 	font-weight: bold;
 	text-transform: uppercase;
@@ -498,7 +498,7 @@ html .rating-container .test-detailed-data,
 html .rating-wrap .rating-table {
 	background: var(--background-middle-color);
 	border: 0;
-	border-radius: 10px;
+	border-radius: var(--corner-roundness);
 	box-shadow: 0 7px 14px -3px var(--shadow-color);
 }
 html .rating-container .test-detailed-data span,
