@@ -43,16 +43,14 @@
 		<tr>
 			<td>
 				<p align="center">
-					<a href="https://chrome.google.com/webstore/detail/e-klases-pal%C4%ABgs/bpajpfnilndpahikmljlbnlmabajgndo?hl=lv">
-						<img alt="Chrome" src="https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/	mPGKYBIR2uCP0ApchDXE.png" width="172" />
+					<a href="https://chrome.google.com/webstore/detail/e-klases-palīgs-beta/hplegnbabhacjjchnbdcdccchnepmcde">
+						<img alt="Chrome" src="https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/HRs9MPufa1J1h5glNhut.png" width="172" />
 					</a>
 				</p>
 			</td>
 			<td>
 				<p align="center">
-					<a href="https://chrome.google.com/webstore/detail/e-klases-pal%C4%ABgs/bpajpfnilndpahikmljlbnlmabajgndo?hl=lv">
-						<img alt="Firefox" src="https://ffp4g1ylyit3jdyti1hqcvtb-wpengine.netdna-ssl.com/addons/files/2015/11/get-the-addon.png" width="172" />
-					</a>
+					Firefox neļauj nepabeigtus extensions :(
 				</p>
 			</td>
 			<td>
