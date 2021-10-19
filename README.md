@@ -13,22 +13,6 @@
 
 ***
 
-**19. oktobris** - v0.4 BETA
-
-**1. novembris** - v0.5 BETA
-
-**15. novembris** - v0.6 BETA
-
-**29. novembris** - v0.7 BETA
-
-**6. decembris** - v1.0-pre1
-
-**13. decembris** - v1.0-pre2
-
-**20. decembris** - v1.0-pre3
-
-**3. janvāris** - v1.0
-
 <h1 align="center">
 	🎉 Ieinstalēšana
 </h1>
@@ -88,38 +72,17 @@
 ***
 
 <p align="center">
-	<img src="https://github.com/d-avis/e-klases-paligs/raw/master/assets/readme/1.png" alt="Skaists, moderns dizains" />
+	<img src="https://github.com/d-avis/e-klases-paligs/raw/master/assets/screenshot-0.png" />
 </p>
 <p align="center">
-	<img src="https://github.com/d-avis/e-klases-paligs/raw/master/assets/readme/2.png" alt="Tumšais režīms" />
+	<img src="https://github.com/d-avis/e-klases-paligs/raw/master/assets/screenshot-1.png"/>
 </p>
 <p align="center">
-	<img src="https://github.com/d-avis/e-klases-paligs/raw/master/assets/readme/3.png" alt="Reklāmu bloķēšana" />
+	<img src="https://github.com/d-avis/e-klases-paligs/raw/master/assets/screenshot-2.png" />
 </p>
-
-# 🧩 Citas funkcijas
-
-- Ģimenes komplekta reklāmu noņemšana (ieteicams izslēgt, ja ir aktivizēts ģimenes komplekts)
-
-- Profila ikona (redzama tikai sev)
-
-- Viegli pārskatāma savu atzīmju statistika arī bez ģimenes komplekta
-
-# 📝 Plānotas funkcijas
-
-- Atslēgvārdu izcelšana dienasgrāmatā
-
-- Paroles saglabāšana
-
-- PWAs
-
-***
-
-# 📱 Izmantošana uz telefona
-
-Google Chrome un gandrīz visi uz tā balstītie internetpārlūki uz telefona neatbalsta paplašinājumus, līdz ar to E-klases Palīgs nav tajos lietojams. Vienīgais veids, kā E-klases Palīgu var izmantot uz telefona, ir caur Firefox Browser.
-
-Uz Firefox Browser E-klases Palīgs strādā tikpat labi, cik pati E-klases aplikācija, ja ne labāk.
+<p align="center">
+	<img src="https://github.com/d-avis/e-klases-paligs/raw/master/assets/screenshot-3.png" />
+</p>
 
 ***
 
