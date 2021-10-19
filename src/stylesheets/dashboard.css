@@ -8,7 +8,7 @@ html .dashboard-information {
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
 	border: 0;
-	border-radius: 10px;
+	border-radius: var(--corner-roundness);
 	cursor: auto;
 }
 html .dashboard-widget-col.widget-notifications .widget-header,
@@ -61,7 +61,7 @@ html .dashboard-widget-col.widget-notifications .widget-notifications-primary .n
 	position: relative;
 	background: none;
 	background-color: var(--background-middle-dark-color);
-	border-radius: 10px;
+	border-radius: var(--corner-roundness);
 	border: 0;
 	margin: 10px;
 	margin-bottom: 0;
@@ -234,7 +234,7 @@ html .dashboard-news .dashboard-news-item {
 	margin-bottom: 15px;
 }
 html .dashboard-news .dashboard-news-item .article-content img {
-	border-radius: 10px;
+	border-radius: var(--corner-roundness);
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 	margin-left: 0 !important;
 	margin-top: 0 !important;

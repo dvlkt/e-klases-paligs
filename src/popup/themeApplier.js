@@ -1,5 +1,5 @@
 chrome.storage.sync.get([`theme`, `themeColor`], (res) => {
-	if (res.theme === `dark`) {
+	if (res.theme.name === `dark`) {
 		document.body.className = `dark-theme`;
 
 		if (document.querySelector(`.news`) !== null) {

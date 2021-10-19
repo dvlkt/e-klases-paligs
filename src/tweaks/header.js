@@ -52,7 +52,7 @@ window.addEventListener(`pageLoading`, () => {
 	// Add the logo
 	if (document.querySelector(`.header-second .header-second-inner`) !== null) {
 		chrome.storage.sync.get(`theme`, (res) => {
-			fetch(chrome.runtime.getURL(`res/title-${res.theme === `dark` ? `dark` : `light`}.png`))
+			fetch(chrome.runtime.getURL(`res/title-${res.theme.name === `dark` ? `dark` : `light`}.png`))
 				.then(response => response.blob())
 				.then(blob => {
 					var reader = new FileReader();

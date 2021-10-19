@@ -15,7 +15,7 @@ let lightThemeBtn = document.getElementById(`theme-preview-light-btn`);
 let darkThemeBtn = document.getElementById(`theme-preview-dark-btn`);
 
 chrome.storage.sync.get(`theme`, (res) => {
-	if (res.theme === `dark`) {
+	if (res.theme.name === `dark`) {
 		darkThemeBtn.className += ` theme-preview-selected`;
 	} else {
 		lightThemeBtn.className += ` theme-preview-selected`;
@@ -32,24 +32,45 @@ const sendThemeUpdateMessage = () => {
 		}
 	});
 }
+const sendCornerRoundnessUpdateMessage = () => {
+	chrome.tabs.query({ url: "*://*.e-klase.lv/*" }, (tabs) => {
+		for (let tab of tabs) {
+			chrome.tabs.sendMessage(
+				tab.id,
+				`loadCornerRoundness`
+			);
+		}
+	});
+}
+
+
+const saveTheme = (themeName) => {
+	fetch(chrome.runtime.getURL(`themes/${themeName}.json`))
+		.then(response => response.json())
+		.then(themeData => {
+
+			chrome.storage.sync.set({ theme: themeData }, () => {
+				sendThemeUpdateMessage();
+			});
+
+		});
+}
 
 lightThemeBtn.onclick = () => {
 	lightThemeBtn.className = `theme-preview theme-preview-light theme-preview-selected`;
 	darkThemeBtn.className = `theme-preview theme-preview-dark`;
 
-	chrome.storage.sync.set({ theme: `light` });
-	document.body.className = `light-theme`;
+	saveTheme(`light`);
 
-	sendThemeUpdateMessage();
+	document.body.className = `light-theme`;
 }
 darkThemeBtn.onclick = () => {
 	lightThemeBtn.className = `theme-preview theme-preview-light`;
 	darkThemeBtn.className = `theme-preview theme-preview-dark theme-preview-selected`;
-	
-	chrome.storage.sync.set({ theme: `dark` });
-	document.body.className = `dark-theme`;
 
-	sendThemeUpdateMessage();
+	saveTheme(`dark`);
+	
+	document.body.className = `dark-theme`;
 }
 
 const themeColors = {
@@ -70,6 +91,49 @@ for (let element of document.querySelectorAll(`#theme-color-picker .color-picker
 		sendThemeUpdateMessage();
 	});
 }
+
+
+let cornerRoundnessSlider = document.querySelector(`#corner-roundness-slider`);
+let cornerRoundnessSliderGrabber = document.querySelector(`#corner-roundness-slider-grabber`);
+let isCornerRoundnessSliderGrabbed = false;
+let cornerRoundnessSliderLeftEdge = cornerRoundnessSlider.offsetLeft;
+let cornerRoundnessSliderRightEdge = cornerRoundnessSlider.offsetLeft + cornerRoundnessSlider.clientWidth - 20;
+
+chrome.storage.sync.get([`cornerRoundness`], (res) => {
+	let cornerRoundnessValue = parseInt(res.cornerRoundness.split(`px`)[0]);
+	cornerRoundnessSliderGrabber.style.left = `${cornerRoundnessValue}px`
+});
+
+cornerRoundnessSliderGrabber.addEventListener(`mousedown`, () => {
+	isCornerRoundnessSliderGrabbed = true;
+});
+
+window.addEventListener(`mousemove`, (event) => {
+	if (isCornerRoundnessSliderGrabbed) {
+		if (event.clientX < cornerRoundnessSliderLeftEdge) {
+			cornerRoundnessSliderGrabber.style.left = `0`;
+		} else if (event.clientX > cornerRoundnessSliderRightEdge) {
+			cornerRoundnessSliderGrabber.style.right = `20px`;
+		} else {
+			cornerRoundnessSliderGrabber.style.left = `${event.clientX - cornerRoundnessSliderLeftEdge}px`;
+		}
+
+		// Update the corner roundness
+		let cornerRoundnessSliderOffsetLeft = cornerRoundnessSliderGrabber.offsetLeft - cornerRoundnessSliderLeftEdge;
+		let cornerRoundnessSliderValuePercentage = cornerRoundnessSliderOffsetLeft / (cornerRoundnessSlider.clientWidth - 20)
+		let cornerRoundnessSliderValue = cornerRoundnessSliderValuePercentage * 60; // Values go from 0 to 60
+		
+		chrome.storage.sync.set({ cornerRoundness: `${cornerRoundnessSliderValue}px`});
+		sendCornerRoundnessUpdateMessage();
+	}
+});
+
+window.addEventListener(`mouseup`, (event) => {
+	if (isCornerRoundnessSliderGrabbed) {
+		isCornerRoundnessSliderGrabbed = false;
+	}
+});
+
 
 let profilePictureElement = document.getElementById(`profile-picture`);
 chrome.storage.local.get(`profilePicture`, (res) => {

@@ -1,6 +1,6 @@
 const applyLogos = () => {
 	chrome.storage.sync.get(`theme`, (res) => {
-		fetch(chrome.runtime.getURL(`res/title-${res.theme === `dark` ? `dark` : `light`}.png`))
+		fetch(chrome.runtime.getURL(`res/title-${res.theme.name === `dark` ? `dark` : `light`}.png`))
 			.then(response => response.blob())
 			.then(blob => {
 				var reader = new FileReader();
@@ -29,7 +29,7 @@ const applyFavicons = () => {
 		// This is to make the icon black and white when logged out
 
 		// Fetches the favicon
-		fetch(chrome.runtime.getURL(`res/${res.theme === `dark` ? `dark` : `light`}/icon-256${isBW ? `-bw` : ``}.png`))
+		fetch(chrome.runtime.getURL(`res/${res.theme.name === `dark` ? `dark` : `light`}/icon-256${isBW ? `-bw` : ``}.png`))
 			.then(response => response.blob())
 			.then(blob => {
 				var reader = new FileReader();
