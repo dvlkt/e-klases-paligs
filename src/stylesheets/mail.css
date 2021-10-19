@@ -360,11 +360,9 @@ html .AttachmentList__Item::before {
 }
 html .ButtonIcon.MailSearch__ResetInputButton::after {
 	content: "";
-
 	display: block;
 	width: .75rem;
 	height: .75rem;
-
 	filter: invert() brightness(var(--icon-brightness));
 }
 html .FetchMore .FetchMore__Text {

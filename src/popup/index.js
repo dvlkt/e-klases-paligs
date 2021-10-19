@@ -52,10 +52,21 @@ darkThemeBtn.onclick = () => {
 	sendThemeUpdateMessage();
 }
 
-
+const themeColors = {
+	red: `#ee3333`,
+	orange: `#fa5e21`,
+	yellow: `#f8b525`,
+	green: `#139e4a`,
+	lblue: `#0088e3`,
+	blue: `#1c1fd1`,
+	violet: `#8c29dd`
+}
 for (let element of document.querySelectorAll(`#theme-color-picker .color-picker-option`)) {
 	element.addEventListener(`click`, () => {
-		chrome.storage.sync.set({ themeColor: element.className.split(`-`)[5] });
+		let colorValue = themeColors[element.className.split(`-`)[5]];
+		chrome.storage.sync.set({ themeColor: colorValue });
+		document.querySelector(`:root`).style.setProperty(`--theme-color`, colorValue);
+
 		sendThemeUpdateMessage();
 	});
 }

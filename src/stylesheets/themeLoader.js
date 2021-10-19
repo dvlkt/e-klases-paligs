@@ -1,13 +1,3 @@
-const themeColors = {
-	red: `#ee3333`,
-	orange: `#fa5e21`,
-	yellow: `#f8b525`,
-	green: `#139e4a`,
-	lblue: `#0088e3`,
-	blue: `#1c1fd1`,
-	violet: `#8c29dd`
-}
-
 const loadTheme = () => {
 	chrome.storage.sync.get([`theme`, `themeColor`], (res) => {
 		fetch(chrome.runtime.getURL(`themes/${res.theme}.json`))
@@ -22,14 +12,14 @@ const loadTheme = () => {
 
 			});
 		
-		document.querySelector(`:root`).style.setProperty(`--theme-color`, themeColors[res.themeColor]);
+		document.querySelector(`:root`).style.setProperty(`--theme-color`, res.themeColor);
 	});
 }
 
 // This sets the theme to light by default if it hasn't been set
 chrome.storage.sync.get(`theme`, (res) => {
 	if (Object.keys(res).length === 0) {
-		chrome.storage.sync.set({ theme: `light`, themeColor: `lblue` });
+		chrome.storage.sync.set({ theme: `light`, themeColor: `#0088e3` });
 	}
 });
 loadTheme();

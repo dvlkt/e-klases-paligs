@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "E-klases Palīgs [BETA]",
-	"version": "0.4",
+	"version": "0.5",
 	"description": "Labāks dizains un vairāk funkcijas.",
 	"icons": {
 		"16": "res/light/icon-16.png",
@@ -34,15 +34,15 @@
 				"*://*.e-klase.lv/*"
 			],
 			"js": [
+				"events/pageLoaded.js",
+				"events/pageLoading.js",
+				"events/urlChanged.js",
 				"analytics/diary.js",
 				"animations/calendar.js",
 				"animations/headerDropdowns.js",
 				"animations/loadingSpinner.js",
 				"animations/mailActions.js",
 				"animations/modals.js",
-				"events/pageLoaded.js",
-				"events/pageLoading.js",
-				"events/urlChanged.js",
 				"stylesheets/themeLoader.js",
 				"tweaks/branding.js",
 				"tweaks/diary.js",

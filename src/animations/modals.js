@@ -1,7 +1,8 @@
-window.addEventListener(`pageLoading`, () => {
+window.addEventListener(`pageLoaded`, () => {
 	for (element of document.querySelectorAll(`.open-lesson-times`)) {
 		let modalElement = document.querySelector(`.timetable-dialog .modal-content`);
 		let modalCloseElement = document.querySelector(`[data-dismiss="modal"]`);
+		let modalBgElement = document.querySelector(`.modal-backdrop`);
 
 		element.addEventListener(`click`, () => {
 			setTimeout(() => {
@@ -16,5 +17,11 @@ window.addEventListener(`pageLoading`, () => {
 				modalElement.style.opacity = `0.1`;
 			}, 50);
 		});
+		/* modalBgElement.addEventListener(`click`, () => {
+			setTimeout(() => {
+				modalElement.style.transform = `scale(0.1)`;
+				modalElement.style.opacity = `0.1`;
+			}, 50);
+		}); */
 	}
 });

@@ -1,11 +1,23 @@
-/* MARK CARD */
 html .modal-body {
 	background: var(--background-middle-color);
-
-	border-radius: 1rem;
-
-	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	border-radius: 10px;
+	box-shadow: 2px 7px 14px -3px var(--shadow-color);
 }
+html .modal-backdrop {
+	display: none !important;
+}
+html .modal-background {
+	display: block;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1040;
+	background: #000000;
+}
+
+/* MARK CARD */
 html .modal-mark-card .mark-card-inner-title {
 	border-radius: 1rem 1rem 0 0;
 	background: var(--background-front-color);
@@ -70,15 +82,18 @@ html .modal-mark-card .date {
 	text-transform: uppercase;
 }
 
-/* LEGEND */
+/* Legend */
 html .modal-technical h1 {
 	font-family: 'Inter', sans-serif;
 	font-weight: bold;
-	font-size: 2rem;
+	font-size: 32px;
+	margin-bottom: 10px;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .modal-technical .legend-dialog .legend-category {
 	border: 0;
-	border-radius: 1rem;
+	border-radius: 10px;
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 	background: var(--background-front-color);
 	font-family: 'Inter', sans-serif;
@@ -93,22 +108,36 @@ html .modal-technical .legend-dialog .legend-category .legend-attribute {
 	font-family: 'Inter', sans-serif;
 	font-weight: bold;
 }
-html .modal-close {
-	filter: brightness(10) brightness(var(--icon-brightness));
+html .modal-technical .modal-close {
+	background: var(--paragraph-color);
+	width: 20px;
+	height: 20px;
+	top: 15px;
+	right: 15px;
+	mask-size: cover;
+	-webkit-mask-size: cover;
+	transition: .2s opacity;
+}
+html .modal-technical .modal-close:hover {
+	opacity: 0.7;
 }
 
-/* TIME TABLE */
+/* Time table */
 html .modal-technical .timetible-item .name { /* Did you mean... timetable..? */
 	font-family: 'Inter', sans-serif;
 	border-right: 3px solid #00000020;
 }
 html .modal-dialog.timetable-dialog.empty .modal-body {
 	background: var(--background-middle-color);
-	padding-top: 4rem;
+	padding-top: 40px;
 }
-html .modal-dialog.timetable-dialog.empty .modal-body p {
+html .modal-dialog.timetable-dialog.empty .modal-body p,
+html .modal-technical .timetible-item .name,
+html .modal-technical .timetible-item .time {
 	font-family: 'Inter', sans-serif;
-	font-size: 14px;
+	font-size: 15px;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .timetable-dialog .modal-content {
 	transform: scale(0.1);

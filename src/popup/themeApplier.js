@@ -1,4 +1,4 @@
-chrome.storage.sync.get(`theme`, (res) => {
+chrome.storage.sync.get([`theme`, `themeColor`], (res) => {
 	if (res.theme === `dark`) {
 		document.body.className = `dark-theme`;
 
@@ -13,4 +13,6 @@ chrome.storage.sync.get(`theme`, (res) => {
 		document.body.className = `light-theme`;
 		//lightThemeBtn.className += ` theme-selected`;
 	}
+
+	document.querySelector(`:root`).style.setProperty(`--theme-color`, res.themeColor);
 });

@@ -1,5 +1,5 @@
 /* Opening animation */
-window.addEventListener(`pageLoading`, () => {
+window.addEventListener(`pageLoaded`, () => {
 	for (element of document.querySelectorAll(`.onclick-spinner`)) {
 		element.addEventListener(`click`, () => {
 			let loadingSpinner = document.querySelector(`#loading-info`);

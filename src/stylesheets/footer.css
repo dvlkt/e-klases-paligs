@@ -33,7 +33,7 @@ html footer .footer-container .go-top-col .go-top {
 }
 html footer .footer-container .go-top-col .go-top:hover {
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
-	filter: brightness(0.8);
+	filter: brightness(0.9);
 }
 html footer .footer-container .go-top-col .go-top::before {
 	top: 0;

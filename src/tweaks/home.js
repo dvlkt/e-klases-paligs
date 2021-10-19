@@ -24,6 +24,20 @@ window.addEventListener(`pageLoading`, () => {
 		/*
 			Add the stickied class to the header when needed
 		*/
+		// Code is sorta from https://www.w3schools.com/howto/howto_js_sticky_header.asp
+		let firstHeaderElement = document.querySelector(`.main-header`);
+		let secondaryHeaderElement = document.querySelector(`.secondary-header`);
+		let secondaryHeaderElementOffset = secondaryHeaderElement.offsetTop;
+
+		window.addEventListener(`scroll`, () => {
+			if (window.scrollY > secondaryHeaderElementOffset) {
+				firstHeaderElement.setAttribute(`data-is-stickied`, `true`)
+				secondaryHeaderElement.setAttribute(`data-is-stickied`, `true`)
+			} else {
+				firstHeaderElement.setAttribute(`data-is-stickied`, `false`)
+				secondaryHeaderElement.setAttribute(`data-is-stickied`, `false`)
+			}
+		});
 
 	}
 
