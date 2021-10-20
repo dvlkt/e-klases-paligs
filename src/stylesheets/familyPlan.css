@@ -1,14 +1,14 @@
 /* FAMILY PLAN */
 html .sys-content .section.plan-info-head {
 	background: var(--background-middle-color);
-	border-radius: 10px 10px 0 0;
+	border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
 	user-select: none;
 	-webkit-user-drag: none;
 }
 html .sys-content .section.dark {
 	background: var(--background-front-color);
 	margin-bottom: 1rem;
-	border-radius: 0 0 1rem 1rem;
+	border-radius: 0 0 var(--corner-roundness) var(--corner-roundness);
 }
 html .sys-content .section-stores {
 	display: none; /* Why are the "Get on App Store and Google Play" thingies even there? Completely unrelated so removing them */
@@ -27,7 +27,7 @@ html .announcement .warning .inner {
 	font-family: "Inter", sans-serif;
 	font-weight: 500;
 	padding: 10px;
-	border-radius: 10px;
+	border-radius: var(--corner-roundness);
 	box-shadow: 2px 3px 5px -3px var(--red-shadow-color);
 }
 html .plan-info-head .announcement {
@@ -42,7 +42,7 @@ html .btn-transparent:hover {
 	font-weight: 500;
 	font-family: "Inter", sans-serif;
 	border: 0;
-	border-radius: 10px;
+	border-radius: var(--corner-roundness);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s filter, .2s box-shadow;
 }
@@ -148,8 +148,7 @@ html .l-MainFooter {
 html .l-MainHeader_Title {
 	background: var(--theme-gradient);
 	color: var(--theme-accent-color);
-
-	border-radius: 1rem;
+	border-radius: var(--corner-roundness);
 }
 html .l-MainHeader_Logo {
 	filter: brightness(var(--theme-accent-icon-brightness));
@@ -157,11 +156,8 @@ html .l-MainHeader_Logo {
 html .po-PaymentOptions_Item div.sw-GridBox {
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
-
 	border: 0;
-
-	border-radius: 1rem;
-
+	border-radius: var(--corner-roundness);
 	box-shadow: 0 7px 14px -3px var(--shadow-color);
 }
 html .po-BestDeal {
@@ -192,7 +188,7 @@ html .sw-BoxButton {
 
 	border: 0;
 
-	border-radius: 1rem;
+	border-radius: var(--corner-roundness);
 
 	transition: .2s filter, .2s box-shadow;
 }
@@ -220,7 +216,7 @@ html .sw-GridBox {
 
 	border: 0;
 
-	border-radius: 1rem;
+	border-radius: var(--corner-roundness);
 
 	box-shadow: 0 7px 14px -3px var(--shadow-color);
 }
@@ -235,7 +231,7 @@ html .sw-GridBox_SectionTitle {
 
 	border: 0;
 
-	border-radius: 1rem 1rem 0 0;
+	border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
 }
 html .st-PhoneNumber {
 	background: none;

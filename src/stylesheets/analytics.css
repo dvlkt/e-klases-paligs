@@ -2,7 +2,7 @@
 html .filter-wrap .container {
 	background: var(--background-middle-color);
 	box-shadow: none;
-	border-radius: 1rem 1rem 0 0;
+	border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
 }
 html .filter-wrap .filter-block label {
 	font-size: 13px;
@@ -13,7 +13,7 @@ html .filter-wrap .filter-block label {
 }
 html .select2-container--default .select2-selection--single,
 html .select2-container--default .select2-selection--single .select2-selection__rendered {
-	border-radius: .5rem;
+	border-radius: var(--corner-roundness);
 	background: var(--background-front-color);
 	color: var(--paragraph-color);
 	border: 0;
@@ -41,17 +41,17 @@ html .filter-wrap .journal-type a.active {
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 }
 html .filter-wrap .journal-type a:first-of-type {
-	border-radius: .5rem 0 0 .5rem;
+	border-radius: var(--corner-roundness) 0 0 var(--corner-roundness);
 }
 html .filter-wrap .journal-type a:last-of-type {
-	border-radius: 0 .5rem .5rem 0;
+	border-radius: 0 var(--corner-roundness) var(--corner-roundness) 0;
 	border-right: 0;
 }
 @media only screen and (max-width: 767px) {
 	html .filter-wrap {
 		background: var(--background-middle-color);
 		box-shadow: 0 4px 10px -3px var(--shadow-color);
-		border-radius: 0 0 .5rem .5rem;
+		border-radius: 0 0 var(--corner-roundness) var(--corner-roundness);
 	}
 	html .filter-wrap .filter-button {
 		background-color: var(--background-middle-color);
@@ -64,7 +64,7 @@ html .filter-wrap .journal-type a:last-of-type {
 
 /* RATINGS */
 html .analytics-ratings-container {
-	border-radius: 1rem;
+	border-radius: var(--corner-roundness);
 	background: var(--background-middle-color);
 }
 html .analytics-ratings-container .analytics-ratings-intro {
@@ -198,10 +198,10 @@ html section .section-switch .section-switch-option.active {
 	background: var(--theme-color);
 }
 html section .section-switch .section-switch-option:first-child {
-	border-radius: .5rem 0 0 .5rem;
+	border-radius: var(--corner-roundness) 0 0 var(--corner-roundness);
 }
 html section .section-switch .section-switch-option:last-child {
-	border-radius: 0 .5rem .5rem 0;
+	border-radius: 0 var(--corner-roundness) var(--corner-roundness) 0;
 }
 html .report-averages label {
 	display: none;
@@ -219,7 +219,7 @@ html .scroll-to-top.home-work {
 }
 html .panel-group .panel-default .panel-heading {
 	border: 0 !important;
-	border-radius: 1rem;
+	border-radius: var(--corner-roundness);
 	background: var(--background-front-color);
 	color: var(--paragraph-color);
 }
@@ -233,7 +233,7 @@ html .panel-group .panel-arrow {
 }
 html .panel-group .panel-default {
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
-	border-radius: 1rem;
+	border-radius: var(--corner-roundness);
 	background: var(--background-front-color);
 	border: 0 !important;
 }
@@ -242,7 +242,7 @@ html .panel-default .panel-heading + .panel-collapse .panel-body {
 }
 html .analytics-rating-tables table {
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
-	border-radius: 1rem;
+	border-radius: var(--corner-roundness);
 }
 html .analytics-rating-tables table thead {
 	box-shadow: none;
@@ -271,16 +271,16 @@ html .analytics-rating-tables td:nth-child(odd) {
 	background: var(--background-middle-dark-color);
 }
 html .analytics-rating-tables table thead td:first-child {
-	border-top-left-radius: 1rem;
+	border-top-left-radius: var(--corner-roundness);
 }
 html .analytics-rating-tables table thead td:last-child {
-	border-top-right-radius: 1rem;
+	border-top-right-radius: var(--corner-roundness);
 }
 html .analytics-rating-tables table tbody tr:last-child td:first-child {
-	border-bottom-left-radius: 1rem;
+	border-bottom-left-radius: var(--corner-roundness);
 }
 html .analytics-rating-tables table tbody tr:last-child td:last-child {
-	border-bottom-right-radius: 1rem;
+	border-bottom-right-radius: var(--corner-roundness);
 }
 html .analytics-rating-tables td.higher,
 html .analytics-rating-tables td.lower {
@@ -347,28 +347,28 @@ html .lessons-topics-wrap {
 }
 html .lessons-topics-wrap .container,
 html .analytic .no-data .container {
-	border-radius: 0 0 1rem 1rem;
+	border-radius: 0 0 var(--corner-roundness) var(--corner-roundness);
 }
 html .lesson-topics-table,
 html .behavioral-table {
-	border-radius: 1rem;
+	border-radius: var(--corner-roundness);
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 }
 html .lesson-topics-table tr.thead td.first-column,
 html .behavioral-table tr.thead td.first-column {
-	border-top-left-radius: 1rem;
+	border-top-left-radius: var(--corner-roundness);
 }
 html .lesson-topics-table tr.thead td.fourth-column,
 html .behavioral-table tr.thead td.fourth-column {
-	border-top-right-radius: 1rem;
+	border-top-right-radius: var(--corner-roundness);
 }
 html .lesson-topics-table tbody tr:nth-last-child(2) td:first-child,
 html .behavioral-table tbody tr:nth-last-child(2) td:first-child {
-	border-bottom-left-radius: 1rem;
+	border-bottom-left-radius: var(--corner-roundness);
 }
 html .lesson-topics-table tbody tr:nth-last-child(2) td:last-child,
 html .behavioral-table tbody tr:nth-last-child(2) td:last-child {
-	border-bottom-right-radius: 1rem;
+	border-bottom-right-radius: var(--corner-roundness);
 }
 html .lesson-topics-table tr.thead td,
 html .behavioral-table tr.thead td {
@@ -410,11 +410,11 @@ html .data-marks-detailed-wrap .container .marks-detailed {
 html .detailed-item {
 	border: 0;
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
-	border-radius: 1rem;
+	border-radius: var(--corner-roundness);
 }
 html .lesson .detailed-header {
 	background: var(--background-middle-dark-color);
-	border-radius: 1rem 1rem 0 0;
+	border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
 }
 html .lesson.test .detailed-header .static,
 html .detailed-header .item-type,
@@ -488,11 +488,11 @@ html .cell-item:hover .marks-header {
 	background: none;
 	border: 0;
 	padding-top: 0;
-	border-radius: .5rem;
+	border-radius: var(--corner-roundness);
 	transition: .2s filter, .2s box-shadow;
 }
 html .cell-item .marks-header .inner {
-	border-radius: .5rem;
+	border-radius: var(--corner-roundness);
 	background: var(--background-front-color) !important;
 	color: var(--paragraph-color);
 	height: 60px;
@@ -533,7 +533,7 @@ html .info-pane-wrap .subject {
 @media only screen and (max-width: 767px) {
 	html .info-pane-wrap .container,
 	html .data-pane-wrap .container {
-		border-radius: 1rem;
+		border-radius: var(--corner-roundness);
 		box-shadow: 0 4px 10px -3px var(--shadow-color);
 		padding-bottom: 10px;
 		padding-top: 10px;
@@ -543,7 +543,7 @@ html .info-pane-wrap .subject {
 	}
 	html .lessons-topics-wrap .container,
 	html .analytic .no-data .container {
-		border-radius: 1rem;
+		border-radius: var(--corner-roundness);
 		box-shadow: 0 4px 10px -3px var(--shadow-color);
 	}
 }
@@ -551,7 +551,7 @@ html .info-pane-wrap .subject {
 /* DELAYS */
 html .delays-container .delays .container {
 	background: var(--background-middle-color);
-	border-radius: 0 0 1rem 1rem;
+	border-radius: 0 0 var(--corner-roundness) var(--corner-roundness);
 	padding-bottom: 25px;
 }
 html .delays-overview-table-holder {
@@ -596,7 +596,7 @@ html .delay-info .delays-detailed-table-holder {
 }
 html .delay-info .delays-detailed-table-holder {
 	margin-top: 0;
-	border-radius: 1rem;
+	border-radius: var(--corner-roundness);
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 }
 html .delay-info .delays-detailed-table-holder .delays-detailed-table-first-column {
@@ -614,12 +614,12 @@ html .delay-info .delays-detailed-table-holder .delays-detailed-table-first-colu
 }
 html .delay-info .delays-detailed-table-holder .delays-detailed-table-first-column tbody tr:last-child td {
 	border-bottom: 0;
-	border-bottom-left-radius: 1rem;
+	border-bottom-left-radius: var(--corner-roundness);
 }
 html .delay-info .delays-detailed-table-holder .delays-detailed-table-first-column thead td {
 	color: var(--low-priority-text-color);
 	text-transform: uppercase;
-	border-top-left-radius: 1rem;
+	border-top-left-radius: var(--corner-roundness);
 	padding-top: 10px;
 }
 html .delay-info thead td,
@@ -647,14 +647,14 @@ html .delay-info .delays-detailed-table table td:nth-child(even) {
 	background: var(--background-middle-dark-color);
 }
 html .delay-info .delays-detailed-table thead td:last-child {
-	border-top-right-radius: 1rem;
+	border-top-right-radius: var(--corner-roundness);
 }
 html .delay-info .delays-detailed-table tbody tr:last-child td:last-child {
-	border-bottom-right-radius: 1rem;
+	border-bottom-right-radius: var(--corner-roundness);
 }
 html .delays-documents {
 	border: 0;
-	border-radius: 1rem;
+	border-radius: var(--corner-roundness);
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 }
 html .delay-info .delays-documents thead tr {
@@ -671,22 +671,22 @@ html .delay-info .delays-documents td:nth-child(odd) {
 	background: var(--background-middle-dark-color);
 }
 html .delay-info .delays-documents thead td:first-child {
-	border-top-left-radius: 1rem;
+	border-top-left-radius: var(--corner-roundness);
 }
 html .delay-info .delays-documents thead td:last-child {
-	border-top-right-radius: 1rem;
+	border-top-right-radius: var(--corner-roundness);
 }
 html .delay-info .delays-documents tbody tr:last-child td:first-child {
-	border-bottom-left-radius: 1rem;
+	border-bottom-left-radius: var(--corner-roundness);
 }
 html .delay-info .delays-documents tbody tr:last-child td:last-child {
-	border-bottom-right-radius: 1rem;
+	border-bottom-right-radius: var(--corner-roundness);
 }
 html .delays-legend {
 	margin-bottom: 0;
 }
 html .delays-legend .legend-item .legend-icon {
-	border-radius: .5rem;
+	border-radius: var(--corner-roundness);
 	background: var(--background-front-color);
 	border: 0;
 	font-size: 13px;
@@ -716,7 +716,7 @@ html .delay-mobile-details .delay-subject,
 html .delay-mobile-details .delay-document {
 	border: 0;
 	background: var(--background-middle-color);
-	border-radius: 1rem;
+	border-radius: var(--corner-roundness);
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 }
 html .delay-mobile-details .delay-subject thead td,
@@ -770,7 +770,7 @@ html .delay-mobile-details td:nth-child(2) span {
 /* ANALYTICS */
 html .analytics-report-container {
 	background: var(--background-middle-color);
-	border-radius: 1rem;	
+	border-radius: var(--corner-roundness);	
 }
 html .analytics-pupilmarks-intro .btn-primary {
 	margin-left: 1rem;
@@ -779,14 +779,14 @@ html .analytics-pupilmarks-intro .analytics-ratings-table-intro-left,
 html .analytics-pupilmarks-intro .analytics-ratings-table-intro-right {
 	background: var(--background-middle-color);
 	border: 0;
-	border-radius: 1rem 0 0 1rem;
-	font-family: 'Inter', sans-serif;
+	border-radius: var(--corner-roundness) 0 0 var(--corner-roundness);
+	font-family: "Inter", sans-serif;
 }
 html .analytics-pupilmarks-intro .analytics-ratings-table-intro-left {
 	width: 45% !important;
 }
 html .analytics-pupilmarks-intro .analytics-ratings-table-intro-right {
-	border-radius: 0 1rem 1rem 0;
+	border-radius: 0 var(--corner-roundness) var(--corner-roundness) 0;
 }
 html a.print.print-button::before {
 	background: var(--theme-color);
@@ -801,7 +801,7 @@ html .print-table {
 
 	border: 0;
 
-	border-radius: 1rem;
+	border-radius: var(--corner-roundness);
 
 	box-shadow: 0 7px 14px -3px var(--shadow-color);
 }
@@ -847,27 +847,27 @@ html .print-table th span {
 	color: var(--low-priority-text-color);
 }
 html .print-table th:first-child {
-	border-top-left-radius: 1rem;
+	border-top-left-radius: var(--corner-roundness);
 }
 html .print-table th:last-child {
-	border-top-right-radius: 1rem;
+	border-top-right-radius: var(--corner-roundness);
 }
 html .print-table tr:last-child td:first-child {
-	border-bottom-left-radius: 1rem;
+	border-bottom-left-radius: var(--corner-roundness);
 }
 html .print-table tr:last-child td:last-child {
-	border-bottom-right-radius: 1rem;
+	border-bottom-right-radius: var(--corner-roundness);
 }
 html .analytics-report-table-holder {
 	border-top: 0;
 }
 html .analytics-report-table-holder .analytics-report-table-first-column {
-	border-radius: 1rem 0 0 1rem;
+	border-radius: var(--corner-roundness) 0 0 var(--corner-roundness);
 	box-shadow: 0 7px 14px -3px var(--shadow-color);
 }
 html .analytics-report-table-holder .analytics-report-table-first-column .table-header td {
 	border: 0;
-	border-top-left-radius: 1rem;
+	border-top-left-radius: var(--corner-roundness);
 	font-size: 13px;
 	font-family: 'Inter', sans-serif;
 	text-transform: uppercase;
@@ -892,12 +892,12 @@ html .subsection-header {
 	border-top: 4px solid #00000020 !important;
 }
 html .analytics-report-table-holder .analytics-report-table-first-column tbody tr:last-child td {
-	border-bottom-left-radius: 1rem;
+	border-bottom-left-radius: var(--corner-roundness);
 }
 html .analytics-report-table {
 	margin-bottom: 20px;
 	border: 0;
-	border-radius: 0 1rem 1rem 0;
+	border-radius: 0 var(--corner-roundness) var(--corner-roundness) 0;
 	box-shadow: 0 -7px 14px -3px var(--shadow-color); /* Why the poop is it flipped over??? */
 }
 html .analytics-report-table table {
@@ -959,5 +959,5 @@ html .analytics-ratings-table-intro .checkbox {
 html .analytics-report-table table tbody .negative {
 	background: var(--red-color);
 	color: var(--red-accent-color);
-	border-radius: .5rem;
+	border-radius: var(--corner-roundness);
 }

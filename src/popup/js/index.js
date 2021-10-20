@@ -1,17 +1,27 @@
 import { loadTheme } from './themeApplier.js';
-import { openTab, sendMessageToTabs } from './tabs.js';
+import { openTab, sendMessageToEklaseTabs } from './tabs.js';
 
 loadTheme();
 
 /*
 	The top buttons
 */
-document.querySelector(`#whats-new-btn`).onclick = () => {
+// Hide the open E-klase button if a tab with it is already opened
+chrome.tabs.query({ url: `*://*.e-klase.lv/*` }, (tabs) => {
+	if (tabs.length !== 0) {
+		document.querySelector(`#open-e-klase-btn`).style.display = `none`;
+	}
+});
+// Handle button clicks
+document.querySelector(`#open-e-klase-btn`).addEventListener(`click`, () => {
+	openTab(`https://e-klase.lv`, false);
+});
+document.querySelector(`#whats-new-btn`).addEventListener(`click`, () => {
 	openTab(`/popup/changelog.html`);
-}
-/* document.querySelector(`#found-bug-btn`).onclick = () => {
+});
+/* document.querySelector(`#found-bug-btn`).addEventListener(`click`, () => {
 	// Stuff happens
-} */
+}); */
 
 
 /*
@@ -40,7 +50,7 @@ for (let themeButtonElement of document.querySelectorAll(`.theme-preview`)) {
 			.then(themeData => {
 
 			chrome.storage.sync.set({ theme: themeData }, () => {
-				sendMessageToTabs(`loadTheme`); // Update the theme in all of the opened tabs
+				sendMessageToEklaseTabs(`loadTheme`); // Update the theme in all of the opened tabs
 				loadTheme();
 			});
 		});
@@ -69,7 +79,7 @@ for (let colorButtonElement of document.querySelectorAll(`.color-picker-option`)
 		// Update the theme colors
 		document.querySelector(`:root`).style.setProperty(`--theme-color`, colorButtonElement.getAttribute(`data-theme-color`));
 		chrome.storage.sync.set({ themeColor: colorButtonElement.getAttribute(`data-theme-color`) });
-		sendMessageToTabs(`loadTheme`);
+		sendMessageToEklaseTabs(`loadTheme`);
 	});
 }
 
@@ -92,7 +102,7 @@ const updateCornerRoundnessSliderGrabber = () => {
 	
 	chrome.storage.sync.set({ cornerRoundness: `${cornerRoundnessSliderValue}px` });
 	document.querySelector(`:root`).style.setProperty(`--corner-roundness`, `${cornerRoundnessSliderValue}px`);
-	sendMessageToTabs(`loadCornerRoundness`);
+	sendMessageToEklaseTabs(`loadCornerRoundness`);
 }
 
 chrome.storage.sync.get([`cornerRoundness`], (res) => {

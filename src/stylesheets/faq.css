@@ -25,7 +25,7 @@ html .questions-wrapper .section-title {
 html .questions-wrapper .aq-wrapper .faq-items .faq-item {
 	background: var(--background-middle-color);
 
-	border-radius: 1rem;
+	border-radius: var(--corner-roundness);
 }
 html .faq-item h4 {
 	color: var(--title-color);
@@ -104,7 +104,7 @@ html .questions-wrapper.detailed .categories-wrapper .faq-topics-menu ul li:hove
 html .questions-wrapper.detailed .categories-wrapper .faq-topics-menu ul li.active {
 	background: var(--background-middle-color);
 
-	border-radius: 1rem;
+	border-radius: var(--corner-roundness);
 }
 html .questions-wrapper.detailed .categories-wrapper .faq-topics-menu ul li a .title {
 	color: var(--paragraph-color);

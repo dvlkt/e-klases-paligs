@@ -1,13 +1,13 @@
 html .settings-container .announcement .container {
 	background: var(--background-middle-color);
 	color: var(--title-color);
-	border-radius: 1rem 1rem 0 0;
+	border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
 	font-family: 'Inter', sans-serif;
 }
 html .settings-container .pupils-wrap .container {
 	background: var(--background-middle-color);
 
-	border-radius: 0 0 1rem 1rem;
+	border-radius: 0 0 var(--corner-roundness) var(--corner-roundness);
 
 	box-shadow: none;
 }
@@ -16,7 +16,7 @@ html .pupils-wrap .item .pupil-block {
 
 	border: 0;
 
-	border-radius: 1rem;
+	border-radius: var(--corner-roundness);
 
 	box-shadow: 0 7px 14px -3px var(--shadow-color);
 }
@@ -27,7 +27,7 @@ html .pupils-wrap .item .pupil-block .pupil-block-header {
 
 	border: 0;
 	
-	border-radius: 1rem 1rem 0 0;
+	border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
 }
 html .pupils-wrap .item .pupil-block .pupil-block-header span {
 	color: var(--theme-accent-color);
@@ -53,7 +53,7 @@ html .other-devices .people {
 
 	border-top: 0;
 
-	border-radius: 1rem;
+	border-radius: var(--corner-roundness);
 
 	transition: .2s filter;
 }
@@ -109,14 +109,14 @@ html .other-devices .people.current .edit {
 html .history-wrap .container {
 	background-color: var(--background-middle-color);
 
-	border-radius: 0 0 1rem 1rem;
+	border-radius: 0 0 var(--corner-roundness) var(--corner-roundness);
 
 	box-shadow: none;
 }
 
 /* SETTINGS TABLE */
 html .history-entries-table-holder .entries-table {
-	border-radius: 1rem;
+	border-radius: var(--corner-roundness);
 	background: var(--background-middle-dark-color);
 	box-shadow: 0 7px 14px -3px var(--shadow-color);
 }
@@ -139,16 +139,16 @@ html .history-entries-table-holder .entries-table tbody tr {
 	border-top: 4px solid #00000020;
 }
 html .history-entries-table-holder .entries-table thead td:first-child {
-	border-top-left-radius: 1rem;
+	border-top-left-radius: var(--corner-roundness);
 }
 html .history-entries-table-holder .entries-table thead td:last-child {
-	border-top-right-radius: 1rem;
+	border-top-right-radius: var(--corner-roundness);
 }
 html .history-entries-table-holder .entries-table tbody td:first-child {
-	border-bottom-left-radius: 1rem;
+	border-bottom-left-radius: var(--corner-roundness);
 }
 html .history-entries-table-holder .entries-table tbody td:last-child {
-	border-bottom-right-radius: 1rem;
+	border-bottom-right-radius: var(--corner-roundness);
 }
 html .announcement.history-head .history-head-title {
 	font-family: 'Inter', sans-serif;
@@ -163,7 +163,7 @@ html .announcement.history-head .date-holder .input-block input {
 	border: 0;
 	color: var(--paragraph-color);
 	background: var(--background-front-color);
-	border-radius: .5rem;
+	border-radius: var(--corner-roundness);
 }
 html .announcement .btn {
 	margin-top: 10px;
@@ -173,7 +173,7 @@ html .announcement .btn {
 html .people-overlay {
 	background: var(--background-middle-color);
 
-	border-radius: 1rem;
+	border-radius: var(--corner-roundness);
 
 	box-shadow: 0 7px 14px -3px var(--shadow-color);
 }
@@ -187,7 +187,7 @@ html .nav-tabs.profile li a.user-settings-tab {
 html .people-overlay .overlay-header {
 	background: var(--theme-gradient);
 
-	border-radius: 1rem 1rem 0 0;
+	border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
 }
 html .people-overlay .overlay-header h3 {
 	font-family: 'Inter', sans-serif;
@@ -202,7 +202,7 @@ html .people-overlay .overlay-header .pupil,
 html .people-overlay input[type="submit"] {
 	color: var(--theme-accent-color);
 	background: var(--theme-color);
-	border-radius: 1rem;
+	border-radius: var(--corner-roundness);
 	transition: .2s box-shadow, .2s filter;
 	font-family: 'Inter', sans-serif;
 	font-weight: bold;
@@ -219,7 +219,7 @@ html .settings-modal-body .form-row .input,
 html .settings-modal-body .form-row .textarea {
 	background: var(--background-front-color);
 	border: 0;
-	border-radius: .5rem;
+	border-radius: var(--corner-roundness);
 }
 html .settings-modal-body .form-row .separate {
 	background: #00000020;
@@ -228,5 +228,5 @@ html .settings-modal-body .form-row .separate {
 html .settings-modal-body .form-row.information-row {
 	background: var(--background-front-color);
 	color: var(--paragraph-color);
-	border-radius: .5rem;
+	border-radius: var(--corner-roundness);
 }

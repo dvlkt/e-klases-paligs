@@ -1,11 +1,11 @@
-export const openTab = (url) => {
+export const openTab = (url, extensionPage = true) => {
 	chrome.tabs.create({
 		active: true,
-		url: chrome.runtime.getURL(url)
+		url: extensionPage ? chrome.runtime.getURL(url) : url
 	});
 }
-export const sendMessageToTabs = (message) => {
-	chrome.tabs.query({ url: "*://*.e-klase.lv/*" }, (tabs) => {
+export const sendMessageToEklaseTabs = (message) => {
+	chrome.tabs.query({ url: `*://*.e-klase.lv/*` }, (tabs) => {
 		for (let tab of tabs) {
 			chrome.tabs.sendMessage(
 				tab.id,

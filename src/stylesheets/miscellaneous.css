@@ -2,14 +2,14 @@
 html .MainContainer {
 	background: var(--background-middle-color);
 	
-	border-radius: 1rem;
+	border-radius: var(--corner-roundness);
 
 	box-shadow: 0 7px 14px -3px var(--shadow-color);
 }
 html .MainContainer .MainHeader {
 	background: var(--theme-gradient);
 
-	border-radius: 1rem 1rem 0 0;
+	border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
 }
 html .SubHeader {
 	border: 0;
@@ -19,7 +19,7 @@ html .UserProfileSelector_Button {
 
 	border: 0;
 	
-	border-radius: 1rem;
+	border-radius: var(--corner-roundness);
 
 	box-shadow: 0 7px 14px -3px var(--shadow-color);
 
@@ -34,13 +34,13 @@ html .UserProfileSelector_Header {
 
 	border: 0;
 
-	border-radius: 1rem 1rem 0 0;
+	border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
 }
 html .UserProfileSelector_Description {
 	background: var(--background-front-color);
 	color: var(--paragraph-color);
 
-	border-radius: 0 0 1rem 1rem;
+	border-radius: 0 0 var(--corner-roundness) var(--corner-roundness);
 }
 html .UserProfileSelector_SelectMarker {
 	background-color: transparent;
@@ -50,7 +50,7 @@ html .UserProfileSelector_SelectMarker {
 html .li-LoginWrapper .li-LoginInputContainer {
 	background: var(--background-middle-color);
 
-	border-radius: 1rem;
+	border-radius: var(--corner-roundness);
 
 	box-shadow: 0 7px 14px -3px var(--shadow-color);
 }
@@ -90,10 +90,10 @@ html .li-TextboxDefault {
 	background: var(--background-front-color);
 	color: var(--paragraph-color);
 	padding-left: 10px;
-	border-radius: 1rem;
+	border-radius: var(--corner-roundness);
 }
 html .li-HelpItem {
-	border-radius: 1rem;
+	border-radius: var(--corner-roundness);
 	box-shadow: 0 7px 14px -3px var(--shadow-color);
 	background: var(--background-middle-color);
 }
@@ -108,14 +108,14 @@ html .tech-support-container .ts-head .container {
 
 	border: 0;
 
-	border-radius: 1rem 1rem 0 0;
+	border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
 }
 html .tech-support-container .ts-content .container {
 	background: var(--background-middle-color);
 
 	border: 0;
 
-	border-radius: 0 0 1rem 1rem;
+	border-radius: 0 0 var(--corner-roundness) var(--corner-roundness);
 }
 html .tech-support-container .form-row .input,
 html .tech-support-container .form-row .textarea {
@@ -124,7 +124,7 @@ html .tech-support-container .form-row .textarea {
 
 	font-family: 'Inter', sans-serif;
 
-	border-radius: .5rem;
+	border-radius: var(--corner-roundness);
 
 	border: 0;
 }
@@ -139,7 +139,7 @@ html .tech-support-container input[type="submit"] {
 	font-weight: bold;
 	text-transform: uppercase;
 
-	border-radius: .5rem;
+	border-radius: var(--corner-roundness);
 
 	transition: .2s box-shadow, .2s filter;
 }
@@ -180,7 +180,7 @@ html .notice-holder .bubble {
 
 	border: 0;
 
-	border-radius: 1rem;
+	border-radius: var(--corner-roundness);
 
 	box-shadow: 0 7px 14px -3px var(--red-shadow-color);
 }
@@ -198,7 +198,7 @@ html .notice-holder .error-bottom .btn-default {
 	background: var(--theme-color);
 	color: var(--theme-accent-color);
 
-	border-radius: 1rem;
+	border-radius: var(--corner-roundness);
 
 	transition: .2s filter, .2s box-shadow;
 }
@@ -215,7 +215,7 @@ html .notice-holder .error-bottom .btn-default .progress {
 html .tour {
 	background: var(--background-front-color);
 
-	border-radius: 1rem;
+	border-radius: var(--corner-roundness);
 
 	box-shadow: 0 7px 14px -3px var(--shadow-color);
 
@@ -250,7 +250,7 @@ html .tour .btn-tour-primary:focus {
 	background: var(--theme-color);
 	color: var(--theme-accent-color);
 
-	border-radius: .5rem;
+	border-radius: var(--corner-roundness);
 
 	transition: .2s filter, .2s box-shadow;
 }

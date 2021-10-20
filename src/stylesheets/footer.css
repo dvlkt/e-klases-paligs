@@ -24,7 +24,7 @@ html footer .footer-container .go-top-col .go-top {
 	font-size: 15px;
 	padding: 10px;
 	padding-left: 30px;
-	border-radius: 10px;
+	border-radius: var(--corner-roundness);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s filter, .2s box-shadow;
 	cursor: pointer;
