@@ -101,31 +101,26 @@ html .li-HelpItem_Head {
 	background: none;
 }
 
-/* TECH SUPPORT */
+/* Tech support */
 html .tech-support-container .ts-head .container {
-	background: var(--theme-gradient);
-	color: var(--theme-accent-color);
-
+	background: none;
+	color: var(--title-color);
 	border: 0;
-
-	border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
+	box-shadow: none;
 }
 html .tech-support-container .ts-content .container {
-	background: var(--background-middle-color);
-
 	border: 0;
-
-	border-radius: 0 0 var(--corner-roundness) var(--corner-roundness);
+	background: none;
 }
 html .tech-support-container .form-row .input,
 html .tech-support-container .form-row .textarea {
-	background: var(--background-front-color) !important /* Why did they use this here???? */;
+	background: var(--background-middle-color) !important /* Why did they use this here???? */;
 	color: var(--paragraph-color);
-
-	font-family: 'Inter', sans-serif;
-
+	font-family: "Inter", sans-serif;
+	font-size: 15px;
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 	border-radius: var(--corner-roundness);
-
+	padding: 10px;
 	border: 0;
 }
 html .form-row .input::placeholder {
@@ -134,42 +129,46 @@ html .form-row .input::placeholder {
 html .tech-support-container input[type="submit"] {
 	background: var(--theme-color);
 	color: var(--theme-accent-color);
-
-	font-family: 'Inter', sans-serif;
-	font-weight: bold;
-	text-transform: uppercase;
-
+	font-family: "Inter", sans-serif;
+	font-weight: 500;
+	font-size: 15px;
 	border-radius: var(--corner-roundness);
-
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 	transition: .2s box-shadow, .2s filter;
 }
 html .tech-support-container input[type="submit"]:hover {
-	box-shadow: 0 7px 14px -3px var(--shadow-color);
-
-	filter: brightness(0.8);
+	filter: brightness(0.9);
+	box-shadow: 2px 7px 14px -3px var(--shadow-color);
 }
 html .tech-support-container .ts-head h1,
-html .tech-support-container .ts-head h3,
+html .tech-support-container .message-meta,
 html .tech-support-container .message-meta .message-meta-item-attr,
+html .tech-support-container .message-meta .message-meta-item-value,
 html .form-row label {
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .tech-support-container .ts-head h1 {
 	font-weight: bold;
-	font-size: 25px;
+	font-size: 32px;
+}
+html .tech-support-container .col-xs-3,
+html .tech-support-close,
+html .tech-support-container .col-xs-12 {
+	display: none;
+}
+html .tech-support-container .col-xs-6 {
+	width: 100%;
 }
 html .form-row label {
 	padding-top: 12px;
 	padding-bottom: 3px !important;
+	font-size: 15px;
 }
-html .tech-support-close,
-html .tech-support-close:hover {
-	filter: invert() brightness(var(--theme-accent-icon-brightness));
-
-	transition: .2s opacity;
-}
-html .tech-support-close:hover {
-	opacity: 0.7;
+html .tech-support-container .message-meta .message-meta-item-value.name,
+html .tech-support-container .message-meta .message-meta-item-value {
+	font-size: 15px;
 }
 
 /* 404 PAGE */

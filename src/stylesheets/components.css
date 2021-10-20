@@ -331,49 +331,39 @@ html .back-to-journal::before {
 }
 
 /* DROPDOWN */
-/* WHY DID THEY SPECIFICALLY STYLE IT TO TECH-SUPPORT-CONTAINER????
-I REFUSE to believe this code was written by someone older than 6 */
+/* I REFUSE to believe this code was written by someone older than 6 */
 html .tech-support-container .select2-container--default .select2-selection--single,
 html .tech-support-container .select2-container--default .select2-selection--single .select2-selection__rendered	{
-	background: var(--background-front-color);
+	background: var(--background-middle-color);
 	color: var(--paragraph-color);
-
 	border: 0 !important; /* E-klaseeeeeee whyyyyyyy !importantttttttt */
-
 	border-radius: var(--corner-roundness) !important;
-
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 	transition: .2s box-shadow, .2s filter;
 }
 html .tech-support-container .select2-container--default .select2-selection--single:hover {
-	box-shadow: 0 7px 14px -3px var(--shadow-color);
-
-	filter: brightness(0.8);
+	box-shadow: 2px 7px 14px -3px var(--shadow-color);
+	filter: brightness(0.9);
 }
 html .select2-dropdown {
-	background: var(--background-front-color); /* Wow I'm so proud of yall you didn't use !important this time good job! */
+	background: var(--background-middle-color); /* Wow I'm so proud of yall you didn't use !important this time good job! */
 	color: var(--paragraph-color);
-
 	border: 0;
-
 	border-radius: var(--corner-roundness) !important;
-
-	box-shadow: 0 7px 14px -3px var(--shadow-color);
+	box-shadow: 2px 7px 14px -3px var(--shadow-color);
 }
 html .select2-container--default .select2-results__option,
 html .select2-container--default .select2-results__option[aria-selected="true"] {
-	background: var(--background-front-color);
-
+	background: var(--background-middle-color);
 	border-radius: var(--corner-roundness);
-
 	transition: .2s filter;
 }
 html .select2-container--default .select2-results__option:hover {
-	filter: brightness(0.8);
+	filter: brightness(0.9);
 }
 html .select2-container--default .select2-results__option--highlighted[aria-selected] {
-	background: var(--background-front-color);
+	background: var(--background-middle-color);
 	color: var(--paragraph-color);
-
 	border-radius: var(--corner-roundness);
 }
 html .select2-container--default .select2-selection--single .select2-selection__arrow b {

@@ -108,13 +108,13 @@ window.addEventListener(`pageLoading`, () => {
 				<div class="header-account-popup-button back">
 					<p>Atpakaļ</p>
 				</div>
-				<div class="header-account-popup-button help faq">
+				<div class="header-account-popup-button faq">
 					<p>Biežāk uzdotie jautājumi</p>
 				</div>
-				<div class="header-account-popup-button help tech-support">
+				<div class="header-account-popup-button tech-support">
 					<p>Tehniskais atbalsts</p>
 				</div>
-				<div class="header-account-popup-button help show-tour">
+				<div class="header-account-popup-button show-tour">
 					<p>Tūre</p>
 				</div>
 			</div>`;
