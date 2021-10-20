@@ -164,7 +164,7 @@ html .FolderNavigation .NavItem.router-link-active::after {
 	background: var(--theme-color);
 	padding: 0;
 	margin-right: 5px;
-	border-radius: 0 6px 6px 0;
+	border-radius: 0 var(--corner-roundness) var(--corner-roundness) 0;
 	transition: .2s left;
 }
 html .FolderNavigation .NavItem.router-link-active:after,
@@ -796,7 +796,7 @@ html .MobileNavModal .MobileNavModal__Item:first-child {
 	border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
 }
 html .MobileNavModal .MobileNavModal__Item:last-child {
-	border-radius: 0 0 10px 10px;
+	border-radius: 0 0 var(--corner-roundness) var(--corner-roundness);
 }
 html .MailMainAreaWrapper .ViewMessage,
 html .MailMainAreaWrapper .ViewMessage__MessageBody,

@@ -77,29 +77,20 @@ html input[type="checkbox"].css-checkbox {
 /* LOADING SPINNER */
 html #overlay {
 	display: block !important;
-
 	background: #00000080;
-
 	opacity: 1;
-
 	transition: .2s opacity;
 }
 html .loading-info {
 	display: block !important;
-
 	background: var(--background-front-color);
 	color: var(--paragraph-color);
-
 	box-shadow: 0 7px 14px -3px var(--shadow-color);
-
 	border: 0;
-
 	font-weight: bold;
-
 	transform: scale(1) !important;
-
 	opacity: 1;
-
+	border-radius: var(--corner-roundness) !important;
 	transition: .2s transform, .2s opacity;
 }
 html .loading-spinner {

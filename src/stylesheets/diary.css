@@ -148,13 +148,14 @@ html .diary-container .lessons-table span.score {
 	border-radius: var(--corner-roundness);
 	padding: 10px;
 	font-weight: bold;
-	transition: .2s opacity;
+	transition: .2s filter;
 }
 html .lessons-table td:last-of-type span.score:hover {
-	opacity: 0.7;
+	filter: brightness(0.9);
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 }
 html .student-journal-lessons-table-holder .lessons-table td:last-of-type {
+	padding-left: 6px !important;
 	user-select: none;
 	-webkit-user-drag: none;
 }
@@ -168,7 +169,7 @@ html .lessons-table td:last-of-type span.score.warning:hover {
 }
 html .ThirdPartyEvent--Active {
 	background: var(--background-front-color);
-	border-radius: 1rem;
+	border-radius: var(--corner-roundness);
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 }
 html .ThirdPartyEvent__Content {
@@ -350,6 +351,7 @@ html .students-journal-header .students-journal-header-links a {
 	color: var(--paragraph-color);
 	font-size: 15px;
 	padding: 10px;
+	margin-left: 10px;
 	border-radius: var(--corner-roundness);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s filter, .2s box-shadow;
@@ -359,8 +361,8 @@ html .students-journal-header .students-journal-header-links a:hover {
 	filter: brightness(0.9);
 	text-decoration: none;
 }
-html .students-journal-header .students-journal-header-links a.print {
-	margin-left: 10px;
+html .students-journal-header .students-journal-header-links a:first-of-type {
+	margin-left: 25px;
 }
 html .students-journal-header .students-journal-header-links a.print::before {
 	background: var(--paragraph-color);
@@ -413,7 +415,7 @@ html .diary-analytics span.grade {
 	font-weight: bold;
 	font-size: 0.8rem;
 	padding: .5rem;
-	border-radius: .5rem;
+	border-radius: var(--corner-roundness);
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 	cursor: pointer;
 	transition: .2s opacity;

@@ -5,7 +5,7 @@
 	E-klases Palīgs
 </h1>
 <p align="center">
-	Moderns dizains un vairāk funkcijas E-klasei 👍
+	Moderns dizains un vairāk funkcijas E-klasei
 </p>
 <p align="center">
 	<b>v0.5 BETA</b>

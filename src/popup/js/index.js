@@ -61,6 +61,7 @@ for (let themeButtonElement of document.querySelectorAll(`.theme-preview`)) {
 /*
 	Theme color picker
 */
+// Rainbow mode is an easter egg
 for (let colorButtonElement of document.querySelectorAll(`.color-picker-option`)) {
 	// Highlight the color picker button if it's the selected theme
 	chrome.storage.sync.get([`themeColor`], (res) => {
@@ -74,11 +75,11 @@ for (let colorButtonElement of document.querySelectorAll(`.color-picker-option`)
 		chrome.storage.sync.get([`themeColor`], (res) => {
 			document.querySelector(`.color-picker-option[data-theme-color="${res.themeColor}"]`).classList.remove(`color-picker-option-selected`);
 			colorButtonElement.classList.add(`color-picker-option-selected`);
-		});	
+		});
 
 		// Update the theme colors
-		document.querySelector(`:root`).style.setProperty(`--theme-color`, colorButtonElement.getAttribute(`data-theme-color`));
 		chrome.storage.sync.set({ themeColor: colorButtonElement.getAttribute(`data-theme-color`) });
+		loadTheme();
 		sendMessageToEklaseTabs(`loadTheme`);
 	});
 }

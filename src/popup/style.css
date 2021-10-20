@@ -279,6 +279,13 @@ h2:first-of-type {
 	background: #8c29dd;
 }
 
+.color-picker-option[data-theme-color="rainbow"] {
+	box-shadow: none;
+}
+.color-picker-option[data-theme-color="rainbow"]:hover {
+	cursor: default;
+}
+
 .control {
 	display: block;
 	margin-top: .25rem;

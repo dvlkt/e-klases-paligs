@@ -20,7 +20,7 @@ window.addEventListener(`pageLoaded`, () => {
 });
 
 /* Closing animation */
-window.addEventListener(`pageLoaded`, () => {
+const showClosingAnimation = () => {
 	if (document.querySelector(`#loading-info`) !== null) {
 		let loadingSpinner = document.querySelector(`#loading-info`);
 		let background = document.querySelector(`#overlay`);
@@ -34,4 +34,14 @@ window.addEventListener(`pageLoaded`, () => {
 			background.setAttribute(`style`, `display: none !important; opacity: 0;`);
 		}, 250);
 	}
+}
+window.addEventListener(`pageLoaded`, () => {
+	showClosingAnimation();
+});
+window.addEventListener(`urlChanged`, () => {
+	setTimeout(() => {
+		if (document.querySelector(`#loading-info`).style.display === `block`) {
+			showClosingAnimation();
+		}
+	}, 250);
 });

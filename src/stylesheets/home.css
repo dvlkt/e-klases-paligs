@@ -551,7 +551,7 @@ html .toggle-search-inner .close-search {
 }
 
 /* RULES */
-html .modal-dialog {
+html .toc-modal .modal-dialog {
 	border-radius: var(--corner-roundness);
 	background: var(--background-middle-color);
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);

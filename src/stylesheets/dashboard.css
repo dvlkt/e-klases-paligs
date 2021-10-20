@@ -246,7 +246,7 @@ html .dashboard-widget-col.widget-recent .messages,
 html .dashboard-widget-col.widget-recent .scores:hover,
 html .dashboard-widget-col.widget-recent .messages:hover {
 	background: var(--background-middle-dark-color);
-	border-radius: 1rem 1rem 0 0;
+	border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
 	transition: .2s filter;
 }
 html .dashboard-widget-col.widget-recent .scores:hover,
@@ -299,7 +299,7 @@ html .dashboard-widget-col.widget-recent .recent-scores-item .recent-scores-item
 	font-weight: bold;
 }
 html .dashboard-widget-col.widget-recent .recent-scores-item .recent-scores-item-col span.score {
-	border-radius: .5rem;
+	border-radius: var(--corner-roundness);
 	border: 0;
 	background: var(--background-front-color);
 	color: var(--paragraph-color);
