@@ -11,6 +11,7 @@ html .modal {
 	box-shadow: 2px 7px 14px -3px var(--shadow-color);
 	opacity: 0;
 	transform: scale(0.75);
+	z-index: 1041;
 	transition: .2s transform, .2s opacity;
 }
 html .modal-dialog.timetable-dialog {
@@ -37,12 +38,40 @@ html .modal-background {
 	opacity: 0;
 	transition: .2s opacity;
 }
+html .modal-technical .modal-close {
+	background: var(--paragraph-color);
+	display: inline-block;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 15px;
+	right: 15px;
+	mask-size: cover;
+	-webkit-mask-size: cover;
+	transition: .2s opacity;
+}
+html .modal-technical .modal-close:hover {
+	opacity: 0.7;
+}
 html .modal-technical h1 {
 	font-family: "Inter", sans-serif;
 	font-weight: bold;
 	font-size: 32px;
 	margin-right: 0;
 	margin-bottom: 10px;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .modal h3 {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 5px;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .modal p {
+	font-size: 15px;
+	line-height: 20px;
 	user-select: none;
 	-webkit-user-drag: none;
 }
@@ -134,19 +163,6 @@ html .modal-technical .legend-dialog .legend-category .legend-category-title {
 html .modal-technical .legend-dialog .legend-category .legend-attribute {
 	font-family: "Inter", sans-serif;
 	font-weight: bold;
-}
-html .modal-technical .modal-close {
-	background: var(--paragraph-color);
-	width: 20px;
-	height: 20px;
-	top: 15px;
-	right: 15px;
-	mask-size: cover;
-	-webkit-mask-size: cover;
-	transition: .2s opacity;
-}
-html .modal-technical .modal-close:hover {
-	opacity: 0.7;
 }
 
 /* Timetable */

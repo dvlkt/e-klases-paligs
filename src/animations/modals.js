@@ -80,4 +80,34 @@ window.addEventListener(`pageLoaded`, () => {
 			}, 200);
 		});
 	}
+
+	/*
+		Technical support warning close animation
+	*/
+	if (document.querySelector(`.technical-support-warning-modal`) !== null) {
+		let modalElement = document.querySelector(`.modal.technical-support-warning-modal`);
+		let modalCloseElement = document.querySelector(`.technical-support-warning-modal [data-dismiss="modal"]`);
+		let modalBgElement = document.querySelector(`.modal-background`);
+
+		modalCloseElement.addEventListener(`click`, () => {
+			modalBgElement.style.opacity = `0`;
+			modalElement.style.opacity = `0`;
+			modalElement.style.transform = `scale(0.75)`;
+
+			setTimeout(() => {
+				modalBgElement.style.display = `none`;
+				modalElement.style.display = `none`;
+			}, 200);
+		});
+		modalBgElement.addEventListener(`click`, () => {
+			modalBgElement.style.opacity = `0`;
+			modalElement.style.opacity = `0`;
+			modalElement.style.transform = `scale(0.75)`;
+
+			setTimeout(() => {
+				modalBgElement.style.display = `none`;
+				modalElement.style.display = `none`;
+			}, 200);
+		});
+	}
 });
