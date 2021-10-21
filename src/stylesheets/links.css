@@ -61,7 +61,8 @@ html .home-diary-link:hover {
 html .primary-article .additional-article-item h3,
 html .primary-article .article-item h3,
 html .additional-article-item h3,
-html .article-item h3 {
+html .article-item h3,
+html .date-item h2 {
 	background-image: linear-gradient(var(--theme-color), var(--theme-color));
 	background-position: 0% 85%;
 	background-repeat: no-repeat;
@@ -71,6 +72,7 @@ html .article-item h3 {
 html .primary-article .additional-article-item h3:hover,
 html .primary-article .article-item h3:hover,
 html .additional-article-item h3:hover,
-html .article-item h3:hover {
+html .article-item h3:hover,
+html .date-item h2:hover {
 	background-size: 100% 7px;
 }

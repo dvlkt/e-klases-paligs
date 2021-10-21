@@ -50,7 +50,7 @@ html label.css-label::before {
 	background: var(--background-front-color);
 	left: 0;
 	top: 2px;
-	border-radius: var(--corner-roundness);
+	border-radius: calc(var(--corner-roundness) / 2);
 }
 html label.css-label::after {
 	content: "";
