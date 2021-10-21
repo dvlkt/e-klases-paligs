@@ -961,3 +961,28 @@ html .analytics-report-table table tbody .negative {
 	color: var(--red-accent-color);
 	border-radius: var(--corner-roundness);
 }
+
+/* Family plan ads */
+html .sub-adv-container,
+html .sub-adv-example-split {
+	background: none;
+}
+html .sub-adv-header {
+	font-size: 24px;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .sub-adv-list li,
+html .sub-adv-container p {
+	font-size: 15px;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .sub-adv-example-img-container {
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .sub-adv-example-img-container .cursor {
+	animation: HandMoveUpDown 3s ease-in-out infinite;
+}
