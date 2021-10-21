@@ -142,60 +142,77 @@ html .family-plan-carousel .carousel-indicators .active {
 }
 
 /* FAMILY PLAN COMPARISON */
-html .l-MainFooter {
-	padding: 1rem;
+html .l-MainHeader {
+	margin-bottom: 5px;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .l-MainHeader_Title {
-	background: var(--theme-gradient);
-	color: var(--theme-accent-color);
+	background: none;
+	color: var(--title-color);
 	border-radius: var(--corner-roundness);
+	text-align: left;
+	font-size: 32px;
+	margin-top: 65px;
 }
-html .l-MainHeader_Logo {
-	filter: brightness(var(--theme-accent-icon-brightness));
+html .l-MainHeader_Logo,
+html .l-MainFooter {
+	display: none;
 }
 html .po-PaymentOptions_Item div.sw-GridBox {
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
 	border: 0;
 	border-radius: var(--corner-roundness);
-	box-shadow: 0 7px 14px -3px var(--shadow-color);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
 html .po-BestDeal {
 	display: none; /* The "Izdevīgi" thing is dumb so let's just remove it */
 }
 html .sw-Price_Value {
 	color: var(--title-color);
+	font-size: 32px;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .sw-Price_Value::before {
-	filter: brightness(10) brightness(var(--icon-brightness));
+	content: "€";
+	background: none;
+	color: var(--low-priority-text-color);
+	font-size: 24px;
+	top: 8px;
 }
 html .sw-Price::after {
 	border-top: 4px solid var(--divider-color);
 }
+html .sw-PeriodPrice_Period,
+html .sw-PeriodPrice_Description {
+	color: var(--paragraph-color);
+	font-size: 15px;
+	user-select: none;
+	-webkit-user-drag: none;
+}
 html .sw-InfoMessage-secondary {
 	color: var(--low-priority-text-color);
+	font-weight: normal;
+	font-size: 11px;
 }
 html .po-PaymentOptions .row {
-	margin-left: calc(12.5% + 22.5px); /* Centers the plans */
+	margin-left: -25px;
 }
 html .sw-BoxButton {
-	background: var(--theme-color);
+	background-color: var(--theme-color);
 	color: var(--theme-accent-color);
-
 	width: calc(100% - 2rem);
-
 	margin-left: 1rem;
-
 	border: 0;
-
 	border-radius: var(--corner-roundness);
-
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s filter, .2s box-shadow;
 }
 html .sw-BoxButton:hover {
-	filter: brightness(0.8);
-
-	box-shadow: 0 7px 14px -3px var(--shadow-color);
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
 }
 html .sw-BoxButton:hover,
 html .sw-BoxButton:focus {
@@ -211,27 +228,25 @@ html .sw-BoxButton_Row:last-child {
 html .sw-GridBox {
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
-
-	padding-bottom: 1rem;
-
+	padding-bottom: 15px;
 	border: 0;
-
 	border-radius: var(--corner-roundness);
-
-	box-shadow: 0 7px 14px -3px var(--shadow-color);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
 html .sw-GridBox_Title,
 html .sw-GridBox_SectionImageTitle,
-html .sw-GridBox_SectionTitle {
-	background: var(--theme-gradient);
-	color: var(--theme-accent-color);
-
+html .sw-GridBox_SectionTitle,
+html .sw-GridBox_SectionTitle-unimportant {
+	background: none;
 	font-weight: bold;
-	text-transform: uppercase;
-
+	font-size: 24px;
+	text-align: center;
+	color: var(--title-color);
 	border: 0;
-
-	border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
+	padding-left: 0;
+	padding-right: 0;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .st-PhoneNumber {
 	background: none;
@@ -245,4 +260,12 @@ html .sw-BoxButton_Row-secondary::before {
 }
 html .sw-BoxButton_Row-secondary::after {
 	content: ")";
+}
+html .sw-InfoMessage {
+	font-size: 15px;
+	margin-top: 55px;
+}
+html .sw-InfoMessage p:not(:last-child) { /* Allow highlighting the last line of text which contains their legal details */
+	user-select: none;
+	-webkit-user-drag: none;
 }

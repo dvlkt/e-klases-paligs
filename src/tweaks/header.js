@@ -2,7 +2,8 @@ window.addEventListener(`pageLoading`, () => {
 	/*
 		Add the header in pages without it
 	*/
-	if (window.location.href.includes(`TechnicalSupport`)) {
+	if (window.location.href.includes(`TechnicalSupport`) ||
+		window.location.href.includes(`Payments`)) {
 		let headerElement = document.createElement(`header`);
 		headerElement.innerHTML += `
 			<div class="header-second">
