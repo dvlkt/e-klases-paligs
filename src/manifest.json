@@ -24,7 +24,9 @@
 		"res/title-light.png",
 		"res/title-dark.png",
 		"res/light/icon-256.png",
+		"res/light/icon-256-bw.png",
 		"res/dark/icon-256.png",
+		"res/dark/icon-256-bw.png",
 		"themes/light.json",
 		"themes/dark.json"
 	],
