@@ -197,7 +197,8 @@ html .sw-InfoMessage-secondary {
 	font-weight: normal;
 	font-size: 11px;
 }
-html .po-PaymentOptions .row {
+html .po-PaymentOptions .row,
+html .sw-GridBoxContainer-2  {
 	margin-left: -25px;
 }
 html .sw-BoxButton {
