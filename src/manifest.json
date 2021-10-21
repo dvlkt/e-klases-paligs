@@ -53,6 +53,7 @@
 				"tweaks/footer.js",
 				"tweaks/home.js",
 				"tweaks/mail.js",
+				"tweaks/technicalSupport.js",
 				"tweaks/profilePicture.js",
 				"tweaks/screenshotMode.js",
 				"events/pageStarted.js"

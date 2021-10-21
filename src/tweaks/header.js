@@ -1,4 +1,46 @@
 window.addEventListener(`pageLoading`, () => {
+	/*
+		Add the header in pages without it
+	*/
+	if (window.location.href.includes(`TechnicalSupport`)) {
+		let headerElement = document.createElement(`header`);
+		headerElement.innerHTML += `
+			<div class="header-second">
+				<div class="header-second-inner animated headroom--top headroom--not-bottom">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-7">
+								<ul class="header-second-menu hidden-xs">
+									<li class="header-second-menu-item  item-home  ">
+										<a class="onclick-spinner" href="/Family/Home">
+											Sākums
+										</a>
+									</li>
+									<li class="header-second-menu-item  item-journal  ">
+										<a class="onclick-spinner" href="/Family/Diary">
+											Dienasgrāmata
+										</a>
+									</li>
+									<li class="header-second-menu-item  item-links item-messages ">
+										<a href="/SPA/Family#/mail">
+											Saziņa
+										</a>
+									</li>
+									<li class="header-second-menu-item  item-links item-analytics ">
+										<a href="/Family/ReportMarkRatings/Get">
+											Pārskati
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>`;
+
+		document.body.insertBefore(headerElement, document.body.children[0]);
+	}
+
 	// Add the videocall tab
 	if (document.querySelector(`.header-second .header-second-menu`) !== null) {
 		let header = document.querySelector(`.header-second .header-second-menu`);
