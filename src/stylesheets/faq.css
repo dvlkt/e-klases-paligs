@@ -123,3 +123,62 @@ html .questions-wrapper.detailed .aq-wrapper .faq-items .faq-item .toggle-item {
 html .questions-wrapper.detailed .aq-wrapper .faq-items .faq-item .toggle-item:hover {
 	opacity: 0.7;
 }
+
+/* FAQ when logged in */
+html .faq-container .faq-head .container {
+	background: none;
+	text-align: left;
+	border: 0;
+	box-shadow: none;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .faq-container .faq-head h1 {
+	font-size: 32px;
+	font-family: "Inter", sans-serif;
+	font-weight: bold;
+	color: var(--title-color);
+}
+html .faq-container .faq-head h3 {
+	font-size: 15px;
+	font-family: "Inter", sans-serif;
+	color: var(--paragraph-color);
+}
+html .faq-container .faq-head h3::after {
+	content: "!"; /* The exclamation mark just makes the sentence feel friendlier */
+}
+html .faq-container .faq-content .container {
+	background: none;
+	border: 0;
+	box-shadow: none;
+}
+html .faq-container .faq-content .faq-item {
+	background: var(--background-middle-color);
+	border-radius: var(--corner-roundness);
+	border: 0;
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+}
+html .faq-container .faq-content .faq-item-title,
+html .faq-container .faq-content .faq-item.open .faq-item-title {
+	background: none;
+}
+html .faq-container .faq-content .faq-item-title span,
+html .faq-container .faq-content .faq-item-content p {
+	font-size: 15px;
+	font-family: "Inter", sans-serif;
+	color: var(--paragraph-color);
+}
+html .faq-container .faq-content .faq-item-title span {
+	font-weight: 500;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .faq-container .faq-content .faq-item-title::after {
+	background: var(--low-priority-text-color);
+	border: 0;
+	width: 20px;
+	height: 20px;
+	top: 21px;
+	mask-size: contain;
+	-webkit-mask-size: contain;
+}

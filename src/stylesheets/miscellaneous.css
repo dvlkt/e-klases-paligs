@@ -107,10 +107,13 @@ html .tech-support-container .ts-head .container {
 	color: var(--title-color);
 	border: 0;
 	box-shadow: none;
+	padding-left: 20px !important;
+	padding-bottom: 0 !important;
 }
 html .tech-support-container .ts-content .container {
 	border: 0;
 	background: none;
+	padding-top: 0;
 }
 html .tech-support-container .form-row .input,
 html .tech-support-container .form-row .textarea {
@@ -152,6 +155,7 @@ html .form-row label {
 html .tech-support-container .ts-head h1 {
 	font-weight: bold;
 	font-size: 32px;
+	text-align: left;
 }
 html .tech-support-container .col-xs-3,
 html .tech-support-close,
