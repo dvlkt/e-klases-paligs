@@ -18,7 +18,8 @@ html .actual-lessons .lesson-subitem .description a.file,
 html .student-journal-lessons .lesson-subitem .description a.file,
 html .li-HelpAction_Link,
 html .faq-container .faq-content .faq-item-content a,
-html .link-more {
+html .link-more,
+html .faq-item .item-abstract a {
 	color: var(--theme-color);
 	position: relative;
 	text-decoration: none;
@@ -48,7 +49,8 @@ html .student-journal-lessons .lesson-subitem .description a.file:hover,
 html .li-HelpAction_Link:hover,
 html .faq-container .faq-content .faq-item-content a:hover,
 html .link-more:focus, 
-html .link-more:hover {
+html .link-more:hover,
+html .faq-item .item-abstract a:hover {
 	color: var(--theme-color);
 	text-decoration: none;
 	background-size: 100% 1px;

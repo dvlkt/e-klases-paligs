@@ -24,7 +24,7 @@ html .login-form-header h4 {
 }
 @media only screen and (max-width: 768px) {
 	html .login-form h4 .content {
-		font-family: 'Inter', sans-serif;
+		font-family: "Inter", sans-serif;
 	}
 }
 html .login-form h4 .content::after {
@@ -36,12 +36,13 @@ html .form-content {
 html .form-content .form-control {
 	background: var(--background-front-color);
 	color: var(--paragraph-color);
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-size: 15px;
 	border-radius: var(--corner-roundness);
 	padding: 5px;
 	padding-left: 8px;
 	border: 0;
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
 html .login-form .dummy-placeholder {
 	color: var(--low-priority-text-color);
