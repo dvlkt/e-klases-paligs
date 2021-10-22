@@ -19,7 +19,9 @@ html .student-journal-lessons .lesson-subitem .description a.file,
 html .li-HelpAction_Link,
 html .faq-container .faq-content .faq-item-content a,
 html .link-more,
-html .faq-item .item-abstract a {
+html .faq-item .item-abstract a,
+html .faq-item .item-more a,
+html .page-about a.link {
 	color: var(--theme-color);
 	position: relative;
 	text-decoration: none;
@@ -50,7 +52,9 @@ html .li-HelpAction_Link:hover,
 html .faq-container .faq-content .faq-item-content a:hover,
 html .link-more:focus, 
 html .link-more:hover,
-html .faq-item .item-abstract a:hover {
+html .faq-item .item-abstract a:hover,
+html .faq-item .item-more a:hover,
+html .page-about a.link:hover {
 	color: var(--theme-color);
 	text-decoration: none;
 	background-size: 100% 1px;
@@ -69,7 +73,8 @@ html .primary-article .additional-article-item h3,
 html .primary-article .article-item h3,
 html .additional-article-item h3,
 html .article-item h3,
-html .date-item h2 {
+html .date-item h2,
+html .faq-item a h4 {
 	background-image: linear-gradient(var(--theme-color), var(--theme-color));
 	background-position: 0% 85%;
 	background-repeat: no-repeat;
@@ -80,6 +85,7 @@ html .primary-article .additional-article-item h3:hover,
 html .primary-article .article-item h3:hover,
 html .additional-article-item h3:hover,
 html .article-item h3:hover,
-html .date-item h2:hover {
+html .date-item h2:hover,
+html .faq-item a h4:hover {
 	background-size: 100% 7px;
 }

@@ -133,9 +133,11 @@ html .questions-wrapper.detailed .categories-wrapper .faq-topics-menu ul li.acti
 html .questions-wrapper.detailed .categories-wrapper .faq-topics-menu ul li a .title {
 	color: var(--paragraph-color);
 	font-family: "Inter", sans-serif;
-	font-weight: bold;
+	font-weight: normal;
 }
-
+html .questions-wrapper.detailed .categories-wrapper .faq-topics-menu ul li.active a .title {
+	font-weight: 500;
+}
 html .questions-wrapper.detailed .aq-wrapper .faq-items .faq-item .toggle-item {
 	background: none;
 	color: var(--theme-color);

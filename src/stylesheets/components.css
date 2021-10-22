@@ -51,6 +51,7 @@ html label.css-label::before {
 	left: 0;
 	top: 2px;
 	border-radius: calc(var(--corner-roundness) / 2);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
 html label.css-label::after {
 	content: "";
