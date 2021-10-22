@@ -233,6 +233,7 @@ html .MessageItem__MidCol .MessageItem__MessageBody {
 }
 html .MessageItem__LeftCol .MessageItem__Checkbox {
 	background: var(--background-front-color);
+	border-radius: calc(var(--corner-roundness) / 2);
 }
 html .MessageItem__LeftCol .MessageItem__Checkbox:checked {
 	background: var(--background-front-color);
