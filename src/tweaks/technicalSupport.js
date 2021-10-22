@@ -28,7 +28,8 @@ window.addEventListener(`pageLoading`, () => {
 					</div>
 				</div>
 			</div>
-		</div>`;
+		</div>
+		<div class="modal-background"></div>`;
 
 	/*
 		Show the modal background

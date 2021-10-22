@@ -1,6 +1,8 @@
 window.addEventListener(`pageLoading`, () => {
 	let isFamilyPlanActivated = false;
-	if (document.querySelector(`.copyright`).innerHTML.toLowerCase().includes(`ģimenes`)) {
+	if (document.querySelector(`.copyright`) !== null &&
+		document.querySelector(`.copyright`).innerHTML.toLowerCase().includes(`ģimenes`)) {
+		
 		isFamilyPlanActivated = true;
 	}
 

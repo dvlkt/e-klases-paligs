@@ -1,4 +1,8 @@
 window.addEventListener(`pageLoading`, () => {
+	if (!window.location.href.includes(`Diary`)) {
+		return;
+	}
+
 	/*
 		Change the diary header buttons
 	*/
