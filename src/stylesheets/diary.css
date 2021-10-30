@@ -515,7 +515,7 @@ html .rating-wrap .item .col:last-of-type,
 html .rating-wrap .final .col:last-of-type::after,
 html .rating-wrap .tfooter .col:first-of-type span,
 html .rating-wrap .item .col:last-of-type .data {
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 }
 html .rating-container .test-promo h1 {
 	font-weight: bold;
@@ -535,7 +535,7 @@ html .rating-wrap .first .col:last-of-type {
 	font-weight: bold;
 	text-transform: uppercase;
 	font-size: 12px;
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 }
 html .item .col:first-of-type .no,
 html .rating-wrap .final .col:last-of-type::after,

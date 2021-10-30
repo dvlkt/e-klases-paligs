@@ -306,19 +306,26 @@ html .nav-tabs li a:hover {
 }
 
 /* BACK TO JOURNAL */
-.html back-to-journal {
+html .back-to-journal {
+	background: var(--background-middle-color);
 	color: var(--paragraph-color);
-	font-family: 'Inter', sans-serif;
-	font-weight: bold;
-	text-transform: uppercase;
-	transition: .2s opacity;
-	background: none;
+	font-family: "Inter", sans-serif;
+	font-weight: 500;
 	vertical-align: middle;
-	padding: 0;
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: var(--corner-roundness);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	transition: .2s filter, .2s box-shadow;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .back-to-journal:hover {
 	color: var(--paragraph-color);
-	opacity: 0.7;
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
+	cursor: pointer;
 }
 html .back-to-journal::before {
 	content: "";
