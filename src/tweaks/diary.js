@@ -9,10 +9,11 @@ window.addEventListener(`pageLoading`, () => {
 	for (let diaryHeaderElement of document.querySelectorAll(`.students-journal-header-links`)) {
 		diaryHeaderElement.removeChild(diaryHeaderElement.children[0]); // Remove the timetable button
 		
-		let legendButton = document.createElement(`a`);
+		/* let legendButton = document.createElement(`a`);
 		legendButton.href = `javascript:void(0);`;
 		legendButton.className = `open-legend`;
-		legendButton.innerText = `Apzīmējumi`;
+		legendButton.innerText = `Apzīmējumi`; */
+		// I'm gonna implement the legend button at a later date
 
 		let timetableButton = document.createElement(`a`);
 		timetableButton.href = `javascript:void(0);`;
@@ -22,7 +23,7 @@ window.addEventListener(`pageLoading`, () => {
 		// to remove all event listeners so the scripts in /animations/ directory can have an easier life
 
 		diaryHeaderElement.insertBefore(timetableButton, diaryHeaderElement.children[0]);
-		diaryHeaderElement.insertBefore(legendButton, diaryHeaderElement.children[0]);
+		//diaryHeaderElement.insertBefore(legendButton, diaryHeaderElement.children[0]);
 	}
 
 	/*

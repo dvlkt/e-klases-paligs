@@ -41,6 +41,32 @@ window.addEventListener(`pageLoaded`, () => {
 	}
 
 	/*
+		Grade overview open/close animation
+	*/
+	/* for (let buttonElement of document.querySelectorAll(`.lessons-table td:last-of-type span.score`)) {
+		let modalElement = document.querySelector(`.modal.modal-mark-card`);
+		let modalBgElement = document.querySelector(`.modal-background`);
+
+		buttonElement.addEventListener(`click`, () => {
+			setTimeout(() => {
+				modalElement.style.opacity = `1.0`;
+				modalElement.style.transform = `scale(1.0)`;
+
+				modalBgElement.style.display = `block`;
+				modalBgElement.style.opacity = `0.5`;
+			}, 50);
+		});
+
+		modalBgElement.addEventListener(`click`, () => {
+			modalBgElement.style.opacity = `0`;
+
+			setTimeout(() => {
+				modalBgElement.style.display = `none`;
+			}, 200);
+		});
+	} */
+
+	/*
 		Legend open/close animation
 	*/
 	for (let buttonElement of document.querySelectorAll(`.open-legend`)) {
