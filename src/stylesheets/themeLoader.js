@@ -26,7 +26,7 @@ const loadCornerRoundness = () => {
 
 // This sets the default theme if it hasn't been set
 chrome.storage.sync.get([`theme`, `themeColor`, `cornerRoundness`], (res) => {
-	if (res.theme === undefined) {
+	if (res.theme === undefined || res.theme?.name === undefined) {
 		fetch(chrome.runtime.getURL(`themes/light.json`))
 			.then(response => response.json())
 			.then(themeData => {
@@ -35,7 +35,7 @@ chrome.storage.sync.get([`theme`, `themeColor`, `cornerRoundness`], (res) => {
 
 			});
 	}
-	if (res.themeColor === undefined) {
+	if (res.themeColor === undefined || res.themeColor[0] !== `#`) {
 		chrome.storage.sync.set({ themeColor: `#0088e3`});
 	}
 	if (res.cornerRoundness === undefined) {
