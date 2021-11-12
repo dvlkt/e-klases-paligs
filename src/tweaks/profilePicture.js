@@ -4,7 +4,8 @@ window.addEventListener(`pageLoading`, () => {
 			if (document.querySelector(`.header-account-btn`) !== null) {
 				document.querySelector(`.header-account-btn`).style.mask = `none`;
 				document.querySelector(`.header-account-btn`).style.backgroundImage = `url("${res.profilePicture}")`;
-			} else if (document.querySelector(`.welcome-greeting .welcome-greeting-image.student-other`) !== null) {
+			}
+			if (document.querySelector(`.welcome-greeting .welcome-greeting-image.student-other`) !== null) {
 				document.querySelector(`.welcome-greeting .welcome-greeting-image.student-other`).style.filter = `none`;
 				document.querySelector(`.welcome-greeting .welcome-greeting-image.student-other`).style.backgroundImage = `url("${res.profilePicture}")`;
 			}

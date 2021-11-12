@@ -84,11 +84,13 @@ html .loading-info {
 	color: var(--paragraph-color);
 	box-shadow: 0 7px 14px -3px var(--shadow-color);
 	border: 0;
-	font-weight: bold;
+	font-weight: 500;
 	transform: scale(1) !important;
 	opacity: 1;
 	border-radius: var(--corner-roundness) !important;
 	transition: .2s transform, .2s opacity;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .loading-spinner {
 	border: 2px solid var(--paragraph-color);
@@ -242,7 +244,10 @@ html .popover {
 
 /* SCROLL TO TOP */
 html .scroll-to-top {
-	background-color: var(--theme-color);
+	position: relative;
+	background: var(--background-middle-color);
+	width: 35px;
+	height: 35px;
 	border-radius: var(--corner-roundness);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s filter, .2s box-shadow;
@@ -251,6 +256,19 @@ html .scroll-to-top:hover {
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 	filter: brightness(0.9);
 }
+html .scroll-to-top::after {
+	content: "";
+	background: var(--paragraph-color);
+	display: block;
+	width: 19px;
+	height: 19px;
+	margin: 8px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	mask-size: contain;
+	-webkit-mask-size: contain;
+}
 
 /* NAVIGATION TABS */
 html .nav-tabs {
@@ -258,6 +276,8 @@ html .nav-tabs {
 	border-radius: var(--corner-roundness);
 	background: var(--background-middle-color);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .nav-tabs li {
 	font-weight: 500;
