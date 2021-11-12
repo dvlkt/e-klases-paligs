@@ -262,20 +262,16 @@ html .ViewMessage .ViewMessage__MetaInfo {
 	border-top: 0;
 	border-bottom: 4px solid var(--divider-color);
 }
-html .ViewMessage__MetaInfo .MessageFollowUpStatus--none::before {
-	color: var(--background-front-color);
-}
-html .MessageItem__RightCol .MessageFollowUpStatus,
 html .ViewMessage__MetaInfo .MessageFollowUpStatus {
+	display: none;
+}
+html .MessageItem__RightCol .MessageFollowUpStatus {
 	width: 20px;
 	height: 20px;
 }
 html .MessageItem__RightCol .MessageFollowUpStatus--none::before,
 html .MessageItem__RightCol .MessageFollowUpStatus--marked::before,
-html .MessageItem__RightCol .MessageFollowUpStatus--compleated::before, /* You mean completed??? */
-html .ViewMessage__MetaInfo .MessageFollowUpStatus--none::before,
-html .ViewMessage__MetaInfo .MessageFollowUpStatus--marked::before,
-html .ViewMessage__MetaInfo .MessageFollowUpStatus--compleated::before {
+html .MessageItem__RightCol .MessageFollowUpStatus--compleated::before {
 	content: "";
 	width: 20px;
 	height: 20px;
@@ -286,22 +282,18 @@ html .ViewMessage__MetaInfo .MessageFollowUpStatus--compleated::before {
 	-webkit-mask-size: cover;
 }
 html .MessageItem__RightCol .MessageFollowUpStatus--none::before,
-html .ViewMessage__MetaInfo .MessageFollowUpStatus--none::before {
+html .MessageItem__RightCol .MessageFollowUpStatus--compleated::before {
 	background: var(--low-priority-text-color);
 }
 html .MessageItem__RightCol .MessageFollowUpStatus--marked::before,
-html .ViewMessage__MetaInfo .MessageFollowUpStatus--marked::before {
+html .MessageActions .TopToolbar__ButtonContainer .TopToolbar__Button--star-filled::before {
 	background: #e9b610;
-}
-html .MessageItem__RightCol .MessageFollowUpStatus--compleated::before,
-html .ViewMessage__MetaInfo .MessageFollowUpStatus--compleated::before {
-	background: #1ec039;
 }
 html .MessageItem .MessageItem__AuthorInfo,
 html .MessageItem .MessageItem__MessageTitle,
 html .MessageItem .MessageItem__MessageBody,
 html .MessageItem .MessageItem__Date {
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 }
 html .MessageItem .MessageItem__Date {
 	color: var(--low-priority-text-color);
@@ -318,8 +310,12 @@ html .MessageItem .MessageItem__MessageTitle::before {
 	color: var(--low-priority-text-color);
 	margin-left: -14px;
 }
+html .ViewMessage .ViewMessage__MetaInfo .ViewMessage__CategoryWrapper {
+	margin-top: -30px;
+}
 html .ViewMessage__MetaInfo .ViewMessage__MessageDate {
 	color: var(--low-priority-text-color);
+	font-size: 15px;
 	user-select: none;
 	-webkit-user-drag: none;
 	font-family: 'Inter', sans-serif;
@@ -643,30 +639,42 @@ html .FileInput__AddButton .FileInput__FileUpload {
 	height: calc(13px + 1rem);
 	width: 180px;
 }
-html .MessageActions {
-	height: 1rem;
-	margin-top: 1rem;
-	margin-bottom: 0;
-}
 html .MessageActions .TopToolbar__ButtonContainer {
-	display: inline-block;
-	height: 1rem;
-	margin-right: 15px;
+	display: inline;
+	margin-right: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 20px;
+	vertical-align: top;
 }
-html .MessageActions .TopToolbar__Button {
-	height: 1rem;
-	
-	transition: .2s opacity;
+html .MessageActions .TopToolbar__ButtonContainer button {
+	position: relative;
+	background: var(--background-middle-color);
+	width: 30px;
+	height: 30px;
+	border-radius: var(--corner-roundness);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	transition: .2s filter, .2s box-shadow;
 }
-html .MessageActions .TopToolbar__Button:hover {
-	opacity: 0.7;
+html .MessageActions .TopToolbar__ButtonContainer button:hover {
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
 }
-html .MessageActions .TopToolbar__Button::before {
+html .MessageActions .TopToolbar__ButtonContainer button::before {
 	content: "";
+	position: absolute;
+	top: 5px;
+	left: 5px;
 	display: block;
-	width: 1rem;
-	height: 1rem;
-	filter: invert() brightness(var(--icon-brightness));
+	width: 20px;
+	height: 20px;
+	background: var(--paragraph-color);
+	mask-size: contain;
+	-webkit-mask-size: contain;
+}
+html .MessageActions .TopToolbar__ButtonContainer:nth-last-child(1),
+html .MessageActions .TopToolbar__ButtonContainer:nth-last-child(2) {
+	display: none;
 }
 html .ViewMessage__MessageBody,
 html .ViewMessage__MessageBody *,
