@@ -116,8 +116,7 @@ html .datepicker-dropdown {
 html .bottom-controls .calendar-holder {
 	top: -345px !important;
 }
-html .calendar-holder .datepicker .datepicker-switch,
-html section h2 .actual-lessons-date.active {
+html .calendar-holder .datepicker .datepicker-switch {
 	font-family: 'Inter', sans-serif;
 	font-weight: 500;
 	color: var(--title-color);

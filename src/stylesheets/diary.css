@@ -108,11 +108,9 @@ html .diary-container .lessons-table td:nth-child(odd) {
 }
 html .student-journal-lessons-table-holder .lessons-table tbody .number--lessonNotInDay,
 html .actual-lessons .lesson-title .number--lessonNotInDay,
-html .student-journal-lessons .lesson-title .number--lessonNotInDay {
-	display: none;
-}
+html .student-journal-lessons .lesson-title .number--lessonNotInDay,
 html .lessons-table tbody td .number--lessonNotInDay {
-	color: var(--low-priority-text-color);
+	display: none;
 }
 html .student-journal-lessons-table-holder .lessons-table tbody tr:last-child td:nth-child(1),
 html .diary-container .lessons-table tbody tr:last-child td:nth-child(1) {
@@ -154,7 +152,8 @@ html .lessons-table td:last-of-type span.score:hover {
 	filter: brightness(0.9);
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 }
-html .student-journal-lessons-table-holder .lessons-table td:last-of-type {
+html .student-journal-lessons-table-holder .lessons-table td:last-of-type,
+html .diary-container .lessons-table td:last-of-type {
 	padding-left: 6px !important;
 	user-select: none;
 	-webkit-user-drag: none;
@@ -221,8 +220,10 @@ html .student-journal-lessons-table-holder .lessons-table .info td:last-child {
 	background: var(--background-middle-color);
 	padding-left: 5px !important;
 }
-html .student-journal-lessons-table-holder h2 {
-	font-family: 'Inter', sans-serif;
+html .student-journal-lessons-table-holder h2,
+html section h2 .actual-lessons-date.active {
+	color: var(--paragraph-color);
+	font-family: "Inter", sans-serif;
 	text-transform: capitalize;
 	font-weight: bold;
 	font-size: 18px;
@@ -372,6 +373,8 @@ html .students-journal-header .students-journal-header-links a.print::before {
 html .actual-lessons h2 {
 	font-weight: bold;
 	font-size: 32px;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .actual-lessons .lesson-title .title,
 html .student-journal-lessons .lesson-title .title {
