@@ -58,7 +58,7 @@
 				"animations/calendar.js",
 				"animations/headerDropdowns.js",
 				"animations/loadingSpinner.js",
-				"animations/mailActions.js",
+				"animations/mail.js",
 				"animations/modals.js",
 				"events/pageStarted.js"
 			],

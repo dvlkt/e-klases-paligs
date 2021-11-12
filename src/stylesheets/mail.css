@@ -205,6 +205,8 @@ html .main-eklase-content .BottomInfo {
 html .Folder__NoMessages {
 	font-family: 'Inter', sans-serif;
 	font-size: 15px;
+	opacity: 0;
+	transition: .3s opacity;
 	user-select: none;
 	-webkit-user-drag: none;
 }
@@ -215,9 +217,10 @@ html .Folder__MessageList .MessageItem {
 	margin-bottom: 10px;
 	border: 0;
 	border-radius: var(--corner-roundness);
+	opacity: 0;
 	user-select: none;
 	-webkit-user-drag: none;
-	transition: .2s filter, .2s box-shadow;
+	transition: .2s filter, .2s box-shadow, .3s opacity;
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
 html .Folder__MessageList .MessageItem:hover {
@@ -407,6 +410,7 @@ html .MailActions .MailActions__ActionList {
 	border-radius: var(--corner-roundness);
 	transform: translateY(-10px);
 	opacity: 0;
+	display: none;
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 	transition: .2s transform, .2s opacity;
 }
@@ -426,9 +430,12 @@ html .MailActions__ActionList .MailActions__ActionOuter:not(:last-child) {
 	border: 0;
 }
 html .MailActions__ActionOuter .MailActions__ActionInner {
+	border: 0;
+	background: none;
 	color: var(--paragraph-color);
-
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
+	font-size: 15px;
+	padding: 20px;
 }
 html .MailActions__ActionOuter .MailActions__ActionInner::before {
 	content: "";
