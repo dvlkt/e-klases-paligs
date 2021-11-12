@@ -98,12 +98,18 @@ html .header-second-menu .header-second-menu-item.item-analytics.active a::befor
 html .header-second .header-second-menu-item.item-messages .notifications-count {
 	background: var(--theme-color);
 	color: var(--theme-accent-color);
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-weight: bold;
 	border: 0;
+	top: 1px;
+	left: 29px;
+}
+html .header-second .header-second-menu-item.item-messages.active .notifications-count {
+	width: 18px;
+	height: 18px;
 	top: 0;
 	left: 28px;
-	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	border: 1px solid var(--background-middle-color);
 }
 html .header-second .header-second-submenu {
 	display: none !important;

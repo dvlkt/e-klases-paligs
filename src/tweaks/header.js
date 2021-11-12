@@ -53,11 +53,6 @@ window.addEventListener(`pageLoading`, () => {
 		header.insertBefore(element, header.children[3]);
 	}
 
-	// Rename the mail tab
-	if (document.querySelector(`.header-second-menu .header-second-menu-item.item-messages a`) !== null) {
-		document.querySelector(`.header-second-menu .header-second-menu-item.item-messages a`).innerText = `Pasts`;
-	}
-
 	// Add the tooltips
 	for (let element of document.querySelectorAll(`li.header-second-menu-item`)) {
 		element.innerHTML += `
@@ -265,7 +260,17 @@ window.addEventListener(`pageLoading`, () => {
 
 	// Remove the titles for the links
 	for (element of document.querySelectorAll(`.header-second-menu .header-second-menu-item a`)) {
-		element.innerText = ``;
+		// Retain the notification count
+		let notificationCount = 0;
+		if (element.querySelector(`.notifications-count`) !== null) {
+			notificationCount = parseInt(element.querySelector(`.notifications-count`).innerText);
+		}
+		
+		if (notificationCount > 0) {
+			element.innerHTML = `<span class="notifications-count">${notificationCount}</span>`
+		} else {
+			element.innerHTML = ``;
+		}
 	}
 
 	// Remove the student selector & first header

@@ -125,6 +125,7 @@ html .dashboard-widget-col.widget-notifications .widget-notifications-primary.st
 	top: 20px;
 	font-size: 15px;
 	padding-top: 4px;
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
 html .dashboard-widget-col.widget-banner .widget-content {
 	height: auto;
@@ -146,7 +147,7 @@ html .close-dashboard-adv-message::before {
 html .dashboard-widget-col.widget-notifications .widget-notification {
 	background: var(--background-middle-dark-color);
 	color: var(--paragraph-color);
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-size: 15px;
 	text-align: left;
 	margin: 10px;
