@@ -23,14 +23,14 @@ const tryAddingMailViewPatches = () => {
 		for (let attachmentElement of document.querySelectorAll(`.AttachmentList__ItemContainer`)) {
 			let fileType = attachmentElement.children[0].id.split(`.`).pop();
 
-			if (fileType === `png` || fileType === `jpg` || fileType === `jpeg` || fileType === `bmp` || fileType === `gif` || fileType === `webp`) {
+			if ([`png`, `jpg`, `jpeg`, `bmp`, `gif`, `webp`].includes(fileType)) {
 				let url = attachmentElement.querySelector(`.AttachmentList__Link`).href;
 
 				let imgElement = document.createElement(`img`);
 				imgElement.src = url;
 				attachmentElement.insertBefore(imgElement, attachmentElement.children[0]);
 			} else {
-				let fileCategory = null; // 0 = document, 1 = video, 2 = audio
+				let fileCategory = `generic`;
 
 				switch (fileType) {
 					case `pdf`:
@@ -39,27 +39,25 @@ const tryAddingMailViewPatches = () => {
 					case `odf`:
 					case `txt`:
 					case `html`:
-						fileCategory = 0;
+						fileCategory = `document`;
 						break;
 
 					case `mp4`:
 					case `mkv`:
-						fileCategory = 1;
+						fileCategory = `video`;
 						break;
 
 					case `mp3`:
 					case `wav`:
 					case `ogg`:
 					case `m4a`:
-						fileCategory = 2;
+						fileCategory = `audio`;
 						break;
-				}	
-
-				if (fileCategory !== null) {
-					let imgElement = document.createElement(`img`);
-					imgElement.src = chrome.runtime.getURL(`res/icons/attachment-${fileCategory}.png`);
-					//attachmentElement.insertBefore(imgElement, attachmentElement.children[0]);
 				}
+
+				let iconElement = document.createElement(`div`);
+				iconElement.className = `file-icon type-${fileCategory}`;
+				attachmentElement.insertBefore(iconElement, attachmentElement.children[0]);
 			}
 
 			attachmentElement.addEventListener(`click`, () => {

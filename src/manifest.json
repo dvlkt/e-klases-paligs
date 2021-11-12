@@ -28,7 +28,11 @@
 		"res/dark/icon-256.png",
 		"res/dark/icon-256-bw.png",
 		"themes/light.json",
-		"themes/dark.json"
+		"themes/dark.json",
+		"res/icons/attachment-0.svg",
+		"res/icons/attachment-1.svg",
+		"res/icons/attachment-2.svg",
+		"res/icons/attachment-3.svg"
 	],
 	"content_scripts": [
 		{

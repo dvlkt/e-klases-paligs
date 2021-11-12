@@ -338,14 +338,29 @@ html .AttachmentList__ItemContainer:hover {
 	filter: brightness(0.9);
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 }
+html .AttachmentList__ItemContainer img,
+html .AttachmentList__ItemContainer .file-icon {
+	display: block;
+	margin: auto;
+	margin-bottom: 5px;
+}
 html .AttachmentList__ItemContainer img {
 	width: 180px;
 	height: 100px;
 	object-fit: cover;
 	border-radius: var(--corner-roundness);
-	display: block;
-	margin: auto;
-	margin-bottom: 5px;
+}
+html .AttachmentList__ItemContainer .file-icon {
+	width: 120px;
+	height: 60px;
+	object-fit: contain;
+	background: var(--paragraph-color);
+	mask-size: contain;
+	-webkit-mask-size: contain;
+	mask-position: center center;
+	-webkit-mask-position: center center;
+	mask-repeat: no-repeat;
+	-webkit-mask-repeat: no-repeat;
 }
 html .AttachmentList__Item a,
 html .AttachmentList__Item a:hover,

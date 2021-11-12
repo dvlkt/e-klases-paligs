@@ -276,7 +276,14 @@ html .dashboard-widget-col.widget-recent .recent-scores .widget-content {
 	background: var(--background-middle-color);
 }
 html .dashboard-widget-col.widget-recent .recent-scores-item .recent-scores-item-col {
-	border-bottom: 4px solid #00000020;
+	border-top: 2px solid #00000020;
+	border-bottom: 2px solid #00000020;
+}
+html .dashboard-widget-col.widget-recent .recent-scores-item .recent-scores-item-col:first-child {
+	border-top: 0;
+}
+html .dashboard-widget-col.widget-recent .recent-scores-item .recent-scores-item-col:last-child {
+	border-bottom: 0;
 }
 html .dashboard-widget-col.widget-recent .recent-scores-item,
 html .dashboard-widget-col.widget-recent .recent-scores-item:hover {
@@ -294,9 +301,11 @@ html .dashboard-widget-col.widget-recent .recent-scores-item .recent-scores-item
 html .dashboard-widget-col.widget-recent .recent-scores-item .recent-scores-item-col:nth-child(2) {
 	color: var(--paragraph-color);
 	font-family: 'Inter', sans-serif;
+	font-size: 13px;
 }
 html .dashboard-widget-col.widget-recent .recent-scores-item .recent-scores-item-col h4 {
-	font-weight: bold;
+	font-weight: 500;
+	font-size: 15px;
 }
 html .dashboard-widget-col.widget-recent .recent-scores-item .recent-scores-item-col span.score {
 	border-radius: var(--corner-roundness);
@@ -305,7 +314,8 @@ html .dashboard-widget-col.widget-recent .recent-scores-item .recent-scores-item
 	color: var(--paragraph-color);
 	font-weight: bold;
 	font-family: 'Inter', sans-serif;
-	box-shadow: 0 7px 14px -3px var(--shadow-color);
+	font-size: 15px;
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
 html .dashboard-widget-col.widget-recent .recent-scores-item.new .recent-scores-item-col:first-child::before {
 	background: var(--theme-color);

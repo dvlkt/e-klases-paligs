@@ -12,7 +12,7 @@
 </p>
 
 ***
-
+<div data-v-10a87703="" class="ConfirmationPrompt"><h3 data-v-10a87703="" class="ConfirmationPrompt__Title">Vai turpināt sesiju?</h3> <p data-v-10a87703="" class="ConfirmationPrompt__Text">Sesijas laiks beigsies pēc 9:39 min.</p> <div data-v-10a87703="" class="ConfirmationPrompt__Buttons"><button data-v-10a87703="" type="button" class="ButtonDefault ButtonDefault--small ButtonDefault--transparent ConfirmationPrompt__Button">Beigt darbu</button> <button data-v-10a87703="" type="button" class="ButtonDefault ButtonDefault--small ButtonDefault--transparent ConfirmationPrompt__Button">Turpināt</button></div></div>
 <h1 align="center">
 	🎉 Ieinstalēšana
 </h1>

@@ -3,21 +3,17 @@ html .big-anouncement .btn-secondary,
 html .btn-primary {
 	background: var(--theme-color);
 	color: var(--theme-accent-color);
-
 	font-family: "Inter", sans-serif;
-	font-weight: bold;
-
+	font-weight: 500;
 	border-radius: var(--corner-roundness);
-
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s filter, .2s box-shadow;
 }
 html .big-anouncement .btn-secondary:hover,
 html .btn-primary:hover {
 	background: var(--theme-color);
-
-	box-shadow: 0 4px 10px -3px var(--shadow-color);
-	
-	filter: brightness(0.8);
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
 }
 
 /* CHECKMARKS & RADIO BUTTONS */
@@ -248,20 +244,24 @@ html .popover {
 html .scroll-to-top {
 	background-color: var(--theme-color);
 	border-radius: var(--corner-roundness);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s filter, .2s box-shadow;
 }
 html .scroll-to-top:hover {
-	box-shadow: 0 7px 14px -3px var(--shadow-color);
-	filter: brightness(0.8);
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
 }
 
 /* NAVIGATION TABS */
 html .nav-tabs {
 	padding-left: 1rem;
+	border-radius: var(--corner-roundness);
+	background: var(--background-middle-color);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
 html .nav-tabs li {
-	text-transform: uppercase;
-	font-weight: bold;
+	font-weight: 500;
+	font-size: 18px;
 }
 html .nav-tabs li a,
 html .nav-tabs li.active a,
@@ -272,15 +272,16 @@ html .nav-tabs li.ratings a,
 html .nav-tabs li.journal a,
 html .nav-tabs li.delays a,
 html .nav-tabs li.transcript-of-records a {
-	background: var(--background-middle-dark-color);
+	background: none;
 	color: var(--title-color);
 	margin-right: .5rem;
 	padding: 1rem .5rem;
 	border: 0;
-	border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
 	cursor: pointer;
-	transition: .2s filter;
-	font-family: 'Inter', sans-serif;
+	transition: .2s opacity;
+	font-family: "Inter", sans-serif;
+	position: relative;
+	overflow: hidden;
 }
 html .nav-tabs li,
 html .nav-tabs li.active,
@@ -290,19 +291,34 @@ html .nav-tabs li {
 html .nav-tabs li.active a,
 html .nav-tabs li.active a:focus,
 html .nav-tabs li.active a:hover {
-	background: var(--background-middle-color);
-	color: var(--title-color);
-
+	background: none;
+	color: var(--paragraph-color);
 	padding: 1rem .5rem;
-
 	cursor: pointer;
 }
 html .nav-tabs li a:focus,
 html .nav-tabs li a:hover {
-	filter: brightness(0.8);
+	opacity: 0.7;
 }
 html .nav-tabs li a:hover {
 	border: 0;
+}
+html .nav-tabs li a::after {
+	content: "";
+	position: absolute;
+	display: block;
+	bottom: -6px;
+	left: 0;
+	width: 100%;
+	height: 6px;
+	border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
+	background: var(--theme-color);
+	transition: .2s bottom;
+}
+html .nav-tabs li a:hover::after,
+html .nav-tabs li a:focus::after,
+html .nav-tabs li.active a::after {
+	bottom: 0;
 }
 
 /* BACK TO JOURNAL */
@@ -339,31 +355,34 @@ html .back-to-journal::before {
 }
 
 /* DROPDOWN */
-/* I REFUSE to believe this code was written by someone older than 6 */
 html .tech-support-container .select2-container--default .select2-selection--single,
 html .tech-support-container .select2-container--default .select2-selection--single .select2-selection__rendered	{
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
-	border: 0 !important; /* E-klaseeeeeee whyyyyyyy !importantttttttt */
+	border: 0 !important;
 	border-radius: var(--corner-roundness) !important;
-	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s box-shadow, .2s filter;
 }
 html .tech-support-container .select2-container--default .select2-selection--single:hover {
-	box-shadow: 2px 7px 14px -3px var(--shadow-color);
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 	filter: brightness(0.9);
 }
 html .select2-dropdown {
-	background: var(--background-middle-color); /* Wow I'm so proud of yall you didn't use !important this time good job! */
+	background: var(--background-middle-color);
 	color: var(--paragraph-color);
 	border: 0;
 	border-radius: var(--corner-roundness) !important;
-	box-shadow: 2px 7px 14px -3px var(--shadow-color);
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+}
+html .select2-dropdown:first-child {
+	border-radius: 0 0 var(--corner-roundness) var(--corner-roundness) !important;
 }
 html .select2-container--default .select2-results__option,
 html .select2-container--default .select2-results__option[aria-selected="true"] {
 	background: var(--background-middle-color);
 	border-radius: var(--corner-roundness);
+	font-size: 15px;
 	transition: .2s filter;
 }
 html .select2-container--default .select2-results__option:hover {
