@@ -24,28 +24,39 @@ const loadCornerRoundness = () => {
 		document.querySelector(`:root`).style.setProperty(`--corner-roundness`, res.cornerRoundness);
 	});
 }
+loadTheme();
+loadCornerRoundness();
 
-// This sets the default theme if it hasn't been set
+/*
+	Set the default theme if it hasn't been set
+*/
 chrome.storage.sync.get([`theme`, `themeColor`, `cornerRoundness`], (res) => {
 	if (res.theme === undefined || res.theme?.name === undefined) {
 		fetch(chrome.runtime.getURL(`themes/light.json`))
 			.then(response => response.json())
 			.then(themeData => {
 
-				chrome.storage.sync.set({ theme: themeData });
+				chrome.storage.sync.set({ theme: themeData }, () => {
+					loadTheme();
+				});
 
 			});
 	}
 	if (res.themeColor === undefined || res.themeColor[0] !== `#`) {
-		chrome.storage.sync.set({ themeColor: `#0088e3`});
+		chrome.storage.sync.set({ themeColor: `#0088e3`}, () => {
+			loadTheme();
+		});
 	}
 	if (res.cornerRoundness === undefined) {
-		chrome.storage.sync.set({ cornerRoundness: `10px` });
+		chrome.storage.sync.set({ cornerRoundness: `10px` }, () => {
+			loadCornerRoundness();
+		});
 	}
 });
-loadTheme();
-loadCornerRoundness();
 
+/*
+	Update the theme whenever it's changed in the popup
+*/
 chrome.runtime.onMessage.addListener((request) => {
 	if (request === `loadTheme`) {
 		loadTheme();
@@ -55,6 +66,9 @@ chrome.runtime.onMessage.addListener((request) => {
 	}
 });
 
+/*
+	Rainbow mode
+*/
 setInterval(() => {
 	if (isRainbowActivated) {
 		document.querySelector(`:root`).style.setProperty(`--theme-color`, `hsl(${rainbowHueValue}, 100%, 50%)`);
