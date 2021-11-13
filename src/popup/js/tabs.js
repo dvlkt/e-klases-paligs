@@ -14,3 +14,13 @@ export const sendMessageToEklaseTabs = (message) => {
 		}
 	});
 }
+export const sendMessageToExtensionTabs = (message) => {
+	chrome.tabs.query({ url: `${chrome.runtime.getURL(``)}*` }, (tabs) => {
+		for (let tab of tabs) {
+			chrome.tabs.sendMessage(
+				tab.id,
+				message
+			);
+		}
+	});
+}

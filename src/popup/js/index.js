@@ -1,5 +1,5 @@
 import { loadTheme } from './themeApplier.js';
-import { openTab, sendMessageToEklaseTabs } from './tabs.js';
+import { openTab, sendMessageToEklaseTabs, sendMessageToExtensionTabs } from './tabs.js';
 
 loadTheme();
 
@@ -51,6 +51,7 @@ for (let themeButtonElement of document.querySelectorAll(`.theme-preview`)) {
 
 			chrome.storage.sync.set({ theme: themeData }, () => {
 				sendMessageToEklaseTabs(`loadTheme`); // Update the theme in all of the opened tabs
+				sendMessageToExtensionTabs(`loadTheme`);
 				loadTheme();
 			});
 		});

@@ -42,3 +42,13 @@ setInterval(() => {
 		}
 	}
 }, 20);
+
+
+/*
+	Update the theme whenever it's changed in the popup
+*/
+chrome.runtime.onMessage.addListener((request) => {
+	if (request === `loadTheme`) {
+		loadTheme();
+	}
+});
