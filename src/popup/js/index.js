@@ -53,6 +53,7 @@ for (let themeButtonElement of document.querySelectorAll(`.theme-preview`)) {
 				sendMessageToEklaseTabs(`loadTheme`); // Update the theme in all of the opened tabs
 				sendMessageToExtensionTabs(`loadTheme`);
 				loadTheme();
+				chrome.browserAction.setIcon({ path: chrome.runtime.getURL(`/res/${themeData.name}/icon-64.png`) });
 			});
 		});
 	});
