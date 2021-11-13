@@ -356,7 +356,8 @@ html .info-pane-wrap .avg-class,
 html .info-pane-wrap .avg-pupil,
 html .info-pane-wrap .teacher {
 	color: var(--paragraph-color);
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
+	font-size: 15px;
 }
 html .info-pane-wrap .avg-class,
 html .info-pane-wrap .avg-pupil {
@@ -402,8 +403,8 @@ html .behavioral-table tr.thead td {
 	font-size: 15px;
 	font-weight: 500;
 	padding: 0;
-	padding-top: 5px;
-	padding-top: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	border: 0;
 }
 html .lesson-topics-table td,
@@ -444,21 +445,20 @@ html .lesson .detailed-header {
 html .lesson.test .detailed-header .static,
 html .detailed-header .item-type,
 html .detailed-item .additional-data label {
-	font-size: 13px;
-	text-transform: uppercase;
+	font-size: 15px;
 	color: var(--low-priority-text-color);
-	font-weight: bold;
-	font-family: 'Inter', sans-serif;
+	font-weight: 500;
+	font-family: "Inter", sans-serif;
 }
 html .lesson.test .pupil-place {
 	border-left: 0;
 }
 html .detailed-header .average-score span,
 html .detailed-header .pupil-place span {
-	font-size: 13px;
-	text-transform: uppercase;
-	color: var(--low-priority-text-color);
-	font-family: 'Inter', sans-serif;
+	font-size: 15px;
+	color: var(--paragraph-color);
+	font-weight: normal;
+	font-family: "Inter", sans-serif;
 }
 html .detailed-item .right span {
 	color: var(--paragraph-color);
@@ -472,6 +472,10 @@ html .detailed-item .rate-information {
 }
 html .detailed-item .tiny-graph {
 	border-bottom: 4px solid #00000020;
+}
+html .detailed-item .additional-data .information {
+	font-size: 15px !important;
+	line-height: 18px;
 }
 html .explanation-wrap .explanation {
 	color: var(--paragraph-color);
@@ -518,14 +522,16 @@ html .cell-item:hover .marks-header {
 }
 html .cell-item .marks-header .inner {
 	border-radius: var(--corner-roundness);
-	background: var(--background-front-color) !important;
+	background: var(--background-middle-color) !important;
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	transition: .2s filter, .2s box-shadow;
 	color: var(--paragraph-color);
 	height: 60px;
 }
 html .cell-item .marks-header:hover,
 html .cell-item.active .marks-header {
-	box-shadow: 0 4px 10px -3px var(--shadow-color);
-	filter: brightness(0.8);
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
 }
 html .analytic .actual-lessons,
 html .analytic .student-journal-lessons {

@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "E-klases Palīgs [BETA]",
-	"version": "0.5.1",
+	"version": "0.6",
 	"description": "Labāks dizains un vairāk funkcijas.",
 	"icons": {
 		"16": "res/light/icon-16.png",
@@ -85,6 +85,11 @@
 			"run_at": "document_start"
 		}
 	],
+	"background": {
+		"scripts": [
+			"background/onInstall.js"
+		]
+	},
 	"browser_specific_settings": {
 		"gecko": {
 			"id": "dlektauers@gmail.com"
