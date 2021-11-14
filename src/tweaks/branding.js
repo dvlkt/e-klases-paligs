@@ -15,7 +15,13 @@ const applyLogos = () => {
 						logo.src = base64data;
 					}
 					if (document.querySelector(`.header-logo`) !== null) {
-						document.querySelector(`.header-logo`).src = base64data;
+						if (res.theme.name === `dark` ||
+							(date.getMonth() === 11 && date.getDate() === 24) ||
+							(date.getMonth() === 11 && date.getDate() === 25) ||
+							(date.getMonth() === 11 && date.getDate() === 26)) {
+								
+							document.querySelector(`.header-logo`).src = base64data;
+						}
 					}
 				}
 			}

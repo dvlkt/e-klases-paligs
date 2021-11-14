@@ -28,11 +28,7 @@
 		"res/dark/icon-256.png",
 		"res/dark/icon-256-bw.png",
 		"themes/light.json",
-		"themes/dark.json",
-		"res/icons/attachment-0.svg",
-		"res/icons/attachment-1.svg",
-		"res/icons/attachment-2.svg",
-		"res/icons/attachment-3.svg"
+		"themes/dark.json"
 	],
 	"content_scripts": [
 		{
@@ -53,6 +49,7 @@
 				"tweaks/home.js",
 				"tweaks/mail.js",
 				"tweaks/profilePicture.js",
+				"tweaks/holidayTheming.js",
 				"tweaks/screenshotMode.js",
 				"analytics/diary.js",
 				"animations/calendar.js",

@@ -99,7 +99,18 @@ window.addEventListener(`pageLoading`, () => {
 	// Add the logo
 	if (document.querySelector(`.header-second .header-second-inner`) !== null) {
 		chrome.storage.sync.get(`theme`, (res) => {
-			fetch(chrome.runtime.getURL(`res/title-${res.theme.name === `dark` ? `dark` : `light`}.png`))
+			let logoTheme = `light`;
+			let date = new Date();
+
+			if (res.theme.name === `dark` ||
+				(date.getMonth() === 11 && date.getDate() === 24) ||
+				(date.getMonth() === 11 && date.getDate() === 25) ||
+				(date.getMonth() === 11 && date.getDate() === 26)) {
+
+				logoTheme = `dark`;
+			}
+
+			fetch(chrome.runtime.getURL(`res/title-${logoTheme}.png`))
 				.then(response => response.blob())
 				.then(blob => {
 					var reader = new FileReader();

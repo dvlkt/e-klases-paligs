@@ -14,9 +14,16 @@ html .header-second .header-second-inner {
 	width: 100%;
 	padding-top: 0;
 }
+html .header-second .header-second-inner canvas {
+	position: fixed;
+	top: 0;
+	left: 0;
+	opacity: 75%;
+}
 html .header-second .container,
 html .header-second .row {
 	height: 100%;
+	z-index: 1000;
 }
 html .header-second .row .col-sm-7 {
 	width: 100%;	
@@ -87,6 +94,13 @@ html .header-second-menu .header-second-menu-item.item-analytics a::before {
 	margin-bottom: 8px;
 	mask-size: cover;
 	-webkit-mask-size: cover;
+}
+html .header-second-menu .header-second-menu-item.item-home.dark-header a::before,
+html .header-second-menu .header-second-menu-item.item-journal.dark-header a::before,
+html .header-second-menu .header-second-menu-item.item-messages.dark-header a::before,
+html .header-second-menu .header-second-menu-item.item-video.dark-header a::before,
+html .header-second-menu .header-second-menu-item.item-analytics.dark-header a::before {
+	background: #ffffff;
 }
 html .header-second-menu .header-second-menu-item.item-home.active a::before,
 html .header-second-menu .header-second-menu-item.item-journal.active a::before,
@@ -169,6 +183,7 @@ html .header-account-btn {
 	display: block;
 	width: 44px;
 	height: 44px;
+	z-index: 1000;
 	mask-size: contain;
 	-webkit-mask-size: contain;
 	border-radius: 50%;
