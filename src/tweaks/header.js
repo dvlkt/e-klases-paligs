@@ -55,10 +55,19 @@ window.addEventListener(`pageLoading`, () => {
 
 	// Add the tooltips
 	for (let element of document.querySelectorAll(`li.header-second-menu-item`)) {
+		let tabText = element.querySelector(`a`).innerText;
+
+		let tabName;
+		if (tabText === `Saziņa`) {
+			tabName = `Pasts`;
+		} else {
+			tabName = tabText;
+		}
+		
 		element.innerHTML += `
 			<div class="header-menu-item-tooltip">
 				<div class="header-menu-item-tooltip-content">
-					<p>${element.querySelector(`a`).innerText}</p>
+					<p>${tabName}</p>
 				</div>
 			</div>`;
 	}

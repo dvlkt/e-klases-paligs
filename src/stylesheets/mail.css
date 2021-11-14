@@ -383,14 +383,15 @@ html .ButtonIcon.MailSearch__ResetInputButton::after {
 html .FetchMore .FetchMore__Text {
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-weight: 500;
 	font-size: 15px;
 	margin-left: 15px;
 	border-radius: var(--corner-roundness);
+	opacity: 0;
 	user-select: none;
 	-webkit-user-drag: none;
-	transition: .2s filter, .2s box-shadow;
+	transition: .2s filter, .2s box-shadow, .3s opacity;
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
 html .FetchMore .FetchMore__Text:hover {

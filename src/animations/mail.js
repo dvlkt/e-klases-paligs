@@ -1,3 +1,4 @@
+let areEventListenersAddedToSidebarMenu = false;
 const tryAddingMailAnimations = () => {
 	if (!window.location.href.includes(`/SPA/Family#/mail`)) {
 		return;
@@ -6,6 +7,16 @@ const tryAddingMailAnimations = () => {
 	if (document.querySelector(`.communication-container .container .mailbox-data .wrapper`).children[1].innerHTML.includes(`Loading`)) {
 		setTimeout(tryAddingMailAnimations, 20);
 	} else {
+		if (!areEventListenersAddedToSidebarMenu) {
+			areEventListenersAddedToSidebarMenu = true;
+			
+			for (let element of document.querySelectorAll(`.NavItem`)) {
+				element.addEventListener(`click`, () => {
+					tryAddingMailAnimations();
+				});
+			}
+		}
+
 		/*
 			Remove and add the mail action button in order to remove all event listeners
 		*/
@@ -87,12 +98,31 @@ const tryAddingMailAnimations = () => {
 		} else {
 			document.querySelector(`.Folder__NoMessages`).style.opacity = `1`;
 		}
+		document.querySelector(`.FetchMore__Text`).addEventListener(`click`, () => {
+			tryAddingAdditionalMailLoadingAnimation();
+		});
+	}
+}
+const tryAddingAdditionalMailLoadingAnimation = () => {
+	if (document.querySelector(`.ButtonIcon--loading.Folder__Loading`) === null) {
+		showMailListItem(0);
+		document.querySelector(`.FetchMore__Text`).addEventListener(`click`, () => {
+			tryAddingAdditionalMailLoadingAnimation();
+		});
+	} else {
+		setTimeout(tryAddingAdditionalMailLoadingAnimation, 20);
 	}
 }
 const showMailListItem = (index) => {
-	if (document.querySelectorAll(`.MessageItem`)[index] !== null) {
-		document.querySelectorAll(`.MessageItem`)[index].style.opacity = `1`;
-		setTimeout(() => showMailListItem(index + 1), 4);
+	if (document.querySelectorAll(`.MessageItem`)[index] !== undefined) {
+		if (document.querySelectorAll(`.MessageItem`)[index].style.opacity === `1`) {
+			showMailListItem(index + 1);
+		} else {
+			document.querySelectorAll(`.MessageItem`)[index].style.opacity = `1`;
+			setTimeout(() => showMailListItem(index), 4);
+		}
+	} else {
+		document.querySelector(`.FetchMore__Text`).style.opacity = `1`;
 	}
 }
 
