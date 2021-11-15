@@ -209,6 +209,65 @@ html .ThirdPartyEvent--Deleted {
 
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 }
+
+html .home-task-answer-widget-container .Widget {
+	background: var(--background-front-color);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	border: 0;
+	border-radius: var(--corner-roundness);
+	transition: .2s filter, .2s box-shadow;
+}
+html .home-task-answer-widget-container .Widget:hover {
+	filter: brightness(0.9);
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+}
+html .home-task-answer-widget-container .Widget .Widget__Title {
+	font-size: 15px;
+	color: var(--paragraph-color);
+	font-weight: 500;
+}
+html .home-task-answer-widget-container .Widget .Widget__Title::before {
+	display: none;
+}
+html .family-spa .btn,
+html .home-task-answer-modal-container .btn,
+html .home-task-answer-widget-container .Widget .btn,
+html .modal-evaluation-file .btn {
+	border-radius: calc(var(--corner-roundness) / 2);
+	background: var(--theme-color);
+	border: 0;
+	transition: .2s filter, .2s box-shadow;
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+}
+html .family-spa .btn:hover,
+html .home-task-answer-modal-container .btn:hover,
+html .home-task-answer-widget-container .Widget .btn:hover,
+html .modal-evaluation-file .btn:hover {
+	filter: brightness(0.9);
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+}
+html .family-spa .btn__content,
+html .home-task-answer-modal-container .btn__content,
+html .home-task-answer-widget-container .btn__content,
+html .modal-evaluation-file .btn__content {
+	font-size: 11px;
+	font-family: "Inter", sans-serif;
+	color: var(--theme-accent-color);
+}
+html .home-task-answer-widget-container .Widget .Widget__Body {
+	border-top: 0;
+	padding-top: 0;
+	padding-bottom: 8px;
+}
+html .home-task-answer-widget-container .Widget .Widget__Body .Widget__Text {
+	overflow: unset;
+}
+html .home-task-answer-widget-container .Widget .Widget__Body .Widget__Text p {
+	color: var(--paragraph-color);
+	font-size: 15px;
+	line-height: 18px;
+}
+
 html .student-journal-lessons-table-holder .lessons-table .info .first-column {
 	color: var(--paragraph-color);
 	font-size: 15px;
