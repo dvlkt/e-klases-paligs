@@ -52,7 +52,7 @@ window.addEventListener(`pageLoading`, () => {
 			gradeSum += grades[i].value;
 		}
 		let avgGradeTextElement = document.createElement(`h2`);
-		avgGradeTextElement.innerHTML = `Vidējā atzīme: <span class="grade no-pointer">${Math.round(gradeSum / grades.length * 100) / 100}</span>`;
+		avgGradeTextElement.innerHTML = `<span class="name">Vidējā atzīme:</span> <span class="grade no-pointer">${Math.round(gradeSum / grades.length * 100) / 100}</span>`;
 		if (grades.length > 0) {
 			containerElement.appendChild(avgGradeTextElement);
 		}
@@ -83,7 +83,7 @@ window.addEventListener(`pageLoading`, () => {
 			}
 		}
 		let bestSubjectTextElement = document.createElement(`h2`);
-		bestSubjectTextElement.innerHTML = `${bestSubjects.length === 1 ? `Labākais priekšmets` : `Labākie priekšmeti`}: ${bestSubjects.join(`<span class="low-priority"> & </span>`)} <span class="low-priority">(vidējā atzīme: <span class="grade no-pointer">${bestSubjectAvgGrade}</span> )</span>`;
+		bestSubjectTextElement.innerHTML = `<span class="name">${bestSubjects.length === 1 ? `Labākais priekšmets` : `Labākie priekšmeti`}:</span> ${bestSubjects.join(`<span class="low-priority"> & </span>`)} <span class="low-priority">(vidējā atzīme: <span class="grade no-pointer">${bestSubjectAvgGrade}</span> )</span>`;
 		if (bestSubjects.length > 0) {
 			containerElement.appendChild(bestSubjectTextElement);
 		}
@@ -103,7 +103,7 @@ window.addEventListener(`pageLoading`, () => {
 			}
 		}
 		let bestGradeTextElement = document.createElement(`h2`);
-		bestGradeTextElement.innerHTML = `Labākā atzīme: <span id="statistics-best-grade" class="grade">${bestGrade}</span> <span class="low-priority">(saņemta ${bestGradeSubjects.length === 1 ? `priekšmetā` : `priekšmetos`} ${bestGradeSubjects.join(` & `)})</span>`;
+		bestGradeTextElement.innerHTML = `<span class="name">Labākā atzīme:</span> <span id="statistics-best-grade" class="grade">${bestGrade}</span> <span class="low-priority">(saņemta ${bestGradeSubjects.length === 1 ? `priekšmetā` : `priekšmetos`} ${bestGradeSubjects.join(` & `)})</span>`;
 		if (bestGradeSubjects.length > 0) {
 			containerElement.appendChild(bestGradeTextElement);
 		}
@@ -120,7 +120,7 @@ window.addEventListener(`pageLoading`, () => {
 			}
 		}
 		let worstSubjectTextElement = document.createElement(`h2`);
-		worstSubjectTextElement.innerHTML = `${worstSubjects.length === 1 ? `Sliktākais priekšmets` : `Sliktākie priekšmeti`}: ${worstSubjects.join(`<span class="low-priority"> & </span>`)} <span class="low-priority">(vidējā atzīme: <span class="grade no-pointer">${worstSubjectAvgGrade}</span> )</span>`;
+		worstSubjectTextElement.innerHTML = `<span class="name">${worstSubjects.length === 1 ? `Sliktākais priekšmets` : `Sliktākie priekšmeti`}:</span> ${worstSubjects.join(`<span class="low-priority"> & </span>`)} <span class="low-priority">(vidējā atzīme: <span class="grade no-pointer">${worstSubjectAvgGrade}</span> )</span>`;
 		if (worstSubjects.length > 0) {
 			containerElement.appendChild(worstSubjectTextElement);
 		}
@@ -140,7 +140,7 @@ window.addEventListener(`pageLoading`, () => {
 			}
 		}
 		let worstGradeTextElement = document.createElement(`h2`);
-		worstGradeTextElement.innerHTML = `Sliktākā atzīme: <span id="statistics-worst-grade" class="grade">${worstGrade}</span> <span class="low-priority">(saņemta ${worstGradeSubjects.length === 1 ? `priekšmetā` : `priekšmetos`} ${worstGradeSubjects.join(` & `)})</span>`;
+		worstGradeTextElement.innerHTML = `<span class="name">Sliktākā atzīme:</span> <span id="statistics-worst-grade" class="grade">${worstGrade}</span> <span class="low-priority">(saņemta ${worstGradeSubjects.length === 1 ? `priekšmetā` : `priekšmetos`} ${worstGradeSubjects.join(` & `)})</span>`;
 		if (worstGradeSubjects.length > 0) {
 			containerElement.appendChild(worstGradeTextElement);
 		}

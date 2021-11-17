@@ -470,12 +470,16 @@ html .diary-analytics {
 }
 html .diary-analytics h2 {
 	font-size: 15px;
+	font-weight: 500;
+}
+html .diary-analytics h2 .name {
+	font-weight: bold;
 }
 html .diary-analytics span.grade {
 	background: var(--background-front-color);
 	color: var(--paragraph-color);
 	font-weight: bold;
-	font-size: 0.8rem;
+	font-size: 15px;
 	padding: .5rem;
 	border-radius: var(--corner-roundness);
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
@@ -490,7 +494,8 @@ html .diary-analytics span.grade.no-pointer {
 }
 html .diary-analytics span.low-priority {
 	color: var(--low-priority-text-color);
-	font-size: 0.8rem;
+	font-size: 15px;
+	font-weight: normal;
 	text-transform: none;
 }
 html .diary-analytics h2 {
