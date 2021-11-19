@@ -116,6 +116,7 @@ h2:first-of-type {
 .footer {
 	margin-top: 1rem;
 	text-align: center;
+	color: var(--text-color);
 }
 
 .theme-preview {

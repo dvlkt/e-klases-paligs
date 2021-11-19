@@ -12,7 +12,6 @@ const isChristmasToday = () => {
 	return false;
 }
 const isNewYearToday = () => {
-	return true;
 	let date = new Date();
 
 	if ((date.getMonth() === 11 && date.getDate() === 31) ||
