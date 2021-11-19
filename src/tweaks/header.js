@@ -211,7 +211,7 @@ window.addEventListener(`pageLoading`, () => {
 			window.location.href = `https://my.e-klase.lv/Family/TechnicalSupport`;
 		});
 		document.querySelector(`.header-account-popup-button.show-tour`).addEventListener(`click`, () => {
-			alert(`Tūre vēl nav pieejama uz E-klases Palīga!`);
+			alert(`E-klases Palīgam vēl nav pieejama tūre!`);
 		});
 	}
 
