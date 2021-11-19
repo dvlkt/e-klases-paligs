@@ -281,7 +281,11 @@ h2:first-of-type {
 }
 
 .color-picker-option[data-theme-color="rainbow"] {
+	background: none;
 	box-shadow: none;
+}
+.color-picker-option[data-theme-color="rainbow"].color-picker-option-selected {
+	background: var(--theme-color);
 }
 .color-picker-option[data-theme-color="rainbow"]:hover {
 	cursor: default;

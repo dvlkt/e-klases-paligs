@@ -277,6 +277,7 @@ html .nav-tabs {
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	user-select: none;
 	-webkit-user-drag: none;
+	width: 970px;
 }
 html .nav-tabs li {
 	font-weight: 500;

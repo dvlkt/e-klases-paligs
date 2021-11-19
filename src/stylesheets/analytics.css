@@ -9,6 +9,8 @@ html .filter-wrap .filter-block label {
 	font-weight: 500;
 	font-family: "Inter", sans-serif;
 	color: var(--low-priority-text-color);
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .select2-container--default .select2-selection--single,
 html .select2-container--default .select2-selection--single .select2-selection__rendered {
@@ -87,14 +89,19 @@ html .analytics-ratings-container .report-wrapper.report-averages {
 }
 html .ratings-orderby-options .title,
 html .analytics-ratings-container h3.group-title {
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-weight: bold;
 	font-size: 32px !important;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .analytics-ratings-table-intro .analytics-ratings-table-intro-left,
 html .analytics-ratings-table-intro-left span,
 html .analytics-ratings-table-intro-right table.stats {
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
+	font-size: 15px;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .analytics-ratings-table-intro-right table.stats {
 	float: right;
@@ -169,6 +176,8 @@ html .graph-info.secondary {
 	display: block;
 	float: none;
 	margin-bottom: 2px;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .analytics-ratings-container .charts-legend .legend-item .legend-icon,
 html .report-wrapper .mark-ratings-blue-legend {
@@ -201,6 +210,8 @@ html .ratings-orderby-options .orderby-text {
 	font-size: 15px;
 	font-weight: 500;
 	color: var(--low-priority-text-color);
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html section .section-switch {
 	border: 0;
@@ -227,6 +238,8 @@ html section .section-switch .section-switch-option:first-child {
 }
 html section .section-switch .section-switch-option:last-child {
 	border-radius: 0 var(--corner-roundness) var(--corner-roundness) 0;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .report-averages label {
 	display: none;
@@ -245,25 +258,30 @@ html .scroll-to-top.home-work {
 html .panel-group .panel-default .panel-heading {
 	border: 0 !important;
 	border-radius: var(--corner-roundness);
-	background: var(--background-front-color);
+	background: none;
 	color: var(--paragraph-color);
 }
 html .panel-group .panel-title {
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	color: var(--paragraph-color);
-	font-weight: bold;
+	font-size: 15px;
+	font-weight: 500;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .panel-group .panel-arrow {
 	border-color: var(--paragraph-color) #00000000 #00000000;
 }
 html .panel-group .panel-default {
-	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	border-radius: var(--corner-roundness);
-	background: var(--background-front-color);
+	background: var(--background-middle-color);
 	border: 0 !important;
 }
 html .panel-default .panel-heading + .panel-collapse .panel-body {
 	border-top: 0;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .analytics-rating-tables table {
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
@@ -273,20 +291,21 @@ html .analytics-rating-tables table thead {
 	box-shadow: none;
 }
 html .analytics-rating-tables table thead td {
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	background: var(--background-middle-color);
 	color: var(--low-priority-text-color);
 	border: 0;
-	font-size: 13px;
-	font-weight: bold;
-	text-transform: uppercase;
+	font-size: 15px;
+	font-weight: 500;
+	text-align: center;
+	border-bottom: 4px solid #00000020;
 }
 html .analytics-rating-tables td {
 	border: 0;
 	color: var(--paragraph-color);
 	background: var(--background-middle-color);
-	font-family: 'Inter', sans-serif;
-	font-size: 13px;
+	font-family: "Inter", sans-serif;
+	font-size: 15px;
 	border-bottom: 4px solid #00000020;
 }
 html .analytics-rating-tables tbody tr:last-child td {
@@ -310,8 +329,8 @@ html .analytics-rating-tables table tbody tr:last-child td:last-child {
 html .analytics-rating-tables td.higher,
 html .analytics-rating-tables td.lower {
 	color: var(--paragraph-color);
-	font-family: 'Inter', sans-serif;
-	font-size: 13px;
+	font-family: "Inter", sans-serif;
+	font-size: 15px;
 }
 html .analytics-ratings-container .report-wrapper.report-by-subject h3.group-title,
 html .analytics-ratings-container .report-wrapper.report-averages h3.group-title {
@@ -339,7 +358,9 @@ html .analytics-ratings-container h3.group-title::after {
 	}
 }
 
-/* JOURNALS */
+/*
+	Journals
+*/
 html .info-pane-wrap .container,
 html .marks-pane-wrap .container,
 html .data-marks-detailed-wrap .container,
@@ -358,6 +379,8 @@ html .info-pane-wrap .teacher {
 	color: var(--paragraph-color);
 	font-family: "Inter", sans-serif;
 	font-size: 15px;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .info-pane-wrap .avg-class,
 html .info-pane-wrap .avg-pupil {
@@ -435,11 +458,12 @@ html .data-marks-detailed-wrap .container .marks-detailed {
 }
 html .detailed-item {
 	border: 0;
-	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	border-radius: var(--corner-roundness);
+	background: var(--background-middle-color);
 }
 html .lesson .detailed-header {
-	background: var(--background-middle-dark-color);
+	background: var(--background-middle-color);
 	border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
 }
 html .lesson.test .detailed-header .static,
@@ -816,6 +840,8 @@ html .analytics-pupilmarks-intro .analytics-ratings-table-intro-right {
 	border: 0;
 	font-family: "Inter", sans-serif;
 	font-size: 15px;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .analytics-pupilmarks-intro .analytics-ratings-table-intro-left {
 	width: 45% !important;
