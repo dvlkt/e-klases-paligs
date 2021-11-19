@@ -1,6 +1,11 @@
 const applyLogos = () => {
 	chrome.storage.sync.get(`theme`, (res) => {
-		fetch(chrome.runtime.getURL(`res/title-${res.theme.name === `dark` ? `dark` : `light`}.png`))
+		let logoTheme = res.theme.name === `dark` ? `dark` : `light`;
+		if (isAHolidayToday()) {
+			logoTheme = `dark`;
+		}
+
+		fetch(chrome.runtime.getURL(`res/title-${logoTheme}.png`))
 			.then(response => response.blob())
 			.then(blob => {
 				var reader = new FileReader();
@@ -15,13 +20,7 @@ const applyLogos = () => {
 						logo.src = base64data;
 					}
 					if (document.querySelector(`.header-logo`) !== null) {
-						if (res.theme.name === `dark` ||
-							(date.getMonth() === 11 && date.getDate() === 24) ||
-							(date.getMonth() === 11 && date.getDate() === 25) ||
-							(date.getMonth() === 11 && date.getDate() === 26)) {
-								
-							document.querySelector(`.header-logo`).src = base64data;
-						}
+						document.querySelector(`.header-logo`).src = base64data;
 					}
 				}
 			}

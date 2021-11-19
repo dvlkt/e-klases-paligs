@@ -99,14 +99,8 @@ window.addEventListener(`pageLoading`, () => {
 	// Add the logo
 	if (document.querySelector(`.header-second .header-second-inner`) !== null) {
 		chrome.storage.sync.get(`theme`, (res) => {
-			let logoTheme = `light`;
-			let date = new Date();
-
-			if (res.theme.name === `dark` ||
-				(date.getMonth() === 11 && date.getDate() === 24) ||
-				(date.getMonth() === 11 && date.getDate() === 25) ||
-				(date.getMonth() === 11 && date.getDate() === 26)) {
-
+			let logoTheme = res.theme.name === `dark` ? `dark` : `light`;
+			if (isAHolidayToday()) {
 				logoTheme = `dark`;
 			}
 

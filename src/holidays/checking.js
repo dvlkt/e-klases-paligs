@@ -38,7 +38,7 @@ const isJaniToday = () => {
 	if ((date.getMonth() === 5 && date.getDate() === 24)) {
 		return true;
 	}
-
+ 
 	return false;
 }
 

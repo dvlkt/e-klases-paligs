@@ -40,7 +40,6 @@
 				"events/pageLoading.js",
 				"events/urlChanged.js",
 				"holidays/checking.js",
-				"holidays/theming.js",
 				"stylesheets/themeLoader.js",
 				"tweaks/technicalSupport.js",
 				"tweaks/branding.js",
@@ -58,6 +57,7 @@
 				"animations/loadingSpinner.js",
 				"animations/mail.js",
 				"animations/modals.js",
+				"holidays/theming.js",
 				"events/pageStarted.js"
 			],
 			"css": [
