@@ -265,6 +265,9 @@ html .ViewMessage .ViewMessage__MetaInfo {
 	border-top: 0;
 	border-bottom: 4px solid var(--divider-color);
 }
+html .MessageItem .MessageItem__RightCol {
+	padding-right: calc(var(--corner-roundness) / 5);
+}
 html .ViewMessage__MetaInfo .MessageFollowUpStatus {
 	display: none;
 }
