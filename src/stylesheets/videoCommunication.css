@@ -1,0 +1,13 @@
+/*
+	Temporary styles to make the video communication list feel a little bit more integrated into the modern design
+*/
+html .MailMainAreaWrapper .Wrapper {
+	border-radius: var(--corner-roundness);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+}
+html .MailMainAreaWrapper .Top {
+	border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
+}
+html .MailMainAreaWrapper .Navigation {
+	border-bottom-left-radius: var(--corner-roundness);
+}

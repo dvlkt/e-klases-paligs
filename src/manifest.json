@@ -71,14 +71,15 @@
 				"stylesheets/header.css",
 				"stylesheets/home.css",
 				"stylesheets/icons.css",
-				"stylesheets/icons-legacy.css",
+				"stylesheets/legacyIcons.css",
 				"stylesheets/links.css",
 				"stylesheets/mail.css",
 				"stylesheets/main.css",
 				"stylesheets/miscellaneous.css",
 				"stylesheets/mobile.css",
 				"stylesheets/modals.css",
-				"stylesheets/settings.css"
+				"stylesheets/settings.css",
+				"stylesheets/videoCommunication.css"
 			],
 			"run_at": "document_start"
 		}
