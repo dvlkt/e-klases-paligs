@@ -53,6 +53,9 @@ const tryAddingListViewPatches = () => {
 				if (!areOriginalSearchButtonsShown) {
 					return;
 				}
+				if (window.location.href.includes(`drafts`)) {
+					return;
+				}
 
 				isListViewHeaderInputFocused = true;
 				
@@ -183,16 +186,10 @@ const tryAddingListViewPatches = () => {
 		let searchInputElement = document.querySelector(`.MailSearch__Input`);
 		if (window.location.href.includes(`drafts`)) {
 			searchInputElement.style.opacity = `0`;
-
-			setTimeout(() => {
-				searchInputElement.style.display = `none`;
-			}, 300);
+			searchInputElement.style.cursor = `default`;
 		} else {
-			searchInputElement.style.display = `unset`;
-			
-			setTimeout(() => {
-				searchInputElement.style.opacity = `1`;
-			}, 20);
+			searchInputElement.style.opacity = `1`;
+			searchInputElement.style.cursor = `unset`;
 		}
 
 	} else {

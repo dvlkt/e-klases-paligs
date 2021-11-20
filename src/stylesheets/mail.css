@@ -17,9 +17,8 @@ html .MailMainAreaWrapper .Folder__MailboxHeader {
 }
 html .mail-list-view-header {
 	position: relative;
-	padding-left: 10px;
-	padding-bottom: 10px;
-	margin-top: -15px;
+	margin-left: 10px;
+	margin-bottom: 10px;
 }
 html .mail-list-view-header input.MailSearch__Input {
 	background: var(--background-middle-color);
