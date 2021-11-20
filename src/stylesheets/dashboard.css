@@ -281,10 +281,10 @@ html .dashboard-widget-col.widget-recent .recent-scores-item .recent-scores-item
 	border-top: 2px solid #00000020;
 	border-bottom: 2px solid #00000020;
 }
-html .dashboard-widget-col.widget-recent .recent-scores-item .recent-scores-item-col:first-child {
+html .dashboard-widget-col.widget-recent .recent-scores-item:first-child .recent-scores-item-col {
 	border-top: 0;
 }
-html .dashboard-widget-col.widget-recent .recent-scores-item .recent-scores-item-col:last-child {
+html .dashboard-widget-col.widget-recent .recent-scores-item:last-child .recent-scores-item-col {
 	border-bottom: 0;
 }
 html .dashboard-widget-col.widget-recent .recent-scores-item,
