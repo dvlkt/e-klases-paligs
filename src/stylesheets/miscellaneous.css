@@ -245,22 +245,21 @@ html .tech-support-container .message-meta .message-meta-item-value {
 
 /* 404 PAGE */
 html .notice-holder .bubble {
-	background: var(--red-color);
-
-	padding-top: .25rem;
-
+	background: none;
 	border: 0;
-
-	border-radius: var(--corner-roundness);
-
-	box-shadow: 0 7px 14px -3px var(--red-shadow-color);
+	margin-bottom: 10px;
+	height: 35px;
 }
 html .notice-holder .bubble::after,
 html .notice-holder .bubble::before {
 	display: none;
 }
 html .notice-holder .bubble .b-error {
-	color: var(--red-accent-color);
+	color: var(--title-color);
+	font-size: 32px;
+}
+html .notice-holder .bubble .b-error::after {
+	content: "!";
 }
 html .error-img {
 	display: none; /* WHAT IS THAT GIF??? It should be publicly laughed at */
@@ -268,83 +267,52 @@ html .error-img {
 html .notice-holder .error-bottom .btn-default {
 	background: var(--theme-color);
 	color: var(--theme-accent-color);
-
+	font-size: 15px;
+	font-weight: 500;
 	border-radius: var(--corner-roundness);
-
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s filter, .2s box-shadow;
 }
 html .notice-holder .error-bottom .btn-default:hover {
-	box-shadow: 0 7px 14px -3px var(--shadow-color);
-
-	filter: brightness(0.8);
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
 }
 html .notice-holder .error-bottom .btn-default .progress {
 	display: none; /* The dumb button design also needs to go (and the designer needs to go as well) */
 }
-
-/* TOUR */
-html .tour {
-	background: var(--background-front-color);
-
-	border-radius: var(--corner-roundness);
-
-	box-shadow: 0 7px 14px -3px var(--shadow-color);
-
-	opacity: 1;
-
-	transform: none;
+html .error-form {
+	background: var(--background-back-color);
 }
-html .popover-content {
-	font-family: 'Inter', sans-serif;
+html .error-form .error-form-container {
+	padding-top: 0;
+	background: none;
 }
-html .btn-tour-secondary,
-html .btn-tour-secondary:hover {
-	background: var(--background-middle-color);
-	color: var(--paragraph-color);
-
-	font-family: 'Inter', sans-serif;
-
-	transition: .2s filter, .2s box-shadow;
+html .error-form .error-form-container h1 {
+	font-size: 32px;
+	font-family: "Inter", sans-serif;
+	color: var(--title-color);
+	user-select: none;
+	-webkit-user-drag: none;
 }
-html .btn-tour-secondary:hover {
-	background: var(--background-middle-color);
-	color: var(--paragraph-color);
-
-	box-shadow: 0 7px 14px -3px var(--shadow-color);
-
-	filter: brightness(0.8);
+html .error-form .error-form-container h1::after {
+	content: "!";
 }
-html .tour .btn-tour-primary,
-html .tour .btn-tour-primary:active,
-html .tour .btn-tour-primary:visited,
-html .tour .btn-tour-primary:focus {
+html .error-form .btn {
 	background: var(--theme-color);
 	color: var(--theme-accent-color);
-
+	font-family: "Inter", sans-serif;
+	font-size: 15px;
+	font-weight: 500;
 	border-radius: var(--corner-roundness);
-
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s filter, .2s box-shadow;
 }
-html .tour .btn-tour-primary:hover {
-	background: var(--theme-color);
+html .error-form .btn:hover {
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
+}
 
-	box-shadow: 0 7px 14px -3px var(--shadow-color);
-
-	filter: brightness(0.8);
-}
-html .popover[class*="tour-"] .popover-navigation [data-role="end"].disabled,
-html .popover[class*="tour-"] .popover-navigation [data-role="next"].disabled,
-html .popover[class*="tour-"] .popover-navigation [data-role="prev"].disabled {
-	background: var(--background-middle-color);
-	color: var(--paragraph-color);
-
-	opacity: 0.5;
-}
-html .tour strong,
-html span.text-larger {
-	font-family: 'Inter', sans-serif;
-	font-weight: bold;
-}
-html .popover[class*="tour-"].left .arrow::after {
-	border-left-color: var(--background-front-color);
-}
+/*
+	Tour
+*/
+/* TODO */
