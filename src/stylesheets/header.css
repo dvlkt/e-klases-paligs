@@ -148,6 +148,8 @@ html .header-menu-item-tooltip {
 	z-index: 400;
 	opacity: 0;
 	transition: .2s margin-top, .2s opacity;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .header-menu-item-tooltip-content {
 	background: var(--background-middle-color);
@@ -164,6 +166,8 @@ html .header-menu-item-tooltip-content {
 html .header-menu-item-tooltip-content p {
 	font-size: 15px;
 	transform: translateY(-20px);
+	user-select: none;
+	-webkit-user-drag: none;
 }
 
 /* Logo & account */

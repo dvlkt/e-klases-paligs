@@ -196,11 +196,9 @@ html .announcement .btn {
 
 /* SETTINGS POPUP */
 html .people-overlay {
-	background: var(--background-middle-color);
-
+	background: none;
 	border-radius: var(--corner-roundness);
-
-	box-shadow: 0 7px 14px -3px var(--shadow-color);
+	height: 100%;
 }
 html .nav-tabs.profile li.active {
 	border: 0;
@@ -210,8 +208,7 @@ html .nav-tabs.profile li a.user-settings-tab {
 	background: none;
 }
 html .people-overlay .overlay-header {
-	background: var(--theme-gradient);
-
+	background: var(--theme-color);
 	border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
 }
 html .people-overlay .overlay-header h3 {
@@ -229,16 +226,34 @@ html .people-overlay input[type="submit"] {
 	background: var(--theme-color);
 	border-radius: var(--corner-roundness);
 	transition: .2s box-shadow, .2s filter;
-	font-family: 'Inter', sans-serif;
-	font-weight: bold;
-	text-transform: uppercase;
+	font-family: "Inter", sans-serif;
+	font-weight: 500;
+	font-size: 15px;
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
 html .people-overlay input[type="submit"]:hover {
-	filter: brightness(0.8);
-	box-shadow: 0 7px 14px -3px var(--shadow-color);
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
 }
 html .settings-modal-body .nav-tabs.profile {
 	border-bottom: 0;
+	width: 100%;
+	box-shadow: none;
+}
+html .nav-tabs.profile li,
+html .nav-tabs.profile li a {
+	font-family: "Inter", sans-serif;
+	font-size: 15px;
+	font-weight: normal;
+}
+html .nav-tabs.profile li {
+	padding-bottom: 0;
+}
+html .nav-tabs.profile li a,
+html .nav-tabs.profile li.active > a,
+html .nav-tabs.profile li.active > a:focus,
+html .nav-tabs.profile li.active > a:hover {
+	padding-bottom: 15px;
 }
 html .settings-modal-body .form-row .input,
 html .settings-modal-body .form-row .textarea {

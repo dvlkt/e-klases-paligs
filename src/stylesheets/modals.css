@@ -14,10 +14,13 @@ html .modal {
 	z-index: 1041;
 	transition: .2s transform, .2s opacity;
 }
-html .modal-dialog.timetable-dialog {
+html .modal-dialog {
 	width: 100%;
 	height: 100%;
 	margin: 0;
+}
+html .modal-content {
+	height: 100%;
 }
 html .modal-body {
 	background: none;
@@ -74,6 +77,15 @@ html .modal p {
 	line-height: 20px;
 	user-select: none;
 	-webkit-user-drag: none;
+}
+html .modal-backdrop.fade,
+html .modal-dialog,
+html .modal.fade,
+html .modal.in {
+	transition: .2s transform, .2s opacity !important;
+}
+html .modal.in .modal-dialog {
+	transform: none;
 }
 
 /* Mark card */

@@ -77,6 +77,8 @@ html #overlay {
 	background: #00000080;
 	opacity: 1;
 	transition: .2s opacity;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .loading-info {
 	display: block !important;
@@ -212,7 +214,7 @@ html .students-journal-header .week-selector .calendar-holder table {
 	border-spacing: 2px;
 }
 html .datepicker table tr td span {
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-weight: bold;
 	text-transform: uppercase;
 	background: var(--background-middle-color);
