@@ -1,49 +1,116 @@
-/* OAUTH */
+/*
+	OAuth
+*/
 html .MainContainer {
-	background: var(--background-middle-color);
-	
+	background: var(--background-back-color);
 	border-radius: var(--corner-roundness);
-
-	box-shadow: 0 7px 14px -3px var(--shadow-color);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
-html .MainContainer .MainHeader {
-	background: var(--theme-gradient);
-
+html .MainHeader {
+	background: var(--theme-color);
 	border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
+	padding-left: 40px;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .MainHeader .MainHeader_Title {
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	width: 100%;
+}
+html .MainHeader .MainHeader_Title::before {
+	display: none;
+}
+html .MainHeader .MainHeader_Exit {
+	display: none; /* There is no point in having an exit button... for a window */
 }
 html .SubHeader {
 	border: 0;
+	background: var(--background-middle-color);
+	font-size: 24px;
+	font-weight: 500;
+	color: var(--title-color);
+	padding-top: 20px;
+	user-select: none;
+	-webkit-user-drag: none;
 }
-html .UserProfileSelector_Button {
-	background: none;
-
+html .MainBody {
+	background: var(--background-middle-color);
+	padding-top: 0;
+}
+html .InputForm_Row .TextInput {
 	border: 0;
-	
-	border-radius: var(--corner-roundness);
-
-	box-shadow: 0 7px 14px -3px var(--shadow-color);
-
-	transition: .2s filter;
-}
-html .UserProfileSelector_Button:hover {
-	filter: brightness(0.8);
-}
-html .UserProfileSelector_Header {
-	background-color: var(--background-front-color);
-	color: var(--paragraph-color);
-
-	border: 0;
-
-	border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
-}
-html .UserProfileSelector_Description {
 	background: var(--background-front-color);
 	color: var(--paragraph-color);
-
+	font-size: 15px;
+	border-radius: var(--corner-roundness);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	padding: 8px;
+}
+html .InputForm_Row .TextInput::placeholder {
+	color: var(--low-priority-text-color);
+}
+html .ButtonDefault {
+	background: var(--theme-color);
+	color: var(--theme-accent-color);
+	font-size: 15px;
+	font-family: "Inter", sans-serif;
+	padding: 8px;
+	border-radius: var(--corner-roundness);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	transition: .2s filter, .2s box-shadow;
+	cursor: pointer;
+}
+html .ButtonDefault:hover {
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
+}
+html .MainFooter {
+	background: var(--background-middle-color);
 	border-radius: 0 0 var(--corner-roundness) var(--corner-roundness);
+	font-size: 15px;
+	text-align: center;
+	padding-top: 0;
+	padding-bottom: 20px;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .UserProfileSelector_Button {
+	border: 0;
+	border-radius: var(--corner-roundness);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	transition: .2s filter, .2s box-shadow;
+	background: var(--background-front-color);
+	margin-bottom: 10px;
+}
+html .UserProfileSelector_Button:hover {
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
+}
+html .UserProfileSelector_Header {
+	border-bottom: 0;
+	background: none;
+	color: var(--paragraph-color);
+	font-size: 18px;
+	font-family: "Inter", sans-serif;
+	font-weight: bold;
+	padding-left: 15px;
+	padding-bottom: 5px;
+}
+html .UserProfileSelector_Description {
+	font-size: 15px;
+	font-family: "Inter", sans-serif;
+	color: var(--paragraph-color);
+	padding-left: 15px;
+	padding-top: 0;
 }
 html .UserProfileSelector_SelectMarker {
-	background-color: transparent;
+	background: #ffffff;
+	top: 0;
+	right: 10px;
+	mask-size: contain;
+	-webkit-mask-size: contain;
 }
 
 /* LOGIN PAGE */
