@@ -163,7 +163,7 @@ html .calendar-holder .datepicker .day,
 html .datepicker-dropdown .day {
 	background: var(--background-front-color) !important; /* Without the !important there is a weird blue background on click */
 	color: var(--paragraph-color);
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-size: 15px;
 	border: 0;
 	transition: .2s filter;

@@ -462,7 +462,7 @@ html .student-journal-lessons .lesson-title .room {
 
 /* DIARY ANALYTICS */
 html .diary-analytics {
-	background: var(--background-middle-color);
+	background: var(--background-middle-dark-color);
 	color: var(--paragraph-color);
 	padding: 1rem;
 	border-radius: var(--corner-roundness);
