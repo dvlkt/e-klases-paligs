@@ -8,11 +8,125 @@ html .mailbox-data {
 html .communication .MailMainAreaWrapper {
 	background: var(--background-back-color);
 }
+
+/*
+	List view options
+*/
 html .MailMainAreaWrapper .Folder__MailboxHeader {
-	margin-top: -2px;
-	padding-top: 0;
+	display: none;
 }
-html .Folder__MailboxHeader .MailActions {
+html .mail-list-view-header {
+	position: relative;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	margin-top: -15px;
+}
+html .mail-list-view-header .search-input {
+	background: var(--background-middle-color);
+	color: var(--paragraph-color);
+	font-family: "Inter", sans-serif;
+	font-size: 15px;
+	padding: 8px;
+	border-radius: var(--corner-roundness);
+	border: 0;
+	width: calc(100% - 130px);
+	transition: .3s width;
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+}
+html .mail-list-view-header .search-input::placeholder {
+	color: var(--low-priority-text-color);
+	font-style: normal;
+	font-size: 15px;
+}
+html .mail-list-view-header .search-button,
+html .mail-list-view-header .dropdown-button {
+	background: var(--background-middle-color);
+	color: var(--paragraph-color);
+	font-family: "Inter", sans-serif;
+	font-size: 15px;
+	padding: 8px;
+	border-radius: var(--corner-roundness);
+	border: 0;
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	height: 35px;
+}
+html .mail-list-view-header .search-button:hover,
+html .mail-list-view-header .dropdown-button:hover {
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
+}
+html .mail-list-view-header .search-button {
+	position: absolute;
+	top: 0;
+	width: 100px;
+	transition: .2s filter, .2s box-shadow, .2s opacity, .2s transform;
+	transform: translateY(10px);
+	opacity: 0;
+	display: none;
+}
+html .mail-list-view-header .search-button:nth-child(2) {
+	right: 240px;
+}
+html .mail-list-view-header .search-button:nth-child(3) {
+	right: 130px;
+}
+html .mail-list-view-header .dropdown-button {
+	position: relative;
+	text-align: left;
+	float: right;
+	width: 120px;
+	transition: .2s filter, .2s box-shadow;
+}
+html .mail-list-view-header .dropdown-button::after {
+	content: "";
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	display: block;
+	width: 15px;
+	height: 15px;
+	background: var(--paragraph-color);
+	transition: .2s transform;
+	mask-size: contain;
+	-webkit-mask-size: contain;
+}
+html .mail-list-view-header .dropdown-button.open::after {
+	transform: rotate(180deg);
+}
+html .mail-list-view-header .dropdown {
+	position: absolute;
+	top: 35px;
+	right: 0;
+	display: none;
+	width: 250px;
+	height: auto;
+	background: var(--background-front-color);
+	border-radius: var(--corner-roundness);
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	z-index: 200;
+	transform: translateY(10px);
+	opacity: 0;
+	transition: .2s transform, .2s opacity;
+}
+html .mail-list-view-header .dropdown .option {
+	border: 0;
+	padding: 16px;
+	font-size: 15px;
+	color: var(--paragraph-color);
+	background: var(--background-front-color);
+	width: 100%;
+	text-align: left;
+	padding-left: 40px;
+	border-radius: var(--corner-roundness);
+	transition: .2s filter;
+}
+html .mail-list-view-header .dropdown .option:hover {
+	filter: brightness(0.9);
+}
+html .mail-list-view-header .dropdown .option.disabled {
+	color: var(--low-priority-text-color) !important;
+}
+/* html .Folder__MailboxHeader .MailActions {
 	margin-right: 0;
 }
 html .MailActions .ButtonDefault.MailActions__ToggleButton {
@@ -93,11 +207,11 @@ html .MailSearch__ButtonWrapper .MailSearch__Button::before {
 	margin-right: .25rem;
 	vertical-align: middle;
 	filter: invert() brightness(var(--icon-brightness));
-}
+} */
 html .MailMainAreaWrapper .FolderNavigation {
 	background: var(--background-middle-color);
 	border-radius: var(--corner-roundness);
-	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
 html .FolderNavigation nav {
 	box-shadow: none;
@@ -213,7 +327,7 @@ html .Folder__NoMessages {
 html .Folder__MessageList .MessageItem {
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
-	margin-left: 15px;
+	margin-left: 10px;
 	margin-bottom: 10px;
 	border: 0;
 	border-radius: var(--corner-roundness);
@@ -376,13 +490,6 @@ html .AttachmentList__Item a:visited {
 html .AttachmentList__Item::before {
 	display: none;
 }
-html .ButtonIcon.MailSearch__ResetInputButton::after {
-	content: "";
-	display: block;
-	width: .75rem;
-	height: .75rem;
-	filter: invert() brightness(var(--icon-brightness));
-}
 html .FetchMore .FetchMore__Text {
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
@@ -408,7 +515,7 @@ html .FetchMore .FetchMore__MessageCount {
 	display: none;
 }
 
-html .MailActions .MailActions__ActionList {
+/* html .MailActions .MailActions__ActionList {
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
 	border-radius: var(--corner-roundness);
@@ -447,7 +554,7 @@ html .MailActions__ActionOuter .MailActions__ActionInner::before {
 	width: 1rem;
 	height: 1rem;
 	background-size: contain;
-	margin-right: 10px !important; /* Lmao why did you even need the margin-right: 19px !important statement there */
+	margin-right: 10px !important;
 	vertical-align: middle;
 	filter: invert() brightness(var(--icon-brightness));
 }
@@ -455,7 +562,7 @@ html .MailActions__ActionList .MailActions__DisabledMessage {
 	font-style: normal;
 	color: var(--low-priority-text-color);
 	font-size: 11px;
-}
+} */
 
 /* New mail */
 html .MessageContent .MessageContent__Row:first-child,

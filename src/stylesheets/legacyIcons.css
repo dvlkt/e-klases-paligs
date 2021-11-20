@@ -40,8 +40,6 @@ html .MobileNavModal .MobileNavModal__Item--followUp::before {
 /* trash */
 html .FolderNavigation .NavItem--deleted::before,
 html .TopToolbar__Button--delete::before,
-html .MailActions__ActionInner--delete::before,
-html .MailActions__ActionInner--permanentDelete::before,
 html .MessageActions .TopToolbar__Button--permanentDelete::before,
 html .MobileBottomToolbar .MobileBottomToolbar__Button--delete::before,
 html .MobileBottomToolbar .MobileBottomToolbar__Button--permanentDelete::before,
@@ -97,14 +95,12 @@ html .toggle-search-inner .in-results::after {
 }
 /* x */
 html .toggle-search .close-search::after,
-html .toggle-search-inner .close-search::after,
-html .MailSearch__ResetInputButton::after {
+html .toggle-search-inner .close-search::after {
 	background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTU5IDQuNUw0LjUgNTkuNSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTU5LjI1IDU5LjI1TDQuMjUgNC43NSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==");
 }
 /* check */
 html .MessageItem__LeftCol .MessageItem__Checkbox::after,
 html .MessageItem__LeftCol .MessageItem__Checkbox:checked::after,
-html .MailActions__ActionInner--markAsRead::before,
 html label.css-label::after {
 	background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUgMzNMMjQgNDkuNUw1OS41IDE1IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K");
 }
@@ -113,10 +109,6 @@ html .RecipientsPreview__Name::before,
 html .MessageItem .MessageItem--status-sent-read__RecipientsPreview::before,
 html .RecipientsModal__List .RecipientsModal__Item:not(.RecipientsModal__Item--unseen)::before {
 	background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQgMjVWNjBINjBWMjUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik00IDI1TDMyLjAxODkgNDZMNTkgMjUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik00IDI0TDMxLjUgNEw2MCAyNC41IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8cGF0aCBkPSJNNCA2MEwyNCA0MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTQwIDQwTDYwIDYwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K");
-}
-/* double-check */
-html .MailActions__ActionInner--markAllAsRead::before {
-	background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUgMzQuNTY1MkwxOS4yOTM2IDQ3TDQ2IDIxIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8cGF0aCBkPSJNMzEuMjkzNiA0NUw1OCAxOSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTE3IDMyLjU2NTJMMjEgMzYiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=");
 }
 /* reply */
 html .MessageActions .TopToolbar__Button--reply::before,

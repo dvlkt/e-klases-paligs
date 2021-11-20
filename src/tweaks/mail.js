@@ -4,7 +4,175 @@ const tryAddingListViewPatches = () => {
 	}
 
 	if (document.querySelector(`.MailSearch__Input`) !== null) {
-		document.querySelector(`.MailSearch__Input`).setAttribute(`placeholder`, `Meklēt...`);
+
+		/*
+			Show various elements from the old header
+		*/
+		document.querySelector(`.MailSearch__Input`).focus();
+		document.querySelector(`.MailSearch__Input`).blur();
+		
+
+		if (document.querySelector(`.mail-list-view-header`) === null) {
+			/*
+				Add a new list view header (the old one is hidden)
+			*/
+			let listViewHeaderParentElement = document.querySelector(`.Folder__MailboxHeader`).parentElement;
+
+			let listViewHeaderElement = document.createElement(`div`);
+			listViewHeaderElement.className = `mail-list-view-header`;
+			listViewHeaderElement.innerHTML = `
+				<input class="search-input" placeholder="Meklēt..." />
+				<button class="search-button">Pēc autora</button>
+				<button class="search-button">Pēc tēmas</button>
+				<button class="dropdown-button">Darbības</button>
+				<div class="dropdown">
+					<button class="option">Dzēst atzīmētās vēstules</button>
+					<button class="option">Atzīmēt visas kā lasītas</button>
+					<button class="option">Atzīmēt izvēlētās kā lasītas</button>
+				</div>
+			`;
+			listViewHeaderParentElement.insertBefore(listViewHeaderElement, listViewHeaderParentElement.children[0]);
+
+			let listViewHeaderInputElement = document.querySelector(`.mail-list-view-header .search-input`);
+			let authorSearchButtonElement = document.querySelector(`.mail-list-view-header .search-button:nth-child(2)`);
+			let topicSearchButtonElement = document.querySelector(`.mail-list-view-header .search-button:nth-child(3)`);
+			let dropdownButtonElement = document.querySelector(`.mail-list-view-header .dropdown-button`);
+			let dropdownElement = document.querySelector(`.mail-list-view-header .dropdown`);
+
+			/*
+				Sync up the original and new search inputs
+			*/
+			// TODO, cuz' the input is actually very mysterious and does not just look at the value
+			/* let isListViewHeaderInputFocused = false;
+			listViewHeaderElement.addEventListener(`input`, (event) => {
+				//console.log(event);
+				originalListViewHeaderInputElement.value = listViewHeaderInputElement.value; 
+				originalListViewHeaderInputElement.setAttribute(`value`, listViewHeaderInputElement.value);
+				originalListViewHeaderInputElement.dispatchEvent(event);
+			});
+			listViewHeaderElement.addEventListener(`change`, (event) => {
+				originalListViewHeaderInputElement.dispatchEvent(event);
+			}); */
+			/* document.addEventListener(`keydown`, (event) => {
+				if (isListViewHeaderInputFocused) {
+					console.log(event.key);
+					originalListViewHeaderInputElement.dispatchEvent(event);
+				}
+			}); */
+
+			/*
+				Reveal the search options upon clicking the search input
+			*/
+			listViewHeaderInputElement.addEventListener(`focus`, () => {
+				isListViewHeaderInputFocused = true;
+				
+				listViewHeaderInputElement.style.width = `calc(100% - 350px)`;
+
+				authorSearchButtonElement.style.display = `block`;
+				topicSearchButtonElement.style.display = `block`;
+
+				setTimeout(() => {
+					topicSearchButtonElement.style.opacity = `1`;
+					topicSearchButtonElement.style.transform = `translateY(0)`;
+				}, 10);
+				setTimeout(() => {
+					authorSearchButtonElement.style.opacity = `1`;
+					authorSearchButtonElement.style.transform = `translateY(0)`;
+				}, 80);
+			});
+			listViewHeaderInputElement.addEventListener(`blur`, () => {
+				setTimeout(() => {
+					listViewHeaderInputElement.style.width = ``;
+
+					setTimeout(() => {
+						authorSearchButtonElement.style.opacity = `0`;
+						authorSearchButtonElement.style.transform = `translateY(10px)`;
+					}, 10);
+					setTimeout(() => {
+						topicSearchButtonElement.style.opacity = `0`;
+						topicSearchButtonElement.style.transform = `translateY(10px)`;
+					}, 80);
+
+					setTimeout(() => {
+						authorSearchButtonElement.style.display = `none`;
+						topicSearchButtonElement.style.display = `none`;
+					}, 280);
+				}, 100);
+			});
+
+			/*
+				Add the event listeners to the search buttons
+			*/
+			authorSearchButtonElement.addEventListener(`click`, () => {
+				document.querySelector(`.MailSearch__Button:nth-child(1)`).click();
+			});
+			topicSearchButtonElement.addEventListener(`click`, () => {
+				document.querySelector(`.MailSearch__Button:nth-child(2)`).click();
+			});
+
+			/*
+				Add the event listener to the dropdown button
+			*/
+			let isActionDropdownOpen = false;
+			dropdownButtonElement.addEventListener(`click`, () => {
+				if (!isActionDropdownOpen) {
+					isActionDropdownOpen = true;
+
+					dropdownElement.innerHTML = ``; // Reset the dropdown content
+
+					setTimeout(() => {
+						document.querySelector(`.MailActions .MailActions__ToggleButton`).click(); // Click on the original dropdown so that the original dropdown menu opens
+					}, 20);
+					setTimeout(() => {
+						// Refill the dropdown with the content of the original dropdown
+						for (let element of document.querySelectorAll(`.MailActions__ActionList .MailActions__ActionOuter`)) {
+							dropdownElement.innerHTML += `
+								<button class="option${element.className.includes(`--disabled`) ? ` disabled` : ``}">
+									${element.children[0].innerHTML}
+								</button>
+							`;
+						}
+
+						// Add event listeners to the new dropdown options
+						for (let i = 0; i < document.querySelector(`.mail-list-view-header .dropdown`).children.length; i++) {
+							document.querySelectorAll(`.mail-list-view-header .dropdown .option`)[i].addEventListener(`click`, () => {
+
+								// Open the original dropdown just in case it was closed by now
+								if (document.querySelectorAll(`.MailActions__ActionInner`)[i] === null) {
+									document.querySelector(`.MailActions .MailActions__ToggleButton`).click();
+								}
+
+								document.querySelectorAll(`.MailActions__ActionInner`)[i].click();
+							});
+						}
+					}, 40);
+
+					// Opening animation
+					dropdownButtonElement.classList.add(`open`); // This class controls the arrow on the dropdown button
+
+					dropdownElement.style.display = `block`;
+
+					setTimeout(() => {
+						dropdownElement.style.opacity = `1`;
+						dropdownElement.style.transform = `translateY(0)`;
+					}, 20);
+				} else {
+					isActionDropdownOpen = false;
+
+					// Closing animation
+					dropdownButtonElement.classList.remove(`open`);
+
+					dropdownElement.style.opacity = `0`;
+					dropdownElement.style.transform = `translateY(10px)`;
+
+					setTimeout(() => {
+						dropdownElement.style.display = `none`;
+					}, 200);
+				}
+			});
+
+		}
+
 	} else {
 		setTimeout(tryAddingListViewPatches, 20);
 	}
