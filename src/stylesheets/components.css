@@ -24,7 +24,6 @@ html .print-checkbox {
 }
 html .analytics-form-page .analytics-form-holder .checkbox label,
 html .analytics-form-page .analytics-form-holder .radio label,
-html .modal-content .form-row,
 html .checkbox label {
 	font-family: 'Inter', sans-serif;
 	color: var(--paragraph-color);

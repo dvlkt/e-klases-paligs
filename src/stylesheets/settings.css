@@ -211,15 +211,23 @@ html .people-overlay .overlay-header {
 	background: var(--theme-color);
 	border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
 }
+html .people-overlay .overlay-header h3,
+html .people-overlay .overlay-header .pupil,
+.people-overlay .overlay-header .educational-institution {
+	font-family: "Inter", sans-serif;
+	color: var(--theme-accent-color);
+	user-select: none;
+	-webkit-user-drag: none;
+}
 html .people-overlay .overlay-header h3 {
-	font-family: 'Inter', sans-serif;
-	font-size: 30px;
+	font-size: 32px;
 	font-weight: bold;
+	padding-bottom: 10px;
 }
 html .people-overlay .overlay-header .pupil,
 .people-overlay .overlay-header .educational-institution {
-	font-family: 'Inter', sans-serif;
 	font-size: 15px;
+	font-weight: 500;
 }
 html .people-overlay input[type="submit"] {
 	color: var(--theme-accent-color);
@@ -260,13 +268,98 @@ html .settings-modal-body .form-row .textarea {
 	background: var(--background-front-color);
 	border: 0;
 	border-radius: var(--corner-roundness);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	font-size: 15px;
+}
+html .settings-modal-body .form-row .input::placeholder {
+	font-style: normal;
 }
 html .settings-modal-body .form-row .separate {
 	background: #00000020;
 	height: 4px;
 }
 html .settings-modal-body .form-row.information-row {
+	background: none;
+	color: var(--paragraph-color);
+	font-size: 18px;
+	font-weight: 500;
+	text-align: center;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .settings-modal-body .form-row.information-row::before {
+	display: none;
+}
+html .form-input-row .phone-number {
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .form-row.password-format-explanation {
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .form-row.password-format-explanation p,
+html .form-row.heading-row h3 {
+	font-family: "Inter", sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+}
+html .form-row.password-format-explanation li {
+	font-size: 15px;
+	line-height: 18px;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html input[type="checkbox"].css-checkbox ~ label.css-label,
+html input[type="checkbox"].css-checkbox ~ label.css-label.cancel-ads {
+	font-size: 15px;
+}
+html .tab-pane .email-notification .premium,
+html .tab-pane .sms-notification .premium,
+html .form-row.please-add-row span,
+html .sms-notification .notification-info,
+html .form-row.change-data-request-row small,
+html .form-row .premium,
+html .form-row.custom-row p {
+	font-size: 11px;
+	font-family: "Inter", sans-serif;
+	color: var(--low-priority-text-color);
+	font-style: normal;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .form-row.please-add-row span {
+	margin-top: -10px;
+}
+html .form-row.custom-row p {
+	text-align: center;
+}
+html .btn-cancel-request,
+html .form-row.change-data-request-row a {
 	background: var(--background-front-color);
 	color: var(--paragraph-color);
 	border-radius: var(--corner-roundness);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	transition: .2s filter, .2s box-shadow;
+	font-family: "Inter", sans-serif;
+	font-weight: 500;
+	font-size: 15px;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .btn-cancel-request:hover,
+html .form-row.change-data-request-row a:hover {
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
+}
+html .form-row.change-data-request-row a {
+	font-size: 13px;
+	padding: 8px;
+	text-decoration: none;
+	margin-top: 3px;
+	margin-bottom: 2px;
+	display: block;
+}
+html .form-row.change-data-request-row a::before {
+	display: none;
 }
