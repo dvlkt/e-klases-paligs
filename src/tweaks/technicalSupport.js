@@ -25,6 +25,8 @@ window.addEventListener(`pageLoading`, () => {
 
 						<h3>Šī lapa ir saziņai tikai ar E-klases tehniskā atbalsta dizainu.</h3>
 						<p>Ja Tev ir kādi jautājumi par mācību procesu, tad tas ir jāuzdod skolotājiem.</p>
+
+						<button class="modal-button">Sapratu!</button>
 					</div>
 				</div>
 			</div>

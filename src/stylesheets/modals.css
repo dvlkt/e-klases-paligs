@@ -60,6 +60,7 @@ html .modal-technical h1 {
 	font-family: "Inter", sans-serif;
 	font-weight: bold;
 	font-size: 32px;
+	margin-top: 0;
 	margin-right: 0;
 	margin-bottom: 10px;
 	user-select: none;
@@ -86,6 +87,25 @@ html .modal.in {
 }
 html .modal.in .modal-dialog {
 	transform: none;
+}
+html .modal-button {
+	display: block;
+	padding: 16px;
+	border: 0;
+	background: var(--theme-color);
+	color: var(--theme-accent-color);
+	font-size: 15px;
+	font-weight: 500;
+	border-radius: var(--corner-roundness);
+	margin: auto;
+	margin-top: 15px;
+	width: 100px;
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	transition: .2s filter, .2s box-shadow;
+}
+html .modal-button:hover {
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
 }
 
 /* Mark card */

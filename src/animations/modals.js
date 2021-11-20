@@ -90,7 +90,11 @@ window.addEventListener(`pageLoaded`, () => {
 	if (document.querySelector(`.technical-support-warning-modal`) !== null) {
 		let modalElement = document.querySelector(`.modal.technical-support-warning-modal`);
 		let modalCloseElement = document.querySelector(`.technical-support-warning-modal [data-dismiss="modal"]`);
+		let modalButtonElement = document.querySelector(`.technical-support-warning-modal .modal-button`);
 		let modalBgElement = document.querySelector(`.modal-background`);
+
+		modalElement.style.top = `${modalElement.children[0].children[0].children[0].clientHeight / 2}px`;
+		modalElement.style.height = `${modalElement.children[0].children[0].children[0].clientHeight}px`;
 
 		modalCloseElement.addEventListener(`click`, () => {
 			modalBgElement.style.opacity = `0`;
@@ -103,6 +107,16 @@ window.addEventListener(`pageLoaded`, () => {
 			}, 200);
 		});
 		modalBgElement.addEventListener(`click`, () => {
+			modalBgElement.style.opacity = `0`;
+			modalElement.style.opacity = `0`;
+			modalElement.style.transform = `scale(0.75)`;
+
+			setTimeout(() => {
+				modalBgElement.style.display = `none`;
+				modalElement.style.display = `none`;
+			}, 200);
+		});
+		modalButtonElement.addEventListener(`click`, () => {
 			modalBgElement.style.opacity = `0`;
 			modalElement.style.opacity = `0`;
 			modalElement.style.transform = `scale(0.75)`;
