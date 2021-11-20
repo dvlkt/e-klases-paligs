@@ -39,6 +39,23 @@ html .mail-list-view-header input.MailSearch__Input::placeholder {
 	font-style: normal;
 	font-size: 15px;
 }
+html .mail-list-view-header .close-button {
+	background: var(--paragraph-color);
+	position: absolute;
+	top: 10px;
+	right: 140px;
+	display: none;
+	width: 15px;
+	height: 15px;
+	border: 0;
+	transition: .2s opacity, .3s right;
+	opacity: 0;
+	mask-size: contain;
+	-webkit-mask-size: contain;
+}
+html .mail-list-view-header .close-button:hover {
+	opacity: 0.7;
+}
 html .mail-list-view-header .search-button,
 html .mail-list-view-header .dropdown-button {
 	background: var(--background-middle-color);
@@ -127,88 +144,8 @@ html .mail-list-view-header .dropdown .option:hover {
 html .mail-list-view-header .dropdown .option.disabled {
 	color: var(--low-priority-text-color) !important;
 }
-/* html .Folder__MailboxHeader .MailActions {
-	margin-right: 0;
-}
-html .MailActions .ButtonDefault.MailActions__ToggleButton {
-	background: var(--background-middle-color);
-	color: var(--paragraph-color);
-	font-family: 'Inter', sans-serif;
-	font-weight: 500;
-	font-size: 15px;
-	padding-top: 1px;
-	padding-bottom: 1px;
-	padding-left: 15px;
-	border-radius: var(--corner-roundness);
-	box-shadow: 2px 3px 5px -3px var(--shadow-color);
-	transition: .2s filter, .2s box-shadow;
-}
-html .MailActions .ButtonDefault.MailActions__ToggleButton:hover {
-	filter: brightness(0.9);
-	box-shadow: 2px 4px 7px -3px var(--shadow-color);
-}
-html .MailActions .ButtonDefault.MailActions__ToggleButton::after {
-	border: 0;
-	color: var(--paragraph-color);
-}
-html .MailActions .ButtonDefault.MailActions__ToggleButton::before {
-	display: none;
-}
-html .Folder__MailboxHeader .MailSearch {
-	margin-left: 15px;
-}
-html .MailSearch .MailSearch__Input {
-	background: var(--background-middle-color);
-	color: var(--paragraph-color);
-	font-family: 'Inter', sans-serif;
-	font-size: 15px;
-	padding: 4px;
-	border-radius: var(--corner-roundness);
-	border: 0;
-	width: 50%;
-	box-shadow: 2px 3px 5px -3px var(--shadow-color);
-}
-html .MailSearch .MailSearch__Input::placeholder {
-	color: var(--low-priority-text-color);
-	font-style: normal;
-	font-size: 15px;
-}
-html .MailSearch .MailSearch__ResetInputButton {
-	margin-left: -24px;
-	margin-top: 10px !important;
-	transition: .2s opacity;
-}
-html .MailSearch .MailSearch__ResetInputButton:hover {
-	opacity: 0.8;
-}
-html .MailSearch .MailSearch__LengthWarning {
-	font-size: 15px;
-	margin-top: -23px;
-	color: var(--red-color);
-}
-html .MailSearch__ButtonWrapper .MailSearch__Button {
-	background: var(--background-middle-color);
-	color: var(--paragraph-color);
-	font-family: "Inter", sans-serif;
-	border-radius: var(--corner-roundness);
-	padding-left: 5px;
-	box-shadow: 2px 3px 5px -3px var(--shadow-color);
-	transition: .2s filter, .2s box-shadow;
-}
-html .MailSearch__ButtonWrapper .MailSearch__Button:hover {
-	background: var(--background-middle-color);
-	filter: brightness(0.9);
-	box-shadow: 2px 4px 7px -3px var(--shadow-color);
-}
-html .MailSearch__ButtonWrapper .MailSearch__Button::before {
-	content: "";
-	display: inline-block;
-	width: 1.25rem;
-	height: 1.25rem;
-	margin-right: .25rem;
-	vertical-align: middle;
-	filter: invert() brightness(var(--icon-brightness));
-} */
+
+
 html .MailMainAreaWrapper .FolderNavigation {
 	background: var(--background-middle-color);
 	border-radius: var(--corner-roundness);

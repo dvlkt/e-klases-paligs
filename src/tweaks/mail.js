@@ -170,6 +170,11 @@ const tryAddingListViewPatches = () => {
 				}
 			});
 
+			/*
+				Add the event listener to the close button
+			*/
+			//let originalCloseButton = 
+
 		}
 
 		/*
@@ -256,9 +261,12 @@ const tryAddingMailViewPatches = () => {
 				attachmentElement.insertBefore(iconElement, attachmentElement.children[0]);
 			}
 
+			let attachmentURL = attachmentElement.querySelector(`.AttachmentList__Link`).href;
 			attachmentElement.addEventListener(`click`, () => {
-				attachmentElement.querySelector(`.AttachmentList__Link`).click();
+				window.open(attachmentURL);
 			});
+			// Remove the href from the link to avoid downloading the file twice
+			attachmentElement.querySelector(`.AttachmentList__Link`).removeAttribute(`href`);
 		}
 	}
 }
