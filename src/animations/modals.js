@@ -11,8 +11,8 @@ window.addEventListener(`pageLoaded`, () => {
 			modalBgElement.style.display = `block`;
 			modalElement.style.display = `block`;
 			
-			modalElement.style.top = `${modalElement.children[0].children[0].clientHeight / 2}px`;
-			modalElement.style.height = `${modalElement.children[0].children[0].clientHeight}px`;
+			modalElement.style.top = `${modalElement.children[0].children[0].children[0].clientHeight / 2}px`;
+			modalElement.style.height = `${modalElement.children[0].children[0].children[0].clientHeight}px`;
 
 			setTimeout(() => {
 				modalBgElement.style.opacity = `0.5`;

@@ -14,7 +14,8 @@ html .modal {
 	z-index: 1041;
 	transition: .2s transform, .2s opacity;
 }
-html .modal-dialog {
+html .modal-dialog,
+html .modal-dialog.timetable-dialog {
 	width: 100%;
 	height: 100%;
 	margin: 0;
