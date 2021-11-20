@@ -21,7 +21,7 @@ html .mail-list-view-header {
 	padding-bottom: 10px;
 	margin-top: -15px;
 }
-html .mail-list-view-header .search-input {
+html .mail-list-view-header input.MailSearch__Input {
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
 	font-family: "Inter", sans-serif;
@@ -30,10 +30,11 @@ html .mail-list-view-header .search-input {
 	border-radius: var(--corner-roundness);
 	border: 0;
 	width: calc(100% - 130px);
-	transition: .3s width;
+	height: 35px;
+	transition: .3s width, .3s opacity;
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
-html .mail-list-view-header .search-input::placeholder {
+html .mail-list-view-header input.MailSearch__Input::placeholder {
 	color: var(--low-priority-text-color);
 	font-style: normal;
 	font-size: 15px;
@@ -58,14 +59,14 @@ html .mail-list-view-header .dropdown-button:hover {
 html .mail-list-view-header .search-button {
 	position: absolute;
 	top: 0;
-	width: 100px;
+	width: 120px;
 	transition: .2s filter, .2s box-shadow, .2s opacity, .2s transform;
 	transform: translateY(10px);
 	opacity: 0;
 	display: none;
 }
 html .mail-list-view-header .search-button:nth-child(2) {
-	right: 240px;
+	right: 260px;
 }
 html .mail-list-view-header .search-button:nth-child(3) {
 	right: 130px;

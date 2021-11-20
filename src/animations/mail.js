@@ -10,7 +10,7 @@ const tryAddingMailAnimations = () => {
 		if (!areEventListenersAddedToSidebarMenu) {
 			areEventListenersAddedToSidebarMenu = true;
 			
-			for (let element of document.querySelectorAll(`.NavItem`)) {
+			for (let element of document.querySelectorAll(`.NavItem, .mail-list-view-header .search-button`)) {
 				element.addEventListener(`click`, () => {
 					tryAddingMailAnimations();
 				});

@@ -1,3 +1,5 @@
+let areOriginalSearchButtonsShown = false;
+
 const tryAddingListViewPatches = () => {
 	if (!location.href.includes(`SPA/Family#/mail/folder/`)) {
 		return;
@@ -6,11 +8,14 @@ const tryAddingListViewPatches = () => {
 	if (document.querySelector(`.MailSearch__Input`) !== null) {
 
 		/*
-			Show various elements from the old header
+			Show the search buttons from the old header
 		*/
 		document.querySelector(`.MailSearch__Input`).focus();
 		document.querySelector(`.MailSearch__Input`).blur();
-		
+		setTimeout(() => {
+			areOriginalSearchButtonsShown = true;
+		}, 20);
+
 
 		if (document.querySelector(`.mail-list-view-header`) === null) {
 			/*
@@ -21,55 +26,47 @@ const tryAddingListViewPatches = () => {
 			let listViewHeaderElement = document.createElement(`div`);
 			listViewHeaderElement.className = `mail-list-view-header`;
 			listViewHeaderElement.innerHTML = `
-				<input class="search-input" placeholder="Meklēt..." />
 				<button class="search-button">Pēc autora</button>
 				<button class="search-button">Pēc tēmas</button>
 				<button class="dropdown-button">Darbības</button>
-				<div class="dropdown">
-					<button class="option">Dzēst atzīmētās vēstules</button>
-					<button class="option">Atzīmēt visas kā lasītas</button>
-					<button class="option">Atzīmēt izvēlētās kā lasītas</button>
-				</div>
+				<div class="dropdown"><p>Nav izvēļu.</p></div>
 			`;
 			listViewHeaderParentElement.insertBefore(listViewHeaderElement, listViewHeaderParentElement.children[0]);
 
-			let listViewHeaderInputElement = document.querySelector(`.mail-list-view-header .search-input`);
+			/*
+				Insert the original search bar into the new header
+			*/
+			let searchInputElement = document.querySelector(`.MailSearch__Input`);
+			listViewHeaderElement.insertBefore(searchInputElement, listViewHeaderElement.children[0]);
+			searchInputElement.placeholder = `Meklēt...`;
+
 			let authorSearchButtonElement = document.querySelector(`.mail-list-view-header .search-button:nth-child(2)`);
 			let topicSearchButtonElement = document.querySelector(`.mail-list-view-header .search-button:nth-child(3)`);
 			let dropdownButtonElement = document.querySelector(`.mail-list-view-header .dropdown-button`);
 			let dropdownElement = document.querySelector(`.mail-list-view-header .dropdown`);
 
-			/*
-				Sync up the original and new search inputs
-			*/
-			// TODO, cuz' the input is actually very mysterious and does not just look at the value
-			/* let isListViewHeaderInputFocused = false;
-			listViewHeaderElement.addEventListener(`input`, (event) => {
-				//console.log(event);
-				originalListViewHeaderInputElement.value = listViewHeaderInputElement.value; 
-				originalListViewHeaderInputElement.setAttribute(`value`, listViewHeaderInputElement.value);
-				originalListViewHeaderInputElement.dispatchEvent(event);
-			});
-			listViewHeaderElement.addEventListener(`change`, (event) => {
-				originalListViewHeaderInputElement.dispatchEvent(event);
-			}); */
-			/* document.addEventListener(`keydown`, (event) => {
-				if (isListViewHeaderInputFocused) {
-					console.log(event.key);
-					originalListViewHeaderInputElement.dispatchEvent(event);
-				}
-			}); */
 
 			/*
 				Reveal the search options upon clicking the search input
 			*/
-			listViewHeaderInputElement.addEventListener(`focus`, () => {
+			searchInputElement.addEventListener(`focus`, () => {
+				if (!areOriginalSearchButtonsShown) {
+					return;
+				}
+
 				isListViewHeaderInputFocused = true;
 				
-				listViewHeaderInputElement.style.width = `calc(100% - 350px)`;
+				searchInputElement.style.width = `calc(100% - 390px)`;
 
 				authorSearchButtonElement.style.display = `block`;
 				topicSearchButtonElement.style.display = `block`;
+
+				// Change the text for the author search button when in the sent page
+				if (window.location.href.includes(`sent`)) {
+					authorSearchButtonElement.innerHTML = `Pēc adresāta`;
+				} else {
+					authorSearchButtonElement.innerHTML = `Pēc autora`;
+				}
 
 				setTimeout(() => {
 					topicSearchButtonElement.style.opacity = `1`;
@@ -80,9 +77,9 @@ const tryAddingListViewPatches = () => {
 					authorSearchButtonElement.style.transform = `translateY(0)`;
 				}, 80);
 			});
-			listViewHeaderInputElement.addEventListener(`blur`, () => {
+			searchInputElement.addEventListener(`blur`, () => {
 				setTimeout(() => {
-					listViewHeaderInputElement.style.width = ``;
+					searchInputElement.style.width = ``;
 
 					setTimeout(() => {
 						authorSearchButtonElement.style.opacity = `0`;
@@ -105,9 +102,11 @@ const tryAddingListViewPatches = () => {
 			*/
 			authorSearchButtonElement.addEventListener(`click`, () => {
 				document.querySelector(`.MailSearch__Button:nth-child(1)`).click();
+				setTimeout(() => { tryAddingListViewPatches() }, 20);
 			});
 			topicSearchButtonElement.addEventListener(`click`, () => {
 				document.querySelector(`.MailSearch__Button:nth-child(2)`).click();
+				setTimeout(() => { tryAddingListViewPatches() }, 20);
 			});
 
 			/*
@@ -171,6 +170,24 @@ const tryAddingListViewPatches = () => {
 				}
 			});
 
+		}
+
+		/*
+			Hide the search bar if user is in drafts page
+		*/
+		let searchInputElement = document.querySelector(`.MailSearch__Input`);
+		if (window.location.href.includes(`drafts`)) {
+			searchInputElement.style.opacity = `0`;
+
+			setTimeout(() => {
+				searchInputElement.style.display = `none`;
+			}, 300);
+		} else {
+			searchInputElement.style.display = `unset`;
+			
+			setTimeout(() => {
+				searchInputElement.style.opacity = `1`;
+			}, 20);
 		}
 
 	} else {
@@ -293,6 +310,8 @@ const tryAddingMailViewToolbarPatches = () => {
 }
 
 window.addEventListener(`urlChanged`, () => {
+	areOriginalSearchButtonsShown = false;
+
 	tryAddingListViewPatches();
 	tryAddingMailViewPatches();
 	tryAddingMailViewToolbarPatches();
