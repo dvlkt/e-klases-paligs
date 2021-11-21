@@ -309,6 +309,7 @@ h2:first-of-type {
 	border-radius: .75rem;
 	cursor: pointer;
 	transition: .2s filter, .2s box-shadow, .2s background;
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
 .switch:hover,
 .switch:focus {
@@ -324,13 +325,14 @@ h2:first-of-type {
 	height: 1.1rem;
 	border-radius: 0.55rem;
 	background: #ffffff;
+	transition: .2s left;
 }
 
 .switch-on {
 	background: #229e17;
 }
 .switch-on::after {
-	right: 0.2rem;
+	left: 1.2rem;
 }
 .switch-off {
 	background: #9c1919;

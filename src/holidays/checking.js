@@ -1,4 +1,7 @@
-const isChristmasToday = () => {
+const isChristmasToday = async () => {
+	let isHolidayDesignOff = await checkIfHolidayDesignOff();
+	if (isHolidayDesignOff) return false;
+
 	let date = new Date();
 
 	if ((date.getMonth() === 11 && date.getDate() === 24) ||
@@ -11,7 +14,10 @@ const isChristmasToday = () => {
 
 	return false;
 }
-const isNewYearToday = () => {
+const isNewYearToday = async () => {
+	let isHolidayDesignOff = await checkIfHolidayDesignOff();
+	if (isHolidayDesignOff) return false;
+
 	let date = new Date();
 
 	if ((date.getMonth() === 11 && date.getDate() === 31) ||
@@ -22,7 +28,10 @@ const isNewYearToday = () => {
 
 	return false;
 }
-const isPDLToday = () => {
+const isPDLToday = async () => {
+	let isHolidayDesignOff = await checkIfHolidayDesignOff();
+	if (isHolidayDesignOff) return false;
+
 	let date = new Date();
 
 	if ((date.getMonth() === 10 && date.getDate() === 18)) {
@@ -31,7 +40,10 @@ const isPDLToday = () => {
 
 	return false;
 }
-const isJaniToday = () => {
+const isJaniToday = async () => {
+	let isHolidayDesignOff = await checkIfHolidayDesignOff();
+	if (isHolidayDesignOff) return false;
+
 	let date = new Date();
 
 	if ((date.getMonth() === 5 && date.getDate() === 24)) {
@@ -51,4 +63,12 @@ const isAHolidayToday = () => {
 	}
 
 	return false;
+}
+
+const checkIfHolidayDesignOff = async () => {
+	return new Promise((resolve, reject) => {
+		chrome.storage.sync.get([`isHolidayDesignOn`], (res) => {
+			resolve(res.isHolidayDesignOn === false);
+		});
+	});
 }

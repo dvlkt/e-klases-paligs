@@ -1,11 +1,11 @@
 let headerCanvasElement;
 let headerCanvasCtx;
 
-window.addEventListener(`pageLoaded`, () => {
+window.addEventListener(`pageLoaded`, async () => {
 	/*
 		Christmas
 	*/
-	if (isChristmasToday()) {
+	if (await isChristmasToday()) {
 		let headerElement = document.querySelector(`.header-second-inner`);
 
 		headerCanvasElement = document.createElement(`canvas`);
@@ -16,7 +16,7 @@ window.addEventListener(`pageLoaded`, () => {
 		headerCanvasCtx = headerCanvasElement.getContext(`2d`);
 
 		// Make the header dark
-		headerElement.style.backgroundColor = `#161522`;
+		headerElement.className += ` dark-header`;
 
 		// Add the snow
 		headerElement.style.backgroundImage = `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjEyIiBoZWlnaHQ9IjE5NSIgdmlld0JveD0iMCAwIDYxMiAxOTUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xNjQuODY1IDE3Ni44NjVDMTA0LjExNSAxNzYuODY1IDc1LjQzODQgMTczIDAgMTczVjE5NUg2MTJWMTczQzU4MC4wMjYgMTczIDU3My42MzEgMTc1LjQ0NCA1MjguMDY5IDE3NS4yNDRDNDcxLjExNSAxNzQuOTk1IDQ3My4xMTMgMTczIDM4Ny4xODQgMTczQzMwMS4yNTQgMTczIDI0MC44MDMgMTc2Ljg2NSAxNjQuODY1IDE3Ni44NjVaIiBmaWxsPSIjRThFOEU4Ii8+Cjwvc3ZnPgo=")`;
@@ -30,11 +30,6 @@ window.addEventListener(`pageLoaded`, () => {
 		treeImgElement.style.left = `150px`;
 		treeImgElement.src = `data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjEyIiBoZWlnaHQ9IjE5NSIgdmlld0JveD0iMCAwIDYxMiAxOTUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0zMCA5Nkg0MVYxNzYuNUM0MSAxNzkuNTM4IDM4LjUzNzYgMTgyIDM1LjUgMTgyVjE4MkMzMi40NjI0IDE4MiAzMCAxNzkuNTM4IDMwIDE3Ni41Vjk2WiIgZmlsbD0iIzQzMUYwQiIvPgo8cGF0aCBkPSJNOTIgMTA2SDEwM1YxNzguNUMxMDMgMTgxLjUzOCAxMDAuNTM4IDE4NCA5Ny41IDE4NFYxODRDOTQuNDYyNCAxODQgOTIgMTgxLjUzOCA5MiAxNzguNVYxMDZaIiBmaWxsPSIjNDMxRjBCIi8+CjxwYXRoIGQ9Ik0xNTggOTZIMTY5VjE3Ni41QzE2OSAxNzkuNTM4IDE2Ni41MzggMTgyIDE2My41IDE4MlYxODJDMTYwLjQ2MiAxODIgMTU4IDE3OS41MzggMTU4IDE3Ni41Vjk2WiIgZmlsbD0iIzQzMUYwQiIvPgo8cGF0aCBkPSJNNjggMTUzLjVIM0wyNCAxMzJIN0wyNCAxMDlIMTEuNUwzNS41IDgyTDU5LjUgMTA5SDQ3TDY0IDEzMkg0N0w2OCAxNTMuNVoiIGZpbGw9IiMxOTYyMjEiLz4KPHBhdGggZD0iTTEyNyAxNThINjhMODcuMDYxNSAxMzguNDU1SDcxLjYzMDhMODcuMDYxNSAxMTcuNTQ1SDc1LjcxNTRMOTcuNSA5M0wxMTkuMjg1IDExNy41NDVIMTA3LjkzOEwxMjMuMzY5IDEzOC40NTVIMTA3LjkzOEwxMjcgMTU4WiIgZmlsbD0iIzE5NjIyMSIvPgo8cGF0aCBkPSJNMTk2IDE1M0gxMzFMMTUyIDEzMS42NUgxMzVMMTUyIDEwOC44MTFIMTM5LjVMMTYzLjUgODJMMTg3LjUgMTA4LjgxMUgxNzVMMTkyIDEzMS42NUgxNzVMMTk2IDE1M1oiIGZpbGw9IiMxOTYyMjEiLz4KPC9zdmc+Cg==`;
 		headerElement.appendChild(treeImgElement);
-
-		// Make the header icons light
-		for (let element of document.querySelectorAll(`.header-second-menu-item`)) {
-			element.className += ` dark-header`;
-		}
 
 		// Generate random snowflakes
 		for (let i = 0; i < 25 + Math.random() * 10; i++) {
@@ -52,7 +47,7 @@ window.addEventListener(`pageLoaded`, () => {
 	/*
 		New Year
 	*/
-	if (isNewYearToday()) {
+	if (await isNewYearToday()) {
 		let headerElement = document.querySelector(`.header-second-inner`);
 
 		headerCanvasElement = document.createElement(`canvas`);
@@ -63,12 +58,7 @@ window.addEventListener(`pageLoaded`, () => {
 		headerCanvasCtx = headerCanvasElement.getContext(`2d`);
 
 		// Make the header dark
-		headerElement.style.backgroundColor = `#161522`;
-
-		// Make the header icons light
-		for (let element of document.querySelectorAll(`.header-second-menu-item`)) {
-			element.className += ` dark-header`;
-		}
+		headerElement.className += ` dark-header`;
 
 		// Start the animation
 		drawNewYearCanvasFrame();
@@ -77,14 +67,14 @@ window.addEventListener(`pageLoaded`, () => {
 	/*
 		Proclamation Day of Latvia
 	*/
-	if (isPDLToday()) {
+	if (await isPDLToday()) {
 		// TODO
 	}
 	
 	/*
 		Jāņi
 	*/
-	if (isJaniToday()) {
+	if (await isJaniToday()) {
 		let headerElement = document.querySelector(`.header-second-inner`);
 
 		headerCanvasElement = document.createElement(`canvas`);
@@ -95,12 +85,7 @@ window.addEventListener(`pageLoaded`, () => {
 		headerCanvasCtx = headerCanvasElement.getContext(`2d`);
 
 		// Make the header dark
-		headerElement.style.backgroundColor = `#161522`;
-
-		// Make the header icons light
-		for (let element of document.querySelectorAll(`.header-second-menu-item`)) {
-			element.className += ` dark-header`;
-		}
+		headerElement.className += ` dark-header`;
 
 		// Generate random particles
 		for (let i = 0; i < 25 + Math.random() * 10; i++) {

@@ -137,6 +137,33 @@ window.addEventListener(`mouseup`, (event) => {
 	}
 });
 
+
+/*
+	Holiday design switch
+*/
+let isHolidayDesignOn = true;
+chrome.storage.sync.get([`isHolidayDesignOn`], (res) => {
+	let holidayDesignSwitchElement = document.querySelector(`#holiday-design-switch`);
+
+	if (res.isHolidayDesignOn === undefined) {
+		chrome.storage.sync.set({ isHolidayDesignOn: true });
+		isHolidayDesignOn = true;
+	} else {
+		isHolidayDesignOn = res.isHolidayDesignOn;
+	}
+
+	holidayDesignSwitchElement.className = `switch switch-${isHolidayDesignOn ? `on` : `off`}`;
+
+	holidayDesignSwitchElement.addEventListener(`click`, () => {
+		isHolidayDesignOn = !isHolidayDesignOn;
+
+		chrome.storage.sync.set({ isHolidayDesignOn: isHolidayDesignOn });
+
+		holidayDesignSwitchElement.className = `switch switch-${isHolidayDesignOn ? `on` : `off`}`;
+	});
+});
+
+
 /*
 	Profile picture chooser
 */
