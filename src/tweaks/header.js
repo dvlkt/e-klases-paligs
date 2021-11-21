@@ -12,22 +12,22 @@ window.addEventListener(`pageLoading`, () => {
 						<div class="row">
 							<div class="col-sm-7">
 								<ul class="header-second-menu hidden-xs">
-									<li class="header-second-menu-item  item-home  ">
+									<li class="header-second-menu-item item-home">
 										<a class="onclick-spinner" href="/Family/Home">
 											Sākums
 										</a>
 									</li>
-									<li class="header-second-menu-item  item-journal  ">
+									<li class="header-second-menu-item item-journal">
 										<a class="onclick-spinner" href="/Family/Diary">
 											Dienasgrāmata
 										</a>
 									</li>
-									<li class="header-second-menu-item  item-links item-messages ">
+									<li class="header-second-menu-item item-links item-messages">
 										<a href="/SPA/Family#/mail">
 											Saziņa
 										</a>
 									</li>
-									<li class="header-second-menu-item  item-links item-analytics ">
+									<li class="header-second-menu-item item-links item-analytics">
 										<a href="/Family/ReportMarkRatings/Get">
 											Pārskati
 										</a>
@@ -128,6 +128,7 @@ window.addEventListener(`pageLoading`, () => {
 		accountPopupElement.className = `header-account-popup`;
 
 		accountPopupElement.innerHTML = `
+			<p class="header-account-popup-user">Nezināms vārds un loma <span class="header-account-popup-user-school">Nezināma mācību iestāde</span></p>
 			<div class="header-account-popup-section main">
 				<div class="header-account-popup-button settings">
 					<p>Iestatījumi</p>
@@ -135,7 +136,7 @@ window.addEventListener(`pageLoading`, () => {
 				<div class="header-account-popup-button help">
 					<p>Palīdzība</p>
 				</div>
-				<div class="header-account-popup-button family-plan">
+				<div class="header-account-popup-button family-plan onclick-spinner">
 					<p>Ģimenes komplekts</p>
 				</div>
 				<div class="header-account-popup-button exit">
@@ -146,13 +147,13 @@ window.addEventListener(`pageLoading`, () => {
 				<div class="header-account-popup-button back">
 					<p>Atpakaļ</p>
 				</div>
-				<div class="header-account-popup-button settings family-settings">
+				<div class="header-account-popup-button settings family-settings onclick-spinner">
 					<p>Ģimenes uzstādījumi</p>
 				</div>
-				<div class="header-account-popup-button settings action-history">
+				<div class="header-account-popup-button settings action-history onclick-spinner">
 					<p>Darbību vēsture</p>
 				</div>
-				<div class="header-account-popup-button settings notification-history">
+				<div class="header-account-popup-button settings notification-history onclick-spinner">
 					<p>Ziņojumu vēsture</p>
 				</div>
 			</div>
@@ -160,10 +161,10 @@ window.addEventListener(`pageLoading`, () => {
 				<div class="header-account-popup-button back">
 					<p>Atpakaļ</p>
 				</div>
-				<div class="header-account-popup-button faq">
+				<div class="header-account-popup-button faq onclick-spinner">
 					<p>Biežāk uzdotie jautājumi</p>
 				</div>
-				<div class="header-account-popup-button tech-support">
+				<div class="header-account-popup-button tech-support onclick-spinner">
 					<p>Tehniskais atbalsts</p>
 				</div>
 				<div class="header-account-popup-button show-tour">
@@ -247,6 +248,37 @@ window.addEventListener(`pageLoading`, () => {
 		});
 	}
 
+	// Show the username & role in the popup
+	if (document.querySelector(`.header-second .col-sm-4.col-sm-offset-1`) !== null) {
+		setTimeout(() => tryShowingUserInfo(), 20);
+	}
+
+	// Show/hide the school name when clicking on the username
+	let isSchoolShown = false;
+	document.querySelector(`.header-account-popup-user`).addEventListener(`click`, () => {
+		if (!isSchoolShown) {
+			isSchoolShown = true;
+
+			document.querySelector(`.header-account-popup-user-school`).style.height = `15px`;
+
+			for (let sectionElement of document.querySelectorAll(`.header-account-popup-section`)) {
+				sectionElement.style.top = `45px`;
+			}
+			
+			document.querySelector(`.header-account-popup`).style.height = `315px`;
+		} else {
+			isSchoolShown = false;
+
+			document.querySelector(`.header-account-popup-user-school`).style.height = `0`;
+
+			for (let sectionElement of document.querySelectorAll(`.header-account-popup-section`)) {
+				sectionElement.style.top = `30px`;
+			}
+
+			document.querySelector(`.header-account-popup`).style.height = `300px`;
+		}
+	});
+
 	// Make the popup disappear when clicking outside of it
 	document.body.addEventListener(`click`, (event) => {
 		if (isAccountPopupOpen) {
@@ -287,11 +319,7 @@ window.addEventListener(`pageLoading`, () => {
 		}
 	}
 
-	// Remove the student selector & first header
-	if (document.querySelector(`.header-second .col-sm-4.col-sm-offset-1`) !== null) {
-		let element = document.querySelector(`.header-second .col-sm-4.col-sm-offset-1`);
-		element.parentElement.removeChild(element);
-	}
+	// Remove the first header
 	if (document.querySelector(`.content-wrap .header-first`)) {
 		let element = document.querySelector(`.content-wrap .header-first`);
 		element.parentElement.removeChild(element);
@@ -302,6 +330,19 @@ window.addEventListener(`pageLoading`, () => {
 		element.className = `onclick-spinner`;
 	}
 });
+
+const tryShowingUserInfo = () => {
+	if (document.querySelector(`.student-selector-option .name`) === null ||
+		document.querySelector(`.student-selector .student-selector-label`) === null) {
+
+		setTimeout(() => tryShowingUserInfo(), 20);
+	} else {
+		let name = document.querySelector(`.student-selector-option .name`).innerText.trim();
+		let role = document.querySelector(`.student-selector .student-selector-label`).innerText.toLowerCase().trim();
+		let school = `Dabaszinību institūts 6. klasēm`;
+		document.querySelector(`.header-account-popup-user`).innerHTML = `${name} <span class="header-account-popup-user-role">(${role.slice(0, role.length - 1)})</span> <span class="header-account-popup-user-school">${school}</span>`;
+	}
+}
 
 const showActivePageLinks = () => {
 	// Show header links as active when in some pages
