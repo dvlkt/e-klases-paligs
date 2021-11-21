@@ -26,6 +26,13 @@ window.addEventListener(`pageLoading`, () => {
 						<h3>Šī lapa ir saziņai tikai ar E-klases tehniskā atbalsta dizainu.</h3>
 						<p>Ja Tev ir kādi jautājumi par mācību procesu, tad tas ir jāuzdod skolotājiem.</p>
 
+						<br />
+
+						<h3>Eksistē arī Biežāk uzdoto jautājumu lapa.</h3>
+						<p>Varbūt Tavs jautājums jau ir atbildēts pie <a href="https://my.e-klase.lv/Family/FAQ/Student">Biežāk uzdotajiem jautājumiem</a>!</p>
+
+						<br />
+
 						<button class="modal-button">Sapratu!</button>
 					</div>
 				</div>

@@ -50,6 +50,7 @@
 				"tweaks/home.js",
 				"tweaks/mail.js",
 				"tweaks/profilePicture.js",
+				"tweaks/faq.js",
 				"tweaks/screenshotMode.js",
 				"analytics/diary.js",
 				"animations/calendar.js",
