@@ -265,6 +265,15 @@ const tryAddingMailViewPatches = () => {
 			// Remove the href from the link to avoid downloading the file twice
 			attachmentElement.querySelector(`.AttachmentList__Link`).removeAttribute(`href`);
 		}
+
+		/*
+			Fix HTML symbols not rendering properly in the title
+		*/
+		let mailViewTitleElement = document.querySelector(`.ViewMessage__MessageTitle`);
+		if (mailViewTitleElement.innerHTML.includes(`&`)) {
+			let virtualElement = new DOMParser().parseFromString(mailViewTitleElement.innerText, `text/html`);
+			mailViewTitleElement.innerHTML = virtualElement.documentElement.textContent;
+		}
 	}
 }
 const tryAddingMailViewToolbarPatches = () => {
