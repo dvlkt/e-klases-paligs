@@ -7,7 +7,7 @@ window.addEventListener(`pageLoading`, () => {
 			calendarButton.addEventListener(`click`, () => {
 				if (calendarButton.parentElement.className.includes(`calendar-open`)) {
 					calendar.style.opacity = `0`;
-					calendar.style.transform = `translateY(-10px)`;
+					calendar.style.transform = `translateY(10px)`;
 					setTimeout(() => {
 						calendar.style.display = `none`;
 					}, 200);
@@ -28,7 +28,7 @@ window.addEventListener(`pageLoading`, () => {
 			calendarButton.addEventListener(`click`, () => {
 				if (calendarButton.parentElement.parentElement.className.includes(`calendar-open`)) {
 					calendar.style.opacity = `0`;
-					calendar.style.transform = `translateY(-10px)`;
+					calendar.style.transform = `translateY(10px)`;
 					setTimeout(() => {
 						calendar.style.display = `none`;
 					}, 200);

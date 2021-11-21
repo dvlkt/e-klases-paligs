@@ -238,7 +238,7 @@ html .students-journal-header .week-selector.calendar-open .calendar-holder {
 html .popover {
 	display: none;
 	opacity: 0;
-	transform: translateY(-10px);
+	transform: translateY(10px);
 	transition: .2s opacity, .2s transform;
 }
 
