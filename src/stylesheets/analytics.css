@@ -603,7 +603,9 @@ html .info-pane-wrap .subject {
 	}
 }
 
-/* DELAYS */
+/*
+	Delays
+*/
 html .delays-container .delays .container {
 	background: none;
 	padding-bottom: 25px;
@@ -614,12 +616,14 @@ html .delays-overview-table-holder {
 }
 html .delays-overview-table {
 	margin-bottom: 0;
-	font-family: 'Inter', sans-serif;
-	font-size: 20px;
+	font-family: "Inter", sans-serif;
+	font-size: 18px;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .delays-overview-table strong {
-	font-family: 'Inter', sans-serif;
-	font-size: 20px;
+	font-family: "Inter", sans-serif;
+	font-size: 18px;
 	font-weight: bold;
 }
 html .delay-info {
@@ -638,10 +642,12 @@ html .delay-info .delay-info-body {
 html .delay-info .delay-info-body h5 {
 	font-size: 32px;
 	line-height: 35px;
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-weight: bold;
 	margin-top: 10px;
 	padding-top: 10px;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .delays-detailed-table,
 html .delay-info .delays-detailed-table-holder {
@@ -688,13 +694,17 @@ html .delay-info .delays-detailed-table table tbody tr:last-child {
 }
 html .delay-info thead td {
 	font-size: 15px;
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-weight: 500;
 	color: var(--low-priority-text-color);
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .delay-info tbody td {
 	font-size: 15px;
 	color: var(--paragraph-color);
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .delay-info .delays-detailed-table table td:nth-child(even) {
 	background: var(--background-middle-dark-color);
@@ -751,13 +761,15 @@ html .delays-legend .legend-item .legend-icon {
 }
 html .delays-legend .legend-item {
 	font-size: 15px;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .delay-mobile-details {
 	background: var(--background-back-color);
 }
 html .delay-mobile-details h3 {
 	font-size: 20px;
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-weight: bold;
 	color: var(--title-color);
 }
@@ -827,7 +839,9 @@ html .delay-mobile-details td:nth-child(2) span {
 	}
 }
 
-/* ANALYTICS */
+/*
+	Analytics
+*/
 html .analytics-report-container {
 	background: none;
 }
@@ -923,7 +937,7 @@ html .analytics-report-table-holder {
 }
 html .analytics-report-table-holder .analytics-report-table-first-column {
 	border-radius: var(--corner-roundness) 0 0 var(--corner-roundness);
-	box-shadow: 0 7px 14px -3px var(--shadow-color);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
 html .analytics-report-table-holder .analytics-report-table-first-column .table-header td {
 	border: 0;
@@ -935,6 +949,9 @@ html .analytics-report-table-holder .analytics-report-table-first-column .table-
 	background: var(--background-middle-dark-color);
 	padding: 0;
 	text-align: center;
+	border-bottom: 2px solid #00000020;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .analytics-report-table-holder .analytics-report-table-first-column .subsection-header td,
 html .analytics-report-table-holder .analytics-report-table-first-column td {
@@ -943,27 +960,25 @@ html .analytics-report-table-holder .analytics-report-table-first-column td {
 	font-size: 15px;
 	color: var(--low-priority-text-color);
 	padding-left: 5px !important;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .analytics-report-table-holder .analytics-report-table-first-column .subsection-header td {
 	color: var(--paragraph-color);
 	font-weight: 500;
 	font-size: 15px;
 }
-html .analytics-report-table-first-column tbody tr.subsection-header,
-html .analytics-report-table tbody tr.subsection-header {
+html .analytics-report-table-holder tr.subsection-header {
 	border-top: 4px solid #00000020 !important;
-}
-html .analytics-report-table tbody tr:not(.subsection-header) {
-	border-bottom: 4px solid #00000020 !important;
 }
 html .analytics-report-table-holder .analytics-report-table-first-column tbody tr:last-child td {
 	border-bottom-left-radius: var(--corner-roundness);
 }
-html .analytics-report-table {
+html .analytics-report-table { /* Why the poop is it flipped over??? */
 	margin-bottom: 20px;
 	border: 0;
 	border-radius: 0 var(--corner-roundness) var(--corner-roundness) 0;
-	box-shadow: 0 -7px 14px -3px var(--shadow-color); /* Why the poop is it flipped over??? */
+	box-shadow: 2px -3px 5px -3px var(--shadow-color);
 }
 html .analytics-report-table table {
 	border: 0;
@@ -976,6 +991,8 @@ html .analytics-report-table table td {
 	border: 0;
 	color: var(--paragraph-color);
 	background: var(--background-middle-color);
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .analytics-report-table table tbody .has-negatives::before {
 	border: 0;
@@ -990,8 +1007,10 @@ html .analytics-info-more strong,
 html .analytics-info-more .title {
 	border: 0;
 	padding: 0;
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-size: 15px;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .analytics-report-table table thead tr {
 	background: var(--background-middle-color);
@@ -1002,12 +1021,22 @@ html .analytics-report-table table thead td {
 	font-size: 15px;
 	font-weight: 500;
 	padding-top: 1px;
+	border-bottom: 8px solid #00000020;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .analytics-report-table table tbody .subsection-header td {
+	border-top: 8px solid #00000020;
 }
 html .analytics-report-table table tbody .score {
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	color: var(--paragraph-color);
-	font-size: 13px;
-	font-weight: bold;
+	font-size: 15px;
+	font-weight: 500;
+	transition: .2s opacity;
+}
+html .analytics-report-table table tbody .score:hover {
+	opacity: 0.7;
 }
 html .analytics-form-holder .form-group .control-label { 
 	font-family: "Inter", sans-serif;
@@ -1027,6 +1056,8 @@ html .analytics-report-table table tbody .negative {
 }
 html .analytics-report-container .print-block {
 	font-size: 15px;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .analytics-form-page .analytics-form-holder h1 {
 	font-size: 24px !important;
