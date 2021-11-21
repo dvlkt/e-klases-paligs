@@ -313,6 +313,16 @@ const tryAddingMailViewToolbarPatches = () => {
 		toolbar.insertBefore(starButton, toolbar.children[4]);
 	}
 }
+const tryAddingNewMailViewPatches = () => {
+	if (!location.href.includes(`SPA/Family#/mail/message/new`)) {
+		return;
+	}
+
+	/*
+		Improve the design of the file upload progress bar
+	*/
+	document.querySelector(`.MessageContent__Row`).style.background = `#f00`;
+}
 
 window.addEventListener(`urlChanged`, () => {
 	areOriginalSearchButtonsShown = false;
@@ -320,9 +330,29 @@ window.addEventListener(`urlChanged`, () => {
 	tryAddingListViewPatches();
 	tryAddingMailViewPatches();
 	tryAddingMailViewToolbarPatches();
+	tryAddingNewMailViewPatches();
 });
 window.addEventListener(`pageLoading`, () => {
 	tryAddingListViewPatches();
 	tryAddingMailViewPatches();
 	tryAddingMailViewToolbarPatches();
+	tryAddingNewMailViewPatches();
 });
+
+/*
+<li
+	class="AttachmentList__ItemContainer" style="margin-top: 5px; margin-bottom: 5px;">
+
+	<span
+		id="attach-hailhitler.mp4"
+		class="AttachmentList__Item AttachmentList__Item--border"
+		style="background: rgba(0, 0, 0, 0) linear-gradient(to right, lightblue 0%, lightblue 53%, lightblue 53%, white 53%, white 100%) repeat scroll 0% 0%;">
+		
+		<span
+			class="">hailhitler.mp4</span>
+		<button
+			class="AttachmentList__RemoveButton">&nbsp;</button>
+
+	</span>
+</li>
+*/

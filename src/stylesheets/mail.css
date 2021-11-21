@@ -452,54 +452,6 @@ html .FetchMore .FetchMore__MessageCount {
 	display: none;
 }
 
-/* html .MailActions .MailActions__ActionList {
-	background: var(--background-middle-color);
-	color: var(--paragraph-color);
-	border-radius: var(--corner-roundness);
-	transform: translateY(-10px);
-	opacity: 0;
-	display: none;
-	box-shadow: 0 4px 10px -3px var(--shadow-color);
-	transition: .2s transform, .2s opacity;
-}
-html .MailActions__ActionList .MailActions__ActionOuter,
-html .MailActions__ActionList .MailActions__ActionOuter:first-child,
-html .MailActions__ActionList .MailActions__ActionOuter:last-child {
-	background: var(--background-middle-color);
-	color: var(--paragraph-color);
-	border-radius: var(--corner-roundness);
-	transition: .2s filter;
-}
-html .MailActions__ActionList .MailActions__ActionOuter:hover {
-	background: var(--background-middle-color);
-	filter: brightness(0.8);
-}
-html .MailActions__ActionList .MailActions__ActionOuter:not(:last-child) {
-	border: 0;
-}
-html .MailActions__ActionOuter .MailActions__ActionInner {
-	border: 0;
-	background: none;
-	color: var(--paragraph-color);
-	font-family: "Inter", sans-serif;
-	font-size: 15px;
-	padding: 20px;
-}
-html .MailActions__ActionOuter .MailActions__ActionInner::before {
-	content: "";
-	display: inline-block;
-	width: 1rem;
-	height: 1rem;
-	background-size: contain;
-	margin-right: 10px !important;
-	vertical-align: middle;
-	filter: invert() brightness(var(--icon-brightness));
-}
-html .MailActions__ActionList .MailActions__DisabledMessage {
-	font-style: normal;
-	color: var(--low-priority-text-color);
-	font-size: 11px;
-} */
 
 /* New mail */
 html .MessageContent .MessageContent__Row:first-child,
@@ -572,6 +524,9 @@ html .EklaseTextEditor__Button--active::before {
 	color: var(--paragraph-color) !important;
 	opacity: 0.7;
 }
+html .Message .MessageHeader {
+	height: 45px;
+}
 @media only screen and (max-width: 767px) {
 	html .Message .MessageHeader {
 		border-radius: 0 0 1rem 1rem;
@@ -614,29 +569,30 @@ html .Message .MessageHeader__ButtonSend--mobile::before {
 html .Message .MessageHeader__ButtonSend,
 html .MessageHeader__ButtonSend:active {
 	background: var(--theme-color);
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-weight: 500;
 	font-size: 15px;
-	font-size: 15px;
-	padding: 10px;
-	height: 35px;
-	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	padding: 5px;
+	height: 40px;
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	border-radius: var(--corner-roundness);
+	mask-size: contain;
+	-webkit-mask-size: contain;
 	transition: .2s filter, .2s box-shadow;
 }
 html .Message .MessageHeader__ButtonSend:hover {
-	box-shadow: 0 4px 10px -3px var(--shadow-color);
-	filter: brightness(0.8);
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
 }
 html .Message .MessageHeader__ButtonSend::before,
 html .Message .MessageHeader__ButtonSend--mobile::before {
 	content: "";
-	margin: 0 10px 0 15px;
-	filter: invert() brightness(var(--theme-accent-icon-brightness));
+	margin: 0 5px 0 5px;
+	background: var(--theme-accent-color);
 }
 html .MessageContent .MessageContent__ErrorMessage {
 	color: var(--red-color);
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-size: 13px;
 }
 html .MessageContent .MessageContent__ErrorMessage--recipients {
@@ -663,25 +619,25 @@ html .MessageContent__AddRecipients .MessageContent__AddRecipientButton:hover {
 }
 html .MessageContent .MessageContent__DesktopAttachments {
 	cursor: pointer;
-	margin-top: 15px;
+	margin-top: 9px;
+	right: 4px;
 }
 html .FileInput__AddButton {
 	background: var(--theme-color);
 	border-radius: var(--corner-roundness);
-	color: var(--theme-accent-color);
-	font-family: 'Inter', sans-serif;
-	font-weight: bold;
-	padding: .25rem;
-	padding-right: .75rem;
+	display: block;
+	width: 32px;
+	height: 32px;
 	cursor: pointer;
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s filter, .2s box-shadow;
 }
 html .FileInput__AddButton::after {
 	display: none;
 }
 html .FileInput__AddButton:hover {
-	box-shadow: 0 4px 10px -3px var(--shadow-color);
-	filter: brightness(0.8);
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
 }
 html .FileInput__AddButtonText,
 html .FileInput__AddButtonText:hover {
