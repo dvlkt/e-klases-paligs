@@ -195,6 +195,18 @@ html .announcement .btn {
 }
 
 /* SETTINGS POPUP */
+html .settings-container .modal-dialog .close-modal {
+	background: var(--theme-accent-color);
+	box-shadow: none;
+	width: 25px;
+	height: 25px;
+	transition: .2s opacity;
+	mask-size: contain;
+	-webkit-mask-size: contain;
+}
+html .settings-container .modal-dialog .close-modal:hover {
+	opacity: 0.7;
+}
 html .people-overlay {
 	background: none;
 	border-radius: var(--corner-roundness);
@@ -253,15 +265,26 @@ html .nav-tabs.profile li a {
 	font-family: "Inter", sans-serif;
 	font-size: 15px;
 	font-weight: normal;
+	border-radius: 0;
 }
 html .nav-tabs.profile li {
 	padding-bottom: 0;
+	padding-top: 0;
 }
 html .nav-tabs.profile li a,
 html .nav-tabs.profile li.active > a,
 html .nav-tabs.profile li.active > a:focus,
 html .nav-tabs.profile li.active > a:hover {
-	padding-bottom: 15px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+html .nav-tabs.profile li a::after {
+	bottom: 45px;
+	border-radius: 0 0 var(--corner-roundness) var(--corner-roundness);
+}
+html .nav-tabs.profile li a:hover::after,
+html .nav-tabs.profile li.active a::after {
+	bottom: 39px;
 }
 html .settings-modal-body .form-row .input,
 html .settings-modal-body .form-row .textarea {
@@ -291,6 +314,8 @@ html .settings-modal-body .form-row.information-row::before {
 	display: none;
 }
 html .form-input-row .phone-number {
+	font-size: 15px;
+	font-weight: 500;
 	user-select: none;
 	-webkit-user-drag: none;
 }
@@ -353,12 +378,13 @@ html .form-row.change-data-request-row a:hover {
 	filter: brightness(0.9);
 }
 html .form-row.change-data-request-row a {
-	font-size: 13px;
+	font-size: 15px;
 	padding: 8px;
 	text-decoration: none;
 	margin-top: 3px;
 	margin-bottom: 2px;
 	display: block;
+	text-align: center;
 }
 html .form-row.change-data-request-row a::before {
 	display: none;
