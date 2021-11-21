@@ -52,7 +52,11 @@ html .no-data .inform {
 }
 html .no-data .inform span {
 	color: var(--paragraph-color);
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
+	font-weight: 500;
+	font-size: 18px;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .student-journal-lessons-table-holder .lessons-table tbody .first-column,
 html .diary-container .lessons-table tbody .first-column {

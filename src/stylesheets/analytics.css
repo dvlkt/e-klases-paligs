@@ -41,6 +41,8 @@ html .filter-wrap .journal-type a {
 	background: var(--background-middle-color);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s filter;	
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .filter-wrap .journal-type a:hover {
 	color: var(--paragraph-color);
@@ -429,6 +431,8 @@ html .behavioral-table tr.thead td {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	border: 0;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .lesson-topics-table td,
 html .behavioral-table td,
@@ -444,6 +448,11 @@ html .behavioral-table tr:hover td:nth-child(odd),
 html .lesson-topics-table tr.thead td:nth-child(odd),
 html .behavioral-table tr.thead td:nth-child(odd) {
 	background: var(--background-middle-dark-color);
+}
+html .lesson-topics-table td:nth-child(1),
+html .lesson-topics-table td:nth-child(4) {
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .lesson-topics-table .marker,
 html .behavioral-table .marker {
@@ -527,11 +536,23 @@ html .cell-item.active,
 html .cell-item.active:hover {
 	top: 0;
 	border: 0;
-	box-shadow: none;
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	border-radius: var(--corner-roundness);
+	background: var(--background-middle-dark-color);
+	transition: .2s background, .2s filter, .2s box-shadow;
+	user-select: none;
+	-webkit-user-drag: none;
 }
-html .cell-item.active {
+html .cell-item.active,
+html .cell-item.active:hover {
 	border: 0;
 	outline: none;
+	background: var(--background-middle-color);
+}
+html .cell-item:hover,
+html .cell-item.active:hover {
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
 }
 html .cell-item .marks-header,
 html .cell-item.active .marks-header,
@@ -546,16 +567,12 @@ html .cell-item:hover .marks-header {
 }
 html .cell-item .marks-header .inner {
 	border-radius: var(--corner-roundness);
-	background: var(--background-middle-color) !important;
-	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	background: none !important;
+	box-shadow: none;
 	transition: .2s filter, .2s box-shadow;
 	color: var(--paragraph-color);
+	font-size: 15px;
 	height: 60px;
-}
-html .cell-item .marks-header:hover,
-html .cell-item.active .marks-header {
-	box-shadow: 2px 4px 7px -3px var(--shadow-color);
-	filter: brightness(0.9);
 }
 html .analytic .actual-lessons,
 html .analytic .student-journal-lessons {
@@ -581,9 +598,36 @@ html .data-pane-wrap {
 }
 html .info-pane-wrap .subject {
 	color: var(--paragraph-color);
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 15px;
+}
+html .cell-item .marks-body,
+html .cell-item.active .marks-body {
+	background: none;
+	border: 0;
+}
+html .cell-item .marks-body {
+	font-size: 15px;
+	font-family: "Inter", sans-serif;
+	font-weight: 500;
+	color: var(--paragraph-color);
+	box-shadow: none;
+}
+html .cell-item:hover .marks-body {
+	border-top: 0;
+	height: 32px;
+}
+html .cell-item .marks-body::after {
+	display: none;
+}
+html .cell-item.active .marks-body,
+html .cell-item.active:hover .marks-body {
+	border: 0;
+	height: 32px;
+}
+html .cell-item:hover .marks-body span {
+	top: 2px;
 }
 @media only screen and (max-width: 767px) {
 	html .info-pane-wrap .container,
