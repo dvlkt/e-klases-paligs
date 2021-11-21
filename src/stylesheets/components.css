@@ -83,7 +83,7 @@ html .loading-info {
 	display: block !important;
 	background: var(--background-front-color);
 	color: var(--paragraph-color);
-	box-shadow: 0 7px 14px -3px var(--shadow-color);
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 	border: 0;
 	font-weight: 500;
 	transform: scale(1) !important;
