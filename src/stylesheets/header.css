@@ -239,7 +239,7 @@ html .header-account-popup-user-role {
 	color: var(--low-priority-text-color);
 }
 html .header-account-popup-user-school {
-	font-size: 15px;
+	font-size: 13px;
 	font-weight: 500;
 	color: var(--low-priority-text-color);
 	text-align: center;

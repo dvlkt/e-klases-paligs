@@ -339,7 +339,7 @@ const tryShowingUserInfo = () => {
 	} else {
 		let name = document.querySelector(`.student-selector-option .name`).innerText.trim();
 		let role = document.querySelector(`.student-selector .student-selector-label`).innerText.toLowerCase().trim();
-		let school = `Dabaszinību institūts 6. klasēm`;
+		let school = document.querySelector(`.student-selector-option small`).innerText.trim();
 		document.querySelector(`.header-account-popup-user`).innerHTML = `${name} <span class="header-account-popup-user-role">(${role.slice(0, role.length - 1)})</span> <span class="header-account-popup-user-school">${school}</span>`;
 	}
 }
