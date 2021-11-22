@@ -108,6 +108,15 @@ html .modal-button:hover {
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 	filter: brightness(0.9);
 }
+@media only screen and (max-width: 767px) {
+	html .modal {
+		left: 5%;
+		width: 90%;
+	}
+	html .modal-dialog .modal-content {
+		background: none;
+	}
+}
 
 /* Mark card */
 html .modal-mark-card .mark-card-inner-title {

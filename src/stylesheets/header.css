@@ -322,6 +322,10 @@ html header.minimal {
 html .toggle-mobile-menu {
 	display: none !important;
 }
+html .header-second .current-student,
+html .header-second .current-user {
+	display: none;
+}
 @media only screen and (max-width: 767px) {
 	html .header-second {
 		z-index: 1001;
@@ -337,19 +341,19 @@ html .toggle-mobile-menu {
 	}
 	html .header-second-menu.hidden-xs {
 		display: block !important;
-		width: 300px;
+		width: 320px;
 		height: 64px;
 	}
-	html .header-second-menu .header-second-menu-item {
+	html .header-second .header-second-menu .header-second-menu-item {
 		display: inline-block;
-		width: 40px;
+		width: 52px;
 		height: 64px;
-		margin-left: 10px;
-		margin-right: 10px;
+		margin-left: 5px;
+		margin-right: 5px;
 	}
 	html .header-second-menu .header-second-menu-item > a {
 		display: block;
-		width: 40px;
+		width: 52px;
 		height: 64px;
 	}
 	html .header-second-menu .header-second-menu-item.item-home a::before,

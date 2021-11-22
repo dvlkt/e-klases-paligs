@@ -1,9 +1,5 @@
 html .students-journal-header {
-	background: var(--background-back-color);
-}
-html .xs-diary-lesson-times,
-html .xs-diary-lesson-times:hover {
-	color: var(--theme-color);
+	background: none;
 }
 html .lessons-table {
 	background: var(--background-middle-dark-color);
@@ -101,6 +97,7 @@ html .diary-container .lessons-table td.first-column {
 html .lessons-table td .subject-text-draft::before,
 html .student-journal-lessons .lesson-subitem .description .subject-text-draft::before {
 	color: var(--low-priority-text-color);
+	font-size: 15px;
 }
 html .student-journal-lessons-table-holder .lessons-table tr:last-child td,
 html .diary-container .lessons-table tr:last-child td {
@@ -410,7 +407,8 @@ html .students-journal-header .students-journal-header-links {
 	user-select: none;
 	-webkit-user-drag: none;
 }
-html .students-journal-header .students-journal-header-links a {
+html .students-journal-header .students-journal-header-links a,
+html .xs-diary-lesson-times {
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
 	font-size: 15px;
@@ -420,7 +418,8 @@ html .students-journal-header .students-journal-header-links a {
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s filter, .2s box-shadow;
 }
-html .students-journal-header .students-journal-header-links a:hover {
+html .students-journal-header .students-journal-header-links a:hover,
+html .xs-diary-lesson-times:hover {
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 	filter: brightness(0.9);
 	text-decoration: none;

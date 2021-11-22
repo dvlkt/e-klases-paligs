@@ -1,3 +1,7 @@
+html .settings-container .announcement,
+html .settings-container .pupils-wrap {
+	background: none;
+}
 html .settings-container .announcement .container,
 html .settings-container .announcement .container a.prolong {
 	font-size: 15px;
