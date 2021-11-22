@@ -173,4 +173,61 @@ window.addEventListener(`pageLoaded`, () => {
 			}, 200);
 		});
 	}
+
+	/*
+		Greeting open/close animation
+	*/
+	chrome.storage.sync.get([`shouldShowSetupModal`], (res) => {
+		if (res.shouldShowSetupModal) {
+			chrome.storage.sync.set({ shouldShowSetupModal: false });
+
+			let greetingsModalElement = document.querySelector(`.greetings-modal`);
+			let modalBgElement = document.querySelector(`.modal-background`);
+			let greetingsModalCloseElement = document.querySelector(`.greetings-modal .modal-close`);
+			let greetingsModalBtnElement = document.querySelector(`.greetings-modal .modal-button`);
+
+			greetingsModalElement.style.display = `block`;
+			modalBgElement.style.display = `block`;
+
+			greetingsModalElement.style.height = `${greetingsModalElement.children[0].children[0].children[0].clientHeight}px`;
+			greetingsModalElement.style.top = `${greetingsModalElement.children[0].children[0].children[0].clientHeight / 2}px`;
+
+			setTimeout(() => {
+				greetingsModalElement.style.opacity = `1`;
+				greetingsModalElement.style.transform = `scale(1.0)`;
+				modalBgElement.style.opacity = `0.5`;
+			}, 50);
+
+			greetingsModalBtnElement.addEventListener(`click`, () => {
+				greetingsModalElement.style.opacity = `0`;
+				greetingsModalElement.style.transform = `scale(0.75)`;
+				modalBgElement.style.opacity = `0`;
+
+				setTimeout(() => {
+					greetingsModalElement.style.display = `none`;
+					modalBgElement.style.display = `none`;
+				}, 200);
+			});
+			greetingsModalCloseElement.addEventListener(`click`, () => {
+				greetingsModalElement.style.opacity = `0`;
+				greetingsModalElement.style.transform = `scale(0.75)`;
+				modalBgElement.style.opacity = `0`;
+
+				setTimeout(() => {
+					greetingsModalElement.style.display = `none`;
+					modalBgElement.style.display = `none`;
+				}, 200);
+			});
+			modalBgElement.addEventListener(`click`, () => {
+				greetingsModalElement.style.opacity = `0`;
+				greetingsModalElement.style.transform = `scale(0.75)`;
+				modalBgElement.style.opacity = `0`;
+
+				setTimeout(() => {
+					greetingsModalElement.style.display = `none`;
+					modalBgElement.style.display = `none`;
+				}, 200);
+			});
+		}
+	});
 });

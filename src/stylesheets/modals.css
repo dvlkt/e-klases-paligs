@@ -455,3 +455,42 @@ html .Modal__Body .Section .Section__Chunk .TestReportButton:hover {
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 	filter: brightness(0.9);
 }
+
+/*
+	Greeting modal
+*/
+html .greetings-modal h3 {
+	font-family: "Inter", sans-serif;
+	font-size: 24px;
+	color: var(--title-color);
+	text-align: left;
+}
+html .greetings-modal p {
+	font-family: "Inter", sans-serif;
+	font-size: 15px;
+	line-height: 18px;
+}
+html .greetings-modal b {
+	font-family: "Inter", sans-serif;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 18px;
+	text-align: center;
+	display: block;
+	width: 100%;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .greetings-modal ul {
+	list-style-type: disc;
+	margin-left: 15px;
+}
+html .greetings-modal ul li {
+	font-size: 15px;
+	line-height: 18px;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .greetings-modal .modal-button {
+	width: 200px;
+}

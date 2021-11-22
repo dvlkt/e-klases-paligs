@@ -52,6 +52,7 @@
 				"tweaks/profilePicture.js",
 				"tweaks/faq.js",
 				"tweaks/titles.js",
+				"tweaks/greetingModal.js",
 				"tweaks/screenshotMode.js",
 				"tweaks/consoleWarning.js",
 				"analytics/diary.js",
