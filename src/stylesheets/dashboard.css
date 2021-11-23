@@ -258,8 +258,9 @@ html .dashboard-widget-col.widget-recent .active,
 html .dashboard-widget-col.widget-recent .active:hover {
 	background: var(--background-middle-color);
 }
-html .dashboard-widget-col.widget-recent .widgets-switcher-item .widget-count {
-	font-family: 'Inter', sans-serif;
+html .dashboard-widget-col.widget-recent .widgets-switcher-item .widget-count,
+html .dashboard-widget .widget-header .widget-count {
+	font-family: "Inter", sans-serif;
 	font-weight: bold;
 	color: var(--theme-accent-color);
 	background: var(--theme-color);

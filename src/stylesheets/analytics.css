@@ -61,6 +61,9 @@ html .filter-wrap .journal-type a:last-of-type {
 	border-right: 0;
 }
 @media only screen and (max-width: 767px) {
+	html .nav-tabs.hidden-xs {
+		display: block !important;
+	} 
 	html .filter-wrap {
 		background: var(--background-middle-color);
 		box-shadow: 0 4px 10px -3px var(--shadow-color);
@@ -350,13 +353,28 @@ html .analytics-ratings-container h3.group-title::after {
 	html .analytics-ratings-table-intro .analytics-ratings-table-intro-middle.analytics-ratings-table-intro-left {
 		border-bottom: 4px solid #00000020;
 	}
+	html .analytics-ratings-table-intro .analytics-ratings-table-intro-left.analytics-ratings-table-intro-right span,
+	html .analytics-ratings-table-intro .analytics-ratings-table-intro-middle.analytics-ratings-table-intro-right span, 
+	html .analytics-ratings-table-intro .analytics-ratings-table-intro-right.analytics-ratings-table-intro-right span {
+		font-size: 15px;
+	}
 	html .switch-block-with-order-text {
 		width: 100%;
 	}
 	html .ratings-orderby-options .title,
 	html .analytics-ratings-container h3.group-title,
 	html .analytics-ratings-container .report-wrapper.report-averages h3.group-title {
-		font-size: 20px !important;
+		font-size: 18px !important;
+	}
+	html .analytics-ratings-container .report-wrapper.report-by-subject h3.group-title,
+	html .analytics-ratings-container .report-wrapper.report-averages h3.group-title {
+		background: none;
+	}
+	html .graph-info {
+		border-top: 4px solid #00000020;
+	}
+	html .analytics-report-table-tools .btn {
+		width: 60%;
 	}
 }
 

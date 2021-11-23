@@ -435,6 +435,7 @@ html .students-journal-header .students-journal-header-links a.print::before {
 html .actual-lessons h2 {
 	font-weight: bold;
 	font-size: 32px;
+	line-height: 35px;
 	user-select: none;
 	-webkit-user-drag: none;
 }
