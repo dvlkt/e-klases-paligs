@@ -1,7 +1,8 @@
 const applyLogos = () => {
-	chrome.storage.sync.get(`theme`, (res) => {
+	chrome.storage.sync.get([`theme`], async (res) => {
 		let logoTheme = res.theme.name === `dark` ? `dark` : `light`;
-		if (isAHolidayToday()) {
+		let isAHolidayTodayValue = await isAHolidayToday();
+		if (isAHolidayTodayValue) {
 			logoTheme = `dark`;
 		}
 
@@ -29,7 +30,7 @@ const applyLogos = () => {
 }
 
 const applyFavicons = () => {
-	chrome.storage.sync.get(`theme`, (res) => {
+	chrome.storage.sync.get([`theme`], (res) => {
 		let isBW = document.querySelector(`.ekl__header`) !== null; // As far as I can tell, this element only exists in the homepage
 		// This is to make the icon black and white when logged out
 

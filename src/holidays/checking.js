@@ -53,11 +53,16 @@ const isJaniToday = async () => {
 	return false;
 }
 
-const isAHolidayToday = () => {
-	if (isChristmasToday() ||
-		isNewYearToday() ||
-		isPDLToday() ||
-		isJaniToday()) {
+const isAHolidayToday = async () => {
+	let isChristmasTodayValue = await isChristmasToday();
+	let isNewYearTodayValue = await isNewYearToday();
+	let isPDLTodayValue = await isPDLToday();
+	let isJaniTodayValue = await isJaniToday();
+
+	if (isChristmasTodayValue ||
+		isNewYearTodayValue ||
+		isPDLTodayValue ||
+		isJaniTodayValue) {
 
 		return true;
 	}

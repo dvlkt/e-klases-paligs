@@ -24,8 +24,23 @@ const loadCornerRoundness = () => {
 		document.querySelector(`:root`).style.setProperty(`--corner-roundness`, res.cornerRoundness);
 	});
 }
+
 loadTheme();
 loadCornerRoundness();
+
+window.addEventListener(`pageLoaded`, () => {
+	chrome.storage.sync.get([`themeColor`], (res) => {
+		trySettingLogoColor(res.themeColor);
+	});
+});
+const trySettingLogoColor = (themeColor) => {
+	if (document.querySelector(`.header-logo`) !== null) {
+		setLogoHueToThemeColor(themeColor);
+	} else {
+		setTimeout(() => trySettingLogoColor(themeColor), 5);
+	}
+}
+
 
 /*
 	Set the default theme if it hasn't been set
@@ -42,7 +57,7 @@ chrome.storage.sync.get([`theme`, `themeColor`, `cornerRoundness`], (res) => {
 
 			});
 	}
-	if (res.themeColor === undefined || res.themeColor[0] !== `#`) {
+	if (res.themeColor === undefined || (res.themeColor[0] !== `#` && res.themeColor !== `rainbow`)) {
 		chrome.storage.sync.set({ themeColor: `#0088e3`}, () => {
 			loadTheme();
 		});
