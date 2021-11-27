@@ -1,45 +1,44 @@
 let isRainbowActivated = false;
-let rainbowHueValue = 0;
 
 export const loadTheme = () => {
-	chrome.storage.sync.get([`theme`, `themeColor`, `cornerRoundness`], (res) => {
-		if (res.theme.name === `dark`) {
-			document.body.className = `dark-theme`;
+	chrome.storage.sync.get([`themeData`, `themeColor`, `cornerRadius`], (res) => {
+		// Apply the theme
+		chrome.storage.sync.get([`themeData`], (res) => {
+			let root = document.querySelector(`:root`);
 
-			for (let element of document.querySelectorAll(`img`)) {
-				element.src = element.src.replaceAll(`light`, `dark`);
+			for (let key in res.themeData.colors) {
+				root.style.setProperty(`--${key}-color`, res.themeData.colors[key]);
 			}
-		} else {
-			document.body.className = `light-theme`;
 
-			for (let element of document.querySelectorAll(`img`)) {
-				element.src = element.src.replaceAll(`dark`, `light`);
+			if (res.themeData.variants.logo === `dark`) {
+				for (let element of document.querySelectorAll(`img`)) {
+					element.src = element.src.replaceAll(`light`, `dark`);
+				}
+			} else {
+				for (let element of document.querySelectorAll(`img`)) {
+					element.src = element.src.replaceAll(`dark`, `light`);
+				}
 			}
-		}
+		});
 
+		// Apply the theme color
 		if (res.themeColor !== `rainbow`) {
 			isRainbowActivated = false;
 			document.querySelector(`:root`).style.setProperty(`--theme-color`, res.themeColor);
 		} else {
 			isRainbowActivated = true;
-			rainbowHueValue = 0;
 		}
 
-
-		document.querySelector(`:root`).style.setProperty(`--corner-roundness`, res.cornerRoundness);
+		// Apply the corner radius
+		document.querySelector(`:root`).style.setProperty(`--corner-radius`, `${res.cornerRadius}px`);
 	});
 }
 loadTheme();
 
 setInterval(() => {
 	if (isRainbowActivated) {
+		let rainbowHueValue = Math.floor(Date.now() / 50) % 360;
 		document.querySelector(`:root`).style.setProperty(`--theme-color`, `hsl(${rainbowHueValue}, 100%, 50%)`);
-
-		if (rainbowHueValue === 360) {
-			rainbowHueValue = 0;
-		} else {
-			rainbowHueValue++;
-		}
 	}
 }, 20);
 
@@ -48,7 +47,7 @@ setInterval(() => {
 	Update the theme whenever it's changed in the popup
 */
 chrome.runtime.onMessage.addListener((request) => {
-	if (request === `loadTheme`) {
+	if (request === `updateTheme`) {
 		loadTheme();
 	}
 });

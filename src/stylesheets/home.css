@@ -1,7 +1,7 @@
 html .login-form {
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	padding: 0;
 }
@@ -9,7 +9,7 @@ html .login-form-header {
 	background: var(--theme-color);
 	text-align: center;
 	padding: 5px;
-	border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
+	border-radius: var(--corner-radius) var(--corner-radius) 0 0;
 	cursor: default;
 	user-select: none;
 }
@@ -38,14 +38,14 @@ html .form-content .form-control {
 	color: var(--paragraph-color);
 	font-family: "Inter", sans-serif;
 	font-size: 15px;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	padding: 5px;
 	padding-left: 8px;
 	border: 0;
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
 html .login-form .dummy-placeholder {
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	font-family: 'Inter', sans-serif;
 }
 html .login-form .btn-default {
@@ -54,7 +54,7 @@ html .login-form .btn-default {
 	font-weight: 500;
 	font-family: 'Inter', sans-serif;
 	font-size: 15px;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	padding: 5px;
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s box-shadow, .2s filter;
@@ -194,7 +194,7 @@ html .main-menu-item.active::after {
 	display: block;
 	width: 100%;
 	height: 6px;
-	border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
+	border-radius: var(--corner-radius) var(--corner-radius) 0 0;
 	background: var(--theme-color);
 	transition: .2s bottom;
 }
@@ -231,13 +231,13 @@ html .secondary-menu .main-menu-item a {
 	transition: none;
 }
 html .secondary-menu .main-menu-item.active::after {
-	border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
+	border-radius: var(--corner-radius) var(--corner-radius) 0 0;
 }
 html .secondary-menu {
 	background: var(--background-middle-color);
 	margin-bottom: 1rem;
 	padding: 10px 0 0 15px;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	user-select: none;
 	-webkit-user-drag: none;
@@ -260,7 +260,7 @@ html h2.section-title {
 }
 @media (max-width: 767px) {
 	html .main-header {
-		border-radius: 0 0 var(--corner-roundness) var(--corner-roundness);
+		border-radius: 0 0 var(--corner-radius) var(--corner-radius);
 		box-shadow: 2px 4px 7px -3px var(--shadow-color);
 		border-bottom: 0;
 	}
@@ -273,7 +273,7 @@ html .primary-article .additional-article-item .image,
 html .primary-article .article-item .image,
 html .additional-article-item .image, .article-item .image,
 html .date-item .date-item-image {
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
 html .primary-article .additional-article-item h3,
@@ -292,7 +292,7 @@ html .article-item h3 {
 }
 html .additional-article-item .article-metas,
 html .article-item .article-metas {
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	margin-top: 5px;
 	position: static;
 	left: 0;
@@ -343,7 +343,7 @@ html .article-item .article-metas .tags li {
 	background: var(--theme-color);
 	color: var(--theme-accent-color);
 	padding: 2px 4px 2px 4px;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	margin-bottom: 5px;
 	font-size: 11px;
 	transition: .2s opacity;
@@ -355,7 +355,7 @@ html .article-item .article-metas .tags li:hover {
 @media only screen and (max-width: 1042px) {
 	html .additional-article-item .image,
 	html .article-item .image {
-		border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
+		border-radius: var(--corner-radius) var(--corner-radius) 0 0;
 	}
 }
 @media only screen and (min-width: 768px) {
@@ -382,7 +382,7 @@ html .btn.load-more {
 	text-align: center;
 	padding: 8px;
 	border: 0;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	margin: auto;
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	user-select: none;
@@ -419,7 +419,7 @@ html .article-header .header-content h1 {
 html .article-header .header-content .date {
 	width: 100%;
 	font-size: 11px;
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	margin-bottom: 5px;
 	user-select: none;
 	-webkit-user-drag: none;
@@ -434,7 +434,7 @@ html .article-header .header-content .tags li {
 	padding-left: 5px;
 	padding-right: 5px;
 	font-size: 11px;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	transition: .2s opacity;
 }
 html .article-header .header-content .tags li:hover {
@@ -491,7 +491,7 @@ html .article-header .header-image .image-wrapper img,
 html .article-content .image img,
 html .article-content img,
 html .article-body iframe {
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
 html .article-content .article-body img {
@@ -503,7 +503,7 @@ html .article-header .header-image .image-wrapper img {
 }
 html .article-header .header-image .image-credit,
 html .article-content .image-credit {
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	font-size: 11px;
 	margin-top: 5px;
 	margin-bottom: 5px;
@@ -580,7 +580,7 @@ html .comments-top h1 {
 html .btn.add-comment,
 html .btn.btn-send {
 	background: var(--theme-color);
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s filter, .2s box-shadow;
 }
@@ -609,7 +609,7 @@ html .comment-item .comment-header {
 }
 html .comment-item .comment-header .author,
 html .comment-item .comment-header .date {
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	font-size: 15px;
 	margin-right: 2px;
 	transition: .2s opacity;
@@ -625,7 +625,7 @@ html .comment-item .comment-header .author::after {
 	margin-bottom: 3px;
 	margin-left: 5px;
 	border-radius: 50%;
-	background: var(--low-priority-text-color);
+	background: var(--low-priority-color);
 }
 html .comment-item .comment-header .date:hover {
 	opacity: 0.7;
@@ -705,7 +705,7 @@ html .comments-form-holder .form-control {
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
 	border: 0;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	font-size: 15px;
 	font-family: "Inter", sans-serif;
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
@@ -740,7 +740,7 @@ html .comments-form-holder .form-group.security-check .input-group .input {
 }
 html .comments-form-holder .disclaimer {
 	font-size: 11px;
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	user-select: none;
 	-webkit-user-drag: none;
 }
@@ -785,7 +785,7 @@ html .faq-topics-menu .faq-topic-item:hover {
 }
 html .faq-topics-menu ul > .faq-topic-item.active {
 	background: var(--background-middle-color);
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	margin-bottom: 10px;
 	transition: .2s filter, .2s box-shadow;
@@ -802,7 +802,7 @@ html .faq-topics-menu .faq-topic-item.active a {
 }
 html .faq-item {
 	background: var(--background-middle-color);
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	padding-top: 1px;
 	border: 0;
@@ -816,7 +816,7 @@ html .faq-item a h4 {
 }
 html .emer-num-block {
 	background: var(--background-middle-color);
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
 html .emergency-title,
@@ -838,7 +838,7 @@ html .emer-num-block .emer-num-text {
 	-webkit-user-drag: none;
 }
 html .emer-num-block .emer-num-or {
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	font-family: "Inter", sans-serif;
 	font-size: 18px;
 	font-weight: 500;
@@ -892,7 +892,7 @@ html .search-holder .search-field-wrap,
 html .search-holder-inner .search-field-wrap {
 	background: var(--background-middle-color);
 	border: 0;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 }
 html .search-holder .search-field,
@@ -908,7 +908,7 @@ html .search-holder-inner .search-field-wrap::after {
 }
 html .search-holder .search-field:focus::placeholder,
 html .search-holder-inner .search-field:focus::placeholder {
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 }
 html .search-holder .btn-search-big,
 html .search-holder-inner .btn-search-big {
@@ -941,13 +941,13 @@ html .toggle-search-inner .close-search {
 
 /* Rules */
 html .toc-modal .modal-dialog {
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	background: var(--background-middle-color);
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 }
 html .toc-modal .modal-content {
 	color: var(--paragraph-color);
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 }
 html .toc-modal .modal-body {
 	box-shadow: none;
@@ -984,12 +984,12 @@ html .modal-header-toc h4.active {
 html .modal-content.modal-login {
 	background: none;
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 }
 html .modal-content.modal-login .modal-body {
 	background: var(--background-middle-color);
 
-	border-radius: 0 0 var(--corner-roundness) var(--corner-roundness);
+	border-radius: 0 0 var(--corner-radius) var(--corner-radius);
 }
 html .modal-header {
 	border: 0;
@@ -1018,7 +1018,7 @@ html .modal-options-item {
 	background: var(--background-front-color);
 	color: var(--paragraph-color);
 	border: 0;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 	transition: .2s filter;
 }
@@ -1116,7 +1116,7 @@ html .menu-type-3 .list li a::after {
 	width: 100%;
 	height: 6px;
 	background: var(--theme-color);
-	border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
+	border-radius: var(--corner-radius) var(--corner-radius) 0 0;
 	transition: .2s bottom;
 }
 html .menu-type-3 .list li a:hover::after {
@@ -1128,7 +1128,7 @@ html .menu-type-3 .list li button {
 	font-family: "Inter", sans-serif;
 	font-size: 15px;
 	font-weight: 500;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s filter, .2s box-shadow;
 }
@@ -1157,7 +1157,7 @@ html .btn.btn-type-1,
 html .btn.btn-progress-primary {
 	background: var(--theme-color);
 	color: var(--theme-accent-color);
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	font-family: "Inter", sans-serif;
 	font-size: 15px;
 	font-weight: 500;
@@ -1176,7 +1176,7 @@ html .btn.btn-progress-primary .progress {
 }
 html .card {
 	background: var(--background-middle-color);
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
 html .card .card-header {

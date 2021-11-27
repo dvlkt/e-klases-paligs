@@ -2,19 +2,19 @@
 html .filter-wrap .container {
 	background: none;
 	box-shadow: none;
-	border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
+	border-radius: var(--corner-radius) var(--corner-radius) 0 0;
 }
 html .filter-wrap .filter-block label {
 	font-size: 15px;
 	font-weight: 500;
 	font-family: "Inter", sans-serif;
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	user-select: none;
 	-webkit-user-drag: none;
 }
 html .select2-container--default .select2-selection--single,
 html .select2-container--default .select2-selection--single .select2-selection__rendered {
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
 	border: 0;
@@ -54,10 +54,10 @@ html .filter-wrap .journal-type a.active {
 	border: 0;
 }
 html .filter-wrap .journal-type a:first-of-type {
-	border-radius: var(--corner-roundness) 0 0 var(--corner-roundness);
+	border-radius: var(--corner-radius) 0 0 var(--corner-radius);
 }
 html .filter-wrap .journal-type a:last-of-type {
-	border-radius: 0 var(--corner-roundness) var(--corner-roundness) 0;
+	border-radius: 0 var(--corner-radius) var(--corner-radius) 0;
 	border-right: 0;
 }
 @media only screen and (max-width: 767px) {
@@ -67,7 +67,7 @@ html .filter-wrap .journal-type a:last-of-type {
 	html .filter-wrap {
 		background: var(--background-middle-color);
 		box-shadow: 0 4px 10px -3px var(--shadow-color);
-		border-radius: 0 0 var(--corner-roundness) var(--corner-roundness);
+		border-radius: 0 0 var(--corner-radius) var(--corner-radius);
 	}
 	html .filter-wrap .filter-button {
 		background-color: var(--background-middle-color);
@@ -133,7 +133,7 @@ html .analyitcs-ratings-chart-horzontal path[stroke="#8e8e8e"] {
 	stroke-width: 4px;
 }
 html .analyitcs-ratings-chart-horzontal text[fill="#232323"] {
-	fill: var(--low-priority-text-color);
+	fill: var(--low-priority-color);
 	font: 13px 'Inter', sans-serif;
 }
 html .analyitcs-ratings-chart-horzontal text[fill="#C48C8F"] {
@@ -214,7 +214,7 @@ html .ratings-orderby-options .orderby-text {
 	font-family: "Inter", sans-serif;
 	font-size: 15px;
 	font-weight: 500;
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	user-select: none;
 	-webkit-user-drag: none;
 }
@@ -222,7 +222,7 @@ html section .section-switch {
 	border: 0;
 	background: none;
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 }
 html section .section-switch .section-switch-option {
 	font-family: "Inter", sans-serif;
@@ -239,10 +239,10 @@ html section .section-switch .section-switch-option.active {
 	background: var(--theme-color);
 }
 html section .section-switch .section-switch-option:first-child {
-	border-radius: var(--corner-roundness) 0 0 var(--corner-roundness);
+	border-radius: var(--corner-radius) 0 0 var(--corner-radius);
 }
 html section .section-switch .section-switch-option:last-child {
-	border-radius: 0 var(--corner-roundness) var(--corner-roundness) 0;
+	border-radius: 0 var(--corner-radius) var(--corner-radius) 0;
 	user-select: none;
 	-webkit-user-drag: none;
 }
@@ -262,7 +262,7 @@ html .scroll-to-top.home-work {
 }
 html .panel-group .panel-default .panel-heading {
 	border: 0 !important;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	background: none;
 	color: var(--paragraph-color);
 }
@@ -279,7 +279,7 @@ html .panel-group .panel-arrow {
 }
 html .panel-group .panel-default {
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	background: var(--background-middle-color);
 	border: 0 !important;
 }
@@ -290,7 +290,7 @@ html .panel-default .panel-heading + .panel-collapse .panel-body {
 }
 html .analytics-rating-tables table {
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 }
 html .analytics-rating-tables table thead {
 	box-shadow: none;
@@ -298,7 +298,7 @@ html .analytics-rating-tables table thead {
 html .analytics-rating-tables table thead td {
 	font-family: "Inter", sans-serif;
 	background: var(--background-middle-color);
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	border: 0;
 	font-size: 15px;
 	font-weight: 500;
@@ -320,16 +320,16 @@ html .analytics-rating-tables td:nth-child(odd) {
 	background: var(--background-middle-dark-color);
 }
 html .analytics-rating-tables table thead td:first-child {
-	border-top-left-radius: var(--corner-roundness);
+	border-top-left-radius: var(--corner-radius);
 }
 html .analytics-rating-tables table thead td:last-child {
-	border-top-right-radius: var(--corner-roundness);
+	border-top-right-radius: var(--corner-radius);
 }
 html .analytics-rating-tables table tbody tr:last-child td:first-child {
-	border-bottom-left-radius: var(--corner-roundness);
+	border-bottom-left-radius: var(--corner-radius);
 }
 html .analytics-rating-tables table tbody tr:last-child td:last-child {
-	border-bottom-right-radius: var(--corner-roundness);
+	border-bottom-right-radius: var(--corner-radius);
 }
 html .analytics-rating-tables td.higher,
 html .analytics-rating-tables td.lower {
@@ -415,33 +415,33 @@ html .lessons-topics-wrap {
 }
 html .lessons-topics-wrap .container,
 html .analytic .no-data .container {
-	border-radius: 0 0 var(--corner-roundness) var(--corner-roundness);
+	border-radius: 0 0 var(--corner-radius) var(--corner-radius);
 }
 html .lesson-topics-table,
 html .behavioral-table {
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
 html .lesson-topics-table tr.thead td.first-column,
 html .behavioral-table tr.thead td.first-column {
-	border-top-left-radius: var(--corner-roundness);
+	border-top-left-radius: var(--corner-radius);
 }
 html .lesson-topics-table tr.thead td.fourth-column,
 html .behavioral-table tr.thead td.fourth-column {
-	border-top-right-radius: var(--corner-roundness);
+	border-top-right-radius: var(--corner-radius);
 }
 html .lesson-topics-table tbody tr:nth-last-child(2) td:first-child,
 html .behavioral-table tbody tr:nth-last-child(2) td:first-child {
-	border-bottom-left-radius: var(--corner-roundness);
+	border-bottom-left-radius: var(--corner-radius);
 }
 html .lesson-topics-table tbody tr:nth-last-child(2) td:last-child,
 html .behavioral-table tbody tr:nth-last-child(2) td:last-child {
-	border-bottom-right-radius: var(--corner-roundness);
+	border-bottom-right-radius: var(--corner-radius);
 }
 html .lesson-topics-table tr.thead td,
 html .behavioral-table tr.thead td {
 	background: var(--background-middle-color);
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	font-family: "Inter", sans-serif;
 	font-size: 15px;
 	font-weight: 500;
@@ -486,18 +486,18 @@ html .data-marks-detailed-wrap .container .marks-detailed {
 html .detailed-item {
 	border: 0;
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	background: var(--background-middle-color);
 }
 html .lesson .detailed-header {
 	background: var(--background-middle-color);
-	border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
+	border-radius: var(--corner-radius) var(--corner-radius) 0 0;
 }
 html .lesson.test .detailed-header .static,
 html .detailed-header .item-type,
 html .detailed-item .additional-data label {
 	font-size: 15px;
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	font-weight: 500;
 	font-family: "Inter", sans-serif;
 }
@@ -555,7 +555,7 @@ html .cell-item.active:hover {
 	top: 0;
 	border: 0;
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	background: var(--background-middle-dark-color);
 	transition: .2s background, .2s filter, .2s box-shadow;
 	user-select: none;
@@ -580,11 +580,11 @@ html .cell-item:hover .marks-header {
 	background: none;
 	border: 0;
 	padding-top: 0;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	transition: .2s filter, .2s box-shadow;
 }
 html .cell-item .marks-header .inner {
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	background: none !important;
 	box-shadow: none;
 	transition: .2s filter, .2s box-shadow;
@@ -603,13 +603,13 @@ html .student-journal-lessons .lesson-title .explanation-line {
 html .actual-lessons .lesson-title .date,
 html .student-journal-lessons .lesson-title .date {
 	font-family: 'Inter', sans-serif;
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	text-transform: uppercase;
 	font-weight: bold;
 }
 html .actual-lessons .lesson-title .top-mark,
 html .student-journal-lessons .lesson-title .top-mark {
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 }
 html .data-pane-wrap {
 	background: none;
@@ -650,7 +650,7 @@ html .cell-item:hover .marks-body span {
 @media only screen and (max-width: 767px) {
 	html .info-pane-wrap .container,
 	html .data-pane-wrap .container {
-		border-radius: var(--corner-roundness);
+		border-radius: var(--corner-radius);
 		box-shadow: 0 4px 10px -3px var(--shadow-color);
 		padding-bottom: 10px;
 		padding-top: 10px;
@@ -660,7 +660,7 @@ html .cell-item:hover .marks-body span {
 	}
 	html .lessons-topics-wrap .container,
 	html .analytic .no-data .container {
-		border-radius: var(--corner-roundness);
+		border-radius: var(--corner-radius);
 		box-shadow: 0 4px 10px -3px var(--shadow-color);
 	}
 }
@@ -718,7 +718,7 @@ html .delay-info .delays-detailed-table-holder {
 }
 html .delay-info .delays-detailed-table-holder {
 	margin-top: 0;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 }
 html .delay-info .delays-detailed-table-holder .delays-detailed-table-first-column {
@@ -736,11 +736,11 @@ html .delay-info .delays-detailed-table-holder .delays-detailed-table-first-colu
 }
 html .delay-info .delays-detailed-table-holder .delays-detailed-table-first-column tbody tr:last-child td {
 	border-bottom: 0;
-	border-bottom-left-radius: var(--corner-roundness);
+	border-bottom-left-radius: var(--corner-radius);
 }
 html .delay-info .delays-detailed-table-holder .delays-detailed-table-first-column thead td {
-	color: var(--low-priority-text-color);
-	border-top-left-radius: var(--corner-roundness);
+	color: var(--low-priority-color);
+	border-top-left-radius: var(--corner-radius);
 	padding-top: 10px;
 }
 html .delay-info thead td,
@@ -758,7 +758,7 @@ html .delay-info thead td {
 	font-size: 15px;
 	font-family: "Inter", sans-serif;
 	font-weight: 500;
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	user-select: none;
 	-webkit-user-drag: none;
 }
@@ -772,14 +772,14 @@ html .delay-info .delays-detailed-table table td:nth-child(even) {
 	background: var(--background-middle-dark-color);
 }
 html .delay-info .delays-detailed-table thead td:last-child {
-	border-top-right-radius: var(--corner-roundness);
+	border-top-right-radius: var(--corner-radius);
 }
 html .delay-info .delays-detailed-table tbody tr:last-child td:last-child {
-	border-bottom-right-radius: var(--corner-roundness);
+	border-bottom-right-radius: var(--corner-radius);
 }
 html .delays-documents {
 	border: 0;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 }
 html .delay-info .delays-documents thead tr {
@@ -796,22 +796,22 @@ html .delay-info .delays-documents td:nth-child(odd) {
 	background: var(--background-middle-dark-color);
 }
 html .delay-info .delays-documents thead td:first-child {
-	border-top-left-radius: var(--corner-roundness);
+	border-top-left-radius: var(--corner-radius);
 }
 html .delay-info .delays-documents thead td:last-child {
-	border-top-right-radius: var(--corner-roundness);
+	border-top-right-radius: var(--corner-radius);
 }
 html .delay-info .delays-documents tbody tr:last-child td:first-child {
-	border-bottom-left-radius: var(--corner-roundness);
+	border-bottom-left-radius: var(--corner-radius);
 }
 html .delay-info .delays-documents tbody tr:last-child td:last-child {
-	border-bottom-right-radius: var(--corner-roundness);
+	border-bottom-right-radius: var(--corner-radius);
 }
 html .delays-legend {
 	margin-bottom: 0;
 }
 html .delays-legend .legend-item .legend-icon {
-	border-radius: calc(var(--corner-roundness) / 2);
+	border-radius: calc(var(--corner-radius) / 2);
 	background: var(--background-middle-color);
 	border: 0;
 	font-size: 15px;
@@ -842,7 +842,7 @@ html .delays-legend .legend-title {
 	font-size: 13px;
 	font-family: 'Inter', sans-serif;
 	font-weight: bold;
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	text-transform: uppercase;
 	margin-bottom: 5px;
 }
@@ -850,7 +850,7 @@ html .delay-mobile-details .delay-subject,
 html .delay-mobile-details .delay-document {
 	border: 0;
 	background: var(--background-middle-color);
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 }
 html .delay-mobile-details .delay-subject thead td,
@@ -863,7 +863,7 @@ html .delay-mobile-details .delay-document thead td {
 }
 html .delay-mobile-details .delay-subject thead td:nth-child(2) {
 	text-transform: uppercase;
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 }
 html .delay-mobile-details .delay-subject tbody td,
 html .delay-mobile-details .delay-document tbody td:first-child {
@@ -871,7 +871,7 @@ html .delay-mobile-details .delay-document tbody td:first-child {
 	font-size: 13px;
 	font-weight: bold;
 	text-transform: uppercase;
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 }
 html .delay-mobile-details .delay-subject tbody td:nth-child(2) {
 	text-transform: none;
@@ -923,7 +923,7 @@ html .analytics-pupilmarks-intro .analytics-ratings-table-intro-left {
 	width: 45% !important;
 }
 html .analytics-pupilmarks-intro .analytics-ratings-table-intro-right {
-	border-radius: 0 var(--corner-roundness) var(--corner-roundness) 0;
+	border-radius: 0 var(--corner-radius) var(--corner-radius) 0;
 }
 html a.print.print-button::before {
 	background: var(--theme-color);
@@ -936,7 +936,7 @@ html .report-container .no-data {
 html .print-table {
 	background: none;
 	border: 0;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
 html .print-table tr {
@@ -980,34 +980,34 @@ html .print-table th:nth-child(2n+1) {
 	font-size: 15px;
 }
 html .print-table th span {
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 }
 html .print-table th:first-child {
-	border-top-left-radius: var(--corner-roundness);
+	border-top-left-radius: var(--corner-radius);
 }
 html .print-table th:last-child {
-	border-top-right-radius: var(--corner-roundness);
+	border-top-right-radius: var(--corner-radius);
 }
 html .print-table tr:last-child td:first-child {
-	border-bottom-left-radius: var(--corner-roundness);
+	border-bottom-left-radius: var(--corner-radius);
 }
 html .print-table tr:last-child td:last-child {
-	border-bottom-right-radius: var(--corner-roundness);
+	border-bottom-right-radius: var(--corner-radius);
 }
 html .analytics-report-table-holder {
 	border-top: 0;
 }
 html .analytics-report-table-holder .analytics-report-table-first-column {
-	border-radius: var(--corner-roundness) 0 0 var(--corner-roundness);
+	border-radius: var(--corner-radius) 0 0 var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
 html .analytics-report-table-holder .analytics-report-table-first-column .table-header td {
 	border: 0;
-	border-top-left-radius: var(--corner-roundness);
+	border-top-left-radius: var(--corner-radius);
 	font-size: 15px;
 	font-family: "Inter", sans-serif;
 	font-weight: 500;
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	background: var(--background-middle-dark-color);
 	padding: 0;
 	text-align: center;
@@ -1020,7 +1020,7 @@ html .analytics-report-table-holder .analytics-report-table-first-column td {
 	background: var(--background-middle-dark-color);
 	border: 0;
 	font-size: 15px;
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	padding-left: 5px !important;
 	user-select: none;
 	-webkit-user-drag: none;
@@ -1034,12 +1034,12 @@ html .analytics-report-table-holder tr.subsection-header {
 	border-top: 4px solid #00000020 !important;
 }
 html .analytics-report-table-holder .analytics-report-table-first-column tbody tr:last-child td {
-	border-bottom-left-radius: var(--corner-roundness);
+	border-bottom-left-radius: var(--corner-radius);
 }
 html .analytics-report-table { /* Why the poop is it flipped over??? */
 	margin-bottom: 20px;
 	border: 0;
-	border-radius: 0 var(--corner-roundness) var(--corner-roundness) 0;
+	border-radius: 0 var(--corner-radius) var(--corner-radius) 0;
 	box-shadow: 2px -3px 5px -3px var(--shadow-color);
 }
 html .analytics-report-table table {
@@ -1079,7 +1079,7 @@ html .analytics-report-table table thead tr {
 }
 html .analytics-report-table table thead td {
 	font-family: "Inter", sans-serif;
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	font-size: 15px;
 	font-weight: 500;
 	padding-top: 1px;
@@ -1102,7 +1102,7 @@ html .analytics-report-table table tbody .score:hover {
 }
 html .analytics-form-holder .form-group .control-label { 
 	font-family: "Inter", sans-serif;
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	font-size: 15px;
 	font-weight: 500;
 	padding-bottom: 0;
@@ -1114,7 +1114,7 @@ html .analytics-ratings-table-intro .checkbox {
 html .analytics-report-table table tbody .negative {
 	background: var(--red-color);
 	color: var(--red-accent-color);
-	border-radius: calc(var(--corner-roundness) / 2);
+	border-radius: calc(var(--corner-radius) / 2);
 }
 html .analytics-report-container .print-block {
 	font-size: 15px;

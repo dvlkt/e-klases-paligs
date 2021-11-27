@@ -9,7 +9,7 @@ html footer a {
 	-webkit-user-drag: none;
 }
 html footer .copyright {
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	cursor: default;
 	user-select: none;
 	-webkit-user-drag: none;
@@ -24,7 +24,7 @@ html footer .footer-container .go-top-col .go-top {
 	font-size: 15px;
 	padding: 10px;
 	padding-left: 30px;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s filter, .2s box-shadow;
 	cursor: pointer;

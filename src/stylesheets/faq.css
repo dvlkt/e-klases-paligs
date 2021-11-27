@@ -23,7 +23,7 @@ html .questions-wrapper .section-title {
 }
 html .questions-wrapper .aq-wrapper .faq-items .faq-item {
 	background: var(--background-middle-color);
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	user-select: none;
 	-webkit-user-drag: none;
@@ -121,7 +121,7 @@ html .questions-wrapper.detailed .categories-wrapper .faq-topics-menu ul li:hove
 }
 html .questions-wrapper.detailed .categories-wrapper .faq-topics-menu ul li.active {
 	background: var(--background-middle-color);
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s filter, .2s box-shadow;
 }
@@ -179,7 +179,7 @@ html .faq-container .faq-content .container {
 }
 html .faq-container .faq-content .faq-item {
 	background: var(--background-middle-color);
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	border: 0;
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
@@ -199,7 +199,7 @@ html .faq-container .faq-content .faq-item-title span {
 	-webkit-user-drag: none;
 }
 html .faq-container .faq-content .faq-item-title::after {
-	background: var(--low-priority-text-color);
+	background: var(--low-priority-color);
 	border: 0;
 	width: 20px;
 	height: 20px;

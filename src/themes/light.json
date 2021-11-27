@@ -1,19 +1,23 @@
 {
-    "name": "light",
-    "background-back-color": "#e0e0e8",
-    "background-middle-color": "#f7f7fb",
-    "background-middle-dark-color": "#efeff5",
-    "background-front-color": "#dddde4",
-    "title-color": "#02061a",
-    "paragraph-color": "#000000",
-    "low-priority-text-color": "#00000080",
-    "theme-gradient": "linear-gradient(120deg, #0088e3 0%, #034cad 100%)",
-    "theme-accent-color": "#ffffff",
-    "theme-accent-icon-brightness": "1",
-    "divider-color": "#00000020",
-    "icon-brightness": "0",
-    "shadow-color": "#22222b3d",
-    "red-color": "#eb4545",
-    "red-shadow-color": "#641212a6",
-    "red-accent-color": "#ffffff"
+	"name": "Light",
+	"version": 1,
+	"colors": {
+		"background-back": "#e0e0e8",
+		"background-middle": "#f7f7fb",
+		"background-middle-dark": "#efeff5",
+		"background-front": "#dddde4",
+		"title": "#02061a",
+		"paragraph": "#000000",
+		"low-priority": "#00000080",
+		"solid-divider": "#00000020",
+		"opaque-divider": "#00000020",
+		"shadow": "#22222b3d",
+		"red": "#eb4545",
+		"red-shadow": "#641212a6",
+		"red-accent": "#ffffff"
+	},
+	"variants": {
+		"logo": "light",
+		"favicon": "light"
+	}
 }

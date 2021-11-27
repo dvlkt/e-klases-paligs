@@ -4,7 +4,7 @@ html .students-journal-header {
 html .lessons-table {
 	background: var(--background-middle-dark-color);
 	border: 0;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 0 3px 5px -3px var(--shadow-color);
 }
 html .lessons-table tr {
@@ -19,7 +19,7 @@ html .diary-container .lessons-table thead td {
 }
 html .student-journal-lessons-table-holder .lessons-table thead td,
 html .diary-container .lessons-table thead td {
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	background: var(--background-middle-color);
 	font-weight: 500;
 	font-size: 15px;
@@ -32,16 +32,16 @@ html .diary-container .lessons-table thead td {
 }
 html .student-journal-lessons-table-holder .lessons-table thead td.first-column,
 html .diary-container .lessons-table thead td.first-column {
-	border-top-left-radius: var(--corner-roundness);
+	border-top-left-radius: var(--corner-radius);
 }
 html .student-journal-lessons-table-holder .lessons-table thead td.score,
 html .diary-container .lessons-table thead td.score {
-	border-top-right-radius: var(--corner-roundness);
+	border-top-right-radius: var(--corner-radius);
 }
 html .no-data {
 	background: var(--background-middle-dark-color);
 	text-align: center;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 }
 html .no-data .inform {
 	background: none;
@@ -69,13 +69,13 @@ html .diary-container .lessons-table tbody .title {
 }
 html .student-journal-lessons-table-holder .lessons-table tbody .number,
 html .diary-container .lessons-table tbody .number {
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	font-weight: bold;
 	font-size: 15px;
 }
 html .student-journal-lessons-table-holder .lessons-table tbody .room,
 html .diary-container .lessons-table tbody .room {
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	font-weight: 500;
 	font-size: 15px;
 }
@@ -96,7 +96,7 @@ html .diary-container .lessons-table td.first-column {
 }
 html .lessons-table td .subject-text-draft::before,
 html .student-journal-lessons .lesson-subitem .description .subject-text-draft::before {
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	font-size: 15px;
 }
 html .student-journal-lessons-table-holder .lessons-table tr:last-child td,
@@ -115,11 +115,11 @@ html .lessons-table tbody td .number--lessonNotInDay {
 }
 html .student-journal-lessons-table-holder .lessons-table tbody tr:last-child td:nth-child(1),
 html .diary-container .lessons-table tbody tr:last-child td:nth-child(1) {
-	border-bottom-left-radius: var(--corner-roundness);
+	border-bottom-left-radius: var(--corner-radius);
 }
 html .student-journal-lessons-table-holder .lessons-table tbody tr:last-child td:last-child,
 html .diary-container .lessons-table tbody tr:last-child td:last-child {
-	border-bottom-right-radius: var(--corner-roundness);
+	border-bottom-right-radius: var(--corner-radius);
 }
 html .student-journal-lessons-table-holder .lessons-table a.file,
 html .diary-container .lessons-table a.file {
@@ -144,7 +144,7 @@ html .diary-container .lessons-table span.score {
 	background: var(--background-front-color);
 	font-size: 15px;
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	padding: 10px;
 	font-weight: bold;
 	transition: .2s filter;
@@ -169,7 +169,7 @@ html .lessons-table td:last-of-type span.score.warning:hover {
 }
 html .ThirdPartyEvent--Active {
 	background: var(--background-front-color);
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 }
 html .ThirdPartyEvent__Content {
@@ -181,7 +181,7 @@ html .ThirdPartyEvent__Info {
 html .ThirdPartyEvent--e-klase-video .ThirdPartyEvent__Logo::before,
 html .ThirdPartyEvent__Text,
 html .ThirdPartyEvent__Time {
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 
 	font-weight: bold;
 	text-transform: uppercase;
@@ -215,7 +215,7 @@ html .home-task-answer-widget-container .Widget {
 	background: var(--background-front-color);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	border: 0;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	transition: .2s filter, .2s box-shadow;
 }
 html .home-task-answer-widget-container .Widget:hover {
@@ -234,7 +234,7 @@ html .family-spa .btn,
 html .home-task-answer-modal-container .btn,
 html .home-task-answer-widget-container .Widget .btn,
 html .modal-evaluation-file .btn {
-	border-radius: calc(var(--corner-roundness) / 2);
+	border-radius: calc(var(--corner-radius) / 2);
 	background: var(--theme-color);
 	border: 0;
 	transition: .2s filter, .2s box-shadow;
@@ -293,7 +293,7 @@ html section h2 .actual-lessons-date.active {
 	-webkit-user-drag: none;
 }
 html .student-journal-lessons-table-holder h2 span.hide-in-print {
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	text-transform: none;
 }
 html .students-journal-header .week-selector .week-selector-next,
@@ -316,7 +316,7 @@ html .students-journal-header .week-selector .week-selector-prev:hover {
 html .student-journal-lessons .actual-lessons-item,
 html .actual-lessons .actual-lessons-item {
 	background: var(--background-middle-color);
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s max-height;
 	max-height: 54px;
@@ -333,7 +333,7 @@ html .student-journal-lessons .lesson-subitem .description {
 }
 html .actual-lessons .lesson-subitem .title,
 html .student-journal-lessons .lesson-subitem .title {
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	font-family: 'Inter', sans-serif;
 	font-size: 15px;
 	font-weight: 500;
@@ -341,7 +341,7 @@ html .student-journal-lessons .lesson-subitem .title {
 }
 html .actual-lessons .actual-lessons-item.has-content .lesson-title::after,
 html .student-journal-lessons .actual-lessons-item.has-content .lesson-title::after {
-	background: var(--low-priority-text-color);
+	background: var(--low-priority-color);
 	border: 0;
 	display: block;
 	width: 15px;
@@ -384,14 +384,14 @@ html .students-journal-header .week-selector .selected-period::after {
 }
 html .students-journal-header .week-selector .selected-period-mobile {
 	background: var(--background-middle-color);
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s opacity;
 }
 html .students-journal-header .week-selector.calendar-open .selected-period-mobile {
 	background: var(--background-middle-color);
 	border: 0;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	opacity: 0.7;
 }
 html .students-journal-header .week-selector .selected-period-mobile .cal-icon {
@@ -414,7 +414,7 @@ html .xs-diary-lesson-times {
 	font-size: 15px;
 	padding: 10px;
 	margin-left: 10px;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s filter, .2s box-shadow;
 }
@@ -449,7 +449,7 @@ html .actual-lessons .lesson-title .number,
 html .student-journal-lessons .lesson-title .number,
 html .actual-lessons .lesson-title .room,
 html .student-journal-lessons .lesson-title .room {
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	font-size: 15px;
 }
 html .actual-lessons .lesson-title .room,
@@ -469,7 +469,7 @@ html .diary-analytics {
 	background: var(--background-middle-dark-color);
 	color: var(--paragraph-color);
 	padding: 1rem;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 }
 html .diary-analytics h2 {
@@ -485,7 +485,7 @@ html .diary-analytics span.grade {
 	font-weight: bold;
 	font-size: 15px;
 	padding: .5rem;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 	cursor: pointer;
 	transition: .2s opacity;
@@ -497,7 +497,7 @@ html .diary-analytics span.grade.no-pointer {
 	cursor: default;
 }
 html .diary-analytics span.low-priority {
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	font-size: 15px;
 	font-weight: normal;
 	text-transform: none;
@@ -541,13 +541,13 @@ html #centerContainer thead tr td {
 }
 html #centerContainer .first-column .number {
 	font-weight: bold;
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 }
 html #centerContainer .room {
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 }
 html .btn-print {
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	background: var(--theme-color);
 	font-weight: bold;
 	text-transform: uppercase;
@@ -558,7 +558,7 @@ html .btn-print:hover {
 	filter: brightness(0.8);
 }
 html #centerContainer .bottom small {
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	font-size: 11px;
 }
 
@@ -571,7 +571,7 @@ html .rating-container .test-detailed-data,
 html .rating-wrap .rating-table {
 	background: var(--background-middle-color);
 	border: 0;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 0 7px 14px -3px var(--shadow-color);
 }
 html .rating-container .test-detailed-data span,

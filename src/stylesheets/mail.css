@@ -26,7 +26,7 @@ html .mail-list-view-header input.MailSearch__Input {
 	font-family: "Inter", sans-serif;
 	font-size: 15px;
 	padding: 8px;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	border: 0;
 	width: calc(100% - 130px);
 	height: 35px;
@@ -34,7 +34,7 @@ html .mail-list-view-header input.MailSearch__Input {
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
 html .mail-list-view-header input.MailSearch__Input::placeholder {
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	font-style: normal;
 	font-size: 15px;
 }
@@ -62,7 +62,7 @@ html .mail-list-view-header .dropdown-button {
 	font-family: "Inter", sans-serif;
 	font-size: 15px;
 	padding: 8px;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	border: 0;
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	height: 35px;
@@ -118,7 +118,7 @@ html .mail-list-view-header .dropdown {
 	width: 250px;
 	height: auto;
 	background: var(--background-front-color);
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 	z-index: 200;
 	transform: translateY(10px);
@@ -134,20 +134,20 @@ html .mail-list-view-header .dropdown .option {
 	width: 100%;
 	text-align: left;
 	padding-left: 40px;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	transition: .2s filter;
 }
 html .mail-list-view-header .dropdown .option:hover {
 	filter: brightness(0.9);
 }
 html .mail-list-view-header .dropdown .option.disabled {
-	color: var(--low-priority-text-color) !important;
+	color: var(--low-priority-color) !important;
 }
 
 
 html .MailMainAreaWrapper .FolderNavigation {
 	background: var(--background-middle-color);
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
 html .FolderNavigation nav {
@@ -167,7 +167,7 @@ html .FolderNavigation__ButtonNewMailWrapper .FolderNavigation__ButtonNewMail {
 	font-size: 15px;
 	padding-top: 12px;
 	padding-bottom: 12px;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	transition: .2s filter, .2s box-shadow;
 }
 html .FolderNavigation__ButtonNewMailWrapper .FolderNavigation__ButtonNewMail:hover {
@@ -215,7 +215,7 @@ html .FolderNavigation .NavItem.router-link-active::after {
 	background: var(--theme-color);
 	padding: 0;
 	margin-right: 5px;
-	border-radius: 0 var(--corner-roundness) var(--corner-roundness) 0;
+	border-radius: 0 var(--corner-radius) var(--corner-radius) 0;
 	transition: .2s left;
 }
 html .FolderNavigation .NavItem.router-link-active:after,
@@ -249,7 +249,7 @@ html .ButtonIcon--loading::before {
 }
 html .main-eklase-content .BottomInfo {
 	font-size: 11px;
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	user-select: none;
 	-webkit-user-drag: none;
 }
@@ -267,7 +267,7 @@ html .Folder__MessageList .MessageItem {
 	margin-left: 10px;
 	margin-bottom: 10px;
 	border: 0;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	opacity: 0;
 	user-select: none;
 	-webkit-user-drag: none;
@@ -283,11 +283,11 @@ html .Folder__MessageList .MessageItem:first-child {
 	border: 0;
 }
 html .MessageItem__MidCol .MessageItem__MessageBody {
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 }
 html .MessageItem__LeftCol .MessageItem__Checkbox {
 	background: var(--background-front-color);
-	border-radius: calc(var(--corner-roundness) / 2);
+	border-radius: calc(var(--corner-radius) / 2);
 }
 html .MessageItem__LeftCol .MessageItem__Checkbox:checked {
 	background: var(--background-front-color);
@@ -317,7 +317,7 @@ html .ViewMessage .ViewMessage__MetaInfo {
 	border-bottom: 4px solid var(--divider-color);
 }
 html .MessageItem .MessageItem__RightCol {
-	padding-right: calc(var(--corner-roundness) / 5);
+	padding-right: calc(var(--corner-radius) / 5);
 }
 html .ViewMessage__MetaInfo .MessageFollowUpStatus {
 	display: none;
@@ -340,7 +340,7 @@ html .MessageItem__RightCol .MessageFollowUpStatus--compleated::before {
 }
 html .MessageItem__RightCol .MessageFollowUpStatus--none::before,
 html .MessageItem__RightCol .MessageFollowUpStatus--compleated::before {
-	background: var(--low-priority-text-color);
+	background: var(--low-priority-color);
 }
 html .MessageItem__RightCol .MessageFollowUpStatus--marked::before,
 html .MessageActions .TopToolbar__ButtonContainer .TopToolbar__Button--star-filled::before {
@@ -353,7 +353,7 @@ html .MessageItem .MessageItem__Date {
 	font-family: "Inter", sans-serif;
 }
 html .MessageItem .MessageItem__Date {
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 }
 html .MessageItem .MessageItem__AuthorInfo {
 	font-size: 15px;
@@ -364,14 +364,14 @@ html .MessageItem .MessageItem__MessageTitle {
 	font-weight: 500;	
 }
 html .MessageItem .MessageItem__MessageTitle::before {
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	margin-left: -14px;
 }
 html .ViewMessage .ViewMessage__MetaInfo .ViewMessage__CategoryWrapper {
 	margin-top: -30px;
 }
 html .ViewMessage__MetaInfo .ViewMessage__MessageDate {
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	font-size: 15px;
 	user-select: none;
 	-webkit-user-drag: none;
@@ -379,7 +379,7 @@ html .ViewMessage__MetaInfo .ViewMessage__MessageDate {
 }
 html .AttachmentList__ItemContainer {
 	background: var(--background-middle-color);
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	padding: 10px;
 	text-align: center;
 	transition: .2s filter;
@@ -401,7 +401,7 @@ html .AttachmentList__ItemContainer img {
 	width: 180px;
 	height: 100px;
 	object-fit: cover;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 }
 html .AttachmentList__ItemContainer .file-icon {
 	width: 120px;
@@ -434,7 +434,7 @@ html .FetchMore .FetchMore__Text {
 	font-weight: 500;
 	font-size: 15px;
 	margin-left: 15px;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	opacity: 0;
 	user-select: none;
 	-webkit-user-drag: none;
@@ -471,7 +471,7 @@ html .MessageContent__Row .MessageContent__Subject {
 	font-size: 15px;
 	padding: 10px;
 	border: 0;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 }
 html .MessageContent__Row .MessageContent__Subject {
@@ -482,18 +482,18 @@ html .EklaseTextEditor__Editor {
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
 	border: 0;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 }
 html .EklaseTextEditor__Menu {
 	background: var(--background-middle-color);
 	padding: .25rem;
-	border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
+	border-radius: var(--corner-radius) var(--corner-radius) 0 0;
 }
 html .EklaseTextEditor__Content {
 	background: var(--background-middle-color);
 
-	border-radius: 0 0 var(--corner-roundness) var(--corner-roundness);
+	border-radius: 0 0 var(--corner-radius) var(--corner-radius);
 }
 html .ProseMirror {
 	font-family: 'Inter', sans-serif;
@@ -502,7 +502,7 @@ html .ProseMirror {
 html .EklaseTextEditor__Button {
 	background: var(--background-middle-color);
 
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 
 	transition: .2s filter;
 }
@@ -575,7 +575,7 @@ html .MessageHeader__ButtonSend:active {
 	padding: 5px;
 	height: 40px;
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	mask-size: contain;
 	-webkit-mask-size: contain;
 	transition: .2s filter, .2s box-shadow;
@@ -624,7 +624,7 @@ html .MessageContent .MessageContent__DesktopAttachments {
 }
 html .FileInput__AddButton {
 	background: var(--theme-color);
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	display: block;
 	width: 32px;
 	height: 32px;
@@ -663,7 +663,7 @@ html .MessageActions .TopToolbar__ButtonContainer button {
 	background: var(--background-middle-color);
 	width: 30px;
 	height: 30px;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s filter, .2s box-shadow;
 }
@@ -703,7 +703,7 @@ html .ViewMessage__MetaInfo .ViewMessage__MessageTitle {
 html .ViewMessage__PersonWrapper .ViewMessage__From,
 html .ViewMessage__PersonWrapper .ViewMessage__To {
 	font-size: 15px;
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	font-weight: 500;
 	user-select: none;
 	-webkit-user-drag: none;
@@ -745,7 +745,7 @@ html .AttachmentList__Item--border {
 html .MailMainAreaWrapper .MobileBottomToolbar {
 	background: var(--background-middle-color);
 	border-top: 0;
-	border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
+	border-radius: var(--corner-radius) var(--corner-radius) 0 0;
 	box-shadow: 0 0 10px -3px var(--shadow-color);
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -772,7 +772,7 @@ html .MessageContent__Row .MessageContent__Label {
 }
 html .SentConfirmationModal {
 	background: var(--background-front-color);
-	border-radius: var(--corner-roundness) !important;
+	border-radius: var(--corner-radius) !important;
 	border: 0;
 	color: var(--paragraph-color);
 	font-weight: bold;
@@ -786,7 +786,7 @@ html .Folder__MailboxHeader .Folder__MobileHeading {
 	font-size: 18px;
 	margin: 10px;
 	margin-top: 15px;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	padding-left: 12px;
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
@@ -804,7 +804,7 @@ html .Folder__MailboxHeader .Folder__MobileHeading::after {
 }
 html .MobileNavModal .MobileNavModal__Body {
 	background: var(--background-middle-color);
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 }
 html .MobileNavModal__Body .MobileNavModal__Item,
@@ -828,10 +828,10 @@ html .MobileNavModal .MobileNavModal__Item::before {
 	filter: invert() brightness(var(--icon-brightness));
 }
 html .MobileNavModal .MobileNavModal__Item:first-child {
-	border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
+	border-radius: var(--corner-radius) var(--corner-radius) 0 0;
 }
 html .MobileNavModal .MobileNavModal__Item:last-child {
-	border-radius: 0 0 var(--corner-roundness) var(--corner-roundness);
+	border-radius: 0 0 var(--corner-radius) var(--corner-radius);
 }
 html .MailMainAreaWrapper .ViewMessage,
 html .MailMainAreaWrapper .ViewMessage__MessageBody,
@@ -842,7 +842,7 @@ html .MobileTextareaWrapper .MobileTextarea {
 	background: var(--background-middle-color);
 	font-family: 'Inter', sans-serif;
 	border: 0;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 }
 @media only screen and (max-width: 767px) {
 	html .Folder__MailboxHeader .MailSearch {

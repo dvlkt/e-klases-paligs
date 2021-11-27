@@ -1,0 +1,23 @@
+{
+	"name": "Solarized Light",
+	"version": 1,
+	"colors": {
+		"background-back": "#fdf6e3",
+		"background-middle": "#eee8d5",
+		"background-middle-dark": "#ddd6c1",
+		"background-front": "#d1cbb8",
+		"title": "#4b3f34",
+		"paragraph": "#151312",
+		"low-priority": "#806f67",
+		"solid-divider": "#eee8d5",
+		"opaque-divider": "#00000020",
+		"shadow": "#37201940",
+		"red": "#eb4545",
+		"red-shadow": "#641212a6",
+		"red-accent": "#ffffff"
+	},
+	"variants": {
+		"logo": "light",
+		"favicon": "light"
+	}
+}

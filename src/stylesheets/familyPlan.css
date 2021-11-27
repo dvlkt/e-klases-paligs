@@ -1,14 +1,14 @@
 /* FAMILY PLAN */
 html .sys-content .section.plan-info-head {
 	background: var(--background-middle-color);
-	border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
+	border-radius: var(--corner-radius) var(--corner-radius) 0 0;
 	user-select: none;
 	-webkit-user-drag: none;
 }
 html .sys-content .section.dark {
 	background: var(--background-front-color);
 	margin-bottom: 1rem;
-	border-radius: 0 0 var(--corner-roundness) var(--corner-roundness);
+	border-radius: 0 0 var(--corner-radius) var(--corner-radius);
 }
 html .sys-content .section-stores {
 	display: none; /* Why are the "Get on App Store and Google Play" thingies even there? Completely unrelated so removing them */
@@ -27,7 +27,7 @@ html .announcement .warning .inner {
 	font-family: "Inter", sans-serif;
 	font-weight: 500;
 	padding: 10px;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--red-shadow-color);
 }
 html .plan-info-head .announcement {
@@ -42,7 +42,7 @@ html .btn-transparent:hover {
 	font-weight: 500;
 	font-family: "Inter", sans-serif;
 	border: 0;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s filter, .2s box-shadow;
 }
@@ -150,7 +150,7 @@ html .l-MainHeader {
 html .l-MainHeader_Title {
 	background: none;
 	color: var(--title-color);
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	text-align: left;
 	font-size: 32px;
 	margin-top: 65px;
@@ -163,7 +163,7 @@ html .po-PaymentOptions_Item div.sw-GridBox {
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
 	border: 0;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
 html .po-BestDeal {
@@ -178,7 +178,7 @@ html .sw-Price_Value {
 html .sw-Price_Value::before {
 	content: "€";
 	background: none;
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	font-size: 24px;
 	top: 8px;
 }
@@ -193,7 +193,7 @@ html .sw-PeriodPrice_Description {
 	-webkit-user-drag: none;
 }
 html .sw-InfoMessage-secondary {
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	font-weight: normal;
 	font-size: 11px;
 }
@@ -207,7 +207,7 @@ html .sw-BoxButton {
 	width: calc(100% - 2rem);
 	margin-left: 1rem;
 	border: 0;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s filter, .2s box-shadow;
 }
@@ -231,7 +231,7 @@ html .sw-GridBox {
 	color: var(--paragraph-color);
 	padding-bottom: 15px;
 	border: 0;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
 html .sw-GridBox_Title,

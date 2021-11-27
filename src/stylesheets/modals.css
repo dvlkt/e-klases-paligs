@@ -7,7 +7,7 @@ html .modal {
 	width: 50%;
 	height: 70%;
 	background: var(--background-middle-color);
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 2px 7px 14px -3px var(--shadow-color);
 	opacity: 0;
 	transform: scale(0.75);
@@ -97,7 +97,7 @@ html .modal-button {
 	color: var(--theme-accent-color);
 	font-size: 15px;
 	font-weight: 500;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	margin: auto;
 	margin-top: 15px;
 	width: 100px;
@@ -120,7 +120,7 @@ html .modal-button:hover {
 
 /* Mark card */
 html .modal-mark-card .mark-card-inner-title {
-	border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
+	border-radius: var(--corner-radius) var(--corner-radius) 0 0;
 	background: var(--background-front-color);
 	border: 0;
 	font-family: 'Inter', sans-serif;
@@ -170,7 +170,7 @@ html .mark-card-inner-graph .mark-card-inner-graph-image .btn-test-report::befor
 html .modal-mark-card .mark-card-inner {
 	background: var(--background-front-color);
 	color: var(--paragraph-color);
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 	border: 0;
 }
@@ -230,7 +230,7 @@ html .Modal__Content .Modal__Header {
 	background: var(--background-middle-color) !important;
 	color: var(--paragraph-color);
 	border: 0;
-	border-radius: var(--corner-roundness) var(--corner-roundness) 0 0;
+	border-radius: var(--corner-radius) var(--corner-radius) 0 0;
 }
 html .Modal__Header .Modal__Title {
 	color: var(--paragraph-color);
@@ -238,10 +238,10 @@ html .Modal__Header .Modal__Title {
 html .Modal__Content .Modal__Body {
 	background: var(--background-middle-color) !important;
 	color: var(--paragraph-color);
-	border-radius: 0 0 var(--corner-roundness) var(--corner-roundness);
+	border-radius: 0 0 var(--corner-radius) var(--corner-radius);
 }
 html .RecipientsModal__GroupContainer {
-	border-radius: 0 0 var(--corner-roundness) var(--corner-roundness);
+	border-radius: 0 0 var(--corner-radius) var(--corner-radius);
 }
 html .RecipientsModal__Title {
 	font-size: 24px;
@@ -251,7 +251,7 @@ html .RecipientsModal__Title {
 }
 html .RecipientsModal__GroupContainer .RecipientGroup {
 	border: 0;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	background: var(--background-middle-dark-color);
 	transition: .2s filter;
 	font-size: 15px;
@@ -309,7 +309,7 @@ html .RecipientsModal__StudyYear:hover {
 }
 html .Modal__Body .RecipientSearch,
 html .Modal__Body .RecipientSearch:focus {
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	font-size: 15px;
 	padding: 10px;
 	height: 35px;
@@ -408,12 +408,12 @@ html .Modal__Body .Section__Chunk .Author {
 }
 html .Modal__Body .Section__Chunk .Author span:first-child {
 	font-weight: 500;
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	user-select: none;
 	-webkit-user-drag: none;
 }
 html .Modal__Body .Section__Chunk .EmptyGraph {
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	background: var(--background-middle-color);
 }
 html .Modal__Body .Section .Section__Chunk span.LessonType {
@@ -428,7 +428,7 @@ html .Modal__Body .Section .Section__Chunk span.LessonDate {
 	display: block;
 	font-size: 15px;
 	font-weight: 500;
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	text-align: left;
 	margin-top: 5px;
 	user-select: none;
@@ -475,7 +475,7 @@ html .Modal__Header .Modal__Close .ButtonIcon--exit:hover::before {
 html .Modal__Body .Section .Section__Chunk .TestReportButton {
 	background: var(--theme-color);
 	color: var(--theme-accent-color);
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	font-family: "Inter", sans-serif;
 	font-size: 15px;
 	font-weight: 500;
@@ -580,7 +580,7 @@ html .Modal__Body .Section .Section__Metadata {
 }
 html .Modal__Body .Section__CreationDate {
 	float: left;
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	font-size: 15px;
 	user-select: none;
 	-webkit-user-drag: none;
@@ -598,11 +598,11 @@ html .Modal__Body .Message__Info {
 	-webkit-user-drag: none;
 }
 html .Modal__Body .Message__Info .bold {
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	font-weight: 500;
 }
 html .Message .Message__PersonType {
-	color: var(--low-priority-text-color);
+	color: var(--low-priority-color);
 	text-transform: lowercase;
 	font-size: 15px;
 	margin-left: 0;
@@ -615,7 +615,7 @@ html .Message .Message__PersonType::after {
 }
 html .Modal__Body .AttachmentListNew .Attachment {
 	border: 0;
-	border-radius: var(--corner-roundness);
+	border-radius: var(--corner-radius);
 	background: var(--background-front-color);
 	color: var(--paragraph-color);
 	font-family: "Inter", sans-serif;

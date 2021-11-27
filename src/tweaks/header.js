@@ -98,28 +98,9 @@ window.addEventListener(`pageLoading`, () => {
 
 	// Add the logo
 	if (document.querySelector(`.header-second .header-second-inner`) !== null) {
-		chrome.storage.sync.get([`theme`], async (res) => {
-			let logoTheme = res.theme.name === `dark` ? `dark` : `light`;
-			let isAHolidayTodayValue = await isAHolidayToday();
-			if (isAHolidayTodayValue) {
-				logoTheme = `dark`;
-			}
-
-			fetch(chrome.runtime.getURL(`res/title-${logoTheme}.png`))
-				.then(response => response.blob())
-				.then(blob => {
-					var reader = new FileReader();
-					reader.readAsDataURL(blob);
-					reader.onloadend = () => {
-						let logoElement = document.createElement(`img`);
-						logoElement.className = `header-logo`;
-						logoElement.src = reader.result;
-
-						document.querySelector(`.header-second .header-second-inner`).appendChild(logoElement);
-					}
-				}
-			);
-		});
+		let logoElement = document.createElement(`img`);
+		logoElement.className = `header-logo`;
+		document.querySelector(`.header-second .header-second-inner`).appendChild(logoElement);
 	}
 
 	// Add the account popup

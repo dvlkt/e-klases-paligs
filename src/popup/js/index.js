@@ -27,11 +27,38 @@ document.querySelector(`#whats-new-btn`).addEventListener(`click`, () => {
 /*
 	Theme picker
 */
-for (let themeButtonElement of document.querySelectorAll(`.theme-preview`)) {
+let themeList = [`light`, `dark`, `deepDark`, `solarizedLight`, `solarizedDark`];
+let themePickerElement = document.querySelector(`#theme-picker`);
 
+// Fill up the theme picker with all themes
+for (let i = 0; i < themeList.length; i++) {
+	themePickerElement.innerHTML += `
+		<div class="theme-preview" data-theme-name="${themeList[i]}">
+			<div class="theme-preview-header"></div>
+			<div class="theme-preview-header-detail"></div>
+			<div class="theme-preview-table-title"></div>
+			<div class="theme-preview-table"></div>
+		</div>
+	`;
+}
+
+// Load the theme preview colors
+for (let i = 0; i < themeList.length; i++) {
+	fetch(chrome.runtime.getURL(`themes/${themeList[i]}.json`))
+		.then(response => response.json())
+		.then(themeData => {
+			document.querySelector(`.theme-preview[data-theme-name="${themeList[i]}"]`).style.background = themeData.colors[`background-back`];
+			document.querySelector(`.theme-preview[data-theme-name="${themeList[i]}"] .theme-preview-header`).style.background = themeData.colors[`background-middle`];
+			document.querySelector(`.theme-preview[data-theme-name="${themeList[i]}"] .theme-preview-table-title`).style.background = themeData.colors[`title`];
+			document.querySelector(`.theme-preview[data-theme-name="${themeList[i]}"] .theme-preview-table`).style.background = themeData.colors[`background-middle`];
+		}
+	);
+}
+
+for (let themeButtonElement of document.querySelectorAll(`.theme-preview`)) {
 	// Highlight the button if it's the selected theme
-	chrome.storage.sync.get([`theme`], (res) => {
-		if (res.theme.name === themeButtonElement.getAttribute(`data-theme-name`)) {
+	chrome.storage.sync.get([`themeName`], (res) => {
+		if (res.themeName === themeButtonElement.getAttribute(`data-theme-name`)) {
 			themeButtonElement.classList.add(`theme-preview-selected`);
 		}
 	});
@@ -39,8 +66,8 @@ for (let themeButtonElement of document.querySelectorAll(`.theme-preview`)) {
 	// Add the event listener
 	themeButtonElement.addEventListener(`click`, () => {
 		// Update the theme button styles
-		chrome.storage.sync.get([`theme`], (res) => {
-			document.querySelector(`.theme-preview[data-theme-name="${res.theme.name}"]`).classList.remove(`theme-preview-selected`);
+		chrome.storage.sync.get([`themeName`], (res) => {
+			document.querySelector(`.theme-preview[data-theme-name="${res.themeName}"]`).classList.remove(`theme-preview-selected`);
 			themeButtonElement.classList.add(`theme-preview-selected`);
 		});
 
@@ -49,11 +76,11 @@ for (let themeButtonElement of document.querySelectorAll(`.theme-preview`)) {
 			.then(response => response.json())
 			.then(themeData => {
 
-			chrome.storage.sync.set({ theme: themeData }, () => {
-				sendMessageToEklaseTabs(`loadTheme`); // Update the theme in all of the opened tabs
-				sendMessageToExtensionTabs(`loadTheme`);
+			chrome.storage.sync.set({ themeData, themeName: themeButtonElement.getAttribute(`data-theme-name`) }, () => {
+				sendMessageToEklaseTabs(`updateTheme`); // Update the theme in all of the opened tabs
+				sendMessageToExtensionTabs(`updateTheme`);
 				loadTheme();
-				chrome.browserAction.setIcon({ path: chrome.runtime.getURL(`/res/${themeData.name}/icon-64.png`) });
+				chrome.browserAction.setIcon({ path: chrome.runtime.getURL(`/res/${themeData.variants.logo}/icon-64.png`) });
 			});
 		});
 	});
@@ -82,7 +109,7 @@ for (let colorButtonElement of document.querySelectorAll(`.color-picker-option`)
 		// Update the theme colors
 		chrome.storage.sync.set({ themeColor: colorButtonElement.getAttribute(`data-theme-color`) });
 		loadTheme();
-		sendMessageToEklaseTabs(`loadTheme`);
+		sendMessageToEklaseTabs(`updateThemeColor`);
 	});
 }
 
@@ -103,13 +130,13 @@ const updateCornerRoundnessSliderGrabber = () => {
 	cornerRoundnessSliderGrabberElement.style.left = `${(cornerRoundnessSliderWidth * (cornerRoundnessSliderPercentage / 100)) - 7.5}px`;
 	cornerRoundnessSliderValueElement.innerText = `${cornerRoundnessSliderValue}px${ cornerRoundnessSliderValue === 10 ? ` (noklusējums)` : ``}`;
 	
-	chrome.storage.sync.set({ cornerRoundness: `${cornerRoundnessSliderValue}px` });
-	document.querySelector(`:root`).style.setProperty(`--corner-roundness`, `${cornerRoundnessSliderValue}px`);
-	sendMessageToEklaseTabs(`loadCornerRoundness`);
+	chrome.storage.sync.set({ cornerRadius: cornerRoundnessSliderValue });
+	document.querySelector(`:root`).style.setProperty(`--corner-radius`, `${cornerRoundnessSliderValue}px`);
+	sendMessageToEklaseTabs(`updateCornerRadius`);
 }
 
-chrome.storage.sync.get([`cornerRoundness`], (res) => {
-	cornerRoundnessSliderValue = parseInt(res.cornerRoundness.split(`px`)[0]); // This removes the "px" at the end of the value
+chrome.storage.sync.get([`cornerRadius`], (res) => {
+	cornerRoundnessSliderValue = res.cornerRadius;
 	updateCornerRoundnessSliderGrabber();
 });
 
