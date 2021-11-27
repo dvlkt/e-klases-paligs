@@ -108,13 +108,16 @@ html .modal-button:hover {
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 	filter: brightness(0.9);
 }
+html body.state-md .Modal {
+	background: #00000080;
+}
+html .Modal .Modal__Dialog {
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+}
 html .SpinnerSection .Spinner {
 	border-width: 5px;
 	border-color: var(--paragraph-color);
 	border-right-color: #00000000;
-}
-html .Modal .Modal__Dialog {
-	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 }
 @media only screen and (max-width: 767px) {
 	html .modal {
@@ -256,6 +259,8 @@ html .RecipientsModal__Title {
 	font-family: "Inter", sans-serif;
 	font-weight: bold;
 	color: var(--title-color);
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .RecipientsModal__GroupContainer .RecipientGroup {
 	border: 0;
@@ -265,23 +270,27 @@ html .RecipientsModal__GroupContainer .RecipientGroup {
 	font-size: 15px;
 	font-family: "Inter", sans-serif;
 	color: var(--paragraph-color);
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .RecipientsModal__GroupContainer .RecipientGroup:hover {
 	filter: brightness(0.9);
 }
 html .RecipientsModal__GroupContainer .RecipientGroup__Button {
-	background-color: transparent;
-	background-size: cover;
+	background: var(--paragraph-color);
 	width: 20px;
 	height: 20px;
 	margin-right: 10px;
-	filter: invert() brightness(var(--icon-brightness));
+	mask-size: contain;
+	-webkit-mask-size: contain;
 }
 html #RecipientsModal .RecipientHeader {
 	background: var(--background-middle-color);
 }
 html .RecipientHeader {
 	transition: .2s opacity;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .RecipientHeader:hover {
 	opacity: 0.7;
@@ -291,14 +300,23 @@ html .RecipientHeader .RecipientHeader__ButtonBack::before {
 	width: 20px;
 	height: 20px;
 	display: inline-block;
+	margin-top: 1px;
 	margin-right: 5px;
-	filter: invert() brightness(var(--icon-brightness));
+	background: var(--paragraph-color);
+	mask-size: contain;
+	-webkit-mask-size: contain;
 }
 html .RecipientHeader .RecipientHeader__GroupName {
 	font-weight: 500;
 	font-size: 15px;
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	color: var(--paragraph-color);
+}
+html .RecipientsModal__StudyYearList {
+	padding-left: 5px;
+	padding-bottom: 10px;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .RecipientsModal__StudyYear,
 html .RecipientsModal__StudyYear--selected {
@@ -324,15 +342,18 @@ html .Modal__Body .RecipientSearch:focus {
 	border: 0;
 	background: var(--background-front-color);
 	color: var(--paragraph-color);
-	font-family: 'Inter', sans-serif;
-	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	font-family: "Inter", sans-serif;
+	margin-top: 0;
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
 html .RecipientList .Recipient {
-	border-bottom: 4px solid #00000020;
-	font-family: 'Inter', sans-serif;
+	border-bottom: 4px solid var(--opaque-divider-color);
+	font-family: "Inter", sans-serif;
 	color: var(--paragraph-color);
 	font-size: 15px;
 	transition: .2s opacity;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .RecipientList .Recipient:hover {
 	opacity: 0.7;
@@ -343,7 +364,7 @@ html .RecipientsModal__List .RecipientsModal__Item {
 	font-size: 15px;
 }
 html .RecipientsModal__List .RecipientsModal__Item:not(:last-child) {
-	border-bottom: 4px solid #00000020;
+	border-bottom: 4px solid var(--opaque-divider-color);
 }
 html .RecipientsModal__List .RecipientsModal__Item::before {
 	content: "";

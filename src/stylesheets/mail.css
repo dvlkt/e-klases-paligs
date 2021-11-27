@@ -168,25 +168,27 @@ html .FolderNavigation__ButtonNewMailWrapper .FolderNavigation__ButtonNewMail {
 	padding-top: 12px;
 	padding-bottom: 12px;
 	border-radius: var(--corner-radius);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s filter, .2s box-shadow;
 }
 html .FolderNavigation__ButtonNewMailWrapper .FolderNavigation__ButtonNewMail:hover {
-	filter: brightness(0.8);
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
 }
 html .FolderNavigation__ButtonNewMailWrapper .FolderNavigation__ButtonNewMail::before {
 	content: "";
-	width: 1rem;
-	height: 1rem;
-	background-size: cover;
-	margin-top: 0;
-	filter: invert() brightness(var(--theme-accent-icon-brightness));
+	width: 20px;
+	height: 20px;
+	background: var(--theme-accent-color);
+	margin-top: -2px;
+	mask-size: contain;
+	-webkit-mask-size: contain;
 }
 html .FolderNavigation .NavItem {
 	position: relative;
 	background: none;
 	color: var(--paragraph-color);
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	padding-left: 56px;
 	border: 0;
 	box-shadow: none;
@@ -231,10 +233,12 @@ html .FolderNavigation .NavItem:first-child {
 }
 html .FolderNavigation .NavItem::before {
 	content: "";
-	width: 1.2rem;
-	height: 1.2rem;
-	margin-top: .8rem !important;
-	filter: invert() brightness(var(--icon-brightness));
+	width: 20px;
+	height: 20px;
+	margin-top: 12px !important;
+	background: var(--paragraph-color);
+	mask-size: contain;
+	-webkit-mask-size: contain;
 }
 html .FolderNavigation .NavItem .ItemCount--important {
 	background: var(--theme-color);
@@ -472,10 +476,10 @@ html .MessageContent__Row .MessageContent__Subject {
 	padding: 10px;
 	border: 0;
 	border-radius: var(--corner-radius);
-	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
 html .MessageContent__Row .MessageContent__Subject {
-	width: calc(100% - 48px);
+	width: calc(100% - 56px);
 }
 
 html .EklaseTextEditor__Editor {
@@ -483,7 +487,7 @@ html .EklaseTextEditor__Editor {
 	color: var(--paragraph-color);
 	border: 0;
 	border-radius: var(--corner-radius);
-	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
 html .EklaseTextEditor__Menu {
 	background: var(--background-middle-color);
@@ -496,7 +500,7 @@ html .EklaseTextEditor__Content {
 	border-radius: 0 0 var(--corner-radius) var(--corner-radius);
 }
 html .ProseMirror {
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-size: 15px;
 }
 html .EklaseTextEditor__Button {
@@ -548,18 +552,43 @@ html .Message .MessageHeader__Heading {
 	vertical-align: middle;
 }
 html .Message .MessageHeader__ButtonBack::before,
-html .Message .MessageHeader__ButtonSend--mobile::before {
+html .Message .MessageHeader__ButtonSend--mobile::before,
+html .Message .MessageHeader__ButtonBack::after,
+html .Message .MessageHeader__ButtonSend--mobile::after {
 	content: "";
 	display: inline-block;
-	width: 25px;
-	height: 25px;
-	filter: invert() brightness(var(--icon-brightness));
+	float: left;
 }
-html .Message .MessageHeader__ButtonBack {
-	transition: .2s opacity;
+html .Message .MessageHeader__ButtonBack::before,
+html .Message .MessageHeader__ButtonSend--mobile::before {
+	width: 30px;
+	height: 30px;
+	border-radius: var(--corner-radius);
+	background: var(--background-middle-color);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	transition: .2s filter, .2s box-shadow;
+	cursor: pointer;
 }
-html .Message .MessageHeader__ButtonBack:hover {
-	opacity: 0.7;
+html .Message .MessageHeader__ButtonBack::after,
+html .Message .MessageHeader__ButtonSend--mobile::after {
+	width: 24px;
+	height: 24px;
+	margin: 3px;
+	margin-left: -27px;
+	background: var(--paragraph-color);
+	cursor: pointer;
+	mask-size: contain;
+	-webkit-mask-size: contain;
+}
+html .Message .MessageHeader__ButtonBack:hover::before,
+html .Message .MessageHeader__ButtonSend--mobile:hover::before,
+html .Message .MessageHeader__ButtonBack:hover::after,
+html .Message .MessageHeader__ButtonSend--mobile:hover::after {
+	filter: brightness(0.9);
+}
+html .Message .MessageHeader__ButtonBack:hover::before,
+html .Message .MessageHeader__ButtonSend--mobile:hover::before {
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 }
 html .Message .MessageHeader__ButtonSend--mobile::before {
 	margin-right: 0;
@@ -571,6 +600,7 @@ html .MessageHeader__ButtonSend:active {
 	font-weight: 500;
 	font-size: 15px;
 	padding: 5px;
+	padding-right: 10px;
 	height: 40px;
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	border-radius: var(--corner-radius);
@@ -587,11 +617,15 @@ html .Message .MessageHeader__ButtonSend--mobile::before {
 	content: "";
 	margin: 0 5px 0 5px;
 	background: var(--theme-accent-color);
+	mask-size: contain;
+	-webkit-mask-size: contain;
 }
 html .MessageContent .MessageContent__ErrorMessage {
 	color: var(--red-color);
 	font-family: "Inter", sans-serif;
 	font-size: 13px;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .MessageContent .MessageContent__ErrorMessage--recipients {
 	vertical-align: top;
@@ -605,14 +639,50 @@ html .MessageContent .MessageContent__ErrorMessage--body {
 	padding-left: 15px;
 }
 html .MessageContent__AddRecipients .MessageContent__AddRecipientButton {
-	width: 15px;
-	height: 15px;
-	margin: 2.5px;
-	margin-left: 10px;
-	filter: invert() brightness(var(--icon-brightness));
-	transition: .2s opacity;
+	width: 25px;
+	height: 25px;
+	margin: 0;
+	margin-left: -10px;
+	background: var(--background-middle-color);
+	border-radius: calc(var(--corner-radius) / 2);
+	padding: 0;
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	transition: .2s filter, .2s box-shadow;
 }
 html .MessageContent__AddRecipients .MessageContent__AddRecipientButton:hover {
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
+}
+html .MessageContent__AddRecipients .MessageContent__AddRecipientButton::after {
+	content: "";
+	display: block;
+	width: 19px;
+	height: 19px;
+	margin: 3px;
+	background: var(--paragraph-color);
+	mask-size: contain;
+	-webkit-mask-size: contain;
+}
+html .MessageContent__Recipient {
+	font-family: "Inter", sans-serif;
+	font-size: 15px;
+	color: var(--paragraph-color);
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .MessageContent__Recipient .MessageContent__RemoveRecipient {
+	background: var(--paragraph-color);
+	padding-left: 10px;
+	margin-right: 10px;
+	mask-size: contain;
+	-webkit-mask-size: contain;
+	mask-repeat: no-repeat;
+	-webkit-mask-repeat: no-repeat;
+	mask-position: center center;
+	-webkit-mask-position: center center;
+	transition: .2s opacity;
+}
+html .MessageContent__Recipient .MessageContent__RemoveRecipient:hover {
 	opacity: 0.7;
 }
 html .MessageContent .MessageContent__DesktopAttachments {
@@ -634,9 +704,9 @@ html .FileInput__AddButton::before {
 	content: "";
 	background: var(--theme-accent-color);
 	display: block;
-	width: 22px;
-	height: 22px;
-	margin: 5px;
+	width: 20px;
+	height: 20px;
+	margin: 6px;
 	mask-size: contain;
 	-webkit-mask-size: contain;
 }
@@ -732,7 +802,11 @@ html .MessageItem .MessageItem--status-sent-unread__RecipientsPreview::before {
 	display: inline-block;
 	width: 13px;
 	height: 13px;
-	filter: invert() brightness(var(--icon-brightness));
+	background: var(--paragraph-color);
+	mask-size: contain;
+	-webkit-mask-size: contain;
+}
+html .MessageItem .MessageItem__RecipientsPreview::before {
 	margin-right: 5px;
 }
 html .MessageItem .MessageItem--status-unread__AuthorInfo::before,
@@ -773,8 +847,10 @@ html .MobileBottomToolbar .MobileBottomToolbar__Button--newmail::before {
 	filter: invert() brightness(var(--icon-brightness));
 }
 html .MessageContent__Row .MessageContent__Label {
-	font-family: 'Inter', sans-serif;
+	color: var(--low-priority-color);
+	font-family: "Inter", sans-serif;
 	font-size: 15px;
+	font-weight: 500;
 	user-select: none;
 	-webkit-user-drag: none;
 }

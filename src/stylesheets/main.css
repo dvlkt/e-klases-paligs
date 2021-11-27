@@ -3,6 +3,7 @@ html body {
 	background: var(--background-back-color);
 	font-family: "Inter", sans-serif;
 	margin: 0;
+	overflow-x: hidden;
 }
 html body,
 html body section h2 {

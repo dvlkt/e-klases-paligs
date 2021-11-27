@@ -330,7 +330,7 @@ const tryAddingNewMailViewPatches = () => {
 	/*
 		Improve the design of the file upload progress bar
 	*/
-	document.querySelector(`.MessageContent__Row`).style.background = `#f00`;
+	//document.querySelector(`.MessageContent__Row`).style.background = `#f00`;
 }
 
 window.addEventListener(`urlChanged`, () => {

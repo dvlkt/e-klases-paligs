@@ -587,7 +587,7 @@ html .rating-wrap .rating-table {
 	background: var(--background-middle-color);
 	border: 0;
 	border-radius: var(--corner-radius);
-	box-shadow: 0 7px 14px -3px var(--shadow-color);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
 html .rating-container .test-detailed-data span,
 html .rating-container .test-detailed-data label,
@@ -602,6 +602,7 @@ html .rating-wrap .final .col:last-of-type::after,
 html .rating-wrap .tfooter .col:first-of-type span,
 html .rating-wrap .item .col:last-of-type .data {
 	font-family: "Inter", sans-serif;
+	font-size: 15px;
 }
 html .rating-container .test-promo h1 {
 	font-weight: bold;
@@ -618,21 +619,30 @@ html .rating-wrap .first .col,
 html .rating-wrap .first .col:last-of-type {
 	background: none;
 	text-align: center;
-	font-weight: bold;
-	text-transform: uppercase;
-	font-size: 12px;
+	font-weight: 500;
+	font-size: 15px;
 	font-family: "Inter", sans-serif;
+	color: var(--low-priority-color);
 }
 html .item .col:first-of-type .no,
 html .rating-wrap .final .col:last-of-type::after,
-html .rating-wrap .item .col:last-of-type .data,
 html .rating-wrap .total .col:first-of-type {
-	font-weight: bold;
+	font-weight: 500;
+	color: var(--low-priority-color);
 }
-html .rating-wrap .item {
+html .rating-wrap .item .col:nth-of-type(3n) {
+	border: 0;
+}
+html .rating-wrap .item,
+html .rating-wrap .fulfillment .col:nth-of-type(3n),
+html .rating-wrap .final .col:nth-of-type(3n) {
 	border: 0;
 	border-bottom: 4px solid #00000020;
 	border-top: 4px solid #00000020;
+}
+html .rating-wrap .fulfillment .col:nth-of-type(3n),
+html .rating-wrap .final .col:nth-of-type(3n) {
+	background: var(--background-middle-color);
 }
 html .rating-wrap .item:first-child,
 html .rating-wrap .item:last-child {
