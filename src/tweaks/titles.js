@@ -5,6 +5,8 @@ const setTitle = () => {
 		document.title = `Sākums | E-klase`;
 	} else if (window.location.href.includes(`/Family/Diary`)) {
 		document.title = `Dienasgrāmata | E-klase`;
+	} else if (window.location.href.includes(`/Family/ReportTest`)) {
+		document.title = `Darba pārskats | E-klase`;
 	} else if (window.location.href.includes(`/SPA/Family#/mail`)) {
 		document.title = `Pasts | E-klase`;
 	} else if (window.location.href.includes(`/SPA/Family#/video-communication`)) {

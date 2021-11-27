@@ -15,9 +15,6 @@ html ::selection {
 	color: var(--theme-accent-color);
 }
 
-html ::-webkit-scrollbar-track {
-	background: var(--background-back-color);
-}
-html ::-webkit-scrollbar-thumb {
-	background: var(--background-middle-color);
+* {
+	scrollbar-color: var(--background-front-color) var(--background-middle-color);
 }

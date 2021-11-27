@@ -8,6 +8,7 @@
 	box-sizing: border-box;
 	font-family: "Inter";
 	font-size: 15px;
+	scrollbar-color: var(--background-front-color) var(--background-middle-color);
 }
 body {
 	width: 300px;

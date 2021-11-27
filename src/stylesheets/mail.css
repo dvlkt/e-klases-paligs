@@ -500,16 +500,14 @@ html .ProseMirror {
 	font-size: 15px;
 }
 html .EklaseTextEditor__Button {
-	background: var(--background-middle-color);
-
+	background: var(--background-middle-dark-color);
 	border-radius: var(--corner-radius);
-
+	margin-right: 5px;
 	transition: .2s filter;
 }
 html .EklaseTextEditor__Button:hover {
-	background: var(--background-middle-color);
-
-	filter: brightness(0.8);
+	background: var(--background-middle-dark-color);
+	filter: brightness(0.9);
 }
 html .EklaseTextEditor__Button--link::before,
 html .EklaseTextEditor__Button--unlink::before,
@@ -631,6 +629,16 @@ html .FileInput__AddButton {
 	cursor: pointer;
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s filter, .2s box-shadow;
+}
+html .FileInput__AddButton::before {
+	content: "";
+	background: var(--theme-accent-color);
+	display: block;
+	width: 22px;
+	height: 22px;
+	margin: 5px;
+	mask-size: contain;
+	-webkit-mask-size: contain;
 }
 html .FileInput__AddButton::after {
 	display: none;

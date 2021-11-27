@@ -108,6 +108,14 @@ html .modal-button:hover {
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 	filter: brightness(0.9);
 }
+html .SpinnerSection .Spinner {
+	border-width: 5px;
+	border-color: var(--paragraph-color);
+	border-right-color: #00000000;
+}
+html .Modal .Modal__Dialog {
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+}
 @media only screen and (max-width: 767px) {
 	html .modal {
 		left: 5%;
@@ -380,6 +388,13 @@ html .Modal__Body .Section .Section__Chunk {
 	border-bottom: 0;
 	padding: 0;
 }
+html .Modal__Body .Section .Section__Chunk .tiny-graph path[fill="#CFCFCF"] {
+	fill: var(--background-front-color);
+	border-radius: var(--corner-radius);
+}
+html .Modal__Body .Section .Section__Chunk .tiny-graph path[fill="#3A96F9"] {
+	fill: var(--theme-color);
+}
 html .Modal__Body .Section__Chunk .EvaluationStats {
 	font-size: 15px;
 	font-family: "Inter", sans-serif;
@@ -551,6 +566,9 @@ html .Modal__Content .Header__Title::before {
 html .Modal__Body .Body__Container {
 	padding: 16px;
 }
+html .Modal__Body .Section {
+	box-shadow: none;
+}
 html .Modal__Body .Body__Container .Section,
 html .Modal__Body .Section .Section__Header,
 html .Modal__Body .Section .Section__Body {
@@ -572,11 +590,55 @@ html .Modal__Body .Section .Section__Title--small {
 	font-size: 24px;
 	font-weight: bold;
 	border-right: 0;
+	color: var(--title-color);
+	padding-right: 0;
+	margin-right: 0;
 	user-select: none;
 	-webkit-user-drag: none;
 }
+html .Modal__Body .Section .Section__Title--small:not(.BorderRight)::before {
+	content: "-";
+	margin-right: 5px;
+}
+html .Modal__Body .Section .Section__Title--small:not(.BorderRight) {
+	font-weight: 500;
+	color: var(--low-priority-color);
+	text-transform: lowercase;
+}
 html .Modal__Body .Section .Section__Metadata {
 	display: block;
+}
+html .Modal__Body .Section .Section__Metadata .Section__Text--spaced {
+	font-size: 18px;
+	font-weight: 500;
+}
+html .Modal__Body .Section .Section__Metadata .Section__Text--spaced:nth-child(1) {
+	color: var(--low-priority-color);
+}
+html .Modal__Body .Section .Section__Metadata .SendButton {
+	border-radius: var(--corner-radius) !important;
+	background: var(--theme-color) !important;
+	height: auto !important;
+	padding-left: 5px;
+	padding-right: 5px;
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	transition: .2s filter, .2s box-shadow;
+}
+html .Modal__Body .Section .Section__Metadata .SendButton::before {
+	display: none;
+}
+html .Modal__Body .Section .Section__Metadata .SendButton span.btn__content {
+	font-size: 15px;
+	color: var(--theme-accent-color);
+	margin: 10px;
+}
+html .Modal__Body .Section .Section__Metadata .SendButton:hover {
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
+	border: 0;
+}
+html .Modal__Body .Section .NewMessageContainer {
+	margin-bottom: 10px;
 }
 html .Modal__Body .Section__CreationDate {
 	float: left;
@@ -587,6 +649,9 @@ html .Modal__Body .Section__CreationDate {
 }
 html .Modal__Body .Section .Message:first-child {
 	padding-top: 0;
+}
+html .Modal__Body .Message:not(:last-child) {
+	border-bottom: solid 4px var(--opaque-divider-color);
 }
 html .Modal__Body .Message__Info,
 html .home-task-answer-modal-container .html-editor-content {

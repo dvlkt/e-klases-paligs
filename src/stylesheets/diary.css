@@ -207,7 +207,6 @@ html .Status__Text {
 }
 html .ThirdPartyEvent--Deleted {
 	background: var(--background-front-color);
-
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 }
 
@@ -217,6 +216,8 @@ html .home-task-answer-widget-container .Widget {
 	border: 0;
 	border-radius: var(--corner-radius);
 	transition: .2s filter, .2s box-shadow;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .home-task-answer-widget-container .Widget:hover {
 	filter: brightness(0.9);
@@ -232,28 +233,42 @@ html .home-task-answer-widget-container .Widget .Widget__Title::before {
 }
 html .family-spa .btn,
 html .home-task-answer-modal-container .btn,
-html .home-task-answer-widget-container .Widget .btn,
-html .modal-evaluation-file .btn {
-	border-radius: calc(var(--corner-radius) / 2);
+html .home-task-answer-widget-container .Widget .btn.Widget__SendButton,
+html .modal-evaluation-file .btn,
+html .Widget .Widget__Header a.Widget__ViewButton {
+	border-radius: calc(var(--corner-radius) / 2) !important;
 	background: var(--theme-color);
 	border: 0;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-right: 0;
 	transition: .2s filter, .2s box-shadow;
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
 html .family-spa .btn:hover,
 html .home-task-answer-modal-container .btn:hover,
 html .home-task-answer-widget-container .Widget .btn:hover,
-html .modal-evaluation-file .btn:hover {
+html .modal-evaluation-file .btn:hover,
+html .Widget .Widget__Header a.Widget__ViewButton:hover {
 	filter: brightness(0.9);
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 }
 html .family-spa .btn__content,
 html .home-task-answer-modal-container .btn__content,
 html .home-task-answer-widget-container .btn__content,
-html .modal-evaluation-file .btn__content {
+html .modal-evaluation-file .btn__content,
+html .Widget .Widget__Header a.Widget__ViewButton {
 	font-size: 11px;
 	font-family: "Inter", sans-serif;
-	color: var(--theme-accent-color);
+	font-weight: 500;
+	color: var(--theme-accent-color) !important;
+}
+html .Widget .Widget__Header a.Widget__ViewButton {
+	background: var(--background-middle-color);
+	color: var(--paragraph-color) !important;
+}
+html .Widget .Widget__Header a.Widget__ViewButton::after {
+	display: none;
 }
 html .home-task-answer-widget-container .Widget .Widget__Body {
 	border-top: 0;
