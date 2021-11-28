@@ -32,6 +32,7 @@ chrome.runtime.onInstalled.addListener((details) => {
 			chrome.storage.sync.set({ isHolidayDesignOn: true });
 		}
 
+		// Statistics settings
 		if (res.isStatisticsPanelOn === undefined || res.isStatisticsPanelOn === ``) {
 			chrome.storage.sync.set({ isStatisticsPanelOn: true });
 		}
@@ -44,7 +45,7 @@ chrome.runtime.onInstalled.addListener((details) => {
 		if (res.treatPercentagesAsGrades === undefined || res.treatPercentagesAsGrades === ``) {
 			chrome.storage.sync.set({ treatPercentagesAsGrades: true });
 		}
-
+		
 		if (details.reason === `install`) {
 			if (res.shouldShowSetupModal === undefined || res.shouldShowSetupModal === ``) {
 				chrome.storage.sync.set({ shouldShowSetupModal: true });

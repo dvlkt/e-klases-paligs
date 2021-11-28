@@ -192,6 +192,99 @@ chrome.storage.sync.get([`isHolidayDesignOn`], (res) => {
 
 
 /*
+	Statistics options
+*/
+let isStatisticsPanelOn = true;
+let isTreatingNVAsZero = true;
+let isTreatingNAsZero = true;
+let isTreatingPercentagesAsGrades = true;
+
+chrome.storage.sync.get([`isStatisticsPanelOn`], (res) => {
+	let statisticsSwitchElement = document.querySelector(`#statistics-switch`);
+
+	if (res.isStatisticsPanelOn === undefined) {
+		chrome.storage.sync.set({ isStatisticsPanelOn: true });
+		isStatisticsPanelOn = true;
+	} else {
+		isStatisticsPanelOn = res.isStatisticsPanelOn;
+	}
+
+	statisticsSwitchElement.className = `switch switch-${isStatisticsPanelOn ? `on` : `off`}`;
+
+	statisticsSwitchElement.addEventListener(`click`, () => {
+		isStatisticsPanelOn = !isStatisticsPanelOn;
+
+		chrome.storage.sync.set({ isStatisticsPanelOn });
+
+		statisticsSwitchElement.className = `switch switch-${isStatisticsPanelOn ? `on` : `off`}`;
+	});
+});
+
+chrome.storage.sync.get([`treatNVAsZero`], (res) => {
+	let statisticsNVSwitchElement = document.querySelector(`#statistics-nv-switch`);
+
+	if (res.treatNVAsZero === undefined) {
+		chrome.storage.sync.set({ treatNVAsZero: true });
+		isTreatingNVAsZero = true;
+	} else {
+		isTreatingNVAsZero = res.treatNVAsZero;
+	}
+
+	statisticsNVSwitchElement.className = `switch switch-${isTreatingNVAsZero ? `on` : `off`}`;
+
+	statisticsNVSwitchElement.addEventListener(`click`, () => {
+		isTreatingNVAsZero = !isTreatingNVAsZero;
+
+		chrome.storage.sync.set({ treatNVAsZero: isTreatingNVAsZero });
+
+		statisticsNVSwitchElement.className = `switch switch-${isTreatingNVAsZero ? `on` : `off`}`;
+	});
+});
+
+chrome.storage.sync.get([`treatNAsZero`], (res) => {
+	let statisticsNSwitchElement = document.querySelector(`#statistics-n-switch`);
+
+	if (res.treatNAsZero === undefined) {
+		chrome.storage.sync.set({ treatNAsZero: true });
+		isTreatingNAsZero = true;
+	} else {
+		isTreatingNAsZero = res.treatNAsZero;
+	}
+
+	statisticsNSwitchElement.className = `switch switch-${isTreatingNAsZero ? `on` : `off`}`;
+
+	statisticsNSwitchElement.addEventListener(`click`, () => {
+		isTreatingNAsZero = !isTreatingNAsZero;
+
+		chrome.storage.sync.set({ treatNAsZero: isTreatingNAsZero });
+
+		statisticsNSwitchElement.className = `switch switch-${isTreatingNAsZero ? `on` : `off`}`;
+	});
+});
+
+chrome.storage.sync.get([`treatPercentagesAsGrades`], (res) => {
+	let statisticsPercentageSwitchElement = document.querySelector(`#statistics-percentage-switch`);
+
+	if (res.treatPercentagesAsGrades === undefined) {
+		chrome.storage.sync.set({ treatPercentagesAsGrades: true });
+		isTreatingPercentagesAsGrades = true;
+	} else {
+		isTreatingPercentagesAsGrades = res.treatPercentagesAsGrades;
+	}
+
+	statisticsPercentageSwitchElement.className = `switch switch-${isTreatingPercentagesAsGrades ? `on` : `off`}`;
+
+	statisticsPercentageSwitchElement.addEventListener(`click`, () => {
+		isTreatingPercentagesAsGrades = !isTreatingPercentagesAsGrades;
+
+		chrome.storage.sync.set({ treatPercentagesAsGrades: isTreatingPercentagesAsGrades });
+
+		statisticsPercentageSwitchElement.className = `switch switch-${isTreatingPercentagesAsGrades ? `on` : `off`}`;
+	});
+});
+
+
+/*
 	Profile picture chooser
 */
 // Show the profile picture
