@@ -10,11 +10,11 @@ const tryAddingListViewPatches = () => {
 		/*
 			Show the search buttons from the old header
 		*/
-		document.querySelector(`.MailSearch__Input`).focus();
+		/* document.querySelector(`.MailSearch__Input`).focus();
 		document.querySelector(`.MailSearch__Input`).blur();
 		setTimeout(() => {
 			areOriginalSearchButtonsShown = true;
-		}, 20);
+		}, 50); */
 
 
 		if (document.querySelector(`.mail-list-view-header`) === null) {
@@ -40,24 +40,39 @@ const tryAddingListViewPatches = () => {
 			listViewHeaderElement.insertBefore(searchInputElement, listViewHeaderElement.children[0]);
 			searchInputElement.placeholder = `Meklēt...`;
 
-			let authorSearchButtonElement = document.querySelector(`.mail-list-view-header .search-button:nth-child(2)`);
-			let topicSearchButtonElement = document.querySelector(`.mail-list-view-header .search-button:nth-child(3)`);
 			let dropdownButtonElement = document.querySelector(`.mail-list-view-header .dropdown-button`);
 			let dropdownElement = document.querySelector(`.mail-list-view-header .dropdown`);
+			let authorSearchButtonElement = document.querySelector(`.mail-list-view-header .search-button:nth-child(2)`);
+			let topicSearchButtonElement = document.querySelector(`.mail-list-view-header .search-button:nth-child(3)`);
 
 
 			/*
 				Reveal the search options upon clicking the search input
 			*/
 			searchInputElement.addEventListener(`focus`, () => {
-				if (!areOriginalSearchButtonsShown) {
-					return;
-				}
+				console.log(`he0`)
 				if (window.location.href.includes(`drafts`)) {
 					return;
 				}
 
+				console.log(`he1`)
+
+				if (!areOriginalSearchButtonsShown) {
+					searchInputElement.blur();
+
+					document.querySelector(`.MailSearch__Input`).focus();
+					document.querySelector(`.MailSearch__Input`).blur();
+
+					areOriginalSearchButtonsShown = true;
+
+					searchInputElement.focus();
+
+					return;
+				}
+
 				isListViewHeaderInputFocused = true;
+
+				console.log(`he2`)
 				
 				searchInputElement.style.width = `calc(100% - 390px)`;
 
@@ -79,10 +94,16 @@ const tryAddingListViewPatches = () => {
 					authorSearchButtonElement.style.opacity = `1`;
 					authorSearchButtonElement.style.transform = `translateY(0)`;
 				}, 80);
+
+				console.log(`he3`)
 			});
 			searchInputElement.addEventListener(`blur`, () => {
+				console.log(`bye`)
 				setTimeout(() => {
 					searchInputElement.style.width = ``;
+
+					let authorSearchButtonElement = document.querySelector(`.mail-list-view-header .search-button:nth-child(2)`);
+					let topicSearchButtonElement = document.querySelector(`.mail-list-view-header .search-button:nth-child(3)`);
 
 					setTimeout(() => {
 						authorSearchButtonElement.style.opacity = `0`;
@@ -111,6 +132,7 @@ const tryAddingListViewPatches = () => {
 				document.querySelector(`.MailSearch__Button:nth-child(2)`).click();
 				setTimeout(() => { tryAddingListViewPatches() }, 20);
 			});
+			
 
 			/*
 				Add the event listener to the dropdown button
@@ -353,12 +375,12 @@ window.addEventListener(`pageLoading`, () => {
 	class="AttachmentList__ItemContainer" style="margin-top: 5px; margin-bottom: 5px;">
 
 	<span
-		id="attach-hailhitler.mp4"
+		id="attach-attachment.mp4"
 		class="AttachmentList__Item AttachmentList__Item--border"
 		style="background: rgba(0, 0, 0, 0) linear-gradient(to right, lightblue 0%, lightblue 53%, lightblue 53%, white 53%, white 100%) repeat scroll 0% 0%;">
 		
 		<span
-			class="">hailhitler.mp4</span>
+			class="">attachment.mp4</span>
 		<button
 			class="AttachmentList__RemoveButton">&nbsp;</button>
 

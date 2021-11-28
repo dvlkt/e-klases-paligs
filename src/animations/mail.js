@@ -49,7 +49,11 @@ const showMailListItem = (index) => {
 			setTimeout(() => showMailListItem(index), 4);
 		}
 	} else {
-		document.querySelector(`.FetchMore__Text`).style.opacity = `1`;
+		if (document.querySelector(`.FetchMore__Text`) !== undefined) {
+			document.querySelector(`.FetchMore__Text`).style.opacity = `1`;
+		} else {
+			setTimeout(() => showMailListItem(index), 4);
+		}
 	}
 }
 

@@ -11,22 +11,48 @@ chrome.runtime.onInstalled.addListener((details) => {
 	/*
 		Set the default settings
 	*/
-	chrome.storage.sync.get([`themeData`, `themeName`, `themeColor`, `cornerRadius`, `shouldShowSetupModal`, `isHolidayDesignOn`, ``], (res) => {
+	chrome.storage.sync.get([`theme`, `cornerRoundness`, `themeData`, `themeName`, `themeColor`, `cornerRadius`, `shouldShowSetupModal`, `isStatisticsPanelOn`, `treatNVAsZero`, `treatNAsZero`, `treatPercentagesAsGrades`, `isHolidayDesignOn`], (res) => {
 		// Design settings
 		if (res.themeData === undefined || res.themeData === ``) {
-			fetch(chrome.runtime.getURL(`themes/light.json`))
-				.then(response => response.json())
-				.then(themeData => {
+			if (res.theme !== undefined && res.theme !== ``) {
+				// Import the theme settings from last version if they are present
+				fetch(chrome.runtime.getURL(`themes/${res.theme.name}.json`))
+					.then(response => response.json())
+					.then(themeData => {
 
-					chrome.storage.sync.set({ themeData });
+						chrome.storage.sync.set({ themeData });
 
-				});
+					}
+				);
+			} else {
+				fetch(chrome.runtime.getURL(`themes/light.json`))
+					.then(response => response.json())
+					.then(themeData => {
+
+						chrome.storage.sync.set({ themeData });
+
+					}
+				);
+			}
 		}
 		if (res.themeName === undefined || res.themeName === ``) {
-			chrome.storage.sync.set({ themeName: `light` });
+			if (res.theme !== undefined && res.theme !== ``) {
+				// Import the theme settings from last version if they are present
+				chrome.storage.sync.set({ themeName: res.theme.name });
+			} else {
+				chrome.storage.sync.set({ themeName: `light` });
+			}
+		}
+		if (res.themeColor === undefined || res.themeColor === ``) {
+			chrome.storage.sync.set({ themeColor: `#0088e3` });
 		}
 		if (res.cornerRadius === undefined || res.cornerRadius === ``) {
-			chrome.storage.sync.set({ cornerRadius: 10 });
+			if (res.cornerRoundness !== undefined && res.cornerRoundness !== ``) {
+				// Import the corner radius settings from last version if they are present
+				chrome.storage.sync.set({ cornerRadius: parseInt(res.cornerRoundness.split(`px`)[0]) });
+			} else {
+				chrome.storage.sync.set({ cornerRadius: 10 });
+			}
 		}
 		if (res.isHolidayDesignOn === undefined || res.isHolidayDesignOn === ``) {
 			chrome.storage.sync.set({ isHolidayDesignOn: true });

@@ -436,6 +436,16 @@ html .AttachmentList__Item a:visited {
 html .AttachmentList__Item::before {
 	display: none;
 }
+html .MessageItem__MidCol .MessageItem--status-replied__AuthorInfo::before {
+	content: "";
+	background: var(--theme-color);
+	width: 15px;
+	height: 15px;
+	mask-size: contain;
+	-webkit-mask-size: contain;
+	mask-repeat: no-repeat;
+	-webkit-mask-repeat: no-repeat;
+}
 html .FetchMore .FetchMore__Text {
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
