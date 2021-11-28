@@ -7,15 +7,6 @@ const tryAddingListViewPatches = () => {
 
 	if (document.querySelector(`.MailSearch__Input`) !== null) {
 
-		/*
-			Show the search buttons from the old header
-		*/
-		/* document.querySelector(`.MailSearch__Input`).focus();
-		document.querySelector(`.MailSearch__Input`).blur();
-		setTimeout(() => {
-			areOriginalSearchButtonsShown = true;
-		}, 50); */
-
 
 		if (document.querySelector(`.mail-list-view-header`) === null) {
 			/*
@@ -28,6 +19,7 @@ const tryAddingListViewPatches = () => {
 			listViewHeaderElement.innerHTML = `
 				<button class="search-button">Pēc autora</button>
 				<button class="search-button">Pēc tēmas</button>
+				<button class="close-button"></button>
 				<button class="dropdown-button">Darbības</button>
 				<div class="dropdown"><p>Nav izvēļu.</p></div>
 			`;
@@ -44,18 +36,16 @@ const tryAddingListViewPatches = () => {
 			let dropdownElement = document.querySelector(`.mail-list-view-header .dropdown`);
 			let authorSearchButtonElement = document.querySelector(`.mail-list-view-header .search-button:nth-child(2)`);
 			let topicSearchButtonElement = document.querySelector(`.mail-list-view-header .search-button:nth-child(3)`);
+			let closeSearchButtonElement = document.querySelector(`.mail-list-view-header .close-button`);
 
 
 			/*
 				Reveal the search options upon clicking the search input
 			*/
 			searchInputElement.addEventListener(`focus`, () => {
-				console.log(`he0`)
 				if (window.location.href.includes(`drafts`)) {
 					return;
 				}
-
-				console.log(`he1`)
 
 				if (!areOriginalSearchButtonsShown) {
 					searchInputElement.blur();
@@ -66,18 +56,15 @@ const tryAddingListViewPatches = () => {
 					areOriginalSearchButtonsShown = true;
 
 					searchInputElement.focus();
-
-					return;
 				}
 
 				isListViewHeaderInputFocused = true;
-
-				console.log(`he2`)
 				
 				searchInputElement.style.width = `calc(100% - 390px)`;
 
 				authorSearchButtonElement.style.display = `block`;
 				topicSearchButtonElement.style.display = `block`;
+				closeSearchButtonElement.style.display = `block`;
 
 				// Change the text for the author search button when in the sent page
 				if (window.location.href.includes(`sent`)) {
@@ -87,6 +74,10 @@ const tryAddingListViewPatches = () => {
 				}
 
 				setTimeout(() => {
+					closeSearchButtonElement.style.opacity = `1`;
+					closeSearchButtonElement.style.right = `400px`;
+				}, 10);
+				setTimeout(() => {
 					topicSearchButtonElement.style.opacity = `1`;
 					topicSearchButtonElement.style.transform = `translateY(0)`;
 				}, 10);
@@ -94,17 +85,21 @@ const tryAddingListViewPatches = () => {
 					authorSearchButtonElement.style.opacity = `1`;
 					authorSearchButtonElement.style.transform = `translateY(0)`;
 				}, 80);
-
-				console.log(`he3`)
 			});
-			searchInputElement.addEventListener(`blur`, () => {
-				console.log(`bye`)
+
+			/*
+				Add event listener to the close search button
+			*/
+			closeSearchButtonElement.addEventListener(`click`, () => {
+				document.querySelector(`.MailSearch__ResetInputButton`).click();
+
 				setTimeout(() => {
 					searchInputElement.style.width = ``;
 
-					let authorSearchButtonElement = document.querySelector(`.mail-list-view-header .search-button:nth-child(2)`);
-					let topicSearchButtonElement = document.querySelector(`.mail-list-view-header .search-button:nth-child(3)`);
-
+					setTimeout(() => {
+						closeSearchButtonElement.style.opacity = `0`;
+						closeSearchButtonElement.style.right = `140px`;
+					}, 10);
 					setTimeout(() => {
 						authorSearchButtonElement.style.opacity = `0`;
 						authorSearchButtonElement.style.transform = `translateY(10px)`;
@@ -117,6 +112,7 @@ const tryAddingListViewPatches = () => {
 					setTimeout(() => {
 						authorSearchButtonElement.style.display = `none`;
 						topicSearchButtonElement.style.display = `none`;
+						closeSearchButtonElement.style.display = `none`;
 					}, 280);
 				}, 100);
 			});
@@ -194,11 +190,6 @@ const tryAddingListViewPatches = () => {
 					}, 200);
 				}
 			});
-
-			/*
-				Add the event listener to the close button
-			*/
-			//let originalCloseButton = 
 
 		}
 

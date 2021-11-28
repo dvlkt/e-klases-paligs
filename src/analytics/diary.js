@@ -66,8 +66,6 @@ window.addEventListener(`pageLoading`, () => {
 					} else {
 						gradeValue = ``;
 					}
-
-					console.log(grade.innerText, gradeText, parseInt(gradeValue));
 					
 					if (gradeValue !== ``) {
 						grades.push({

@@ -28,6 +28,11 @@ const tryAddingMailAnimations = () => {
 		document.querySelector(`.FetchMore__Text`).addEventListener(`click`, () => {
 			tryAddingAdditionalMailLoadingAnimation();
 		});
+		document.querySelector(`.mail-list-view-header .MailSearch__Input`).addEventListener(`focus`, () => {
+			document.querySelector(`.mail-list-view-header .close-button`).addEventListener(`click`, () => {
+				tryAddingAdditionalMailLoadingAnimation();
+			});
+		});
 	}
 }
 const tryAddingAdditionalMailLoadingAnimation = () => {
