@@ -19,9 +19,9 @@ document.querySelector(`#open-e-klase-btn`).addEventListener(`click`, () => {
 document.querySelector(`#whats-new-btn`).addEventListener(`click`, () => {
 	openTab(`/popup/changelog.html`);
 });
-/* document.querySelector(`#found-bug-btn`).addEventListener(`click`, () => {
-	// Stuff happens
-}); */
+document.querySelector(`#found-bug-btn`).addEventListener(`click`, () => {
+	openTab(`https://www.youtube.com/watch?v=dQw4w9WgXcQ`, false)
+});
 
 
 /*
