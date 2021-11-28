@@ -57,9 +57,11 @@ html label.css-label::after {
 	left: 0;
 	top: 0;
 	border-radius: var(--corner-radius);
+	background: var(--paragraph-color);
+	mask-size: contain;
+	-webkit-mask-size: contain;
 	transition: .1s opacity;
 	opacity: 0;
-	filter: invert() brightness(var(--icon-brightness));
 	cursor: pointer;
 }
 html input[type="checkbox"].css-checkbox:checked ~ label.css-label::after {

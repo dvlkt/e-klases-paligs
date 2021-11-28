@@ -299,10 +299,11 @@ html .MessageItem__LeftCol .MessageItem__Checkbox:checked {
 html .MessageItem__LeftCol .MessageItem__Checkbox::after,
 html .MessageItem__LeftCol .MessageItem__Checkbox:checked::after {
 	content: "";
-	background-size: cover;
-	filter: invert() brightness(var(--icon-brightness));
+	background: var(--paragraph-color);
+	mask-size: contain;
+	-webkit-mask-size: contain;
 	opacity: 0;
-	transition: .2s opacity;
+	transition: .1s opacity;
 }
 html .MessageItem__LeftCol .MessageItem__Checkbox:checked::after {
 	opacity: 1;
@@ -329,6 +330,10 @@ html .ViewMessage__MetaInfo .MessageFollowUpStatus {
 html .MessageItem__RightCol .MessageFollowUpStatus {
 	width: 20px;
 	height: 20px;
+	transition: .2s opacity;
+}
+html .MessageItem__RightCol .MessageFollowUpStatus:hover {
+	opacity: 0.7;
 }
 html .MessageItem__RightCol .MessageFollowUpStatus--none::before,
 html .MessageItem__RightCol .MessageFollowUpStatus--marked::before,

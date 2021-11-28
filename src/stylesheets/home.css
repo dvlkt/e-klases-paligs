@@ -217,7 +217,9 @@ html .toggle-search .open-search::after,
 html .toggle-search-inner .open-search::after,
 html .toggle-search .in-results::after,
 html .toggle-search-inner .in-results::after {
-	filter: invert() brightness(var(--icon-brightness));
+	background: var(--paragraph-color);
+	mask-size: contain;
+	-webkit-mask-size: contain;
 }
 html .toggle-search .in-results,
 html .toggle-search-inner .in-results {
@@ -912,12 +914,10 @@ html .search-holder-inner .search-field:focus::placeholder {
 }
 html .search-holder .btn-search-big,
 html .search-holder-inner .btn-search-big {
-	background-color: transparent;
-
+	background: var(--title-color);
 	margin-top: 1rem;
-
-	filter: invert() brightness(var(--icon-brightness));
-
+	mask-size: contain;
+	-webkit-mask-size: contain;
 	transition: .2s opacity;
 }
 html .search-holder .btn-search-big:hover,
@@ -928,11 +928,11 @@ html .toggle-search .close-search::after,
 html .toggle-search-inner .close-search::after {
 	width: 16px;
 	height: 16px;
-
 	margin-top: 4px;
 	margin-right: 4px;
-
-	filter: invert() brightness(var(--icon-brightness));
+	background: var(--paragraph-color);
+	mask-size: contain;
+	-webkit-mask-size: contain;
 }
 html .toggle-search .close-search,
 html .toggle-search-inner .close-search {

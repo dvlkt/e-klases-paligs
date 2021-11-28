@@ -36,9 +36,11 @@ html footer .footer-container .go-top-col .go-top:hover {
 	filter: brightness(0.9);
 }
 html footer .footer-container .go-top-col .go-top::before {
-	top: 0;
-	left: 3px;
-	background-color: transparent;
-	filter: invert() brightness(var(--icon-brightness));
-	height: 100%;
+	top: 9px;
+	left: 6px;
+	background: var(--paragraph-color);
+	width: 20px;
+	height: 20px;
+	mask-size: contain;
+	-webkit-mask-size: contain;
 }

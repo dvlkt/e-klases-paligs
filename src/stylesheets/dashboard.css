@@ -297,8 +297,9 @@ html .dashboard-widget-col.widget-recent .recent-scores-item:hover {
 	filter: brightness(0.9);
 }
 html .dashboard-widget-col.widget-recent .recent-scores-item-has-test::before {
-	filter: invert() brightness(var(--icon-brightness));
-	background-size: cover;
+	background: var(--paragraph-color);
+	mask-size: contain;
+	-webkit-mask-size: contain;
 }
 html .dashboard-widget-col.widget-recent .recent-scores-item .recent-scores-item-col h4,
 html .dashboard-widget-col.widget-recent .recent-scores-item .recent-scores-item-col:nth-child(2) {
