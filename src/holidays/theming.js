@@ -18,26 +18,19 @@ window.addEventListener(`pageLoaded`, async () => {
 		// Make the header dark
 		headerElement.className += ` dark-header`;
 
-		// Add the snow
-		headerElement.style.backgroundImage = `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjEyIiBoZWlnaHQ9IjE5NSIgdmlld0JveD0iMCAwIDYxMiAxOTUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xNjQuODY1IDE3Ni44NjVDMTA0LjExNSAxNzYuODY1IDc1LjQzODQgMTczIDAgMTczVjE5NUg2MTJWMTczQzU4MC4wMjYgMTczIDU3My42MzEgMTc1LjQ0NCA1MjguMDY5IDE3NS4yNDRDNDcxLjExNSAxNzQuOTk1IDQ3My4xMTMgMTczIDM4Ny4xODQgMTczQzMwMS4yNTQgMTczIDI0MC44MDMgMTc2Ljg2NSAxNjQuODY1IDE3Ni44NjVaIiBmaWxsPSIjRThFOEU4Ii8+Cjwvc3ZnPgo=")`;
-		headerElement.style.backgroundSize = `contain`;
-
-		// Add the trees
-		treeImgElement = document.createElement(`img`);
-		treeImgElement.height = `64`;
-		treeImgElement.style.position = `fixed`;
-		treeImgElement.style.top = `0`;
-		treeImgElement.style.left = `150px`;
-		treeImgElement.src = `data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjEyIiBoZWlnaHQ9IjE5NSIgdmlld0JveD0iMCAwIDYxMiAxOTUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0zMCA5Nkg0MVYxNzYuNUM0MSAxNzkuNTM4IDM4LjUzNzYgMTgyIDM1LjUgMTgyVjE4MkMzMi40NjI0IDE4MiAzMCAxNzkuNTM4IDMwIDE3Ni41Vjk2WiIgZmlsbD0iIzQzMUYwQiIvPgo8cGF0aCBkPSJNOTIgMTA2SDEwM1YxNzguNUMxMDMgMTgxLjUzOCAxMDAuNTM4IDE4NCA5Ny41IDE4NFYxODRDOTQuNDYyNCAxODQgOTIgMTgxLjUzOCA5MiAxNzguNVYxMDZaIiBmaWxsPSIjNDMxRjBCIi8+CjxwYXRoIGQ9Ik0xNTggOTZIMTY5VjE3Ni41QzE2OSAxNzkuNTM4IDE2Ni41MzggMTgyIDE2My41IDE4MlYxODJDMTYwLjQ2MiAxODIgMTU4IDE3OS41MzggMTU4IDE3Ni41Vjk2WiIgZmlsbD0iIzQzMUYwQiIvPgo8cGF0aCBkPSJNNjggMTUzLjVIM0wyNCAxMzJIN0wyNCAxMDlIMTEuNUwzNS41IDgyTDU5LjUgMTA5SDQ3TDY0IDEzMkg0N0w2OCAxNTMuNVoiIGZpbGw9IiMxOTYyMjEiLz4KPHBhdGggZD0iTTEyNyAxNThINjhMODcuMDYxNSAxMzguNDU1SDcxLjYzMDhMODcuMDYxNSAxMTcuNTQ1SDc1LjcxNTRMOTcuNSA5M0wxMTkuMjg1IDExNy41NDVIMTA3LjkzOEwxMjMuMzY5IDEzOC40NTVIMTA3LjkzOEwxMjcgMTU4WiIgZmlsbD0iIzE5NjIyMSIvPgo8cGF0aCBkPSJNMTk2IDE1M0gxMzFMMTUyIDEzMS42NUgxMzVMMTUyIDEwOC44MTFIMTM5LjVMMTYzLjUgODJMMTg3LjUgMTA4LjgxMUgxNzVMMTkyIDEzMS42NUgxNzVMMTk2IDE1M1oiIGZpbGw9IiMxOTYyMjEiLz4KPC9zdmc+Cg==`;
-		headerElement.appendChild(treeImgElement);
-
 		// Generate random snowflakes
-		for (let i = 0; i < 25 + Math.random() * 10; i++) {
-			christmasSnowflakePositions.push({
-				x: Math.random() * headerCanvasElement.clientWidth,
-				y: Math.random() * headerCanvasElement.clientHeight,
-				sine: Math.random()
-			});
+		for (let i = 0; i < 3; i++) {
+			let christmasSnowflakeLayer = [];
+
+			for (let o = 0; o < 25 + Math.random() * 10; o++) {
+				christmasSnowflakeLayer.push({
+					x: Math.random() * headerCanvasElement.clientWidth,
+					y: Math.random() * headerCanvasElement.clientHeight,
+					sine: Math.random()
+				});
+			}
+
+			christmasSnowflakePositions.push(christmasSnowflakeLayer);
 		}
 
 		// Start the animation
@@ -112,36 +105,42 @@ const drawChristmasCanvasFrame = () => {
 	
 	// Clear the canvas
 	headerCanvasCtx.clearRect(0, 0, headerCanvasElement.clientWidth, headerCanvasElement.clientHeight);
+	
+	const opacityValues = [`30`, `6b`, `ad`, `ff`];
 
 	for (let i = 0; i < christmasSnowflakePositions.length; i++) {
-		// Move the snowflakes lower
-		christmasSnowflakePositions[i].y++;
+		for (let o = 0; o < christmasSnowflakePositions[i].length; o++) {
+			// Move the snowflakes lower
+			christmasSnowflakePositions[i][o].y++;
 
-		// Move the snowflakes horizontally along a sine wave
-		christmasSnowflakePositions[i].x += Math.sin(christmasSnowflakePositions[i].sine) / 2;
-		christmasSnowflakePositions[i].sine += 0.1;
+			// Move the snowflakes horizontally along a sine wave
+			christmasSnowflakePositions[i][o].x += Math.sin(christmasSnowflakePositions[i][o].sine) / 2;
+			christmasSnowflakePositions[i][o].sine += 0.1;
 
-		// Remove the snowflakes that have
-		if (christmasSnowflakePositions[i].y >= 64) {
-			christmasSnowflakePositions.splice(i, 1);
+			// Remove the snowflakes that are out of screen
+			if (christmasSnowflakePositions[i][o].y >= 66) {
+				christmasSnowflakePositions[i].splice(o, 1);
+			}
+
+			// Render the snowflakes
+			if (christmasSnowflakePositions[i][o] !== undefined) {
+				headerCanvasCtx.fillStyle = `#ffffff${opacityValues[i]}`;
+				headerCanvasCtx.beginPath();
+				headerCanvasCtx.arc(
+					christmasSnowflakePositions[i][o].x,
+					christmasSnowflakePositions[i][o].y,
+					2 - (i * 0.25),
+					0,
+					2 * Math.PI
+				);
+				headerCanvasCtx.fill();
+			}
 		}
-
-		// Render the snowflakes
-		headerCanvasCtx.fillStyle = `#ffffff`;
-		headerCanvasCtx.beginPath();
-		headerCanvasCtx.arc(
-			christmasSnowflakePositions[i].x,
-			christmasSnowflakePositions[i].y,
-			1,
-			0,
-			2 * Math.PI
-		);
-		headerCanvasCtx.fill();
 	}
 
 	// Have a chance of creating a new snowflake
-	if (Math.random() < 0.5) {
-		christmasSnowflakePositions.push({ x: Math.random() * headerCanvasElement.clientWidth, y: 0, sine: 0 });
+	if (Math.random() < 0.75) {
+		christmasSnowflakePositions[Math.round(Math.random() * 2)].push({ x: Math.random() * headerCanvasElement.clientWidth, y: -2, sine: 0 });
 	}
 
 	// Request the next frame
@@ -152,6 +151,7 @@ const drawChristmasCanvasFrame = () => {
 	New year animation
 */
 let newYearFireworkTrails = [];
+let newYearFireworkTrailParticles = [];
 let newYearFireworks = [];
 let newYearFireworkColors = [`#ee3333`, `#fa5e21`, `#f8b525`, `#139e4a`, `#0088e3`, `#1c1fd1`, `#8c29dd`];
 const drawNewYearCanvasFrame = () => {
@@ -166,25 +166,72 @@ const drawNewYearCanvasFrame = () => {
 		}
 	}
 
-	// Render the firework trails
+	// Update the firework trails
 	for (let i = 0; i < newYearFireworkTrails.length; i++) {
+		if (newYearFireworkTrails[i] === undefined) {
+			break;
+		}
+
+		// Turn the trails that have reached their target Y into fireworks
+		if (newYearFireworkTrails[i]?.y - newYearFireworkTrails[i]?.targetY < 5) {
+			newYearFireworks.push({
+				x: newYearFireworkTrails[i]?.x,
+				y: newYearFireworkTrails[i]?.y,
+				animationProgress: 0,
+				color: Math.floor(Math.random() * 7),
+				pointCount: Math.floor(Math.random() * 10) + 15
+			});
+
+			newYearFireworkTrails.splice(i, 1);
+
+			continue;
+		}
+
 		// Decrease the Y position
 		newYearFireworkTrails[i].y -= 4;
 
-		// Draw the points
-		for (let o = 0; o < Math.floor(Math.random() * 10 + 40); o++) {
-			let opacity = Math.max(0, Math.floor(Math.random() * 30) + 220).toString(16);
+		// Make the trail spawn in particles
+		for (let o = 0; o < Math.floor(Math.random() * 25) + 5; o++) {
+			newYearFireworkTrailParticles.push({
+				x: newYearFireworkTrails[i]?.x + Math.floor(Math.random() * 4) - 2,
+				y: newYearFireworkTrails[i]?.y + Math.floor(Math.random() * 10) - 5,
+				opacity: 255,
+				xVelocity: Math.floor(Math.random() * 6) - 3
+			});
+		}
+	}
 
-			headerCanvasCtx.fillStyle = `#ffffff${opacity.length === 1 ? `0` : ``}${opacity}`;
-			headerCanvasCtx.beginPath();
-			headerCanvasCtx.arc(
-				newYearFireworkTrails[i].x + ((Math.random() * 2) - 1),
-				newYearFireworkTrails[i].y + o + (Math.random() * 4),
-				1,
-				0,
-				2 * Math.PI
-			);
-			headerCanvasCtx.fill();
+	// Render the firework trail particles
+	for (let i = 0; i < newYearFireworkTrailParticles.length; i++) {
+		if (newYearFireworkTrailParticles[i] === undefined) {
+			break;
+		}
+
+		newYearFireworkTrailParticles[i].y += 1;
+		newYearFireworkTrailParticles[i].x += newYearFireworkTrailParticles[i].xVelocity / 12;
+
+		if (newYearFireworkTrailParticles[i].opacity >= 10) {
+			newYearFireworkTrailParticles[i].opacity -= 10;
+		} else {
+			newYearFireworkTrailParticles[i].opacity = 0;
+		}
+
+		let opacity = newYearFireworkTrailParticles[i].opacity.toString(16);
+
+		headerCanvasCtx.fillStyle = `#ffffff${opacity.length === 1 ? `0` : ``}${opacity}`;
+		headerCanvasCtx.beginPath();
+		headerCanvasCtx.arc(
+			newYearFireworkTrailParticles[i].x,
+			newYearFireworkTrailParticles[i].y,
+			1,
+			0,
+			2 * Math.PI
+		);
+		headerCanvasCtx.fill();
+
+		if (newYearFireworkTrailParticles[i].opacity <= 0) {
+			newYearFireworkTrailParticles.splice(i, 1);
+			continue;
 		}
 	}
 
@@ -227,22 +274,6 @@ const drawNewYearCanvasFrame = () => {
 		gradient.addColorStop(1, `#00000000`);
 		headerCanvasCtx.fillStyle = gradient;
 		headerCanvasCtx.fillRect(newYearFireworks[i].x - 25, newYearFireworks[i].y - 25, 50, 50);
-	}
-
-	// Turn the trails that have reached their target Y into fireworks
-	for (let i = 0; i < newYearFireworkTrails.length; i++) {
-		if (newYearFireworkTrails[i]?.y - newYearFireworkTrails[i]?.targetY < 5) {
-
-			newYearFireworks.push({
-				x: newYearFireworkTrails[i]?.x,
-				y: newYearFireworkTrails[i]?.y,
-				animationProgress: 0,
-				color: Math.floor(Math.random() * 7),
-				pointCount: Math.floor(Math.random() * 10) + 15
-			});
-
-			newYearFireworkTrails.splice(i, 1);
-		}
 	}
 
 	// Have a chance of creating a new firework trail

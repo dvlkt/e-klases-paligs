@@ -11,7 +11,8 @@ chrome.runtime.onInstalled.addListener((details) => {
 	/*
 		Set the default settings
 	*/
-	chrome.storage.sync.get([`themeData`, `themeName`, `themeColor`, `cornerRadius`, `shouldShowSetupModal`], (res) => {
+	chrome.storage.sync.get([`themeData`, `themeName`, `themeColor`, `cornerRadius`, `shouldShowSetupModal`, `isHolidayDesignOn`, ``], (res) => {
+		// Design settings
 		if (res.themeData === undefined || res.themeData === ``) {
 			fetch(chrome.runtime.getURL(`themes/light.json`))
 				.then(response => response.json())
@@ -27,6 +28,23 @@ chrome.runtime.onInstalled.addListener((details) => {
 		if (res.cornerRadius === undefined || res.cornerRadius === ``) {
 			chrome.storage.sync.set({ cornerRadius: 10 });
 		}
+		if (res.isHolidayDesignOn === undefined || res.isHolidayDesignOn === ``) {
+			chrome.storage.sync.set({ isHolidayDesignOn: true });
+		}
+
+		if (res.isStatisticsPanelOn === undefined || res.isStatisticsPanelOn === ``) {
+			chrome.storage.sync.set({ isStatisticsPanelOn: true });
+		}
+		if (res.treatNVAsZero === undefined || res.treatNVAsZero === ``) {
+			chrome.storage.sync.set({ treatNVAsZero: true });
+		}
+		if (res.treatNAsZero === undefined || res.treatNAsZero === ``) {
+			chrome.storage.sync.set({ treatNAsZero: true });
+		}
+		if (res.treatPercentagesAsGrades === undefined || res.treatPercentagesAsGrades === ``) {
+			chrome.storage.sync.set({ treatPercentagesAsGrades: true });
+		}
+
 		if (details.reason === `install`) {
 			if (res.shouldShowSetupModal === undefined || res.shouldShowSetupModal === ``) {
 				chrome.storage.sync.set({ shouldShowSetupModal: true });

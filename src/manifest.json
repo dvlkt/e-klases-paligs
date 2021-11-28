@@ -56,7 +56,6 @@
 				"tweaks/consoleWarning.js",
 				"analytics/diary.js",
 				"animations/calendar.js",
-				"animations/headerDropdowns.js",
 				"animations/loadingSpinner.js",
 				"animations/mail.js",
 				"animations/modals.js",
