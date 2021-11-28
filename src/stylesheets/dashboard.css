@@ -242,6 +242,9 @@ html .dashboard-news .dashboard-news-item .article-content img {
 	user-select: none;
 	-webkit-user-drag: none;
 }
+html .dashboard-widget-col.widget-recent .recent-widgets-switcher {
+	border-radius: 0;
+}
 html .dashboard-widget-col.widget-recent .scores,
 html .dashboard-widget-col.widget-recent .messages,
 html .dashboard-widget-col.widget-recent .scores:hover,
