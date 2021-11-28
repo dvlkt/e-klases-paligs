@@ -23,15 +23,7 @@ window.addEventListener(`pageLoading`, () => {
 
 						<h3>Vēlies izmainīt kaut ko?</h3>
 
-						<p>Krāsu motīvs:</p>
-
-						<br />
-
-						<p>Tēmas krāsa:</p>
-
-						<br />
-
-						<p>Vairāk iestatījumi ir pieejami, noklikšķinot uz E-klases Palīga ikonas ekrāna augšējā labajā stūrī!</p>
+						<p>Iestatījumi ir pieejami, noklikšķinot uz E-klases Palīga ikonas ekrāna augšējā labajā stūrī!</p>
 
 						<br />
 

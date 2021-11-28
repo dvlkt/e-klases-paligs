@@ -11,7 +11,7 @@ window.addEventListener(`pageLoaded`, () => {
 			modalBgElement.style.display = `block`;
 			modalElement.style.display = `block`;
 			
-			modalElement.style.top = `${document.body.clientHeight / 2 - modalElement.children[0].children[0].children[0].clientHeight / 2}px`;
+			modalElement.style.top = `${window.innerHeight / 2 - modalElement.children[0].children[0].children[0].clientHeight / 2}px`;
 			modalElement.style.height = `${modalElement.children[0].children[0].children[0].clientHeight}px`;
 
 			setTimeout(() => {
@@ -93,7 +93,7 @@ window.addEventListener(`pageLoaded`, () => {
 		let modalButtonElement = document.querySelector(`.technical-support-warning-modal .modal-button`);
 		let modalBgElement = document.querySelector(`.modal-background`);
 
-		modalElement.style.top = `${document.body.clientHeight / 2 - modalElement.children[0].children[0].children[0].clientHeight / 2}px`;
+		modalElement.style.top = `${window.innerHeight / 2 - modalElement.children[0].children[0].children[0].clientHeight / 2}px`;
 		modalElement.style.height = `${modalElement.children[0].children[0].children[0].clientHeight}px`;
 
 		modalCloseElement.addEventListener(`click`, () => {
@@ -190,7 +190,7 @@ window.addEventListener(`pageLoaded`, () => {
 			modalBgElement.style.display = `block`;
 
 			greetingsModalElement.style.height = `${greetingsModalElement.children[0].children[0].children[0].clientHeight}px`;
-			greetingsModalElement.style.top = `${document.body.clientHeight / 2 - greetingsModalElement.children[0].children[0].children[0].clientHeight / 2}px`;
+			greetingsModalElement.style.top = `${window.innerHeight / 2 - greetingsModalElement.children[0].children[0].children[0].clientHeight / 2}px`;
 
 			setTimeout(() => {
 				greetingsModalElement.style.opacity = `1`;

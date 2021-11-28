@@ -22,6 +22,7 @@ html .modal-dialog.timetable-dialog {
 }
 html .modal-content {
 	height: 100%;
+	background: none;
 }
 html .modal-body {
 	background: none;
@@ -58,6 +59,7 @@ html .modal-technical .modal-close:hover {
 	opacity: 0.7;
 }
 html .modal-technical h1 {
+	color: var(--title-color);
 	font-family: "Inter", sans-serif;
 	font-weight: bold;
 	font-size: 32px;
@@ -530,18 +532,24 @@ html .Modal__Body .Section .Section__Chunk .TestReportButton:hover {
 /*
 	Greeting modal
 */
+html .greetings-modal h1 {
+	margin: 0;
+}
 html .greetings-modal h3 {
 	font-family: "Inter", sans-serif;
 	font-size: 24px;
 	color: var(--title-color);
 	text-align: left;
+	margin-top: 0;
 }
 html .greetings-modal p {
+	color: var(--paragraph-color);
 	font-family: "Inter", sans-serif;
 	font-size: 15px;
 	line-height: 18px;
 }
 html .greetings-modal b {
+	color: var(--paragraph-color);
 	font-family: "Inter", sans-serif;
 	font-weight: 500;
 	font-size: 15px;
@@ -553,12 +561,14 @@ html .greetings-modal b {
 	-webkit-user-drag: none;
 }
 html .greetings-modal ul {
+	color: var(--paragraph-color);
 	list-style-type: disc;
 	margin-left: 15px;
 }
 html .greetings-modal ul li {
 	font-size: 15px;
 	line-height: 18px;
+	list-style-type: disc;
 	user-select: none;
 	-webkit-user-drag: none;
 }
