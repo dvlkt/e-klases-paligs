@@ -350,6 +350,7 @@ html .back-to-journal {
 	color: var(--paragraph-color);
 	font-family: "Inter", sans-serif;
 	font-weight: 500;
+	font-size: 15px;
 	vertical-align: middle;
 	padding: 5px;
 	padding-left: 10px;
@@ -368,13 +369,15 @@ html .back-to-journal:hover {
 }
 html .back-to-journal::before {
 	content: "";
-	background-size: cover;
+	background: var(--paragraph-color);
 	display: inline-block;
-	width: 1rem;
-	height: 1rem;
-	filter: invert() brightness(var(--icon-brightness));
+	width: 18px;
+	height: 18px;
 	vertical-align: middle;
-	margin-right: .5rem;
+	margin-right: 5px;
+	margin-bottom: 3px;
+	mask-size: contain;
+	-webkit-mask-size: contain;
 }
 
 /* DROPDOWN */

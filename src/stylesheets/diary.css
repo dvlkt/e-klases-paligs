@@ -589,6 +589,9 @@ html .rating-wrap .rating-table {
 	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
+html .rating-wrap .see-rating-scale {
+	display: none;
+}
 html .rating-container .test-detailed-data span,
 html .rating-container .test-detailed-data label,
 html .rating-container .test-promo h1,
@@ -603,13 +606,20 @@ html .rating-wrap .tfooter .col:first-of-type span,
 html .rating-wrap .item .col:last-of-type .data {
 	font-family: "Inter", sans-serif;
 	font-size: 15px;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .rating-container .test-promo h1 {
-	font-weight: bold;
-	font-size: 1.5rem;
+	font-weight: 500;
+	font-size: 18px;
+	color: var(--low-priority-color);
+	padding-bottom: 5px;
+	border-bottom: 4px solid var(--solid-divider-color);
 }
 html .rating-container .test-promo h1 p {
-	font-size: 2rem;
+	font-size: 24px;
+	font-weight: bold;
+	color: var(--title-color);
 }
 html .rating-wrap .item {
 	border: 0;
@@ -627,6 +637,8 @@ html .rating-wrap .first .col:last-of-type {
 html .item .col:first-of-type .no,
 html .rating-wrap .final .col:last-of-type::after,
 html .rating-wrap .total .col:first-of-type {
+	font-family: "Inter", sans-serif;
+	font-size: 15px;
 	font-weight: 500;
 	color: var(--low-priority-color);
 }
@@ -650,6 +662,8 @@ html .rating-wrap .item:last-child {
 }
 html .rating-wrap .item:first-child .col {
 	border: 0;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .rating-wrap .item .col:last-of-type {
 	background: none;
@@ -677,7 +691,9 @@ html .chart-wrap {
 }
 html .chart-wrap h3 {
 	color: var(--title-color);
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 18px;
+	user-select: none;
+	-webkit-user-drag: none;
 }
