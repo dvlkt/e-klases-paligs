@@ -1376,3 +1376,94 @@ html .block-list-type-1 li .highlighted:hover {
 html .background-block-type-2 {
 	background: var(--background-middle-color);
 }
+
+/*
+	Ads
+*/
+html .rekl-section h2 {
+	font-family: "Inter", sans-serif;
+	font-size: 32px;
+	font-weight: bold;
+	color: var(--title-color);
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .rekl-why p {
+	font-family: "Inter", sans-serif;
+	font-size: 24px;
+	line-height: 27px;
+	font-weight: 500;
+	color: var(--paragraph-color);
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .rekl-why .why-stats p ,
+html .rekl-option-item .sub-items .sub-item,
+html .rekl-options-system .rekl-options-items .rekl-option-item > .inner .sub-items .inner {
+	font-family: "Inter", sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+	color: var(--low-priority-color);
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .rekl-why .why-stats .inner,
+html .rekl-why .why-facts .inner,
+html .rekl-options-system .description,
+html .rekl-options-portal .description,
+html .rekl-options-portal .rekl-option-item h3,
+html .rekl-options-system .rekl-options-items .rekl-option-item > .inner h3,
+html .rekl-options-system .rekl-option-item.stats-item .sub-item {
+	font-family: "Inter", sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+	color: var(--paragraph-color);
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .rekl-options-portal .rekl-option-item p,
+html .rekl-options-system p {
+	font-family: "Inter", sans-serif;
+	font-size: 15px;
+	color: var(--paragraph-color);
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .rekl-options-portal,
+html .rekl-stats {
+	background: var(--background-middle-color);
+}
+html .rekl-stats .stats-graph-container {
+	border-bottom: 2px solid var(--opaque-divider-color);
+}
+html .rekl-stats .stats-graph-container .graph-background .graph-label {
+	color: var(--low-priority-color);
+	font-size: 15px;
+	border-bottom: 2px solid var(--opaque-divider-color);
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .rekl-stats .stats-graph-container .graph-bars .bar .bar-vertical {
+	background: var(--theme-color);
+	border-radius: var(--corner-radius);
+}
+html .rekl-stats .stats-graph-container .graph-bars .bar .bar-vertical .value {
+	color: var(--paragraph-color);
+	font-size: 15px;
+	font-weight: 500;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .rekl-stats .stats-graph-container .graph-bars .bar .name {
+	color: var(--low-priority-color);
+	font-size: 15px;
+	font-weight: 500;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .rekl-stats .graph-title {
+	color: var(--paragraph-color);
+	font-size: 15px;
+	user-select: none;
+	-webkit-user-drag: none;
+}
