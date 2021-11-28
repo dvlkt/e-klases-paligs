@@ -1089,6 +1089,8 @@ html .mCSB_container .row,
 html .mCSB_container .col-xs-12,
 html .mCSB_container ul.list {
 	height: 100%;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .menu-type-3 .list li {
 	height: 100%;
@@ -1154,7 +1156,8 @@ html .background-block-type-1 {
 	padding-bottom: 0;
 }
 html .btn.btn-type-1,
-html .btn.btn-progress-primary {
+html .btn.btn-progress-primary,
+html .btn.btn-type-2 {
 	background: var(--theme-color);
 	color: var(--theme-accent-color);
 	border-radius: var(--corner-radius);
@@ -1167,12 +1170,17 @@ html .btn.btn-progress-primary {
 	transition: .2s filter, .2s box-shadow;
 }
 html .btn.btn-type-1:hover,
-html .btn.btn-progress-primary:hover {
+html .btn.btn-progress-primary:hover,
+html .btn.btn-type-2:hover {
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 	filter: brightness(0.9);
 }
 html .btn.btn-progress-primary .progress {
 	display: none;
+}
+html .btn.btn-type-2 {
+	background: var(--background-front-color);
+	color: var(--paragraph-color);
 }
 html .card {
 	background: var(--background-middle-color);
@@ -1182,14 +1190,189 @@ html .card {
 html .card .card-header {
 	background: none;
 }
+html .card .card-header.highlight-1,
+html .card .card-header.highlight-2,
+html .card .card-header {
+	color: var(--title-color);
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .card .warranty-price {
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .card .warranty-price .currency {
+	font-family: "Inter", sans-serif;
+	font-weight: 500;
+	color: var(--low-priority-color);
+}
+html .card .warranty-price .units {
+	font-family: "Inter", sans-serif;
+	font-weight: bold;
+	color: var(--title-color);
+}
+html .card .warranty-price .smaller-units {
+	font-family: "Inter", sans-serif;
+	font-weight: bold;
+	color: var(--paragraph-color);
+	top: -14px;
+}
+html .card .warranty-price .postfix {
+	font-family: "Inter", sans-serif;
+	font-weight: 500;
+	color: var(--low-priority-color);
+}
+html .card .card-body ul {
+	color: var(--paragraph-color);
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .card .card-body .icon.icon-like {
+	display: none;
+}
+html .card .badge {
+	background: var(--theme-color);
+	color: var(--theme-accent-color);
+	font-family: "Inter", sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .card .card-footer .sport-selector label {
+	color: var(--paragraph-color);
+	font-family: "Inter", sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+	margin-top: 10px;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .sport-selector .icon.icon-question-mark {
+	background: var(--theme-color);
+	mask-size: contain;
+	-webkit-mask-size: contain;
+	transition: .2s opacity;
+}
+html .sport-selector .icon.icon-question-mark:hover {
+	opacity: 0.7;
+}
+html .card .select2-container {
+	margin-bottom: 30px;
+}
+html .card .select2-container--default .select2-selection--single .select2-selection__rendered {
+	background: var(--background-front-color);
+	height: 42px;
+}
+html .select2-container--default .select2-results__option,
+html .select2-container--default .select2-results__option[aria-selected="true"],
+html .select2-dropdown .select2-results {
+	background: var(--background-front-color);
+}
+html .select2-dropdown .select2-results {
+	border-radius: 0 0 var(--corner-radius) var(--corner-radius);
+}
+html .select2-container .select2-results .select2-results__options .select2-results__option.select2-results__option--highlighted {
+	background: var(--background-front-color);
+	filter: brightness(0.9);
+}
+html .select2-container .select2-selection--single .select2-selection__arrow b {
+	background: var(--low-priority-color);
+	width: 19px;
+	mask-size: contain;
+	-webkit-mask-size: contain;
+}
+html section.background-block-type-5 {
+	background: var(--background-middle-color) !important;
+}
+html .background-block-type-5 h2,
+html .background-block-type-3 h2,
+html .background-block-type-2 h2,
+html .background-block-type-4 h2 {
+	color: var(--title-color);
+	font-family: "Inter", sans-serif;
+	font-weight: bold;
+	font-size: 32px;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .icon-title-desc-list-type-1 .title {
+	color: var(--title-color);
+	font-family: "Inter", sans-serif;
+	font-weight: bold;
+	font-size: 24px;
+	border-bottom: 0;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .icon-title-desc-list-type-1 .icon-desc-container .item p {
+	color: var(--paragraph-color);
+	font-family: "Inter", sans-serif;
+	font-weight: 500;
+	font-size: 15px;
+	user-select: none;
+	-webkit-user-drag: none;
+}
 html .card-faq h2 {
 	color: var(--title-color);
 	font-size: 32px;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .card-faq .faq li .title {
 	color: var(--paragraph-color);
+	font-family: "Inter", sans-serif;
 	font-weight: 500;
+	font-size: 18px;
+	border-bottom: 0;
+	user-select: none;
+	-webkit-user-drag: none;
+	transition: .2s opacity;
+}
+html .card-faq .faq li .title:hover {
+	opacity: 0.7;
 }
 html .card-faq .faq li .title::after {
+	background: var(--low-priority-color);
+	width: 20px;
+	height: 20px;
+	mask-size: contain;
+	-webkit-mask-size: contain;
+	transition: .2s transform;
+}
+html .card-faq .faq li:hover .title span {
+	animation: none;
+}
+html .card-faq .faq li .description {
+	background: none;
 	color: var(--paragraph-color);
+	font-size: 15px;
+	padding-top: 8px;
+	border-bottom: 0;
+	user-select: none;
+}
+html .background-block-type-3 {
+	background: var(--background-middle-color);
+}
+html .block-list-type-1 li .description {
+	color: var(--low-priority-color);
+	font-family: "Inter", sans-serif;
+	font-weight: 500;
+	font-size: 15px;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .block-list-type-1 li .highlighted {
+	color: var(--paragraph-color);
+	font-size: 24px;
+	user-select: none;
+	-webkit-user-drag: none;
+	transition: .2s opacity;
+}
+html .block-list-type-1 li .highlighted:hover {
+	opacity: 0.7;
+}
+html .background-block-type-2 {
+	background: var(--background-middle-color);
 }

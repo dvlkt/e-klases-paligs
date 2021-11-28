@@ -21,7 +21,8 @@ html .faq-container .faq-content .faq-item-content a,
 html .link-more,
 html .faq-item .item-abstract a,
 html .faq-item .item-more a,
-html .page-about a.link {
+html .page-about a.link,
+html .card-faq .faq li .description a {
 	color: var(--theme-color);
 	position: relative;
 	text-decoration: none;
@@ -54,7 +55,8 @@ html .link-more:focus,
 html .link-more:hover,
 html .faq-item .item-abstract a:hover,
 html .faq-item .item-more a:hover,
-html .page-about a.link:hover {
+html .page-about a.link:hover,
+html .card-faq .faq li .description a:hover {
 	color: var(--theme-color);
 	text-decoration: none;
 	background-size: 100% 1px;
