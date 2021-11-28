@@ -136,7 +136,7 @@ html .modal-mark-card .mark-card-inner-title {
 	border-radius: var(--corner-radius) var(--corner-radius) 0 0;
 	background: var(--background-front-color);
 	border: 0;
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-weight: bold;
 }
 html .modal-mark-card .mark-card-inner-title span {
@@ -144,7 +144,7 @@ html .modal-mark-card .mark-card-inner-title span {
 }
 mark-card-inner-title,
 html .mark-card-inner-content p {
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 }
 html .mark-card-inner-graph {
 	background: var(--background-front-color);
@@ -154,16 +154,16 @@ html .mark-card-inner-graph {
 	border: 0;
 }
 html .mark-card-inner-graph .mark-card-inner-graph-descr {
-	border-right: 4px solid #00000020;
+	border-right: 4px solid var(--opaque-divider-color);
 }
 html .mark-card-inner-graph .mark-card-inner-graph-descr p {
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 }
 html .mark-card-inner-graph-image {
 	padding: 0;
 }
 html .mark-card-inner-graph .mark-card-inner-graph-image .tiny-graph {
-	border-bottom: 4px solid #00000020;
+	border-bottom: 4px solid var(--opaque-divider-color);
 }
 html .mark-card-inner-graph-image path[fill="#ACACAC"] {
 	fill: var(--background-middle-color);
@@ -174,11 +174,8 @@ html .mark-card-inner-graph .mark-card-inner-graph-image path[fill="#009AE3"] {
 html .mark-card-inner-graph .mark-card-inner-graph-image .btn-test-report {
 	margin-left: 5px;
 	margin-right: 5px;
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	width: calc(100% - 10px);
-}
-html .mark-card-inner-graph .mark-card-inner-graph-image .btn-test-report::before {
-	filter: invert() brightness(var(--theme-accent-icon-brightness));
 }
 html .modal-mark-card .mark-card-inner {
 	background: var(--background-front-color);
@@ -222,8 +219,8 @@ html .modal-technical .legend-dialog .legend-category .legend-attribute {
 
 /* Timetable */
 html .modal-technical .timetible-item .name { /* Did you mean... timetable..? */
-	font-family: 'Inter', sans-serif;
-	border-right: 3px solid #00000020;
+	font-family: "Inter", sans-serif;
+	border-right: 3px solid var(--opaque-divider-color);
 }
 html .modal-dialog.timetable-dialog.empty .modal-body {
 	background: var(--background-middle-color);
@@ -232,7 +229,7 @@ html .modal-dialog.timetable-dialog.empty .modal-body {
 html .modal-dialog.timetable-dialog.empty .modal-body p,
 html .modal-technical .timetible-item .name,
 html .modal-technical .timetible-item .time {
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-size: 15px;
 	user-select: none;
 	-webkit-user-drag: none;
@@ -322,7 +319,7 @@ html .RecipientsModal__StudyYearList {
 }
 html .RecipientsModal__StudyYear,
 html .RecipientsModal__StudyYear--selected {
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-weight: 500;
 	color: var(--paragraph-color);
 	border-bottom: 0;
@@ -374,7 +371,6 @@ html .RecipientsModal__List .RecipientsModal__Item::before {
 	height: 15px;
 	display: inline-block;
 	margin-right: .5rem;
-	filter: invert() brightness(var(--icon-brightness));
 }
 html .RecipientsModal__AddedRecipientsCount {
 	display: inline-block;
@@ -382,7 +378,7 @@ html .RecipientsModal__AddedRecipientsCount {
 	height: 25px;
 	background: var(--theme-color);
 	color: var(--theme-accent-color);
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-weight: 500;
 	font-size: 15px;
 	border: 0;

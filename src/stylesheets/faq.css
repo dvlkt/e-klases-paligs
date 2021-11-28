@@ -55,7 +55,7 @@ html .questions-wrapper .categories-wrapper .faq-topic-item:hover {
 }
 html .questions-wrapper .categories-wrapper .faq-topic-item a .title {
 	color: var(--title-color);
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-weight: bold;
 	font-size: 22px;
 }
@@ -78,7 +78,7 @@ html .questions-wrapper.detailed .aq-wrapper {
 	background: none;
 }
 html .questions-wrapper.detailed .aq-wrapper .title-wrapper {
-	border-bottom: 4px solid var(--divider-color);
+	border-bottom: 4px solid var(--solid-divider-color);
 }
 html .questions-wrapper.detailed .aq-wrapper .title-wrapper .title-icon::before {
 	background: var(--title-color);

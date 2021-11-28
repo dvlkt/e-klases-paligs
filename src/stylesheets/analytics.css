@@ -134,15 +134,15 @@ html .analyitcs-ratings-chart-horzontal path[stroke="#8e8e8e"] {
 }
 html .analyitcs-ratings-chart-horzontal text[fill="#232323"] {
 	fill: var(--low-priority-color);
-	font: 13px 'Inter', sans-serif;
+	font: 13px "Inter", sans-serif;
 }
 html .analyitcs-ratings-chart-horzontal text[fill="#C48C8F"] {
 	fill: var(--red-accent-color);
-	font: 11px 'Inter', sans-serif !important;
+	font: 11px "Inter", sans-serif !important;
 }
 html .analyitcs-ratings-chart-horzontal text[fill="#000"] {
 	fill: var(--paragraph-color);
-	font: 11px 'Inter', sans-serif !important;
+	font: 11px "Inter", sans-serif !important;
 }
 html .analyitcs-ratings-chart-horzontal path[fill="#FFFFFF"][fill-opacity="0.85"] {
 	fill: var(--red-color);
@@ -303,7 +303,7 @@ html .analytics-rating-tables table thead td {
 	font-size: 15px;
 	font-weight: 500;
 	text-align: center;
-	border-bottom: 4px solid #00000020;
+	border-bottom: 4px solid var(--opaque-divider-color);
 }
 html .analytics-rating-tables td {
 	border: 0;
@@ -311,7 +311,7 @@ html .analytics-rating-tables td {
 	background: var(--background-middle-color);
 	font-family: "Inter", sans-serif;
 	font-size: 15px;
-	border-bottom: 4px solid #00000020;
+	border-bottom: 4px solid var(--opaque-divider-color);
 }
 html .analytics-rating-tables tbody tr:last-child td {
 	border-bottom: 0;
@@ -351,7 +351,7 @@ html .analytics-ratings-container h3.group-title::after {
 	html .analytics-ratings-table-intro .analytics-ratings-table-intro-left.analytics-ratings-table-intro-left,
 	html .analytics-ratings-table-intro .analytics-ratings-table-intro-right.analytics-ratings-table-intro-left,
 	html .analytics-ratings-table-intro .analytics-ratings-table-intro-middle.analytics-ratings-table-intro-left {
-		border-bottom: 4px solid #00000020;
+		border-bottom: 4px solid var(--opaque-divider-color);
 	}
 	html .analytics-ratings-table-intro .analytics-ratings-table-intro-left.analytics-ratings-table-intro-right span,
 	html .analytics-ratings-table-intro .analytics-ratings-table-intro-middle.analytics-ratings-table-intro-right span, 
@@ -371,7 +371,7 @@ html .analytics-ratings-container h3.group-title::after {
 		background: none;
 	}
 	html .graph-info {
-		border-top: 4px solid #00000020;
+		border-top: 4px solid var(--opaque-divider-color);
 	}
 	html .analytics-report-table-tools .btn {
 		width: 60%;
@@ -478,7 +478,7 @@ html .behavioral-table .marker {
 }
 html .lesson-topics-table tr:not(:nth-last-child(2)),
 html .behavioral-table tr:not(:nth-last-child(2)) {
-	border-bottom: 4px solid #00000020 !important;
+	border-bottom: 4px solid var(--opaque-divider-color) !important;
 }
 html .data-marks-detailed-wrap .container .marks-detailed {
 	box-shadow: none;
@@ -514,15 +514,15 @@ html .detailed-header .pupil-place span {
 html .detailed-item .right span {
 	color: var(--paragraph-color);
 	font-weight: bold;
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-size: 13px;
 }
 html .detailed-item .edited .additional-data.edited,
 html .detailed-item .rate-information {
-	border-left: 4px solid #00000020;
+	border-left: 4px solid var(--opaque-divider-color);
 }
 html .detailed-item .tiny-graph {
-	border-bottom: 4px solid #00000020;
+	border-bottom: 4px solid var(--opaque-divider-color);
 }
 html .detailed-item .additional-data .information {
 	font-size: 15px !important;
@@ -531,7 +531,7 @@ html .detailed-item .additional-data .information {
 html .explanation-wrap .explanation {
 	color: var(--paragraph-color);
 	font-size: 13px;
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 }
 html .explanation-wrap .explanation .icon {
 	width: 14px;
@@ -602,7 +602,7 @@ html .student-journal-lessons .lesson-title .explanation-line {
 }
 html .actual-lessons .lesson-title .date,
 html .student-journal-lessons .lesson-title .date {
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	color: var(--low-priority-color);
 	text-transform: uppercase;
 	font-weight: bold;
@@ -730,9 +730,9 @@ html .delay-info .delays-detailed-table-holder .delays-detailed-table-first-colu
 	border: 0;
 	color: var(--paragraph-color);
 	font-size: 15px;
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-weight: 500;
-	border-bottom: 4px solid #00000020;
+	border-bottom: 4px solid var(--opaque-divider-color);
 }
 html .delay-info .delays-detailed-table-holder .delays-detailed-table-first-column tbody tr:last-child td {
 	border-bottom: 0;
@@ -749,7 +749,7 @@ html .delay-info .delays-detailed-table table td {
 	background: var(--background-middle-color);
 }
 html .delay-info .delays-detailed-table table tr {
-	border-bottom: 4px solid #00000020;
+	border-bottom: 4px solid var(--opaque-divider-color);
 }
 html .delay-info .delays-detailed-table table tbody tr:last-child {
 	border-bottom: 0;
@@ -787,7 +787,7 @@ html .delay-info .delays-documents thead tr {
 }
 html .delay-info .delays-documents tr td {
 	background: var(--background-middle-color);
-	border-bottom: 4px solid #00000020;
+	border-bottom: 4px solid var(--opaque-divider-color);
 }
 html .delay-info .delays-documents tbody tr:last-child td {
 	border-bottom: 0;
@@ -836,11 +836,11 @@ html .delay-mobile-details h3 {
 	color: var(--title-color);
 }
 html .delay-mobile-details .split {
-	border-top: 4px solid var(--divider-color);
+	border-top: 4px solid var(--solid-divider-color);
 }
 html .delays-legend .legend-title {
 	font-size: 13px;
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-weight: bold;
 	color: var(--low-priority-color);
 	text-transform: uppercase;
@@ -856,7 +856,7 @@ html .delay-mobile-details .delay-document {
 html .delay-mobile-details .delay-subject thead td,
 html .delay-mobile-details .delay-document thead td {
 	background: none;
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-size: 15px;
 	font-weight: bold;
 	color: var(--paragraph-color);
@@ -867,7 +867,7 @@ html .delay-mobile-details .delay-subject thead td:nth-child(2) {
 }
 html .delay-mobile-details .delay-subject tbody td,
 html .delay-mobile-details .delay-document tbody td:first-child {
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-size: 13px;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -877,12 +877,12 @@ html .delay-mobile-details .delay-subject tbody td:nth-child(2) {
 	text-transform: none;
 	color: var(--paragraph-color);
 	font-size: 13px;
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-weight: normal;
 }
 html .delay-mobile-details .delay-document tbody span {
 	color: var(--paragraph-color);
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-weight: normal;
 }
 html .delay-mobile-details .delay-document tr {
@@ -891,7 +891,7 @@ html .delay-mobile-details .delay-document tr {
 html .delay-mobile-details td:first-child,
 html .delay-mobile-details td:nth-child(2) span {
 	font-size: 13px;
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-weight: normal;
 	color: var(--paragraph-color);
 }
@@ -941,8 +941,8 @@ html .print-table {
 }
 html .print-table tr {
 	border: 0;
-	border-top: 4px solid #00000020;
-	border-bottom: 4px solid #00000020;
+	border-top: 4px solid var(--opaque-divider-color);
+	border-bottom: 4px solid var(--opaque-divider-color);
 }
 html .print-table thead tr {
 	border-top: 0;
@@ -1011,7 +1011,7 @@ html .analytics-report-table-holder .analytics-report-table-first-column .table-
 	background: var(--background-middle-dark-color);
 	padding: 0;
 	text-align: center;
-	border-bottom: 2px solid #00000020;
+	border-bottom: 2px solid var(--opaque-divider-color);
 	user-select: none;
 	-webkit-user-drag: none;
 }
@@ -1031,7 +1031,7 @@ html .analytics-report-table-holder .analytics-report-table-first-column .subsec
 	font-size: 15px;
 }
 html .analytics-report-table-holder tr.subsection-header {
-	border-top: 4px solid #00000020 !important;
+	border-top: 4px solid var(--opaque-divider-color) !important;
 }
 html .analytics-report-table-holder .analytics-report-table-first-column tbody tr:last-child td {
 	border-bottom-left-radius: var(--corner-radius);
@@ -1083,12 +1083,12 @@ html .analytics-report-table table thead td {
 	font-size: 15px;
 	font-weight: 500;
 	padding-top: 1px;
-	border-bottom: 8px solid #00000020;
+	border-bottom: 8px solid var(--opaque-divider-color);
 	user-select: none;
 	-webkit-user-drag: none;
 }
 html .analytics-report-table table tbody .subsection-header td {
-	border-top: 8px solid #00000020;
+	border-top: 8px solid var(--opaque-divider-color);
 }
 html .analytics-report-table table tbody .score {
 	font-family: "Inter", sans-serif;

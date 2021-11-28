@@ -160,7 +160,7 @@ html .history-entries-table-holder .entries-table td:nth-child(2n) {
 	background: var(--background-middle-color);
 }
 html .history-entries-table-holder .entries-table tbody tr {
-	border-top: 4px solid #00000020;
+	border-top: 4px solid var(--opaque-divider-color);
 }
 html .history-entries-table-holder .entries-table thead td:first-child {
 	border-top-left-radius: var(--corner-radius);
@@ -302,7 +302,7 @@ html .settings-modal-body .form-row .input::placeholder {
 	font-style: normal;
 }
 html .settings-modal-body .form-row .separate {
-	background: #00000020;
+	background: var(--opaque-divider-color);
 	height: 4px;
 }
 html .settings-modal-body .form-row.information-row {

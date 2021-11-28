@@ -14,7 +14,7 @@ html .student-journal-lessons-table-holder .lessons-table .head td,
 html .student-journal-lessons-table-holder .lessons-table thead td,
 html .diary-container .lessons-table thead td {
 	background: var(--background-middle-color);
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	border: 0;
 }
 html .student-journal-lessons-table-holder .lessons-table thead td,
@@ -58,8 +58,8 @@ html .student-journal-lessons-table-holder .lessons-table tbody .first-column,
 html .diary-container .lessons-table tbody .first-column {
 	background: var(--background-middle-color);
 	border: 0;
-	border-bottom: 4px solid #00000020;
-	border-top: 4px solid #00000020;
+	border-bottom: 4px solid var(--opaque-divider-color);
+	border-top: 4px solid var(--opaque-divider-color);
 }
 html .student-journal-lessons-table-holder .lessons-table tbody .title,
 html .diary-container .lessons-table tbody .title {
@@ -86,8 +86,8 @@ html .diary-container .lessons-table td {
 	font-size: 15px;
 	line-height: 18px;
 	border: 0;
-	border-bottom: 4px solid #00000020;
-	border-top: 4px solid #00000020;
+	border-bottom: 4px solid var(--opaque-divider-color);
+	border-top: 4px solid var(--opaque-divider-color);
 }
 html .student-journal-lessons-table-holder .lessons-table td.first-column,
 html .diary-container .lessons-table td.first-column {
@@ -287,7 +287,7 @@ html .home-task-answer-widget-container .Widget .Widget__Body .Widget__Text p {
 html .student-journal-lessons-table-holder .lessons-table .info .first-column {
 	color: var(--paragraph-color);
 	font-size: 15px;
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 }
 html .student-journal-lessons-table-holder .lessons-table .info td:last-child {
 	color: var(--paragraph-color);
@@ -349,7 +349,7 @@ html .student-journal-lessons .lesson-subitem .description {
 html .actual-lessons .lesson-subitem .title,
 html .student-journal-lessons .lesson-subitem .title {
 	color: var(--low-priority-color);
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-size: 15px;
 	font-weight: 500;
 	margin-bottom: 2px;
@@ -376,11 +376,11 @@ html .student-journal-lessons .lesson-title {
 }
 html .actual-lessons .lesson-title .title,
 html .student-journal-lessons .lesson-title .title {
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-weight: bold;
 }
 html .students-journal-header .week-selector .selected-period {
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-weight: 500;
 	font-size: 18px;
 	user-select: none;
@@ -535,8 +535,8 @@ html #centerContainer th {
 	border: 0;
 }
 html #centerContainer tr {
-	border-bottom: solid 4px #00000020;
-	border-top: solid 4px #00000020;
+	border-bottom: solid 4px var(--opaque-divider-color);
+	border-top: solid 4px var(--opaque-divider-color);
 }
 html #centerContainer thead tr {
 	border-top: 0;
@@ -649,8 +649,8 @@ html .rating-wrap .item,
 html .rating-wrap .fulfillment .col:nth-of-type(3n),
 html .rating-wrap .final .col:nth-of-type(3n) {
 	border: 0;
-	border-bottom: 4px solid #00000020;
-	border-top: 4px solid #00000020;
+	border-bottom: 4px solid var(--opaque-divider-color);
+	border-top: 4px solid var(--opaque-divider-color);
 }
 html .rating-wrap .fulfillment .col:nth-of-type(3n),
 html .rating-wrap .final .col:nth-of-type(3n) {
@@ -673,7 +673,7 @@ html .rating-wrap .item .col:nth-of-type(2n) {
 	background: var(--background-middle-dark-color);
 }
 html .rating-wrap .item:first-child .col:nth-of-type(2n) {
-	border-bottom: 4px solid #00000020;
+	border-bottom: 4px solid var(--opaque-divider-color);
 }
 html .rating-wrap .total .col:first-of-type::before,
 html .rating-wrap .total .col:first-of-type::after,

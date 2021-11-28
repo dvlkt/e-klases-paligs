@@ -46,13 +46,13 @@ html .form-content .form-control {
 }
 html .login-form .dummy-placeholder {
 	color: var(--low-priority-color);
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 }
 html .login-form .btn-default {
 	background: var(--theme-color);
 	color: var(--theme-accent-color);
 	font-weight: 500;
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-size: 15px;
 	border-radius: var(--corner-radius);
 	padding: 5px;
@@ -110,7 +110,7 @@ html .primary-sticked .main-header,
 html .primary-stickied .main-header {
 	position: static;
 	width: 100%;
-	border-bottom: 4px solid #00000020;
+	border-bottom: 4px solid var(--opaque-divider-color);
 }
 html .main-header[data-is-stickied="true"] {
 	margin-bottom: 80px;
@@ -137,8 +137,6 @@ html .main-header .logo-holder .logo:hover {
 	opacity: 0.7;
 }
 html .socials li.fb {
-	filter: brightness(var(--icon-brightness));
-
 	transition: .2s opacity;
 }
 html .socials li.fb:hover {
@@ -258,7 +256,7 @@ html .secondary-menu ul {
 	height: 26px;
 }
 html h2.section-title {
-	border-bottom: 4px solid var(--divider-color);
+	border-bottom: 4px solid var(--solid-divider-color);
 }
 @media (max-width: 767px) {
 	html .main-header {
@@ -368,7 +366,7 @@ html .article-item .article-metas .tags li:hover {
 }
 
 html .splitter {
-	/* border-top: 4px solid var(--divider-color); */
+	/* border-top: 4px solid var(--solid-divider-color); */
 	border-top: 0;
 }
 html .splitter a,
@@ -378,7 +376,7 @@ html .btn.load-more {
 	height: 32px;
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-weight: normal;
 	font-size: 15px;
 	text-align: center;
@@ -413,7 +411,7 @@ html .article-header .header-content {
 }
 html .article-header .header-content h1 {
 	color: var(--title-color);
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-size: 32px;
 	font-weight: bold;
 	margin-bottom: 0;
@@ -564,10 +562,10 @@ html .gal-thumbs .slick-prev:hover {
 }
 html .article-header {
 	display: block;
-	border-bottom: 4px solid var(--divider-color);
+	border-bottom: 4px solid var(--solid-divider-color);
 }
 html .additional-articles-items {
-	border-top: 4px solid var(--divider-color);
+	border-top: 4px solid var(--solid-divider-color);
 }
 html .comments-top {
 	border-bottom: 0;
@@ -1005,13 +1003,11 @@ html .modal-header.student-profile {
 }
 html .welcome-greeting .welcome-greeting-image.student-other {
 	border-radius: 50%;
-	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2OSIgaGVpZ2h0PSI2OSIgdmlld0JveD0iLTQ0NSAyNDYgNjkgNjkiPjxwYXRoIGQ9Ik0tMzgwLjMgMjgwLjVjMC0xNi43LTEzLjYtMzAuNC0zMC40LTMwLjRzLTMwLjQgMTMuNi0zMC40IDMwLjRjMCA5LjEgNCAxNy4zIDEwLjQgMjIuOHYtLjFjMi43LTcuNSAxMC4zLTEuNiAxMy45LTguNS0yLjQtMi4yLTQuNC01LjQtNS42LTktLjEuMS0uNy0yLjgtMS4yLTUuMi0uMi0xLjUtLjItNy45LjEtOS43LjItMS4yLjQtMi4yLjctMy4xLjItLjkuNS0yIDEuMS0zLjQgMS4yLTIuOSA1LjEtNC44IDExLjUtNC44IDguNSAwIDEwLjkgMy41IDEyLjIgNS45LjkgMS43LjggMy42IDEuMSA1LjFsLjMgMS41Yy4yIDEuNS4yIDUuNi4xIDYuNi0uNiAzLjQtMS4yIDcuMS0xLjIgNy4xLTEuMiAzLjYtMy4yIDYuOS01LjcgOSAzLjUgNi42IDEwLjggMS4zIDEzLjYgNy44IDUuOS01LjUgOS41LTEzLjMgOS41LTIyeiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0tNDEwLjYgMjQ2LjFjLTE4LjkgMC0zNC40IDE1LjQtMzQuNCAzNC40IDAgMTEgNS4yIDIwLjggMTMuMyAyNy4xIDIuOCAyLjIgNS45IDMuOSA5LjMgNS4yIDMuNyAxLjMgNy43IDIuMSAxMS44IDIuMSA0LjEgMCA4LjEtLjcgMTEuOC0yLjEgMy44LTEuNCA3LjItMy40IDEwLjItNS45IDcuNS02LjMgMTIuMy0xNS44IDEyLjMtMjYuNCAwLTE5LTE1LjQtMzQuNC0zNC4zLTM0LjR6bTIwLjggNTYuNWMtMi44LTYuNS0xMC4xLTEuMi0xMy42LTcuOCAyLjUtMi4yIDQuNS01LjQgNS43LTkgMCAwIC43LTMuNiAxLjItNy4xLjEtMS4xLjEtNS4yLS4xLTYuNmwtLjMtMS41Yy0uMi0xLjUtLjItMy40LTEuMS01LjEtMS4zLTIuNC0zLjctNS45LTEyLjItNS45LTYuMyAwLTEwLjMgMS45LTExLjUgNC44LS42IDEuNC0uOSAyLjUtMS4xIDMuNC0uMy45LS41IDEuOS0uNyAzLjEtLjIgMS44LS4yIDguMi0uMSA5LjcuNCAyLjQgMS4xIDUuMyAxLjIgNS4yIDEuMiAzLjYgMy4yIDYuOCA1LjYgOS0zLjYgNi45LTExLjIgMS0xMy45IDguNXYuMWMtNi40LTUuNi0xMC40LTEzLjctMTAuNC0yMi44IDAtMTYuNyAxMy42LTMwLjQgMzAuNC0zMC40czMwLjQgMTMuNiAzMC40IDMwLjRjMCA4LjYtMy42IDE2LjQtOS41IDIyeiIgZmlsbD0iI2ZmZmZmZiIvPjwvc3ZnPg==");
-	filter: invert() brightness(var(--icon-brightness));
 }
 html .welcome-greeting h3,
 html .welcome-greeting strong,
 html .modal-options-item .modal-options-title span {
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-weight: bold;
 }
 html .modal-options-item {
@@ -1028,9 +1024,6 @@ html .modal-options-item:hover {
 html .modal-options-item .modal-options-title span {
 	color: var(--paragraph-color);
 }
-html .modal-options-item .modal-options-icon.school {
-	filter: invert() brightness(var(--icon-brightness));
-}
 html .modal-options-item .modal-options-choice {
 	color: var(--paragraph-color);
 
@@ -1045,8 +1038,6 @@ html .modal-options-item .modal-options-title spanr {
 html .modal-options-item .modal-options-button,
 html .modal-options-item .modal-options-button:hover {
 	background-color: transparent;
-
-	filter: brightness(var(--icon-brightness));
 }
 html .modal-header .modal-logout {
 	width: 2rem;
@@ -1061,18 +1052,11 @@ html .modal-header .modal-logout:hover {
 }
 html .modal-header .modal-logout::before {
 	content: "";
-
 	top: 0;
-
 	display: block;
 	width: 1.5rem;
 	height: 1.5rem;
-
 	margin-left: .25rem;
-
-	background-size: cover;
-
-	filter: invert() brightness(var(--theme-accent-icon-brightness));
 }
 
 /* Insurance */

@@ -25,7 +25,7 @@ html .print-checkbox {
 html .analytics-form-page .analytics-form-holder .checkbox label,
 html .analytics-form-page .analytics-form-holder .radio label,
 html .checkbox label {
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	color: var(--paragraph-color);
 	font-size: 15px;
 	line-height: 13px;
@@ -120,7 +120,7 @@ html .bottom-controls .calendar-holder {
 	top: -345px !important;
 }
 html .calendar-holder .datepicker .datepicker-switch {
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-weight: 500;
 	color: var(--title-color);
 	min-width: 0 !important;
@@ -156,7 +156,7 @@ html .journal-nav .mobile-date {
 html .calendar-holder .datepicker .dow,
 html .datepicker .dow {
 	color: var(--low-priority-color);
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-weight: bold;
 	font-size: 15px;
 }
