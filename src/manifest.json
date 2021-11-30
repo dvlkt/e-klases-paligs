@@ -47,6 +47,7 @@
 				"tweaks/header.js",
 				"tweaks/footer.js",
 				"tweaks/home.js",
+				"tweaks/login.js",
 				"tweaks/mail.js",
 				"tweaks/profilePicture.js",
 				"tweaks/faq.js",

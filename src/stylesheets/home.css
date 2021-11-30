@@ -66,6 +66,49 @@ html .login-form .btn-default:hover {
 html .login-form .btn-default .progress {
 	display: none;
 }
+html .login-form .show-password-btn {
+	position: absolute;
+	top: 7px;
+	right: 7px;
+	display: block;
+	width: 27px;
+	height: 27px;
+	border-radius: var(--corner-radius);
+	background: var(--background-middle-color);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	cursor: pointer;
+	transition: .2s filter, .2s box-shadow;
+}
+html .login-form .show-password-btn:hover {
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
+}
+html .login-form .show-password-btn::before {
+	content: "";
+	display: block;
+	width: 19px;
+	height: 19px;
+	background: var(--paragraph-color);
+	margin: 4px;
+	mask-size: contain;
+	-webkit-mask-size: contain;
+}
+html .login-form .show-password-btn::after {
+	content: "";
+	display: block;
+	width: 19px;
+	height: 19px;
+	background: var(--paragraph-color);
+	margin: 4px;
+	margin-top: -23px;
+	mask-size: contain;
+	-webkit-mask-size: contain;
+	clip-path: inset(100% 100% 0 0);
+	transition: .3s clip-path;
+}
+html .login-form .show-password-btn.active::after {
+	clip-path: inset(100% 100% 100% 100%);
+}
 html .login-form .checkbox {
 	margin-bottom: 15px;
 }

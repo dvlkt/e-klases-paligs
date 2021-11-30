@@ -116,10 +116,8 @@ html .UserProfileSelector_SelectMarker {
 /* LOGIN PAGE */
 html .li-LoginWrapper .li-LoginInputContainer {
 	background: var(--background-middle-color);
-
 	border-radius: var(--corner-radius);
-
-	box-shadow: 0 7px 14px -3px var(--shadow-color);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
 html .li-LoginWrapper .li-LoginInputContainer::after {
 	display: none;
@@ -133,8 +131,9 @@ html .li-LoginInputContainer_Layer img {
 html .li-ValidationError {
 	background: var(--red-color);
 	color: var(--red-accent-color);
-	
-	box-shadow: 0 7px 14px -3px var(--red-shadow-color);
+	box-shadow: 2px 3px 5px -3px var(--red-shadow-color);
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .li-ButtonDefault {
 	background: var(--theme-color);
@@ -158,14 +157,19 @@ html .li-TextboxDefault {
 	color: var(--paragraph-color);
 	padding-left: 10px;
 	border-radius: var(--corner-radius);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
 html .li-HelpItem {
 	border-radius: var(--corner-radius);
-	box-shadow: 0 7px 14px -3px var(--shadow-color);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	background: var(--background-middle-color);
 }
 html .li-HelpItem_Head {
 	background: none;
+}
+html .li-LoginInputContainer .checkbox {
+	width: 150px;
+	margin: auto;
 }
 
 /* Tech support */
