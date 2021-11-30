@@ -64,9 +64,11 @@ html .card-faq .faq li .description a:hover {
 
 /* Bold underline */
 html .home-diary-link {
+	background-position: bottom left;
 	background-size: 0% 2px;
 }
 html .home-diary-link:hover {
+	background-position: bottom left;
 	background-size: 100% 2px;
 }
 
