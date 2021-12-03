@@ -27,6 +27,7 @@ html .announcement .warning .inner {
 	font-family: "Inter", sans-serif;
 	font-weight: 500;
 	padding: 10px;
+	padding-top: 5px;
 	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--red-shadow-color);
 }
