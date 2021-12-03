@@ -1,5 +1,5 @@
 window.addEventListener(`pageLoading`, () => {
-	if (!window.location.href.includes(`Diary`)) {
+	if (!window.location.href.includes(`/Family/Diary`)) {
 		return;
 	}
 
@@ -64,14 +64,25 @@ window.addEventListener(`pageLoading`, () => {
 	/*
 		Remove the different column colors from the table header in diary when there is no data
 	*/
-	if (document.location.href.includes(`/Family/Diary`)) {
-		for (let i of document.querySelectorAll(`table.lessons-table`)) {
-			if (i.children[1].children[0].children[0].className.includes(`no-data`)) {
-				for (let o of i.querySelectorAll(`thead tr td`)) {
-					o.innerHTML = ``;
-					o.style.background = `var(--background-middle-dark-color)`;
-				}
+	for (let i of document.querySelectorAll(`table.lessons-table`)) {
+		if (i.children[1].children[0].children[0].className.includes(`no-data`)) {
+			for (let o of i.querySelectorAll(`thead tr td`)) {
+				o.innerHTML = ``;
+				o.style.background = `var(--background-middle-dark-color)`;
 			}
 		}
+	}
+
+	/*
+		Make the grade column wider when necessary
+	*/
+	let gradeColumnWidth = 110; // 110px is the default width
+	for (let element of document.querySelectorAll(`.score.open-mark-file`)) {
+		if (element.clientWidth + 12 > gradeColumnWidth) {
+			gradeColumnWidth = element.clientWidth + 12; // Add 12 because the padding on both sides is 6px
+		}
+	}
+	for (let element of document.querySelectorAll(`.lessons-table td.score`)) {
+		element.style.width = `${gradeColumnWidth}px`;
 	}
 });
