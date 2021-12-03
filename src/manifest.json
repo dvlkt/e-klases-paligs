@@ -1,5 +1,5 @@
 {
-	"manifest_version": 2,
+	"manifest_version": 3,
 	"name": "E-klases Palīgs - Tumšais režīms",
 	"version": "1.0",
 	"description": "Labāks dizains un vairāk funkcijas.",
@@ -15,20 +15,27 @@
 		"storage",
 		"tabs"
 	],
-	"browser_action": {
+	"action": {
 		"default_icon": "res/light/icon-64.png",
 		"default_title": "E-klases Palīgs",
 		"default_popup": "popup/index.html"
 	},
 	"web_accessible_resources": [
-		"res/title-light.png",
-		"res/title-dark.png",
-		"res/light/icon-256.png",
-		"res/light/icon-256-bw.png",
-		"res/dark/icon-256.png",
-		"res/dark/icon-256-bw.png",
-		"themes/light.json",
-		"themes/dark.json"
+		{
+			"matches": [
+				"*://*.e-klase.lv/*"
+			],
+			"resources": [	
+				"res/title-light.png",
+				"res/title-dark.png",
+				"res/light/icon-256.png",
+				"res/light/icon-256-bw.png",
+				"res/dark/icon-256.png",
+				"res/dark/icon-256-bw.png",
+				"themes/light.json",
+				"themes/dark.json"
+			]
+		}
 	],
 	"content_scripts": [
 		{
@@ -88,9 +95,7 @@
 		}
 	],
 	"background": {
-		"scripts": [
-			"background/onInstall.js"
-		]
+		"service_worker": "background/onInstall.js"
 	},
 	"browser_specific_settings": {
 		"gecko": {
