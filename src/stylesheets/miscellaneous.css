@@ -51,6 +51,10 @@ html .InputForm_Row .TextInput {
 html .InputForm_Row .TextInput::placeholder {
 	color: var(--low-priority-color);
 }
+html .InputForm .checkbox {
+	width: 150px;
+	margin: auto;
+}
 html .ButtonDefault {
 	background: var(--theme-color);
 	color: var(--theme-accent-color);
@@ -65,6 +69,13 @@ html .ButtonDefault {
 html .ButtonDefault:hover {
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 	filter: brightness(0.9);
+}
+html .InputForm .validation-summary-errors {
+	background: var(--red-color);
+	color: var(--red-accent-color);
+	box-shadow: 2px 3px 5px -3px var(--red-shadow-color);
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .MainFooter {
 	background: var(--background-middle-color);
