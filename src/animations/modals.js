@@ -85,6 +85,48 @@ window.addEventListener(`pageLoaded`, () => {
 	}
 
 	/*
+		Grade overview open/close animation
+	*/
+	for (let buttonElement of document.querySelectorAll(`.score.open-mark-file`)) {
+		let modalBgElement = document.querySelector(`.modal-background`);
+
+		buttonElement.addEventListener(`click`, () => {
+			setTimeout(() => {
+				let modalElement = document.querySelector(`.Modal.modal-evaluation-file`);
+
+				modalBgElement.style.display = `block`;
+				modalElement.style.display = `block`;
+
+				modalElement.style.top = `${window.innerHeight / 2 - modalElement.children[0].children[0].clientHeight / 2}px`;
+				modalElement.style.height = `${modalElement.children[0].children[0].clientHeight}px`;
+
+				setTimeout(() => {
+					modalBgElement.style.opacity = `0.5`;
+					modalElement.style.opacity = `1.0`;
+					modalElement.style.transform = `scale(1.0)`;
+
+					setTimeout(() => addGradeOverviewModalClosingAnimation(), 20);
+				}, 50);
+			}, 20);
+		});
+
+		modalBgElement.addEventListener(`click`, () => {
+			setTimeout(() => {
+				let modalElement = document.querySelector(`.Modal.modal-evaluation-file`);
+
+				modalBgElement.style.opacity = `0`;
+				modalElement.style.opacity = `0`;
+				modalElement.style.transform = `scale(0.75)`;
+
+				setTimeout(() => {
+					modalBgElement.style.display = `none`;
+					modalElement.style.display = `none`;
+				}, 200);
+			}, 20);
+		});
+	}
+
+	/*
 		Technical support warning close animation
 	*/
 	if (document.querySelector(`.technical-support-warning-modal`) !== null) {
@@ -231,3 +273,31 @@ window.addEventListener(`pageLoaded`, () => {
 		}
 	});
 });
+
+const addGradeOverviewModalClosingAnimation = () => {
+	if (document.querySelector(`.Modal .Modal__Dialog .loading`) !== null) {
+		setTimeout(() => addGradeOverviewModalClosingAnimation(), 20);
+	} else {
+		let modalHeaderElement = document.querySelector(`.Modal.modal-evaluation-file .Modal__Header`);
+
+		// Remove all of the events from the button this way
+		let modalHeaderInnerHTML = modalHeaderElement.innerHTML;
+		modalHeaderElement.innerHTML = ``;
+		modalHeaderElement.innerHTML = modalHeaderInnerHTML;
+
+		// Add the close animation
+		document.querySelector(`.Modal.modal-evaluation-file .Modal__Header .Modal__Close`).addEventListener(`click`, () => {
+			let modalElement = document.querySelector(`.Modal.modal-evaluation-file`);
+			let modalBgElement = document.querySelector(`.modal-background`);
+
+			modalBgElement.style.opacity = `0`;
+			modalElement.style.opacity = `0`;
+			modalElement.style.transform = `scale(0.75)`;
+
+			setTimeout(() => {
+				modalBgElement.style.display = `none`;
+				modalElement.style.display = `none`;
+			}, 200);
+		});
+	}
+}

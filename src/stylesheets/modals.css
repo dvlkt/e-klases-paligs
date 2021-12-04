@@ -1,5 +1,6 @@
 /* General */
-html .modal {
+html .modal,
+html .Modal.modal-evaluation-file {
 	position: fixed;
 	top: 15%;
 	left: 25%;
@@ -113,8 +114,17 @@ html .modal-button:hover {
 html body.state-md .Modal {
 	background: #00000080;
 }
+html body.state-md .Modal.modal-evaluation-file {
+	background: none;
+}
 html .Modal .Modal__Dialog {
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+}
+html .Modal.Modal.modal-evaluation-file .Modal__Dialog {
+	width: 100% !important;
+	height: 100%;
+	margin: 0;
+	box-shadow: none;
 }
 html .SpinnerSection .Spinner {
 	border-width: 5px;
@@ -390,7 +400,13 @@ html .RecipientsModal__AddedRecipientsCount {
 	-webkit-user-drag: none;
 }
 
-/* Grade information */
+/* Grade overview */
+html .Modal.Modal.modal-evaluation-file .Modal__Dialog .Modal__Content {
+	height: 100%;
+	margin-top: 0 !important;
+	background: var(--background-middle-color);
+	border-radius: var(--corner-radius);
+}
 html .Modal__Header .Title {
 	font-size: 32px;
 	font-family: "Inter", sans-serif;
@@ -399,6 +415,9 @@ html .Modal__Header .Title {
 	margin-left: 0;
 	user-select: none;
 	-webkit-user-drag: none;
+}
+html .Modal .Modal__Dialog .loading {
+	background: var(--background-middle-color);
 }
 html .Modal__Body .Container .Section {
 	background: none;
