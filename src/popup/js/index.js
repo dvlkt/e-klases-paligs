@@ -41,6 +41,7 @@ for (let i = 0; i < themeList.length; i++) {
 		</div>
 	`;
 }
+themePickerElement.style.width = `${themeList.length * 130}px`;
 
 // Load the theme preview colors
 for (let i = 0; i < themeList.length; i++) {

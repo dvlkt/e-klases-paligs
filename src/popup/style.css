@@ -102,8 +102,15 @@ h2:first-of-type {
 	color: var(--paragraph-color);
 }
 
+.theme-picker-wrapper {
+	position: relative;
+	width: calc(100% - 15px);
+	height: 105px;
+	overflow-y: hidden;
+	overflow-x: scroll;
+}
 .theme-picker {
-	overflow-y: scroll;
+	overflow-y: hidden;
 	height: 150px;
 }
 .theme-preview {
