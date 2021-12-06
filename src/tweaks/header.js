@@ -38,6 +38,7 @@ window.addEventListener(`pageLoading`, () => {
 					</div>
 				</div>
 			</div>`;
+		headerElement.style.position = `fixed`;
 
 		document.body.insertBefore(headerElement, document.body.children[0]);
 	}
