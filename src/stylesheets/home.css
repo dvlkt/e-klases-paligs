@@ -1304,12 +1304,6 @@ html .select2-container .select2-results .select2-results__options .select2-resu
 	background: var(--background-front-color);
 	filter: brightness(0.9);
 }
-html .select2-container .select2-selection--single .select2-selection__arrow b {
-	background: var(--low-priority-color);
-	width: 19px;
-	mask-size: contain;
-	-webkit-mask-size: contain;
-}
 html section.background-block-type-5 {
 	background: var(--background-middle-color) !important;
 }

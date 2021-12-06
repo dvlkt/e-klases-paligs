@@ -420,7 +420,16 @@ html .select2-container--default .select2-results__option--highlighted[aria-sele
 	border-radius: var(--corner-radius);
 }
 html .select2-container--default .select2-selection--single .select2-selection__arrow b {
-	border-color: var(--paragraph-color) #00000000 #00000000;
+	border: 0;
+	background: var(--low-priority-color);
+	height: 16px;
+	width: 16px;
+	left: 6px;
+	top: 8px;
+	mask-size: contain;
+	-webkit-mask-size: contain;
+	mask-repeat: no-repeat;
+	-webkit-mask-repeat: no-repeat;
 }
 html .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
 	border-color: #00000000 #00000000 var(--paragraph-color);
