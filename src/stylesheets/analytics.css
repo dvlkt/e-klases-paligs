@@ -150,6 +150,7 @@ html .analyitcs-ratings-chart-horzontal path[fill="#FFFFFF"][fill-opacity="0.85"
 }
 html .analyitcs-ratings-chart-horzontal path[stroke="#C48C8F"] {
 	stroke: var(--red-color);
+	stroke-width: 2px;
 }
 html .analyitcs-ratings-chart-horzontal path[fill="#BDBDBD"] {
 	fill: var(--analytics-generic-bar-color);

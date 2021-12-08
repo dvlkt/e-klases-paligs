@@ -697,3 +697,29 @@ html .chart-wrap h3 {
 	user-select: none;
 	-webkit-user-drag: none;
 }
+html .chart-wrap .chart path[fill="#fff"],
+html .chart-wrap .chart path[fill="#ffffff"] {
+	fill: none;
+}
+html .chart-wrap .chart path[fill="#009ae3"] {
+	fill: var(--theme-color);
+}
+html .chart-wrap .chart path[fill="#acacac"] {
+	fill: var(--analytics-generic-bar-color);
+}
+html .chart-wrap .chart text {
+	font: 15px "Inter", sans-serif;
+	fill: var(--paragraph-color);
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .chart-wrap .chart path[stroke="#8e8e8e"],
+html .chart-wrap .chart path[stroke="#e8e8e8"],
+html .chart-wrap .chart path[stroke="#4a4a4a"] {
+	stroke: var(--analytics-grid-color);
+	stroke-width: 4px;
+}
+html .chart-wrap .chart path[stroke="rgba(175, 107, 111, 0.8)"] {
+	stroke: var(--red-color);
+	stroke-width: 2px;
+}

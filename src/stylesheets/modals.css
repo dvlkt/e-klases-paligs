@@ -427,7 +427,7 @@ html .Modal__Body .Section .Section__Chunk {
 	padding: 0;
 }
 html .Modal__Body .Section .Section__Chunk .tiny-graph path[fill="#CFCFCF"] {
-	fill: var(--background-front-color);
+	fill: var(--analytics-generic-bar-color);
 	border-radius: var(--corner-radius);
 }
 html .Modal__Body .Section .Section__Chunk .tiny-graph path[fill="#3A96F9"] {
