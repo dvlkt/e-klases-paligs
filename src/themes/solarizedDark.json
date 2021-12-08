@@ -14,7 +14,13 @@
 		"shadow": "#00000099",
 		"red": "#eb4545",
 		"red-shadow": "#641212a6",
-		"red-accent": "#ffffff"
+		"red-accent": "#ffffff",
+		"analytics": {
+			"grid": "#00222b",
+			"generic-bar": "#004052",
+			"positive-bar": "#4cc242",
+			"negative-bar": "#e83434"
+		}
 	},
 	"variants": {
 		"logo": "dark",

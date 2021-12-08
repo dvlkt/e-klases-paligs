@@ -6,7 +6,13 @@ const loadTheme = () => {
 		let root = document.querySelector(`:root`);
 
 		for (let key in res.themeData.colors) {
-			root.style.setProperty(`--${key}-color`, res.themeData.colors[key]);
+			if (typeof res.themeData.colors[key] === `string`) {
+				root.style.setProperty(`--${key}-color`, res.themeData.colors[key]);
+			} else {
+				for (let subKey in res.themeData.colors[key]) {
+					root.style.setProperty(`--${key}-${subKey}-color`, res.themeData.colors[key][subKey]);
+				}
+			}
 		}
 	});
 }

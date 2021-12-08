@@ -7,6 +7,10 @@ export const loadTheme = () => {
 			let root = document.querySelector(`:root`);
 
 			for (let key in res.themeData.colors) {
+				if (typeof res.themeData.colors[key] !== `string`) {
+					continue;
+				}
+
 				root.style.setProperty(`--${key}-color`, res.themeData.colors[key]);
 			}
 

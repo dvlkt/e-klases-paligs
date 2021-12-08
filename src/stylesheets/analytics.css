@@ -129,7 +129,7 @@ html .analyitcs-ratings-chart-horzontal path[fill="#fff"] {
 }
 html .analyitcs-ratings-chart-horzontal path[stroke="#dfdfdf"],
 html .analyitcs-ratings-chart-horzontal path[stroke="#8e8e8e"] {
-	stroke: var(--background-middle-color);
+	stroke: var(--analytics-grid-color);
 	stroke-width: 4px;
 }
 html .analyitcs-ratings-chart-horzontal text[fill="#232323"] {
@@ -152,20 +152,22 @@ html .analyitcs-ratings-chart-horzontal path[stroke="#C48C8F"] {
 	stroke: var(--red-color);
 }
 html .analyitcs-ratings-chart-horzontal path[fill="#BDBDBD"] {
-	fill: var(--background-middle-color);
+	fill: var(--analytics-generic-bar-color);
 }
 html .analyitcs-ratings-chart-horzontal path[fill="#009AE3"] {
 	fill: var(--theme-color);
 }
-html .analyitcs-ratings-chart-horzontal path[fill="#ACD87A"] {
-	fill: var(--theme-color);
+html .analyitcs-ratings-chart-horzontal path[fill="#ACD87A"],
+html .analyitcs-ratings-chart-horzontal path[fill="#7BA149"] {
+	fill: var(--analytics-positive-bar-color);
 }
-html .analyitcs-ratings-chart-horzontal path[fill="#E9CAA1"] {
-	fill: var(--theme-color);
-	filter: brightness(0.5);
+html .analyitcs-ratings-chart-horzontal path[fill="#E9CAA1"],
+html .analyitcs-ratings-chart-horzontal path[fill="#B69774"] {
+	fill: var(--analytics-negative-bar-color);
 }
-html .analyitcs-ratings-chart-horzontal path[fill="#9E9B9B"] {
-	fill: var(--background-front-color);
+html .analyitcs-ratings-chart-horzontal path[fill="#9E9B9B"],
+html .analyitcs-ratings-chart-horzontal path[fill="#6F6161"] {
+	fill: var(--analytics-generic-bar-color);
 }
 html .analyitcs-ratings-chart-horzontal g g g:first-child path[stroke="#dfdfdf"],
 html .analyitcs-ratings-chart-horzontal g g g:nth-child(3) g g path[stroke="#8e8e8e"] {
@@ -193,14 +195,13 @@ html .analytics-ratings-container .charts-legend .legend-item .score-higher {
 	background: var(--theme-color);
 }
 html .analytics-ratings-container .charts-legend .legend-item .score-higher {
-	background: var(--theme-color);
+	background: var(--analytics-positive-bar-color);
 }
 html .analytics-ratings-container .charts-legend .legend-item .score-lower {
-	background: var(--theme-color);
-	filter: brightness(0.5);
+	background: var(--analytics-negative-bar-color);
 }
 html .analytics-ratings-container .charts-legend .legend-item .class-average-score {
-	background: var(--background-front-color);
+	background: var(--analytics-generic-bar-color);
 }
 html .mark-ratings-blue-legend {
     background: var(--theme-color);
@@ -611,8 +612,8 @@ html .actual-lessons .lesson-title .top-mark,
 html .student-journal-lessons .lesson-title .top-mark {
 	color: var(--low-priority-color);
 }
-html .data-pane-wrap {
-	background: none;
+html .journal-container .data-pane-wrap {
+	display: none;
 }
 html .info-pane-wrap .subject {
 	color: var(--paragraph-color);
