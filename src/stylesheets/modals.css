@@ -683,8 +683,27 @@ html .Modal__Body .Section .Section__Metadata .SendButton:hover {
 	filter: brightness(0.9);
 	border: 0;
 }
+html .Modal__Body .Section .Attachments {
+	background: var(--background-front-color);
+	border-bottom: 0;
+	border-radius: var(--corner-radius) var(--corner-radius) 0 0;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	height: 32px;
+}
 html .Modal__Body .Section .NewMessageContainer {
 	margin-bottom: 10px;
+	background: var(--background-front-color);
+	border-radius: 0 0 var(--corner-radius) var(--corner-radius);
+} 
+html .Modal__Body .Section .NewMessageContainer .EklaseTextEditor__Editor,
+html .Modal__Body .Section .NewMessageContainer .EklaseTextEditor__Content,
+html .Modal__Body .Section .NewMessageContainer .EklaseTextEditor__Menu {
+	background: var(--background-front-color);
+}
+html .Modal__Body .Section .NewMessageContainer .EklaseTextEditor__Editor,
+html .Modal__Body .Section .NewMessageContainer .EklaseTextEditor__Content {
+	border-radius: 0 0 var(--corner-radius) var(--corner-radius);
 }
 html .Modal__Body .Section__CreationDate {
 	float: left;

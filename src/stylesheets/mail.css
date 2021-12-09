@@ -511,7 +511,6 @@ html .EklaseTextEditor__Menu {
 }
 html .EklaseTextEditor__Content {
 	background: var(--background-middle-color);
-
 	border-radius: 0 0 var(--corner-radius) var(--corner-radius);
 }
 html .ProseMirror {
@@ -711,6 +710,7 @@ html .FileInput__AddButton {
 	display: block;
 	width: 32px;
 	height: 32px;
+	padding: 0;
 	cursor: pointer;
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s filter, .2s box-shadow;
