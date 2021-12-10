@@ -1,6 +1,7 @@
 /* General */
 html .modal,
-html .Modal.modal-evaluation-file {
+html .Modal.modal-evaluation-file,
+html .home-task-answer-modal-container .Modal {
 	position: fixed;
 	top: 15%;
 	left: 25%;
@@ -114,13 +115,17 @@ html .modal-button:hover {
 html body.state-md .Modal {
 	background: #00000080;
 }
-html body.state-md .Modal.modal-evaluation-file {
+html body.state-md .Modal.modal-evaluation-file,
+html .home-task-answer-modal-container .Modal {
 	background: none;
+	top: calc(100vh / 2 - 100px);
+	height: 200px;
 }
 html .Modal .Modal__Dialog {
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 }
-html .Modal.Modal.modal-evaluation-file .Modal__Dialog {
+html .Modal.Modal.modal-evaluation-file .Modal__Dialog,
+html .home-task-answer-modal-container .Modal .Modal__Dialog {
 	width: 100% !important;
 	height: 100%;
 	margin: 0;
@@ -402,7 +407,7 @@ html .RecipientsModal__AddedRecipientsCount {
 
 /* Grade overview */
 html .Modal.Modal.modal-evaluation-file .Modal__Dialog .Modal__Content {
-	height: 100%;
+	height: auto;
 	margin-top: 0 !important;
 	background: var(--background-middle-color);
 	border-radius: var(--corner-radius);
@@ -594,6 +599,15 @@ html .greetings-modal .modal-button {
 /*
 	Sending answers
 */
+html body.state-md .home-task-answer-modal-container .Modal {
+	top: 15%;
+	left: 10%;
+	width: 80%;
+	height: 70%;
+}
+html .home-task-answer-modal-container .Modal .Modal__Content {
+	margin-top: 0 !important;
+}
 html .Modal__Content .Modal__Header {
 	padding-bottom: 0;
 }

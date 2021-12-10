@@ -87,7 +87,7 @@ window.addEventListener(`pageLoaded`, () => {
 	/*
 		Grade overview open/close animation
 	*/
-	for (let buttonElement of document.querySelectorAll(`.score.open-mark-file`)) {
+	for (let buttonElement of document.querySelectorAll(`.score.open-mark-file, .recent-scores-item-col .score`)) {
 		let modalBgElement = document.querySelector(`.modal-background`);
 
 		buttonElement.addEventListener(`click`, () => {
@@ -97,15 +97,12 @@ window.addEventListener(`pageLoaded`, () => {
 				modalBgElement.style.display = `block`;
 				modalElement.style.display = `block`;
 
-				modalElement.style.top = `${window.innerHeight / 2 - modalElement.children[0].children[0].clientHeight / 2}px`;
-				modalElement.style.height = `${modalElement.children[0].children[0].clientHeight}px`;
-
 				setTimeout(() => {
 					modalBgElement.style.opacity = `0.5`;
 					modalElement.style.opacity = `1.0`;
 					modalElement.style.transform = `scale(1.0)`;
 
-					setTimeout(() => addGradeOverviewModalClosingAnimation(), 20);
+					setTimeout(() => onDiaryModalOpening(), 20);
 				}, 50);
 			}, 20);
 		});
@@ -125,6 +122,47 @@ window.addEventListener(`pageLoaded`, () => {
 			}, 20);
 		});
 	}
+
+
+	/*
+		Answer sending modal
+	*/
+	for (let buttonElement of document.querySelectorAll(`.home-task-answer-widget-container`)) {
+		let modalBgElement = document.querySelector(`.modal-background`);
+
+		buttonElement.addEventListener(`click`, () => {
+			setTimeout(() => {
+				let modalElement = document.querySelector(`.home-task-answer-modal-container .Modal`);
+
+				modalBgElement.style.display = `block`;
+				modalElement.style.display = `block`;
+
+				setTimeout(() => {
+					modalBgElement.style.opacity = `0.5`;
+					modalElement.style.opacity = `1.0`;
+					modalElement.style.transform = `scale(1.0)`;
+
+					setTimeout(() => onDiaryModalOpening(), 20);
+				}, 50);
+			}, 20);
+		});
+
+		modalBgElement.addEventListener(`click`, () => {
+			setTimeout(() => {
+				let modalElement = document.querySelector(`.home-task-answer-modal-container .Modal`);
+
+				modalBgElement.style.opacity = `0`;
+				modalElement.style.opacity = `0`;
+				modalElement.style.transform = `scale(0.75)`;
+
+				setTimeout(() => {
+					modalBgElement.style.display = `none`;
+					modalElement.style.display = `none`;
+				}, 200);
+			}, 20);
+		});
+	}
+	
 
 	/*
 		Technical support warning close animation
@@ -274,11 +312,11 @@ window.addEventListener(`pageLoaded`, () => {
 	});
 });
 
-const addGradeOverviewModalClosingAnimation = () => {
+const onDiaryModalOpening = () => {
 	if (document.querySelector(`.Modal .Modal__Dialog .loading`) !== null) {
-		setTimeout(() => addGradeOverviewModalClosingAnimation(), 20);
+		setTimeout(() => onDiaryModalOpening(), 20);
 	} else {
-		let modalHeaderElement = document.querySelector(`.Modal.modal-evaluation-file .Modal__Header`);
+		let modalHeaderElement = document.querySelector(`.Modal.modal-evaluation-file .Modal__Header, .home-task-answer-modal-container .Modal .Modal__Header`);
 
 		// Remove all of the events from the button this way
 		let modalHeaderInnerHTML = modalHeaderElement.innerHTML;
@@ -286,8 +324,8 @@ const addGradeOverviewModalClosingAnimation = () => {
 		modalHeaderElement.innerHTML = modalHeaderInnerHTML;
 
 		// Add the close animation
-		document.querySelector(`.Modal.modal-evaluation-file .Modal__Header .Modal__Close`).addEventListener(`click`, () => {
-			let modalElement = document.querySelector(`.Modal.modal-evaluation-file`);
+		document.querySelector(`.Modal.modal-evaluation-file .Modal__Header .Modal__Close, .home-task-answer-modal-container .Modal .Modal__Header .Modal__Close`).addEventListener(`click`, () => {
+			let modalElement = document.querySelector(`.home-task-answer-modal-container .Modal, .Modal.modal-evaluation-file`);
 			let modalBgElement = document.querySelector(`.modal-background`);
 
 			modalBgElement.style.opacity = `0`;
@@ -299,5 +337,11 @@ const addGradeOverviewModalClosingAnimation = () => {
 				modalElement.style.display = `none`;
 			}, 200);
 		});
+
+		// Resize the modal
+		let modalElement = document.querySelector(`.home-task-answer-modal-container .Modal, .Modal.modal-evaluation-file`);
+		console.log(modalElement.children[0].children[0])
+		modalElement.style.top = `${window.innerHeight / 2 - modalElement.children[0].children[0].clientHeight / 2}px`;
+		modalElement.style.height = `${modalElement.children[0].children[0].clientHeight}px`;
 	}
 }
