@@ -101,7 +101,7 @@ html .student-journal-lessons .lesson-subitem .description .subject-text-draft::
 }
 html .student-journal-lessons-table-holder .lessons-table tr:last-child td,
 html .diary-container .lessons-table tr:last-child td {
-	border: 0;
+	border-bottom: 0;
 }
 html .student-journal-lessons-table-holder .lessons-table td:nth-child(odd),
 html .diary-container .lessons-table td:nth-child(odd) {

@@ -304,7 +304,7 @@ window.addEventListener(`pageLoading`, () => {
 
 	// Show the loading spinner when clicking any header button
 	for (element of document.querySelectorAll(`li.header-second-menu-item a`)) {
-		element.className = `onclick-spinner`;
+		element.classList.add(`onclick-spinner`);
 	}
 });
 
@@ -332,6 +332,21 @@ const showActivePageLinks = () => {
 		document.querySelector(`.header-second-menu-item.item-video`).className += ` active`;
 	} else {
 		document.querySelector(`.header-second-menu-item.item-video`).className = `header-second-menu-item item-video`;
+	}
+
+	// Remove the href attribute from the active link
+	for (element of document.querySelectorAll(`li.header-second-menu-item a`)) {
+		if (element.getAttribute(`inactive-href`) !== null &&
+			element.getAttribute(`inactive-href`) !== ``) {
+			
+			element.setAttribute(`href`, element.getAttribute(`inactive-href`));
+		}
+		element.classList.add(`onclick-spinner`);
+	}
+	for (element of document.querySelectorAll(`li.header-second-menu-item.active a`)) {
+		element.setAttribute(`inactive-href`, element.href);
+		element.setAttribute(`href`, `javascript:void(0)`);
+		element.classList.remove(`onclick-spinner`);
 	}
 }
 window.addEventListener(`urlChanged`, () => {
