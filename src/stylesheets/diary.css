@@ -123,13 +123,31 @@ html .diary-container .lessons-table tbody tr:last-child td:last-child {
 }
 html .student-journal-lessons-table-holder .lessons-table a.file,
 html .diary-container .lessons-table a.file {
-	display: inline;
+	display: inline-block;
+	font-weight: 500;
+	color: var(--paragraph-color);
+	background: var(--background-front-color);
+	padding: 3px;
+	padding-left: 18px;
+	padding-right: 5px;
+	margin: 3px;
+	margin-left: 0;
+	border-radius: var(--corner-radius);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	transition: .2s filter, .2s box-shadow;
+	cursor: pointer;
 	user-select: none;
 	-webkit-user-drag: none;
 }
+html .student-journal-lessons-table-holder .lessons-table a.file:hover,
+html .diary-container .lessons-table a.file:hover {
+	color: var(--paragraph-color);
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
+}
 html .student-journal-lessons-table-holder .lessons-table a.file::before,
 html .diary-container .lessons-table tbody a.file::before {
-	background: var(--theme-color);
+	background: var(--paragraph-color);
 	mask-size: cover;
 	-webkit-mask-size: cover;
 	width: 15px;

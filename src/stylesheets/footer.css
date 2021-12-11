@@ -30,7 +30,7 @@ html footer .footer-container .go-top-col .go-top {
 	cursor: pointer;
 	user-select: none;
 	-webkit-user-drag: none;
-}
+}	
 html footer .footer-container .go-top-col .go-top:hover {
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 	filter: brightness(0.9);
