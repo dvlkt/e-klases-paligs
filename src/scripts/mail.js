@@ -202,9 +202,17 @@ const tryAddingListViewPatches = () => {
 		if (window.location.href.includes(`drafts`)) {
 			searchInputElement.style.opacity = `0`;
 			searchInputElement.style.cursor = `default`;
+
+			setTimeout(() => {
+				searchInputElement.style.visibility = `hidden`;
+			}, 200);
 		} else {
-			searchInputElement.style.opacity = `1`;
-			searchInputElement.style.cursor = `unset`;
+			searchInputElement.style.visibility = `unset`;
+
+			setTimeout(() => {
+				searchInputElement.style.opacity = `1`;
+				searchInputElement.style.cursor = `unset`;
+			}, 20);
 		}
 
 		/*
