@@ -30,6 +30,24 @@ html .pupils-wrap .item .pupil-block .pupil-block-header {
 	border: 0;
 	border-radius: var(--corner-radius) var(--corner-radius) 0 0;
 }
+html .pupils-wrap .item .pupil-block-header::before {
+	position: absolute;
+	top: 38px;
+	left: 50%;
+	margin-left: -33px;
+	content: "";
+	display: block;
+	width: 66px;
+	height: 66px;
+	border-radius: 50%;
+	background: var(--background-front-color);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+}
+html .pupils-wrap .item .pupil-block-header::after {
+	background: var(--theme-accent-color);
+	mask-size: contain;
+	-webkit-mask-size: contain;
+}
 html .pupils-wrap .item .pupil-block .pupil-block-header span {
 	color: var(--theme-accent-color);
 	font-family: "Inter", sans-serif;
