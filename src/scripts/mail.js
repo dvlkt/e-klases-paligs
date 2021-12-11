@@ -55,7 +55,7 @@ const tryAddingListViewPatches = () => {
 
 					areOriginalSearchButtonsShown = true;
 
-					searchInputElement.focus();
+					setTimeout(() => searchInputElement.focus(), 20);
 				}
 
 				isListViewHeaderInputFocused = true;
