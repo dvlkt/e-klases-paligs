@@ -91,7 +91,9 @@ const tryAddingListViewPatches = () => {
 				Add event listener to the close search button
 			*/
 			closeSearchButtonElement.addEventListener(`click`, () => {
-				document.querySelector(`.MailSearch__ResetInputButton`).click();
+				if (document.querySelector(`.MailSearch__ResetInputButton`) !== null) {
+					document.querySelector(`.MailSearch__ResetInputButton`).click();
+				}
 
 				setTimeout(() => {
 					searchInputElement.style.width = ``;
@@ -203,6 +205,15 @@ const tryAddingListViewPatches = () => {
 		} else {
 			searchInputElement.style.opacity = `1`;
 			searchInputElement.style.cursor = `unset`;
+		}
+
+		/*
+			Close the search bar when going to a new page
+		*/
+		for (let element of document.querySelectorAll(`.NavItem`)) {
+			element.addEventListener(`click`, () => {
+				document.querySelector(`.mail-list-view-header .close-button`).click();
+			});
 		}
 
 	} else {
