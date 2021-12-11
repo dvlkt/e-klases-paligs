@@ -150,9 +150,6 @@ window.addEventListener(`pageLoading`, () => {
 				<div class="header-account-popup-button tech-support onclick-spinner">
 					<p>Tehniskais atbalsts</p>
 				</div>
-				<div class="header-account-popup-button show-tour">
-					<p>Tūre</p>
-				</div>
 			</div>`;
 
 		document.querySelector(`.header-second .header-second-inner`).appendChild(accountPopupElement);
@@ -193,9 +190,6 @@ window.addEventListener(`pageLoading`, () => {
 		});
 		document.querySelector(`.header-account-popup-button.tech-support`).addEventListener(`click`, () => {
 			window.location.href = `https://my.e-klase.lv/Family/TechnicalSupport`;
-		});
-		document.querySelector(`.header-account-popup-button.show-tour`).addEventListener(`click`, () => {
-			alert(`E-klases Palīgam vēl nav pieejama tūre!`);
 		});
 	}
 
