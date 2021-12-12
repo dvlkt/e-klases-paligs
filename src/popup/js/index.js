@@ -164,32 +164,6 @@ window.addEventListener(`mouseup`, (event) => {
 
 
 /*
-	Holiday design switch
-*/
-let isHolidayDesignOn = true;
-chrome.storage.sync.get([`isHolidayDesignOn`], (res) => {
-	let holidayDesignSwitchElement = document.querySelector(`#holiday-design-switch`);
-
-	if (res.isHolidayDesignOn === undefined) {
-		chrome.storage.sync.set({ isHolidayDesignOn: true });
-		isHolidayDesignOn = true;
-	} else {
-		isHolidayDesignOn = res.isHolidayDesignOn;
-	}
-
-	holidayDesignSwitchElement.className = `switch switch-${isHolidayDesignOn ? `on` : `off`}`;
-
-	holidayDesignSwitchElement.addEventListener(`click`, () => {
-		isHolidayDesignOn = !isHolidayDesignOn;
-
-		chrome.storage.sync.set({ isHolidayDesignOn: isHolidayDesignOn });
-
-		holidayDesignSwitchElement.className = `switch switch-${isHolidayDesignOn ? `on` : `off`}`;
-	});
-});
-
-
-/*
 	Statistics options
 */
 let isStatisticsPanelOn = true;
@@ -298,4 +272,56 @@ chrome.storage.local.get([`profilePicture`], (res) => {
 // Handle the upload button click
 document.querySelector(`.profile-picture-btn`).addEventListener(`click`, () => {
 	openTab(`/popup/uploadProfilePicture.html`);
+});
+
+
+/*
+	Holiday design switch
+*/
+let isHolidayDesignOn = true;
+chrome.storage.sync.get([`isHolidayDesignOn`], (res) => {
+	let holidayDesignSwitchElement = document.querySelector(`#holiday-design-switch`);
+
+	if (res.isHolidayDesignOn === undefined) {
+		chrome.storage.sync.set({ isHolidayDesignOn: true });
+		isHolidayDesignOn = true;
+	} else {
+		isHolidayDesignOn = res.isHolidayDesignOn;
+	}
+
+	holidayDesignSwitchElement.className = `switch switch-${isHolidayDesignOn ? `on` : `off`}`;
+
+	holidayDesignSwitchElement.addEventListener(`click`, () => {
+		isHolidayDesignOn = !isHolidayDesignOn;
+
+		chrome.storage.sync.set({ isHolidayDesignOn: isHolidayDesignOn });
+
+		holidayDesignSwitchElement.className = `switch switch-${isHolidayDesignOn ? `on` : `off`}`;
+	});
+});
+
+
+/*
+	Debug mode switch
+*/
+let isDebugModeOn = false;
+chrome.storage.sync.get([`isDebugModeOn`], (res) => {
+	let debugModeSwitchElement = document.querySelector(`#debug-mode-switch`);
+
+	if (res.isDebugModeOn === undefined) {
+		chrome.storage.sync.set({ isDebugModeOn: true });
+		isDebugModeOn = true;
+	} else {
+		isDebugModeOn = res.isDebugModeOn;
+	}
+
+	debugModeSwitchElement.className = `switch switch-${isDebugModeOn ? `on` : `off`}`;
+
+	debugModeSwitchElement.addEventListener(`click`, () => {
+		isDebugModeOn = !isDebugModeOn;
+
+		chrome.storage.sync.set({ isDebugModeOn: isDebugModeOn });
+
+		debugModeSwitchElement.className = `switch switch-${isDebugModeOn ? `on` : `off`}`;
+	});
 });

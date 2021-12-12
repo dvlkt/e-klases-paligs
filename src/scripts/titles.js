@@ -38,6 +38,7 @@ const setTitle = () => {
 	}
 }
 
+
 window.addEventListener(`pageLoading`, () => {
 	setTitle();
 });
