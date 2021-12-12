@@ -273,6 +273,7 @@ html .MessageActions .TopToolbar__Button--star-filled::before {
 /* x */
 html .modal-technical .modal-close,
 html .Modal__Header .Modal__Close .ButtonIcon--exit::before,
+html .Modal__Header .modal-close-button .ButtonIcon--exit::before,
 html .settings-container .modal-dialog .close-modal,
 html .MessageContent__Recipient .MessageContent__RemoveRecipient,
 html .toggle-search .close-search::after,

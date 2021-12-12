@@ -112,6 +112,27 @@ html .modal-button:hover {
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 	filter: brightness(0.9);
 }
+html .Modal__Header .Modal__Close,
+html .Modal__Header .modal-close-button {
+	float: right;
+	opacity: 1;
+}
+html .Modal__Header .Modal__Close .ButtonIcon--exit::before,
+html .Modal__Header .modal-close-button .ButtonIcon--exit::before {
+	content: "";
+	background: var(--paragraph-color);
+	display: block;
+	width: 20px;
+	height: 20px;
+	opacity: 1;
+	mask-size: contain;
+	-webkit-mask-size: contain;
+	transition: .2s opacity;
+}
+html .Modal__Header .Modal__Close .ButtonIcon--exit:hover::before,
+html .Modal__Header .modal-close-button .ButtonIcon--exit:hover::before {
+	opacity: 0.7;
+}
 html body.state-md .Modal {
 	background: #00000080;
 }
@@ -511,23 +532,6 @@ html .Modal__Body .evaluation-card .html-editor-content {
 	color: var(--paragraph-color);
 }
 html .Modal__Body .Section__Chunk .Info:hover {
-	opacity: 0.7;
-}
-html .Modal__Header .Modal__Close {
-	opacity: 1;
-}
-html .Modal__Header .Modal__Close .ButtonIcon--exit::before {
-	content: "";
-	background: var(--paragraph-color);
-	display: block;
-	width: 20px;
-	height: 20px;
-	opacity: 1;
-	mask-size: contain;
-	-webkit-mask-size: contain;
-	transition: .2s opacity;
-}
-html .Modal__Header .Modal__Close .ButtonIcon--exit:hover::before {
 	opacity: 0.7;
 }
 html .Modal__Body .Section .Section__Chunk .TestReportButton {

@@ -109,6 +109,10 @@ window.addEventListener(`pageLoaded`, () => {
 
 		modalBgElement.addEventListener(`click`, () => {
 			setTimeout(() => {
+				if (document.querySelector(`.Modal.modal-evaluation-file`) === null) {
+					return;
+				}
+
 				let modalElement = document.querySelector(`.Modal.modal-evaluation-file`);
 
 				modalBgElement.style.opacity = `0`;
@@ -118,6 +122,8 @@ window.addEventListener(`pageLoaded`, () => {
 				setTimeout(() => {
 					modalBgElement.style.display = `none`;
 					modalElement.style.display = `none`;
+
+					document.querySelector(`.Modal.modal-evaluation-file .Modal__Header .Modal__Close`).click();
 				}, 200);
 			}, 20);
 		});
@@ -149,6 +155,10 @@ window.addEventListener(`pageLoaded`, () => {
 
 		modalBgElement.addEventListener(`click`, () => {
 			setTimeout(() => {
+				if (document.querySelector(`.home-task-answer-modal-container .Modal`) === null) {
+					return;
+				}
+
 				let modalElement = document.querySelector(`.home-task-answer-modal-container .Modal`);
 
 				modalBgElement.style.opacity = `0`;
@@ -158,6 +168,8 @@ window.addEventListener(`pageLoaded`, () => {
 				setTimeout(() => {
 					modalBgElement.style.display = `none`;
 					modalElement.style.display = `none`;
+
+					document.querySelector(`.home-task-answer-modal-container .Modal .Modal__Header .Modal__Close`).click();
 				}, 200);
 			}, 20);
 		});
@@ -316,15 +328,32 @@ const onDiaryModalOpening = () => {
 	if (document.querySelector(`.Modal .Modal__Dialog .loading`) !== null) {
 		setTimeout(() => onDiaryModalOpening(), 20);
 	} else {
-		let modalHeaderElement = document.querySelector(`.Modal.modal-evaluation-file .Modal__Header, .home-task-answer-modal-container .Modal .Modal__Header`);
+		// Resize the modal
+		let modalElement = document.querySelector(`.home-task-answer-modal-container .Modal, .Modal.modal-evaluation-file`);
+		modalElement.style.top = `${window.innerHeight / 2 - modalElement.children[0].children[0].clientHeight / 2}px`;
+		modalElement.style.height = `${modalElement.children[0].children[0].clientHeight}px`;
 
-		// Remove all of the events from the button this way
-		let modalHeaderInnerHTML = modalHeaderElement.innerHTML;
-		modalHeaderElement.innerHTML = ``;
-		modalHeaderElement.innerHTML = modalHeaderInnerHTML;
+		onDiaryModalFullyLoading();
+	}
+}
+const onDiaryModalFullyLoading = () => {
+	if (document.querySelector(`.Modal .loadingMessageBlock, .Modal .Spinner`) !== null) {
+		setTimeout(() => onDiaryModalFullyLoading(), 20);
+	} else {
+		let modalHeaderElement = document.querySelector(`.Modal.modal-evaluation-file .Modal__Header, .home-task-answer-modal-container .Modal .Modal__Header`);
+		let originalModalCloseButtonElement = document.querySelector(`.Modal.modal-evaluation-file .Modal__Header .Modal__Close, .home-task-answer-modal-container .Modal .Modal__Header .Modal__Close`);
+
+		if (document.querySelector(`.modal-close-button`) === null) {
+			let modalCloseButtonElement = document.createElement(`div`);
+			modalCloseButtonElement.className = `modal-close-button`;
+			modalCloseButtonElement.innerHTML = originalModalCloseButtonElement.innerHTML;
+			modalHeaderElement.insertBefore(modalCloseButtonElement, modalHeaderElement.children[1]);
+
+			originalModalCloseButtonElement.style.display = `none`;
+		}
 
 		// Add the close animation
-		document.querySelector(`.Modal.modal-evaluation-file .Modal__Header .Modal__Close, .home-task-answer-modal-container .Modal .Modal__Header .Modal__Close`).addEventListener(`click`, () => {
+		document.querySelector(`.Modal.modal-evaluation-file .modal-close-button, .home-task-answer-modal-container .modal-close-button`).addEventListener(`click`, () => {
 			let modalElement = document.querySelector(`.home-task-answer-modal-container .Modal, .Modal.modal-evaluation-file`);
 			let modalBgElement = document.querySelector(`.modal-background`);
 
@@ -335,23 +364,11 @@ const onDiaryModalOpening = () => {
 			setTimeout(() => {
 				modalBgElement.style.display = `none`;
 				modalElement.style.display = `none`;
+
+				originalModalCloseButtonElement.click();
 			}, 200);
 		});
 
-		// Resize the modal
-		let modalElement = document.querySelector(`.home-task-answer-modal-container .Modal, .Modal.modal-evaluation-file`);
-		modalElement.style.top = `${window.innerHeight / 2 - modalElement.children[0].children[0].clientHeight / 2}px`;
-		modalElement.style.height = `${modalElement.children[0].children[0].clientHeight}px`;
-
-		console.log(modalElement.innerHTML);
-
-		onDiaryModalFullyLoading();
-	}
-}
-const onDiaryModalFullyLoading = () => {
-	if (document.querySelector(`.Modal .loadingMessageBlock, .Modal .Spinner`) !== null) {
-		setTimeout(() => onDiaryModalFullyLoading(), 20);
-	} else {
 		// Resize the modal
 		let modalElement = document.querySelector(`.home-task-answer-modal-container .Modal, .Modal.modal-evaluation-file`);
 		modalElement.style.top = `${window.innerHeight / 2 - modalElement.children[0].children[0].clientHeight / 2}px`;
