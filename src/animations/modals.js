@@ -340,7 +340,20 @@ const onDiaryModalOpening = () => {
 
 		// Resize the modal
 		let modalElement = document.querySelector(`.home-task-answer-modal-container .Modal, .Modal.modal-evaluation-file`);
-		console.log(modalElement.children[0].children[0])
+		modalElement.style.top = `${window.innerHeight / 2 - modalElement.children[0].children[0].clientHeight / 2}px`;
+		modalElement.style.height = `${modalElement.children[0].children[0].clientHeight}px`;
+
+		console.log(modalElement.innerHTML);
+
+		onDiaryModalFullyLoading();
+	}
+}
+const onDiaryModalFullyLoading = () => {
+	if (document.querySelector(`.Modal .loadingMessageBlock, .Modal .Spinner`) !== null) {
+		setTimeout(() => onDiaryModalFullyLoading(), 20);
+	} else {
+		// Resize the modal
+		let modalElement = document.querySelector(`.home-task-answer-modal-container .Modal, .Modal.modal-evaluation-file`);
 		modalElement.style.top = `${window.innerHeight / 2 - modalElement.children[0].children[0].clientHeight / 2}px`;
 		modalElement.style.height = `${modalElement.children[0].children[0].clientHeight}px`;
 	}
