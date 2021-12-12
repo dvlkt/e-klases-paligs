@@ -11,11 +11,31 @@ html body section h2 {
 	font-family: "Inter", sans-serif;
 }
 
+
+/*
+	Selections
+*/
 html ::selection {
 	background: var(--theme-color);
 	color: var(--theme-accent-color);
 }
 
+
+/*
+	Scrollbars
+*/
 * {
 	scrollbar-color: var(--background-front-color) var(--background-middle-color);
+}
+::-webkit-scrollbar {
+	width: 10px;
+}
+::-webkit-scrollbar-track {
+	background: var(--background-middle-color);
+}
+::-webkit-scrollbar-thumb {
+	background: var(--background-front-color);
+}
+::-webkit-scrollbar-thumb:hover {
+	background: var(--background-front-color);
 }
