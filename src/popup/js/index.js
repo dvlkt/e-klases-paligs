@@ -1,5 +1,6 @@
 import { loadTheme } from './themeApplier.js';
 import { openTab, sendMessageToEklaseTabs, sendMessageToExtensionTabs } from './tabs.js';
+import { Switch } from './components.js';
 
 loadTheme();
 
@@ -166,93 +167,36 @@ window.addEventListener(`mouseup`, (event) => {
 /*
 	Statistics options
 */
-let isStatisticsPanelOn = true;
-let isTreatingNVAsZero = true;
-let isTreatingNAsZero = true;
-let isTreatingPercentagesAsGrades = true;
-
+let statisticsSwitch = new Switch(document.querySelector(`#statistics-switch`));
 chrome.storage.sync.get([`isStatisticsPanelOn`], (res) => {
-	let statisticsSwitchElement = document.querySelector(`#statistics-switch`);
-
-	if (res.isStatisticsPanelOn === undefined) {
-		chrome.storage.sync.set({ isStatisticsPanelOn: true });
-		isStatisticsPanelOn = true;
-	} else {
-		isStatisticsPanelOn = res.isStatisticsPanelOn;
-	}
-
-	statisticsSwitchElement.className = `switch switch-${isStatisticsPanelOn ? `on` : `off`}`;
-
-	statisticsSwitchElement.addEventListener(`click`, () => {
-		isStatisticsPanelOn = !isStatisticsPanelOn;
-
-		chrome.storage.sync.set({ isStatisticsPanelOn });
-
-		statisticsSwitchElement.className = `switch switch-${isStatisticsPanelOn ? `on` : `off`}`;
-	});
+	statisticsSwitch.setValue(res.isStatisticsPanelOn === true);
+});
+statisticsSwitch.setOnClickFunction(() => {
+	chrome.storage.sync.set({ isStatisticsPanelOn: statisticsSwitch.value });
 });
 
+let statisticsNVSwitch = new Switch(document.querySelector(`#statistics-nv-switch`));
 chrome.storage.sync.get([`treatNVAsZero`], (res) => {
-	let statisticsNVSwitchElement = document.querySelector(`#statistics-nv-switch`);
-
-	if (res.treatNVAsZero === undefined) {
-		chrome.storage.sync.set({ treatNVAsZero: true });
-		isTreatingNVAsZero = true;
-	} else {
-		isTreatingNVAsZero = res.treatNVAsZero;
-	}
-
-	statisticsNVSwitchElement.className = `switch switch-${isTreatingNVAsZero ? `on` : `off`}`;
-
-	statisticsNVSwitchElement.addEventListener(`click`, () => {
-		isTreatingNVAsZero = !isTreatingNVAsZero;
-
-		chrome.storage.sync.set({ treatNVAsZero: isTreatingNVAsZero });
-
-		statisticsNVSwitchElement.className = `switch switch-${isTreatingNVAsZero ? `on` : `off`}`;
-	});
+	statisticsNVSwitch.setValue(res.treatNVAsZero === true);
+});
+statisticsNVSwitch.setOnClickFunction(() => {
+	chrome.storage.sync.set({ treatNVAsZero: statisticsNVSwitch.value });
 });
 
+let statisticsNSwitch = new Switch(document.querySelector(`#statistics-n-switch`));
 chrome.storage.sync.get([`treatNAsZero`], (res) => {
-	let statisticsNSwitchElement = document.querySelector(`#statistics-n-switch`);
-
-	if (res.treatNAsZero === undefined) {
-		chrome.storage.sync.set({ treatNAsZero: true });
-		isTreatingNAsZero = true;
-	} else {
-		isTreatingNAsZero = res.treatNAsZero;
-	}
-
-	statisticsNSwitchElement.className = `switch switch-${isTreatingNAsZero ? `on` : `off`}`;
-
-	statisticsNSwitchElement.addEventListener(`click`, () => {
-		isTreatingNAsZero = !isTreatingNAsZero;
-
-		chrome.storage.sync.set({ treatNAsZero: isTreatingNAsZero });
-
-		statisticsNSwitchElement.className = `switch switch-${isTreatingNAsZero ? `on` : `off`}`;
-	});
+	statisticsNSwitch.setValue(res.treatNAsZero === true);
+});
+statisticsNSwitch.setOnClickFunction(() => {
+	chrome.storage.sync.set({ treatNAsZero: statisticsNSwitch.value });
 });
 
+let statisticsPercentageSwitch = new Switch(document.querySelector(`#statistics-percentage-switch`));
 chrome.storage.sync.get([`treatPercentagesAsGrades`], (res) => {
-	let statisticsPercentageSwitchElement = document.querySelector(`#statistics-percentage-switch`);
-
-	if (res.treatPercentagesAsGrades === undefined) {
-		chrome.storage.sync.set({ treatPercentagesAsGrades: true });
-		isTreatingPercentagesAsGrades = true;
-	} else {
-		isTreatingPercentagesAsGrades = res.treatPercentagesAsGrades;
-	}
-
-	statisticsPercentageSwitchElement.className = `switch switch-${isTreatingPercentagesAsGrades ? `on` : `off`}`;
-
-	statisticsPercentageSwitchElement.addEventListener(`click`, () => {
-		isTreatingPercentagesAsGrades = !isTreatingPercentagesAsGrades;
-
-		chrome.storage.sync.set({ treatPercentagesAsGrades: isTreatingPercentagesAsGrades });
-
-		statisticsPercentageSwitchElement.className = `switch switch-${isTreatingPercentagesAsGrades ? `on` : `off`}`;
-	});
+	statisticsPercentageSwitch.setValue(res.treatPercentagesAsGrades === true);
+});
+statisticsPercentageSwitch.setOnClickFunction(() => {
+	chrome.storage.sync.set({ treatPercentagesAsGrades: statisticsPercentageSwitch.value });
 });
 
 
@@ -276,52 +220,20 @@ document.querySelector(`.profile-picture-btn`).addEventListener(`click`, () => {
 
 
 /*
-	Holiday design switch
+	Technical settings
 */
-let isHolidayDesignOn = true;
+let holidayDesignSwitch = new Switch(document.querySelector(`#holiday-design-switch`));
 chrome.storage.sync.get([`isHolidayDesignOn`], (res) => {
-	let holidayDesignSwitchElement = document.querySelector(`#holiday-design-switch`);
-
-	if (res.isHolidayDesignOn === undefined) {
-		chrome.storage.sync.set({ isHolidayDesignOn: true });
-		isHolidayDesignOn = true;
-	} else {
-		isHolidayDesignOn = res.isHolidayDesignOn;
-	}
-
-	holidayDesignSwitchElement.className = `switch switch-${isHolidayDesignOn ? `on` : `off`}`;
-
-	holidayDesignSwitchElement.addEventListener(`click`, () => {
-		isHolidayDesignOn = !isHolidayDesignOn;
-
-		chrome.storage.sync.set({ isHolidayDesignOn: isHolidayDesignOn });
-
-		holidayDesignSwitchElement.className = `switch switch-${isHolidayDesignOn ? `on` : `off`}`;
-	});
+	holidayDesignSwitch.setValue(res.isHolidayDesignOn === true);
+});
+holidayDesignSwitch.setOnClickFunction(() => {
+	chrome.storage.sync.set({ isHolidayDesignOn: holidayDesignSwitch.value });
 });
 
-
-/*
-	Debug mode switch
-*/
-let isDebugModeOn = false;
+let debugModeSwitch = new Switch(document.querySelector(`#debug-mode-switch`));
 chrome.storage.sync.get([`isDebugModeOn`], (res) => {
-	let debugModeSwitchElement = document.querySelector(`#debug-mode-switch`);
-
-	if (res.isDebugModeOn === undefined) {
-		chrome.storage.sync.set({ isDebugModeOn: true });
-		isDebugModeOn = true;
-	} else {
-		isDebugModeOn = res.isDebugModeOn;
-	}
-
-	debugModeSwitchElement.className = `switch switch-${isDebugModeOn ? `on` : `off`}`;
-
-	debugModeSwitchElement.addEventListener(`click`, () => {
-		isDebugModeOn = !isDebugModeOn;
-
-		chrome.storage.sync.set({ isDebugModeOn: isDebugModeOn });
-
-		debugModeSwitchElement.className = `switch switch-${isDebugModeOn ? `on` : `off`}`;
-	});
+	debugModeSwitch.setValue(res.isDebugModeOn === true);
+});
+debugModeSwitch.setOnClickFunction(() => {
+	chrome.storage.sync.set({ isDebugModeOn: debugModeSwitch.value });
 });
