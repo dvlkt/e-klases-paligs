@@ -1,0 +1,142 @@
+/*
+	The forum (parent chat)
+*/
+html .communication-list.communication-parents.mailbox-data .mailbox-top {
+	padding-right: 0;
+}
+html .communication-list.communication-parents.mailbox-data .forum-header-container .info-box {
+	background: none;
+	color: var(--paragraph-color);
+	font-family: "Inter", sans-serif;
+	font-size: 15px;
+	text-align: right;
+	padding-right: 0;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+
+html .communication-list.communication-parents .email {
+	border-radius: var(--corner-radius);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	background: var(--background-middle-color);
+	border-bottom: 0;
+}
+html .communication-list.communication-parents .email .user .image {
+	display: none;
+}
+html .communication-list.communication-parents .email .user-data {
+	font-family: "Inter", sans-serif;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 20px;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+
+html .communication-list.communication-parents .email .message::before {
+	width: 4px;
+	background: var(--opaque-divider-color);
+}
+html .communication-list.communication-parents .toolbar-top span {
+	color: var(--low-priority-color);
+	font-family: "Inter", sans-serif;
+	font-weight: 500;
+	font-size: 15px;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .communication-list.communication-parents .toolbar-top .reply {
+	border: 0;
+	background: var(--background-front-color);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	transition: .2s filter, .2s box-shadow;
+	cursor: pointer;
+}
+html .communication-list.communication-parents .toolbar-top .reply:hover {
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
+}
+html .communication-list.communication-parents .email .message .text .post-content {
+	color: var(--paragraph-color);
+	font-family: "Inter", sans-serif;
+	font-size: 15px;
+}
+html .communication-list.communication-parents .email .message .text a {
+	display: inline;
+}
+
+
+/*
+	Absence announcing page
+*/
+html .delay-submit-form-holder,
+html .delay-submit-history {
+	border: 0;
+	border-radius: var(--corner-radius);
+	background: var(--background-middle-color);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+}
+html .delay-submit-form-holder h1,
+html .delay-submit-history h1 {
+	color: var(--title-color);
+	font-family: "Inter", sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .delay-submit-form-holder .howto,
+html .delay-submit-history .howto {
+	display: block;
+}
+html .delay-submit-form-holder .howto a,
+html .delay-submit-history .howto a {
+	color: var(--paragraph-color);
+	background: var(--background-front-color);
+	font-size: 15px;
+	padding: 10px;
+	border-radius: var(--corner-radius);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	transition: .2s filter, .2s box-shadow;
+	cursor: pointer;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .delay-submit-form-holder .howto a:hover,
+html .delay-submit-history .howto a:hover {
+	text-decoration: none;
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
+}
+html .delay-submit-form-holder .howto.open .howto-info,
+html .delay-submit-history .howto.open .howto-info {
+	background: var(--background-front-color);
+	color: var(--paragraph-color);
+	font-family: "Inter", sans-serif;
+	border-top: 0;
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	border-radius: var(--corner-radius);
+	top: 50px;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .delay-submit-form-holder .howto .howto-info::before,
+html .delay-submit-history .howto .howto-info::before {
+	display: none;
+}
+html .delay-submit-form-holder .howto .howto-info::after,
+html .delay-submit-history .howto .howto-info::after {
+	border-bottom-color: var(--background-front-color);
+}
+html .delay-submit-form-holder .howto.open .howto-info p,
+html .delay-submit-history .howto.open .howto-info p,
+html .delay-submit-form-holder .howto.open .howto-info li,
+html .delay-submit-history .howto.open .howto-info li {
+	font-size: 15px;
+}
+html .delay-submit-form-holder .howto.open .howto-info h6,
+html .delay-submit-history .howto.open .howto-info h6 {
+	font-family: "Inter", sans-serif;
+	font-weight: 500;
+	font-size: 18px;
+}

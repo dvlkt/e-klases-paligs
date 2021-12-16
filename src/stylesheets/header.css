@@ -29,6 +29,7 @@ html .header-second .row {
 	z-index: 1000;
 }
 html .header-second .row .col-sm-7 {
+	margin-left: 45px;
 	width: 100%;	
 }
 html .header-second .header-second-menu {
@@ -88,7 +89,9 @@ html .header-second-menu .header-second-menu-item.item-home a::before,
 html .header-second-menu .header-second-menu-item.item-journal a::before,
 html .header-second-menu .header-second-menu-item.item-messages a::before,
 html .header-second-menu .header-second-menu-item.item-video a::before,
-html .header-second-menu .header-second-menu-item.item-analytics a::before {
+html .header-second-menu .header-second-menu-item.item-analytics a::before,
+html .header-second-menu .header-second-menu-item.item-announce-absence a::before,
+html .header-second-menu .header-second-menu-item.item-forum a::before {
 	content: "";
 	display: block;
 	width: 30px;
@@ -102,14 +105,18 @@ html .dark-header .header-second-menu .header-second-menu-item.item-home a::befo
 html .dark-header .header-second-menu .header-second-menu-item.item-journal a::before,
 html .dark-header .header-second-menu .header-second-menu-item.item-messages a::before,
 html .dark-header .header-second-menu .header-second-menu-item.item-video a::before,
-html .dark-header .header-second-menu .header-second-menu-item.item-analytics a::before {
+html .dark-header .header-second-menu .header-second-menu-item.item-analytics a::before,
+html .dark-header .header-second-menu .header-second-menu-item.item-announce-absence a::before ,
+html .dark-header .header-second-menu .header-second-menu-item.item-forum a::before {
 	background: #ffffff;
 }
 html .header-second-menu .header-second-menu-item.item-home.active a::before,
 html .header-second-menu .header-second-menu-item.item-journal.active a::before,
 html .header-second-menu .header-second-menu-item.item-messages.active a::before,
 html .header-second-menu .header-second-menu-item.item-video.active a::before,
-html .header-second-menu .header-second-menu-item.item-analytics.active a::before {
+html .header-second-menu .header-second-menu-item.item-analytics.active a::before,
+html .header-second-menu .header-second-menu-item.item-announce-absence.active a::before,
+html .header-second-menu .header-second-menu-item.item-forum.active a::before  {
 	background: var(--theme-color);
 }
 html .header-second .header-second-menu-item.item-messages .notifications-count {

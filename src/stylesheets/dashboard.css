@@ -56,6 +56,8 @@ html .dashboard-widget-col.widget-notifications .widget-notifications-primary .n
 }
 html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon2,
 html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon2:hover,
+html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon3,
+html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon3:hover,
 html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon4,
 html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon4:hover {
 	position: relative;
@@ -79,10 +81,12 @@ html .dashboard-widget-col.widget-notifications .widget-notifications-primary .n
 	margin-left: 5px;
 }
 html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon2:hover,
+html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon3:hover,
 html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon4:hover {
 	filter: brightness(0.9);
 }
 html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon2::before,
+html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon3::before,
 html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon4::before {
 	content: "";
 	position: absolute;
@@ -113,7 +117,7 @@ html .dashboard-widget-col.widget-notifications .widget-notification .widget-cou
 	font-size: 15px;
 	padding-top: 2px;
 	border: 0;
-	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
 html .dashboard-widget-col.widget-notifications .widget-content .widget-count {
 	width: 30px;

@@ -54,6 +54,19 @@ window.addEventListener(`pageLoading`, () => {
 		header.insertBefore(element, header.children[3]);
 	}
 
+	// Add the forum tab
+	if (document.querySelector(`.header-second .header-second-menu`) !== null &&
+		document.querySelector(`.header-second-menu-item.item-announce-absence`) !== null) {
+		
+		let header = document.querySelector(`.header-second .header-second-menu`);
+
+		let element = document.createElement(`li`);
+		element.className = `header-second-menu-item item-forum`;
+		element.innerHTML = `<a href="/Family/Forum" class="onclick-spinner">Vecāku saziņa</a>`;
+
+		header.insertBefore(element, header.children[3]);
+	}
+
 	// Add the tooltips
 	for (let element of document.querySelectorAll(`li.header-second-menu-item`)) {
 		let tabText = element.querySelector(`a`).innerText;
@@ -302,6 +315,11 @@ window.addEventListener(`pageLoading`, () => {
 		element.parentElement.removeChild(element);
 	}
 
+	// Adjust the width of header-second-menu in order to center the icons
+	if (document.querySelector(`.header-second-menu`) !== null) {
+		document.querySelector(`.header-second-menu`).style.width = `${(document.querySelector(`.header-second-menu`).children.length * 61) - 15}px`;
+	}
+
 	// Show the loading spinner when clicking any header button
 	for (element of document.querySelectorAll(`li.header-second-menu-item a`)) {
 		element.classList.add(`onclick-spinner`);
@@ -324,14 +342,19 @@ const tryShowingUserInfo = () => {
 const showActivePageLinks = () => {
 	// Show header links as active when in some pages
 	if (document.location.href.includes(`/SPA/Family#/mail`)) {
-		document.querySelector(`.header-second-menu-item.item-messages`).className += ` active`;
+		document.querySelector(`.header-second-menu-item.item-messages`).classList.add(`active`);
 	} else {
-		document.querySelector(`.header-second-menu-item.item-messages`).className = `header-second-menu-item item-messages`;
+		document.querySelector(`.header-second-menu-item.item-messages`).classList.remove(`active`);
 	}
 	if (document.location.href.includes(`/SPA/Family#/video-communication`)) {
-		document.querySelector(`.header-second-menu-item.item-video`).className += ` active`;
+		document.querySelector(`.header-second-menu-item.item-video`).classList.add(`active`);
 	} else {
-		document.querySelector(`.header-second-menu-item.item-video`).className = `header-second-menu-item item-video`;
+		document.querySelector(`.header-second-menu-item.item-video`).classList.remove(`active`);
+	}
+	if (document.location.href.includes(`/Family/Forum`)) {
+		document.querySelector(`.header-second-menu-item.item-forum`).classList.add(`active`);
+	} else {
+		document.querySelector(`.header-second-menu-item.item-forum`).classList.remove(`active`);
 	}
 
 	// Remove the href attribute from the active link
