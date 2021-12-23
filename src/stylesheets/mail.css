@@ -518,13 +518,19 @@ html .ProseMirror {
 	font-size: 15px;
 }
 html .EklaseTextEditor__Button {
-	background: var(--background-middle-dark-color);
+	background: var(--background-front-color);
 	border-radius: var(--corner-radius);
 	margin-right: 5px;
-	transition: .2s filter;
+	padding: 6px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	transition: .2s filter, .2s box-shadow;
 }
 html .EklaseTextEditor__Button:hover {
-	background: var(--background-middle-dark-color);
+	background: var(--background-front-color);
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 	filter: brightness(0.9);
 }
 html .EklaseTextEditor__Button--link::before,
@@ -533,8 +539,14 @@ html .EklaseTextEditor__Button--bold::before,
 html .EklaseTextEditor__Button--italic::before,
 html .EklaseTextEditor__Button--strike::before,
 html .EklaseTextEditor__Button--underline::before {
-	color: var(--paragraph-color);
+	content: "";
+	background: var(--paragraph-color);
+	display: block;
+	width: 20px;
+	height: 20px;
 	transition: .2s opacity;
+	mask-size: contain;
+	-webkit-mask-size: contain;
 }
 html .EklaseTextEditor__Button--active::before {
 	color: var(--paragraph-color) !important;

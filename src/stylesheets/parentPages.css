@@ -15,6 +15,9 @@ html .communication-list.communication-parents.mailbox-data .forum-header-contai
 	-webkit-user-drag: none;
 }
 
+html .communication-list .emails {
+	margin-top: 40px;
+}
 html .communication-list.communication-parents .email {
 	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
@@ -47,14 +50,27 @@ html .communication-list.communication-parents .toolbar-top span {
 }
 html .communication-list.communication-parents .toolbar-top .reply {
 	border: 0;
-	background: var(--background-front-color);
+	background: var(--theme-color);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	border-radius: var(--corner-radius);
+	width: 30px;
+	height: 30px;
 	transition: .2s filter, .2s box-shadow;
 	cursor: pointer;
 }
 html .communication-list.communication-parents .toolbar-top .reply:hover {
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 	filter: brightness(0.9);
+}
+html .communication-list.communication-parents .toolbar-top .reply::after {
+	content: "";
+	background: var(--theme-accent-color);
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin: 5px;
+	mask-size: contain;
+	-webkit-mask-size: contain;
 }
 html .communication-list.communication-parents .email .message .text .post-content {
 	color: var(--paragraph-color);
@@ -63,6 +79,114 @@ html .communication-list.communication-parents .email .message .text .post-conte
 }
 html .communication-list.communication-parents .email .message .text a {
 	display: inline;
+}
+
+html .forum-editor-container form {
+	height: 400px;
+}
+html .forum-editor-container .mce-panel {
+	background: var(--background-middle-color);
+	border-radius: var(--corner-radius);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	border: 0;
+}
+html .communication-list.communication-parents .reply-box-outer .grey-toolbar-bg .back {
+	margin-top: 28px;
+	background: var(--background-front-color);
+	border-radius: var(--corner-radius);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	transition: .2s filter, .2s box-shadow;
+}
+html .communication-list.communication-parents .reply-box-outer .grey-toolbar-bg .back:hover {
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
+}
+html .communication-list.communication-parents .reply-box-outer .grey-toolbar-bg .back::before {
+	content: "";
+	background: var(--paragraph-color);
+	display: block;
+	width: 23px;
+	height: 23px;
+	margin: 4px;
+	mask-size: contain;
+	-webkit-mask-size: contain;
+}
+html .forum-editor-container .mce-btn-group {
+	border-left: 0;
+	margin-left: 5px;
+}
+html .forum-editor-container .mce-btn {
+	border: 0;
+	margin-left: 5px;
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	background: var(--background-front-color);
+	border-radius: var(--corner-radius);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	transition: .2s filter, .2s box-shadow;
+	cursor: pointer;
+}
+html .forum-editor-container .mce-btn:hover {
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
+}
+html .forum-editor-container .mce-btn button {
+	padding: 0;
+	width: 32px;
+	height: 32px;
+}
+html .forum-editor-container .mce-btn .mce-ico {
+	background: var(--paragraph-color);
+	margin: 4px;
+	margin-top: 1px;
+	width: 24px;
+	height: 24px;
+	mask-size: contain;
+	-webkit-mask-size: contain;
+}
+html .forum-editor-container .mce-btn .mce-ico::before {
+	display: none;
+}
+
+html .forum-editor-container .email-toolbar {
+	background: var(--background-middle-color);
+	border-radius: var(--corner-radius);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	width: 100%;
+	left: 0;
+	bottom: unset;
+}
+html .forum-editor-container .email-toolbar .attachment-but {
+	background: var(--background-front-color);
+	color: var(--paragraph-color);
+	width: auto;
+	border-radius: var(--corner-radius);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	border: 0;
+	font-size: 15px;
+	font-weight: 500;
+	padding-left: 10px;
+	padding-right: 10px;
+	user-select: none;
+	-webkit-user-drag: none;
+	transition: .2s filter, .2s box-shadow;
+	cursor: pointer;
+}
+html .forum-editor-container .email-toolbar .btn-send-mail {
+	background: var(--theme-color);
+	color: var(--theme-accent-color);
+	font-size: 15px;
+	font-weight: 500;
+	padding-left: 10px;
+	border-radius: var(--corner-radius);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	transition: .2s filter, .2s box-shadow;
+}
+html .forum-editor-container .email-toolbar .attachment-but:hover,
+html .forum-editor-container .email-toolbar .btn-send-mail:hover {
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
 }
 
 
@@ -139,4 +263,32 @@ html .delay-submit-history .howto.open .howto-info h6 {
 	font-family: "Inter", sans-serif;
 	font-weight: 500;
 	font-size: 18px;
+}
+html .delay-submit-form-holder .form-row label {
+	color: var(--low-priority-color);
+	font-weight: 500;
+}
+html .delay-submit-form-holder .form-row .input,
+html .delay-submit-form-holder .form-row .textarea {
+	border: 0;
+	border-radius: var(--corner-radius);
+	background: var(--background-front-color);
+	color: var(--paragraph-color);
+	font-size: 15px;
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+}
+html .delay-submit-history .delays-history .delays-history-item {
+	color: var(--paragraph-color);
+	border-bottom: 4px solid var(--opaque-divider-color) !important;
+}
+html .delay-submit-history .delays-history .delays-history-item .delay-description,
+html .delay-submit-history .delays-history .delays-history-item .delay-time {
+	font-size: 15px;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .delay-submit-history .delays-history .delays-history-item .delay-time {
+	color: var(--low-priority-color);
+	font-style: normal !important;
+	margin-bottom: 10px;
 }
