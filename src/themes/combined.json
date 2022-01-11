@@ -1,5 +1,5 @@
 {
-	"name": "Light",
+	"name": "Combined",
 	"colors": {
 		"background-back": "#e0e0e8",
 		"background-middle": "#f7f7fb",
@@ -16,9 +16,9 @@
 		"red-accent": "#ffffff",
 
 		"header": {
-			"background": "#f7f7fb",
-			"foreground": "#000000",
-			"shadow": "#22222b3d"
+			"background": "#181818",
+			"foreground": "#f0f0f0",
+			"shadow": "#00000099"
 		},
 
 		"analytics": {
@@ -31,7 +31,7 @@
 
 	"variants": {
 		"logo": "light",
-		"header-logo": "light",
+		"header-logo": "dark",
 		"favicon": "light"
 	}
 }

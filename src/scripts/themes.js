@@ -79,10 +79,11 @@ const loadCornerRadius = () => {
 const loadLogos = () => {
 	chrome.storage.sync.get([`themeData`, `themeColor`], async (res) => {
 		let logoTheme = res.themeData.variants.logo;
+		let headerLogoTheme = res.themeData.variants[`header-logo`];
 
 		let isAHolidayTodayValue = await isAHolidayToday();
 		if (isAHolidayTodayValue) {
-			logoTheme = `dark`;
+			headerLogoTheme = `dark`;
 		}
 
 		fetch(chrome.runtime.getURL(`res/title-${logoTheme}.png`))
@@ -99,11 +100,23 @@ const loadLogos = () => {
 					for (let logo of document.querySelectorAll(`img[src="/Presentation/_IDACC/Login/Views/css/img/logo.png"]`)) {
 						logo.src = base64data;
 					}
+
+					setLogoHueToThemeColor(res.themeColor);
+				}
+			}
+		);
+
+		fetch(chrome.runtime.getURL(`res/title-${headerLogoTheme}.png`))
+			.then(response => response.blob())
+			.then(blob => {
+				var reader = new FileReader();
+				reader.readAsDataURL(blob);
+				reader.onloadend = () => {
+					var base64data = reader.result;
+
 					if (document.querySelector(`.header-logo`) !== null) {
 						document.querySelector(`.header-logo`).src = base64data;
 					}
-
-					setLogoHueToThemeColor(res.themeColor);
 				}
 			}
 		);

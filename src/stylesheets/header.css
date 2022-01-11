@@ -7,9 +7,9 @@ html .header-second .header-second-inner {
 	position: fixed;
 	top: 0;
 	left: 0;
-	background: var(--background-middle-color);
-	color: var(--paragraph-color);
-	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	background: var(--header-background-color);
+	color: var(--header-foreground-color);
+	box-shadow: 0 4px 10px -3px var(--header-shadow-color);
 	height: 64px;
 	width: 100%;
 	padding-top: 0;
@@ -49,7 +49,7 @@ html .header-second .header-second-menu .header-second-menu-item > a {
 	position: relative;
 	display: inline-block;
 	vertical-align: bottom;
-	color: var(--paragraph-color);
+	color: var(--header-foreground-color);
 	padding-left: 8px;
 	padding-right: 8px;
 	padding-bottom: 11px;
@@ -60,7 +60,7 @@ html .header-second .header-second-menu .header-second-menu-item > a {
 	content: "";
 }
 html .header-second .header-second-menu .header-second-menu-item > a:hover {
-	color: var(--paragraph-color);
+	color: var(--header-foreground-color);
 	opacity: 0.7;
 }
 html .header-second .header-second-inner .header-second-menu li > a::after {
@@ -96,7 +96,7 @@ html .header-second-menu .header-second-menu-item.item-forum a::before {
 	display: block;
 	width: 30px;
 	height: 30px;
-	background: var(--paragraph-color);
+	background: var(--header-foreground-color);
 	margin-bottom: 8px;
 	mask-size: cover;
 	-webkit-mask-size: cover;
@@ -133,7 +133,7 @@ html .header-second .header-second-menu-item.item-messages.active .notifications
 	height: 18px;
 	top: 0;
 	left: 28px;
-	border: 1px solid var(--background-middle-color);
+	border: 1px solid var(--header-background-color);
 }
 html .header-second .header-second-submenu {
 	display: none !important;
@@ -162,9 +162,9 @@ html .header-menu-item-tooltip {
 	-webkit-user-drag: none;
 }
 html .header-menu-item-tooltip-content {
-	background: var(--background-middle-color);
-	color: var(--paragraph-color);
-	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	background: var(--header-background-color);
+	color: var(--header-foreground-color);
+	box-shadow: 0 4px 10px -3px var(--header-shadow-color);
 	border-radius: var(--corner-radius);
 	font-size: 15px;
 	display: inline-block;
@@ -193,7 +193,7 @@ html .header-account-btn {
 	position: fixed;
 	top: 10px;
 	right: 10px;
-	background: var(--paragraph-color);
+	background: var(--header-foreground-color);
 	display: block;
 	width: 44px;
 	height: 44px;
@@ -235,6 +235,7 @@ html .header-account-popup {
 	transition: .2s top, .2s opacity, .3s height;
 }
 html .header-account-popup-user {
+	color: var(--paragraph-color);
 	font-size: 18px;
 	font-weight: 500;
 	text-align: center;

@@ -1,6 +1,5 @@
 {
 	"name": "Deep Dark",
-	"version": 1,
 	"colors": {
 		"background-back": "#000000",
 		"background-middle": "#181818",
@@ -15,6 +14,13 @@
 		"red": "#eb4545",
 		"red-shadow": "#641212a6",
 		"red-accent": "#ffffff",
+
+		"header": {
+			"background": "#181818",
+			"foreground": "#f0f0f0",
+			"shadow": "#00000099"
+		},
+
 		"analytics": {
 			"grid": "#0b0b0d",
 			"generic-bar": "#29292b",
@@ -22,8 +28,10 @@
 			"negative-bar": "#e83434"
 		}
 	},
+	
 	"variants": {
 		"logo": "dark",
+		"header-logo": "dark",
 		"favicon": "dark"
 	}
 }
