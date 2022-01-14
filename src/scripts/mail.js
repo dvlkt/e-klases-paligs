@@ -60,7 +60,9 @@ const tryAddingListViewPatches = () => {
 
 				isListViewHeaderInputFocused = true;
 				
-				searchInputElement.style.width = `calc(100% - 390px)`;
+				if (window.innerWidth > 767) {
+					searchInputElement.style.width = `calc(100% - 390px)`;
+				}
 
 				authorSearchButtonElement.style.display = `block`;
 				topicSearchButtonElement.style.display = `block`;
@@ -75,7 +77,10 @@ const tryAddingListViewPatches = () => {
 
 				setTimeout(() => {
 					closeSearchButtonElement.style.opacity = `1`;
-					closeSearchButtonElement.style.right = `400px`;
+
+					if (window.innerWidth > 767) {
+						closeSearchButtonElement.style.right = `400px`;
+					}
 				}, 10);
 				setTimeout(() => {
 					topicSearchButtonElement.style.opacity = `1`;
@@ -85,6 +90,11 @@ const tryAddingListViewPatches = () => {
 					authorSearchButtonElement.style.opacity = `1`;
 					authorSearchButtonElement.style.transform = `translateY(0)`;
 				}, 80);
+				setTimeout(() => {
+					if (window.innerWidth < 767) {
+						listViewHeaderElement.style.height = `80px`;
+					}
+				}, 10);
 			});
 
 			/*
@@ -97,6 +107,10 @@ const tryAddingListViewPatches = () => {
 
 				setTimeout(() => {
 					searchInputElement.style.width = ``;
+
+					if (window.innerWidth < 767) {
+						listViewHeaderElement.style.height = `35px`;
+					}
 
 					setTimeout(() => {
 						closeSearchButtonElement.style.opacity = `0`;

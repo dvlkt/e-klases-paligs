@@ -177,7 +177,9 @@ html .diary-container .lessons-table td:last-of-type {
 	user-select: none;
 	-webkit-user-drag: none;
 }
-html .lessons-table td:last-of-type span.score.warning {
+html .lessons-table td:last-of-type span.score.warning,
+html .actual-lessons span.score.warning,
+html .student-journal-lessons span.score.warning {
 	color: var(--red-accent-color);
 	background: var(--red-color);
 	box-shadow: 2px 3px 5px -3px var(--red-shadow-color);

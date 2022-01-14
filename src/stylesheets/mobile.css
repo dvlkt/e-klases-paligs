@@ -1,6 +1,13 @@
 /* OTHER MOBILE THINGS */
 html .current-page h1 {
-	font-size: 1.5rem;
+	font-size: 32px;
 	font-family: "Inter", sans-serif;
 	font-weight: bold;
+	text-align: left;
+	color: var(--title-color);
+	padding-left: 20px;
+	padding-bottom: 20px;
+	padding-top: 10px;
+	user-select: none;
+	-webkit-user-drag: none;
 }

@@ -123,10 +123,11 @@ html .header-second .header-second-menu-item.item-messages .notifications-count 
 	background: var(--theme-color);
 	color: var(--theme-accent-color);
 	font-family: "Inter", sans-serif;
-	font-weight: bold;
+	font-weight: 500;
 	border: 0;
 	top: 1px;
 	left: 29px;
+	font-size: 11px;
 }
 html .header-second .header-second-menu-item.item-messages.active .notifications-count {
 	width: 18px;
@@ -144,6 +145,22 @@ html .header-second .header-second-submenu {
 	}
 	html .header-second .header-second-menu-item {
 		height: 64px;
+	}
+}
+@media only screen and (max-width: 768px) {
+	html .header-second .header-second-menu-item.item-messages .notifications-count {
+		position: absolute;
+		width: 18px;
+		height: 18px;
+		border-radius: 50%;
+		text-align: center;
+		font-size: 11px;
+		top: 8px;
+		left: 33px;
+	}
+	html .header-second .header-second-menu-item.item-messages.active .notifications-count {
+		top: 8px;
+		left: 33px;
 	}
 }
 
@@ -346,10 +363,11 @@ html .header-second .current-user {
 		background: var(--background-middle-color);
 		box-shadow: 0 4px 10px -3px var(--shadow-color);
 		z-index: 1001;
+		margin-left: 0;
 	}
 	html .header-second-menu.hidden-xs {
 		display: block !important;
-		width: 320px;
+		width: 320px !important;
 		height: 64px;
 	}
 	html .header-second .header-second-menu .header-second-menu-item {

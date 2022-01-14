@@ -3,6 +3,9 @@ const tryAddingMailAnimations = () => {
 	if (!window.location.href.includes(`/SPA/Family#/mail`)) {
 		return;
 	}
+	if (window.innerWidth <= 767) {
+		return;
+	}
 
 	if (document.querySelector(`.communication-container .container .mailbox-data .wrapper`).children[1].innerHTML.includes(`Loading`)) {
 		setTimeout(tryAddingMailAnimations, 20);

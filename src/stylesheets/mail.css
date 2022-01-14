@@ -19,6 +19,8 @@ html .mail-list-view-header {
 	position: relative;
 	margin-left: 10px;
 	margin-bottom: 10px;
+	height: 35px;
+	transition: .2s height;
 }
 html .mail-list-view-header input.MailSearch__Input {
 	background: var(--background-middle-color);
@@ -142,6 +144,25 @@ html .mail-list-view-header .dropdown .option:hover {
 }
 html .mail-list-view-header .dropdown .option.disabled {
 	color: var(--low-priority-color) !important;
+}
+@media only screen and (max-width: 767px) {
+	html .mail-list-view-header {
+		margin-top: 15px;
+		margin-right: 10px;
+	}
+	html .mail-list-view-header input.MailSearch__Input {
+		text-indent: 0;
+	}
+	html .mail-list-view-header .search-button {
+		top: 45px;
+		width: calc(50% - 5px);
+	}
+	html .mail-list-view-header .search-button:nth-child(2) {
+		left: 0;
+	}
+	html .mail-list-view-header .search-button:nth-child(3) {
+		left: calc(50% + 5px);
+	}
 }
 
 
@@ -379,6 +400,13 @@ html .MessageItem .MessageItem__MessageTitle::before {
 html .ViewMessage .ViewMessage__MetaInfo .ViewMessage__CategoryWrapper {
 	margin-top: -30px;
 }
+@media only screen and (max-width: 767px) {
+	html .Folder__MessageList .MessageItem {
+		opacity: 1;
+	}
+}
+
+
 html .ViewMessage__MetaInfo .ViewMessage__MessageDate {
 	color: var(--low-priority-color);
 	font-size: 15px;
