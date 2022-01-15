@@ -25,10 +25,6 @@ window.addEventListener(`pageLoading`, () => {
 
 						<p>Iestatījumi ir pieejami, noklikšķinot uz E-klases Palīga ikonas ekrāna augšējā labajā stūrī!</p>
 
-						<br />
-
-						<b>E-klases Palīgs ir BETA stadijā. Ir ļoti iespējams saskarties ar dažādām problēmām.</b>
-
 						<button class="modal-button">Sākt darbu</button>
 					</div>
 				</div>

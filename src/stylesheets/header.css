@@ -2,6 +2,7 @@
 html header {
 	z-index: 400;
 	position: static;
+	display: block !important;
 }
 html .header-second .header-second-inner {
 	position: fixed;

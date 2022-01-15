@@ -677,10 +677,9 @@ html .Message .MessageHeader {
 }
 @media only screen and (max-width: 767px) {
 	html .Message .MessageHeader {
-		border-radius: 0 0 1rem 1rem;
-		background: var(--background-middle-color);
+		top: 70px;
+		background: none;
 		border-bottom: 0;
-		box-shadow: 0 4px 10px -3px var(--shadow-color);
 	}
 }
 html .Message .MessageHeader__Heading {
