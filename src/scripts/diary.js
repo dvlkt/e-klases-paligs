@@ -85,4 +85,23 @@ window.addEventListener(`pageLoading`, () => {
 	for (let element of document.querySelectorAll(`.lessons-table td.score`)) {
 		element.style.width = `${gradeColumnWidth}px`;
 	}
+
+	/*
+		Resize the answering container to fit the content
+	*/
+	for (let element of document.querySelectorAll(`.home-task-answer-widget-container`)) {
+		tryResizingAnswerWidget(element);
+	}
 });
+
+const tryResizingAnswerWidget = (element) => {
+	if (element.querySelector(`.Widget`) !== null) {
+		console.log(Math.ceil(element.querySelector(`p`).innerText.length / 50) * 18 + 34);
+
+		let elementHeight = Math.ceil(element.querySelector(`p`).innerText.length / 50) * 18 + 34;
+		element.style.height = `${elementHeight}px`;
+		element.children[0].style.height = `${elementHeight}px`;
+	} else {
+		setTimeout(() => tryResizingAnswerWidget(element), 20);
+	}
+}
