@@ -145,9 +145,101 @@ html .mail-list-view-header .dropdown .option:hover {
 html .mail-list-view-header .dropdown .option.disabled {
 	color: var(--low-priority-color) !important;
 }
+html .mobile-new-mail-btn {
+	display: inline-block;
+	width: 120px;
+	height: 35px;
+	background: var(--theme-color);
+	color: var(--theme-accent-color);
+	border-radius: var(--corner-radius);
+	border: 0;
+	padding: 12px;
+	font-size: 15px;
+	font-weight: 500;
+	margin-left: 10px;
+	margin-top: 10px;
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	vertical-align: middle;
+	transition: .2s filter, .2s box-shadow;
+}
+html .mobile-category-selector-btn {
+	display: inline-block;
+	width: calc(100% - 150px);
+	height: 35px; 
+	margin-left: 10px;
+	margin-top: 10px;
+	background: var(--background-middle-color);
+	color: var(--paragraph-color);
+	font-size: 15px;
+	font-weight: 500;
+	padding: 10px;
+	border-radius: var(--corner-radius);
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	vertical-align: middle;
+	cursor: pointer;
+	user-select: none;
+	-webkit-user-drag: none;
+	transition: .2s filter, .2s box-shadow;
+}
+html .mobile-new-mail-btn:hover,
+html .mobile-category-selector-btn:hover {
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
+}
+html .mobile-category-selector-btn b {
+	color: var(--low-priority-color);
+	font-size: 15px;
+	font-weight: bold;
+}
+html .mobile-category-selector {
+	position: absolute;
+	top: 120px;
+	right: 10px;
+	z-index: 1002;
+	display: none;
+	width: calc(100% - 150px);
+	height: 0;
+	opacity: 0;
+	background: var(--background-front-color);
+	color: var(--paragraph-color);
+	border-radius: var(--corner-radius);
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	overflow: hidden;
+	transition: .2s height, .2s top, .2s opacity;
+}
+html .mobile-category-selector button {
+	background: var(--background-front-color);
+	color: var(--paragraph-color);
+	border-radius: var(--corner-radius);
+	display: block;
+	width: 100%;
+	height: 55px;
+	font-size: 18px;
+	font-weight: 500;
+	text-align: left;
+	padding: 15px;
+	padding-left: 40px;
+	border: 0;
+	transition: .2s filter;
+}
+html .mobile-category-selector button:hover {
+	filter: brightness(0.9);
+}
+html .mobile-category-selector-bg {
+	position: fixed;
+	top: 0;
+	right: 0;
+	display: none;
+	width: 100vw;
+	height: 100vh;
+	z-index: 1001;
+	opacity: 0;
+	background: #00000080;
+	transition: .2s opacity;
+}
 @media only screen and (max-width: 767px) {
 	html .mail-list-view-header {
-		margin-top: 15px;
+		margin-top: 10px;
 		margin-right: 10px;
 	}
 	html .mail-list-view-header input.MailSearch__Input {

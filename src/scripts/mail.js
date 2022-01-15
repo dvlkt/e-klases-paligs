@@ -1,5 +1,32 @@
 let areOriginalSearchButtonsShown = false;
 
+const categories = [
+	{
+		name: `Ienākošās`,
+		url: `inbox`
+	},
+	{
+		name: `Nelasītās`,
+		url: `unread`
+	},
+	{
+		name: `Svarīgās`,
+		url: `followUp`
+	},
+	{
+		name: `Dzēstās`,
+		url: `deleted`
+	},
+	{
+		name: `Melnraksti`,
+		url: `drafts`
+	},
+	{
+		name: `Aizsūtītās`,
+		url: `sent`
+	}
+];
+
 const tryAddingListViewPatches = () => {
 	if (!location.href.includes(`SPA/Family#/mail/folder/`)) {
 		return;
@@ -91,7 +118,7 @@ const tryAddingListViewPatches = () => {
 					authorSearchButtonElement.style.transform = `translateY(0)`;
 				}, 80);
 				setTimeout(() => {
-					if (window.innerWidth < 767) {
+					if (window.innerWidth <= 767) {
 						listViewHeaderElement.style.height = `80px`;
 					}
 				}, 10);
@@ -108,7 +135,7 @@ const tryAddingListViewPatches = () => {
 				setTimeout(() => {
 					searchInputElement.style.width = ``;
 
-					if (window.innerWidth < 767) {
+					if (window.innerWidth <= 767) {
 						listViewHeaderElement.style.height = `35px`;
 					}
 
@@ -207,6 +234,92 @@ const tryAddingListViewPatches = () => {
 				}
 			});
 
+			/*
+				Add the mobile category selector, new mail button and title
+			*/
+			if (window.innerWidth <= 767) {
+				let mobileCategorySelectorButton = document.createElement(`div`);
+				mobileCategorySelectorButton.className = `mobile-category-selector-btn`;
+				listViewHeaderParentElement.insertBefore(mobileCategorySelectorButton, listViewHeaderParentElement.children[0]);
+
+				let mobileCategorySelector = document.createElement(`div`);
+				mobileCategorySelector.className = `mobile-category-selector`;
+				listViewHeaderParentElement.appendChild(mobileCategorySelector);
+
+				for (let i = 0; i < categories.length; i++) {
+					let mobileCategorySelectorOption = document.createElement(`button`);
+					mobileCategorySelectorOption.innerText += categories[i].name;
+					mobileCategorySelector.appendChild(mobileCategorySelectorOption);
+
+					mobileCategorySelectorOption.addEventListener(`click`, () => {
+						window.location.hash = `/mail/folder/standardType_fmft_${categories[i].url}/false`;
+
+						mobileCategorySelectorButton.innerHTML = `<b>Kategorija:</b> ${categories[i].name}`;
+
+						mobileCategorySelector.style.opacity = `0`;
+						mobileCategorySelector.style.top = `120px`;
+						mobileCategorySelector.style.height = `0`;
+
+						mobileCategorySelectorBg.style.opacity = `0`;
+
+						setTimeout(() => {
+							mobileCategorySelector.style.display = `none`;
+							mobileCategorySelectorBg.style.display = `none`;
+						}, 200);
+					});
+
+					if (window.location.hash.includes(categories[i].url)) {
+						mobileCategorySelectorButton.innerHTML = `<b>Kategorija:</b> ${categories[i].name}`;
+					}
+				}
+
+				let mobileCategorySelectorBg = document.createElement(`div`);
+				mobileCategorySelectorBg.className = `mobile-category-selector-bg`;
+				listViewHeaderParentElement.appendChild(mobileCategorySelectorBg);
+
+
+				mobileCategorySelectorButton.addEventListener(`click`, () => {
+					mobileCategorySelector.style.display = `block`;
+					mobileCategorySelectorBg.style.display = `block`;
+
+					setTimeout(() => {
+						mobileCategorySelector.style.opacity = `1`;
+						mobileCategorySelector.style.top = `80px`;
+						mobileCategorySelector.style.height = `330px`;
+
+						mobileCategorySelectorBg.style.opacity = `1`;
+					}, 20);
+				});
+				mobileCategorySelectorBg.addEventListener(`click`, () => {
+					mobileCategorySelector.style.opacity = `0`;
+					mobileCategorySelector.style.top = `120px`;
+					mobileCategorySelector.style.height = `0`;
+
+					mobileCategorySelectorBg.style.opacity = `0`;
+
+					setTimeout(() => {
+						mobileCategorySelector.style.display = `none`;
+						mobileCategorySelectorBg.style.display = `none`;
+					}, 200);
+				});
+
+
+				let mobileNewMailButton = document.createElement(`button`);
+				mobileNewMailButton.className = `mobile-new-mail-btn`;
+				mobileNewMailButton.innerText = `Jauna vēstule`;
+				listViewHeaderParentElement.insertBefore(mobileNewMailButton, listViewHeaderParentElement.children[0]);
+
+				mobileNewMailButton.addEventListener(`click`, () => {
+					window.location.hash = `/mail/message/new`;
+				});
+
+
+				let titleElement = document.createElement(`h1`);
+				titleElement.className = `mobile-page-title`;
+				titleElement.innerText = `Pasts`;
+				listViewHeaderParentElement.insertBefore(titleElement, listViewHeaderParentElement.children[0]);
+			}
+
 		}
 
 		/*
@@ -237,7 +350,6 @@ const tryAddingListViewPatches = () => {
 				document.querySelector(`.mail-list-view-header .close-button`).click();
 			});
 		}
-
 	} else {
 		setTimeout(tryAddingListViewPatches, 20);
 	}

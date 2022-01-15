@@ -1,13 +1,12 @@
-/* OTHER MOBILE THINGS */
-html .current-page h1 {
+html .current-page h1,
+html h1.mobile-page-title {
 	font-size: 32px;
 	font-family: "Inter", sans-serif;
 	font-weight: bold;
 	text-align: left;
 	color: var(--title-color);
-	padding-left: 20px;
-	padding-bottom: 20px;
-	padding-top: 10px;
+	padding-left: 10px;
+	padding-top: 15px;
 	user-select: none;
 	-webkit-user-drag: none;
 }
