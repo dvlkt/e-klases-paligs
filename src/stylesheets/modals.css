@@ -702,26 +702,65 @@ html .Modal__Body .Section .Section__Metadata .SendButton:hover {
 	border: 0;
 }
 html .Modal__Body .Section .Attachments {
-	background: var(--background-front-color);
+	background: none;
 	border-bottom: 0;
 	border-radius: var(--corner-radius) var(--corner-radius) 0 0;
 	padding-top: 8px;
 	padding-bottom: 8px;
-	height: 32px;
+	height: 56px;
+}
+html .Modal__Body .Section .Attachments .FileInput {
+	margin-top: 10px;
+}
+html .home-task-answer-modal-container .btn--loading::after {
+	left: -40px;
+	border-top-color: var(--paragraph-color);
+	border-top-width: 2px;
+}
+html .Modal__Body .Section .Attachments .AttachmentList__ItemContainer {
+	background: var(--background-front-color);
+}
+html .Modal__Body .Section .Attachments .AttachmentList__Link {
+	padding-right: 10px;
+}
+html .Modal__Body .Section .Attachments .AttachmentList__RemoveButton {
+	transition: .2s opacity;
+}
+html .Modal__Body .Section .Attachments .AttachmentList__RemoveButton:hover {
+	opacity: 0.7;
+}
+html .Modal__Body .Section .Attachments .AttachmentList__RemoveButton::before {
+	content: "";
+	display: block;
+	width: 12px;
+	height: 12px;
+	margin-top: 2px;
+	background: var(--paragraph-color);
+	mask-size: contain;
+	-webkit-mask-size: contain;
 }
 html .Modal__Body .Section .NewMessageContainer {
 	margin-bottom: 10px;
+	padding-bottom: 0;
 	background: var(--background-front-color);
-	border-radius: 0 0 var(--corner-radius) var(--corner-radius);
+	border-radius: var(--corner-radius);
 } 
 html .Modal__Body .Section .NewMessageContainer .EklaseTextEditor__Editor,
 html .Modal__Body .Section .NewMessageContainer .EklaseTextEditor__Content,
 html .Modal__Body .Section .NewMessageContainer .EklaseTextEditor__Menu {
 	background: var(--background-front-color);
 }
-html .Modal__Body .Section .NewMessageContainer .EklaseTextEditor__Editor,
+html .Modal__Body .Section .NewMessageContainer .EklaseTextEditor__Editor {
+	border-radius: var(--corner-radius);
+}
 html .Modal__Body .Section .NewMessageContainer .EklaseTextEditor__Content {
 	border-radius: 0 0 var(--corner-radius) var(--corner-radius);
+}
+html .Modal__Body .Section .NewMessageContainer .EklaseTextEditor__Menu {
+	border-radius: var(--corner-radius) var(--corner-radius) 0 0;
+}
+html .Modal__Body .Section .NewMessageContainer .EklaseTextEditor__Button {
+	background: var(--background-middle-color);
 }
 html .Modal__Body .Section__CreationDate {
 	float: left;
@@ -785,4 +824,63 @@ html .Modal__Body .AttachmentListNew .Attachment a:focus {
 }
 html .Modal__Body .AttachmentListNew .Attachment::after {
 	display: none;
+}
+
+/*
+	Link inserting modal
+*/
+html .EklaseTextEditor__Editor .Modal__Header {
+	padding-top: 10px;
+}
+html .EklaseTextEditor__Editor .Modal__Header .Modal__Title h5 {
+	font-family: "Inter", sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+	color: var(--title-color);
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .EklaseTextEditor__Editor .Modal__Header .Modal__Close {
+	transition: .2s opacity;
+}
+html .EklaseTextEditor__Editor .Modal__Header .Modal__Close:hover {
+	opacity: 0.7;
+}
+html .EklaseTextEditor__Editor .Modal__Header .Modal__Close::before {
+	content: "";
+	display: block;
+	width: 18px;
+	height: 18px;
+	background: var(--paragraph-color);
+	mask-size: contain;
+	-webkit-mask-size: contain;
+}
+html .EklaseTextEditor__Editor .Modal__Content .Modal__Body {
+	border-radius: 0;
+}
+html .EklaseTextEditor__Editor .Modal__Content .Modal__Body span {
+	color: var(--low-priority-color);
+	font-size: 15px;
+	font-weight: 500;
+	margin-right: 5px;
+}
+html .EklaseTextEditor__Editor .Modal__Content .Modal__Body span::after {
+	content: ":";
+}
+html .EklaseTextEditor__Editor .Modal__Content .Modal__Body input {
+	border: 0;
+	border-radius: var(--corner-radius);
+	background: var(--background-front-color);
+	color: var(--paragraph-color);
+	padding: 4px;
+	margin-bottom: 8px;
+	font-size: 15px;
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+}
+html .EklaseTextEditor__Editor .Modal__Content .Modal__Footer {
+	background: var(--background-middle-color) !important;
+	border-radius: 0 0 var(--corner-radius) var(--corner-radius);
+}
+html .EklaseTextEditor__Editor .Modal__Content .Modal__Footer .ButtonDefault {
+	background: var(--background-front-color);
 }

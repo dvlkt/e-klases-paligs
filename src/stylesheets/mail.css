@@ -520,6 +520,9 @@ html .AttachmentList__ItemContainer:hover {
 	filter: brightness(0.9);
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 }
+html .AttachmentList__ItemContainer--border {
+	border: 0;
+}
 html .AttachmentList__ItemContainer img,
 html .AttachmentList__ItemContainer .file-icon {
 	display: block;
