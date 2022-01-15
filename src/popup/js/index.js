@@ -47,7 +47,7 @@ for (let i = 0; i < themeList.length; i++) {
 		.then(response => response.json())
 		.then(themeData => {
 			document.querySelector(`.theme-preview[data-theme-name="${themeList[i]}"]`).style.background = themeData.colors[`background-back`];
-			document.querySelector(`.theme-preview[data-theme-name="${themeList[i]}"] .theme-preview-header`).style.background = themeData.colors[`background-middle`];
+			document.querySelector(`.theme-preview[data-theme-name="${themeList[i]}"] .theme-preview-header`).style.background = themeData.colors.header[`background`];
 			document.querySelector(`.theme-preview[data-theme-name="${themeList[i]}"] .theme-preview-table-title`).style.background = themeData.colors[`title`];
 			document.querySelector(`.theme-preview[data-theme-name="${themeList[i]}"] .theme-preview-table`).style.background = themeData.colors[`background-middle`];
 		}

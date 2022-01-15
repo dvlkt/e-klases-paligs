@@ -360,7 +360,7 @@ html .header-second .current-user {
 		bottom: 0;
 		left: 0;
 		height: 64px;
-		background: var(--background-middle-color);
+		background: var(--header-background-color);
 		box-shadow: 0 4px 10px -3px var(--shadow-color);
 		z-index: 1001;
 		margin-left: 0;
