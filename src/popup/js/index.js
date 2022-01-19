@@ -1,6 +1,6 @@
 import { loadTheme } from './themeApplier.js';
 import { openTab, sendMessageToEklaseTabs, sendMessageToExtensionTabs } from './tabs.js';
-import { Switch } from './components.js';
+import { Switch, Slider } from './components.js';
 
 loadTheme();
 
@@ -116,51 +116,42 @@ for (let colorButtonElement of document.querySelectorAll(`.color-picker-option`)
 /*
 	Corner roundness slider
 */
-let cornerRoundnessSliderElement = document.querySelector(`#corner-roundness-slider`);
-let cornerRoundnessSliderGrabberElement = document.querySelector(`#corner-roundness-slider-grabber`);
+let cornerRoundnessSlider = new Slider(document.querySelector(`#corner-roundness-slider`), 0, 30);
 let cornerRoundnessSliderValueElement = document.querySelector(`#corner-roundness-slider-value`);
-let isCornerRoundnessSliderGrabbed = false;
-let cornerRoundnessSliderWidth = cornerRoundnessSliderElement.clientWidth;
-let cornerRoundnessSliderValue = 0;
-const cornerRoundnessSliderMaxValue = 30;
-
-const updateCornerRoundnessSliderGrabber = () => {
-	let cornerRoundnessSliderPercentage = cornerRoundnessSliderValue * (100 / cornerRoundnessSliderMaxValue);
-	cornerRoundnessSliderGrabberElement.style.left = `${(cornerRoundnessSliderWidth * (cornerRoundnessSliderPercentage / 100)) - 7.5}px`;
-	cornerRoundnessSliderValueElement.innerText = `${cornerRoundnessSliderValue}px${ cornerRoundnessSliderValue === 10 ? ` (noklusējums)` : ``}`;
-	
-	chrome.storage.sync.set({ cornerRadius: cornerRoundnessSliderValue });
-	document.querySelector(`:root`).style.setProperty(`--corner-radius`, `${cornerRoundnessSliderValue}px`);
-	sendMessageToEklaseTabs(`updateCornerRadius`);
-}
 
 chrome.storage.sync.get([`cornerRadius`], (res) => {
-	cornerRoundnessSliderValue = res.cornerRadius;
-	updateCornerRoundnessSliderGrabber();
+	cornerRoundnessSlider.setValue(res.cornerRadius);
 });
 
-cornerRoundnessSliderGrabberElement.addEventListener(`mousedown`, (event) => {
-	isCornerRoundnessSliderGrabbed = true;
+cornerRoundnessSlider.setOnChangeFunction(() => {
+	chrome.storage.sync.set({ cornerRadius: cornerRoundnessSlider.value });
+
+	document.querySelector(`:root`).style.setProperty(`--corner-radius`, `${cornerRoundnessSlider.value}px`);
+	
+	sendMessageToEklaseTabs(`updateCornerRadius`);
+
+	cornerRoundnessSliderValueElement.innerText = `${cornerRoundnessSlider.value}px${cornerRoundnessSlider.value === 10 ? ` (noklusējums)` : ``}`;
 });
 
-window.addEventListener(`mousemove`, (event) => {
-	if (isCornerRoundnessSliderGrabbed) {
-		if (event.clientX < cornerRoundnessSliderElement.offsetLeft) {
-			cornerRoundnessSliderValue = 0;
-		} else if (event.clientX > cornerRoundnessSliderElement.offsetLeft + cornerRoundnessSliderWidth) {
-			cornerRoundnessSliderValue = cornerRoundnessSliderMaxValue;
-		} else {
-			cornerRoundnessSliderValue = Math.round(((event.clientX - cornerRoundnessSliderElement.offsetLeft) / cornerRoundnessSliderWidth) * cornerRoundnessSliderMaxValue);
-		}
 
-		updateCornerRoundnessSliderGrabber();
-	}
+/*
+	Background translucency slider
+*/
+let backgroundOpacitySlider = new Slider(document.querySelector(`#background-opacity-slider`), 0, 100);
+let backgroundOpacitySliderValueElement = document.querySelector(`#background-opacity-slider-value`);
+
+chrome.storage.sync.get([`backgroundOpacity`], (res) => {
+	backgroundOpacitySlider.setValue(res.backgroundOpacity * 100);
 });
 
-window.addEventListener(`mouseup`, (event) => {
-	if (isCornerRoundnessSliderGrabbed) {
-		isCornerRoundnessSliderGrabbed = false;
-	}
+backgroundOpacitySlider.setOnChangeFunction(() => {
+	chrome.storage.sync.set({ backgroundOpacity: backgroundOpacitySlider.value / 100 });
+
+	//document.querySelector(`:root`).style.setProperty(`--corner-radius`, `${cornerRoundnessSlider.value}px`);
+
+	sendMessageToEklaseTabs(`updateBackgroundOpacity`);
+
+	backgroundOpacitySliderValueElement.innerText = `${Math.round(backgroundOpacitySlider.value)}%${backgroundOpacitySlider.value === 80 ? ` (noklusējums)` : ``}`;
 });
 
 

@@ -14,6 +14,8 @@ const loadTheme = () => {
 				}
 			}
 		}
+
+		loadBackgroundOpacity();
 	});
 }
 
@@ -69,6 +71,26 @@ setInterval(() => {
 const loadCornerRadius = () => {
 	chrome.storage.sync.get([`cornerRadius`], (res) => {
 		document.querySelector(`:root`).style.setProperty(`--corner-radius`, `${res.cornerRadius}px`);
+	});
+}
+
+
+/*
+	Background opacity loading
+*/
+const loadBackgroundOpacity = () => {
+	chrome.storage.sync.get([`backgroundOpacity`], (res) => {
+		let backgroundOpacityHex = Math.floor(res.backgroundOpacity * 255).toString(16);
+		backgroundOpacityHex = `${backgroundOpacityHex.length === 1 ? `0` : ``}${backgroundOpacityHex}`;
+
+		console.log(res.backgroundOpacity, backgroundOpacityHex)
+
+		let rootStyleElement = document.querySelector(`:root`).style;
+
+		rootStyleElement.setProperty(`--header-background-color`, `${rootStyleElement.getPropertyValue(`--header-background-color`).slice(0, 7)}${backgroundOpacityHex}`);
+		rootStyleElement.setProperty(`--header-shadow-color`, `${rootStyleElement.getPropertyValue(`--header-shadow-color`).slice(0, 7)}${backgroundOpacityHex}`);
+
+		rootStyleElement.setProperty(`--opaque-background-middle-color`, `${rootStyleElement.getPropertyValue(`--background-middle-color`).slice(0, 7)}${backgroundOpacityHex}`);
 	});
 }
 
@@ -244,5 +266,7 @@ chrome.runtime.onMessage.addListener((request) => {
 		loadThemeColor();
 	} else if (request === `updateCornerRadius`) {
 		loadCornerRadius();
+	} else if (request === `updateBackgroundOpacity`) {
+		loadBackgroundOpacity();
 	}
 });

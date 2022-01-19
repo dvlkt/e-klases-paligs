@@ -8,9 +8,10 @@ html .home-task-answer-modal-container .Modal {
 	display: none;
 	width: 50%;
 	height: 70%;
-	background: var(--background-middle-color);
+	background: var(--opaque-background-middle-color);
 	border-radius: var(--corner-radius);
 	box-shadow: 2px 7px 14px -3px var(--shadow-color);
+	backdrop-filter: blur(4px);
 	opacity: 0;
 	transform: scale(0.75);
 	z-index: 1041;
@@ -41,7 +42,8 @@ html .modal-background {
 	top: 0;
 	left: 0;
 	z-index: 1040;
-	background: #000000;
+	background: #00000080;
+	backdrop-filter: blur(4px);
 	opacity: 0;
 	transition: .2s opacity;
 }
@@ -273,7 +275,7 @@ html .modal-technical .timetible-item .time {
 
 /* Recipients modal */
 html .Modal__Content .Modal__Header {
-	background: var(--background-middle-color) !important;
+	background: none !important;
 	color: var(--paragraph-color);
 	border: 0;
 	border-radius: var(--corner-radius) var(--corner-radius) 0 0;
@@ -282,7 +284,7 @@ html .Modal__Header .Modal__Title {
 	color: var(--paragraph-color);
 }
 html .Modal__Content .Modal__Body {
-	background: var(--background-middle-color) !important;
+	background: none !important;
 	color: var(--paragraph-color);
 	border-radius: 0 0 var(--corner-radius) var(--corner-radius);
 }
@@ -430,8 +432,9 @@ html .RecipientsModal__AddedRecipientsCount {
 html .Modal.Modal.modal-evaluation-file .Modal__Dialog .Modal__Content {
 	height: auto;
 	margin-top: 0 !important;
-	background: var(--background-middle-color);
+	background: var(--opaque-background-middle-color);
 	border-radius: var(--corner-radius);
+	backdrop-filter: blur(4px);
 }
 html .Modal__Header .Title {
 	font-size: 32px;
@@ -493,7 +496,7 @@ html .Modal__Body .Section__Chunk .Author span:first-child {
 }
 html .Modal__Body .Section__Chunk .EmptyGraph {
 	border-radius: var(--corner-radius);
-	background: var(--background-middle-color);
+	background: none;
 }
 html .Modal__Body .Section .Section__Chunk span.LessonType {
 	font-family: "Inter", sans-serif;
@@ -611,6 +614,8 @@ html body.state-md .home-task-answer-modal-container .Modal {
 }
 html .home-task-answer-modal-container .Modal .Modal__Content {
 	margin-top: 0 !important;
+	background: var(--opaque-background-middle-color);
+	backdrop-filter: blur(4px);
 }
 html .Modal__Content .Modal__Header {
 	padding-bottom: 0;

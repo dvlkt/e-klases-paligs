@@ -15,7 +15,7 @@ window.addEventListener(`pageLoaded`, () => {
 			modalElement.style.height = `${modalElement.children[0].children[0].children[0].clientHeight}px`;
 
 			setTimeout(() => {
-				modalBgElement.style.opacity = `0.5`;
+				modalBgElement.style.opacity = `1.0`;
 				modalElement.style.opacity = `1.0`;
 				modalElement.style.transform = `scale(1.0)`;
 			}, 50);
@@ -56,7 +56,7 @@ window.addEventListener(`pageLoaded`, () => {
 			modalElement.style.display = `block`;
 
 			setTimeout(() => {
-				modalBgElement.style.opacity = `0.5`;
+				modalBgElement.style.opacity = `1.0`;
 				modalElement.style.opacity = `1.0`;
 				modalElement.style.transform = `scale(1.0)`;
 			}, 50);
@@ -98,7 +98,7 @@ window.addEventListener(`pageLoaded`, () => {
 				modalElement.style.display = `block`;
 
 				setTimeout(() => {
-					modalBgElement.style.opacity = `0.5`;
+					modalBgElement.style.opacity = `1.0`;
 					modalElement.style.opacity = `1.0`;
 					modalElement.style.transform = `scale(1.0)`;
 
@@ -144,7 +144,7 @@ window.addEventListener(`pageLoaded`, () => {
 				modalElement.style.display = `block`;
 
 				setTimeout(() => {
-					modalBgElement.style.opacity = `0.5`;
+					modalBgElement.style.opacity = `1.0`;
 					modalElement.style.opacity = `1.0`;
 					modalElement.style.transform = `scale(1.0)`;
 
@@ -238,7 +238,7 @@ window.addEventListener(`pageLoaded`, () => {
 			modalElement.style.display = `block`;
 
 			setTimeout(() => {
-				modalBgElement.style.opacity = `0.5`;
+				modalBgElement.style.opacity = `1.0`;
 				modalElement.style.opacity = `1.0`;
 				modalElement.style.transform = `scale(1.0)`;
 			}, 50);
@@ -287,7 +287,7 @@ window.addEventListener(`pageLoaded`, () => {
 			setTimeout(() => {
 				greetingsModalElement.style.opacity = `1`;
 				greetingsModalElement.style.transform = `scale(1.0)`;
-				modalBgElement.style.opacity = `0.5`;
+				modalBgElement.style.opacity = `1.0`;
 			}, 50);
 
 			greetingsModalBtnElement.addEventListener(`click`, () => {
