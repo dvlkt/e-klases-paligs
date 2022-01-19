@@ -72,7 +72,7 @@ window.addEventListener(`pageLoading`, () => {
 		let tabText = element.querySelector(`a`).innerText;
 
 		let tabName;
-		if (tabText === `Saziņa`) {
+		if (tabText.includes(`Saziņa`) && !tabText.includes(`video`)) {
 			tabName = `Pasts`;
 		} else {
 			tabName = tabText;
