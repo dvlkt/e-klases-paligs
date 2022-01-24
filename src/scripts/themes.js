@@ -2,15 +2,15 @@
 	Theme loading
 */
 const loadTheme = () => {
-	chrome.storage.sync.get([`themeData`], (res) => {
-		let root = document.querySelector(`:root`);
+	let body = document.querySelector(`body`);
 
+	chrome.storage.sync.get([`themeData`], (res) => {
 		for (let key in res.themeData.colors) {
 			if (typeof res.themeData.colors[key] === `string`) {
-				root.style.setProperty(`--${key}-color`, res.themeData.colors[key]);
+				body.style.setProperty(`--${key}-color`, res.themeData.colors[key]);
 			} else {
 				for (let subKey in res.themeData.colors[key]) {
-					root.style.setProperty(`--${key}-${subKey}-color`, res.themeData.colors[key][subKey]);
+					body.style.setProperty(`--${key}-${subKey}-color`, res.themeData.colors[key][subKey]);
 				}
 			}
 		}
@@ -27,7 +27,7 @@ const loadThemeColor = () => {
 	chrome.storage.sync.get([`themeColor`], (res) => {
 		if (res.themeColor !== `rainbow`) {
 			isRainbowActivated = false;
-			document.querySelector(`:root`).style.setProperty(`--theme-color`, res.themeColor);
+			document.querySelector(`body`).style.setProperty(`--theme-color`, res.themeColor);
 			setLogoHueToThemeColor(res.themeColor);
 			loadThemeAccentColor(res.themeColor);
 		} else {
@@ -45,9 +45,9 @@ const loadThemeAccentColor = (themeColor) => {
 	let saturation = rgbToHsv(rValue, gValue, bValue)[1] * 255;
 
 	if (brightness > 128 && saturation < 50) {
-		document.querySelector(`:root`).style.setProperty(`--theme-accent-color`, `#000000`);
+		document.querySelector(`body`).style.setProperty(`--theme-accent-color`, `#000000`);
 	} else {
-		document.querySelector(`:root`).style.setProperty(`--theme-accent-color`, `#ffffff`);
+		document.querySelector(`body`).style.setProperty(`--theme-accent-color`, `#ffffff`);
 	}
 }
 
@@ -56,7 +56,7 @@ setInterval(() => {
 		// Get the rainbow color based on the system time to make it synced between different pages and the popup
 		let rainbowHueValue = Math.floor(Date.now() / 50) % 360;
 
-		document.querySelector(`:root`).style.setProperty(`--theme-color`, `hsl(${rainbowHueValue}, 100%, 50%)`);
+		document.querySelector(`body`).style.setProperty(`--theme-color`, `hsl(${rainbowHueValue}, 100%, 50%)`);
 		setLogoHueToThemeColor(rainbowHueValue);
 		loadThemeAccentColor(rainbowHueValue);
 	}
@@ -209,11 +209,10 @@ const rgbToHsv = (r, g, b) => {
 /*
 	Load everything
 */
-loadTheme();
-loadThemeColor();
-loadCornerRadius();
-
 window.addEventListener(`pageLoading`, () => {
+	loadTheme();
+	loadThemeColor();
+	loadCornerRadius();
 	loadFavicon();
 	loadLogos();
 });
