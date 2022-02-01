@@ -92,6 +92,50 @@ window.addEventListener(`pageLoading`, () => {
 	for (let element of document.querySelectorAll(`.home-task-answer-widget-container`)) {
 		tryResizingAnswerWidget(element);
 	}
+
+	/*
+		Add the custom calendar
+	*/
+	if (document.querySelector(`.main-eklase-content`) !== null) {
+		let parentElement = document.querySelector(`.main-eklase-content`);
+
+		let calendarElement = document.createElement(`div`);
+		calendarElement.className = `calendar desktop-top closed`;
+		calendarElement.style.display = `none`;
+		calendarElement.innerHTML = `
+			<div class="calendar-level">
+				<div class="calendar-header">
+
+				</div>
+			</div>
+			<div class="calendar-level">
+				<div class="calendar-header">
+
+				</div>
+			</div>
+		`;
+
+		parentElement.appendChild(calendarElement);
+
+		let topCalendarHolder = document.querySelectorAll(`.week-selector .selected-period`)[0];
+		topCalendarHolder.addEventListener(`click`, () => {
+			if (calendarElement.style.display === `none`) {
+				calendarElement.style.display = `block`;
+
+				setTimeout(() => {
+					calendarElement.style.opacity = `1`;
+					calendarElement.style.transform = `translateY(0)`;
+				}, 20);
+			} else {
+				calendarElement.style.opacity = `0`;
+				calendarElement.style.transform = `translateY(10px)`;
+
+				setTimeout(() => {
+					calendarElement.style.display = `none`;
+				}, 200);
+			}
+		});
+	}
 });
 
 const tryResizingAnswerWidget = (element) => {

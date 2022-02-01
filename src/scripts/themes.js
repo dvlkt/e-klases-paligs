@@ -83,12 +83,19 @@ const loadBackgroundOpacity = () => {
 		let backgroundOpacityHex = Math.floor(res.backgroundOpacity * 255).toString(16);
 		backgroundOpacityHex = `${backgroundOpacityHex.length === 1 ? `0` : ``}${backgroundOpacityHex}`;
 
-		console.log(res.backgroundOpacity, backgroundOpacityHex)
+		//console.log(res.backgroundOpacity, backgroundOpacityHex)
 
 		let rootStyleElement = document.querySelector(`:root`).style;
 
 		rootStyleElement.setProperty(`--header-background-color`, `${rootStyleElement.getPropertyValue(`--header-background-color`).slice(0, 7)}${backgroundOpacityHex}`);
-		rootStyleElement.setProperty(`--header-shadow-color`, `${rootStyleElement.getPropertyValue(`--header-shadow-color`).slice(0, 7)}${backgroundOpacityHex}`);
+
+		let currentShadowOpacity = Number(`0x${rootStyleElement.getPropertyValue(`--header-shadow-color`).slice(7, 2)}`);
+		let shadowOpacityHex = Math.floor(res.backgroundOpacity / currentShadowOpacity * 255).toString(16);
+		shadowOpacityHex = `${shadowOpacityHex.length === 1 ? `0` : ``}${shadowOpacityHex}`;
+
+		console.log(currentShadowOpacity, shadowOpacityHex, rootStyleElement.getPropertyValue(`--header-shadow-color`).slice(6, 2))
+
+		rootStyleElement.setProperty(`--header-shadow-color`, `${rootStyleElement.getPropertyValue(`--header-shadow-color`).slice(0, 7)}${shadowOpacityHex}`);
 
 		rootStyleElement.setProperty(`--opaque-background-middle-color`, `${rootStyleElement.getPropertyValue(`--background-middle-color`).slice(0, 7)}${backgroundOpacityHex}`);
 	});

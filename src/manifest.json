@@ -56,7 +56,6 @@
 				"scripts/screenshotMode.js",
 				"scripts/consoleWarning.js",
 				"analytics/diary.js",
-				"animations/calendar.js",
 				"animations/loadingSpinner.js",
 				"animations/mail.js",
 				"animations/modals.js",
