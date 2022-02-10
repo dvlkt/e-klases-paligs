@@ -1,4 +1,6 @@
-/* Header */
+/*
+	Header
+*/
 html header {
 	z-index: 400;
 	position: static;
@@ -141,32 +143,11 @@ html .header-second .header-second-menu-item.item-messages.active .notifications
 html .header-second .header-second-submenu {
 	display: none !important;
 }
-@media only screen and (min-width: 768px) {
-	html .header-second .header-second-menu {
-		top: 0;
-	}
-	html .header-second .header-second-menu-item {
-		height: 64px;
-	}
-}
-@media only screen and (max-width: 768px) {
-	html .header-second .header-second-menu-item.item-messages .notifications-count {
-		position: absolute;
-		width: 18px;
-		height: 18px;
-		border-radius: 50%;
-		text-align: center;
-		font-size: 11px;
-		top: 8px;
-		left: 33px;
-	}
-	html .header-second .header-second-menu-item.item-messages.active .notifications-count {
-		top: 8px;
-		left: 33px;
-	}
-}
 
-/* Tooltips */
+
+/*
+	Tooltips
+*/
 html .header-menu-item-tooltip {
 	position: absolute;
 	display: none;
@@ -199,7 +180,10 @@ html .header-menu-item-tooltip-content p {
 	-webkit-user-drag: none;
 }
 
-/* Logo & account */
+
+/*
+	Logo & account 
+*/
 html .header-logo {
 	position: fixed;
 	top: 0;
@@ -238,7 +222,10 @@ html .header-account-btn.active {
 	background-position: center center;
 }
 
-/* Account popup */
+
+/*
+	Account popup
+*/
 html .header-account-popup { 
 	position: fixed;
 	right: 10px;
@@ -327,7 +314,10 @@ html .header-account-popup-button::before {
 	-webkit-mask-size: cover;
 }
 
-/* Hide unused elements */
+
+/*
+	Hide unused elements
+*/
 html .header-first {
 	display: none;
 }
@@ -335,7 +325,10 @@ html .student-selector {
 	display: none;
 }
 
-/* Mobile */
+
+/*
+	Mobile
+*/
 html header.minimal .header-first {
 	height: 50px;
 
@@ -394,5 +387,27 @@ html .header-second .current-user {
 		margin-left: 2px;
 		margin-right: 2px;
 		margin-top: 10px;
+	}
+	html .header-second .header-second-menu-item.item-messages .notifications-count {
+		position: absolute;
+		width: 18px;
+		height: 18px;
+		border-radius: 50%;
+		text-align: center;
+		font-size: 11px;
+		top: 8px;
+		left: 33px;
+	}
+	html .header-second .header-second-menu-item.item-messages.active .notifications-count {
+		top: 8px;
+		left: 33px;
+	}
+}
+@media only screen and (min-width: 768px) {
+	html .header-second .header-second-menu {
+		top: 0;
+	}
+	html .header-second .header-second-menu-item {
+		height: 64px;
 	}
 }

@@ -1,4 +1,6 @@
-/* LARGE ICONS */
+/*
+	Large icons
+*/
 /* home */
 html .header-second .header-second-menu-item.item-home a::before {
 	mask-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgdmlld0JveD0iMCAwIDEyOCAxMjgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0yNiAxMTFWNzNDMjYgNzAuMjM4NiAyMy43NjE0IDY4IDIxIDY4SDEwLjkzQzEwLjAzNjkgNjggOS41OTE3NSA2Ni45MTgzIDEwLjIyNjIgNjYuMjg5Nkw1OS41NDM2IDE3LjQyNDdDNjEuNDY3NiAxNS41MTg0IDY0LjU1OTUgMTUuNDkwNSA2Ni41MTc1IDE3LjM2MTlMMTE3LjY5NyA2Ni4yNzcxQzExOC4zNDkgNjYuOTAwMiAxMTcuOTA4IDY4IDExNy4wMDYgNjhIMTA1QzEwMi4yMzkgNjggMTAwIDcwLjIzODYgMTAwIDczVjExMUMxMDAgMTEzLjc2MSA5Ny43NjE0IDExNiA5NSAxMTZIODFDNzguMjM4NiAxMTYgNzYgMTEzLjc2MSA3NiAxMTFWODVDNzYgODIuMjM4NiA3My43NjE0IDgwIDcxIDgwSDU1QzUyLjIzODYgODAgNTAgODIuMjM4NiA1MCA4NVYxMTFDNTAgMTEzLjc2MSA0Ny43NjE0IDExNiA0NSAxMTZIMzFDMjguMjM4NiAxMTYgMjYgMTEzLjc2MSAyNiAxMTFaIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjUiLz4KPHBhdGggZD0iTTk2IDQ1VjIzQzk2IDIwLjIzODYgOTMuNzYxNCAxOCA5MSAxOEg4N0M4NC4yMzg2IDE4IDgyIDIwLjIzODYgODIgMjNWMzIiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iNSIvPgo8L3N2Zz4K");
@@ -196,7 +198,9 @@ html .AttachmentList__ItemContainer .file-icon.type-video {
 }
 
 
-/* SMALL ICONS */
+/*
+	Small icons
+*/
 /* arrow-left */
 html .students-journal-header .week-selector .week-selector-prev,
 html .calendar-holder .datepicker .prev::before,
