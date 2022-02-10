@@ -167,7 +167,10 @@ html .dashboard-widget-col.widget-notifications .widget-notification:hover {
 	filter: brightness(0.9);
 }
 html .dashboard-widget-col.widget-notifications .widget-close {
-	display: none !important; /* There is literally no point for this thing */
+	display: none !important;
+}
+html .no-diary-expl {
+	display: none !important;
 }
 html .dashboard-news {
 	background: var(--background-back-color);
@@ -372,11 +375,13 @@ html .dashboard-widget-col.widget-recent .recent-messages-item .message-intro {
 }
 html .dashboard-widget-col.widget-recent .no-scores {
 	color: var(--low-priority-color);
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .dashboard-widget-col.widget-recent .no-scores h4 {
 	color: var(--title-color);
 	font-family: "Inter", sans-serif;
-	font-weight: bold;
+	font-weight: 500;
 }
 html .dashboard-widget-col.widget-recent .no-scores .no-messages-img {
 	display: none;
@@ -411,6 +416,21 @@ html .dashboard-widget-col.widget-recent .widget-close {
 }
 html .dashboard-widget-col.widget-recent .widget-show-all {
 	border-bottom: 0;
+}
+html .dashboard-widget-col.widget-recent .no-scores .no-scores-advertisement {
+	color: var(--paragraph-color);
+	font-size: 15px;
+	margin-bottom: 10px;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .dashboard-widget-col.widget-recent .no-scores .no-scores-advertisement .bold {
+	font-family: "Inter", sans-serif;
+	font-size: 15px;
+	font-weight: normal;
+}
+html .dashboard-widget-col.widget-recent .no-scores .no-scores-img {
+	display: none;
 }
 html .dashboard-widget-col .dashboard-widget {
 	background: none;
