@@ -13,7 +13,7 @@ html .header-second .header-second-inner {
 	background: var(--header-background-color);
 	color: var(--header-foreground-color);
 	box-shadow: 0 4px 10px -3px var(--header-shadow-color);
-	backdrop-filter: blur(4px);
+	backdrop-filter: var(--opaque-background-filter);
 	height: 64px;
 	width: 100%;
 	padding-top: 0;

@@ -140,8 +140,6 @@ window.addEventListener(`pageLoading`, () => {
 
 const tryResizingAnswerWidget = (element) => {
 	if (element.querySelector(`.Widget`) !== null) {
-		console.log(Math.ceil(element.querySelector(`p`).innerText.length / 50) * 18 + 34);
-
 		let elementHeight = Math.ceil(element.querySelector(`p`).innerText.length / 50) * 18 + 34;
 		element.style.height = `${elementHeight}px`;
 		element.children[0].style.height = `${elementHeight}px`;

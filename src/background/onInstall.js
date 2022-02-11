@@ -15,7 +15,7 @@ chrome.runtime.onInstalled.addListener((details) => {
 	/*
 		Set the default settings
 	*/
-	chrome.storage.sync.get([`theme`, `cornerRoundness`, `themeData`, `themeName`, `themeColor`, `cornerRadius`, `shouldShowSetupModal`, `isStatisticsPanelOn`, `treatNVAsZero`, `treatNAsZero`, `treatPercentagesAsGrades`, `isHolidayDesignOn`, `isDebugModeOn`], (res) => {
+	chrome.storage.sync.get([`theme`, `cornerRoundness`, `themeData`, `themeName`, `themeColor`, `cornerRadius`, `shouldShowSetupModal`, `backgroundOpacity`, `isBackgroundBlurOn`, `isStatisticsPanelOn`, `treatNVAsZero`, `treatNAsZero`, `treatPercentagesAsGrades`, `isHolidayDesignOn`, `isDebugModeOn`], (res) => {
 		// Design settings
 		if (res.themeData === undefined || res.themeData === ``) {
 			if (res.theme !== undefined && res.theme !== ``) {
@@ -57,6 +57,14 @@ chrome.runtime.onInstalled.addListener((details) => {
 			} else {
 				chrome.storage.sync.set({ cornerRadius: 10 });
 			}
+		}
+
+		// Background translucency
+		if (res.backgroundOpacity === undefined || res.backgroundOpacity === ``) {
+			chrome.storage.sync.set({ backgroundOpacity: 100 });
+		}
+		if (res.isBackgroundBlurOn === undefined || res.isBackgroundBlurOn === ``) {
+			chrome.storage.sync.set({ isBackgroundBlurOn: true });
 		}
 
 		// Statistics settings

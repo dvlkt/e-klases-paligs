@@ -79,23 +79,23 @@ const loadCornerRadius = () => {
 	Background opacity loading
 */
 const loadBackgroundOpacity = () => {
+	let rootStyleElement = document.querySelector(`:root`).style;
+	
+	chrome.storage.sync.get([`isBackgroundBlurOn`], (res) => {
+		rootStyleElement.setProperty(`--opaque-background-filter`, res.isBackgroundBlurOn ? `blur(4px)` : ``);
+	});
 	chrome.storage.sync.get([`backgroundOpacity`], (res) => {
 		let backgroundOpacityHex = Math.floor(res.backgroundOpacity * 255).toString(16);
 		backgroundOpacityHex = `${backgroundOpacityHex.length === 1 ? `0` : ``}${backgroundOpacityHex}`;
 
-		//console.log(res.backgroundOpacity, backgroundOpacityHex)
-
-		let rootStyleElement = document.querySelector(`:root`).style;
-
 		rootStyleElement.setProperty(`--header-background-color`, `${rootStyleElement.getPropertyValue(`--header-background-color`).slice(0, 7)}${backgroundOpacityHex}`);
 
-		let currentShadowOpacity = Number(`0x${rootStyleElement.getPropertyValue(`--header-shadow-color`).slice(7, 2)}`);
-		let shadowOpacityHex = Math.floor(res.backgroundOpacity / currentShadowOpacity * 255).toString(16);
-		shadowOpacityHex = `${shadowOpacityHex.length === 1 ? `0` : ``}${shadowOpacityHex}`;
-
-		console.log(currentShadowOpacity, shadowOpacityHex, rootStyleElement.getPropertyValue(`--header-shadow-color`).slice(6, 2))
-
-		rootStyleElement.setProperty(`--header-shadow-color`, `${rootStyleElement.getPropertyValue(`--header-shadow-color`).slice(0, 7)}${shadowOpacityHex}`);
+		// Header shadow opacity
+		let currentShadowOpacity = Number(`0x${rootStyleElement.getPropertyValue(`--shadow-color`).slice(7, 9)}`);
+		let headerShadowOpacity = currentShadowOpacity * res.backgroundOpacity;
+		let headerShadowOpacityHex = Math.floor(headerShadowOpacity).toString(16);
+		headerShadowOpacityHex = `${headerShadowOpacityHex.length === 1 ? `0` : ``}${headerShadowOpacityHex}`;
+		rootStyleElement.setProperty(`--header-shadow-color`, `${rootStyleElement.getPropertyValue(`--shadow-color`).slice(0, 7)}${headerShadowOpacityHex}`);
 
 		rootStyleElement.setProperty(`--opaque-background-middle-color`, `${rootStyleElement.getPropertyValue(`--background-middle-color`).slice(0, 7)}${backgroundOpacityHex}`);
 	});

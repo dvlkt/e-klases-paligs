@@ -11,7 +11,7 @@ html .home-task-answer-modal-container .Modal {
 	background: var(--opaque-background-middle-color);
 	border-radius: var(--corner-radius);
 	box-shadow: 2px 7px 14px -3px var(--shadow-color);
-	backdrop-filter: blur(4px);
+	backdrop-filter: var(--opaque-background-filter);
 	opacity: 0;
 	transform: scale(0.75);
 	z-index: 1041;
@@ -43,7 +43,7 @@ html .modal-background {
 	left: 0;
 	z-index: 1040;
 	background: #00000080;
-	backdrop-filter: blur(4px);
+	backdrop-filter: var(--opaque-background-filter);
 	opacity: 0;
 	transition: .2s opacity;
 }
@@ -434,7 +434,7 @@ html .Modal.Modal.modal-evaluation-file .Modal__Dialog .Modal__Content {
 	margin-top: 0 !important;
 	background: var(--opaque-background-middle-color);
 	border-radius: var(--corner-radius);
-	backdrop-filter: blur(4px);
+	backdrop-filter: var(--opaque-background-filter);
 }
 html .Modal__Header .Title {
 	font-size: 32px;
@@ -615,7 +615,7 @@ html body.state-md .home-task-answer-modal-container .Modal {
 html .home-task-answer-modal-container .Modal .Modal__Content {
 	margin-top: 0 !important;
 	background: var(--opaque-background-middle-color);
-	backdrop-filter: blur(4px);
+	backdrop-filter: var(--opaque-background-filter);
 }
 html .Modal__Content .Modal__Header {
 	padding-bottom: 0;

@@ -135,7 +135,7 @@ cornerRoundnessSlider.setOnChangeFunction(() => {
 
 
 /*
-	Background translucency slider
+	Background translucency
 */
 let backgroundOpacitySlider = new Slider(document.querySelector(`#background-opacity-slider`), 0, 100);
 let backgroundOpacitySliderValueElement = document.querySelector(`#background-opacity-slider-value`);
@@ -147,11 +147,18 @@ chrome.storage.sync.get([`backgroundOpacity`], (res) => {
 backgroundOpacitySlider.setOnChangeFunction(() => {
 	chrome.storage.sync.set({ backgroundOpacity: backgroundOpacitySlider.value / 100 });
 
-	//document.querySelector(`:root`).style.setProperty(`--corner-radius`, `${cornerRoundnessSlider.value}px`);
-
 	sendMessageToEklaseTabs(`updateBackgroundOpacity`);
 
 	backgroundOpacitySliderValueElement.innerText = `${Math.round(backgroundOpacitySlider.value)}%${backgroundOpacitySlider.value === 80 ? ` (noklusējums)` : ``}`;
+});
+
+let backgroundBlurSwitch = new Switch(document.querySelector(`#background-blur-switch`));
+chrome.storage.sync.get([`isBackgroundBlurOn`], (res) => {
+	backgroundBlurSwitch.setValue(res.isBackgroundBlurOn === true);
+});
+backgroundBlurSwitch.setOnClickFunction(() => {
+	chrome.storage.sync.set({ isBackgroundBlurOn: backgroundBlurSwitch.value });
+	sendMessageToEklaseTabs(`updateBackgroundOpacity`);
 });
 
 
