@@ -1109,6 +1109,8 @@ html .analytics-form-holder .form-group .control-label {
 	font-weight: 500;
 	padding-bottom: 0;
 	padding-top: 5px;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .analytics-ratings-table-intro .checkbox {
 	display: none;
@@ -1129,6 +1131,11 @@ html .analytics-form-page .analytics-form-holder h1 {
 	font-family: "Inter", sans-serif;
 	color: var(--title-color);
 	margin: 0;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .analytics-form-page .analytics-form-holder label.css-label::before {
+	background: var(--background-middle-color);
 }
 
 /* Family plan ads */

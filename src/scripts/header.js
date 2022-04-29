@@ -132,6 +132,9 @@ window.addEventListener(`pageLoading`, () => {
 				<div class="header-account-popup-button help">
 					<p>Palīdzība</p>
 				</div>
+				<div class="header-account-popup-button school-links">
+					<p>Skolas saites</p>
+				</div>
 				<div class="header-account-popup-button family-plan onclick-spinner">
 					<p>Ģimenes komplekts</p>
 				</div>
@@ -163,6 +166,11 @@ window.addEventListener(`pageLoading`, () => {
 				<div class="header-account-popup-button tech-support onclick-spinner">
 					<p>Tehniskais atbalsts</p>
 				</div>
+			</div>
+			<div class="header-account-popup-section school-links">
+				<div class="header-account-popup-button back">
+					<p>Atpakaļ</p>
+				</div>
 			</div>`;
 
 		document.querySelector(`.header-second .header-second-inner`).appendChild(accountPopupElement);
@@ -171,10 +179,20 @@ window.addEventListener(`pageLoading`, () => {
 		document.querySelector(`.header-account-popup-button.settings`).addEventListener(`click`, () => {
 			document.querySelector(`.header-account-popup-section.main`).style.left = `-300px`;
 			document.querySelector(`.header-account-popup-section.settings`).style.left = `0`;
+			document.querySelector(`.header-account-popup`).style.height = 
+				`${ document.querySelector(`.header-account-popup-section.settings`).clientHeight + document.querySelector(`.header-account-popup-user`).clientHeight + 10 }px`;
 		});
 		document.querySelector(`.header-account-popup-button.help`).addEventListener(`click`, () => {
 			document.querySelector(`.header-account-popup-section.main`).style.left = `-300px`;
 			document.querySelector(`.header-account-popup-section.help`).style.left = `0`;
+			document.querySelector(`.header-account-popup`).style.height =
+				`${document.querySelector(`.header-account-popup-section.help`).clientHeight + document.querySelector(`.header-account-popup-user`).clientHeight + 10}px`;
+		});
+		document.querySelector(`.header-account-popup-button.school-links`).addEventListener(`click`, () => {
+			document.querySelector(`.header-account-popup-section.main`).style.left = `-300px`;
+			document.querySelector(`.header-account-popup-section.school-links`).style.left = `0`;
+			document.querySelector(`.header-account-popup`).style.height =
+				`${document.querySelector(`.header-account-popup-section.school-links`).clientHeight + document.querySelector(`.header-account-popup-user`).clientHeight + 10}px`;
 		});
 		document.querySelector(`.header-account-popup-button.family-plan`).addEventListener(`click`, () => {
 			window.location.href = `https://my.e-klase.lv/Family/FamilyPlanInformation`;
@@ -187,6 +205,10 @@ window.addEventListener(`pageLoading`, () => {
 				document.querySelector(`.header-account-popup-section.main`).style.left = `0`;
 				document.querySelector(`.header-account-popup-section.settings`).style.left = `300px`;
 				document.querySelector(`.header-account-popup-section.help`).style.left = `300px`;
+				document.querySelector(`.header-account-popup-section.school-links`).style.left = `300px`;
+				console.log(document.querySelector(`.header-account-popup-section.main`).clientHeight + document.querySelector(`.header-account-popup-user`).clientHeight);
+				document.querySelector(`.header-account-popup`).style.height =
+					`${document.querySelector(`.header-account-popup-section.main`).clientHeight + document.querySelector(`.header-account-popup-user`).clientHeight + 10}px`;
 			});
 		}
 		document.querySelector(`.header-account-popup-button.family-settings`).addEventListener(`click`, () => {
@@ -255,7 +277,7 @@ window.addEventListener(`pageLoading`, () => {
 				sectionElement.style.top = `45px`;
 			}
 			
-			document.querySelector(`.header-account-popup`).style.height = `315px`;
+			//document.querySelector(`.header-account-popup`).style.height = `315px`;
 		} else {
 			isSchoolShown = false;
 
@@ -265,7 +287,7 @@ window.addEventListener(`pageLoading`, () => {
 				sectionElement.style.top = `30px`;
 			}
 
-			document.querySelector(`.header-account-popup`).style.height = `300px`;
+			//document.querySelector(`.header-account-popup`).style.height = `300px`;
 		}
 	});
 

@@ -233,7 +233,7 @@ html .header-account-popup {
 	opacity: 0;
 	display: none;
 	width: 300px;
-	height: 300px;
+	height: 366px;
 	border-radius: var(--corner-radius);
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 	background: var(--background-middle-color);

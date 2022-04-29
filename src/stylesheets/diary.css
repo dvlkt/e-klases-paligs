@@ -164,7 +164,7 @@ html .diary-container .lessons-table span.score {
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	border-radius: var(--corner-radius);
 	padding: 10px;
-	font-weight: bold;
+	font-weight: 500;
 	transition: .2s filter;
 }
 html .lessons-table td:last-of-type span.score:hover {
