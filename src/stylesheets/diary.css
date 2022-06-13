@@ -517,7 +517,7 @@ html .diary-analytics h2 .name {
 html .diary-analytics span.grade {
 	background: var(--background-front-color);
 	color: var(--paragraph-color);
-	font-weight: bold;
+	font-weight: 500;
 	font-size: 15px;
 	padding: .5rem;
 	border-radius: var(--corner-radius);

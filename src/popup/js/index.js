@@ -137,7 +137,7 @@ cornerRoundnessSlider.setOnChangeFunction(() => {
 /*
 	Background translucency
 */
-let backgroundOpacitySlider = new Slider(document.querySelector(`#background-opacity-slider`), 0, 100);
+let backgroundOpacitySlider = new Slider(document.querySelector(`#background-opacity-slider`), 50, 100);
 let backgroundOpacitySliderValueElement = document.querySelector(`#background-opacity-slider-value`);
 
 chrome.storage.sync.get([`backgroundOpacity`], (res) => {

@@ -47,22 +47,18 @@ export class Slider {
 		this.minValue = minValue;
 		this.maxValue = maxValue;
 		this.value = defaultValue;
-
+		
 		this.element.children[0].addEventListener(`mousedown`, (event) => {
 			this.isGrabbed = true;
 		});
-		document.addEventListener(`mousemove`, (event) => {
-			if (this.isGrabbed) {
-				if (event.clientX < this.element.offsetLeft) {
-					this.value = 0;
-				} else if (event.clientX > this.element.offsetLeft + this.element.clientWidth) {
-					this.value = this.maxValue;
-				} else {
-					this.value = Math.round(((event.clientX - this.element.offsetLeft) / this.element.clientWidth) * this.maxValue);
-				}
-
-				this._update();
+		this.element.addEventListener(`mousedown`, (event) => {
+			if (event.target !== this.element.children[0]) {
+				this.isGrabbed = true;
+				this._drag(event);
 			}
+		});
+		document.addEventListener(`mousemove`, (event) => {
+			this._drag(event);
 		});
 		window.addEventListener(`mouseup`, (event) => {
 			if (this.isGrabbed) {
@@ -71,6 +67,19 @@ export class Slider {
 		});
 	}
 
+	_drag(event) {
+		if (this.isGrabbed) {
+			if (event.clientX < this.element.offsetLeft) {
+				this.value = 0;
+			} else if (event.clientX > this.element.offsetLeft + this.element.clientWidth) {
+				this.value = this.maxValue;
+			} else {
+				this.value = Math.round(((event.clientX - this.element.offsetLeft) / this.element.clientWidth) * this.maxValue);
+			}
+
+			this._update();
+		}
+	}
 	_update() {
 		this.percentage = this.value * (100 / this.maxValue);
 		this.element.children[0].style.left = `${(this.element.clientWidth * (this.percentage / 100)) - 7.5}px`;

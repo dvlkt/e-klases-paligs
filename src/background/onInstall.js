@@ -61,7 +61,7 @@ chrome.runtime.onInstalled.addListener((details) => {
 
 		// Background translucency
 		if (res.backgroundOpacity === undefined || res.backgroundOpacity === ``) {
-			chrome.storage.sync.set({ backgroundOpacity: 100 });
+			chrome.storage.sync.set({ backgroundOpacity: 1 });
 		}
 		if (res.isBackgroundBlurOn === undefined || res.isBackgroundBlurOn === ``) {
 			chrome.storage.sync.set({ isBackgroundBlurOn: true });
