@@ -10,15 +10,18 @@ window.addEventListener(`pageLoaded`, () => {
 		buttonElement.addEventListener(`click`, () => {
 			modalBgElement.style.display = `block`;
 			modalElement.style.display = `block`;
-			
-			modalElement.style.top = `${window.innerHeight / 2 - modalElement.children[0].children[0].children[0].clientHeight / 2}px`;
-			modalElement.style.height = `${modalElement.children[0].children[0].children[0].clientHeight}px`;
 
 			setTimeout(() => {
 				modalBgElement.style.opacity = `1.0`;
 				modalElement.style.opacity = `1.0`;
 				modalElement.style.transform = `scale(1.0)`;
 			}, 50);
+
+			// Resize
+			setInterval(() => {
+				modalElement.style.top = `calc(50vh - ${modalElement.children[0].children[0].children[0].clientHeight / 2}px)`;
+				modalElement.style.height = `${modalElement.children[0].children[0].children[0].clientHeight}px`;
+			}, 100);
 		});
 
 		modalCloseElement.addEventListener(`click`, () => {
@@ -281,8 +284,9 @@ window.addEventListener(`pageLoaded`, () => {
 			greetingsModalElement.style.display = `block`;
 			modalBgElement.style.display = `block`;
 
+			// Resize
 			greetingsModalElement.style.height = `${greetingsModalElement.children[0].children[0].children[0].clientHeight}px`;
-			greetingsModalElement.style.top = `${window.innerHeight / 2 - greetingsModalElement.children[0].children[0].children[0].clientHeight / 2}px`;
+			greetingsModalElement.style.top = `calc(50vh - ${greetingsModalElement.children[0].children[0].children[0].clientHeight / 2}px)`;
 
 			setTimeout(() => {
 				greetingsModalElement.style.opacity = `1`;

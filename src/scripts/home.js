@@ -76,6 +76,10 @@ window.addEventListener(`pageLoaded`, () => {
 			modal.style.display = `block`;
 			modalBg.style.display = `block`;
 
+			// Resize
+			modal.style.height = `${modal.children[0].children[0].children[0].clientHeight}px`;
+			modal.style.top = `calc(50vh - ${modal.children[0].children[0].children[0].clientHeight / 2}px)`;
+
 			setTimeout(() => {
 				modal.style.opacity = `1`;
 				modal.style.transform = `none`;

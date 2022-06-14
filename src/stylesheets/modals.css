@@ -106,6 +106,7 @@ html .modal-button {
 	border-radius: var(--corner-radius);
 	margin: auto;
 	margin-top: 15px;
+	padding: 8px;
 	width: 100px;
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s filter, .2s box-shadow;
@@ -906,7 +907,4 @@ html .login-help-modal h3 {
 html .login-help-modal p {
 	color: var(--paragraph-color);
 	font-size: 15px;
-}
-html .login-help-modal .modal-close {
-	
 }
