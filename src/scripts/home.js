@@ -31,3 +31,78 @@ window.addEventListener(`pageLoading`, () => {
 		}
 	}
 });
+
+window.addEventListener(`pageLoaded`, () => {
+	/*
+		Add the custom login help modal
+	*/
+	if (document.querySelector(`aside.hidden-xs .login-form`) !== null) {
+		document.querySelector(`aside.hidden-xs .login-links .special-link .title`).innerText = `Neizdodas pieslēgties?`;
+
+		let modalWrapper = document.createElement(`div`);
+		modalWrapper.innerHTML += `
+			<div class="modal modal-technical login-help-modal">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-body">
+							<a href="#" class="modal-close" data-dismiss="modal"></a>
+							<h1>Neizdodas pieslēgties?</h1>
+
+							<h3>Lietotājvārds</h3>
+							<p>Skolēnam un vecākiem lietotājvārds ir skolēna personas kods (xxxxxx-xxxxx). Katram lietotājam jāpieslēdzas ar savu paroli.</p>
+							<p>Darbiniekiem - savs personas kods.</p>
+
+							<h3>Parole</h3>
+							<p>Lai saņemtu jaunu paroli, sūtiet SMS no konkrētā lietotāja (skolēns, mamma, tētis) telefona ar tekstu: EK xxxxxx-xxxxx uz numuru 1800 (xxxxxx-xxxxx vietā jāraksta skolēna personas kods).</p>
+							<p>Ja telefona numurs nav reģistrēts E-klasē, sazinieties ar klases audzinātāju, lai iegūtu pieejas paroli E-klasei.</p>
+							<p>Darbiniekiem paroli atjauno un izsniedz skolas virslietotājs.</p>
+
+							<h3>Tehniskais atbalsts</h3>
+							<p>Ja vēl joprojām neizdodas pieslēgties, rakstiet mums, izmantojot <a href="https://my.e-klase.lv/Pieteikums_tehnisk%C4%81_atbalsta_dienestam">saziņas formu</a>.</p>
+						</div>
+					</div>
+				</div>
+			</div>`;
+		if (document.querySelector(`.modal-background`) === null) {
+			modalWrapper.innerHTML += `<div class="modal-background"></div>`;
+		}
+		document.body.appendChild(modalWrapper);
+
+		let modal = document.querySelector(`.login-help-modal`);
+		let modalBg = document.querySelector(`.modal-background`);
+
+		let button = document.querySelectorAll(`.login-form .form-content .special-link .title`)[1];
+		button.addEventListener(`click`, () => {
+			modal.style.display = `block`;
+			modalBg.style.display = `block`;
+
+			setTimeout(() => {
+				modal.style.opacity = `1`;
+				modal.style.transform = `none`;
+				modalBg.style.opacity = `1`;
+			}, 50);
+		});
+
+		let closeButton = document.querySelector(`.login-help-modal .modal-close`);
+		closeButton.addEventListener(`click`, () => {
+			modal.style.opacity = `0`;
+			modal.style.transform = `scale(0.75)`;
+			modalBg.style.opacity = `0`;
+
+			setTimeout(() => {
+				modal.style.display = `none`;
+				modalBg.style.display = `none`;
+			}, 200);
+		});
+		modalBg.addEventListener(`click`, () => {
+			modal.style.opacity = `0`;
+			modal.style.transform = `scale(0.75)`;
+			modalBg.style.opacity = `0`;
+
+			setTimeout(() => {
+				modal.style.display = `none`;
+				modalBg.style.display = `none`;
+			}, 200);
+		});
+	}
+});

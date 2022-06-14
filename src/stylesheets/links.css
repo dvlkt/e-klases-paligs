@@ -23,7 +23,8 @@ html .faq-item .item-abstract a,
 html .faq-item .item-more a,
 html .page-about a.link,
 html .card-faq .faq li .description a,
-html .communication-list.communication-parents .email .message .text a {
+html .communication-list.communication-parents .email .message .text a,
+html .login-help-modal .modal-body p a {
 	color: var(--theme-color);
 	position: relative;
 	text-decoration: none;
@@ -58,7 +59,8 @@ html .faq-item .item-abstract a:hover,
 html .faq-item .item-more a:hover,
 html .page-about a.link:hover,
 html .card-faq .faq li .description a:hover,
-html .communication-list.communication-parents .email .message .text a:hover {
+html .communication-list.communication-parents .email .message .text a:hover,
+html .login-help-modal .modal-body p a:hover {
 	color: var(--theme-color);
 	text-decoration: none;
 	background-size: 100% 1px;

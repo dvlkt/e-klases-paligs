@@ -112,16 +112,31 @@ html .login-form .show-password-btn.active::after {
 html .login-form .checkbox {
 	margin-bottom: 15px;
 }
+html .login-links {
+	padding-left: 0;
+	margin-bottom: 5px;
+	text-align: center;
+}
+html .login-links li {
+	list-style-type: none;
+	display: inline-block;
+}
 html .login-links a,
 html .login-links a:hover,
 html .login-links .special-link .title,
 html .login-links .special-link .title:hover {
 	color: var(--theme-color);
-
-	display: inline-block;
+	font-size: 15px;
+	user-select: none;
+	-webkit-user-drag: none;
 }
-html .login-links .special-link .content-container {
-	display: none; /* Hide the login help things by default */
+html .login-links .special-link.seeable .content-container,
+html .login-links .special-link.seeable .title.selected::after,
+html .login-links .special-link.seeable .title.selected::before {
+	display: none !important; /* Hide the login help things by default */
+}
+html .login-links .special-link.seeable .title.selected {
+	font-weight: normal;
 }
 html .top-login-holder {
 	display: none !important; /* The mobile login header popup thing is very bad and it sucks and nobody should ever have to use it soo... byeeeee */

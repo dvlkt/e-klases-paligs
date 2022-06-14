@@ -889,3 +889,24 @@ html .EklaseTextEditor__Editor .Modal__Content .Modal__Footer {
 html .EklaseTextEditor__Editor .Modal__Content .Modal__Footer .ButtonDefault {
 	background: var(--background-front-color);
 }
+
+/*
+	Login help modal
+*/
+html .login-help-modal h1 {
+	color: var(--title-color);
+	font-size: 32px;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .login-help-modal h3 {
+	color: var(--title-color);
+	font-size: 24px;
+}
+html .login-help-modal p {
+	color: var(--paragraph-color);
+	font-size: 15px;
+}
+html .login-help-modal .modal-close {
+	
+}
