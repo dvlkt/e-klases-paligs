@@ -8,7 +8,7 @@
 	Moderns dizains un vairāk funkcijas E-klasei
 </p>
 <p>
-	<b>v1.1</b>
+	<b>v2.0</b>
 </p>
 
 <a href="https://chrome.google.com/webstore/detail/e-klases-palīgs-beta/hplegnbabhacjjchnbdcdccchnepmcde">
