@@ -93,7 +93,8 @@
 	},
 	"browser_specific_settings": {
 		"gecko": {
-			"id": "dlektauers@gmail.com"
+			"id": "eklasespaligs@gmail.com",
+			"update_url": "https://e-klases-paligs.netlify.app/firefox/updates.json"
 		}
 	}
 }

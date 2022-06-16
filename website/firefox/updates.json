@@ -1,0 +1,16 @@
+{
+	"addons": {
+		"eklasespaligs@gmail.com": {
+			"updates": [
+				{
+					"version": "1.0",
+					"update_link": "https://e-klases-paligs.netlify.app/firefox/1.0.xpi"
+				},
+				{
+					"version": "1.0.1",
+					"update_link": "https://e-klases-paligs.netlify.app/firefox/1.0.1.xpi"
+				}
+			]
+		}
+	}
+}

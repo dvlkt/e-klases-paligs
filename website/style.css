@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+
+* {
+	font-family: "Inter", sans-serif;
+	box-sizing: border-box;
+	margin: 0;
+}
+body {
+	background: #e0e0e8;
+}
+
+.jumbotron {
+	display: block;
+	width: 100%;
+	height: 400px;
+	padding-top: 100px;
+	padding-left: 50px;
+	background: #0088e3;
+	box-shadow: inset 0px -40px 22px -38px #2651a0;
+}
+.jumbotron h1 {
+	color: #ffffff;
+	font-size: 48px;
+}
+.jumbotron h3 {
+	color: #ffffff;
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.title {
+	text-align: center;
+	font-size: 32px;
+	margin-top: 10px;
+}
+
+section {
+	display: flex;
+	width: 700px;
+	margin: auto;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 20px;
+}
+section div {
+	flex-grow: 3;
+}
+section img {
+	width: 100px;
+	border-radius: 20px;
+	padding: 10px;
+}
+section img.blue {
+	background: #0088e3;
+}
+section img.orange {
+	background: #fa5e21;
+}
+section img.purple {
+	background: #8c29dd;
+}
+section img.green {
+	background: #139e4a;
+}
+
+.center {
+	display: grid;
+	place-items: center;
+}
+
+.button {
+	display: block;
+	width: 200px;
+	height: 40px;
+	padding: 10px;
+	margin: 5px;
+	background: #f7f7fb;
+	color: #000000;
+	text-align: center;
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 15px;
+	border-radius: 10px;
+	box-shadow: 2px 3px 5px -3px #22222b3d;
+	transition: .2s filter, .2s box-shadow;
+}
+.button:hover {
+	box-shadow: 2px 4px 7px -3px #22222b3d;
+	filter: brightness(0.9);
+}
+
+footer {
+	padding: 20px;
+	text-align: center;
+}
+
+@media only screen and (max-width: 710px) {
+	.jumbotron {
+		height: 300px;
+		padding-left: 0;
+		padding-top: 75px;
+		text-align: center;
+	}
+	.jumbotron .button {
+		margin: auto;
+	}
+
+	section {
+		width: calc(100% - 20px);
+		margin-left: 10px;
+	}
+}
+@media only screen and (max-width: 356px) {
+	.jumbotron {
+		height: 400px;
+	}
+}
