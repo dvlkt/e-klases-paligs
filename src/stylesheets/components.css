@@ -9,16 +9,17 @@ html .btn-primary {
 	font-weight: 500;
 	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
-	transition: .2s background, .2s box-shadow;
+	transition: .2s filter, .2s box-shadow;
 }
 html .big-anouncement .btn-secondary:hover,
 html .btn-primary:hover {
-	background: var(--theme-hover-color);
+	background: var(--theme-color);
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
 }
 html .big-anouncement .btn-secondary:active,
 html .btn-primary:active {
-	background: var(--theme-active-color);
+	filter: brightness(0.7);
 }
 
 

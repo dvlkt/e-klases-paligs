@@ -420,3 +420,27 @@ html .error-form .btn:hover {
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 	filter: brightness(0.9);
 }
+
+/*
+	"Big Announcement" page
+*/
+html .big-anouncement {
+	background: var(--background-back-color);
+}
+html .big-anouncement h1 {
+	font-size: 32px;
+	font-family: "Inter", sans-serif;
+	font-weight: bold;
+	color: var(--title-color);
+}
+html .big-anouncement h2 {
+	font-size: 18px;
+	font-family: "Inter", sans-serif;
+}
+html .big-anouncement .announcement-body {
+	font-size: 15px;
+	font-family: "Inter", sans-serif;
+}
+html .big-anouncement .annoncement-buttons {
+	padding-top: 0;
+}
