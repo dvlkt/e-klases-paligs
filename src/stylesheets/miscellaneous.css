@@ -444,3 +444,11 @@ html .big-anouncement .announcement-body {
 html .big-anouncement .annoncement-buttons {
 	padding-top: 0;
 }
+
+/*
+	Tours - just remove them
+*/
+html .tour-backdrop,
+html .tour {
+	display: none !important;
+}
