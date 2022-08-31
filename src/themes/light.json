@@ -1,10 +1,6 @@
 {
 	"name": "Light",
 	"colors": {
-		"background-back": "#e0e0e8",
-		"background-middle": "#f7f7fb",
-		"background-middle-dark": "#efeff5",
-		"background-front": "#dddde4",
 		"title": "#02061a",
 		"paragraph": "#000000",
 		"low-priority": "#00000080",
@@ -14,6 +10,33 @@
 		"red": "#eb4545",
 		"red-shadow": "#641212a6",
 		"red-accent": "#ffffff",
+
+		"background": {
+			"back": "#e0e0e8",
+			"back-hover": "#e0e0e8",
+			"back-active": "#e0e0e8",
+
+			"middle": "#f7f7fb",
+			"middle-hover": "#f7f7fb",
+			"middle-active": "#f7f7fb",
+
+			"middle-dark": "#efeff5",
+			"middle-dark-hover": "#efeff5",
+			"middle-dark-active": "#efeff5",
+			
+			"front": "#dddde4",
+			"front-hover": "#dddde4",
+			"front-active": "#dddde4"
+		},
+
+		"clickable": {
+			"background": "",
+			"background-hover": "",
+			"background-active": "",
+			"text": "",
+			"text-hover": "",
+			"text-active": ""
+		},
 
 		"header": {
 			"background": "#f7f7fb",

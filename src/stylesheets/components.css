@@ -9,13 +9,16 @@ html .btn-primary {
 	font-weight: 500;
 	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
-	transition: .2s filter, .2s box-shadow;
+	transition: .2s background, .2s box-shadow;
 }
 html .big-anouncement .btn-secondary:hover,
 html .btn-primary:hover {
-	background: var(--theme-color);
+	background: var(--theme-hover-color);
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
-	filter: brightness(0.9);
+}
+html .big-anouncement .btn-secondary:active,
+html .btn-primary:active {
+	background: var(--theme-active-color);
 }
 
 
@@ -151,11 +154,14 @@ html .scroll-to-top {
 	height: 35px;
 	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
-	transition: .2s filter, .2s box-shadow;
+	transition: .2s background, .2s box-shadow;
 }
 html .scroll-to-top:hover {
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
-	filter: brightness(0.9);
+	background: var(--background-middle-hover-color);
+}
+html .scroll-to-top:active {
+	background: var(--background-middle-active-color);
 }
 html .scroll-to-top::after {
 	content: "";
@@ -262,15 +268,18 @@ html .back-to-journal {
 	padding-right: 10px;
 	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
-	transition: .2s filter, .2s box-shadow;
+	transition: .2s background, .2s box-shadow;
 	user-select: none;
 	-webkit-user-drag: none;
 }
 html .back-to-journal:hover {
 	color: var(--paragraph-color);
+	background: var(--background-middle-hover-color);
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
-	filter: brightness(0.9);
 	cursor: pointer;
+}
+html .back-to-journal:active {
+	background: var(--background-middle-active-color);
 }
 html .back-to-journal::before {
 	content: "";
@@ -296,11 +305,14 @@ html .tech-support-container .select2-container--default .select2-selection--sin
 	border: 0 !important;
 	border-radius: var(--corner-radius) !important;
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
-	transition: .2s box-shadow, .2s filter;
+	transition: .2s box-shadow, .2s background;
 }
 html .tech-support-container .select2-container--default .select2-selection--single:hover {
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
-	filter: brightness(0.9);
+	background: var(--background-middle-hover-color);
+}
+html .tech-support-container .select2-container--default .select2-selection--single:active {
+	background: var(--background-middle-active-color);
 }
 html .select2-dropdown {
 	background: var(--background-middle-color);

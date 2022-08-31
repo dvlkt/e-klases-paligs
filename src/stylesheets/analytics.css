@@ -21,12 +21,16 @@ html .select2-container--default .select2-selection--single .select2-selection__
 	font-size: 15px;
 	height: 28px;
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
-	transition: .2s box-shadow, .2s filter, .2s border-radius;
+	transition: .2s box-shadow, .2s background, .2s border-radius;
 }
 html .select2-container--default .select2-selection--single:hover,
 html .select2-container--default .select2-selection--single .select2-selection__rendered:hover {
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
-	filter: brightness(0.9);
+	background: var(--background-middle-hover-color);
+}
+html .select2-container--default .select2-selection--single:active,
+html .select2-container--default .select2-selection--single .select2-selection__rendered:active {
+	background: var(--background-middle-active-color);
 }
 html .form-group.subject-choice .select2-container--default .select2-selection--single {
 	border: 0 !important;
@@ -40,14 +44,17 @@ html .filter-wrap .journal-type a {
 	border: 0;
 	background: var(--background-middle-color);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
-	transition: .2s filter;	
+	transition: .2s background;	
 	user-select: none;
 	-webkit-user-drag: none;
 }
 html .filter-wrap .journal-type a:hover {
 	color: var(--paragraph-color);
 	box-shadow: none;
-	filter: brightness(0.9);
+	background: var(--background-middle-hover-color);
+}
+html .filter-wrap .journal-type a:active {
+	background: var(--background-middle-active-color);
 }
 html .filter-wrap .journal-type a.active {
 	background: var(--theme-color);
@@ -232,13 +239,22 @@ html section .section-switch .section-switch-option {
 	font-weight: 500;
 	color: var(--paragraph-color);
 	background: var(--background-middle-color);
-	transition: .2s filter, .2s box-shadow;
+	transition: .2s background, .2s box-shadow;
 }
 html section .section-switch .section-switch-option:hover {
-	filter: brightness(0.9);
+	background: var(--background-middle-hover-color);
+}
+html section .section-switch .section-switch-option:active {
+	background: var(--background-middle-active-color);
 }
 html section .section-switch .section-switch-option.active {
 	background: var(--theme-color);
+}
+html section .section-switch .section-switch-option.active:hover {
+	background: var(--theme-hover-color);
+}
+html section .section-switch .section-switch-option.active:active {
+	background: var(--theme-active-color);
 }
 html section .section-switch .section-switch-option:first-child {
 	border-radius: var(--corner-radius) 0 0 var(--corner-radius);
@@ -559,7 +575,7 @@ html .cell-item.active:hover {
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	border-radius: var(--corner-radius);
 	background: var(--background-middle-dark-color);
-	transition: .2s background, .2s filter, .2s box-shadow;
+	transition: .2s background, .2s box-shadow;
 	user-select: none;
 	-webkit-user-drag: none;
 }
@@ -572,7 +588,11 @@ html .cell-item.active:hover {
 html .cell-item:hover,
 html .cell-item.active:hover {
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
-	filter: brightness(0.9);
+	background: var(--background-middle-hover-color);
+}
+html .cell-item:active,
+html .cell-item.active:active {
+	background: var(--background-middle-active-color);
 }
 html .cell-item .marks-header,
 html .cell-item.active .marks-header,
