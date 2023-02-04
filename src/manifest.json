@@ -39,7 +39,6 @@
 				"events/pageLoaded.js",
 				"events/pageLoading.js",
 				"events/urlChanged.js",
-				"holidays/checking.js",
 				"scripts/technicalSupport.js",
 				"scripts/themes.js",
 				"scripts/diary.js",
@@ -59,7 +58,6 @@
 				"animations/loadingSpinner.js",
 				"animations/mail.js",
 				"animations/modals.js",
-				"holidays/theming.js",
 				"events/pageStarted.js"
 			],
 			"css": [

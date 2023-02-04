@@ -15,7 +15,7 @@ chrome.runtime.onInstalled.addListener((details) => {
 	/*
 		Set the default settings
 	*/
-	chrome.storage.sync.get([`theme`, `cornerRoundness`, `themeData`, `themeName`, `themeColor`, `cornerRadius`, `shouldShowSetupModal`, `backgroundOpacity`, `isBackgroundBlurOn`, `isStatisticsPanelOn`, `treatNVAsZero`, `treatNAsZero`, `treatPercentagesAsGrades`, `isHolidayDesignOn`, `isDebugModeOn`], (res) => {
+	chrome.storage.sync.get([`theme`, `cornerRoundness`, `themeData`, `themeName`, `themeColor`, `cornerRadius`, `shouldShowSetupModal`, `backgroundOpacity`, `isBackgroundBlurOn`, `isStatisticsPanelOn`, `treatNVAsZero`, `treatNAsZero`, `treatPercentagesAsGrades`, `isDebugModeOn`], (res) => {
 		// Design settings
 		if (res.themeData === undefined || res.themeData === ``) {
 			if (res.theme !== undefined && res.theme !== ``) {
@@ -82,9 +82,6 @@ chrome.runtime.onInstalled.addListener((details) => {
 		}
 
 		// Technical settings
-		if (res.isHolidayDesignOn === undefined || res.isHolidayDesignOn === ``) {
-			chrome.storage.sync.set({ isHolidayDesignOn: true });
-		}
 		if (res.isDebugModeOn === undefined || res.isDebugModeOn === ``) {
 			chrome.storage.sync.set({ isDebugModeOn: false });
 		}

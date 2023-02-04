@@ -220,14 +220,6 @@ document.querySelector(`.profile-picture-btn`).addEventListener(`click`, () => {
 /*
 	Technical settings
 */
-let holidayDesignSwitch = new Switch(document.querySelector(`#holiday-design-switch`));
-chrome.storage.sync.get([`isHolidayDesignOn`], (res) => {
-	holidayDesignSwitch.setValue(res.isHolidayDesignOn === true);
-});
-holidayDesignSwitch.setOnClickFunction(() => {
-	chrome.storage.sync.set({ isHolidayDesignOn: holidayDesignSwitch.value });
-});
-
 let debugModeSwitch = new Switch(document.querySelector(`#debug-mode-switch`));
 chrome.storage.sync.get([`isDebugModeOn`], (res) => {
 	debugModeSwitch.setValue(res.isDebugModeOn === true);

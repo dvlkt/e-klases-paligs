@@ -110,11 +110,6 @@ const loadLogos = () => {
 		let logoTheme = res.themeData.variants.logo;
 		let headerLogoTheme = res.themeData.variants[`header-logo`];
 
-		let isAHolidayTodayValue = await isAHolidayToday();
-		if (isAHolidayTodayValue) {
-			headerLogoTheme = `dark`;
-		}
-
 		fetch(chrome.runtime.getURL(`res/title-${logoTheme}.png`))
 			.then(response => response.blob())
 			.then(blob => {
