@@ -1,3 +1,5 @@
+let isPopupSchoolShown = false;
+
 window.addEventListener(`pageLoading`, () => {
 	/*
 		Add the header in pages without it
@@ -172,27 +174,23 @@ window.addEventListener(`pageLoading`, () => {
 					<p>Atpakaļ</p>
 				</div>
 			</div>`;
-
 		document.querySelector(`.header-second .header-second-inner`).appendChild(accountPopupElement);
 
 		// Add the event listeners
 		document.querySelector(`.header-account-popup-button.settings`).addEventListener(`click`, () => {
 			document.querySelector(`.header-account-popup-section.main`).style.left = `-300px`;
 			document.querySelector(`.header-account-popup-section.settings`).style.left = `0`;
-			document.querySelector(`.header-account-popup`).style.height = 
-				`${ document.querySelector(`.header-account-popup-section.settings`).clientHeight + document.querySelector(`.header-account-popup-user`).clientHeight + 10 }px`;
+			adjustAccountPopupSize();
 		});
 		document.querySelector(`.header-account-popup-button.help`).addEventListener(`click`, () => {
 			document.querySelector(`.header-account-popup-section.main`).style.left = `-300px`;
 			document.querySelector(`.header-account-popup-section.help`).style.left = `0`;
-			document.querySelector(`.header-account-popup`).style.height =
-				`${document.querySelector(`.header-account-popup-section.help`).clientHeight + document.querySelector(`.header-account-popup-user`).clientHeight + 10}px`;
+			adjustAccountPopupSize();
 		});
 		document.querySelector(`.header-account-popup-button.school-links`).addEventListener(`click`, () => {
 			document.querySelector(`.header-account-popup-section.main`).style.left = `-300px`;
 			document.querySelector(`.header-account-popup-section.school-links`).style.left = `0`;
-			document.querySelector(`.header-account-popup`).style.height =
-				`${document.querySelector(`.header-account-popup-section.school-links`).clientHeight + document.querySelector(`.header-account-popup-user`).clientHeight + 10}px`;
+			adjustAccountPopupSize();
 		});
 		document.querySelector(`.header-account-popup-button.family-plan`).addEventListener(`click`, () => {
 			window.location.href = `https://my.e-klase.lv/Family/FamilyPlanInformation`;
@@ -206,9 +204,7 @@ window.addEventListener(`pageLoading`, () => {
 				document.querySelector(`.header-account-popup-section.settings`).style.left = `300px`;
 				document.querySelector(`.header-account-popup-section.help`).style.left = `300px`;
 				document.querySelector(`.header-account-popup-section.school-links`).style.left = `300px`;
-				console.log(document.querySelector(`.header-account-popup-section.main`).clientHeight + document.querySelector(`.header-account-popup-user`).clientHeight);
-				document.querySelector(`.header-account-popup`).style.height =
-					`${document.querySelector(`.header-account-popup-section.main`).clientHeight + document.querySelector(`.header-account-popup-user`).clientHeight + 10}px`;
+				adjustAccountPopupSize();
 			});
 		}
 		document.querySelector(`.header-account-popup-button.family-settings`).addEventListener(`click`, () => {
@@ -266,10 +262,9 @@ window.addEventListener(`pageLoading`, () => {
 	}
 
 	// Show/hide the school name when clicking on the username
-	let isSchoolShown = false;
 	document.querySelector(`.header-account-popup-user`).addEventListener(`click`, () => {
-		if (!isSchoolShown) {
-			isSchoolShown = true;
+		if (!isPopupSchoolShown) {
+			isPopupSchoolShown = true;
 
 			document.querySelector(`.header-account-popup-user-school`).style.height = `15px`;
 
@@ -277,9 +272,9 @@ window.addEventListener(`pageLoading`, () => {
 				sectionElement.style.top = `45px`;
 			}
 			
-			//document.querySelector(`.header-account-popup`).style.height = `315px`;
+			adjustAccountPopupSize();
 		} else {
-			isSchoolShown = false;
+			isPopupSchoolShown = false;
 
 			document.querySelector(`.header-account-popup-user-school`).style.height = `0`;
 
@@ -287,7 +282,7 @@ window.addEventListener(`pageLoading`, () => {
 				sectionElement.style.top = `30px`;
 			}
 
-			//document.querySelector(`.header-account-popup`).style.height = `300px`;
+			adjustAccountPopupSize();
 		}
 	});
 
@@ -361,6 +356,17 @@ const tryShowingUserInfo = () => {
 	}
 }
 
+const adjustAccountPopupSize = () => {
+	let activeSection;
+	for (let section of document.querySelectorAll(`.header-account-popup-section`)) {
+		if (section.style.left !== undefined && section.style.left === `0px` || section.classList.contains(`main`)) {
+			activeSection = section;
+		}
+	}
+
+	document.querySelector(`.header-account-popup`).style.height = `${activeSection.clientHeight + (isPopupSchoolShown ? 45 : 30)}px`;
+}
+
 const showActivePageLinks = () => {
 	// Show header links as active when in some pages
 	if (document.location.href.includes(`/SPA/Family#/mail`)) {
@@ -373,7 +379,7 @@ const showActivePageLinks = () => {
 	} else {
 		document.querySelector(`.header-second-menu-item.item-video`).classList.remove(`active`);
 	}
-	if (document.location.href.includes(`/Family/Forum`)) {
+	if (document.location.href.includes(`/Family/Forum`) && document.querySelector(`.header-second-menu-item.item-forum`) !== null) {
 		document.querySelector(`.header-second-menu-item.item-forum`).classList.add(`active`);
 	} else {
 		document.querySelector(`.header-second-menu-item.item-forum`).classList.remove(`active`);
