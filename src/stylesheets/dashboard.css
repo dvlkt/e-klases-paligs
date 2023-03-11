@@ -1,7 +1,8 @@
-html .dashboard-widget,
-html .dashboard-widget-col.widget-banner .dashboard-widget,
-html .dashboard-widget-col.widget-notifications .dashboard-widget,
-html .dashboard-information {
+/*
+	Widgets
+*/
+html .dashboard-widget-col.widget-recent .dashboard-widget,
+html .dashboard-widget-col.widget-notifications .dashboard-widget {
 	height: auto;
 	min-height: 200px;
 	max-height: none;
@@ -10,270 +11,33 @@ html .dashboard-information {
 	border: 0;
 	border-radius: var(--corner-radius);
 	cursor: auto;
-}
-html .dashboard-widget-col.widget-notifications .widget-header,
-html .dashboard-widget-col.widget-banner .widget-header {
-	background: none;
-	min-height: 20px;
-	line-height: 20px;
-	padding: 16px;
-	padding-left: 0;
-	padding-bottom: 5px;
-	cursor: auto;
-}
-html .dashboard-widget .widget-header h3,
-html .dashboard-widget-col.widget-banner .widget-header {
-	color: var(--title-color);
-	font-family: "Inter", sans-serif;
-	font-weight: bold;
-	font-size: 24px;
-	padding-left: 16px;
-	cursor: default;
-	user-select: none;
-	-webkit-user-drag: none;
-}
-html .dashboard-widget .widget-header::after {
-	display: none;
-}
-html .dashboard-widget-col.widget-notifications .widget-content {
-	background: none;
-
-	text-align: center;
-
-	height: 100%;
-}
-html .dashboard-widget,
-html .dashboard-widget-col.widget-banner .dashboard-widget {
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 	cursor: auto;
 }
-html .dashboard-widget-col.widget-notifications .widget-notifications-primary {
-	border-bottom: 0;
-}
-html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon:hover,
-html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon:focus {
-	color: var(--paragraph-color);
-}
-html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon2,
-html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon2:hover,
-html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon3,
-html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon3:hover,
-html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon4,
-html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon4:hover {
-	position: relative;
-	background: none;
-	background-color: var(--background-middle-dark-color);
-	border-radius: var(--corner-radius);
-	border: 0;
-	margin: 10px;
-	margin-bottom: 0;
-	transition: .2s filter, .2s box-shadow;
-	font-size: 15px;
-	user-select: none;
-	-webkit-user-drag: none;
-}
-html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon2,
-html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon2:hover {
-	margin-right: 5px;
-}
-html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon4,
-html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon4:hover {
-	margin-left: 5px;
-}
-html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon2:hover,
-html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon3:hover,
-html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon4:hover {
-	filter: brightness(0.9);
-}
-html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon2::before,
-html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon3::before,
-html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon4::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	display: block;
-	width: 100%;
-	height: 50px;
-	mask-position: center;
-	-webkit-mask-position: center;
-	mask-size: contain;
-	-webkit-mask-size: contain;
-	mask-repeat: no-repeat;
-	-webkit-mask-repeat: no-repeat;
-	background: var(--paragraph-color);
-}
-html .dashboard-widget-col.widget-notifications .widget-notification .items {
-	color: var(--low-priority-color);
-	font-family: "Inter", sans-serif;
-	font-size: 15px;
-}
-html .dashboard-widget-col.widget-notifications .widget-content .widget-count,
-html .dashboard-widget-col.widget-notifications .widget-notification .widget-count {
-	background: var(--theme-color);
-	color: var(--theme-accent-color);
-	font-family: "Inter", sans-serif;
-	font-weight: 500;
-	font-size: 15px;
-	padding-top: 2px;
-	border: 0;
-	box-shadow: 2px 3px 5px -3px var(--shadow-color);
-}
-html .dashboard-widget-col.widget-notifications .widget-content .widget-count {
-	width: 30px;
-	height: 30px;
-	left: auto;
-	right: 20px;
-}
-html .dashboard-widget-col.widget-notifications .widget-notifications-primary.student .notification-icon .widget-count {
-	top: 20px;
-	font-size: 15px;
-	padding-top: 4px;
-	box-shadow: 2px 3px 5px -3px var(--shadow-color);
-}
-html .dashboard-widget-col.widget-banner .widget-content {
-	height: auto;
-	min-height: 200px;
-}
-html .close-dashboard-adv-message {
-	margin-top: .25rem;
-    margin-right: .25rem;
-	opacity: 1;
-	transition: .2s filter;
-}
-html .close-dashboard-adv-message:hover {
-	filter: brightness(0.9);
-}
-html .close-dashboard-adv-message::after,
-html .close-dashboard-adv-message::before {
-	background: var(--paragraph-color);
-}
-html .dashboard-widget-col.widget-notifications .widget-notification {
-	background: var(--background-middle-dark-color);
-	color: var(--paragraph-color);
-	font-family: "Inter", sans-serif;
-	font-size: 15px;
-	text-align: left;
-	margin: 10px;
-	border: 0;
-	border-radius: var(--corner-radius);
-	transition: .2s box-shadow, .2s filter;
-	padding-left: 15px;
-	user-select: none;
-	-webkit-user-drag: none;
-}
-html .dashboard-widget-col.widget-notifications .widget-notification:hover {
-	background: var(--background-middle-dark-color);
-	filter: brightness(0.9);
-}
-html .dashboard-widget-col.widget-notifications .widget-close {
-	display: none !important;
-}
-html .no-diary-expl {
-	display: none !important;
-}
-html .dashboard-news {
-	background: var(--background-back-color);
-}
-html .dashboard-news h2 {
-	font-weight: bold;
-	font-size: 32px;
-	color: var(--title-color);
-	user-select: none;
-	-webkit-user-drag: none;
-}
-html .dashboard-news .dashboard-news-item h3 {
-	color: var(--title-color);
-	font-family: "Inter", sans-serif;
-	font-weight: bold;
-	font-size: 24px;
-}
-html .dashboard-news .dashboard-news-item .article-content {
-	color: var(--paragraph-color);
-	font-size: 15px;
-}
-html .dashboard-news .dashboard-news-item .article-content a.file {
-	color: var(--paragraph-color);
-	background: var(--background-middle-color);
-	font-weight: 500;
-	margin-top: 3px;
-	padding: 3px;
-	padding-left: 18px;
-	padding-right: 5px;
-	border-radius: var(--corner-radius);
-	box-shadow: 2px 3px 5px -3px var(--shadow-color);
-	transition: .2s filter, .2s box-shadow;
-	user-select: none;
-	-webkit-user-drag: none;
-}
-html .dashboard-news .dashboard-news-item .article-content a.file:hover {
-	color: var(--paragraph-color);
-	box-shadow: 2px 4px 7px -3px var(--shadow-color);
-	filter: brightness(0.9);
-}
-html .dashboard-news .dashboard-news-item .article-content a.file::before,
-html .actual-lessons .lesson-subitem .description a.file::before,
-html .student-journal-lessons .lesson-subitem .description a.file::before {
-	background: var(--paragraph-color);
-	width: 15px;
-	height: 15px;
-	margin-right: 5px;
-	mask-size: cover;
-	-webkit-mask-size: cover;
-}
-html .dashboard-news .dashboard-news-item .article-meta {
-	user-select: none;
-	-webkit-user-drag: none;
-}
-html .dashboard-news .dashboard-news-item .tag.green,
-html .dashboard-news .dashboard-news-item .tag.gold,
-html .dashboard-news .dashboard-news-item .tag.blue {
-	font-family: "Inter", sans-serif;
-	font-size: 11px;
-	font-weight: 500;
-	color: var(--low-priority-color);
-	background: none;
-	padding-left: 0;
-	padding-right: 0;
-}
-html .dashboard-news .dashboard-news-item .tag::after {
-	content: "";
-	background: var(--low-priority-color);
-	display: inline-block;
-	width: 4px;
-	height: 4px;
-	margin-left: 5px;
-	margin-bottom: 2px;
-	border-radius: 2px;
-}
-html .dashboard-news .dashboard-news-item .article-meta .date {
-	color: var(--low-priority-color);
-	font-family: "Inter", sans-serif;
-	font-size: 11px;
-	margin-left: 0;
-}
-html .dashboard-news .dashboard-news-item {
-	border-bottom: 4px solid var(--solid-divider-color);
-	margin-bottom: 15px;
-}
-html .dashboard-news .dashboard-news-item .article-content img {
-	border-radius: var(--corner-radius);
-	box-shadow: 2px 4px 7px -3px var(--shadow-color);
-	margin-left: 0 !important;
-	margin-top: 0 !important;
-	user-select: none;
-	-webkit-user-drag: none;
-}
+
+
+/*
+	Recents widget
+*/
 html .dashboard-widget-col.widget-recent .recent-widgets-switcher {
-	border-radius: 0;
+	height: 70px;
 }
 html .dashboard-widget-col.widget-recent .scores,
 html .dashboard-widget-col.widget-recent .messages,
 html .dashboard-widget-col.widget-recent .scores:hover,
 html .dashboard-widget-col.widget-recent .messages:hover {
-	background: var(--background-middle-dark-color);
-	border-radius: var(--corner-radius) var(--corner-radius) 0 0;
+	display: inline-block;
+	width: calc(50% - 15px);
+	height: 50px;
+	min-height: 0;
+	margin: 10px;
+	background: var(--background-middle-color);
+	border-radius: var(--corner-radius);
 	transition: .2s filter;
+}
+html .dashboard-widget-col.widget-recent .scores,
+html .dashboard-widget-col.widget-recent .scores:hover {
+	margin-right: 0;
 }
 html .dashboard-widget-col.widget-recent .scores:hover,
 html .dashboard-widget-col.widget-recent .messages:hover {
@@ -281,7 +45,19 @@ html .dashboard-widget-col.widget-recent .messages:hover {
 }
 html .dashboard-widget-col.widget-recent .active,
 html .dashboard-widget-col.widget-recent .active:hover {
-	background: var(--background-middle-color);
+	background: var(--background-middle-dark-color);
+}
+html .dashboard-widget-col.widget-recent .widgets-switcher-item h3 {
+	display: block;
+	font-family: "Inter", sans-serif;
+	color: var(--paragraph-color);
+	font-size: 18px;
+	text-align: center;
+	font-weight: 500;
+	padding-left: 0;
+	padding-top: 13px;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .dashboard-widget-col.widget-recent .widgets-switcher-item .widget-count,
 html .dashboard-widget .widget-header .widget-count {
@@ -289,16 +65,6 @@ html .dashboard-widget .widget-header .widget-count {
 	font-weight: bold;
 	color: var(--theme-accent-color);
 	background: var(--theme-color);
-}
-html .dashboard-widget-col.widget-recent .widgets-switcher-item h3 {
-	font-family: "Inter", sans-serif;
-	color: var(--paragraph-color);
-	font-size: 18px;
-	text-align: center;
-	font-weight: bold;
-	padding-left: 0;
-	user-select: none;
-	-webkit-user-drag: none;
 }
 html .dashboard-widget-col.widget-recent .recent-scores .widget-content {
 	background: var(--background-middle-color);
@@ -394,9 +160,9 @@ html .dashboard-widget-col.widget-recent .no-scores {
 	-webkit-user-drag: none;
 }
 html .dashboard-widget-col.widget-recent .no-scores h4 {
-	color: var(--title-color);
+	color: var(--paragraph-color);
+	font-size: 15px;
 	font-family: "Inter", sans-serif;
-	font-weight: 500;
 }
 html .dashboard-widget-col.widget-recent .no-scores .no-messages-img {
 	display: none;
@@ -413,17 +179,6 @@ html .dashboard-widget-col.widget-recent .recent-scores-item .recent-scores-item
 	background: var(--red-color);
 	color: var(--red-accent-color);
 	box-shadow: 0 7px 14px -3px var(--red-shadow-color);
-}
-@media only screen and (min-width: 768px) {
-	html .dashboard-widget-col.widget-recent .dashboard-widget.recent-scores .widget-header,
-	html .dashboard-widget-col.widget-recent .dashboard-widget.recent-messages .widget-header {
-		display: none;
-	}
-	html .dashboard-widget-col.widget-recent .recent-scores .widget-content,
-	html .dashboard-widget-col.widget-recent .recent-messages .widget-content {
-		padding-top: 0;
-		margin-top: 60px;
-	}
 }
 html .dashboard-widget-col.widget-recent .widget-content-collapse,
 html .dashboard-widget-col.widget-recent .widget-close {
@@ -447,18 +202,293 @@ html .dashboard-widget-col.widget-recent .no-scores .no-scores-advertisement .bo
 html .dashboard-widget-col.widget-recent .no-scores .no-scores-img {
 	display: none;
 }
-html .dashboard-widget-col .dashboard-widget {
-	background: none;
+@media only screen and (min-width: 768px) {
+	html .dashboard-widget-col.widget-recent .dashboard-widget.recent-scores .widget-header,
+	html .dashboard-widget-col.widget-recent .dashboard-widget.recent-messages .widget-header {
+		display: none;
+	}
+	html .dashboard-widget-col.widget-recent .recent-scores .widget-content,
+	html .dashboard-widget-col.widget-recent .recent-messages .widget-content {
+		padding-top: 0;
+		margin-top: 60px;
+	}
 }
-html .home-open-lesson-times {
-	display: none; /* This link caused a few issues because the diary doesn't initially load anyways, so to avoid the trouble let's just remove it */
-}
-html .dashboard .announcement {
+
+
+/*
+	Notifications widget
+*/
+html .dashboard-widget .widget-header::after {
 	display: none;
 }
-html .no-diary-expl .homepage-h2 {
+html .dashboard-widget .widget-header h3 {
+	display: block;
+	color: var(--title-color);
+	font-family: "Inter", sans-serif;
+	font-weight: bold;
 	font-size: 24px;
-	font-weight: 500;
+	padding-left: 16px;
+	cursor: default;
+	text-align: center;
 	user-select: none;
 	-webkit-user-drag: none;
+}
+html .dashboard-widget-col.widget-notifications .widget-header {
+	background: none;
+	min-height: 20px;
+	line-height: 20px;
+	padding: 16px;
+	padding-left: 0;
+	padding-bottom: 5px;
+	cursor: auto;
+}
+html .dashboard-widget-col.widget-notifications .widget-content {
+	background: none;
+	text-align: center;
+	height: 100%;
+}
+html .dashboard-widget-col.widget-notifications .widget-notifications-primary {
+	border-bottom: 0;
+}
+html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon:hover,
+html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon:focus {
+	color: var(--paragraph-color);
+}
+html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon2,
+html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon2:hover,
+html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon3,
+html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon3:hover,
+html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon4,
+html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon4:hover {
+	position: relative;
+	background: none;
+	background-color: var(--background-middle-dark-color);
+	border-radius: var(--corner-radius);
+	border: 0;
+	margin: 10px;
+	margin-bottom: 0;
+	transition: .2s filter, .2s box-shadow;
+	font-size: 15px;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon2,
+html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon2:hover {
+	margin-right: 5px;
+}
+html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon4,
+html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon4:hover {
+	margin-left: 5px;
+}
+html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon2:hover,
+html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon3:hover,
+html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon4:hover {
+	filter: brightness(0.9);
+}
+html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon2::before,
+html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon3::before,
+html .dashboard-widget-col.widget-notifications .widget-notifications-primary .notification-icon.icon4::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 50px;
+	mask-position: center;
+	-webkit-mask-position: center;
+	mask-size: contain;
+	-webkit-mask-size: contain;
+	mask-repeat: no-repeat;
+	-webkit-mask-repeat: no-repeat;
+	background: var(--paragraph-color);
+}
+html .dashboard-widget-col.widget-notifications .widget-notification .items {
+	color: var(--low-priority-color);
+	font-family: "Inter", sans-serif;
+	font-size: 15px;
+}
+html .dashboard-widget-col.widget-notifications .widget-content .widget-count,
+html .dashboard-widget-col.widget-notifications .widget-notification .widget-count {
+	background: var(--theme-color);
+	color: var(--theme-accent-color);
+	font-family: "Inter", sans-serif;
+	font-weight: 500;
+	font-size: 15px;
+	padding-top: 2px;
+	border: 0;
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+}
+html .dashboard-widget-col.widget-notifications .widget-content .widget-count {
+	width: 30px;
+	height: 30px;
+	left: auto;
+	right: 20px;
+}
+html .dashboard-widget-col.widget-notifications .widget-notifications-primary.student .notification-icon .widget-count {
+	top: 20px;
+	font-size: 15px;
+	padding-top: 4px;
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+}
+html .dashboard-widget-col.widget-notifications .widget-notification {
+	background: var(--background-middle-dark-color);
+	color: var(--paragraph-color);
+	font-family: "Inter", sans-serif;
+	font-size: 15px;
+	text-align: left;
+	margin: 10px;
+	border: 0;
+	border-radius: var(--corner-radius);
+	transition: .2s box-shadow, .2s filter;
+	padding-left: 15px;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .dashboard-widget-col.widget-notifications .widget-notification:hover {
+	background: var(--background-middle-dark-color);
+	filter: brightness(0.9);
+}
+html .dashboard-widget-col.widget-notifications .widget-close {
+	display: none !important;
+}
+
+
+/*
+	Hide the information widget
+*/
+html .dashboard-widget-col.widget-banner {
+	display: none;
+}
+html .dashboard-widget-col.widget-recent,
+html .dashboard-widget-col.widget-notifications {
+	width: 50%;
+}
+
+
+/*
+	Hide the family plan reminders
+*/
+html .announcement,
+html .no-diary-expl {
+	display: none;
+}
+
+
+/*
+	News
+*/
+html .dashboard-news {
+	background: var(--background-back-color);
+	padding-bottom: 0;
+}
+html .dashboard-news h2 {
+	font-weight: bold;
+	font-size: 32px;
+	color: var(--title-color);
+	text-align: center;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .dashboard-news .dashboard-news-item {
+	position: relative;
+	border-bottom: 0;
+	margin-bottom: 15px;
+}
+html .dashboard-news .dashboard-news-item:last-of-type {
+	margin-bottom: 0;
+}
+html .dashboard-news .dashboard-news-item:not(:last-of-type)::after {
+	content: "";
+	position: absolute;
+	display: block;
+	left: 0;
+	bottom: -2px;
+	width: 100%;
+	height: 4px;
+	background: var(--solid-divider-color);
+	border-radius: var(--corner-radius);
+}
+html .dashboard-news .dashboard-news-item .article-meta {
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .dashboard-news .dashboard-news-item .tag.green,
+html .dashboard-news .dashboard-news-item .tag.gold,
+html .dashboard-news .dashboard-news-item .tag.blue {
+	font-family: "Inter", sans-serif;
+	font-size: 11px;
+	font-weight: 500;
+	color: var(--low-priority-color);
+	background: none;
+	padding-left: 0;
+	padding-right: 0;
+}
+html .dashboard-news .dashboard-news-item .tag::after {
+	content: "";
+	background: var(--low-priority-color);
+	display: inline-block;
+	width: 4px;
+	height: 4px;
+	margin-left: 5px;
+	margin-bottom: 2px;
+	border-radius: 2px;
+}
+html .dashboard-news .dashboard-news-item .article-meta .date {
+	color: var(--low-priority-color);
+	font-family: "Inter", sans-serif;
+	font-size: 11px;
+	margin-left: 0;
+}
+html .dashboard-news .dashboard-news-item h3 {
+	color: var(--title-color);
+	font-family: "Inter", sans-serif;
+	font-weight: bold;
+	font-size: 24px;
+}
+html .dashboard-news .dashboard-news-item .article-content img {
+	border-radius: var(--corner-radius);
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	margin-left: 0 !important;
+	margin-top: 0 !important;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .dashboard-news .dashboard-news-item .article-content {
+	color: var(--paragraph-color);
+	font-size: 15px;
+	max-width: 100%;
+}
+html .dashboard-news .dashboard-news-item .article-content a.file {
+	color: var(--paragraph-color);
+	background: var(--background-middle-color);
+	font-weight: 500;
+	margin-top: 3px;
+	padding: 3px;
+	padding-left: 18px;
+	padding-right: 5px;
+	border-radius: var(--corner-radius);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	transition: .2s filter, .2s box-shadow;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .dashboard-news .dashboard-news-item .article-content a.file:hover {
+	color: var(--paragraph-color);
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
+}
+html .dashboard-news .dashboard-news-item .article-content a.file::before,
+html .actual-lessons .lesson-subitem .description a.file::before,
+html .student-journal-lessons .lesson-subitem .description a.file::before {
+	background: var(--paragraph-color);
+	width: 15px;
+	height: 15px;
+	margin-right: 5px;
+	mask-size: cover;
+	-webkit-mask-size: cover;
+}
+html .dashboard-news .dashboard-news-item .article-content p > sup em, em sup {
+	color: var(--low-priority-color);
+	font-weight: 500;
 }
