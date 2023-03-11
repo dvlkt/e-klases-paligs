@@ -1,5 +1,7 @@
 {
 	"name": "Deep Dark",
+	"version": "2.0",
+	
 	"colors": {
 		"background-back": "#000000",
 		"background-middle": "#181818",

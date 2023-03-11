@@ -1,5 +1,7 @@
 {
 	"name": "Combined",
+	"version": "2.0",
+	
 	"colors": {
 		"background-back": "#e0e0e8",
 		"background-middle": "#f7f7fb",

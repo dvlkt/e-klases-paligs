@@ -1,5 +1,7 @@
 {
 	"name": "Solarized Light",
+	"version": "2.0",
+	
 	"colors": {
 		"background-back": "#fdf6e3",
 		"background-middle": "#eee8d5",
