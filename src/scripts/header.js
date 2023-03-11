@@ -374,15 +374,19 @@ const showActivePageLinks = () => {
 	} else {
 		document.querySelector(`.header-second-menu-item.item-messages`).classList.remove(`active`);
 	}
-	if (document.location.href.includes(`/SPA/Family#/video-communication`)) {
-		document.querySelector(`.header-second-menu-item.item-video`).classList.add(`active`);
-	} else {
-		document.querySelector(`.header-second-menu-item.item-video`).classList.remove(`active`);
+	if (document.querySelector(`.header-second-menu-item.item-video`) !== null) {
+		if (document.location.href.includes(`/SPA/Family#/video-communication`)) {
+			document.querySelector(`.header-second-menu-item.item-video`).classList.add(`active`);
+		} else {
+			document.querySelector(`.header-second-menu-item.item-video`).classList.remove(`active`);
+		}
 	}
-	if (document.location.href.includes(`/Family/Forum`) && document.querySelector(`.header-second-menu-item.item-forum`) !== null) {
-		document.querySelector(`.header-second-menu-item.item-forum`).classList.add(`active`);
-	} else {
-		document.querySelector(`.header-second-menu-item.item-forum`).classList.remove(`active`);
+	if (document.querySelector(`.header-second-menu-item.item-forum`) !== null) {
+		if (document.location.href.includes(`/Family/Forum`)) {
+			document.querySelector(`.header-second-menu-item.item-forum`).classList.add(`active`);
+		} else {
+			document.querySelector(`.header-second-menu-item.item-forum`).classList.remove(`active`);
+		}
 	}
 
 	// Remove the href attribute from the active link

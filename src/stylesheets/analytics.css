@@ -1158,6 +1158,50 @@ html .analytics-form-page .analytics-form-holder label.css-label::before {
 	background: var(--background-middle-color);
 }
 
+/* Report analytics */
+html .report-analytics {
+	background: var(--background-middle-dark-color);
+	color: var(--paragraph-color);
+	padding: 1rem;
+	border-radius: var(--corner-radius);
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .report-analytics h1 {
+	font-size: 18px;
+	font-weight: 700;
+}
+html .report-analytics h2 {
+	font-size: 15px;
+	font-weight: 500;
+	text-transform: none;
+	line-height: 20px;
+	margin-top: 20px;
+	margin-bottom: 5px;
+}
+html .report-analytics h2:nth-child(2) {
+	margin-top: 0;
+}
+html .report-analytics h2 .name {
+	font-weight: bold;
+}
+html .report-analytics span.grade {
+	background: var(--background-front-color);
+	color: var(--paragraph-color);
+	font-weight: 500;
+	font-size: 15px;
+	padding: .5rem;
+	border-radius: var(--corner-radius);
+	box-shadow: 0 4px 10px -3px var(--shadow-color);
+}
+html .report-analytics span.low-priority {
+	color: var(--low-priority-color);
+	font-size: 15px;
+	font-weight: normal;
+	text-transform: none;
+}
+
 /* Family plan ads */
 html .sub-adv-container,
 html .sub-adv-example-split {

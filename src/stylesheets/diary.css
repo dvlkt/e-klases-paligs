@@ -510,6 +510,13 @@ html .diary-analytics {
 html .diary-analytics h2 {
 	font-size: 15px;
 	font-weight: 500;
+	text-transform: none;
+	line-height: 20px;
+	margin-top: 20px;
+	margin-bottom: 5px;
+}
+html .diary-analytics h2:first-child {
+	margin-top: 0;
 }
 html .diary-analytics h2 .name {
 	font-weight: bold;
@@ -536,12 +543,6 @@ html .diary-analytics span.low-priority {
 	font-size: 15px;
 	font-weight: normal;
 	text-transform: none;
-}
-html .diary-analytics h2 {
-	text-transform: none;
-}
-html .diary-analytics h2:first-child {
-	margin-top: 0;
 }
 
 /* PRINT TABLE */
