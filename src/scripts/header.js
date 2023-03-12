@@ -128,20 +128,44 @@ window.addEventListener(`pageLoading`, () => {
 		accountPopupElement.innerHTML = `
 			<p class="header-account-popup-user">Nezināms vārds un loma <span class="header-account-popup-user-school">Nezināma mācību iestāde</span></p>
 			<div class="header-account-popup-section main">
-				<div class="header-account-popup-button settings">
-					<p>Iestatījumi</p>
+				<div class="header-account-popup-button school-links">
+					<p>Skolas saites</p>
+				</div>
+				<div class="header-account-popup-button partner-links">
+					<p>Partneru saites</p>
 				</div>
 				<div class="header-account-popup-button help">
 					<p>Palīdzība</p>
-				</div>
-				<div class="header-account-popup-button school-links">
-					<p>Skolas saites</p>
+				</div>	
+				<div class="header-account-popup-button settings">
+					<p>Iestatījumi</p>
 				</div>
 				<div class="header-account-popup-button family-plan onclick-spinner">
 					<p>Ģimenes komplekts</p>
 				</div>
 				<div class="header-account-popup-button exit">
 					<p>Iziet</p>
+				</div>
+			</div>
+			<div class="header-account-popup-section school-links">
+				<div class="header-account-popup-button back">
+					<p>Atpakaļ</p>
+				</div>
+			</div>
+			<div class="header-account-popup-section partner-links">
+				<div class="header-account-popup-button back">
+					<p>Atpakaļ</p>
+				</div>
+			</div>
+			<div class="header-account-popup-section help">
+				<div class="header-account-popup-button back">
+					<p>Atpakaļ</p>
+				</div>
+				<div class="header-account-popup-button faq onclick-spinner">
+					<p>Biežāk uzdotie jautājumi</p>
+				</div>
+				<div class="header-account-popup-button tech-support onclick-spinner">
+					<p>Tehniskais atbalsts</p>
 				</div>
 			</div>
 			<div class="header-account-popup-section settings">
@@ -157,22 +181,6 @@ window.addEventListener(`pageLoading`, () => {
 				<div class="header-account-popup-button settings notification-history onclick-spinner">
 					<p>Ziņojumu vēsture</p>
 				</div>
-			</div>
-			<div class="header-account-popup-section help">
-				<div class="header-account-popup-button back">
-					<p>Atpakaļ</p>
-				</div>
-				<div class="header-account-popup-button faq onclick-spinner">
-					<p>Biežāk uzdotie jautājumi</p>
-				</div>
-				<div class="header-account-popup-button tech-support onclick-spinner">
-					<p>Tehniskais atbalsts</p>
-				</div>
-			</div>
-			<div class="header-account-popup-section school-links">
-				<div class="header-account-popup-button back">
-					<p>Atpakaļ</p>
-				</div>
 			</div>`;
 		document.querySelector(`.header-second .header-second-inner`).appendChild(accountPopupElement);
 
@@ -187,6 +195,11 @@ window.addEventListener(`pageLoading`, () => {
 			document.querySelector(`.header-account-popup-section.help`).style.left = `0`;
 			adjustAccountPopupSize();
 		});
+		document.querySelector(`.header-account-popup-button.partner-links`).addEventListener(`click`, () => {
+			document.querySelector(`.header-account-popup-section.main`).style.left = `-300px`;
+			document.querySelector(`.header-account-popup-section.partner-links`).style.left = `0`;
+			adjustAccountPopupSize();
+		});
 		document.querySelector(`.header-account-popup-button.school-links`).addEventListener(`click`, () => {
 			document.querySelector(`.header-account-popup-section.main`).style.left = `-300px`;
 			document.querySelector(`.header-account-popup-section.school-links`).style.left = `0`;
@@ -198,12 +211,14 @@ window.addEventListener(`pageLoading`, () => {
 		document.querySelector(`.header-account-popup-button.exit`).addEventListener(`click`, () => {
 			window.location.href = `https://my.e-klase.lv/LogOut`;
 		});
-		for (let element of document.querySelectorAll(`.header-account-popup-button.back`)) {
-			element.addEventListener(`click`, () => {
+		for (let backBtnEl of document.querySelectorAll(`.header-account-popup-button.back`)) {
+			backBtnEl.addEventListener(`click`, () => {
 				document.querySelector(`.header-account-popup-section.main`).style.left = `0`;
-				document.querySelector(`.header-account-popup-section.settings`).style.left = `300px`;
-				document.querySelector(`.header-account-popup-section.help`).style.left = `300px`;
-				document.querySelector(`.header-account-popup-section.school-links`).style.left = `300px`;
+
+				for (let otherPageEl of document.querySelectorAll(`.header-account-popup-section:not(.main)`)) {
+					otherPageEl.style.left = `300px`;
+				}
+
 				adjustAccountPopupSize();
 			});
 		}
@@ -222,6 +237,30 @@ window.addEventListener(`pageLoading`, () => {
 		document.querySelector(`.header-account-popup-button.tech-support`).addEventListener(`click`, () => {
 			window.location.href = `https://my.e-klase.lv/Family/TechnicalSupport`;
 		});
+
+		// Add the school and partner links
+		for (let schoolLink of document.querySelectorAll(`.header-first-menu .header-first-menu-item:nth-child(2) .popover li a`)) {
+			let linkEl = document.createElement(`div`);
+			linkEl.className = `header-account-popup-button link`;
+			linkEl.innerHTML = `<p>${schoolLink.innerText.trim()}</p>`;
+			
+			linkEl.addEventListener(`click`, () => {
+				window.open(schoolLink.href, `_blank`);
+			});
+
+			document.querySelector(`.header-account-popup-section.school-links`).appendChild(linkEl);
+		}
+		for (let partnerLink of document.querySelectorAll(`.header-first-menu .header-first-menu-item:first-child .popover li a`)) {
+			let linkEl = document.createElement(`div`);
+			linkEl.className = `header-account-popup-button link`;
+			linkEl.innerHTML = `<p>${partnerLink.innerText.trim()}</p>`;
+			
+			linkEl.addEventListener(`click`, () => {
+				window.open(partnerLink.href, `_blank`);
+			});
+
+			document.querySelector(`.header-account-popup-section.partner-links`).appendChild(linkEl);
+		}
 	}
 
 	// Add the account popup button
