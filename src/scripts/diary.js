@@ -94,44 +94,148 @@ window.addEventListener(`pageLoading`, () => {
 	}
 
 	/*
-		Add the custom calendar
+		Add the custom calendar (I know the code is awful, I might clean it up at some point but no guarantees)
 	*/
 	if (document.querySelector(`.main-eklase-content`) !== null) {
-		let parentElement = document.querySelector(`.main-eklase-content`);
+		const MONTHS = [`Janvāris`, `Februāris`, `Marts`, `Aprīlis`, `Maijs`, `Jūnijs`, `Jūlijs`, `Augusts`, `Septembris`, `Oktobris`, `Novembris`, `Decembris`];
 
-		let calendarElement = document.createElement(`div`);
-		calendarElement.className = `calendar desktop-top closed`;
-		calendarElement.style.display = `none`;
-		calendarElement.innerHTML = `
-			<div class="calendar-level">
-				<div class="calendar-header">
+		// This function updates the calendar view every time the month is changed
+		const updateMonth = (change) => {
+			if (change < 0) {
+				monthInCalendar--;
+				if (monthInCalendar === -1) {
+					monthInCalendar = 11;
+					yearInCalendar--;
+				}
+				yPos -= 180;
+			} else if (change > 0) {
+				monthInCalendar++;
+				if (monthInCalendar === 12) {
+					monthInCalendar = 0;
+					yearInCalendar++;
+				}
+				yPos += 180;
+			}
+			scrollableEl.style.bottom = `${yPos}px`;
 
-				</div>
-			</div>
-			<div class="calendar-level">
-				<div class="calendar-header">
+			if (scrollableEl.querySelector(`[data-pos="${monthInCalendar}-${yearInCalendar}"]`) === null) {
+				let monthEl = document.createElement(`div`);
+				monthEl.setAttribute(`data-pos`, `${monthInCalendar}-${yearInCalendar}`);
+				monthEl.style.bottom = `${-yPos}px`;
 
-				</div>
-			</div>
-		`;
+				// Magic
+				let currentDate = new Date();
+				let d = new Date();
+				d.setFullYear(yearInCalendar);
+				d.setMonth(monthInCalendar);
+				d.setDate(1);
+				d.setDate(-(d.getDay() === 0 ? 6 : d.getDay() - 1) + 1); // Sets d to the first date of the first week in that month
 
-		parentElement.appendChild(calendarElement);
+				for (let i = 0; i <= 6; i++) {
+					let weekEl = document.createElement(`div`);
+					weekEl.className = `calendar-week`;
+					weekEl.style.top = `${30 * i}px`;
+					weekEl.addEventListener(`click`, () => {
+						window.location.href = `/Family/Diary?Date=${d.getDate()}.${d.getMonth()}.${d.getFullYear()}.`;
+					});
+
+					for (let o = 0; o < 7; o++) {
+						let dayEl = document.createElement(`p`);
+						dayEl.innerText = d.getDate().toString();
+						if (d.getMonth() !== monthInCalendar) {
+							dayEl.classList.add(`not-in-month`);
+						}
+						if (d.getDate() === currentDate.getDate() && d.getMonth() === currentDate.getMonth() && d.getFullYear() === currentDate.getFullYear()) {
+							weekEl.classList.add(`current`);
+						}
+						
+						weekEl.appendChild(dayEl);
+						d.setDate(d.getDate() + 1);
+					}
+
+					monthEl.appendChild(weekEl);
+				}
+
+				scrollableEl.appendChild(monthEl);
+			}
+
+			monthIndicatorEl.style.opacity = `0`;
+			setTimeout(() => {
+				monthIndicatorEl.innerText = `${MONTHS[monthInCalendar]} ${yearInCalendar}`;
+				monthIndicatorEl.style.opacity = `1`;
+			}, 100);
+		}
+
+		let monthInCalendar, yearInCalendar;
+
+		let urlParams = new URLSearchParams(window.location.search);
+		if (urlParams.get(`Date`) !== null) {
+			let urlDate = urlParams.get(`Date`).split(`.`);
+
+			monthInCalendar = parseInt(urlDate[1]) - 1;
+			yearInCalendar = parseInt(urlDate[2]);
+		} else {
+			let currentDate = new Date();
+			monthInCalendar = currentDate.getMonth();
+			yearInCalendar = currentDate.getFullYear();
+		}
+
+		let yPos = 0;
+
+		let calendarEl = document.createElement(`div`);
+		calendarEl.className = `calendar desktop-top closed`;
+		calendarEl.style.display = `none`;
+
+		let headerEl = document.createElement(`div`);
+		headerEl.className = `calendar-header`;
+		calendarEl.appendChild(headerEl);
+
+		let previousMonthBtn = document.createElement(`button`);
+		previousMonthBtn.className = `previous-month`;
+		previousMonthBtn.addEventListener(`click`, () => {
+			updateMonth(-1);
+		});
+		headerEl.appendChild(previousMonthBtn);
+
+		let monthIndicatorEl = document.createElement(`p`);
+		monthIndicatorEl.className = `month`;
+		headerEl.appendChild(monthIndicatorEl);
+
+		let nextMonthBtn = document.createElement(`button`);
+		nextMonthBtn.className = `next-month`;
+		nextMonthBtn.addEventListener(`click`, () => {
+			updateMonth(1);
+		});
+		headerEl.appendChild(nextMonthBtn);
+		
+		let bodyEl = document.createElement(`div`);
+		bodyEl.className = `calendar-body`;
+		calendarEl.appendChild(bodyEl);
+
+		let scrollableEl = document.createElement(`div`);
+		scrollableEl.className = `calendar-scrollable`;
+		bodyEl.appendChild(scrollableEl);
+
+		let parentEl = document.querySelector(`.main-eklase-content`);
+		parentEl.appendChild(calendarEl);
+
+		updateMonth(0);
 
 		let topCalendarHolder = document.querySelectorAll(`.week-selector .selected-period`)[0];
 		topCalendarHolder.addEventListener(`click`, () => {
-			if (calendarElement.style.display === `none`) {
-				calendarElement.style.display = `block`;
+			if (calendarEl.style.display === `none`) {
+				calendarEl.style.display = `block`;
 
 				setTimeout(() => {
-					calendarElement.style.opacity = `1`;
-					calendarElement.style.transform = `translateY(0)`;
+					calendarEl.style.opacity = `1`;
+					calendarEl.style.transform = `translateY(0)`;
 				}, 20);
 			} else {
-				calendarElement.style.opacity = `0`;
-				calendarElement.style.transform = `translateY(10px)`;
+				calendarEl.style.opacity = `0`;
+				calendarEl.style.transform = `translateY(10px)`;
 
 				setTimeout(() => {
-					calendarElement.style.display = `none`;
+					calendarEl.style.display = `none`;
 				}, 200);
 			}
 		});

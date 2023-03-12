@@ -123,27 +123,94 @@ html .calendar {
 	position: absolute;
 	display: none;
 	width: 250px;
-	height: 300px;
+	height: 240px;
 	border-radius: var(--corner-radius);
-	background: var(--background-front-color);
+	background: var(--opaque-background-middle-color);
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
+	backdrop-filter: var(--opaque-background-filter);
 	overflow: hidden;
 	opacity: 0;
 	transform: translateY(10px);
 	transition: .2s opacity, .2s transform;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .calendar.desktop-top {
 	top: 150px;
 	left: calc(100vw / 2 - 125px);
 }
-html .calendar .calendar-level {
-	width: 100%;
-	height: 100%;
+html .calendar-header button {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border: 0;
+	margin: 10px;
+	background: var(--paragraph-color);
+	vertical-align: middle;
+	mask-size: cover;
+	-webkit-mask-size: cover;
+	transition: .2s opacity;
 }
-html .calendar .calendar-header {
-	height: 80px;
+html .calendar-header button:hover {
+	opacity: 0.7;
 }
-
+html .calendar-header p {
+	display: inline-block;
+	width: calc(100% - 80px);
+	font-weight: 500;
+	font-size: 18px;
+	text-align: center;
+	vertical-align: middle;
+	transition: .1s opacity;
+}
+html .calendar-body {
+	position: relative;
+	overflow: hidden;
+	width: 210px;
+	height: 180px;
+	margin: auto;
+}
+html .calendar-body .calendar-scrollable {
+	position: absolute;
+	bottom: 0;
+	transition: .2s bottom;
+}
+html .calendar-body .calendar-scrollable > div {
+	position: absolute;
+	width: 210px;
+	height: 180px;
+}
+html .calendar-body .calendar-week {
+	position: static;
+	display: inline-block;
+	width: 210px;
+	height: 30px;
+	background: var(--background-middle-color);
+	border-radius: calc(var(--corner-radius) / 2);
+	transition: .2s filter;
+	cursor: pointer;
+}
+html .calendar-body .calendar-week:hover {
+	filter: brightness(0.9);
+}
+html .calendar-body .calendar-week p {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	color: var(--paragraph-color);
+	font-size: 15px;
+	text-align: center;
+	padding-top: 8px;
+}
+html .calendar-body .calendar-week p.not-in-month {
+	color: var(--low-priority-color);
+	font-weight: 500;
+}
+html .calendar-body .calendar-week.current p,
+html .calendar-body .calendar-week.current p.not-in-month {
+	color: var(--theme-color);
+	font-weight: 500;
+}
 
 /*
 	Scroll to top
