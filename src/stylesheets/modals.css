@@ -1,4 +1,6 @@
-/* General */
+/*
+	General
+*/
 html .modal,
 html .Modal.modal-evaluation-file,
 html .home-task-answer-modal-container .Modal {
@@ -8,10 +10,9 @@ html .home-task-answer-modal-container .Modal {
 	display: none;
 	width: 50%;
 	height: 70%;
-	background: var(--opaque-background-middle-color);
+	background: none;
 	border-radius: var(--corner-radius);
 	box-shadow: 2px 7px 14px -3px var(--shadow-color);
-	backdrop-filter: var(--opaque-background-filter);
 	opacity: 0;
 	transform: scale(0.75);
 	z-index: 1041;
@@ -170,7 +171,58 @@ html .SpinnerSection .Spinner {
 	}
 }
 
-/* Mark card */
+
+/*
+	Greeting modal
+*/
+html .greetings-modal h1 {
+	margin: 0;
+}
+html .greetings-modal h3 {
+	font-family: "Inter", sans-serif;
+	font-size: 24px;
+	color: var(--title-color);
+	text-align: left;
+	margin-top: 0;
+}
+html .greetings-modal p {
+	color: var(--paragraph-color);
+	font-family: "Inter", sans-serif;
+	font-size: 15px;
+	line-height: 18px;
+}
+html .greetings-modal b {
+	color: var(--paragraph-color);
+	font-family: "Inter", sans-serif;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 18px;
+	text-align: center;
+	display: block;
+	width: 100%;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .greetings-modal ul {
+	color: var(--paragraph-color);
+	list-style-type: disc;
+	margin-left: 15px;
+}
+html .greetings-modal ul li {
+	font-size: 15px;
+	line-height: 18px;
+	list-style-type: disc;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .greetings-modal .modal-button {
+	width: 200px;
+}
+
+
+/*
+	Mark card
+*/
 html .modal-mark-card .mark-card-inner-title {
 	border-radius: var(--corner-radius) var(--corner-radius) 0 0;
 	background: var(--background-front-color);
@@ -229,7 +281,10 @@ html .modal-mark-card .date {
 	text-transform: uppercase;
 }
 
-/* Legend */
+
+/*
+	Legend
+*/
 html .terms-and-abbreviations-modal {
 	left: 15%;
 	width: 70%;
@@ -256,8 +311,11 @@ html .modal-technical .legend-dialog .legend-category .legend-attribute {
 	font-weight: bold;
 }
 
-/* Timetable */
-html .modal-technical .timetible-item .name { /* Did you mean... timetable..? */
+
+/*
+	Timetable
+*/
+html .modal-technical .timetible-item .name { /* Did they mean... timetable..? */
 	font-family: "Inter", sans-serif;
 	border-right: 3px solid var(--opaque-divider-color);
 }
@@ -274,22 +332,28 @@ html .modal-technical .timetible-item .time {
 	-webkit-user-drag: none;
 }
 
-/* Recipients modal */
-html .Modal__Content .Modal__Header {
-	background: none !important;
+
+/*
+	Recipients modal
+*/
+html .Modal#RecipientsModal .Modal__Content .Modal__Header {
+	background: var(--opaque-background-middle-color) !important;
+	backdrop-filter: var(--opaque-background-filter);
 	color: var(--paragraph-color);
 	border: 0;
 	border-radius: var(--corner-radius) var(--corner-radius) 0 0;
 }
-html .Modal__Header .Modal__Title {
+html .Modal#RecipientsModal .Modal__Header .Modal__Title {
 	color: var(--paragraph-color);
 }
-html .Modal__Content .Modal__Body {
+html .Modal#RecipientsModal .Modal__Content .Modal__Body {
 	background: none !important;
 	color: var(--paragraph-color);
 	border-radius: 0 0 var(--corner-radius) var(--corner-radius);
 }
 html .RecipientsModal__GroupContainer {
+	background: var(--opaque-background-middle-color);
+	backdrop-filter: var(--opaque-background-filter);
 	border-radius: 0 0 var(--corner-radius) var(--corner-radius);
 }
 html .RecipientsModal__Title {
@@ -322,7 +386,7 @@ html .RecipientsModal__GroupContainer .RecipientGroup__Button {
 	mask-size: contain;
 	-webkit-mask-size: contain;
 }
-html #RecipientsModal .RecipientHeader {
+html .Modal#RecipientsModal .RecipientHeader {
 	background: var(--background-middle-color);
 }
 html .RecipientHeader {
@@ -371,8 +435,8 @@ html .RecipientsModal__StudyYear--selected {
 html .RecipientsModal__StudyYear:hover {
 	opacity: 0.7;
 }
-html .Modal__Body .RecipientSearch,
-html .Modal__Body .RecipientSearch:focus {
+html .Modal#RecipientsModal .Modal__Body .RecipientSearch,
+html .Modal#RecipientsModal .Modal__Body .RecipientSearch:focus {
 	border-radius: var(--corner-radius);
 	font-size: 15px;
 	padding: 10px;
@@ -429,408 +493,6 @@ html .RecipientsModal__AddedRecipientsCount {
 	-webkit-user-drag: none;
 }
 
-/* Grade overview */
-html .Modal.Modal.modal-evaluation-file .Modal__Dialog .Modal__Content {
-	height: auto;
-	margin-top: 0 !important;
-	background: var(--opaque-background-middle-color);
-	border-radius: var(--corner-radius);
-	backdrop-filter: var(--opaque-background-filter);
-}
-html .Modal__Header .Title {
-	font-size: 32px;
-	font-family: "Inter", sans-serif;
-	font-weight: bold;
-	color: var(--title-color);
-	margin-left: 0;
-	user-select: none;
-	-webkit-user-drag: none;
-}
-html .Modal .Modal__Dialog .loading {
-	background: var(--background-middle-color);
-}
-html .Modal__Body .Container .Section {
-	background: none;
-}
-html .Modal__Body .Section .Section__Chunk {
-	border-bottom: 0;
-	padding: 0;
-}
-html .Modal__Body .Section .Section__Chunk .tiny-graph path[fill="#CFCFCF"] {
-	fill: var(--analytics-generic-bar-color);
-	border-radius: var(--corner-radius);
-}
-html .Modal__Body .Section .Section__Chunk .tiny-graph path[fill="#3A96F9"] {
-	fill: var(--theme-color);
-}
-html .Modal__Body .Section__Chunk .EvaluationStats {
-	font-size: 15px;
-	font-family: "Inter", sans-serif;
-	color: var(--paragraph-color);
-	user-select: none;
-	-webkit-user-drag: none;
-}
-html .Modal__Body .Section__Chunk .EvaluationTitle,
-html .Modal__Body .Section__Chunk .Evaluation .Evaluation__Value {
-	font-size: 18px;
-	font-family: "Inter", sans-serif;
-	font-weight: 500;
-	color: var(--paragraph-color);
-	user-select: none;
-	-webkit-user-drag: none;
-}
-html .Modal__Body .Section__Chunk .EvaluationTitle::after {
-	content: ":";
-}
-html .Modal__Body .Section__Chunk .Author {
-	color: var(--paragraph-color);
-	font-size: 15px;
-	font-family: "Inter", sans-serif;
-	text-align: left;
-	margin-top: 2px;
-}
-html .Modal__Body .Section__Chunk .Author span:first-child {
-	font-weight: 500;
-	color: var(--low-priority-color);
-	user-select: none;
-	-webkit-user-drag: none;
-}
-html .Modal__Body .Section__Chunk .EmptyGraph {
-	border-radius: var(--corner-radius);
-	background: none;
-}
-html .Modal__Body .Section .Section__Chunk span.LessonType {
-	font-family: "Inter", sans-serif;
-	font-size: 24px;
-	font-weight: bold;
-	color: var(--title-color);
-	user-select: none;
-	-webkit-user-drag: none;
-}
-html .Modal__Body .Section .Section__Chunk span.LessonDate {
-	display: block;
-	font-size: 15px;
-	font-weight: 500;
-	color: var(--low-priority-color);
-	text-align: left;
-	margin-top: 5px;
-	user-select: none;
-	-webkit-user-drag: none;
-}
-html .Modal__Body .Section__Chunk:first-child {
-	display: block;
-}
-html .Modal__Body .Section .Section__Chunk .Subject p {
-	font-size: 15px;
-	color: var(--paragraph-color);
-}
-html .Modal__Body .Section__Chunk span.Info {
-	color: var(--theme-color);
-	font-size: 15px;
-	font-family: "Inter", sans-serif;
-	transition: .2s opacity;
-}
-html .Modal__Body .evaluation-card .html-editor-content {
-	font-family: "Inter", sans-serif;
-	font-size: 15px;
-	color: var(--paragraph-color);
-}
-html .Modal__Body .Section__Chunk .Info:hover {
-	opacity: 0.7;
-}
-html .Modal__Body .Section .Section__Chunk .TestReportButton {
-	background: var(--theme-color);
-	color: var(--theme-accent-color);
-	border-radius: var(--corner-radius);
-	font-family: "Inter", sans-serif;
-	font-size: 15px;
-	font-weight: 500;
-	margin-top: 15px;
-	padding: 5px;
-	box-shadow: 2px 3px 5px -3px var(--shadow-color);
-	transition: .2s filter, .2s box-shadow;
-	user-select: none;
-	-webkit-user-drag: none;
-}
-html .Modal__Body .Section .Section__Chunk .TestReportButton:hover {
-	box-shadow: 2px 4px 7px -3px var(--shadow-color);
-	filter: brightness(0.9);
-}
-
-/*
-	Greeting modal
-*/
-html .greetings-modal h1 {
-	margin: 0;
-}
-html .greetings-modal h3 {
-	font-family: "Inter", sans-serif;
-	font-size: 24px;
-	color: var(--title-color);
-	text-align: left;
-	margin-top: 0;
-}
-html .greetings-modal p {
-	color: var(--paragraph-color);
-	font-family: "Inter", sans-serif;
-	font-size: 15px;
-	line-height: 18px;
-}
-html .greetings-modal b {
-	color: var(--paragraph-color);
-	font-family: "Inter", sans-serif;
-	font-weight: 500;
-	font-size: 15px;
-	line-height: 18px;
-	text-align: center;
-	display: block;
-	width: 100%;
-	user-select: none;
-	-webkit-user-drag: none;
-}
-html .greetings-modal ul {
-	color: var(--paragraph-color);
-	list-style-type: disc;
-	margin-left: 15px;
-}
-html .greetings-modal ul li {
-	font-size: 15px;
-	line-height: 18px;
-	list-style-type: disc;
-	user-select: none;
-	-webkit-user-drag: none;
-}
-html .greetings-modal .modal-button {
-	width: 200px;
-}
-
-/*
-	Sending answers
-*/
-html body.state-md .home-task-answer-modal-container .Modal {
-	top: 15%;
-	left: 10%;
-	width: 80%;
-	height: 70%;
-}
-html .home-task-answer-modal-container .Modal .Modal__Content {
-	margin-top: 0 !important;
-	background: var(--opaque-background-middle-color);
-	backdrop-filter: var(--opaque-background-filter);
-}
-html .Modal__Content .Modal__Header {
-	padding-bottom: 0;
-}
-html .Modal__Content .Header__Title {
-	font-size: 32px;
-	color: var(--title-color);
-	font-family: "Inter", sans-serif;
-	font-weight: bold;
-	margin-left: 12px;
-	user-select: none;
-	-webkit-user-drag: none;
-}
-html .Modal__Content .Header__Title::before {
-	display: none;
-}
-html .Modal__Body .Body__Container {
-	padding: 16px;
-}
-html .Modal__Body .Section {
-	box-shadow: none;
-}
-html .Modal__Body .Body__Container .Section,
-html .Modal__Body .Section .Section__Header,
-html .Modal__Body .Section .Section__Body {
-	background: none;
-}
-html .Modal__Body .Section .Section__Header {
-	border-bottom: 0;
-	font-size: 24px;
-	font-weight: bold;
-	color: var(--title-color);
-	user-select: none;
-	-webkit-user-drag: none;
-}
-html .Modal__Body .Section .Section__Header span:nth-child(1) {
-	width: 100%;
-}
-html .Modal__Body .Section .Section__Title--small {
-	font-family: "Inter", sans-serif;
-	font-size: 24px;
-	font-weight: bold;
-	border-right: 0;
-	color: var(--title-color);
-	padding-right: 0;
-	margin-right: 0;
-	user-select: none;
-	-webkit-user-drag: none;
-}
-html .Modal__Body .Section .Section__Title--small:not(.BorderRight)::before {
-	content: "-";
-	margin-right: 5px;
-}
-html .Modal__Body .Section .Section__Title--small:not(.BorderRight) {
-	font-weight: 500;
-	color: var(--low-priority-color);
-	text-transform: lowercase;
-}
-html .Modal__Body .Section .Section__Metadata {
-	display: block;
-}
-html .Modal__Body .Section .Section__Metadata .Section__Text--spaced {
-	font-size: 18px;
-	font-weight: 500;
-}
-html .Modal__Body .Section .Section__Metadata .Section__Text--spaced:nth-child(1) {
-	color: var(--low-priority-color);
-}
-html .Modal__Body .Section .Section__Metadata .SendButton {
-	border-radius: var(--corner-radius) !important;
-	background: var(--theme-color) !important;
-	height: auto !important;
-	padding-left: 5px;
-	padding-right: 5px;
-	box-shadow: 2px 3px 5px -3px var(--shadow-color);
-	transition: .2s filter, .2s box-shadow;
-}
-html .Modal__Body .Section .Section__Metadata .SendButton::before {
-	display: none;
-}
-html .Modal__Body .Section .Section__Metadata .SendButton span.btn__content {
-	font-size: 15px;
-	color: var(--theme-accent-color);
-	margin: 10px;
-}
-html .Modal__Body .Section .Section__Metadata .SendButton:hover {
-	box-shadow: 2px 4px 7px -3px var(--shadow-color);
-	filter: brightness(0.9);
-	border: 0;
-}
-html .Modal__Body .Section .Attachments {
-	background: none;
-	border-bottom: 0;
-	border-radius: var(--corner-radius) var(--corner-radius) 0 0;
-	padding-top: 8px;
-	padding-bottom: 8px;
-	height: 56px;
-}
-html .Modal__Body .Section .Attachments .FileInput {
-	margin-top: 10px;
-}
-html .home-task-answer-modal-container .btn--loading::after {
-	left: -40px;
-	border-top-color: var(--paragraph-color);
-	border-top-width: 2px;
-}
-html .Modal__Body .Section .Attachments .AttachmentList__ItemContainer {
-	background: var(--background-front-color);
-}
-html .Modal__Body .Section .Attachments .AttachmentList__Link {
-	padding-right: 10px;
-}
-html .Modal__Body .Section .Attachments .AttachmentList__RemoveButton {
-	transition: .2s opacity;
-}
-html .Modal__Body .Section .Attachments .AttachmentList__RemoveButton:hover {
-	opacity: 0.7;
-}
-html .Modal__Body .Section .Attachments .AttachmentList__RemoveButton::before {
-	content: "";
-	display: block;
-	width: 12px;
-	height: 12px;
-	margin-top: 2px;
-	background: var(--paragraph-color);
-	mask-size: contain;
-	-webkit-mask-size: contain;
-}
-html .Modal__Body .Section .NewMessageContainer {
-	margin-bottom: 10px;
-	padding-bottom: 0;
-	background: var(--background-front-color);
-	border-radius: var(--corner-radius);
-} 
-html .Modal__Body .Section .NewMessageContainer .EklaseTextEditor__Editor,
-html .Modal__Body .Section .NewMessageContainer .EklaseTextEditor__Content,
-html .Modal__Body .Section .NewMessageContainer .EklaseTextEditor__Menu {
-	background: var(--background-front-color);
-}
-html .Modal__Body .Section .NewMessageContainer .EklaseTextEditor__Editor {
-	border-radius: var(--corner-radius);
-}
-html .Modal__Body .Section .NewMessageContainer .EklaseTextEditor__Content {
-	border-radius: 0 0 var(--corner-radius) var(--corner-radius);
-}
-html .Modal__Body .Section .NewMessageContainer .EklaseTextEditor__Menu {
-	border-radius: var(--corner-radius) var(--corner-radius) 0 0;
-}
-html .Modal__Body .Section .NewMessageContainer .EklaseTextEditor__Button {
-	background: var(--background-middle-color);
-}
-html .Modal__Body .Section__CreationDate {
-	float: left;
-	color: var(--low-priority-color);
-	font-size: 15px;
-	user-select: none;
-	-webkit-user-drag: none;
-}
-html .Modal__Body .Section .Message:first-child {
-	padding-top: 0;
-}
-html .Modal__Body .Message:not(:last-child) {
-	border-bottom: solid 4px var(--opaque-divider-color);
-}
-html .Modal__Body .Message__Info,
-html .home-task-answer-modal-container .html-editor-content {
-	color: var(--paragraph-color);
-	font-size: 15px;
-}
-html .Modal__Body .Message__Info {
-	user-select: none;
-	-webkit-user-drag: none;
-}
-html .Modal__Body .Message__Info .bold {
-	color: var(--low-priority-color);
-	font-weight: 500;
-}
-html .Message .Message__PersonType {
-	color: var(--low-priority-color);
-	text-transform: lowercase;
-	font-size: 15px;
-	margin-left: 0;
-}
-html .Message  .Message__PersonType::before {
-	content: "(";
-}
-html .Message .Message__PersonType::after {
-	content: ")";
-}
-html .Modal__Body .AttachmentListNew .Attachment {
-	border: 0;
-	border-radius: var(--corner-radius);
-	background: var(--background-front-color);
-	color: var(--paragraph-color);
-	font-family: "Inter", sans-serif;
-	font-size: 15px;
-	font-weight: 500;
-	padding: 10px;
-	box-shadow: 2px 3px 5px -3px var(--shadow-color);
-	transition: .2s box-shadow, .2s filter;
-	user-select: none;
-	-webkit-user-drag: none;
-}
-html .Modal__Body .AttachmentListNew .Attachment:hover {
-	box-shadow: 2px 4px 7px -3px var(--shadow-color);
-	filter: brightness(0.9);
-}
-html .Modal__Body .AttachmentListNew .Attachment a:hover,
-html .Modal__Body .AttachmentListNew .Attachment a:focus {
-	color: var(--paragraph-color);
-}
-html .Modal__Body .AttachmentListNew .Attachment::after {
-	display: none;
-}
 
 /*
 	Link inserting modal
@@ -890,6 +552,443 @@ html .EklaseTextEditor__Editor .Modal__Content .Modal__Footer {
 html .EklaseTextEditor__Editor .Modal__Content .Modal__Footer .ButtonDefault {
 	background: var(--background-front-color);
 }
+
+
+/*
+	Grade overview
+*/
+html .Modal.Modal.modal-evaluation-file .Modal__Dialog .Modal__Content {
+	height: auto;
+	margin-top: 0 !important;
+	background: var(--opaque-background-middle-color);
+	border-radius: var(--corner-radius);
+	backdrop-filter: var(--opaque-background-filter);
+}
+html .Modal.modal-evaluation-file .Modal__Dialog .loading {
+	background: var(--background-middle-color);
+}
+html .Modal.modal-evaluation-file .evaluation-card {
+	padding: 20px;
+	padding-top: 5px;
+}
+html .Modal.modal-evaluation-file .evaluation-card .html-editor-content {
+	font-family: "Inter", sans-serif;
+	font-size: 15px;
+	color: var(--paragraph-color);
+}
+html .Modal.modal-evaluation-file .Modal__Header {
+	padding-bottom: 0;
+	background: none !important;
+	border-bottom: 0;
+}
+html .Modal.modal-evaluation-file .Modal__Header .Title {
+	font-size: 32px;
+	font-family: "Inter", sans-serif;
+	font-weight: bold;
+	color: var(--title-color);
+	margin-left: 0;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .Modal.modal-evaluation-file .Modal__Body {
+	background: none !important;
+}
+html .Modal.modal-evaluation-file .Modal__Body .Section .Section__Chunk span.LessonType {
+	display: block;
+	font-family: "Inter", sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+	color: var(--paragraph-color);
+	margin-bottom: 10px;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .Modal.modal-evaluation-file .Modal__Body .Section .Section__Chunk span.LessonDate {
+	display: block;
+	font-size: 15px;
+	font-weight: 500;
+	color: var(--low-priority-color);
+	text-align: left;
+	margin-top: 5px;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .Modal.modal-evaluation-file .Modal__Body .Section .Section__Chunk span.LessonDate .Space {
+	padding: 0;
+}
+html .Modal.modal-evaluation-file .Modal__Body .Section .Section__Chunk span.LessonDate span:not(:first-child)::before {
+	content: " • ";
+}
+html .Modal.modal-evaluation-file .Modal__Body .Section__Chunk:first-child {
+	display: block;
+}
+html .Modal.modal-evaluation-file .Modal__Body .Section .Section__Chunk .Subject p {
+	font-size: 15px;
+	color: var(--paragraph-color);
+}
+html .Modal.modal-evaluation-file .Modal__Body .Section__Chunk span.Info {
+	color: var(--theme-color);
+	font-size: 15px;
+	font-family: "Inter", sans-serif;
+	transition: .2s opacity;
+}
+html .Modal.modal-evaluation-file .Modal__Body .Container .Section {
+	background: none;
+}
+html .Modal.modal-evaluation-file .Modal__Body .Section .Section__Chunk {
+	margin-top: 5px;
+	border-bottom: 0;
+	padding: 0;
+}
+html .Modal.modal-evaluation-file .Modal__Body .Section .Section__Chunk .tiny-graph path[fill="#CFCFCF"] {
+	fill: var(--analytics-generic-bar-color);
+	border-radius: var(--corner-radius);
+}
+html .Modal.modal-evaluation-file .Modal__Body .Section .Section__Chunk .tiny-graph path[fill="#3A96F9"] {
+	fill: var(--theme-color);
+}
+html .Modal.modal-evaluation-file .Modal__Body .Section__Chunk .EvaluationStats {
+	font-size: 15px;
+	font-family: "Inter", sans-serif;
+	color: var(--paragraph-color);
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .Modal.modal-evaluation-file .Modal__Body .Section__Chunk .EvaluationTitle,
+html .Modal.modal-evaluation-file .Modal__Body .Section__Chunk .Evaluation .Evaluation__Value {
+	font-size: 18px;
+	font-family: "Inter", sans-serif;
+	font-weight: 500;
+	color: var(--paragraph-color);
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .Modal.modal-evaluation-file .Modal__Body .Section__Chunk .EvaluationTitle::after {
+	content: ":";
+}
+html .Modal.modal-evaluation-file .Modal__Body .Section__Chunk .Author {
+	color: var(--paragraph-color);
+	font-size: 15px;
+	font-family: "Inter", sans-serif;
+	text-align: left;
+	margin-top: 2px;
+}
+html .Modal.modal-evaluation-file .Modal__Body .Section__Chunk .Author span:first-child {
+	font-weight: 500;
+	color: var(--low-priority-color);
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .Modal.modal-evaluation-file .Modal__Body .Section__Chunk .EmptyGraph {
+	border-radius: var(--corner-radius);
+	background: none;
+}
+html .Modal.modal-evaluation-file .Modal__Body .Section__Chunk .Info:hover {
+	opacity: 0.7;
+}
+html .Modal__Body .Section .Section__Chunk .TestReportButton {
+	background: var(--theme-color);
+	color: var(--theme-accent-color);
+	border-radius: var(--corner-radius);
+	font-family: "Inter", sans-serif;
+	font-size: 15px;
+	font-weight: 500;
+	margin-top: 15px;
+	padding: 5px;
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	transition: .2s filter, .2s box-shadow;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .Modal__Body .Section .Section__Chunk .TestReportButton:hover {
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
+}
+
+
+/*
+	Answer turn-in
+*/
+html body.state-md .home-task-answer-modal-container .Modal {
+	top: 15%;
+	left: 10%;
+	width: 80%;
+	height: 70%;
+}
+html .home-task-answer-modal-container .Modal .Modal__Content {
+	margin-top: 0 !important;
+	background: var(--opaque-background-middle-color);
+	backdrop-filter: var(--opaque-background-filter);
+}
+html .home-task-answer-modal-container .Modal .Modal__Header {
+	background: none !important;
+	padding-bottom: 5px;
+	border: 0;
+}
+html .home-task-answer-modal-container .Modal .Header__Title {
+	font-size: 32px;
+	font-family: "Inter", sans-serif;
+	font-weight: bold;
+	color: var(--title-color);
+	margin-left: 0;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .home-task-answer-modal-container .Modal .Header__Title::before {
+	display: none;
+}
+html .home-task-answer-modal-container .Modal .Modal__Body {
+	background: none !important;
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Body__Container {
+	padding: 20px;
+	padding-top: 0;
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section,
+html .home-task-answer-modal-container .Modal .Modal__Body .Section .Section__Header {
+	background: none;
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:first-child {
+	margin-bottom: 0;
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:first-child .Section__Header {
+	display: block;
+	padding-left: 0;
+	border-bottom: 0;
+	margin-bottom: 10px;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:first-child .Section__Header span:first-child span {
+	font-family: "Inter", sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+	color: var(--paragraph-color);
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:first-child .Section__Header span:first-child span:not(:first-child)::before {
+	content: " • ";
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:first-child .Section__Header span.Section__Metadata {
+	display: block;
+	font-size: 15px;
+	font-weight: 500;
+	color: var(--low-priority-color);
+	text-align: left;
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:first-child .Section__Body {
+	padding: 0;
+	background: none;
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:first-child .Section__Body .html-editor-content {
+	color: var(--paragraph-color);
+	font-size: 15px;
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:first-child .Section__Body .html-editor-content * {
+	font-family: "Inter", sans-serif;
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:first-child .Section__Body .AttachmentList__ItemContainer {
+	background: var(--background-front-color);
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:first-child .Section__Body .AttachmentList__ItemContainer span::before {
+	content: "";
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	mask-size: cover;
+	-webkit-mask-size: cover;
+	background: var(--paragraph-color);
+	margin-right: 5px;
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:first-child .Section__Body .Section__CreationDate {
+	display: block;
+	width: 100%;
+	font-size: 12px;
+	font-weight: 500;
+	color: var(--low-priority-color);
+	text-align: left;
+	margin-top: 5px;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2) {
+	box-shadow: none;
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2) .Section__Header {
+	padding: 0;
+	border: 0;
+	background: none;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2) .Section__Header .Section__Text--spaced-large {
+	font-family: "Inter", sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+	color: var(--paragraph-color);
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2) .Section__Header .SendButton {
+	display: block;
+	height: auto !important;
+	color: var(--theme-accent-color) !important;
+	background: var(--theme-color);
+	padding: 5px 15px;
+	border: 0;
+	border-radius: var(--corner-radius);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	transition: .2s filter, .2s box-shadow;
+}
+html .home-task-answer-modal-container .btn__content {
+	font-family: "Inter", sans-serif;
+	font-size: 15px;
+	font-weight: 500;
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2) .Section__Header .SendButton::before {
+	display: none;
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2) .Section__Header .SendButton:hover {
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2) .Section__Header .btn--loading::after {
+	border-top-color: var(--theme-accent-color);
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2) .Section__Body {
+	background: none;
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2) .Section__Body .Message {
+	position: relative;
+	border: 0;
+	padding: 0;
+	padding-bottom: 15px;
+	margin-bottom: 10px;
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2) .Section__Body .Message:not(:last-child)::after {
+	content: "";
+	position: absolute;
+	display: block;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 4px;
+	background: var(--solid-divider-color);
+	border-radius: var(--corner-radius);
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2) .Section__Body .Message .Message__Info {
+	font-size: 12px;
+	color: var(--paragraph-color);
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2) .Section__Body .Message .Message__Info .bold,
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2) .Section__Body .Message .Message__Info .Message__PersonType {
+	font-family: "Inter", sans-serif;
+	font-size: 12px;
+	font-weight: 500;
+	color: var(--low-priority-color);
+	margin: 0;
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2) .Section__Body .Message .Message__Info .Message__PersonType::before {
+	content: "(";
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2) .Section__Body .Message .Message__Info .Message__PersonType::after {
+	content: ")";
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2) .Section__Body .Message .AttachmentListNew {
+	margin: 0;
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2) .Section__Body .Message .AttachmentListNew .Attachment {
+	display: inline-block;
+	font-weight: 500;
+	font-size: 15px;
+	color: var(--paragraph-color);
+	background: var(--background-front-color);
+	padding: 3px;
+	margin: 0;
+	margin-right: 5px;
+	border-radius: var(--corner-radius);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	transition: .2s filter, .2s box-shadow;
+	cursor: pointer;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2) .Section__Body .Message .AttachmentListNew .Attachment:hover {
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2) .Section__Body .Message .AttachmentListNew .Attachment a {
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2) .Section__Body .Message .AttachmentListNew .Attachment a:hover {
+	color: var(--paragraph-color);
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2) .Section__Body .Message .AttachmentListNew .Attachment::before {
+	content: "";
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin-left: 3px;
+	margin-right: 5px;
+	mask-size: cover;
+	-webkit-mask-size: cover;
+	background: var(--paragraph-color);
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2) .Section__Body .Message .AttachmentListNew .Attachment::after {
+	display: none;
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2) .Section__Body .Message .Message__Text {
+	margin-top: 5px;
+	margin-bottom: 0;
+	font-size: 15px;
+	color: var(--paragraph-color);
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2) .Section__Body .Message .Message__Text {
+	margin-top: 5px;
+	margin-bottom: 0;
+	font-size: 15px;
+	color: var(--paragraph-color);
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2) .Section__Body .Attachments {
+	border-bottom: 0;
+	padding: 0;
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2) .Section__Body .Attachments .AttachmentList__ItemContainer {
+	background: var(--background-middle-dark-color) !important;
+	padding-right: 25px;
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2) .Section__Body .Attachments .AttachmentList__Item {
+	color: var(--paragraph-color);
+	font-size: 15px;
+	font-weight: 500;
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2) .Section__Body .Attachments .AttachmentList__RemoveButton {
+	right: 5px;
+	top: calc(50% - 7.5px);
+	width: 15px;
+	height: 15px;
+	mask-size: cover;
+	-webkit-mask-size: cover;
+	background: var(--paragraph-color);
+	transition: .2s opacity;
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2) .Section__Body .Attachments .AttachmentList__RemoveButton:hover {
+	opacity: 0.7;
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2) .Section__Body .Attachments .AttachmentList__RemoveButton::before {
+	display: none;
+}
+html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2) .Section__Body .NewMessageContainer {
+	margin-top: 5px;
+}
+html .home-task-answer-modal-container .EklaseTextEditor__Editor .EklaseTextEditor__Menu,
+html .home-task-answer-modal-container .EklaseTextEditor__Editor .EklaseTextEditor__Content {
+	background: var(--background-middle-dark-color);
+}
+
 
 /*
 	Login help modal

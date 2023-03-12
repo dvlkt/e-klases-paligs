@@ -252,7 +252,6 @@ html .home-task-answer-widget-container .Widget .Widget__Title::before {
 	display: none;
 }
 html .family-spa .btn,
-html .home-task-answer-modal-container .btn,
 html .home-task-answer-widget-container .Widget .btn.Widget__SendButton,
 html .modal-evaluation-file .btn,
 html .Widget .Widget__Header a.Widget__ViewButton {
@@ -266,7 +265,6 @@ html .Widget .Widget__Header a.Widget__ViewButton {
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
 html .family-spa .btn:hover,
-html .home-task-answer-modal-container .btn:hover,
 html .home-task-answer-widget-container .Widget .btn:hover,
 html .modal-evaluation-file .btn:hover,
 html .Widget .Widget__Header a.Widget__ViewButton:hover {
@@ -274,7 +272,6 @@ html .Widget .Widget__Header a.Widget__ViewButton:hover {
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 }
 html .family-spa .btn__content,
-html .home-task-answer-modal-container .btn__content,
 html .home-task-answer-widget-container .btn__content,
 html .modal-evaluation-file .btn__content,
 html .Widget .Widget__Header a.Widget__ViewButton {
