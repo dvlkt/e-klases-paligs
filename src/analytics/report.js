@@ -7,7 +7,7 @@ window.addEventListener(`pageLoading`, () => {
 
 			// Parse the grades
 			let grades = [];
-			for (let tableRow of document.querySelectorAll(`.analytics-report-print-table-holder tr:not(:first-child)`)) {
+			for (let tableRow of document.querySelectorAll(`.analytics-report-print-table-holder tbody tr`)) {
 				let currentSubject = tableRow.querySelector(`td:first-child`).innerText;
 
 				for (let cell of tableRow.querySelectorAll(`td:not(:first-child)`)) {
@@ -22,7 +22,7 @@ window.addEventListener(`pageLoading`, () => {
 							text: cellGrades[i],
 							subject: currentSubject,
 							id: null
-						})
+						});
 					}
 				}
 			}
@@ -38,7 +38,7 @@ window.addEventListener(`pageLoading`, () => {
 			analyticsEl.innerHTML = `<h1>Statistika skatītajam laika periodam</h1>`;
 
 			let averageGradeTextEl = document.createElement(`h2`);
-			averageGradeTextEl.innerHTML +=`<span class="name">Vidējā atzīme:</span> <span class="grade">${parsedGrades.averageGrade.toString().replaceAll(`.`, `,`)}</span>`;
+			averageGradeTextEl.innerHTML +=`<span class="name">Vidējā atzīme:</span> <span class="grade${parsedGrades.averageGrade <= 3 ? ` low` : ``}">${parsedGrades.averageGrade.toString().replaceAll(`.`, `,`)}</span>`;
 			analyticsEl.appendChild(averageGradeTextEl);
 
 			let bestSubjectTextEl = document.createElement(`h2`);
@@ -46,14 +46,14 @@ window.addEventListener(`pageLoading`, () => {
 			if (parsedGrades.bestSubjects.names.length <= 3) {
 				bestSubjectTextEl.innerHTML += `${parsedGrades.bestSubjects.names.join(`<span class="low-priority"> & </span>`)}`;
 			} else {
-				bestSubjectTextEl.innerHTML += `${parsedGrades.bestSubjects.names[bestSubjects.length - 1]} <span class="low-priority">&</span> ${parsedGrades.bestSubjects.names.length - 1} citi`;
+				bestSubjectTextEl.innerHTML += `${parsedGrades.bestSubjects.names[parsedGrades.bestSubjects.subjects.length - 1]} <span class="low-priority">&</span> ${parsedGrades.bestSubjects.names.length - 1} citi`;
 			}
-			bestSubjectTextEl.innerHTML += ` <span class="low-priority">(vidējā atzīme: <span class="grade">${parsedGrades.bestSubjects.averageGrade.toString().replaceAll(`.`, `,`)}</span>)</span>`;
+			bestSubjectTextEl.innerHTML += ` <span class="low-priority">(vidējā atzīme: <span class="grade${parsedGrades.bestSubjects.averageGrade <= 3 ? ` low` : ``}">${parsedGrades.bestSubjects.averageGrade.toString().replaceAll(`.`, `,`)}</span>)</span>`;
 			analyticsEl.appendChild(bestSubjectTextEl);
 
 			let bestGradeTextEl = document.createElement(`h2`);
 			bestGradeTextEl.innerHTML = `<span class="name">Labākā atzīme:</span> `;
-			bestGradeTextEl.innerHTML += `<span id="analytics-best-grade" class="grade">${parsedGrades.bestGrade.text}</span>`;
+			bestGradeTextEl.innerHTML += `<span id="analytics-best-grade" class="grade${parsedGrades.bestGrade.value <= 3 ? ` low` : ``}">${parsedGrades.bestGrade.text}</span>`;
 			if (parsedGrades.bestGrade.subjects.length <= 3) {
 				bestGradeTextEl.innerHTML += ` <span class="low-priority">(saņemta ${parsedGrades.bestGrade.subjects.length === 1 ? `priekšmetā` : `priekšmetos`} ${parsedGrades.bestGrade.subjects.join(` & `)})</span>`;
 			} else {
@@ -66,14 +66,14 @@ window.addEventListener(`pageLoading`, () => {
 			if (parsedGrades.worstSubjects.names.length <= 3) {
 				worstSubjectTextEl.innerHTML += `${parsedGrades.worstSubjects.names.join(`<span class="low-priority"> & </span>`)}`;
 			} else {
-				worstSubjectTextEl.innerHTML += `${parsedGrades.worstSubjects.names[worstSubjects.length - 1]} <span class="low-priority">&</span> ${parsedGrades.worstSubjects.names.length - 1} citi`;
+				worstSubjectTextEl.innerHTML += `${parsedGrades.worstSubjects.names[parsedGrades.worstSubjects.subjects.length - 1]} <span class="low-priority">&</span> ${parsedGrades.worstSubjects.names.length - 1} citi`;
 			}
-			worstSubjectTextEl.innerHTML += ` <span class="low-priority">(vidējā atzīme: <span class="grade">${parsedGrades.worstSubjects.averageGrade.toString().replaceAll(`.`, `,`)}</span>)</span>`;
+			worstSubjectTextEl.innerHTML += ` <span class="low-priority">(vidējā atzīme: <span class="grade${parsedGrades.worstSubjects.averageGrade <= 3 ? ` low` : ``}">${parsedGrades.worstSubjects.averageGrade.toString().replaceAll(`.`, `,`)}</span>)</span>`;
 			analyticsEl.appendChild(worstSubjectTextEl);
 
 			let worstGradeTextEl = document.createElement(`h2`);
 			worstGradeTextEl.innerHTML = `<span class="name">Sliktākā atzīme:</span> `;
-			worstGradeTextEl.innerHTML += `<span id="analytics-best-grade" class="grade">${parsedGrades.worstGrade.text}</span>`;
+			worstGradeTextEl.innerHTML += `<span id="analytics-best-grade" class="grade${parsedGrades.worstGrade.value <= 3 ? ` low` : ``}">${parsedGrades.worstGrade.text}</span>`;
 			if (parsedGrades.worstGrade.subjects.length <= 3) {
 				worstGradeTextEl.innerHTML += ` <span class="low-priority">(saņemta ${parsedGrades.worstGrade.subjects.length === 1 ? `priekšmetā` : `priekšmetos`} ${parsedGrades.worstGrade.subjects.join(` & `)})</span>`;
 			} else {

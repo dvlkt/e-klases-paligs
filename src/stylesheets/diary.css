@@ -496,7 +496,10 @@ html .student-journal-lessons .lesson-title .room {
 	}
 }
 
-/* DIARY ANALYTICS */
+
+/*
+	Diary analytics
+*/
 html .diary-analytics {
 	background: var(--background-middle-dark-color);
 	color: var(--paragraph-color);
@@ -535,6 +538,11 @@ html .diary-analytics span.grade:not(.no-pointer):hover {
 html .diary-analytics span.grade.no-pointer {
 	cursor: default;
 }
+html .diary-analytics span.grade.low {
+	background: var(--red-color);
+	color: var(--red-accent-color);
+	box-shadow: 0 4px 10px -3px var(--red-shadow-color);
+}
 html .diary-analytics span.low-priority {
 	color: var(--low-priority-color);
 	font-size: 15px;
@@ -542,7 +550,10 @@ html .diary-analytics span.low-priority {
 	text-transform: none;
 }
 
-/* PRINT TABLE */
+
+/*
+	Print table
+*/
 html #centerContainer .options.no-print label {
 	color: var(--paragraph-color);
 }
@@ -595,7 +606,10 @@ html #centerContainer .bottom small {
 	font-size: 11px;
 }
 
-/* TEST REPORT */
+
+/*
+	Test report
+*/
 html .rating-container .test-wrap,
 html .rating-wrap {
 	background: none;

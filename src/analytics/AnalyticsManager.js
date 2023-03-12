@@ -132,6 +132,7 @@ const parseGrades = (inputGrades, treatNVAsZero, treatNAsZero, treatPercentagesA
 		},
 		bestGrade: {
 			text: bestGradeText,
+			value: bestGrade,
 			subjects: bestGradeSubjects,
 			id: bestGradeID
 		},
@@ -141,6 +142,7 @@ const parseGrades = (inputGrades, treatNVAsZero, treatNAsZero, treatPercentagesA
 		},
 		worstGrade: {
 			text: worstGradeText,
+			value: worstGrade,
 			subjects: worstGradeSubjects,
 			id: worstGradeID
 		},

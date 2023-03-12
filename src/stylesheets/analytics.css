@@ -1,4 +1,6 @@
-/* FILTER */
+/*
+	Filter
+*/
 html .filter-wrap .container {
 	background: none;
 	box-shadow: none;
@@ -85,7 +87,10 @@ html .filter-wrap .journal-type a:last-of-type {
 	}
 }
 
-/* RATINGS */
+
+/*	
+	Ratings
+*/
 html .analytics-ratings-container {
 	background: none;
 }
@@ -396,6 +401,7 @@ html .analytics-ratings-container h3.group-title::after {
 	}
 }
 
+
 /*
 	Journals
 */
@@ -687,6 +693,7 @@ html .cell-item:hover .marks-body span {
 	}
 }
 
+
 /*
 	Delays
 */
@@ -923,8 +930,9 @@ html .delay-mobile-details td:nth-child(2) span {
 	}
 }
 
+
 /*
-	Analytics
+	Report
 */
 html .analytics-report-container {
 	background: none;
@@ -1158,7 +1166,10 @@ html .analytics-form-page .analytics-form-holder label.css-label::before {
 	background: var(--background-middle-color);
 }
 
-/* Report analytics */
+
+/*
+	Report analytics
+*/
 html .report-analytics {
 	background: var(--background-middle-dark-color);
 	color: var(--paragraph-color);
@@ -1195,6 +1206,11 @@ html .report-analytics span.grade {
 	border-radius: var(--corner-radius);
 	box-shadow: 0 4px 10px -3px var(--shadow-color);
 }
+html .report-analytics span.grade.low {
+	background: var(--red-color);
+	color: var(--red-accent-color);
+	box-shadow: 0 4px 10px -3px var(--red-shadow-color);
+}
 html .report-analytics span.low-priority {
 	color: var(--low-priority-color);
 	font-size: 15px;
@@ -1202,7 +1218,10 @@ html .report-analytics span.low-priority {
 	text-transform: none;
 }
 
-/* Family plan ads */
+
+/*
+	Family plan ads
+*/
 html .sub-adv-container,
 html .sub-adv-example-split {
 	background: none;
