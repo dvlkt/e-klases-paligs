@@ -64,7 +64,7 @@ chrome.runtime.onInstalled.addListener((details) => {
 			chrome.storage.sync.set({ backgroundOpacity: 1 });
 		}
 		if (res.isBackgroundBlurOn === undefined || res.isBackgroundBlurOn === ``) {
-			chrome.storage.sync.set({ isBackgroundBlurOn: true });
+			chrome.storage.sync.set({ isBackgroundBlurOn: false });
 		}
 
 		// Statistics settings

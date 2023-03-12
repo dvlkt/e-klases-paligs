@@ -149,7 +149,7 @@ backgroundOpacitySlider.setOnChangeFunction(() => {
 
 	sendMessageToEklaseTabs(`updateBackgroundOpacity`);
 
-	backgroundOpacitySliderValueElement.innerText = `${Math.round(backgroundOpacitySlider.value)}%${backgroundOpacitySlider.value === 80 ? ` (noklusējums)` : ``}`;
+	backgroundOpacitySliderValueElement.innerText = `${Math.round(backgroundOpacitySlider.value)}%${backgroundOpacitySlider.value === 100 ? ` (noklusējums)` : ``}`;
 });
 
 let backgroundBlurSwitch = new Switch(document.querySelector(`#background-blur-switch`));

@@ -70,18 +70,18 @@ export class Slider {
 	_drag(event) {
 		if (this.isGrabbed) {
 			if (event.clientX < this.element.offsetLeft) {
-				this.value = 0;
+				this.value = this.minValue;
 			} else if (event.clientX > this.element.offsetLeft + this.element.clientWidth) {
 				this.value = this.maxValue;
 			} else {
-				this.value = Math.round(((event.clientX - this.element.offsetLeft) / this.element.clientWidth) * this.maxValue);
+				this.value = this.minValue + Math.round(((event.clientX - this.element.offsetLeft) / this.element.clientWidth) * (this.maxValue - this.minValue));
 			}
 
 			this._update();
 		}
 	}
 	_update() {
-		this.percentage = this.value * (100 / this.maxValue);
+		this.percentage = (this.value - this.minValue) / (this.maxValue - this.minValue) * 100;
 		this.element.children[0].style.left = `${(this.element.clientWidth * (this.percentage / 100)) - 7.5}px`;
 
 		this.onChangeFunction();
