@@ -44,18 +44,7 @@ window.addEventListener(`pageLoading`, () => {
 
 		document.body.insertBefore(headerElement, document.body.children[0]);
 	}
-
-	// Add the videocall tab
-	if (document.querySelector(`.header-second .header-second-menu`) !== null) {
-		let header = document.querySelector(`.header-second .header-second-menu`);
-
-		let element = document.createElement(`li`);
-		element.className = `header-second-menu-item item-video`;
-		element.innerHTML = `<a href="/SPA/Family#/video-communication/all" class="onclick-spinner">Video saziņa</a>`;
-
-		header.insertBefore(element, header.children[3]);
-	}
-
+	
 	// Add the forum tab
 	if (document.querySelector(`.header-second .header-second-menu`) !== null &&
 		document.querySelector(`.header-second-menu-item.item-announce-absence`) !== null) {
