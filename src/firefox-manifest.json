@@ -1,0 +1,99 @@
+{
+	"manifest_version": 2,
+	"name": "E-klases Palīgs - Tumšais režīms",
+	"version": "2.0",
+	"description": "Labāks dizains un vairāk funkcijas.",
+	"icons": {
+		"16": "res/light/icon-16.png",
+		"32": "res/light/icon-32.png",
+		"64": "res/light/icon-64.png",
+		"128": "res/light/icon-128.png",
+		"256": "res/light/icon-256.png",
+		"512": "res/light/icon-512.png"
+	},
+	"permissions": [
+		"storage",
+		"tabs"
+	],
+	"browser_action": {
+		"default_icon": "res/light/icon-64.png",
+		"default_title": "E-klases Palīgs",
+		"default_popup": "popup/index.html"
+	},
+	"web_accessible_resources": [
+		"res/title-light.png",
+		"res/title-dark.png",
+		"res/light/icon-256.png",
+		"res/light/icon-256-bw.png",
+		"res/dark/icon-256.png",
+		"res/dark/icon-256-bw.png"
+	],
+	"content_scripts": [
+		{
+			"matches": [
+				"*://*.e-klase.lv/*"
+			],
+			"js": [
+				"events/pageLoaded.js",
+				"events/pageLoading.js",
+				"events/urlChanged.js",
+				"scripts/technicalSupport.js",
+				"scripts/themes.js",
+				"scripts/diary.js",
+				"scripts/familyPack.js",
+				"scripts/header.js",
+				"scripts/footer.js",
+				"scripts/home.js",
+				"scripts/login.js",
+				"scripts/mail.js",
+				"scripts/profilePicture.js",
+				"scripts/faq.js",
+				"scripts/titles.js",
+				"scripts/greetingModal.js",
+				"scripts/screenshotMode.js",
+				"scripts/consoleWarning.js",
+				"analytics/AnalyticsManager.js",
+				"analytics/diary.js",
+				"analytics/report.js",
+				"animations/loadingSpinner.js",
+				"animations/mail.js",
+				"animations/modals.js",
+				"events/pageStarted.js"
+			],
+			"css": [
+				"stylesheets/analytics.css",
+				"stylesheets/components.css",
+				"stylesheets/dashboard.css",
+				"stylesheets/diary.css",
+				"stylesheets/familyPlan.css",
+				"stylesheets/faq.css",
+				"stylesheets/fonts.css",
+				"stylesheets/footer.css",
+				"stylesheets/header.css",
+				"stylesheets/home.css",
+				"stylesheets/icons.css",
+				"stylesheets/links.css",
+				"stylesheets/mail.css",
+				"stylesheets/main.css",
+				"stylesheets/miscellaneous.css",
+				"stylesheets/mobile.css",
+				"stylesheets/modals.css",
+				"stylesheets/parentPages.css",
+				"stylesheets/settings.css",
+				"stylesheets/videoCommunication.css"
+			],
+			"run_at": "document_start"
+		}
+	],
+	"background": {
+		"scripts": [
+			"background/onInstall.js"
+		]
+	},
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "eklasespaligs@gmail.com",
+			"update_url": "https://e-klases-paligs.netlify.app/firefox/updates.json"
+		}
+	}
+}
