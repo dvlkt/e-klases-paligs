@@ -16,6 +16,7 @@
 		"red": "#eb4545",
 		"red-shadow": "#641212a6",
 		"red-accent": "#ffffff",
+		"theme-specific": "#b5b5d1",
 
 		"header": {
 			"background": "#303035",

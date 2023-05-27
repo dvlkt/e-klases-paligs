@@ -26,12 +26,19 @@ const loadTheme = () => {
 let isRainbowActivated = false;
 
 const loadThemeColor = () => {
-	chrome.storage.sync.get([`themeColor`], (res) => {
+	chrome.storage.sync.get([`themeData`, `themeColor`], (res) => {
 		if (res.themeColor !== `rainbow`) {
 			isRainbowActivated = false;
-			document.querySelector(`:root`).style.setProperty(`--theme-color`, res.themeColor);
-			setLogoHueToThemeColor(res.themeColor);
-			loadThemeAccentColor(res.themeColor);
+
+			if (res.themeColor !== `theme-specific`) {
+				document.querySelector(`:root`).style.setProperty(`--theme-color`, res.themeColor);
+				setLogoHueToThemeColor(res.themeColor);
+				loadThemeAccentColor(res.themeColor);
+			} else {
+				document.querySelector(`:root`).style.setProperty(`--theme-color`, res.themeData.colors["theme-specific"]);
+				setLogoHueToThemeColor(215);
+				loadThemeAccentColor(res.themeData.colors["theme-specific"]);
+			}
 		} else {
 			isRainbowActivated = true;
 		}
@@ -276,6 +283,7 @@ window.addEventListener(`pageLoading`, () => {
 chrome.runtime.onMessage.addListener((request) => {
 	if (request === `updateTheme`) {
 		loadTheme();
+		loadThemeColor();
 		loadLogos();
 		loadFavicon();
 	} else if (request === `updateThemeColor`) {

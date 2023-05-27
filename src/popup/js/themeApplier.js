@@ -28,7 +28,12 @@ export const loadTheme = () => {
 		// Apply the theme color
 		if (res.themeColor !== `rainbow`) {
 			isRainbowActivated = false;
-			document.querySelector(`:root`).style.setProperty(`--theme-color`, res.themeColor);
+
+			if (res.themeColor !== `theme-specific`) {
+				document.querySelector(`:root`).style.setProperty(`--theme-color`, res.themeColor);
+			} else {
+				document.querySelector(`:root`).style.setProperty(`--theme-color`, res.themeData.colors[`theme-specific`]);
+			}
 		} else {
 			isRainbowActivated = true;
 		}
@@ -36,10 +41,14 @@ export const loadTheme = () => {
 		// Apply the theme color to the logo
 		for (let element of document.querySelectorAll(`img`)) {
 			if (element.src.includes(`title`)) {
-				let r = Number(`0x${res.themeColor[1]}${res.themeColor[2]}`);
-				let g = Number(`0x${res.themeColor[3]}${res.themeColor[4]}`);
-				let b = Number(`0x${res.themeColor[5]}${res.themeColor[6]}`);
-				let hue = rgbToHsv(r, g, b)[0] * 360;
+				let hue = 215;
+				
+				if (res.themeColor !== `theme-specific`) {
+					let r = Number(`0x${res.themeColor[1]}${res.themeColor[2]}`);
+					let g = Number(`0x${res.themeColor[3]}${res.themeColor[4]}`);
+					let b = Number(`0x${res.themeColor[5]}${res.themeColor[6]}`);
+					hue = rgbToHsv(r, g, b)[0] * 360;
+				}
 
 				element.style.filter = `hue-rotate(${hue - 215}deg)`;
 			}
