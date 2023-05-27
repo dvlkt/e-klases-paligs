@@ -38,10 +38,11 @@ html .student-journal-lessons-table-holder .lessons-table thead td.score,
 html .diary-container .lessons-table thead td.score {
 	border-top-right-radius: var(--corner-radius);
 }
-html .no-data {
+html .lessons-table tbody tr .no-data {
 	background: var(--background-middle-dark-color);
 	text-align: center;
 	border-radius: var(--corner-radius);
+	border: 0;
 }
 html .no-data .inform {
 	background: none;

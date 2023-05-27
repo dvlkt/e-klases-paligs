@@ -94,6 +94,15 @@ window.addEventListener(`pageLoading`, () => {
 	}
 
 	/*
+		Remove
+	*/
+	for (let element of document.querySelectorAll(`.score.open-mark-file`)) {
+		element.addEventListener(`click`, () => {
+			tryMinimizingGradePopup();
+		});
+	}
+
+	/*
 		Add the custom calendar (I know the code is awful, I might clean it up at some point but no guarantees)
 	*/
 	if (document.querySelector(`.main-eklase-content`) !== null) {
@@ -249,5 +258,16 @@ const tryResizingAnswerWidget = (element) => {
 		element.children[0].style.height = `${elementHeight}px`;
 	} else {
 		setTimeout(() => tryResizingAnswerWidget(element), 20);
+	}
+}
+
+const tryMinimizingGradePopup = () => {
+	if (document.querySelector(`.Modal.modal-evaluation-file .Modal__Body .evaluation-card`) !== null) {
+		let emptyGraphEl = document.querySelector(`.Modal.modal-evaluation-file .EmptyGraph`);
+		if (emptyGraphEl != null) {
+			emptyGraphEl.parentElement.parentElement.removeChild(emptyGraphEl.parentElement);
+		}
+	} else {
+		setTimeout(() => tryMinimizingGradePopup(), 20);
 	}
 }
