@@ -3,7 +3,9 @@
 */
 html .modal,
 html .Modal.modal-evaluation-file,
-html .home-task-answer-modal-container .Modal {
+html .home-task-answer-modal-container .Modal,
+html .Modal#RecipientsModal .Modal__Content,
+html .Recipients .Modal {
 	position: fixed;
 	top: 15%;
 	left: 25%;
@@ -13,6 +15,8 @@ html .home-task-answer-modal-container .Modal {
 	background: none;
 	border-radius: var(--corner-radius);
 	box-shadow: 2px 7px 14px -3px var(--shadow-color);
+	background: var(--opaque-background-middle-color);
+	backdrop-filter: var(--opaque-background-filter);
 	opacity: 0;
 	transform: scale(0.75);
 	z-index: 1041;
@@ -115,6 +119,9 @@ html .modal-button {
 html .modal-button:hover {
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 	filter: brightness(0.9);
+}
+html .Modal__Header {
+	border-bottom: 0;
 }
 html .Modal__Header .Modal__Close,
 html .Modal__Header .modal-close-button {
@@ -336,25 +343,34 @@ html .modal-technical .timetible-item .time {
 /*
 	Recipients modal
 */
+html .Modal#RecipientsModal {
+	left: 25%;
+	top: 12.5%;
+	width: 50%;
+	height: 75%;
+	background: none;
+}
+html .Modal#RecipientsModal .Modal__Content {
+	margin: 0 !important;
+}
 html .Modal#RecipientsModal .Modal__Content .Modal__Header {
-	background: var(--opaque-background-middle-color) !important;
-	backdrop-filter: var(--opaque-background-filter);
+	background: none !important;
 	color: var(--paragraph-color);
 	border: 0;
-	border-radius: var(--corner-radius) var(--corner-radius) 0 0;
 }
-html .Modal#RecipientsModal .Modal__Header .Modal__Title {
+html .Modal#RecipientsModal .Modal__Content .Modal__Header .Modal__Title {
 	color: var(--paragraph-color);
 }
 html .Modal#RecipientsModal .Modal__Content .Modal__Body {
 	background: none !important;
 	color: var(--paragraph-color);
-	border-radius: 0 0 var(--corner-radius) var(--corner-radius);
+	height: calc(100% - 101px) !important;
+	max-height: unset !important;
+	overflow: hidden;
 }
 html .RecipientsModal__GroupContainer {
-	background: var(--opaque-background-middle-color);
-	backdrop-filter: var(--opaque-background-filter);
-	border-radius: 0 0 var(--corner-radius) var(--corner-radius);
+	background: none;
+	height: 100% !important;
 }
 html .RecipientsModal__Title {
 	font-size: 24px;
@@ -387,14 +403,14 @@ html .RecipientsModal__GroupContainer .RecipientGroup__Button {
 	-webkit-mask-size: contain;
 }
 html .Modal#RecipientsModal .RecipientHeader {
-	background: var(--background-middle-color);
-}
-html .RecipientHeader {
+	background: none;
+	display: inline-block;
 	transition: .2s opacity;
+	cursor: pointer;
 	user-select: none;
 	-webkit-user-drag: none;
 }
-html .RecipientHeader:hover {
+html .Modal#RecipientsModal .RecipientHeader:hover {
 	opacity: 0.7;
 }
 html .RecipientHeader .RecipientHeader__ButtonBack::before {
@@ -408,7 +424,7 @@ html .RecipientHeader .RecipientHeader__ButtonBack::before {
 	mask-size: contain;
 	-webkit-mask-size: contain;
 }
-html .RecipientHeader .RecipientHeader__GroupName {
+html .Modal#RecipientsModal .RecipientHeader .RecipientHeader__GroupName {
 	font-weight: 500;
 	font-size: 15px;
 	font-family: "Inter", sans-serif;
@@ -416,7 +432,6 @@ html .RecipientHeader .RecipientHeader__GroupName {
 }
 html .RecipientsModal__StudyYearList {
 	padding-left: 5px;
-	padding-bottom: 10px;
 	user-select: none;
 	-webkit-user-drag: none;
 }
@@ -425,39 +440,51 @@ html .RecipientsModal__StudyYear--selected {
 	font-family: "Inter", sans-serif;
 	font-weight: 500;
 	color: var(--paragraph-color);
+	background: var(--background-middle-color);
+	padding: 10px;
 	border-bottom: 0;
-	transition: .2s opacity;
+	border-radius: var(--corner-radius);
+	transition: .2s filter;
 	font-size: 15px;
 }
-html .RecipientsModal__StudyYear--selected {
-	color: var(--theme-color);
-}
 html .RecipientsModal__StudyYear:hover {
-	opacity: 0.7;
+	filter: brightness(0.9);
+}
+html .RecipientsModal__StudyYear--selected {
+	background: var(--background-front-color);
 }
 html .Modal#RecipientsModal .Modal__Body .RecipientSearch,
 html .Modal#RecipientsModal .Modal__Body .RecipientSearch:focus {
 	border-radius: var(--corner-radius);
 	font-size: 15px;
 	padding: 10px;
+	width: calc(100% - 40px);
 	height: 35px;
 	border: 0;
 	background: var(--background-front-color);
 	color: var(--paragraph-color);
 	font-family: "Inter", sans-serif;
 	margin-top: 0;
+	margin-left: 20px;
+	margin-right: 20px;
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	transition: .2s box-shadow;
+}
+html .Modal#RecipientsModal .Modal__Body .RecipientSearch:focus { 
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 }
 html .RecipientList .Recipient {
 	border-bottom: 4px solid var(--opaque-divider-color);
 	font-family: "Inter", sans-serif;
 	color: var(--paragraph-color);
 	font-size: 15px;
-	transition: .2s opacity;
 	user-select: none;
 	-webkit-user-drag: none;
 }
-html .RecipientList .Recipient:hover {
+html .RecipientList .Recipient .Recipient__Name {
+	transition: .2s opacity;
+}
+html .RecipientList .Recipient:hover .Recipient__Name {
 	opacity: 0.7;
 }
 html .RecipientsModal__List .RecipientsModal__Item {
@@ -491,6 +518,15 @@ html .RecipientsModal__AddedRecipientsCount {
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 	user-select: none;
 	-webkit-user-drag: none;
+}
+
+
+/*
+	Recipients modal
+*/
+html .Recipients .Modal__Content .Modal__Header {
+	background: none !important;
+	border-bottom: 0;
 }
 
 

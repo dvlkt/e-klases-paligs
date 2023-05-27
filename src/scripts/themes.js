@@ -97,7 +97,10 @@ const loadBackgroundOpacity = () => {
 		headerShadowOpacityHex = `${headerShadowOpacityHex.length === 1 ? `0` : ``}${headerShadowOpacityHex}`;
 		rootStyleElement.setProperty(`--header-shadow-color`, `${rootStyleElement.getPropertyValue(`--shadow-color`).slice(0, 7)}${headerShadowOpacityHex}`);
 
+		rootStyleElement.setProperty(`--opaque-background-front-color`, `${rootStyleElement.getPropertyValue(`--background-front-color`).slice(0, 7)}${backgroundOpacityHex}`);
 		rootStyleElement.setProperty(`--opaque-background-middle-color`, `${rootStyleElement.getPropertyValue(`--background-middle-color`).slice(0, 7)}${backgroundOpacityHex}`);
+		rootStyleElement.setProperty(`--opaque-background-middle-dark-color`, `${rootStyleElement.getPropertyValue(`--background-middle-dark-color`).slice(0, 7)}${backgroundOpacityHex}`);
+		rootStyleElement.setProperty(`--opaque-background-back-color`, `${rootStyleElement.getPropertyValue(`--background-back-color`).slice(0, 7)}${backgroundOpacityHex}`);
 	});
 }
 
