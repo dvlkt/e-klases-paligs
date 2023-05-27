@@ -69,7 +69,7 @@ html .modal-technical .modal-close:hover {
 }
 html .modal-technical h1 {
 	color: var(--title-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: bold;
 	font-size: 32px;
 	margin-top: 0;
@@ -186,7 +186,7 @@ html .greetings-modal h1 {
 	margin: 0;
 }
 html .greetings-modal h3 {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 24px;
 	color: var(--title-color);
 	text-align: left;
@@ -194,13 +194,13 @@ html .greetings-modal h3 {
 }
 html .greetings-modal p {
 	color: var(--paragraph-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 15px;
 	line-height: 18px;
 }
 html .greetings-modal b {
 	color: var(--paragraph-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: 500;
 	font-size: 15px;
 	line-height: 18px;
@@ -234,7 +234,7 @@ html .modal-mark-card .mark-card-inner-title {
 	border-radius: var(--corner-radius) var(--corner-radius) 0 0;
 	background: var(--background-front-color);
 	border: 0;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: bold;
 }
 html .modal-mark-card .mark-card-inner-title span {
@@ -242,7 +242,7 @@ html .modal-mark-card .mark-card-inner-title span {
 }
 mark-card-inner-title,
 html .mark-card-inner-content p {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 }
 html .mark-card-inner-graph {
 	background: var(--background-front-color);
@@ -255,7 +255,7 @@ html .mark-card-inner-graph .mark-card-inner-graph-descr {
 	border-right: 4px solid var(--opaque-divider-color);
 }
 html .mark-card-inner-graph .mark-card-inner-graph-descr p {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 }
 html .mark-card-inner-graph-image {
 	padding: 0;
@@ -272,7 +272,7 @@ html .mark-card-inner-graph .mark-card-inner-graph-image path[fill="#009AE3"] {
 html .mark-card-inner-graph .mark-card-inner-graph-image .btn-test-report {
 	margin-left: 5px;
 	margin-right: 5px;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	width: calc(100% - 10px);
 }
 html .modal-mark-card .mark-card-inner {
@@ -305,16 +305,16 @@ html .terms-and-abbreviations-modal .modal-body .modal-close {
 html .modal-technical .legend-dialog .legend-category {
 	border: 0;
 	background: none;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 }
 html .modal-technical .legend-dialog .legend-category .legend-category-title {
 	background: none;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: bold;
 	text-transform: uppercase;
 }
 html .modal-technical .legend-dialog .legend-category .legend-attribute {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: bold;
 }
 
@@ -323,7 +323,7 @@ html .modal-technical .legend-dialog .legend-category .legend-attribute {
 	Timetable
 */
 html .modal-technical .timetible-item .name { /* Did they mean... timetable..? */
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	border-right: 3px solid var(--opaque-divider-color);
 }
 html .modal-dialog.timetable-dialog.empty .modal-body {
@@ -333,7 +333,7 @@ html .modal-dialog.timetable-dialog.empty .modal-body {
 html .modal-dialog.timetable-dialog.empty .modal-body p,
 html .modal-technical .timetible-item .name,
 html .modal-technical .timetible-item .time {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 15px;
 	user-select: none;
 	-webkit-user-drag: none;
@@ -374,7 +374,7 @@ html .RecipientsModal__GroupContainer {
 }
 html .RecipientsModal__Title {
 	font-size: 24px;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: bold;
 	color: var(--title-color);
 	user-select: none;
@@ -386,7 +386,7 @@ html .RecipientsModal__GroupContainer .RecipientGroup {
 	background: var(--background-middle-dark-color);
 	transition: .2s filter;
 	font-size: 15px;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	color: var(--paragraph-color);
 	user-select: none;
 	-webkit-user-drag: none;
@@ -427,7 +427,7 @@ html .RecipientHeader .RecipientHeader__ButtonBack::before {
 html .Modal#RecipientsModal .RecipientHeader .RecipientHeader__GroupName {
 	font-weight: 500;
 	font-size: 15px;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	color: var(--paragraph-color);
 }
 html .RecipientsModal__StudyYearList {
@@ -437,7 +437,7 @@ html .RecipientsModal__StudyYearList {
 }
 html .RecipientsModal__StudyYear,
 html .RecipientsModal__StudyYear--selected {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: 500;
 	color: var(--paragraph-color);
 	background: var(--background-middle-color);
@@ -463,7 +463,7 @@ html .Modal#RecipientsModal .Modal__Body .RecipientSearch:focus {
 	border: 0;
 	background: var(--background-front-color);
 	color: var(--paragraph-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	margin-top: 0;
 	margin-left: 20px;
 	margin-right: 20px;
@@ -475,7 +475,7 @@ html .Modal#RecipientsModal .Modal__Body .RecipientSearch:focus {
 }
 html .RecipientList .Recipient {
 	border-bottom: 4px solid var(--opaque-divider-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	color: var(--paragraph-color);
 	font-size: 15px;
 	user-select: none;
@@ -508,7 +508,7 @@ html .RecipientsModal__AddedRecipientsCount {
 	height: 25px;
 	background: var(--theme-color);
 	color: var(--theme-accent-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: 500;
 	font-size: 15px;
 	border: 0;
@@ -537,7 +537,7 @@ html .EklaseTextEditor__Editor .Modal__Header {
 	padding-top: 10px;
 }
 html .EklaseTextEditor__Editor .Modal__Header .Modal__Title h5 {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 24px;
 	font-weight: bold;
 	color: var(--title-color);
@@ -608,7 +608,7 @@ html .Modal.modal-evaluation-file .evaluation-card {
 	padding-top: 5px;
 }
 html .Modal.modal-evaluation-file .evaluation-card .html-editor-content {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 15px;
 	color: var(--paragraph-color);
 }
@@ -619,7 +619,7 @@ html .Modal.modal-evaluation-file .Modal__Header {
 }
 html .Modal.modal-evaluation-file .Modal__Header .Title {
 	font-size: 32px;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: bold;
 	color: var(--title-color);
 	margin-left: 0;
@@ -631,7 +631,7 @@ html .Modal.modal-evaluation-file .Modal__Body {
 }
 html .Modal.modal-evaluation-file .Modal__Body .Section .Section__Chunk span.LessonType {
 	display: block;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 18px;
 	font-weight: 500;
 	color: var(--paragraph-color);
@@ -665,7 +665,7 @@ html .Modal.modal-evaluation-file .Modal__Body .Section .Section__Chunk .Subject
 html .Modal.modal-evaluation-file .Modal__Body .Section__Chunk span.Info {
 	color: var(--theme-color);
 	font-size: 15px;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	transition: .2s opacity;
 }
 html .Modal.modal-evaluation-file .Modal__Body .Container .Section {
@@ -685,7 +685,7 @@ html .Modal.modal-evaluation-file .Modal__Body .Section .Section__Chunk .tiny-gr
 }
 html .Modal.modal-evaluation-file .Modal__Body .Section__Chunk .EvaluationStats {
 	font-size: 15px;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	color: var(--paragraph-color);
 	user-select: none;
 	-webkit-user-drag: none;
@@ -693,7 +693,7 @@ html .Modal.modal-evaluation-file .Modal__Body .Section__Chunk .EvaluationStats 
 html .Modal.modal-evaluation-file .Modal__Body .Section__Chunk .EvaluationTitle,
 html .Modal.modal-evaluation-file .Modal__Body .Section__Chunk .Evaluation .Evaluation__Value {
 	font-size: 18px;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: 500;
 	color: var(--paragraph-color);
 	user-select: none;
@@ -705,7 +705,7 @@ html .Modal.modal-evaluation-file .Modal__Body .Section__Chunk .EvaluationTitle:
 html .Modal.modal-evaluation-file .Modal__Body .Section__Chunk .Author {
 	color: var(--paragraph-color);
 	font-size: 15px;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	text-align: left;
 	margin-top: 2px;
 }
@@ -726,7 +726,7 @@ html .Modal__Body .Section .Section__Chunk .TestReportButton {
 	background: var(--theme-color);
 	color: var(--theme-accent-color);
 	border-radius: var(--corner-radius);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 15px;
 	font-weight: 500;
 	margin-top: 15px;
@@ -763,7 +763,7 @@ html .home-task-answer-modal-container .Modal .Modal__Header {
 }
 html .home-task-answer-modal-container .Modal .Header__Title {
 	font-size: 32px;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: bold;
 	color: var(--title-color);
 	margin-left: 0;
@@ -796,7 +796,7 @@ html .home-task-answer-modal-container .Modal .Modal__Body .Section:first-child 
 	-webkit-user-drag: none;
 }
 html .home-task-answer-modal-container .Modal .Modal__Body .Section:first-child .Section__Header span:first-child span {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 18px;
 	font-weight: 500;
 	color: var(--paragraph-color);
@@ -823,7 +823,7 @@ html .home-task-answer-modal-container .Modal .Modal__Body .Section:first-child 
 	font-size: 15px;
 }
 html .home-task-answer-modal-container .Modal .Modal__Body .Section:first-child .Section__Body .html-editor-content * {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 }
 html .home-task-answer-modal-container .Modal .Modal__Body .Section:first-child .Section__Body .AttachmentList__ItemContainer {
 	background: var(--background-front-color);
@@ -860,7 +860,7 @@ html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2)
 	-webkit-user-drag: none;
 }
 html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2) .Section__Header .Section__Text--spaced-large {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 18px;
 	font-weight: 500;
 	color: var(--paragraph-color);
@@ -877,7 +877,7 @@ html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2)
 	transition: .2s filter, .2s box-shadow;
 }
 html .home-task-answer-modal-container .btn__content {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 15px;
 	font-weight: 500;
 }
@@ -920,7 +920,7 @@ html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2)
 }
 html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2) .Section__Body .Message .Message__Info .bold,
 html .home-task-answer-modal-container .Modal .Modal__Body .Section:nth-child(2) .Section__Body .Message .Message__Info .Message__PersonType {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 12px;
 	font-weight: 500;
 	color: var(--low-priority-color);

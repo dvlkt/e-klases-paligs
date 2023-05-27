@@ -24,7 +24,7 @@ html .login-form-header h4 {
 }
 @media only screen and (max-width: 768px) {
 	html .login-form h4 .content {
-		font-family: "Inter", sans-serif;
+		font-family: var(--font);
 	}
 }
 html .login-form h4 .content::after {
@@ -36,7 +36,7 @@ html .form-content {
 html .form-content .form-control {
 	background: var(--background-front-color);
 	color: var(--paragraph-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 15px;
 	border-radius: var(--corner-radius);
 	padding: 5px;
@@ -46,13 +46,13 @@ html .form-content .form-control {
 }
 html .login-form .dummy-placeholder {
 	color: var(--low-priority-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 }
 html .login-form .btn-default {
 	background: var(--theme-color);
 	color: var(--theme-accent-color);
 	font-weight: 500;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 15px;
 	border-radius: var(--corner-radius);
 	padding: 5px;
@@ -434,7 +434,7 @@ html .btn.load-more {
 	height: 32px;
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: normal;
 	font-size: 15px;
 	text-align: center;
@@ -469,7 +469,7 @@ html .article-header .header-content {
 }
 html .article-header .header-content h1 {
 	color: var(--title-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 32px;
 	font-weight: bold;
 	margin-bottom: 0;
@@ -572,12 +572,12 @@ html .article-content .article-intro,
 html .article-content .article-body p,
 html .article-content .article-body {
 	color: var(--paragraph-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 15px;
 }
 html .article-content .article-body h2 strong {
 	color: var(--title-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 24px;
 	font-weight: bold;
 }
@@ -588,7 +588,7 @@ html .gal-title {
 	background: none;
 	padding-left: 10px;
 	color: var(--title-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 18px;
 	font-weight: bold;
 }
@@ -765,7 +765,7 @@ html .comments-form-holder .form-control {
 	border: 0;
 	border-radius: var(--corner-radius);
 	font-size: 15px;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 }
 html .comments-form-holder textarea.form-control {
@@ -787,7 +787,7 @@ html .comments-form-holder .form-group.security-check .input-group {
 }
 html .comments-form-holder .form-group.security-check .input-group .text {
 	color: var(--paragraph-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: bold;
 	font-size: 18px;
 	display: inline-block;
@@ -884,20 +884,20 @@ html .emergency-subtitle {
 }
 html .emer-num-block .emer-num-num a {
 	color: var(--title-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 32px;
 	font-weight: bold;
 }
 html .emer-num-block .emer-num-text {
 	color: var(--paragraph-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 15px;
 	user-select: none;
 	-webkit-user-drag: none;
 }
 html .emer-num-block .emer-num-or {
 	color: var(--low-priority-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 18px;
 	font-weight: 500;
 	user-select: none;
@@ -1052,7 +1052,7 @@ html .modal-header {
 }
 html .modal-header h4 {
 	color: var(--theme-accent-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: bold;
 	font-size: 24px;
 }
@@ -1065,7 +1065,7 @@ html .welcome-greeting .welcome-greeting-image.student-other {
 html .welcome-greeting h3,
 html .welcome-greeting strong,
 html .modal-options-item .modal-options-title span {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: bold;
 }
 html .modal-options-item {
@@ -1142,7 +1142,7 @@ html .menu-type-3 .list li a {
 	text-transform: none;
 	height: 100%;
 	padding-bottom: 11px;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 15px;
 	transition: .2s opacity;
 	position: relative;
@@ -1169,7 +1169,7 @@ html .menu-type-3 .list li a:hover::after {
 html .menu-type-3 .list li button {
 	background: var(--theme-color);
 	color: var(--theme-accent-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 15px;
 	font-weight: 500;
 	border-radius: var(--corner-radius);
@@ -1203,7 +1203,7 @@ html .btn.btn-type-2 {
 	background: var(--theme-color);
 	color: var(--theme-accent-color);
 	border-radius: var(--corner-radius);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 15px;
 	font-weight: 500;
 	border: 0;
@@ -1244,23 +1244,23 @@ html .card .warranty-price {
 	-webkit-user-drag: none;
 }
 html .card .warranty-price .currency {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: 500;
 	color: var(--low-priority-color);
 }
 html .card .warranty-price .units {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: bold;
 	color: var(--title-color);
 }
 html .card .warranty-price .smaller-units {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: bold;
 	color: var(--paragraph-color);
 	top: -14px;
 }
 html .card .warranty-price .postfix {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: 500;
 	color: var(--low-priority-color);
 }
@@ -1275,7 +1275,7 @@ html .card .card-body .icon.icon-like {
 html .card .badge {
 	background: var(--theme-color);
 	color: var(--theme-accent-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 18px;
 	font-weight: 500;
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
@@ -1284,7 +1284,7 @@ html .card .badge {
 }
 html .card .card-footer .sport-selector label {
 	color: var(--paragraph-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 18px;
 	font-weight: 500;
 	margin-top: 10px;
@@ -1327,7 +1327,7 @@ html .background-block-type-3 h2,
 html .background-block-type-2 h2,
 html .background-block-type-4 h2 {
 	color: var(--title-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: bold;
 	font-size: 32px;
 	user-select: none;
@@ -1335,7 +1335,7 @@ html .background-block-type-4 h2 {
 }
 html .icon-title-desc-list-type-1 .title {
 	color: var(--title-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: bold;
 	font-size: 24px;
 	border-bottom: 0;
@@ -1344,7 +1344,7 @@ html .icon-title-desc-list-type-1 .title {
 }
 html .icon-title-desc-list-type-1 .icon-desc-container .item p {
 	color: var(--paragraph-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: 500;
 	font-size: 15px;
 	user-select: none;
@@ -1358,7 +1358,7 @@ html .card-faq h2 {
 }
 html .card-faq .faq li .title {
 	color: var(--paragraph-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: 500;
 	font-size: 18px;
 	border-bottom: 0;
@@ -1393,7 +1393,7 @@ html .background-block-type-3 {
 }
 html .block-list-type-1 li .description {
 	color: var(--low-priority-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: 500;
 	font-size: 15px;
 	user-select: none;
@@ -1417,7 +1417,7 @@ html .background-block-type-2 {
 	Ads
 */
 html .rekl-section h2 {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 32px;
 	font-weight: bold;
 	color: var(--title-color);
@@ -1425,7 +1425,7 @@ html .rekl-section h2 {
 	-webkit-user-drag: none;
 }
 html .rekl-why p {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 24px;
 	line-height: 27px;
 	font-weight: 500;
@@ -1436,7 +1436,7 @@ html .rekl-why p {
 html .rekl-why .why-stats p ,
 html .rekl-option-item .sub-items .sub-item,
 html .rekl-options-system .rekl-options-items .rekl-option-item > .inner .sub-items .inner {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 18px;
 	font-weight: 500;
 	color: var(--low-priority-color);
@@ -1450,7 +1450,7 @@ html .rekl-options-portal .description,
 html .rekl-options-portal .rekl-option-item h3,
 html .rekl-options-system .rekl-options-items .rekl-option-item > .inner h3,
 html .rekl-options-system .rekl-option-item.stats-item .sub-item {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 18px;
 	font-weight: 500;
 	color: var(--paragraph-color);
@@ -1459,7 +1459,7 @@ html .rekl-options-system .rekl-option-item.stats-item .sub-item {
 }
 html .rekl-options-portal .rekl-option-item p,
 html .rekl-options-system p {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 15px;
 	color: var(--paragraph-color);
 	user-select: none;
@@ -1509,7 +1509,7 @@ html .marquee.runtext-container {
 }
 html .marquee.runtext-container .main-runtext .holder .text-container {
 	color: var(--theme-accent-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: 500;
 	font-size: 18px;
 	user-select: none;

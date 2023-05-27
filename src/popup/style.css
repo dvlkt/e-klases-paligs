@@ -1,19 +1,14 @@
-@font-face {
-	font-family: "Inter";
-	src: url("../res/inter.ttf");
-}
-
 * {
 	margin: 0;
 	box-sizing: border-box;
-	font-family: "Inter";
-	font-size: 15px;
 	scrollbar-color: var(--background-front-color) var(--background-middle-color);
 }
 body {
 	width: 300px;
 	height: 400px;
 	background: var(--background-back-color);
+	font-family: var(--font);
+	font-size: 15px;
 	overflow-x: hidden;
 	user-select: none;
 }
@@ -102,18 +97,21 @@ h2:first-of-type {
 	color: var(--paragraph-color);
 }
 
-.theme-picker-wrapper {
+.theme-picker-wrapper,
+.font-picker-wrapper {
 	position: relative;
 	width: calc(100% - 15px);
 	height: 105px;
 	overflow-y: hidden;
 	overflow-x: scroll;
 }
-.theme-picker {
+.theme-picker,
+.font-picker {
 	overflow-y: hidden;
 	height: 150px;
 }
-.theme-preview {
+.theme-preview,
+.font-preview {
 	position: relative;
 	display: inline-block;
 	width: 120px;
@@ -121,20 +119,26 @@ h2:first-of-type {
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 	margin-top: 5px;
 	margin-right: 5px;
-	border-radius: calc(var(--corner-radius) / 2);
+	border-radius: var(--corner-radius);
 	overflow: hidden;
 	cursor: pointer;
 	transition: .2s filter, .2s box-shadow;
 }
 .theme-preview:hover,
-.theme-preview:focus {
+.theme-preview:focus,
+.font-preview:hover,
+.font-preview:focus {
 	filter: brightness(0.9);
 	box-shadow: 2px 7px 14px -3px var(--shadow-color);
 }
-.theme-preview:active {
+.theme-preview:active,
+.font-preview:active {
 	filter: brightness(0.6);
 }
 
+.theme-preview {
+	border-radius: calc(var(--corner-radius) / 2);
+}
 .theme-preview-header {
 	position: absolute;
 	top: 0;
@@ -256,6 +260,14 @@ h2:first-of-type {
 }
 .color-picker-option[data-theme-color="rainbow"]:hover {
 	cursor: default;
+}
+
+.font-preview {
+	background: var(--background-middle-color);
+	padding: 5px;
+}
+.font-preview p {
+	font-size: 20px;
 }
 
 .control {

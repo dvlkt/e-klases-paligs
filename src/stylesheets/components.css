@@ -5,7 +5,7 @@ html .big-anouncement .btn-secondary,
 html .btn-primary {
 	background: var(--theme-color);
 	color: var(--theme-accent-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: 500;
 	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
@@ -34,7 +34,7 @@ html .print-checkbox {
 html .analytics-form-page .analytics-form-holder .checkbox label,
 html .analytics-form-page .analytics-form-holder .radio label,
 html .checkbox label {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	color: var(--paragraph-color);
 	font-size: 15px;
 	line-height: 13px;
@@ -278,7 +278,7 @@ html .nav-tabs li.transcript-of-records a {
 	border: 0;
 	cursor: pointer;
 	transition: .2s opacity;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	position: relative;
 	overflow: hidden;
 }
@@ -327,7 +327,7 @@ html .nav-tabs li.active a::after {
 html .back-to-journal {
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: 500;
 	font-size: 15px;
 	vertical-align: middle;

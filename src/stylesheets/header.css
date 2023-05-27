@@ -126,7 +126,7 @@ html .header-second-menu .header-second-menu-item.item-forum.active a::before  {
 html .header-second .header-second-menu-item.item-messages .notifications-count {
 	background: var(--theme-color);
 	color: var(--theme-accent-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: 500;
 	border: 0;
 	top: 1px;

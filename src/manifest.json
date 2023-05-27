@@ -21,6 +21,12 @@
 		"default_popup": "popup/index.html"
 	},
 	"web_accessible_resources": [
+		"res/fonts/inter.ttf",
+		"res/fonts/overpass.ttf",
+		"res/fonts/quicksand.ttf",
+		"res/fonts/source-code-pro.ttf",
+		"res/fonts/roboto-slab.ttf",
+		"res/fonts/lora.ttf",
 		"res/title-light.png",
 		"res/title-dark.png",
 		"res/light/icon-256.png",
@@ -69,6 +75,7 @@
 				"stylesheets/diary.css",
 				"stylesheets/familyPlan.css",
 				"stylesheets/faq.css",
+				"stylesheets/fonts.css",
 				"stylesheets/footer.css",
 				"stylesheets/header.css",
 				"stylesheets/home.css",

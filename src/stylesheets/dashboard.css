@@ -49,7 +49,7 @@ html .dashboard-widget-col.widget-recent .active:hover {
 }
 html .dashboard-widget-col.widget-recent .widgets-switcher-item h3 {
 	display: block;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	color: var(--paragraph-color);
 	font-size: 18px;
 	text-align: center;
@@ -61,7 +61,7 @@ html .dashboard-widget-col.widget-recent .widgets-switcher-item h3 {
 }
 html .dashboard-widget-col.widget-recent .widgets-switcher-item .widget-count,
 html .dashboard-widget .widget-header .widget-count {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: bold;
 	color: var(--theme-accent-color);
 	background: var(--theme-color);
@@ -95,7 +95,7 @@ html .dashboard-widget-col.widget-recent .recent-scores-item-has-test::before {
 html .dashboard-widget-col.widget-recent .recent-scores-item .recent-scores-item-col h4,
 html .dashboard-widget-col.widget-recent .recent-scores-item .recent-scores-item-col:nth-child(2) {
 	color: var(--paragraph-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 13px;
 	user-select: none;
 	-webkit-user-drag: none;
@@ -110,7 +110,7 @@ html .dashboard-widget-col.widget-recent .recent-scores-item .recent-scores-item
 	background: var(--background-front-color);
 	color: var(--paragraph-color);
 	font-weight: bold;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 15px;
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	user-select: none;
@@ -136,14 +136,14 @@ html .dashboard-widget-col.widget-recent .recent-messages-item:last-child {
 }
 html .dashboard-widget-col.widget-recent .recent-messages-item-col h4 {
 	font-size: 18px;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: 500;
 	color: var(--paragraph-color);
 	margin-bottom: 3px;
 }
 html .dashboard-widget-col.widget-recent .recent-messages-item-col span {
 	font-size: 15px;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	color: var(--low-priority-color);
 }
 html .dashboard-widget-col.widget-recent .recent-messages-item-col:nth-child(2) {
@@ -162,7 +162,7 @@ html .dashboard-widget-col.widget-recent .no-scores {
 html .dashboard-widget-col.widget-recent .no-scores h4 {
 	color: var(--paragraph-color);
 	font-size: 15px;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 }
 html .dashboard-widget-col.widget-recent .no-scores .no-messages-img {
 	display: none;
@@ -195,7 +195,7 @@ html .dashboard-widget-col.widget-recent .no-scores .no-scores-advertisement {
 	-webkit-user-drag: none;
 }
 html .dashboard-widget-col.widget-recent .no-scores .no-scores-advertisement .bold {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 15px;
 	font-weight: normal;
 }
@@ -224,7 +224,7 @@ html .dashboard-widget .widget-header::after {
 html .dashboard-widget .widget-header h3 {
 	display: block;
 	color: var(--title-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: bold;
 	font-size: 24px;
 	padding-left: 16px;
@@ -305,14 +305,14 @@ html .dashboard-widget-col.widget-notifications .widget-notifications-primary .n
 }
 html .dashboard-widget-col.widget-notifications .widget-notification .items {
 	color: var(--low-priority-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 15px;
 }
 html .dashboard-widget-col.widget-notifications .widget-content .widget-count,
 html .dashboard-widget-col.widget-notifications .widget-notification .widget-count {
 	background: var(--theme-color);
 	color: var(--theme-accent-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: 500;
 	font-size: 15px;
 	padding-top: 2px;
@@ -334,7 +334,7 @@ html .dashboard-widget-col.widget-notifications .widget-notifications-primary.st
 html .dashboard-widget-col.widget-notifications .widget-notification {
 	background: var(--background-middle-dark-color);
 	color: var(--paragraph-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 15px;
 	text-align: left;
 	margin: 10px;
@@ -416,7 +416,7 @@ html .dashboard-news .dashboard-news-item .article-meta {
 html .dashboard-news .dashboard-news-item .tag.green,
 html .dashboard-news .dashboard-news-item .tag.gold,
 html .dashboard-news .dashboard-news-item .tag.blue {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 11px;
 	font-weight: 500;
 	color: var(--low-priority-color);
@@ -436,13 +436,13 @@ html .dashboard-news .dashboard-news-item .tag::after {
 }
 html .dashboard-news .dashboard-news-item .article-meta .date {
 	color: var(--low-priority-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 11px;
 	margin-left: 0;
 }
 html .dashboard-news .dashboard-news-item h3 {
 	color: var(--title-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: bold;
 	font-size: 24px;
 }

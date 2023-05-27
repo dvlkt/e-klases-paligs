@@ -39,7 +39,7 @@ for (let i = 0; i < themeList.length; i++) {
 		</div>
 	`;
 }
-themePickerElement.style.width = `${themeList.length * 130}px`;
+themePickerElement.style.width = `${themeList.length * 135}px`;
 
 // Load the theme preview colors
 for (let i = 0; i < themeList.length; i++) {
@@ -109,6 +109,48 @@ for (let colorButtonElement of document.querySelectorAll(`.color-picker-option`)
 		chrome.storage.sync.set({ themeColor: colorButtonElement.getAttribute(`data-theme-color`) });
 		loadTheme();
 		sendMessageToEklaseTabs(`updateThemeColor`);
+	});
+}
+
+
+/*
+	Font picker
+*/
+let fontList = [`Inter`, `Overpass`, `Quicksand`, `Source Code Pro`, `Roboto Slab`, `Lora`];
+let fontPickerElement = document.querySelector(`#font-picker`);
+
+// Fill up the font picker with all fonts
+for (let i = 0; i < fontList.length; i++) {
+	fontPickerElement.innerHTML += `
+		<div class="font-preview" data-font-name="${fontList[i]}" style="font-family: ${fontList[i]};">
+			<p>${fontList[i]}</p>
+		</div>
+	`;
+}
+fontPickerElement.style.width = `${fontList.length * 135}px`;
+
+for (let fontButtonElement of document.querySelectorAll(`.font-preview`)) {
+	// Highlight the button if it's the selected font
+	chrome.storage.sync.get([`font`], (res) => {
+		if (res.font === fontButtonElement.getAttribute(`data-font-name`)) {
+			fontButtonElement.classList.add(`font-preview-selected`);
+		}
+	});
+
+	// Add the event listener
+	fontButtonElement.addEventListener(`click`, () => {
+		// Update the font button styles
+		chrome.storage.sync.get([`font`], (res) => {
+			document.querySelector(`.font-preview[data-font-name="${res.font}"]`).classList.remove(`font-preview-selected`);
+			fontButtonElement.classList.add(`font-preview-selected`);
+		});
+
+		// Save the font
+		chrome.storage.sync.set({ font: fontButtonElement.getAttribute(`data-font-name`) }, () => {
+			sendMessageToEklaseTabs(`updateFont`); // Update the font in all of the opened tabs
+			sendMessageToExtensionTabs(`updateFont`);
+			loadTheme();
+		});
 	});
 }
 

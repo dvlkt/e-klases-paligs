@@ -25,7 +25,7 @@ html .mail-list-view-header {
 html .mail-list-view-header input.MailSearch__Input {
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 15px;
 	padding: 8px;
 	border-radius: var(--corner-radius);
@@ -61,7 +61,7 @@ html .mail-list-view-header .search-button,
 html .mail-list-view-header .dropdown-button {
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 15px;
 	padding: 8px;
 	border-radius: var(--corner-radius);
@@ -275,7 +275,7 @@ html .FolderNavigation .FolderNavigation__ButtonNewMailWrapper {
 html .FolderNavigation__ButtonNewMailWrapper .FolderNavigation__ButtonNewMail {
 	background: var(--theme-color);
 	color: var(--theme-accent-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: 500;
 	font-size: 15px;
 	padding-top: 12px;
@@ -301,7 +301,7 @@ html .FolderNavigation .NavItem {
 	position: relative;
 	background: none;
 	color: var(--paragraph-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	padding-left: 56px;
 	border: 0;
 	box-shadow: none;
@@ -356,7 +356,7 @@ html .FolderNavigation .NavItem::before {
 html .FolderNavigation .NavItem .ItemCount--important {
 	background: var(--theme-color);
 	color: var(--theme-accent-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 12px;
 	font-weight: bold;
 }
@@ -371,7 +371,7 @@ html .main-eklase-content .BottomInfo {
 	-webkit-user-drag: none;
 }
 html .Folder__NoMessages {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 15px;
 	opacity: 0;
 	transition: .3s opacity;
@@ -472,7 +472,7 @@ html .MessageItem .MessageItem__AuthorInfo,
 html .MessageItem .MessageItem__MessageTitle,
 html .MessageItem .MessageItem__MessageBody,
 html .MessageItem .MessageItem__Date {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 }
 html .MessageItem .MessageItem__Date {
 	color: var(--low-priority-color);
@@ -504,7 +504,7 @@ html .ViewMessage__MetaInfo .ViewMessage__MessageDate {
 	font-size: 15px;
 	user-select: none;
 	-webkit-user-drag: none;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 }
 html .AttachmentList__ItemContainer {
 	background: var(--background-middle-color);
@@ -553,7 +553,7 @@ html .AttachmentList__Item a:visited {
 	color: var(--paragraph-color);
 	font-size: 14px;
 	font-weight: 500;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	text-decoration: none;
 }
 html .AttachmentList__Item::before {
@@ -572,7 +572,7 @@ html .MessageItem__MidCol .MessageItem--status-replied__AuthorInfo::before {
 html .FetchMore .FetchMore__Text {
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: 500;
 	font-size: 15px;
 	margin-left: 15px;
@@ -637,7 +637,7 @@ html .EklaseTextEditor__Content {
 	border-radius: 0 0 var(--corner-radius) var(--corner-radius);
 }
 html .ProseMirror {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 15px;
 }
 html .EklaseTextEditor__Button {
@@ -687,7 +687,7 @@ html .Message .MessageHeader {
 }
 html .Message .MessageHeader__Heading {
 	color: var(--title-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: bold;
 	font-size: 24px;
 	user-select: none;
@@ -744,7 +744,7 @@ html .Message .MessageHeader__ButtonSend--mobile::before {
 html .Message .MessageHeader__ButtonSend,
 html .MessageHeader__ButtonSend:active {
 	background: var(--theme-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: 500;
 	font-size: 15px;
 	padding: 5px;
@@ -770,7 +770,7 @@ html .Message .MessageHeader__ButtonSend--mobile::before {
 }
 html .MessageContent .MessageContent__ErrorMessage {
 	color: var(--red-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 13px;
 	user-select: none;
 	-webkit-user-drag: none;
@@ -812,7 +812,7 @@ html .MessageContent__AddRecipients .MessageContent__AddRecipientButton::after {
 	-webkit-mask-size: contain;
 }
 html .MessageContent__Recipient {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 15px;
 	color: var(--paragraph-color);
 	user-select: none;
@@ -918,7 +918,7 @@ html .ViewMessage__MessageBody,
 html .ViewMessage__MessageBody *,
 html .ViewMessage__PersonWrapper *,
 html .ViewMessage__MessageTitle {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 15px;
 	line-height: 18px;
 }
@@ -967,7 +967,7 @@ html .AttachmentList__Link:active,
 html .AttachmentList__Link:hover,
 html .AttachmentList__Link:visited {
 	color: var(--theme-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 }
 html .AttachmentList__Item--border {
 	border: 0;
@@ -996,7 +996,7 @@ html .MobileBottomToolbar .MobileBottomToolbar__Button--newmail::before {
 }
 html .MessageContent__Row .MessageContent__Label {
 	color: var(--low-priority-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 15px;
 	font-weight: 500;
 	user-select: none;
@@ -1013,7 +1013,7 @@ html .SentConfirmationModal {
 /* MOBILE */
 html .Folder__MailboxHeader .Folder__MobileHeading {
 	background: var(--background-middle-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: 500;
 	font-size: 18px;
 	margin: 10px;
@@ -1044,7 +1044,7 @@ html .MobileNavModal__Body .MobileNavModal__Item:hover {
 	background: none;
 	border-bottom: 0;
 	color: var(--paragraph-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 18px;
 }
 html .MobileNavModal__Body .MobileNavModal__Item--active,
@@ -1071,7 +1071,7 @@ html .MailMainAreaWrapper .MessageContent {
 }
 html .MobileTextareaWrapper .MobileTextarea {
 	background: var(--background-middle-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	border: 0;
 	border-radius: var(--corner-radius);
 }

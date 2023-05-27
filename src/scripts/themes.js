@@ -66,6 +66,16 @@ setInterval(() => {
 
 
 /*
+	Font loading
+*/
+const loadFont = () => {
+	chrome.storage.sync.get([`font`], (res) => {
+		document.querySelector(`:root`).style.setProperty(`--font`, res.font);
+	});
+}
+
+
+/*
 	Corner radius loading
 */
 const loadCornerRadius = () => {
@@ -251,6 +261,7 @@ const rgbToHsv = (r, g, b) => {
 */
 loadTheme();
 loadThemeColor();
+loadFont();
 loadCornerRadius();
 
 window.addEventListener(`pageLoading`, () => {
@@ -269,6 +280,8 @@ chrome.runtime.onMessage.addListener((request) => {
 		loadFavicon();
 	} else if (request === `updateThemeColor`) {
 		loadThemeColor();
+	} else if (request === `updateFont`) {
+		loadFont();
 	} else if (request === `updateCornerRadius`) {
 		loadCornerRadius();
 	} else if (request === `updateBackgroundOpacity`) {

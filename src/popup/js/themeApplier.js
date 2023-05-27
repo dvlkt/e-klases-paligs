@@ -1,7 +1,7 @@
 let isRainbowActivated = false;
 
 export const loadTheme = () => {
-	chrome.storage.sync.get([`themeData`, `themeColor`, `cornerRadius`], (res) => {
+	chrome.storage.sync.get([`themeData`, `themeColor`, `font`, `cornerRadius`], (res) => {
 		// Apply the theme
 		chrome.storage.sync.get([`themeData`], (res) => {
 			let root = document.querySelector(`:root`);
@@ -44,6 +44,9 @@ export const loadTheme = () => {
 				element.style.filter = `hue-rotate(${hue - 215}deg)`;
 			}
 		}
+
+		// Apply the corner radius
+		document.querySelector(`:root`).style.setProperty(`--font`, res.font);
 
 		// Apply the corner radius
 		document.querySelector(`:root`).style.setProperty(`--corner-radius`, `${res.cornerRadius}px`);

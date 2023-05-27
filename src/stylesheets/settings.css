@@ -5,7 +5,7 @@ html .settings-container .pupils-wrap {
 html .settings-container .announcement .container,
 html .settings-container .announcement .container a.prolong {
 	font-size: 15px;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	user-select: none;
 	-webkit-user-drag: none;
 }
@@ -50,7 +50,7 @@ html .pupils-wrap .item .pupil-block-header::after {
 }
 html .pupils-wrap .item .pupil-block .pupil-block-header span {
 	color: var(--theme-accent-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: 500;
 	font-size: 18px;
 	padding-left: 0;
@@ -60,7 +60,7 @@ html .pupils-wrap .item .pupil-block-body {
 }
 html .pupils-wrap .item .pupil-block-body h3 {
 	color: var(--title-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: bold;
 	font-size: 32px;
 	user-select: none;
@@ -73,7 +73,7 @@ html .pupils-wrap .item .pupil-block-body .educational-institution {
 }
 html .other-devices .heading {
 	border-top: 0;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: 500;
 	font-size: 18px;
 	user-select: none;
@@ -98,7 +98,7 @@ html .other-devices .people.current {
 html .other-devices .people.current .type,
 html .other-devices .people.current .type span,
 html .other-devices .people .type {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: 500;
 	font-size: 18px;
 	color: var(--paragraph-color);
@@ -159,7 +159,7 @@ html .history-entries-table-holder .entries-table td {
 	color: var(--paragraph-color);
 	background: var(--background-middle-dark-color);
 	border: 0;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 15px;
 	user-select: none;
 	-webkit-user-drag: none;
@@ -193,7 +193,7 @@ html .history-entries-table-holder .entries-table tbody td:last-child {
 	border-bottom-right-radius: var(--corner-radius);
 }
 html .announcement.history-head .history-head-title {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	margin-top: 9px;
 	color: var(--paragraph-color);
 	font-size: 15px;
@@ -248,7 +248,7 @@ html .people-overlay .overlay-header {
 html .people-overlay .overlay-header h3,
 html .people-overlay .overlay-header .pupil,
 .people-overlay .overlay-header .educational-institution {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	color: var(--theme-accent-color);
 	user-select: none;
 	-webkit-user-drag: none;
@@ -268,7 +268,7 @@ html .people-overlay input[type="submit"] {
 	background: var(--theme-color);
 	border-radius: var(--corner-radius);
 	transition: .2s box-shadow, .2s filter;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: 500;
 	font-size: 15px;
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
@@ -284,7 +284,7 @@ html .settings-modal-body .nav-tabs.profile {
 }
 html .nav-tabs.profile li,
 html .nav-tabs.profile li a {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 15px;
 	font-weight: normal;
 	border-radius: 0;
@@ -347,7 +347,7 @@ html .form-row.password-format-explanation {
 }
 html .form-row.password-format-explanation p,
 html .form-row.heading-row h3 {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 18px;
 	font-weight: 500;
 }
@@ -369,7 +369,7 @@ html .form-row.change-data-request-row small,
 html .form-row .premium,
 html .form-row.custom-row p {
 	font-size: 11px;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	color: var(--low-priority-color);
 	font-style: normal;
 	user-select: none;
@@ -388,7 +388,7 @@ html .form-row.change-data-request-row a {
 	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s filter, .2s box-shadow;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: 500;
 	font-size: 15px;
 	user-select: none;

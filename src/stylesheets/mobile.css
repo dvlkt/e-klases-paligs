@@ -1,7 +1,7 @@
 html .current-page h1,
 html h1.mobile-page-title {
 	font-size: 32px;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: bold;
 	text-align: left;
 	color: var(--title-color);

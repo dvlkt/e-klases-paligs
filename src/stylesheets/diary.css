@@ -14,7 +14,7 @@ html .student-journal-lessons-table-holder .lessons-table .head td,
 html .student-journal-lessons-table-holder .lessons-table thead td,
 html .diary-container .lessons-table thead td {
 	background: var(--background-middle-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	border: 0;
 }
 html .student-journal-lessons-table-holder .lessons-table thead td,
@@ -49,7 +49,7 @@ html .no-data .inform {
 }
 html .no-data .inform span {
 	color: var(--paragraph-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: 500;
 	font-size: 18px;
 	user-select: none;
@@ -277,7 +277,7 @@ html .home-task-answer-widget-container .btn__content,
 html .modal-evaluation-file .btn__content,
 html .Widget .Widget__Header a.Widget__ViewButton {
 	font-size: 11px;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: 500;
 	color: var(--theme-accent-color) !important;
 }
@@ -305,7 +305,7 @@ html .home-task-answer-widget-container .Widget .Widget__Body .Widget__Text p {
 html .student-journal-lessons-table-holder .lessons-table .info .first-column {
 	color: var(--paragraph-color);
 	font-size: 15px;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 }
 html .student-journal-lessons-table-holder .lessons-table .info td:last-child {
 	color: var(--paragraph-color);
@@ -316,7 +316,7 @@ html .student-journal-lessons-table-holder .lessons-table .info td:last-child {
 html .student-journal-lessons-table-holder h2,
 html section h2 .actual-lessons-date.active {
 	color: var(--paragraph-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	text-transform: capitalize;
 	font-weight: bold;
 	font-size: 18px;
@@ -367,7 +367,7 @@ html .student-journal-lessons .lesson-subitem .description {
 html .actual-lessons .lesson-subitem .title,
 html .student-journal-lessons .lesson-subitem .title {
 	color: var(--low-priority-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 15px;
 	font-weight: 500;
 	margin-bottom: 2px;
@@ -394,11 +394,11 @@ html .student-journal-lessons .lesson-title {
 }
 html .actual-lessons .lesson-title .title,
 html .student-journal-lessons .lesson-title .title {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: bold;
 }
 html .students-journal-header .week-selector .selected-period {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: 500;
 	font-size: 18px;
 	user-select: none;
@@ -496,7 +496,7 @@ html .student-journal-lessons .first-column .weekly-warning {
 	font-weight: 500;
 	color: var(--low-priority-color);
 	background: none;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 15px;
 	padding: 0;
 	padding-top: 2px;
@@ -658,7 +658,7 @@ html .rating-wrap .item .col:last-of-type,
 html .rating-wrap .final .col:last-of-type::after,
 html .rating-wrap .tfooter .col:first-of-type span,
 html .rating-wrap .item .col:last-of-type .data {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 15px;
 	user-select: none;
 	-webkit-user-drag: none;
@@ -685,13 +685,13 @@ html .rating-wrap .first .col:last-of-type {
 	text-align: center;
 	font-weight: 500;
 	font-size: 15px;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	color: var(--low-priority-color);
 }
 html .item .col:first-of-type .no,
 html .rating-wrap .final .col:last-of-type::after,
 html .rating-wrap .total .col:first-of-type {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 15px;
 	font-weight: 500;
 	color: var(--low-priority-color);
@@ -745,7 +745,7 @@ html .chart-wrap {
 }
 html .chart-wrap h3 {
 	color: var(--title-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: bold;
 	font-size: 18px;
 	user-select: none;
@@ -762,7 +762,7 @@ html .chart-wrap .chart path[fill="#acacac"] {
 	fill: var(--analytics-generic-bar-color);
 }
 html .chart-wrap .chart text {
-	font: 15px "Inter", sans-serif;
+	font: 15px var(--font);
 	fill: var(--paragraph-color);
 	user-select: none;
 	-webkit-user-drag: none;

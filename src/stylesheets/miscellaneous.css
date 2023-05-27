@@ -59,7 +59,7 @@ html .ButtonDefault {
 	background: var(--theme-color);
 	color: var(--theme-accent-color);
 	font-size: 15px;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	padding: 8px;
 	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
@@ -104,14 +104,14 @@ html .UserProfileSelector_Header {
 	background: none;
 	color: var(--paragraph-color);
 	font-size: 18px;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: bold;
 	padding-left: 15px;
 	padding-bottom: 5px;
 }
 html .UserProfileSelector_Description {
 	font-size: 15px;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	color: var(--paragraph-color);
 	padding-left: 15px;
 	padding-top: 0;
@@ -205,7 +205,7 @@ html .tech-support-container .form-row .input,
 html .tech-support-container .form-row .textarea {
 	background: var(--background-middle-color) !important;
 	color: var(--paragraph-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 15px;
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 	border-radius: var(--corner-radius);
@@ -218,7 +218,7 @@ html .form-row .input::placeholder {
 html .tech-support-container input[type="submit"] {
 	background: var(--theme-color);
 	color: var(--theme-accent-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: 500;
 	font-size: 15px;
 	border-radius: var(--corner-radius);
@@ -234,7 +234,7 @@ html .tech-support-container .message-meta,
 html .tech-support-container .message-meta .message-meta-item-attr,
 html .tech-support-container .message-meta .message-meta-item-value,
 html .form-row label {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	user-select: none;
 	-webkit-user-drag: none;
 }
@@ -326,7 +326,7 @@ html div#ContentRegion_Outer .qform_captcha img {
 html div#ContentRegion_Outer .button.important {
 	background: var(--theme-color);
 	color: var(--theme-accent-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: 500;
 	font-size: 15px;
 	border-radius: var(--corner-radius);
@@ -398,7 +398,7 @@ html .error-form .error-form-container {
 }
 html .error-form .error-form-container h1 {
 	font-size: 32px;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	color: var(--title-color);
 	user-select: none;
 	-webkit-user-drag: none;
@@ -409,7 +409,7 @@ html .error-form .error-form-container h1::after {
 html .error-form .btn {
 	background: var(--theme-color);
 	color: var(--theme-accent-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 15px;
 	font-weight: 500;
 	border-radius: var(--corner-radius);
@@ -429,17 +429,17 @@ html .big-anouncement {
 }
 html .big-anouncement h1 {
 	font-size: 32px;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: bold;
 	color: var(--title-color);
 }
 html .big-anouncement h2 {
 	font-size: 18px;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 }
 html .big-anouncement .announcement-body {
 	font-size: 15px;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 }
 html .big-anouncement .annoncement-buttons {
 	padding-top: 0;

@@ -24,7 +24,7 @@ html .announcement .warning .inner {
 	background: var(--red-color);
 	color: var(--red-accent-color);
 	font-size: 15px;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: 500;
 	padding: 5px;
 	padding-bottom: 0;
@@ -41,7 +41,7 @@ html .btn-transparent:hover {
 	background: var(--theme-color);
 	color: var(--theme-accent-color);
 	font-weight: 500;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	border: 0;
 	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);

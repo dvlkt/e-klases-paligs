@@ -15,7 +15,7 @@ html .bui-section-title,
 html .questions-wrapper.detailed .aq-wrapper .title-inner .section-title,
 html .questions-wrapper .section-title {
 	color: var(--title-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: bold;
 	font-size: 32px;
 	user-select: none;
@@ -55,7 +55,7 @@ html .questions-wrapper .categories-wrapper .faq-topic-item:hover {
 }
 html .questions-wrapper .categories-wrapper .faq-topic-item a .title {
 	color: var(--title-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: bold;
 	font-size: 22px;
 }
@@ -109,7 +109,7 @@ html .questions-wrapper.detailed .aq-wrapper .faq-items .faq-item .item-abstract
 html .questions-wrapper.detailed .aq-wrapper .faq-items .faq-item .item-abstract * {
 	background: none !important;
 	color: var(--paragraph-color) !important;
-	font-family: "Inter", sans-serif !important;
+	font-family: var(--font) !important;
 	font-size: 14px !important;
 }
 
@@ -132,7 +132,7 @@ html .questions-wrapper.detailed .categories-wrapper .faq-topics-menu ul li.acti
 }
 html .questions-wrapper.detailed .categories-wrapper .faq-topics-menu ul li a .title {
 	color: var(--paragraph-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: normal;
 }
 html .questions-wrapper.detailed .categories-wrapper .faq-topics-menu ul li.active a .title {
@@ -160,13 +160,13 @@ html .faq-container .faq-head .container {
 }
 html .faq-container .faq-head h1 {
 	font-size: 32px;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: bold;
 	color: var(--title-color);
 }
 html .faq-container .faq-head h3 {
 	font-size: 15px;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	color: var(--paragraph-color);
 }
 html .faq-container .faq-head h3::after {
@@ -190,7 +190,7 @@ html .faq-container .faq-content .faq-item.open .faq-item-title {
 html .faq-container .faq-content .faq-item-title span,
 html .faq-container .faq-content .faq-item-content p {
 	font-size: 15px;
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	color: var(--paragraph-color);
 }
 html .faq-container .faq-content .faq-item-title span {

@@ -15,7 +15,7 @@ chrome.runtime.onInstalled.addListener((details) => {
 	/*
 		Set the default settings
 	*/
-	chrome.storage.sync.get([`theme`, `cornerRoundness`, `themeData`, `themeName`, `themeColor`, `cornerRadius`, `shouldShowSetupModal`, `backgroundOpacity`, `isBackgroundBlurOn`, `isStatisticsPanelOn`, `treatNVAsZero`, `treatNAsZero`, `treatPercentagesAsGrades`, `isDebugModeOn`], (res) => {
+	chrome.storage.sync.get([`theme`, `cornerRoundness`, `themeData`, `themeName`, `themeColor`, `font`, `cornerRadius`, `shouldShowSetupModal`, `backgroundOpacity`, `isBackgroundBlurOn`, `isStatisticsPanelOn`, `treatNVAsZero`, `treatNAsZero`, `treatPercentagesAsGrades`, `isDebugModeOn`], (res) => {
 		// Design settings
 		if (res.themeData === undefined || res.themeData === ``) {
 			if (res.theme !== undefined && res.theme !== ``) {
@@ -49,6 +49,9 @@ chrome.runtime.onInstalled.addListener((details) => {
 		}
 		if (res.themeColor === undefined || res.themeColor === ``) {
 			chrome.storage.sync.set({ themeColor: `#0088e3` });
+		}
+		if (res.font === undefined || res.font === ``) {
+			chrome.storage.sync.set({ font: `Inter` });
 		}
 		if (res.cornerRadius === undefined || res.cornerRadius === ``) {
 			if (res.cornerRoundness !== undefined && res.cornerRoundness !== ``) {

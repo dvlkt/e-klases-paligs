@@ -7,7 +7,7 @@ html .communication-list.communication-parents.mailbox-data .mailbox-top {
 html .communication-list.communication-parents.mailbox-data .forum-header-container .info-box {
 	background: none;
 	color: var(--paragraph-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 15px;
 	text-align: right;
 	padding-right: 0;
@@ -28,7 +28,7 @@ html .communication-list.communication-parents .email .user .image {
 	display: none;
 }
 html .communication-list.communication-parents .email .user-data {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: 500;
 	font-size: 18px;
 	line-height: 20px;
@@ -42,7 +42,7 @@ html .communication-list.communication-parents .email .message::before {
 }
 html .communication-list.communication-parents .toolbar-top span {
 	color: var(--low-priority-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: 500;
 	font-size: 15px;
 	user-select: none;
@@ -74,7 +74,7 @@ html .communication-list.communication-parents .toolbar-top .reply::after {
 }
 html .communication-list.communication-parents .email .message .text .post-content {
 	color: var(--paragraph-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 15px;
 }
 html .communication-list.communication-parents .email .message .text a {
@@ -203,7 +203,7 @@ html .delay-submit-history {
 html .delay-submit-form-holder h1,
 html .delay-submit-history h1 {
 	color: var(--title-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-size: 24px;
 	font-weight: bold;
 	user-select: none;
@@ -236,7 +236,7 @@ html .delay-submit-form-holder .howto.open .howto-info,
 html .delay-submit-history .howto.open .howto-info {
 	background: var(--background-front-color);
 	color: var(--paragraph-color);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	border-top: 0;
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 	border-radius: var(--corner-radius);
@@ -260,7 +260,7 @@ html .delay-submit-history .howto.open .howto-info li {
 }
 html .delay-submit-form-holder .howto.open .howto-info h6,
 html .delay-submit-history .howto.open .howto-info h6 {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font);
 	font-weight: 500;
 	font-size: 18px;
 }
