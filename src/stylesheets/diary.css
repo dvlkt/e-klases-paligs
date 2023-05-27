@@ -490,6 +490,27 @@ html .student-journal-lessons .lesson-title .room {
 	font-weight: normal;
 	font-size: 15px;
 }
+html .actual-lessons .first-column .weekly-warning,
+html .student-journal-lessons .first-column .weekly-warning {
+	font-weight: 500;
+	color: var(--low-priority-color);
+	background: none;
+	font-family: "Inter", sans-serif;
+	font-size: 15px;
+	padding: 0;
+	padding-top: 2px;
+	text-transform: lowercase;
+}
+html .actual-lessons .first-column .weekly-warning::before,
+html .student-journal-lessons .first-column .weekly-warning::before {
+	content: "(";
+	margin-right: -4px;
+}
+html .actual-lessons .first-column .weekly-warning::after,
+html .student-journal-lessons .first-column .weekly-warning::after {
+	content: ")";
+	margin-left: -4px;
+}
 @media only screen and (min-width: 768px) {
 	html .students-journal-header .week-selector {
 		width: 210px;
