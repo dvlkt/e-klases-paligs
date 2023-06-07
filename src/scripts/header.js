@@ -320,8 +320,11 @@ window.addEventListener(`pageLoading`, () => {
 
 			if (event.target !== document.querySelector(`.header-account-btn`) &&
 				event.target !== document.querySelector(`.header-account-popup`) &&
+				event.target.parentElement !== null &&
 				event.target.parentElement !== document.querySelector(`.header-account-popup`) &&
+				event.target.parentElement.parentElement !== null &&
 				event.target.parentElement.parentElement !== document.querySelector(`.header-account-popup`) &&
+				event.target.parentElement.parentElement.parentElement !== null &&
 				event.target.parentElement.parentElement.parentElement !== document.querySelector(`.header-account-popup`)) {
 				
 				let accountPopupButtonElement = document.querySelector(`.header-account-btn`);

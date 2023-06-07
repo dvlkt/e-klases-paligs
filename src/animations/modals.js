@@ -126,7 +126,7 @@ window.addEventListener(`pageLoaded`, () => {
 					modalBgElement.style.display = `none`;
 					modalElement.style.display = `none`;
 
-					document.querySelector(`.Modal.modal-evaluation-file .Modal__Header .Modal__Close`).click();
+					document.querySelector(`.Modal.modal-evaluation-file .Modal__Header .Modal__Close`)?.click();
 				}, 200);
 			}, 20);
 		});

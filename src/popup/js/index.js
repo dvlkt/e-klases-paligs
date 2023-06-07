@@ -25,7 +25,7 @@ document.querySelector(`#whats-new-btn`).addEventListener(`click`, () => {
 /*
 	Theme picker
 */
-let themeList = [`light`, `dark`, `combined`, `deepDark`, `solarizedLight`, `solarizedDark`];
+let themeList = [`light`, `dark`, `combined`, `deepDark`, `solarizedLight`, `solarizedDark`, `ayu`, `gitHubDark`, `shadesOfPurple`];
 let themePickerElement = document.querySelector(`#theme-picker`);
 
 // Fill up the theme picker with all themes
