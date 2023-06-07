@@ -327,6 +327,7 @@ h2:first-of-type {
 button {
 	background: var(--background-middle-color);
 	color: var(--paragraph-color);
+	font-family: var(--font);
 	font-size: 15px;
 	font-weight: 500;
 	padding: 10px;

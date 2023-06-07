@@ -54,7 +54,7 @@ export const loadTheme = () => {
 			}
 		}
 
-		// Apply the corner radius
+		// Apply the font
 		document.querySelector(`:root`).style.setProperty(`--font`, res.font);
 
 		// Apply the corner radius
