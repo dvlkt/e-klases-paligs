@@ -188,12 +188,15 @@ const tryAddingListViewPatches = () => {
 					}, 20);
 					setTimeout(() => {
 						// Refill the dropdown with the content of the original dropdown
+						let btnLabels = ["Dzēst atzīmētās vēstules", "Atzīmēt visas kā lasītas", "Atzīmēt izvēlētās kā lasītas"];
+						let btnLabelI = 0;
 						for (let element of document.querySelectorAll(`.MailActions__ActionList .MailActions__ActionOuter`)) {
 							dropdownElement.innerHTML += `
 								<button class="option${element.className.includes(`--disabled`) ? ` disabled` : ``}">
-									${element.children[0].innerHTML}
+									${btnLabels[btnLabelI]}
 								</button>
 							`;
+							btnLabelI++;
 						}
 
 						// Add event listeners to the new dropdown options
