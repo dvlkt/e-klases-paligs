@@ -26,7 +26,7 @@
 
 		"analytics": {
 			"grid": "#00222b",
-			"generic-bar": "#004052",
+			"generic-bar": "#39879d",
 			"positive-bar": "#4cc242",
 			"negative-bar": "#e83434"
 		}

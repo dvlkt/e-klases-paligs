@@ -44,7 +44,7 @@
 
 		"analytics": {
 			"grid": "#d2d2dd",
-			"generic-bar": "#bfbfc8",
+			"generic-bar": "#8a8a97",
 			"positive-bar": "#4cc242",
 			"negative-bar": "#e83434"
 		}
