@@ -144,8 +144,13 @@ window.addEventListener(`pageLoading`, () => {
 					let weekEl = document.createElement(`div`);
 					weekEl.className = `calendar-week`;
 					weekEl.style.top = `${30 * i}px`;
+
+					let weekDate = d.getDate();
+					let weekMonth = d.getMonth();
+					let weekYear = d.getFullYear();
+
 					weekEl.addEventListener(`click`, () => {
-						window.location.href = `/Family/Diary?Date=${d.getDate()}.${d.getMonth()}.${d.getFullYear()}.`;
+						window.location.href = `/Family/Diary?Date=${weekDate < 10 ? "0" : ""}${weekDate}.${weekMonth+1 < 10 ? "0" : ""}${weekMonth+1}.${weekYear}.`;
 					});
 
 					for (let o = 0; o < 7; o++) {
