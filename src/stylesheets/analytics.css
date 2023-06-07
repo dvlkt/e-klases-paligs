@@ -244,22 +244,14 @@ html section .section-switch .section-switch-option {
 	font-weight: 500;
 	color: var(--paragraph-color);
 	background: var(--background-middle-color);
-	transition: .2s background, .2s box-shadow;
+	transition: .2s filter, .2s box-shadow;
 }
 html section .section-switch .section-switch-option:hover {
-	background: var(--background-middle-hover-color);
-}
-html section .section-switch .section-switch-option:active {
-	background: var(--background-middle-active-color);
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
 }
 html section .section-switch .section-switch-option.active {
 	background: var(--theme-color);
-}
-html section .section-switch .section-switch-option.active:hover {
-	background: var(--theme-hover-color);
-}
-html section .section-switch .section-switch-option.active:active {
-	background: var(--theme-active-color);
 }
 html section .section-switch .section-switch-option:first-child {
 	border-radius: var(--corner-radius) 0 0 var(--corner-radius);
