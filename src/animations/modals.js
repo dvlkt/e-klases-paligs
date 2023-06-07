@@ -90,46 +90,9 @@ window.addEventListener(`pageLoaded`, () => {
 	/*
 		Grade overview open/close animation
 	*/
-	for (let buttonElement of document.querySelectorAll(`.score.open-mark-file, .recent-scores-item-col .score`)) {
-		let modalBgElement = document.querySelector(`.modal-background`);
-
-		buttonElement.addEventListener(`click`, () => {
-			setTimeout(() => {
-				let modalElement = document.querySelector(`.Modal.modal-evaluation-file`);
-
-				modalBgElement.style.display = `block`;
-				modalElement.style.display = `block`;
-
-				setTimeout(() => {
-					modalBgElement.style.opacity = `1.0`;
-					modalElement.style.opacity = `1.0`;
-					modalElement.style.transform = `scale(1.0)`;
-
-					setTimeout(() => onDiaryModalOpening(), 20);
-				}, 50);
-			}, 20);
-		});
-
-		modalBgElement.addEventListener(`click`, () => {
-			setTimeout(() => {
-				if (document.querySelector(`.Modal.modal-evaluation-file`) === null) {
-					return;
-				}
-
-				let modalElement = document.querySelector(`.Modal.modal-evaluation-file`);
-
-				modalBgElement.style.opacity = `0`;
-				modalElement.style.opacity = `0`;
-				modalElement.style.transform = `scale(0.75)`;
-
-				setTimeout(() => {
-					modalBgElement.style.display = `none`;
-					modalElement.style.display = `none`;
-
-					document.querySelector(`.Modal.modal-evaluation-file .Modal__Header .Modal__Close`)?.click();
-				}, 200);
-			}, 20);
-		});
+	addGradeOverviewModalAnimation();
+	if (window.location.href.includes("Family/ReportMarkTable")) {
+		tryAddingGradeOverviewModalAnimationsInJournals();
 	}
 
 	/*
@@ -380,6 +343,57 @@ const onDiaryModalFullyLoading = () => {
 		let modalElement = document.querySelector(`.home-task-answer-modal-container .Modal, .Modal.modal-evaluation-file`);
 		modalElement.style.top = `${window.innerHeight / 2 - modalElement.children[0].children[0].clientHeight / 2}px`;
 		modalElement.style.height = `${modalElement.children[0].children[0].clientHeight}px`;
+	}
+}
+
+const addGradeOverviewModalAnimation = () => {
+	for (let buttonElement of document.querySelectorAll(`.score.open-mark-file, .recent-scores-item-col .score, .table__result.open-mark-file`)) {
+		let modalBgElement = document.querySelector(`.modal-background`);
+
+		buttonElement.addEventListener(`click`, () => {
+			setTimeout(() => {
+				let modalElement = document.querySelector(`.Modal.modal-evaluation-file`);
+
+				modalBgElement.style.display = `block`;
+				modalElement.style.display = `block`;
+
+				setTimeout(() => {
+					modalBgElement.style.opacity = `1.0`;
+					modalElement.style.opacity = `1.0`;
+					modalElement.style.transform = `scale(1.0)`;
+
+					setTimeout(() => onDiaryModalOpening(), 20);
+				}, 50);
+			}, 20);
+		});
+
+		modalBgElement.addEventListener(`click`, () => {
+			setTimeout(() => {
+				if (document.querySelector(`.Modal.modal-evaluation-file`) === null) {
+					return;
+				}
+
+				let modalElement = document.querySelector(`.Modal.modal-evaluation-file`);
+
+				modalBgElement.style.opacity = `0`;
+				modalElement.style.opacity = `0`;
+				modalElement.style.transform = `scale(0.75)`;
+
+				setTimeout(() => {
+					modalBgElement.style.display = `none`;
+					modalElement.style.display = `none`;
+
+					document.querySelector(`.Modal.modal-evaluation-file .Modal__Header .Modal__Close`)?.click();
+				}, 200);
+			}, 20);
+		});
+	}
+}
+const tryAddingGradeOverviewModalAnimationsInJournals = () => {
+	if (document.querySelector(".Box .Box__InnerContainer") === null && document.querySelector(".SpinnerSection") === null) {
+		addGradeOverviewModalAnimation();
+	} else {
+		setTimeout(() => tryAddingGradeOverviewModalAnimationsInJournals(), 50);
 	}
 }
 

@@ -397,292 +397,202 @@ html .analytics-ratings-container h3.group-title::after {
 /*
 	Journals
 */
-html .info-pane-wrap .container,
-html .marks-pane-wrap .container,
-html .data-marks-detailed-wrap .container,
-html .data-pane-wrap .container,
-html .behavioral-wrap .container,
-html .lessons-topics-wrap .container,
-html .analytic .no-data .container {
+html .journal-container .container:nth-child(2) {
 	background: none;
 }
-html .info-pane-wrap {
-	background: none;
-}
-html .info-pane-wrap .avg-class,
-html .info-pane-wrap .avg-pupil,
-html .info-pane-wrap .teacher {
-	color: var(--paragraph-color);
-	font-family: var(--font);
-	font-size: 15px;
-	user-select: none;
-	-webkit-user-drag: none;
-}
-html .info-pane-wrap .avg-class,
-html .info-pane-wrap .avg-pupil {
-	border: 0;
-}
-html .analytic .no-data {
-	background: none;
-}
-html .behavioral-wrap,
-html .lessons-topics-wrap {
-	margin-top: 0;
-}
-html .lessons-topics-wrap .container,
-html .analytic .no-data .container {
-	border-radius: 0 0 var(--corner-radius) var(--corner-radius);
-}
-html .lesson-topics-table,
-html .behavioral-table {
-	border-radius: var(--corner-radius);
-	box-shadow: 2px 3px 5px -3px var(--shadow-color);
-}
-html .lesson-topics-table tr.thead td.first-column,
-html .behavioral-table tr.thead td.first-column {
-	border-top-left-radius: var(--corner-radius);
-}
-html .lesson-topics-table tr.thead td.fourth-column,
-html .behavioral-table tr.thead td.fourth-column {
-	border-top-right-radius: var(--corner-radius);
-}
-html .lesson-topics-table tbody tr:nth-last-child(2) td:first-child,
-html .behavioral-table tbody tr:nth-last-child(2) td:first-child {
-	border-bottom-left-radius: var(--corner-radius);
-}
-html .lesson-topics-table tbody tr:nth-last-child(2) td:last-child,
-html .behavioral-table tbody tr:nth-last-child(2) td:last-child {
-	border-bottom-right-radius: var(--corner-radius);
-}
-html .lesson-topics-table tr.thead td,
-html .behavioral-table tr.thead td {
-	background: var(--background-middle-color);
-	color: var(--low-priority-color);
-	font-family: var(--font);
-	font-size: 15px;
-	font-weight: 500;
-	padding: 0;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	border: 0;
-	user-select: none;
-	-webkit-user-drag: none;
-}
-html .lesson-topics-table td,
-html .behavioral-table td,
-html .lesson-topics-table tr:hover td,
-html .behavioral-table tr:hover td {
-	border: 0 !important;
-	background: var(--background-middle-color);
-}
-html .lesson-topics-table td:nth-child(odd),
-html .behavioral-table td:nth-child(odd),
-html .lesson-topics-table tr:hover td:nth-child(odd),
-html .behavioral-table tr:hover td:nth-child(odd),
-html .lesson-topics-table tr.thead td:nth-child(odd),
-html .behavioral-table tr.thead td:nth-child(odd) {
-	background: var(--background-middle-dark-color);
-}
-html .lesson-topics-table td:nth-child(1),
-html .lesson-topics-table td:nth-child(4) {
-	user-select: none;
-	-webkit-user-drag: none;
-}
-html .lesson-topics-table .marker,
-html .behavioral-table .marker {
-	display: none; /* Idk what's the point of that thing, hopefully it doesn't have an actual functional purpose */
-}
-html .lesson-topics-table tr:not(:nth-last-child(2)),
-html .behavioral-table tr:not(:nth-last-child(2)) {
-	border-bottom: 4px solid var(--opaque-divider-color) !important;
-}
-html .data-marks-detailed-wrap .container .marks-detailed {
-	box-shadow: none;
-}
-html .detailed-item {
-	border: 0;
-	box-shadow: 2px 3px 5px -3px var(--shadow-color);
-	border-radius: var(--corner-radius);
-	background: var(--background-middle-color);
-}
-html .lesson .detailed-header {
-	background: var(--background-middle-color);
-	border-radius: var(--corner-radius) var(--corner-radius) 0 0;
-}
-html .lesson.test .detailed-header .static,
-html .detailed-header .item-type,
-html .detailed-item .additional-data label {
-	font-size: 15px;
-	color: var(--low-priority-color);
-	font-weight: 500;
-	font-family: var(--font);
-}
-html .lesson.test .pupil-place {
-	border-left: 0;
-}
-html .detailed-header .average-score span,
-html .detailed-header .pupil-place span {
-	font-size: 15px;
-	color: var(--paragraph-color);
-	font-weight: normal;
-	font-family: var(--font);
-}
-html .detailed-item .right span {
-	color: var(--paragraph-color);
-	font-weight: bold;
-	font-family: var(--font);
-	font-size: 13px;
-}
-html .detailed-item .edited .additional-data.edited,
-html .detailed-item .rate-information {
-	border-left: 4px solid var(--opaque-divider-color);
-}
-html .detailed-item .tiny-graph {
-	border-bottom: 4px solid var(--opaque-divider-color);
-}
-html .detailed-item .additional-data .information {
-	font-size: 15px !important;
-	line-height: 18px;
-}
-html .explanation-wrap .explanation {
-	color: var(--paragraph-color);
-	font-size: 13px;
-	font-family: var(--font);
-}
-html .explanation-wrap .explanation .icon {
-	width: 14px;
-	height: 14px;
-	border-radius: 50%;
-}
-html .cell {
-	margin-bottom: 10px;
-	margin-right: 5px;
-	background: none;
-}
-html .marks-body.note {
-	display: none;
-}
-html .cell-item,
-html .cell-item:hover,
-html .cell-item:first-of-type,
-html .cell-item:first-of-type:hover,
-html .cell-item.active,
-html .cell-item.active:hover {
-	top: 0;
-	border: 0;
-	box-shadow: 2px 3px 5px -3px var(--shadow-color);
-	border-radius: var(--corner-radius);
-	background: var(--background-middle-dark-color);
-	transition: .2s background, .2s box-shadow;
-	user-select: none;
-	-webkit-user-drag: none;
-}
-html .cell-item.active,
-html .cell-item.active:hover {
-	border: 0;
-	outline: none;
-	background: var(--background-middle-color);
-}
-html .cell-item:hover,
-html .cell-item.active:hover {
+html .journal-container .graphs {
+	margin-left: 0;
+	margin-right: 0;
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
-	background: var(--background-middle-hover-color);
+	border-radius: var(--corner-radius);
 }
-html .cell-item:active,
-html .cell-item.active:active {
-	background: var(--background-middle-active-color);
-}
-html .cell-item .marks-header,
-html .cell-item.active .marks-header,
-html .cell-item.active:hover .marks-header,
-html .cell-item:hover .marks-header {
-	height: 60px;
-	background: none;
+html .journal-container .graphs .graphs__graph-item {
+	border-radius: var(--corner-radius);
 	border: 0;
-	padding-top: 0;
-	border-radius: var(--corner-radius);
-	transition: .2s filter, .2s box-shadow;
+	background: var(--background-middle-color);
 }
-html .cell-item .marks-header .inner {
-	border-radius: var(--corner-radius);
-	background: none !important;
-	box-shadow: none;
-	transition: .2s filter, .2s box-shadow;
-	color: var(--paragraph-color);
-	font-size: 15px;
-	height: 60px;
-}
-html .analytic .actual-lessons,
-html .analytic .student-journal-lessons {
-	background: none;
-}
-html .actual-lessons .lesson-title .explanation-line,
-html .student-journal-lessons .lesson-title .explanation-line {
-	display: none;
-}
-html .actual-lessons .lesson-title .date,
-html .student-journal-lessons .lesson-title .date {
-	font-family: var(--font);
-	color: var(--low-priority-color);
-	text-transform: uppercase;
-	font-weight: bold;
-}
-html .actual-lessons .lesson-title .top-mark,
-html .student-journal-lessons .lesson-title .top-mark {
-	color: var(--low-priority-color);
-}
-html .journal-container .data-pane-wrap {
-	display: none;
-}
-html .info-pane-wrap .subject {
+html .journal-container .graphs .graphs__graph-item .graphs__average {
+	border-bottom: 0;
 	color: var(--paragraph-color);
 	font-family: var(--font);
-	font-weight: bold;
 	font-size: 15px;
+	user-select: none;
+	-webkit-user-drag: none;
 }
-html .cell-item .marks-body,
-html .cell-item.active .marks-body {
-	background: none;
-	border: 0;
+html .journal-container .graphs .graphs__graph-item .graphs__average .graphs__full-text::after {
+	content: ":";
 }
-html .cell-item .marks-body {
+html .journal-container .graphs .graphs__graph-item .graphs__average .graphs__average_value {
+	float: none;
+}
+html .journal-container .graphs .graphs__graph-item .graphs__graph path[fill="#3A96F9"] {
+	fill: var(--theme-color);
+}
+html .journal-container .graphs .graphs__graph-item .graphs__graph path[fill="#CFCFCF"] {
+	fill: var(--analytics-generic-bar-color);
+}
+html .journal-container .graphs .graphs__graph-item .graphs__place {
 	font-size: 15px;
 	font-family: var(--font);
 	font-weight: 500;
+	color: var(--low-priority-color);
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .journal-container .table table {
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	border-radius: var(--corner-radius);
+	background: var(--background-middle-dark-color);
+}
+html .journal-container .table table th {
+	border: 0;
+	border-bottom: 2px solid var(--opaque-divider-color);
+	text-align: center !important;
+	font-size: 15px;
+	font-family: var(--font);
+	font-weight: 500;
+	color: var(--low-priority-color);
+	background: none;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .journal-container .table table th:nth-child(even) {
+	background: var(--background-middle-color);
+}
+html .journal-container .table table tbody tr {
+	background: none !important;
+}
+html .journal-container .table table td.table__date,
+html .journal-container .table table td.table__subject,
+html .journal-container .table table td.table__task,
+html .journal-container .table table td.table__evaluation {
+	border: 0;
+	border-top: 2px solid var(--opaque-divider-color);
+	border-bottom: 2px solid var(--opaque-divider-color) !important;
+	font-size: 15px;
+	font-family: var(--font);
 	color: var(--paragraph-color);
-	box-shadow: none;
 }
-html .cell-item:hover .marks-body {
-	border-top: 0;
-	height: 32px;
+html .journal-container .table table td:nth-child(even) {
+	background: var(--background-middle-color);
 }
-html .cell-item .marks-body::after {
+html .journal-container .table table .table__lesson_number {
+	font-family: var(--font);
+	font-weight: 500;
+	color: var(--low-priority-color);
+}
+html .journal-container .table table .table__lesson_type {
+	font-family: var(--font);
+	font-weight: 500;
+	font-size: 15px;
+	color: var(--low-priority-color);
+}
+html .journal-container .table table .table__subject[colspan="2"] ~  td {
+	background: var(--background-middle-color);
+}
+html .journal-container .table table .table__evaluation .table__result {
+	border-radius: var(--corner-radius);
+	background: var(--background-front-color);
+	color: var(--paragraph-color);
+	font-size: 15px;
+	font-weight: 500;
+	padding: 10px;
+	border: 0;
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	transition: .2s filter, .2s box-shadow;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .journal-container .table table .table__evaluation .table__result:hover {
+	background: var(--background-front-color);
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
+}
+html .journal-container .table table .table__evaluation .table__result .test_icon {
+	padding: 0;
+}
+html .journal-container .table table .table__evaluation .table__result .test_icon::after {
 	display: none;
 }
-html .cell-item.active .marks-body,
-html .cell-item.active:hover .marks-body {
+html .journal-container .Box {
+	display: none;
+}
+html .journal-container .container .row.box-shadow-bottom.background-white {
+	background: none;
+	box-shadow: none;
+}
+html .journal-container .container .row.box-shadow-bottom.background-white label {
+	color: var(--low-priority-color);
+	font-family: var(--font);
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+html .journal-container .container .row.box-shadow-bottom.background-white .item__teacher {
+	color: var(--paragraph-color);
+	font-family: var(--font);
+	font-size: 15px;
+}
+html .journal-container .container .multiselect {
+	cursor: pointer;
+}
+html .journal-container .container .multiselect .multiselect__tags {
+	background: var(--background-front-color);
+	border-radius: var(--corner-radius);
 	border: 0;
-	height: 32px;
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	transition: .2s filter, .2s box-shadow;
 }
-html .cell-item:hover .marks-body span {
-	top: 2px;
+html .journal-container .container .multiselect .multiselect__tags:hover {
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
 }
-@media only screen and (max-width: 767px) {
-	html .info-pane-wrap .container,
-	html .data-pane-wrap .container {
-		border-radius: var(--corner-radius);
-		box-shadow: 0 4px 10px -3px var(--shadow-color);
-		padding-bottom: 10px;
-		padding-top: 10px;
-	}
-	html .explanation-wrap {
-		border-bottom: 0;
-	}
-	html .lessons-topics-wrap .container,
-	html .analytic .no-data .container {
-		border-radius: var(--corner-radius);
-		box-shadow: 0 4px 10px -3px var(--shadow-color);
-	}
+html .journal-container .container #lessons .multiselect .multiselect__single,
+html .journal-container .container #periods .multiselect .multiselect__single {
+	background: none;
+	color: var(--paragraph-color);
+	font-size: 15px;
+	font-family: var(--font);
+}
+html .journal-container .container .multiselect .multiselect__select {
+	width: 20px;
+	height: 20px;
+	margin-top: 5px;
+	margin-right: 10px;
+	background: var(--low-priority-color);
+	z-index: 2;
+	mask-size: contain;
+	-webkit-mask-size: contain;
+}
+html .journal-container .container .multiselect .multiselect__select::before {
+	content: "";
+}
+html .journal-container .container #lessons .multiselect__option,
+html .journal-container .container #periods .multiselect__option {
+	color: var(--paragraph-color);
+	font-family: var(--font);
+	font-size: 15px;
+	border-radius: var(--corner-radius);
+	transition: .2s filter;
+}
+html .journal-container .container .multiselect .multiselect__option--highlight {
+	background: var(--background-front-color);
+	filter: brightness(0.9);
+}
+html .journal-container .container .multiselect .multiselect__content-wrapper {
+	background: var(--background-front-color);
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	border-radius: var(--corner-radius);
+}
+html .journal-container .container #periods .item__icon-calendar {
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: var(--low-priority-color);
+	mask-size: contain;
+	-webkit-mask-size: contain;
+}
+html .journal-container .container #periods .item__icon-calendar::before {
+	content: "";
 }
 
 
