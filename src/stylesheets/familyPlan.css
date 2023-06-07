@@ -1,14 +1,16 @@
-/* FAMILY PLAN */
+/*
+	Family plan landing page
+*/
 html .sys-content .section.plan-info-head {
-	background: var(--background-middle-color);
-	border-radius: var(--corner-radius) var(--corner-radius) 0 0;
+	background: none;
 	user-select: none;
 	-webkit-user-drag: none;
 }
 html .sys-content .section.dark {
-	background: var(--background-front-color);
-	margin-bottom: 1rem;
-	border-radius: 0 0 var(--corner-radius) var(--corner-radius);
+	background: var(--background-middle-color);
+	border-radius: var(--corner-radius);
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	margin-bottom: 20px;
 }
 html .sys-content .section-stores {
 	display: none; /* Why are the "Get on App Store and Google Play" thingies even there? Completely unrelated so removing them */
@@ -56,6 +58,13 @@ html .btn-transparent::after {
 	border: 2px solid var(--theme-accent-color);
 	border-width: 0 2px 2px 0;
 }
+html .family-plan-carousel .carousel-inner {
+	border-radius: var(--corner-radius);
+}
+html .family-plan-carousel {
+	border-radius: var(--corner-radius);
+	box-shadow: 2px 4px 7px -3px var(--shadow-color)
+}
 html .family-plan-carousel .row div {
 	user-select: none;
 	-webkit-user-drag: none;
@@ -69,7 +78,7 @@ html .family-plan-carousel .significant p {
 }
 html .carousel-inner .item:nth-child(1),
 html .carousel-inner .item:nth-child(3) {
-	background: var(--theme-gradient) !important;
+	background: var(--theme-color) !important;
 	color: var(--theme-accent-color);
 }
 html .carousel-inner .item:nth-child(1) h2,
@@ -81,7 +90,7 @@ html .carousel-inner .item:nth-child(4) {
 	background: var(--background-front-color) !important;
 }
 html .section.plan-pros {
-	background: var(--background-middle-color);
+	background: none;
 }
 html .section.plan-pros .row .col-md-4 {
 	display: none; /* The hats need to go */
@@ -133,141 +142,135 @@ html .family-plan-carousel .carousel-indicators {
 	-webkit-user-drag: none;
 }
 html .family-plan-carousel .carousel-indicators li {
-	background: var(--background-middle-color);
+	background: var(--low-priority-color);
 	border: 0;
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s width, .2s height;
 }
 html .family-plan-carousel .carousel-indicators .active {
-	background: var(--theme-color);
+	background: var(--background-middle-color);
 }
 
-/* FAMILY PLAN COMPARISON */
+/*
+	Family plan payment options
+*/
 html .l-MainHeader {
-	margin-bottom: 5px;
+	padding-top: 80px;
 	user-select: none;
 	-webkit-user-drag: none;
 }
-html .l-MainHeader_Title {
-	background: none;
-	color: var(--title-color);
-	border-radius: var(--corner-radius);
-	text-align: left;
-	font-size: 32px;
-	margin-top: 65px;
-}
-html .l-MainHeader_Logo,
-html .l-MainFooter {
+html .l-MainHeader a {
 	display: none;
 }
-html .po-PaymentOptions_Item div.sw-GridBox {
-	background: var(--background-middle-color);
-	color: var(--paragraph-color);
-	border: 0;
-	border-radius: var(--corner-radius);
-	box-shadow: 2px 3px 5px -3px var(--shadow-color);
-}
-html .po-BestDeal {
-	display: none; /* The "Izdevīgi" thing is dumb so let's just remove it */
-}
-html .sw-Price_Value {
-	color: var(--title-color);
-	font-size: 32px;
+html .po-PaymentOptions .po-PageSubheading {
 	user-select: none;
 	-webkit-user-drag: none;
 }
+html .po-PaymentOptions_Item .sw-GridBox {
+	background: var(--background-middle-color);
+	border-radius: var(--corner-radius);
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	user-select: none;
+	-webkit-user-drag: none;
+	transition: .2s box-shadow, .2s filter;
+}
+html .po-PaymentOptions_Item .sw-GridBox:hover,
+html .po-PaymentOptions_Item .sw-GridBox:active {
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
+}
+html .sw-Price_Value {
+	font-size: 32px;
+	padding-right: 0;
+}
 html .sw-Price_Value::before {
+	display: none;
+}
+html .sw-Price_Value::after {
 	content: "€";
-	background: none;
-	color: var(--low-priority-color);
 	font-size: 24px;
-	top: 8px;
+	margin-left: -5px;
+	color: var(--low-priority-color);
+	background: none;
 }
 html .sw-Price::after {
-	border-top: 4px solid var(--solid-divider-color);
+	display: none;
 }
-html .sw-PeriodPrice_Period,
-html .sw-PeriodPrice_Description {
-	color: var(--paragraph-color);
+html .po-PaymentOptions_Item form {
+	display: none;
+}
+html .sw-PriceContainer-subscription .sw-Price_Value-separateview,
+html .sw-PriceContainer-online .sw-Price_Value-separateview,
+html .sw-PriceContainer-sms .sw-Price_Value-separateview {
+	padding-right: 0;
+}
+html .sw-InfoMessage,
+html .sw-InfoMessage-secondary {
+	color: var(--low-priority-color);
+	font-weight: 500;
 	font-size: 15px;
 	user-select: none;
 	-webkit-user-drag: none;
 }
-html .sw-InfoMessage-secondary {
-	color: var(--low-priority-color);
-	font-weight: normal;
-	font-size: 11px;
+html .sw-InfoMessage {
+	padding-top: 20px;
 }
-html .po-PaymentOptions .row,
-html .sw-GridBoxContainer-2  {
-	margin-left: -25px;
+html .sw-InfoMessage_Body {
+	font-size: 15px;
+	user-select: none;
+	-webkit-user-drag: none;
 }
-html .sw-BoxButton {
-	background-color: var(--theme-color);
-	color: var(--theme-accent-color);
-	width: calc(100% - 2rem);
-	margin-left: 1rem;
-	border: 0;
+html .sw-GridBoxContainer_Item .sw-GridBox {
+	background: var(--background-middle-color);
+	border-radius: var(--corner-radius);
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .sw-GridBox_SectionTitle-online,
+html .sw-GridBox_SectionTitle-card,
+html .sw-GridBox_SectionTitle-phone {
+	background: none;
+	padding-left: 10px;
+	border-bottom: 0;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+html .sw-BoxButton.sw-BoxButton-image {
+	background-color: var(--background-front-color);
 	border-radius: var(--corner-radius);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
 	transition: .2s filter, .2s box-shadow;
 }
-html .sw-BoxButton:hover {
+html .sw-BoxButton.sw-BoxButton-image:focus,
+html .sw-BoxButton.sw-BoxButton-image:hover {
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 	filter: brightness(0.9);
 }
-html .sw-BoxButton:hover,
-html .sw-BoxButton:focus {
-	color: var(--theme-accent-color);
-}
-html .sw-BoxButton::after {
-	border: solid 2px var(--theme-accent-color);
-	border-width: 0 2px 2px 0;
-}
-html .sw-BoxButton_Row:last-child {
-	border-top: solid 1px var(--theme-accent-color);
-}
-html .sw-GridBox {
-	background: var(--background-middle-color);
-	color: var(--paragraph-color);
-	padding-bottom: 15px;
+html .sw-BoxButton-swed,
+html .sw-BoxButton-swed:active,
+html .sw-BoxButton-seb,
+html .sw-BoxButton-seb:active,
+html .sw-BoxButton-card,
+html .sw-BoxButton-card:hover,
+html .sw-BoxButton-card:active,
+html .sw-BoxButton-card:focus {
 	border: 0;
+}
+html .sw-BoxButton-sms {
 	border-radius: var(--corner-radius);
-	box-shadow: 2px 3px 5px -3px var(--shadow-color);
-}
-html .sw-GridBox_Title,
-html .sw-GridBox_SectionImageTitle,
-html .sw-GridBox_SectionTitle,
-html .sw-GridBox_SectionTitle-unimportant {
-	background: none;
-	font-weight: bold;
-	font-size: 24px;
-	text-align: center;
-	color: var(--title-color);
 	border: 0;
-	padding-left: 0;
-	padding-right: 0;
-	user-select: none;
-	-webkit-user-drag: none;
-}
-html .st-PhoneNumber {
-	background: none;
+	background: var(--background-front-color);
 	color: var(--paragraph-color);
+	font-size: 24px;
+	box-shadow: 2px 3px 5px -3px var(--shadow-color);
+	transition: .2s filter, .2s box-shadow;
 }
-html .sw-BoxButton_Row-secondary {
-	color: var(--theme-accent-color);
-}
-html .sw-BoxButton_Row-secondary::before {
-	content: "(";
-}
-html .sw-BoxButton_Row-secondary::after {
-	content: ")";
-}
-html .sw-InfoMessage {
-	font-size: 15px;
-	margin-top: 55px;
-}
-html .sw-InfoMessage p:not(:last-child) { /* Allow highlighting the last line of text which contains their legal details */
-	user-select: none;
-	-webkit-user-drag: none;
+html .sw-BoxButton-sms:hover,
+html .sw-BoxButton-sms:active,
+html .sw-BoxButton-sms:focus {
+	background: var(--background-front-color);
+	border: 0;
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	filter: brightness(0.9);
 }
