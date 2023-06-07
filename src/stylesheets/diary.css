@@ -346,6 +346,9 @@ html .students-journal-header .week-selector .week-selector-next:hover,
 html .students-journal-header .week-selector .week-selector-prev:hover {
 	opacity: 0.7;
 }
+html .student-journal-lessons .bottom-controls .students-journal-header .week-selector {
+	display: none;
+}
 html .student-journal-lessons .actual-lessons-item,
 html .actual-lessons .actual-lessons-item {
 	background: var(--background-middle-color);
