@@ -1,5 +1,5 @@
 window.addEventListener(`pageLoading`, () => {
-	if (document.location.href.includes(`Family/ReportPupilMarks`)) {
+	if (document.location.href.includes(`Family/ReportPupilMarks/Get`)) {
 		chrome.storage.sync.get([`isStatisticsPanelOn`, `treatNVAsZero`, `treatNAsZero`, `treatPercentagesAsGrades`], (res) => {
 			if (!res.isStatisticsPanelOn) {
 				return;

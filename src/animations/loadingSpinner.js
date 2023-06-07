@@ -5,6 +5,9 @@ window.addEventListener(`pageLoaded`, () => {
 			let loadingSpinner = document.querySelector(`#loading-info`);
 			let background = document.querySelector(`#overlay`);
 
+			if (loadingSpinner === null) return;
+			if (background === null) return;
+
 			loadingSpinner.setAttribute(`style`, `display: block !important; opacity: 0; transform: scale(0.1) !important;`);
 			background.setAttribute(`style`, `display: block !important; opacity: 0;`);
 

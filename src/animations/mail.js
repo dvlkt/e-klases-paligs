@@ -26,13 +26,15 @@ const tryAddingMailAnimations = () => {
 		if (document.querySelector(`.MessageItem`) !== null) {
 			showMailListItem(0);
 		} else {
-			document.querySelector(`.Folder__NoMessages`).style.opacity = `1`;
+			if (document.querySelector(`.Folder__NoMessages`) !== null) {
+				document.querySelector(`.Folder__NoMessages`).style.opacity = `1`;
+			}
 		}
-		document.querySelector(`.FetchMore__Text`).addEventListener(`click`, () => {
+		document.querySelector(`.FetchMore__Text`)?.addEventListener(`click`, () => {
 			tryAddingAdditionalMailLoadingAnimation();
 		});
-		document.querySelector(`.mail-list-view-header .MailSearch__Input`).addEventListener(`focus`, () => {
-			document.querySelector(`.mail-list-view-header .close-button`).addEventListener(`click`, () => {
+		document.querySelector(`.mail-list-view-header .MailSearch__Input`)?.addEventListener(`focus`, () => {
+			document.querySelector(`.mail-list-view-header .close-button`)?.addEventListener(`click`, () => {
 				tryAddingAdditionalMailLoadingAnimation();
 			});
 		});
@@ -41,7 +43,7 @@ const tryAddingMailAnimations = () => {
 const tryAddingAdditionalMailLoadingAnimation = () => {
 	if (document.querySelector(`.ButtonIcon--loading.Folder__Loading`) === null) {
 		showMailListItem(0);
-		document.querySelector(`.FetchMore__Text`).addEventListener(`click`, () => {
+		document.querySelector(`.FetchMore__Text`)?.addEventListener(`click`, () => {
 			tryAddingAdditionalMailLoadingAnimation();
 		});
 	} else {
@@ -57,7 +59,7 @@ const showMailListItem = (index) => {
 			setTimeout(() => showMailListItem(index), 4);
 		}
 	} else {
-		if (document.querySelector(`.FetchMore__Text`) !== undefined) {
+		if (document.querySelector(`.FetchMore__Text`) !== null) {
 			document.querySelector(`.FetchMore__Text`).style.opacity = `1`;
 		} else {
 			setTimeout(() => showMailListItem(index), 4);

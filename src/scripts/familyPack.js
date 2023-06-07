@@ -17,7 +17,7 @@ window.addEventListener(`pageLoading`, () => {
 			document.querySelector(`.analytic ul.nav-tabs`).style.display = `none`;
 
 			// Remove the mode switcher in analytics
-			document.querySelector(`.analytics-ratings-table-intro-right`).style.display = `none`;
+			if (window.location.href.includes(`Get`)) document.querySelector(`.analytics-ratings-table-intro-right`).style.display = `none`;
 		}
 	}
 });
