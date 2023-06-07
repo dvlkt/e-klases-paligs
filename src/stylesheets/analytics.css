@@ -732,10 +732,10 @@ html .delay-info .delay-info-body h5 {
 	user-select: none;
 	-webkit-user-drag: none;
 }
-html .delays-detailed-table,
+html .delay-info .delays-detailed-table,
 html .delay-info .delays-detailed-table-holder {
-	width: -moz-fit-content;
-	width: fit-content;
+	border-radius: 0 var(--corner-radius) var(--corner-radius) 0;
+	overflow-x: scroll;
 }
 html .delay-info .delays-detailed-table-holder {
 	margin-top: 0;
