@@ -6,43 +6,51 @@ window.addEventListener(`pageLoading`, () => {
 	/*
 		Add the warning popup
 	*/
-	document.body.innerHTML += `
-		<div class="modal modal-technical technical-support-warning-modal" tabindex="-1" role="dialog" style="display: block; opacity: 1; transform: scale(1);">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-body">
-						<a href="#" class="modal-close" data-dismiss="modal"></a>
-						<h1>Vai Tev tiešām vajag tehnisko atbalstu?</h1>
-						
-						<br />
+	let modalEl = document.createElement("div");
+	modalEl.className = "modal modal-technical technical-support-warning-modal";
+	modalEl.role = "dialog";
+	modalEl.style.display = "block";
+	modalEl.style.opacity = "1";
+	modalEl.style.transform = "scale(1)";
+	modalEl.innerHTML += `
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<a href="#" class="modal-close" data-dismiss="modal"></a>
+					<h1>Vai Tev tiešām vajag tehnisko atbalstu?</h1>
+					
+					<br />
 
-						<h3>Tev ir ieinstalēts E-klases palīgs.</h3>
-						<p>E-klases Palīgs izmaina ļoti daudz ko par E-klases funkcionalitāti.</p>
-						<p>Ja Tev ir kāda problēma ar E-klasi, tad ir iespēja, ka tā ir E-klases Palīga vaina.</p>
-						<p>Pamēģini izslēgt E-klases Palīgu un tad mēģināt darīt savu darbību vēlreiz.</p>
+					<h3>Tev ir ieinstalēts E-klases palīgs.</h3>
+					<p>E-klases Palīgs izmaina ļoti daudz ko par E-klases funkcionalitāti.</p>
+					<p>Ja Tev ir kāda problēma ar E-klasi, tad ir iespēja, ka tā ir E-klases Palīga vaina.</p>
+					<p>Pamēģini izslēgt E-klases Palīgu un tad mēģināt darīt savu darbību vēlreiz.</p>
 
-						<br />
+					<br />
 
-						<h3>Šī lapa ir saziņai tikai ar E-klases tehniskā atbalsta dizainu.</h3>
-						<p>Ja Tev ir kādi jautājumi par mācību procesu, tad tas ir jāuzdod skolotājiem.</p>
+					<h3>Šī lapa ir saziņai tikai ar E-klases tehniskā atbalsta dizainu.</h3>
+					<p>Ja Tev ir kādi jautājumi par mācību procesu, tad tas ir jāuzdod skolotājiem.</p>
 
-						<br />
+					<br />
 
-						<h3>Eksistē arī Biežāk uzdoto jautājumu lapa.</h3>
-						<p>Varbūt Tavs jautājums jau ir atbildēts pie <a href="https://my.e-klase.lv/Family/FAQ/Student">Biežāk uzdotajiem jautājumiem</a>!</p>
+					<h3>Eksistē arī Biežāk uzdoto jautājumu lapa.</h3>
+					<p>Varbūt Tavs jautājums jau ir atbildēts pie <a href="https://my.e-klase.lv/Family/FAQ/Student">Biežāk uzdotajiem jautājumiem</a>!</p>
 
-						<br />
+					<br />
 
-						<button class="modal-button">Sapratu!</button>
-					</div>
+					<button class="modal-button">Sapratu!</button>
 				</div>
 			</div>
-		</div>
-		<div class="modal-background"></div>`;
+		</div>`;
+	document.body.appendChild(modalEl);
+	
+	let modalBackgroundEl = document.createElement("div");
+	modalBackgroundEl.className = "modal-background";
+	document.body.appendChild(modalBackgroundEl);
 
 	/*
 		Show the modal background
 	*/
-	document.querySelector(`.modal-background`).style.display = `block`;
-	document.querySelector(`.modal-background`).style.opacity = `0.5`;
+	modalBackgroundEl.style.display = `block`;
+	modalBackgroundEl.style.opacity = `0.5`;
 });
