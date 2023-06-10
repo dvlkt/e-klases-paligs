@@ -23,16 +23,12 @@ html .select2-container--default .select2-selection--single .select2-selection__
 	font-size: 15px;
 	height: 28px;
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
-	transition: .2s box-shadow, .2s background, .2s border-radius;
+	transition: .2s box-shadow, .2s filter, .2s border-radius;
 }
 html .select2-container--default .select2-selection--single:hover,
 html .select2-container--default .select2-selection--single .select2-selection__rendered:hover {
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
-	background: var(--background-middle-hover-color);
-}
-html .select2-container--default .select2-selection--single:active,
-html .select2-container--default .select2-selection--single .select2-selection__rendered:active {
-	background: var(--background-middle-active-color);
+	filter: brightness(0.9);
 }
 html .form-group.subject-choice .select2-container--default .select2-selection--single {
 	border: 0 !important;
@@ -46,17 +42,14 @@ html .filter-wrap .journal-type a {
 	border: 0;
 	background: var(--background-middle-color);
 	box-shadow: 2px 3px 5px -3px var(--shadow-color);
-	transition: .2s background;	
+	transition: .2s filter;	
 	user-select: none;
 	-webkit-user-drag: none;
 }
 html .filter-wrap .journal-type a:hover {
 	color: var(--paragraph-color);
 	box-shadow: none;
-	background: var(--background-middle-hover-color);
-}
-html .filter-wrap .journal-type a:active {
-	background: var(--background-middle-active-color);
+	filter: brightness(0.9);
 }
 html .filter-wrap .journal-type a.active {
 	background: var(--theme-color);
@@ -526,11 +519,15 @@ html .journal-container .container .row.box-shadow-bottom.background-white label
 	font-family: var(--font);
 	font-weight: 500;
 	margin-bottom: 5px;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .journal-container .container .row.box-shadow-bottom.background-white .item__teacher {
 	color: var(--paragraph-color);
 	font-family: var(--font);
 	font-size: 15px;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .journal-container .container .multiselect {
 	cursor: pointer;
@@ -552,6 +549,8 @@ html .journal-container .container #periods .multiselect .multiselect__single {
 	color: var(--paragraph-color);
 	font-size: 15px;
 	font-family: var(--font);
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .journal-container .container .multiselect .multiselect__select {
 	width: 20px;
@@ -582,6 +581,8 @@ html .journal-container .container .multiselect .multiselect__content-wrapper {
 	background: var(--background-front-color);
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 	border-radius: var(--corner-radius);
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .journal-container .container #periods .item__icon-calendar {
 	display: block;

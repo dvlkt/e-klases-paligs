@@ -515,6 +515,8 @@ html .AttachmentList__ItemContainer {
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
 	vertical-align: top;
 	cursor: pointer;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 html .AttachmentList__ItemContainer:hover {
 	filter: brightness(0.9);
