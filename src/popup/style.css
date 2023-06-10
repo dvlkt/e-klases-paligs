@@ -136,6 +136,24 @@ h2:first-of-type {
 	filter: brightness(0.6);
 }
 
+.theme-preview::after,
+.font-preview::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: calc(100% - 10px);
+	height: calc(100% - 10px);
+	border: 5px solid #80808000;
+	border-radius: calc(var(--corner-radius) / 2);
+	transition: .2s border;
+}
+.theme-preview-selected::after,
+.font-preview-selected::after {
+	border: 5px solid #80808080;
+}
+
 .theme-preview {
 	border-radius: calc(var(--corner-radius) / 2);
 }
@@ -175,22 +193,6 @@ h2:first-of-type {
 	width: 80%;
 	height: 45px;
 	border-radius: calc(var(--corner-radius) / 3);
-}
-
-.theme-preview::after {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	display: block;
-	width: calc(100% - 10px);
-	height: calc(100% - 10px);
-	border: 5px solid #80808000;
-	border-radius: calc(var(--corner-radius) / 2);
-	transition: .2s border;
-}
-.theme-preview-selected::after {
-	border: 5px solid #80808080;
 }
 
 .color-picker {

@@ -30,16 +30,15 @@ let themePickerElement = document.querySelector(`#theme-picker`);
 
 // Fill up the theme picker with all themes
 for (let i = 0; i < themeList.length; i++) {
-	themePickerElement.innerHTML += `
-		<div class="theme-preview" data-theme-name="${themeList[i]}">
+	themePickerElement.innerHTML += 
+		`<div class="theme-preview" data-theme-name="${themeList[i]}">
 			<div class="theme-preview-header"></div>
 			<div class="theme-preview-header-detail"></div>
 			<div class="theme-preview-table-title"></div>
 			<div class="theme-preview-table"></div>
-		</div>
-	`;
+		</div>`;
 }
-themePickerElement.style.width = `${themeList.length * 135}px`;
+themePickerElement.style.width = `${themeList.length * 125}px`;
 
 // Load the theme preview colors
 for (let i = 0; i < themeList.length; i++) {
@@ -121,13 +120,12 @@ let fontPickerElement = document.querySelector(`#font-picker`);
 
 // Fill up the font picker with all fonts
 for (let i = 0; i < fontList.length; i++) {
-	fontPickerElement.innerHTML += `
-		<div class="font-preview" data-font-name="${fontList[i]}" style="font-family: ${fontList[i]};">
+	fontPickerElement.innerHTML +=
+		`<div class="font-preview" data-font-name="${fontList[i]}" style="font-family: ${fontList[i]};">
 			<p>${fontList[i]}</p>
-		</div>
-	`;
+		</div>`;
 }
-fontPickerElement.style.width = `${fontList.length * 135}px`;
+fontPickerElement.style.width = `${fontList.length * 125}px`;
 
 for (let fontButtonElement of document.querySelectorAll(`.font-preview`)) {
 	// Highlight the button if it's the selected font
