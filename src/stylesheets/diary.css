@@ -515,6 +515,24 @@ html .student-journal-lessons .first-column .weekly-warning::after {
 	content: ")";
 	margin-left: -4px;
 }
+html section h2 .switch-date-prev,
+html section h2 .switch-date-next {
+	border: 0;
+	width: 20px;
+	height: 20px;
+	margin-top: 1px;
+	background: var(--paragraph-color);
+	mask-size: contain;
+	-webkit-mask-size: contain;
+	transition: .2s opacity;
+}
+html section h2 .switch-date-prev:hover,
+html section h2 .switch-date-next:hover {
+	opacity: 0.7;
+}
+html .home-open-lesson-times {
+	display: none;
+}
 @media only screen and (min-width: 768px) {
 	html .students-journal-header .week-selector {
 		width: 210px;

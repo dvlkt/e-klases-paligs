@@ -1017,8 +1017,6 @@ html .analytics-info-more .title {
 	padding: 0;
 	font-family: var(--font);
 	font-size: 15px;
-	user-select: none;
-	-webkit-user-drag: none;
 }
 html .analytics-report-table table thead tr {
 	background: var(--background-middle-color);
@@ -1036,14 +1034,16 @@ html .analytics-report-table table thead td {
 html .analytics-report-table table tbody .subsection-header td {
 	border-top: 8px solid var(--opaque-divider-color);
 }
-html .analytics-report-table table tbody .score {
+html .analytics-report-table table tbody .score,
+html .analytics-report-table table tbody .open-mark-file {
 	font-family: var(--font);
 	color: var(--paragraph-color);
 	font-size: 15px;
 	font-weight: 500;
 	transition: .2s opacity;
 }
-html .analytics-report-table table tbody .score:hover {
+html .analytics-report-table table tbody .score:hover,
+html .analytics-report-table table tbody .open-mark-file:hover {
 	opacity: 0.7;
 }
 html .analytics-form-holder .form-group .control-label { 

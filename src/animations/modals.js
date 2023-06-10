@@ -94,6 +94,9 @@ window.addEventListener(`pageLoaded`, () => {
 	if (window.location.href.includes("Family/ReportMarkTable")) {
 		tryAddingGradeOverviewModalAnimationsInJournals();
 	}
+	if (window.location.href.includes("Family/Home")) {
+		tryAddingGradeOverviewModalAnimationsInHome();
+	}
 
 	/*
 		Answer sending modal
@@ -347,7 +350,7 @@ const onDiaryModalFullyLoading = () => {
 }
 
 const addGradeOverviewModalAnimation = () => {
-	for (let buttonElement of document.querySelectorAll(`.score.open-mark-file, .recent-scores-item-col .score, .table__result.open-mark-file`)) {
+	for (let buttonElement of document.querySelectorAll(`.open-mark-file, .recent-scores-item-col .score`)) {
 		let modalBgElement = document.querySelector(`.modal-background`);
 
 		buttonElement.addEventListener(`click`, () => {
@@ -388,6 +391,21 @@ const addGradeOverviewModalAnimation = () => {
 			}, 20);
 		});
 	}
+}
+const tryAddingGradeOverviewModalAnimationsInHome = () => {
+	let areAnimationsNeeded = false;
+	for (let element of document.querySelectorAll(".score.open-mark-file")) {
+		if (!element.classList.contains("animation-added")) {
+			areAnimationsNeeded = true;
+			element.classList.add("animation-added");
+		}
+	}
+
+	if (areAnimationsNeeded) {
+		addGradeOverviewModalAnimation();
+	}
+
+	setTimeout(() => tryAddingGradeOverviewModalAnimationsInHome(), 200);
 }
 const tryAddingGradeOverviewModalAnimationsInJournals = () => {
 	if (document.querySelector(".Box .Box__InnerContainer") === null && document.querySelector(".SpinnerSection") === null) {
