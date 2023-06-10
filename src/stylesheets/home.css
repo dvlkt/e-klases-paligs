@@ -194,11 +194,8 @@ html .main-header .logo-holder .logo {
 html .main-header .logo-holder .logo:hover {
 	opacity: 0.7;
 }
-html .socials li.fb {
-	transition: .2s opacity;
-}
-html .socials li.fb:hover {
-	opacity: 0.7;
+html .main-header .socials-holder {
+	display: none;
 }
 html .secondary-header {
 	background: var(--background-middle-color);
