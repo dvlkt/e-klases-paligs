@@ -1,0 +1,37 @@
+{
+    "manifest_version": 3,
+    "name": "E-klases Palīgs - Tumšais režīms",
+    "version": "3.0.0",
+    "description": "Labāks dizains un vairāk funkciju.",
+    "icons": {
+        "16": "res/light/icon-16.png",
+        "32": "res/light/icon-32.png",
+        "64": "res/light/icon-64.png",
+        "128": "res/light/icon-128.png",
+        "256": "res/light/icon-256.png",
+        "512": "res/light/icon-512.png"
+    },
+    "permissions": [
+        "storage",
+        "tabs"
+    ],
+    "web_accessible_resources": [],
+    "action": {
+        "default_icon": "res/light/icon-64.png",
+        "default_title": "E-klases Palīgs",
+        "default_popup": "popup.html"
+    },
+    "options_ui": {
+        "page": "options.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*.e-klase.lv/*"],
+            "js": ["js/content.js"],
+            "run_at": "document_start"
+        }
+    ],
+    "background": {
+        "service_worker": "js/background.js"
+    }
+}
