@@ -1,6 +1,6 @@
 const gradeToNumber = (gradeString, treatNVAsZero, treatNAsZero, treatPercentagesAsGrades) => {
 	let grade = gradeString.split(`|`).pop();
-	grade = grade.split(`(`)[0];
+	grade = grade.split(` `)[0];
 	
 	if (grade.slice(-1) === `%`) {
 		if (treatPercentagesAsGrades) {
@@ -21,7 +21,7 @@ const gradeToNumber = (gradeString, treatNVAsZero, treatNAsZero, treatPercentage
 			return null;
 		}
 	} else {
-		let parsed = parseInt(grade.split(`(`)[0]);
+		let parsed = parseInt(grade.split(` `)[0]);
 
 		if (Number.isNaN(parsed)) {
 			return null;
