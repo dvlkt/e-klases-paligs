@@ -171,6 +171,15 @@ html .diary-container .lessons-table span.score {
 html .lessons-table td:last-of-type span.score:hover {
 	filter: brightness(0.9);
 	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+	background: var(--background-front-color);
+}
+html .student-journal-lessons-table-holder .lessons-table td.score .test-icon::after {
+	content: "";
+	background: var(--theme-color);
+	width: 15px;
+	height: 15px;
+	mask-size: contain;
+	-webkit-mask-size: contain;
 }
 html .student-journal-lessons-table-holder .lessons-table td:last-of-type,
 html .diary-container .lessons-table td:last-of-type {
@@ -522,8 +531,8 @@ html section h2 .switch-date-next {
 	height: 20px;
 	margin-top: 1px;
 	background: var(--paragraph-color);
-	mask-size: contain;
-	-webkit-mask-size: contain;
+	mask-size: cover;
+	-webkit-mask-size: cover;
 	transition: .2s opacity;
 }
 html section h2 .switch-date-prev:hover,
