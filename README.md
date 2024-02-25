@@ -1,6 +1,6 @@
 <h1>
 	<sub>
-		<img src="https://github.com/d-avis/e-klases-paligs/raw/master/assets/icon-bg.png" height="45" width="45">
+		<img src="https://github.com/dvlkt/e-klases-paligs/raw/master/assets/icon-bg.png" height="45" width="45">
 	</sub>
 	E-klases Palīgs
 </h1>
@@ -8,7 +8,7 @@
 	Moderns dizains un vairāk funkcijas E-klasei
 </p>
 <p>
-	<b>v2.0.1</b>
+	<b>v2.0.2</b>
 </p>
 
 <a href="https://chrome.google.com/webstore/detail/e-klases-palīgs-beta/hplegnbabhacjjchnbdcdccchnepmcde">
@@ -21,14 +21,14 @@
 ***
 
 <p align="center">
-	<img src="https://github.com/d-avis/e-klases-paligs/raw/master/assets/screenshot-0.png" />
+	<img src="https://github.com/dvlkt/e-klases-paligs/raw/master/assets/screenshot-0.png" />
 </p>
 <p align="center">
-	<img src="https://github.com/d-avis/e-klases-paligs/raw/master/assets/screenshot-1.png"/>
+	<img src="https://github.com/dvlkt/e-klases-paligs/raw/master/assets/screenshot-1.png"/>
 </p>
 <p align="center">
-	<img src="https://github.com/d-avis/e-klases-paligs/raw/master/assets/screenshot-2.png" />
+	<img src="https://github.com/dvlkt/e-klases-paligs/raw/master/assets/screenshot-2.png" />
 </p>
 <p align="center">
-	<img src="https://github.com/d-avis/e-klases-paligs/raw/master/assets/screenshot-3.png" />
+	<img src="https://github.com/dvlkt/e-klases-paligs/raw/master/assets/screenshot-3.png" />
 </p>
