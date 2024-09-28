@@ -116,6 +116,9 @@ html .dashboard-widget-col.widget-recent .recent-scores-item .recent-scores-item
 	user-select: none;
 	-webkit-user-drag: none;
 }
+html .dashboard-widget-col.widget-recent .recent-scores-item:hover .recent-scores-item-col span.score {
+	background: var(--background-front-color);
+}
 html .dashboard-widget-col.widget-recent .recent-scores-item.new .recent-scores-item-col:first-child::before {
 	background: var(--theme-color);
 }
@@ -422,7 +425,7 @@ html .dashboard-news .dashboard-news-item .tag.blue {
 	color: var(--low-priority-color);
 	background: none;
 	padding-left: 0;
-	padding-right: 0;
+	padding-right: 5px;
 }
 html .dashboard-news .dashboard-news-item .tag::after {
 	content: "";
