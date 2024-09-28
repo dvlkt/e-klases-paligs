@@ -510,6 +510,9 @@ html .journal-container .table table .table__evaluation .table__result .test_ico
 html .journal-container .Box {
 	display: none;
 }
+html .journal-container .container {
+	background: none;
+}
 html .journal-container .container .row.box-shadow-bottom.background-white {
 	background: none;
 	box-shadow: none;
