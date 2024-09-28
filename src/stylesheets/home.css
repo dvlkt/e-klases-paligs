@@ -1,3 +1,7 @@
+html .main .container-fluid {
+	margin-top: 30px;
+}
+
 /**
 * Login box
 */
@@ -101,4 +105,65 @@ html .login-widget li,
 html .login-widget li a {
 	color: var(--theme-color) !important;
 	font-family: var(--font);
+}
+
+/**
+	Headers
+*/
+html header.header .header__top-part {
+	background: var(--header-background-color);
+}
+html header.header .header__top-part p {
+	color: var(--header-foreground-color) !important;
+}
+html header.header .header__top-part .btn {
+	display: none;
+}
+html header.header .header__top-part a img {
+	max-height: 50px;
+}
+html header.header .header__bottom-part.header__bottom-part {
+	background: var(--header-background-color);
+	box-shadow: 2px 4px 7px -3px var(--header-shadow-color);
+	border-top: var(--opaque-divider-color) solid 5px;
+}
+html header.header .header__bottom-part .header__bottom-part__navigation_item a,
+html header.header .header__bottom-part .header__bottom-part__navigation_item:hover a {
+	color: var(--header-foreground-color) !important;
+}
+html header.header .header__bottom-part .header__bottom-part__navigation_item--active a,
+html header.header .header__bottom-part .header__bottom-part__navigation_item--active:hover a {
+	color: var(--theme-color) !important;
+}
+html header.header .header__bottom-part .header__bottom-part__navigation_item--active::after {
+	display: none;
+}
+html header.header .header__bottom-part .header__bottom-part__navigation_item a:hover {
+	opacity: 0.7;
+}
+
+/** 
+	Articles
+*/
+html .article-card.large .article-card-contents .image-wrapper,
+html .article-card .article-card-contents .image-wrapper {
+	border: none;
+}
+html .article-card .article-card-contents .image-wrapper img {
+	border-radius: var(--corner-radius);
+	box-shadow: 2px 4px 7px -3px var(--shadow-color);
+}
+html .article-card.large .article-card-contents .content .title,
+html .article-card .article-card-contents .content .title {
+	color: var(--title-color) !important;
+}
+html .article-card.large .article-card-contents .content .date {
+	color: var(--low-priority-color) !important;
+}
+html .article-card .article-card-contents .content .content-row .like-count {
+	display: none;
+}
+html .article-card.large .article-card-contents .content .content-row,
+html .article-card .article-card-contents .content .content-row {
+	margin-bottom: 0;
 }

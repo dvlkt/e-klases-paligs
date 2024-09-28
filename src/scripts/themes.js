@@ -144,6 +144,12 @@ const loadLogos = () => {
 					for (let logo of document.querySelectorAll(`img[src="/Presentation/_IDACC/Login/Views/css/img/logo.png"]`)) {
 						logo.src = base64data;
 					}
+					for (let logo of document.querySelectorAll(`.header__top-part .d-flex a[href="/"]`)) {
+						logo.removeChild(logo.children[0]);
+						let imgEl = document.createElement("img");
+						imgEl.src = base64data;
+						logo.appendChild(imgEl);
+					}
 
 					setLogoHueToThemeColor(res.themeColor);
 				}
