@@ -5,7 +5,7 @@ html .modal,
 html .Modal.modal-evaluation-file,
 html .home-task-answer-modal-container .Modal,
 html .Modal#RecipientsModal .Modal__Content,
-html .Recipients .Modal {
+html .Recipients .Modal .Modal__Content {
 	position: fixed;
 	top: 15%;
 	left: 25%;
@@ -519,16 +519,28 @@ html .RecipientsModal__AddedRecipientsCount {
 	user-select: none;
 	-webkit-user-drag: none;
 }
-
-
-/*
-	Recipients modal
-*/
+html .Recipients .Modal {
+	position: fixed;
+	top: 15%;
+	left: 25%;
+	width: 50%;
+	height: 70%;
+	background: none;
+}
 html .Recipients .Modal__Content .Modal__Header {
 	background: none !important;
 	border-bottom: 0;
 }
-
+html .Recipients .Modal__Content .Modal__Body {
+	max-height: 100% !important;
+	border-bottom-left-radius: var(--corner-radius);
+	border-bottom-right-radius: var(--corner-radius);
+}
+html .Recipients .RecipientsModal__List {
+	background: var(--background-middle-color);
+	overflow: hidden;
+	max-height: 100%;
+}
 
 /*
 	Link inserting modal

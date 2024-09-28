@@ -292,6 +292,7 @@ window.addEventListener(`pageLoaded`, () => {
 	});
 
 	addRecipientAnimation();
+	tryAddingSeeRecipientsAnimation();
 });
 window.addEventListener(`urlChanged`, () => {
 	addRecipientAnimation();
@@ -473,4 +474,74 @@ const addRecipientAnimation = () => {
 			}, 20);
 		});
 	}
+}
+
+const tryAddingSeeRecipientsAnimation = () => {
+	if (document.querySelector(`.ViewMessage__PersonWrapper`) === null) {
+		setTimeout(() => tryAddingSeeRecipientsAnimation(), 50);
+		return;
+	}
+	
+	if (document.querySelector(`.Recipients__LoadLink`) !== null) {
+		let buttonElement = document.querySelector(`.Recipients__LoadLink`);
+		buttonElement.addEventListener(`click`, () => {
+			openSeeRecipientsModal();
+		});
+	}
+}
+const openSeeRecipientsModal = () => {
+	let modalElement = document.querySelector(`.Recipients .Modal .Modal__Content`);
+	if (modalElement === null) {
+		setTimeout(openSeeRecipientsModal, 20);
+		return;
+	}
+	let modalBgElement = document.querySelector(`.modal-background`);
+	
+	modalBgElement.style.display = `block`;
+	modalElement.style.display = `block`;
+	modalElement.parentElement.parentElement.style.display = `block`;
+
+	let originalModalCloseButtonElement = document.querySelector(`.Recipients .Modal .Modal__Close`);
+	if (document.querySelector(`.Recipients .Modal .modal-close-button`) === null) {
+		let modalCloseButtonElement = document.createElement(`div`);
+		modalCloseButtonElement.className = `modal-close-button`;
+		modalCloseButtonElement.innerHTML = originalModalCloseButtonElement.innerHTML;
+		modalCloseButtonElement.addEventListener(`click`, () => {
+			modalBgElement.click();
+			setTimeout(() => {
+				originalModalCloseButtonElement.click();
+			}, 200);
+		});
+		modalElement.querySelector(`.Modal__Header`).insertBefore(modalCloseButtonElement, modalElement.querySelector(`.Modal__Header .Modal__Close`));
+
+		originalModalCloseButtonElement.style.display = `none`;
+	}
+
+	setTimeout(() => {
+		modalBgElement.style.opacity = `1.0`;
+		modalElement.style.marginTop = `0`;
+		modalElement.style.opacity = `1.0`;
+		modalElement.style.transform = `scale(1.0)`;
+	}, 50);
+
+	modalBgElement.addEventListener(`click`, () => {
+		setTimeout(() => {
+			if (modalElement === null) {
+				return;
+			}
+
+			modalBgElement.style.opacity = `0`;
+			modalElement.style.opacity = `0`;
+			modalElement.style.transform = `scale(0.75)`;
+
+			setTimeout(() => {
+				modalBgElement.style.display = `none`;
+				modalElement.parentElement.parentElement.style.display = `none`;
+
+				setTimeout(() => {
+					originalModalCloseButtonElement.click();
+				}, 200);
+			}, 200);
+		}, 20);
+	});
 }
